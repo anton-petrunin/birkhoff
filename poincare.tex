@@ -1,0 +1,649 @@
+\chapter{Hyperbolic plane}\label{chap:poincare}
+\addtocontents{toc}{\protect\begin{quote}}
+
+\begin{center}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/H2checkers_334(0.25)}
+\end{lpic}          
+\end{center}
+
+
+In this chapter we use inversive geometry 
+to construct the model of hyperbolic plane --- an example of absolute plane which is not Euclidean.
+
+Namely, we construct  so called \index{Poincar\'e disk model}\emph{Poincar\'e disk model} of hyperbolic plane.
+This model was discovered by Beltrami in  \cite{beltrami} 
+and popularized later by Poincar\'e. 
+%(Despite common believe, Beltrami was not the first who came up with the concept of model in this context,  in particular Lobachevsky modeled Euclidean plane in Hyperbolic space.)
+
+The figure above shows the Poincar\'e disk model of hyperbolic plane which is cut into congruent triangles with angles $\tfrac\pi3$, $\tfrac\pi3$ and $\tfrac\pi4$.
+
+\section*{Poincar\'e disk model}
+\addtocontents{toc}{Poincar\'e disk model.}
+
+In this section we give new names for some objects in the Euclidean plane
+which will represent lines, angle measures, distances in the  hyperbolic plane.
+
+\parbf{Hyperbolic plane.}
+Let us fix a circle on the Euclidean plane 
+and call it \index{absolute}\emph{absolute}.
+The set of points inside the absolute will be called \index{hyperbolic plane}\index{plan!hyperbolic plane}\emph{hyperbolic plane} (or \index{plane!h-plane}\index{h-plane}\emph{h-plane}).
+
+Note that the points on absolute do {}\emph{not} belong to the h-plane.
+The points in the h-plane will be also called \index{h-point}\emph{h-points}.
+
+Often we will assume that the absolute is a unit circle.
+
+
+
+\parbf{Hyperbolic lines.}
+The intersections of h-plane with circlines perpendicular to the absolute are called {}\emph{hyperbolic lines} or \index{h-line}\emph{h-lines}.
+
+\begin{wrapfigure}{o}{58mm}
+\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(-2mm)]{pics/APQB(1)}
+\lbl[rt]{34,16;$P$}
+\lbl[r]{32,29;$Q$}
+\lbl[t]{39,10;$A$}
+\lbl[b]{38.5,36.5;$B$}
+\lbl[rb]{55,13;$\Gamma$}
+\lbl[b]{20,15;h-plane}
+\end{lpic}
+\end{wrapfigure}
+
+By Corollary~\ref{cor:h-line}, there is unique h-line which pass
+through given two distinct h-points $P$ and $Q$.
+This h-line will be denoted as $(PQ)_h$.
+
+The arcs of hyperbolic lines will be called {}\emph{hyperbolic segments} or \index{h-segment}\emph{h-segments}.
+An h-segment with endpoints $P$ and $Q$ will be denoted as $[PQ]_h$.
+
+The subset of h-line on one side from a point will be called {}\emph{hyperbolic half-line} (or \index{h-half-line}\emph{h-half-line}).
+More precisely, h-half-line is an intersection of h-plane with arc which perpendicular to the absolute with only one endpoint in the h-plane.
+An h-half-line from $P$ passing through $Q$ will be denoted as $[PQ)_h$.
+
+If $\Gamma$ is the circle containing the h-line $(PQ)_h$
+then the points of intersection of $\Gamma$ with absolute are called 
+\index{point!ideal point}\index{ideal point}\emph{ideal points} of $(PQ)_h$.
+(Note that the ideal points of h-line do not belong to the h-line.)
+
+Similarly a triangle in h-plane; i.e., ordered triple of h-points, say $(P,Q,R)$, will be denoted by $\triangle P Q R$.
+
+So far $(PQ)_h$ is just a subset of h-plane;
+below we will introduce h-distance and later we will show that  $(PQ)_h$ is a line for the h-distance in the sense of the Definition~\ref{def:line}. 
+
+\begin{thm}{Exercise}\label{ex:ideal-line-unique}
+Show that the h-line is uniquely determined by its ideal points.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:1ideal-line-unique}
+Show that the h-line is uniquely determined by one of its ideal points and one h-point on it.
+\end{thm}
+
+
+
+
+\parbf{Hyperbolic distance.}\label{h-dist}
+Let $P$ and $Q$ be distinct h-points.
+Denote by $A$ and $B$ be the ideal points of $(PQ)_h$.
+Without loss of generality, we may assume that on the Euclidean circle containing the h-line $(PQ)_h$, the points $A,P,Q,B$ appear in the same order.
+
+Consider function 
+$$\delta(P,Q)\df\frac{AQ\cdot BP}{QB\cdot PA}.$$
+Note that right hand side is the cross-ratio, 
+which appeared in Theorem~\ref{lem:inverse-4-angle}.
+Set $\delta(P,P)=1$ for any h-point $P$.
+Set 
+$$PQ_h\df\ln[\delta(P,Q)].$$
+
+The proof that $PQ_h$ is a metric on h-plane will be given below.
+For now it is just a function which returns a real value $PQ_h$ for any pair of h-points $P$ and $Q$.
+
+\begin{thm}{Exercise}\label{ex:h-dist-eq}
+Let $O$ be the center of the absolute and the h-points $O$, $X$ and $Y$ lie on the one h-line in the same order.
+Assume $OX\z=XY$.
+Prove that $OX_h<XY_h$.
+\end{thm}
+
+
+\parbf{Hyperbolic angles.}\label{h-angle measure}
+Consider three h-points $P$, $Q$ and $R$
+such that $P\ne Q$ and $R\ne Q$.
+The hyperbolic angle $\angle_h PQR$ is ordered pair of h-half-lines $[QP)_h$ and $[QR)_h$.
+
+Let $[QX)$ and $[QY)$ be (Euclidean) half-lines 
+which are tangent to $[QP]_h$ and $[QR]_h$ 
+at $Q$.
+Then the \index{angle measure!hyperbolic angle measure}\index{hyperbolic angle measure}\emph{hyperbolic angle measure} (or \index{h-angle measure}\emph{h-angle measure}) 
+$\measuredangle_h PQR$ is defined as
+$\measuredangle XQY$.
+
+\begin{thm}{Exercise}\label{ex:h-perp-unique}
+Let $\ell$ be an h-line and $P$ be an h-point which does not lie on $\ell$.
+Show that there is unique h-line passing through $P$ and perpendicular to $\ell$.
+\end{thm}
+
+\section*{The plan}
+\addtocontents{toc}{The plan.}
+
+We defined all the {}\emph{h-notions} needed in the formulation of the axioms \ref{def:birkhoff-axioms:0}--\ref{def:birkhoff-axioms:3} and h-\ref{def:birkhoff-axioms:4}.
+It remains to show that all these axioms hold; 
+this will be done by the end of this chapter.
+
+Once we are done with the proofs, 
+we get that the model provides an example of absolute plane; in particular Exercise~\ref{ex:h-perp-unique} can be proved the same way as Theorem~\ref{perp:ex+un}.
+
+Most importantly we will prove the ``if''-part of Theorem~\ref{thm:consistent}.
+
+Indeed, any statement in hyperbolic geometry can be restated in the Euclidean plane using the introduced h-notions.
+Therefore if the system of axioms \ref{def:birkhoff-axioms:0}--\ref{def:birkhoff-axioms:3} and h-\ref{def:birkhoff-axioms:4} leads to a contradiction the so does  the system  axioms \ref{def:birkhoff-axioms:0}--\ref{def:birkhoff-axioms:4}.
+
+\section*{Auxiliary statements}
+\addtocontents{toc}{Auxiliary statements.}
+
+\begin{thm}{Lemma}\label{lem:P-->O} 
+Consider h-plane with unit circle as the absolute.
+Let $O$ be the center of absolute and $P$ be an other h-point.
+Denote by $P'$ the inversion of $P$ in the absolute.
+
+Then the circle $\Gamma$ with center $P'$ and radius 
+$1/\sqrt{1-OP^2}$
+is perpendicular to the absolute.
+Moreover $O$ is the inversion of $P$ in $\Gamma$. 
+\end{thm}
+
+\begin{wrapfigure}[8]{o}{43mm}
+\begin{lpic}[t(-8mm),b(0mm),r(0mm),l(0mm)]{pics/PO-Gamma(1)}
+%\lbl[br]{6,31.5;$\Omega$}
+\lbl[b]{40,31.5;$\Gamma$}
+\lbl[t]{18,16;$O$}
+\lbl[b]{33,14;$P$}
+\lbl[b]{40,14;$P'$}
+\lbl[b]{33,30;$T$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Proof.} 
+Follows from Exercise~\ref{ex:centers-of-perp-circles}.
+\qeds
+
+Assume $\Gamma$ is a circline which is perpendicular to the absolute.
+Consider the inversion $X\mapsto X'$
+in $\Gamma$, 
+or if $\Gamma$ is a line,
+set $X\mapsto X'$ to be the reflection in $\Gamma$.
+
+The following observation roughly says that the map $X\mapsto X'$ respects all the notions introduced in the previous section.
+Together with the lemma above, it implies that in any problem which formulated entirely {}\emph{in h-terms}  we can assume that a given h-point lies in the center of absolute.
+
+\begin{thm}{Main observation}\label{thm:main-observ}
+The map $X\mapsto X'$ described above is a bijection of h-plane to itself. 
+Moreover for any h-points $P$, $Q$, $R$ such that $P\ne Q$ and $Q\ne R$ the following conditions hold
+\begin{enumerate}[(a)]
+\item\label{h-line-to-hline} The h-lines $(PQ)_h$, $[PQ)_h$ and $[PQ]_h$ are mapped to the h-lines $(P'Q')_h$, $[P'Q')_h$ and $[P'Q']_h$ correspondingly.
+\item\label{h-reflect} $\delta(P',Q')=\delta(P,Q)$ and $P'Q'_h=PQ_h$.
+\item\label{h-angle-mes} 
+$\measuredangle_h P'Q'R'\equiv-\measuredangle_h PQR$.
+\end{enumerate}
+
+\end{thm}
+
+\parit{Proof.}
+According to Theorem~\ref{thm:perp-inverse} the map sends the absolute to itself. 
+Note that the points on $\Gamma$ do not move, it follows that points inside of absolute remain inside after the mapping and the other way around. 
+
+
+Part~(\ref{h-line-to-hline}) follows from \ref{thm:inverse-cline} and \ref{thm:angle-inversion}.
+
+Part~(\ref{h-reflect}) follows from Theorem~\ref{lem:inverse-4-angle}.
+
+Part~(\ref{h-angle-mes})  follows from Theorem~\ref{thm:angle-inversion}.
+\qeds
+
+
+\begin{thm}{Exercise}\label{ex:h-reflection}
+Let $\Gamma$ be a circle which is perpendicular to the absolute and $Q$ be an h-point lying on $\Gamma$.
+Assume $P$ is an h-point and $P'$ is its inversion in  $\Gamma$.
+Show that $PQ_h=P'Q_h$.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:def-delta}
+Consider the function
+\[\theta(P,Q)=2\cdot\frac{PQ\cdot  P'Q'}{PP'\cdot QQ'},\]
+where $P, Q$ are points in the h-plane
+and $P', Q'$ are their inversions in the absolute.
+Show that 
+\[2+2\cdot\theta(P,Q)
+=
+\delta(P,Q)+\frac{1}{\delta(P,Q)}.\]
+Conclude that
+\[PQ_h=\ln\left[1+\theta(P,Q)+\sqrt{\theta(P,Q)^2+2\cdot\theta(P,Q)}\right].\]
+
+\end{thm}
+
+
+\begin{thm}{Lemma}\label{lem:O-h-dist}
+Assume that the absolute is a unit circle centered at $O$.
+Given a h-point $P$, set $x=OP$ and $y=OP_h$.
+Then
+\begin{align*}
+y&=\ln\frac{1+x}{1-x}
+&
+&\text{and}
+&
+x&=\frac{e^y-1}{e^y+1}.
+\end{align*}
+ 
+\end{thm}
+
+\begin{wrapfigure}[10]{o}{41mm}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(-4mm)]{pics/AOPB(1)}
+\lbl[tr]{2,20;$A$}
+\lbl[t]{22,20;$O$}
+\lbl[t]{30,20;$P$}
+\lbl[tl]{42,20;$B$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Proof.}
+Note that h-line $(OP)_h$ lies in a diameter of absolute.
+Therefore if $A$ and $B$ are the ideal points as in the definition of h-distance.
+Therefore 
+\begin{align*}
+OA&=OB=1,
+\\ PA&=1+x,\\
+PB&=1-x.
+\intertext{and}
+y&=\ln \frac{AP\cdot BO}{PB\cdot OA}=
+\\
+&=\ln\frac{1+x}{1-x}.
+\end{align*}
+
+Taking exponent of left and right hand side and applying obvious algebra manipulations we get
+$$x=\frac{e^y-1}{e^y+1}.$$
+\qedsf
+
+
+\begin{thm}{Lemma}\label{lem:h-tiangle=}
+Assume points $P$, $Q$ and $R$ appear on one h-line in the same order.
+Then 
+$$PQ_h+QR_h=PR_h.$$ 
+
+\end{thm}
+
+\parit{Proof.}
+Note that
+$$PQ_h+QR_h=PR_h$$
+is equivalent to 
+\[\delta(P,Q)\cdot\delta(Q,R)=\delta(P,R).\eqlbl{eq:deltaPQR}\]
+
+Let $A$ and $B$ be the ideal points of $(PQ)_h$. 
+Without loss of generality we can assume that the points $A,P,Q,R,B$ appear in the same order on the circline containing $(PQ)_h$.
+Then
+\begin{align*}
+\delta(P,Q)\cdot\delta(Q,R)
+&=
+\frac{AQ\cdot BP}{QB\cdot PA}\cdot\frac{AR\cdot BQ}{RB\cdot QA}=
+\\
+&=\frac{AR\cdot BP}{RB\cdot PA}=
+\\
+&=\delta(P,R)
+\end{align*}
+Hence \ref{eq:deltaPQR} follows.
+\qeds
+
+Let $P$ be an h-point and $\rho>0$.
+The set of all h-points $Q$ such that $PQ_h=\rho$ is called \index{h-circle}\emph{h-circle} with center $P$ and \index{h-radius}\emph{h-radius} $\rho$.
+
+\begin{thm}{Lemma}\label{lem:h-circle=circle}
+Any h-circle  is formed by a Euclidean circle which lies completely in h-plane.
+
+More precisely for any h-point $P$ and $\rho\ge 0$
+there is a $\hat\rho\ge 0$ and a point $\hat P$ such that 
+$$PQ_h= \rho
+\ \ \iff\ \ 
+\hat PQ= \hat\rho.$$
+
+Moreover, if $O$ is the center of absolute then 
+\begin{enumerate}
+\item $\hat O=O$ for any $\rho$ and
+\item $\hat P\in (OP)$ for any $P\ne O$.
+\end{enumerate}
+
+\end{thm}
+
+\parit{Proof.}
+According to Lemma~\ref{lem:O-h-dist}, 
+$OQ_h= \rho$ if and only if $$OQ= \hat\rho=\frac{e^\rho-1}{e^\rho+1}.$$
+Therefore the locus of h-points $Q$ such that $OQ_h= \rho$ is formed by the Euclidean circle, 
+denote it by $\Delta_\rho$.
+
+\begin{wrapfigure}{o}{44mm}
+\begin{lpic}[t(0mm),b(-3mm),r(0mm),l(-0mm)]{pics/h-circle-3(1)}
+\lbl[t]{22,20;$O$}
+\lbl[tr]{28,15;$Q$}
+\lbl[t]{37,20;$P$}
+\lbl[b]{33,23.5;$\hat P$}
+\lbl[br]{31,29;$\Delta'_\rho$}
+\end{lpic}
+\end{wrapfigure}
+
+
+If $P\ne O$, applying Lemma~\ref{lem:P-->O} and the Main observation (\ref{thm:main-observ})
+we get
+a circle $\Gamma$ perpendicular to the absolute such that $P$ is the inversion of $O$ in $\Gamma$.
+
+Let $\Delta_\rho'$ be the inversion of $\Delta_\rho$ in $\Gamma$.
+Since the inversion in $\Gamma$ preserves the h-distance,
+$PQ_h=\rho$ if and only if $Q\z\in\Delta_\rho'$.
+  
+According to Theorem~\ref{thm:inverse-cline}, 
+$\Delta_\rho'$ is a Euclidean circle.
+Denote by $\hat P$ the Euclidean center and by $\hat\rho$ the Euclidean radius of $\Delta_\rho'$.
+
+Finally note that $\Delta_\rho'$ reflects to itself in $(OP)$;
+that is, the center $\hat P$ lies on $(OP)$.
+\qeds
+
+\begin{thm}{Exercise}\label{ex:h-circle=circle}
+Assume $P$, $\hat P$ and $O$ be as in the Lemma~\ref{lem:h-circle=circle} and $P\ne O$.
+Show that  $\hat P\in [OP]$.
+\end{thm}
+
+
+\section*{Axiom \ref{def:birkhoff-axioms:0}}
+\addtocontents{toc}{Axioms: \ref{def:birkhoff-axioms:0},}
+
+Evidently h-plane contains at least two points.
+Therefore to show that Axiom \ref{def:birkhoff-axioms:0} holds in h-plane we need to show that h-distance defined on page \pageref{h-dist} is a metric on h-plane;
+i.e., the each condition (\ref{def:metric-space:a})--(\ref{def:metric-space:d}) 
+in Definition~\ref{def:metric-space} hold for h-distance.
+
+
+The following claim says that 
+h-distance meets 
+the conditions (\ref{def:metric-space:a}) 
+and (\ref{def:metric-space:b}).
+
+\begin{thm}{Claim}
+Given h-points $P$ and $Q$, 
+we have
+$PQ_h\ge 0$
+and $PQ_h=0$ 
+if and only if $P=Q$.
+\end{thm}
+
+
+\parit{Proof.}
+According to Lemma~\ref{lem:P-->O}
+and Main Observation (\ref{thm:main-observ}), 
+we may assume that $Q$ is the center of absolute.
+In this case
+$$
+\delta(Q,P)=\frac{1+QP}{1-QP}\ge 1$$
+and the equality holds only if $P=Q$.
+
+Therefore
+$$QP_h=\ln[\delta(Q,P)]\ge 0.$$
+and the equality holds if and only if $P=Q$.
+\qeds
+
+By the following claim says that 
+h-distance meets 
+the conditions \ref{def:metric-space}(\ref{def:metric-space:c}).
+
+\begin{thm}{Claim}
+For any h-points $P$ and $Q$, we have
+$PQ_h=QP_h$.
+\end{thm}
+
+\begin{wrapfigure}[8]{o}{26mm}
+\begin{lpic}[t(-6mm),b(-2mm),r(0mm),l(0mm)]{pics/APQB-1(1)}
+\lbl[rt]{15,16;$P$}
+\lbl[rb]{14,28;$Q$}
+\lbl[tl]{21,11;$A$}
+\lbl[bl]{21,35.5;$B$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Proof.}
+Let $A$ and $B$ be ideal points of $(PQ)_h$ and
+$A,P,Q,B$ appear on the circline containing $(PQ)_h$ in the same order.
+
+Then
+\begin{align*}
+PQ_h
+&=\ln\frac{AQ\cdot BP}{QB\cdot PA}
+=
+\\
+&=\ln\frac{BP\cdot AQ}{PA\cdot QB}=
+\\
+&=QP_h.
+\end{align*}
+\qedsf
+
+The following claim shows in particular that
+triangle inequality 
+(which is condition \ref{def:metric-space}(\ref{def:metric-space:d}))
+holds  for $h$-distance.
+
+\begin{thm}{Claim}\label{clm:h-dist+trig-inq}
+Given a triple of h-points $P$, $Q$ and $R$,
+we have
+\[PQ_h+QR_h\ge PR_h.\]
+Moreover, the equality holds if and only if $P$, $Q$ and $R$ lie on one h-line in the same order.
+\end{thm}
+
+\begin{wrapfigure}{o}{30mm}
+\begin{lpic}[t(-4mm),b(-3mm),r(0mm),l(0mm)]{pics/h-circle-4(1)}
+\lbl[tr]{6.5,19;$R$}
+\lbl[t]{21,19;$P$}
+\lbl[b]{18,22.5;$\hat P$}
+\lbl[b]{17,29;$\Delta$}
+\lbl[br]{10.5,22.5;$S$}
+\lbl[bl]{26,22.5;$T$}
+\lbl[tr]{12.5,14;$Q$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Proof.}
+Without loss of generality, 
+we may assume that $RP_h\z\ge PQ_h>0$
+and $R$ is the center of absolute.
+
+Denote by $\Delta$ 
+the h-circle with center $P$ 
+and h-radius $PQ_h$.
+Let $S$ and $T$ be the points of intersection of $(RP)$ and $\Delta$.
+
+Since $PQ_h\le RP_h$,
+by Lemma~\ref{lem:h-tiangle=}
+we can assume that the points $R$, $S$, $P$ and $T$ appear on the h-line in the same order.
+
+Set $\rho=PQ_h$.
+According to Lemma~\ref{lem:h-circle=circle},
+$\Delta$ is a Euclidean circle;
+denote by $\hat P$ its Euclidean center.
+Note that $\hat P$ is the (Euclidean) midpoint of $[ST]$.
+
+By the Euclidean triangle inequality 
+$$RT=R\hat P+\hat PQ\ge RQ\eqlbl{RT>RQ}$$
+and the equality holds if and only if $T=Q$. 
+
+By Lemma~\ref{lem:O-h-dist},
+\begin{align*}
+RT_h&=\ln\frac{1+RT}{1-RT}\\
+RQ_h&=\ln\frac{1+RQ}{1-RQ}.
+\end{align*}
+Since the function $f(x)=\ln\frac{1+x}{1-x}$ is increasing for $x\in[0,1)$, 
+inequality \ref{RT>RQ} implies
+$$RT_h\ge RQ_h$$
+and the equality holds if and only if only if $T=Q$.
+
+Finally applying Lemma~\ref{lem:h-tiangle=} again, we get $$RT_h=RP_h+PQ_h.$$
+Hence the claim follows.
+\qeds
+
+\section*{Axiom \ref{def:birkhoff-axioms:1}}
+\addtocontents{toc}{\ref{def:birkhoff-axioms:1},}
+
+Note that once the following claim is proved,
+Axiom \ref{def:birkhoff-axioms:1} 
+follows from Corollary~\ref{cor:h-line}.
+
+\begin{thm}{Claim}
+A subset of h-plane is an h-line if and only if it forms a line for h-distance in the sense of Definition~\ref{def:line}.
+\end{thm}
+
+\parit{Proof.}
+Let $\ell$ be an h-line.
+Applying the main observation we can assume that $\ell$ contains the center of absolute.
+In this case $\ell$ is formed by intersection of diameter of absolute and the h-plane.
+Let $A$ and $B$ be the endpoints of the diameter.
+
+Consider the map $\iota\:\ell\to \mathbb{R}$ defined as
+$$\iota(X)=\ln \frac{AX}{XB}.$$
+Note that $\iota\:\ell\to \mathbb{R}$ is a bijection.
+
+Further, if $X,Y\in \ell$ and the points $A$, $X$, $Y$ and $B$ appear on $[AB]$ in the same order then
+\[\iota(Y)-\iota(X)=\ln \frac{AY}{YB}-\ln \frac{AX}{XB}=\ln \frac{AY\cdot BX}{YB\cdot XB}=XY_h;\]
+that is, any h-line is a line for h-metric.
+
+We proved that any h-line is a line for h-distance.
+The converse follows from Claim~\ref{clm:h-dist+trig-inq}.
+\qeds
+
+
+\section*{Axiom \ref{def:birkhoff-axioms:2}}
+\addtocontents{toc}{\ref{def:birkhoff-axioms:2},}
+
+Note that the first part of Axiom \ref{def:birkhoff-axioms:2} follows directly from the definition of h-angle measure defined on page~\pageref{h-angle measure}.
+It remains to show that $\measuredangle_h$ satisfies the conditions \ref{def:birkhoff-axioms:2a}, \ref{def:birkhoff-axioms:2b} and \ref{def:birkhoff-axioms:2c} on page \pageref{def:birkhoff-axioms:2b}.
+
+The following two claims say that
+$\measuredangle_h$ satisfies
+ \ref{def:birkhoff-axioms:2a} and \ref{def:birkhoff-axioms:2b}.
+
+\begin{thm}{Claim}\label{clm:h2a}
+Given an h-half-line $[O P)$ and $\alpha\in(-\pi,\pi]$ there is unique  h-half-line $[O Q)$ such that $\measuredangle P O Q= \alpha$.
+\end{thm}
+
+\begin{thm}{Claim}\label{clm:h2b}
+For any h-points $P$, $Q$ and $R$ distinct from h-point $O$ we have
+$$\measuredangle P O Q+\measuredangle Q O R\equiv \measuredangle P O R.$$
+
+\end{thm}
+
+\parit{Proof of \ref{clm:h2a} and \ref{clm:h2b}.}
+Applying the main observation, 
+we may assume that $O$ is the center of absolute.
+In this case, for any h-point $P\ne O$,
+$[OP)_h$ is the intersection of $[OP)$ with h-plane.
+Hence the claims \ref{clm:h2a} and \ref{clm:h2b} 
+follow from the corresponding axioms of Euclidean plane.
+\qeds
+
+The following claim says that
+$\measuredangle_h$ satisfies
+ \ref{def:birkhoff-axioms:2c}.
+
+\begin{thm}{Claim}\label{clm:h2c}
+The function 
+$$\measuredangle_h\:(P,Q,R)\mapsto\measuredangle P Q R$$
+is continuous at any triple of points $(P,Q,R)$
+such that $Q\ne P$ and $Q\ne R$ and $\measuredangle_h P Q R\ne\pi$.
+\end{thm}
+
+\parit{Proof.}
+Denote by $O$ the center of absolute.
+We can assume that $Q$ is distinct from $O$.
+
+Denote by $Z$ the inversion of $Q$ in the absolute
+and by $\Gamma$ the circle perpendicular to the absolute which is centered at $Q'$.
+According to Lemma~\ref{lem:P-->O},
+the point $O$ is the inversion of $Q$ in $\Gamma$.
+
+Denote by $P'$ and $R'$ the inversions in $\Gamma$ of the points $P$ and $R$ correspondingly.
+Note that the point $P'$ is completely determined by the points $Q$ and $P$;
+moreover the map $(Q,P)\mapsto P'$ is continuous at any pair of points $(Q,P)$ such that $Q\ne O$.
+The same is true for the map $(Q,R)\mapsto R'$
+
+According to the Main Observation 
+$$\measuredangle_h P Q R\equiv -\measuredangle_h P' O R'.$$
+Since $\measuredangle_h P' O R'=\measuredangle P' O R'$ and 
+the maps $(Q,P)\mapsto P'$, $(Q,R)\mapsto R'$ are continuous,
+the claim follows from the corresponding axiom of Euclidean plane.
+\qeds
+
+\section*{Axiom \ref{def:birkhoff-axioms:3}}
+\addtocontents{toc}{\ref{def:birkhoff-axioms:3},}
+
+The following claim says that Axiom~\ref{def:birkhoff-axioms:3} holds holds in the h-plane.
+
+\begin{thm}{Claim}
+In the h-plane, we have
+$\triangle_h P Q R 
+\cong
+\triangle_h P' Q' R'$
+if and only if 
+\begin{align*}
+Q' P'_h&=Q P_h, & Q' R'_h&= Q R_h, &&\text{and}
+&\measuredangle_h P' Q' R'&=\pm\measuredangle P Q R.
+\end{align*}
+ 
+\end{thm}
+
+\parit{Proof.}
+Applying the main observation, 
+we can assume that both $Q$ and $Q'$ coincide with the center of absolute.
+In this case 
+$$\measuredangle P' Q R'=\measuredangle_h P' Q R'=\pm\measuredangle_h P Q R=\pm\measuredangle P Q R.$$
+Since 
+$$Q P_h=Q P'_h\ \ \text{and}\ \ Q R_h=Q R'_h,$$
+Lemma \ref{lem:O-h-dist} implies that the same holds for the Euclidean distances;
+that is,
+$$Q P=Q P'\ \ \text{and}\ \ Q R=Q R'.$$
+By SAS,
+there is a motion of Euclidean plane which sends $Q$ to itself, $P$ to $P'$ and $R$ to $R'$
+
+Note that the center of absolute is fixed by the corresponding motion.
+It follows that this motion gives also a motion of h-plane;
+in particular the h-triangles  
+$\triangle_h P Q R$ and $\triangle_h P' Q R'$ are h-congruent.
+\qeds
+
+\section*{Axiom h-$\!$\ref{def:birkhoff-axioms:4}}
+\addtocontents{toc}{h-\ref{def:birkhoff-axioms:4}.}
+
+
+Finally we need to check that the Axiom~h-$\!$\ref{def:birkhoff-axioms:4} on page \pageref{def:hyperbolic-4a} holds;
+i.e., we need to prove the following claim.
+
+\begin{thm}{Claim}
+For any h-line $\ell$ and any h-point $P\notin\ell$ there are at least two h-lines which pass through $P$ and have no points of intersection with $\ell$.
+\end{thm}
+
+\begin{wrapfigure}{o}{44mm}
+\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/absolute-triangle-3(1)}
+\lbl[tl]{32,3;$A$}
+\lbl[bl]{32,39;$B$}
+\lbl[r]{20.5,21;$P$}
+\lbl[b]{15,10,60;$m$}
+\lbl[b]{15,34,-60;$n$}
+\lbl[l]{28,21;$\ell$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Instead o proof.}
+Applying the main observation we can assume that $P$ is the center of absolute.
+
+The remaining part of proof can be guessed from the picture
+\qeds
+
+\begin{thm}{Exercise}\label{ex:3-h-lines}
+Show that in the h-plane 
+there are 3 mutually parallel h-lines 
+such that any pair of these three lines lies on one side from the remaining h-line.
+\end{thm}
+ 
+
+
+\addtocontents{toc}{\protect\end{quote}}

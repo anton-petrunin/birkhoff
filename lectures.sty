@@ -1,0 +1,106 @@
+\usepackage{amssymb, amsfonts, amsmath, amsthm}
+\usepackage{enumerate}
+\usepackage{bm}
+\usepackage{color}
+\usepackage{pifont}
+\usepackage[colorlinks=true,
+citecolor=black,
+linkcolor=black,
+anchorcolor=black,
+filecolor=black,
+menucolor=black,
+pdfauthor={Anton Petrunin},
+urlcolor=black%
+]{hyperref}
+\usepackage{caption}
+\usepackage[russian,english]{babel}
+\usepackage{multibib}
+\usepackage{epigraph}
+
+\usepackage{epsfig,lpic,wrapfig}
+\usepackage{multicol}
+
+% Fix latex
+\def\smallskip{\vskip\smallskipamount}
+\def\medskip{\vskip\medskipamount}
+\def\bigskip{\vskip\bigskipamount}
+
+%RUSSIAN STYLE
+\def\emptyset{\varnothing}
+\def\cosh{\operatorname{ch}}
+\def\sinh{\operatorname{sh}}
+\def\tan{\operatorname{tg}}
+\def\limsup{\varlimsup}
+\def\liminf{\varliminf}
+
+%MY STYLE
+\def\parit#1{\medskip\noindent{\it #1}}
+\def\parbf#1{\medskip\noindent{\bf #1}}
+\def\qeds{\qed\par\medskip}%END OF PROOF
+\def\qedsf{\vskip-6mm\qeds}%END OF PROOF BY FORMULA
+
+%THEOREM
+\newcounter{thm}[chapter]
+\renewcommand{\thethm}{\thechapter.\arabic{thm}}
+\def\claim#1{\par\medskip\noindent\refstepcounter{thm}\hbox{\bf \arabic{chapter}.\arabic{thm}. #1.}
+\it\ %\ignorespaces
+}
+\def\endclaim{
+\par\medskip}
+\newenvironment{thm}{\claim}{\endclaim}
+
+\def\epsilon{\varepsilon}
+\def\phi{\varphi}
+\def\theta{\vartheta}
+
+\def\ge{\geqslant}
+\def\le{\leqslant}
+
+\def\df{\buildrel \mathrm{def} \over{=\!\!=}}
+
+\def\:{\colon}
+
+\def\defect{\mathop{\rm defect}\nolimits}
+\def\area{\mathop{\rm area}\nolimits}
+\def\circum{\mathop{\rm circum}\nolimits}
+\def\Re{\mathop{\rm Re}\nolimits}
+\def\Im{\mathop{\rm Im}\nolimits}
+
+\newcommand*{\z}[1]{#1\nobreak\discretionary{}%
+            {\hbox{$\mathsurround=0pt #1$}}{}}
+\let\oldcdot\cdot
+\def\cdot{{\hskip0.5pt\z\oldcdot\hskip0.5pt}}
+
+\hyphenation{half-space geo-de-sic re-pa-ra-met-ri-za-tion col-lin-e-ar Py-thag-o-re-an}
+
+
+%LIST STILES
+\renewcommand{\@listI}{%
+\leftmargin=25pt
+\rightmargin=0pt
+\labelsep=5pt
+\labelwidth=20pt
+\itemindent=0pt
+\listparindent=0pt
+\topsep=0pt plus 1pt
+\partopsep=\topsep
+\parsep=\topsep
+\itemsep=\topsep}
+
+%ITEMIZE-first order sign
+\renewcommand{\labelitemi}{$\mathsurround=0pt \diamond$}
+\renewcommand{\labelitemii}{$\mathsurround=0pt \circ$}
+%chaptername
+%\renewcommand{\chaptername}{}
+
+%NUMBERONCIRC
+\newcommand*{\numform}[1]{\@numform{\@nameuse{c@#1}}}
+\newcommand*{\@numform}[1]%
+{\ifcase #1\or \ding{202}\or \ding{203}\or \ding{204}\or \ding{205}\or \ding{206}\or \ding{207}\or \ding{208}\or \ding{209}\or \ding{210}\or \ding{211}\else\@ctrerr \fi}
+
+%EQNUMBER
+\newcounter{eqtn}[chapter]
+\renewcommand{\@eqnnum}{\theeqtn}
+\renewcommand{\theeqtn}{\numform{eqtn}}
+\newcommand{\eqlbl}[1]{\refstepcounter{eqtn}\leqno\text{\numform{eqtn}\label{#1}}}
+\newcommand{\eqtag}[1]{\refstepcounter{eqtn}\tag*{\numform{eqtn}\label{#1}}}

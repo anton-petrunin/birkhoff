@@ -1,0 +1,1935 @@
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%
+
+To prove the converse, let us argue by contradiction.
+Assume that \ref{eq:inscribed-angle} holds for some $P\notin \Gamma$.
+Note that $\measuredangle X O Y\ne 0$ and therefore $\measuredangle X P Y$ is distinct from $0$ and $\pi$;
+that is, $\triangle PXY$ is nondegenerate.
+
+\begin{center}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/inscribed-angle-6(1)}
+\lbl[rb]{11,41;$P'$}
+\lbl[r]{10,29;$P$}
+\lbl[l]{43,22;$X$}
+\lbl[rt]{11,3;$Y$}
+\lbl[rb]{21,23;$O$}
+%%%%
+\lbl[t]{49,10;$P$}
+\lbl[l]{93,22;$X$}
+\lbl[rt]{61,3;$Y$}
+\lbl[rb]{71,23;$O$}
+\end{lpic}
+\end{center}
+
+If the line $(PY)$ is secant to $\Gamma$, denote by $P'$ the point of intersection of $\Gamma$ and $(PY)$ which is distinct from $Y$.
+From above we get 
+$$2\cdot\measuredangle X P' Y
+\equiv
+\measuredangle X O Y.$$
+In particular, 
+$$2\cdot\measuredangle X P' Y
+\equiv
+2\cdot\measuredangle X P Y.$$
+By Transversal property (\ref{thm:parallel-2}),
+$(P'X)\parallel (PX)$.
+Since $\triangle PXY$ is nondegenerate,
+the later implies $P=P'$, which contradicts $P\notin \Gamma$.
+
+In the remaining case, if $(PY)$ is tangent to $\Gamma$,
+the proof goes along the same lines.
+Namely, by Theorem~\ref{thm:tangent-angle},
+$$2\cdot\measuredangle P Y X
+\equiv
+\measuredangle Y O X.$$
+Therefore 
+$$2\cdot(\measuredangle X P Y + \measuredangle P Y X)
+\equiv0.$$
+
+By Transversal property~\ref{thm:parallel-2},
+$(PY)\z\parallel (XY)$;
+therefore $(PY)\z= (XY)$.
+That is, $\triangle PXY$ is degenerate,
+a contradiction.
+
+
+
+
+
+
+
+
+
+
+
+
+
+\parbf{Exercise~\ref{ex:center-proj}.}
+Follows from Theorem \ref{thm:circle-center-proj} the same way as the exercises~\ref{ex:affine-perp} and \ref{ex:midpoint-proj}.
+
+
+
+
+
+
+
+
+\parbf{Exercise~\ref{ex:affine+circles}.}
+According to Exercise~\ref{ex:center-circ-affine}, the transformation has to send center of the circle to the center of its image.
+
+Assume that the transformation is given as
+\[\beta\:\left(\begin{smallmatrix}
+x\\ y
+\end{smallmatrix} \right)
+  \mapsto
+  \left(\begin{smallmatrix}
+a&b\\ c&d
+\end{smallmatrix} \right)
+  \cdot
+  \left(\begin{smallmatrix}
+x\\ y
+\end{smallmatrix} \right)
+  +
+\left(\begin{smallmatrix}
+v\\ w
+\end{smallmatrix} \right).
+\]
+Applying the parallel translation we may assume that the origin did not move; i.e., $\left(\begin{smallmatrix}
+v\\ w
+\end{smallmatrix} \right)=0$.
+Applying a homothety we may assume that unit circle centered at the origin is mapped to itself.
+Since $\beta\left(\begin{smallmatrix}
+1\\ 0
+\end{smallmatrix} \right)
+=
+\left(\begin{smallmatrix}
+a\\c 
+\end{smallmatrix} \right)$,
+$\beta\left(\begin{smallmatrix}
+0\\ 1
+\end{smallmatrix} \right)
+=
+\left(\begin{smallmatrix}
+b\\d 
+\end{smallmatrix} \right)$ 
+and 
+$\beta\left(\begin{smallmatrix}
+1/\sqrt{2}\\ 1/\sqrt{2}
+\end{smallmatrix} \right)
+=
+\left(\begin{smallmatrix}
+(a+b)/\sqrt{2}\\(c+d)/\sqrt{2} 
+\end{smallmatrix} \right)$
+we get
+\begin{align*}
+a^2+c^2&=1\\
+b^2+d^2&=1\\
+(a+b)^2+(c+d)^2&=2.
+\end{align*}
+It follows that the matrix takes one of two forms $\bigl(\begin{smallmatrix}
+a&b\\ -b&a
+\end{smallmatrix} \bigr)$
+or 
+$\bigl(\begin{smallmatrix}
+a&b\\ b&-a
+\end{smallmatrix} \bigr)$ where $a^2+b^2=1$;
+i.e., the map is a motion of the plane.
+
+
+
+
+\parbf{Exercise~\ref{ex:Moebius=inversive}.}
+Follows from
+Exercise~\ref{ex:invesion-Mob}.
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{thm}{Proposition}
+The identity map in a group of transformations on set $\mathcal X$ can be distinguished
+from all the other transformations as the unique transformation $\iota$ such that
+\[\iota\circ\alpha=\alpha
+\eqlbl{eps-circ-alpha}\] 
+for any transformation $\alpha$.
+\end{thm}
+
+\parit{Proof.}
+Assume $\iota$ is the identity map;
+i.e., $\iota(x)=x$ for any  $x$.
+Then 
+\[\iota\circ\alpha(x)=\iota(\alpha(x))=\alpha(x).\]
+Hence \ref{eps-circ-alpha} follows.
+
+Assume $\iota'$ is a transformation which satisfies \ref{eps-circ-alpha}.
+Then 
+\[\iota'(x)=\iota'(\iota(x))=\iota'\circ\iota(x)=\iota(x).\]
+The later implies $\iota'=\iota$.
+\qeds
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The group motions of plane (Euclidean or hyperbolic or absolute) is equipped with natural binary operation, given two motions $\alpha$ and$\beta$ one can take its composition $\alpha\circ\beta$.
+Also, for any motion $\alpha$,
+its inverse $\alpha^{-1}$ is a motion of the plane.
+
+
+
+
+
+
+
+
+
+
+
+
+\parit{Second proof.}
+Consider such a configuration in the Euclidean space.
+Assume in addition that the lines $(AA')$, $(BB')$ and $(CC')$ do not lie in one plane and intersect at point $O$.
+
+Denote by $(PQR)$ the plane passing through three points.
+
+Nothe that
+\begin{align*}
+(AB)&= (OAB)\cap (ABC),&
+(A'B')&= (OAB)\cap (A'B'C'),\\
+(BC)&= (OBC)\cap (ABC),&
+(B'C')&= (OBC)\cap (A'B'C'),\\
+(CA)&= (OCA)\cap (ABC),&
+(C'A')&= (OCA)\cap (A'B'C').
+\end{align*}
+Further
+\begin{align*}
+X&=(BC)\cap(B'C')=(OBC)\cap (ABC)\cap (A'B'C'),\\
+Y&=(CA)\cap(C'A')=(OCA)\cap (ABC)\cap (A'B'C'),\\
+Z&=(AB)\cap(A'B')=(OAB)\cap (ABC)\cap (A'B'C').
+\end{align*}
+Note that $(ABC)\cap (A'B'C')$ is a line and
+\[X,Y,Z\in (ABC)\cap (A'B'C');\]
+i.e., the points are collinear. 
+Passing  to the orthogonal projection of this configuration to a plane proves proves the theorem.
+
+Applying a perspective projection,
+the case $(AA')\parallel(BB')\parallel(CC')$ 
+can be reduced to the one discussed above.
+\qeds
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The idealized ruler can be used only to draw a line through given two points. (The ruler is assumed to be infinite in length, and it has no markings on it and only one edge.)
+The idealized ruler and compass can be used only to draw a circle with given center and radius.
+We may always mark an additional point in the plane
+as well as on the constructed sets, lines or circles or on their intersections.
+Doing this we have no control on the choice the additional point. 
+
+We can also look at the different set of instruments, 
+for example
+you may only use the ruler;
+you may invent your own instruments, for example an instrument which produce midpoint for given two points, 
+or produce a circle or line which pass through given three points.
+Thanks to number of computer programs which were developed in the last few years, one can play with these these instruments as well.
+
+Any construction problem starts with the \index{initial configuration}\emph{initial configuration},
+it is finite collection of points, lines, circles
+and asked for an algorithm of constructing some other configuration of points.
+
+A construction is a finite sequence of the following five basic constructions which use the points, lines and circles that have already been constructed. 
+These are:
+\begin{enumerate}[(a)]
+\item Draw the line through two marked points;
+\item Draw the circle through one marked point with center at another marked point;
+\item Mark the point which is the intersection of two constructed lines (if they intersect);
+\item Mark the one or two points in the intersection of a line and a circle (if they intersect);
+\item Mark the one or two points in the intersection of two circles (if they intersect);
+\end{enumerate}
+
+The rules above describe the classical compass-and-ruler constructions. 
+But one can look at the different instruments, for example
+you may only consider ruler,
+you may invent your own instruments, for example an instrument which produce midpoint for given two points, or produce a circle or line which pass through given three points.
+Thanks to number of computer programs which were developed in the last few years, one can play with these these instruments as well. 
+
+
+Use the following links to see the following standard constructions.
+\begin{itemize}
+\item \href{run:./car/segment-bisector.html}{Bisection of a segment.}
+\item \href{run:./car/angle-bisector.html}{Bisection of a angle.}
+\item \href{run:./car/perpendicular-1.html}{Perpendicular to a line from an external point.}
+\item \href{run:./car/perpendicular-2.html}{Perpendicular to a line at a point on the line.}
+\item \href{run:./car/5-sect.html}{Dividing a line segment into 5 equal segments.}
+\end{itemize}
+
+\begin{thm}{Exercises}
+Use the following links to java applets to do the following constructions. 
+\begin{itemize}
+\item Euclidean geometry: 
+\href{run:./car/parallel.html}{parallel line}, 
+\href{run:./car/trisection.html}{segment trisection}, 
+\href{run:./car/incircle.html}{incircle of triangle},
+\item Inversive geometry: 
+\href{run:./car/inverse.html}{inverse of a point}, 
+\href{run:./car/h-line.html}{perpedicular circle}, 
+\href{run:./car/perpendicular-circles.html}{perpedicular circle 2}
+\item Hyperbolic geometry: 
+\href{run:./car/h-center.html}{h-center}, 
+\href{run:./car/h-triangle.html}{perpendicular bisectors of h-triangle}, 
+\href{run:./h-equal.html}{h-circle}.
+\end{itemize}
+\end{thm}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\parbf{Exercise~\ref{ex:car-midpoint}.}
+\begin{enumerate}[1.]
+\item Draw a circle with center $A$ through $B$;
+\item Draw a circle with center $B$ through $A$;
+\item Draw a line $\ell$ through the points of interections of the constructed cuircles.
+\item The intersection of $\ell$ and $[AB]$ is the midpoint of $[AB]$.
+\end{enumerate}
+\begin{center}
+%\begin{wrapfigure}[11]{o}{28mm}
+\begin{lpic}[t(-3mm),b(0mm),r(0mm),l(0mm)]{pics/ex-midpoint(1)}
+\lbl[r]{22.5,25;$A$}
+\lbl[l]{48,25;$B$}
+\lbl[l]{36.5,34;$\ell$}
+\end{lpic}
+%\end{wrapfigure}
+\end{center}
+
+
+
+
+
+
+
+
+
+
+($\Rightarrow$).
+If $A$, $B$, $C$ and $D$ lie on one line then both $\ang ABC$ and $\ang CDA$ are zero or straight. 
+Hence \ref{eq:inscribed-4angle} follows.
+
+If $A$, $B$, $C$ and $D$ lie on one circle,
+denote by $O$ the center of the circle.
+According to Theorem~\ref{thm:inscribed-angle},
+\begin{align*}
+2\cdot\measuredangle ABC
+&\equiv\measuredangle AOB,
+\\
+2\cdot\measuredangle CDA
+&\equiv\measuredangle BOA.
+\end{align*}
+Adding these two identities, we get \ref{eq:inscribed-4angle}.
+
+\parit{}($\Leftarrow$).
+Assume \ref{eq:inscribed-4angle} holds.
+
+
+If $\triangle ABC$ is degenerate
+then according to Corollary~\ref{cor:degenerate=pi}, $\measuredangle ABC=0$ or $\pi$.
+From \ref{eq:inscribed-4angle}, $\measuredangle CDA=0$ or $\pi$.
+Applying Corollary~\ref{cor:degenerate=pi} again,
+we get $B,D\in (AC)$; 
+that is, all points $A$, $B$, $C$ and $D$ lie on one line.
+
+If $\triangle ABC$ is nondegenerate,
+denote by $\Gamma$ the circumcircle of $\triangle ABC$.
+Applying the ``only if'' part of Theorem~\ref{thm:inscribed-angle}, we get the result.
+
+
+
+
+
+
+
+
+
+
+
+
+From \ref{eq:inscribed-4angle}, $\measuredangle ADC\not\equiv 0$ nor $\pi$;
+therefore $\triangle CDA$ is nondegenerate and in particular
+
+\begin{wrapfigure}{o}{45mm}
+\begin{lpic}[t(-7mm),b(0mm),r(0mm),l(0mm)]{pics/inscribed-angle-4a(1)}
+\lbl[r]{1,21;$A$}
+\lbl[rb]{6,34;$B$}
+\lbl[lb]{40,32;$C$}
+\lbl[tl]{30,1.5;$D'$}
+\lbl[l]{35,13;$D$}
+\end{lpic}
+\end{wrapfigure}
+
+$$(DA)\ne (CD).\eqlbl{eq:DAnpCD}$$
+
+
+Now we need to consider two cases. 
+
+\parit{Case 1.} Assume $(CD)$ is secant of $\Gamma$.
+Denote by $D'$ be the point of intersection $\Gamma$ and $(CD)$ which is distinct from $C$.
+From \ref{eq:inscribed-4angle} and the ``only if''-part, we get
+$$2\cdot \measuredangle ADC\equiv2\cdot \measuredangle AD'C.$$
+According to Corollary~\ref{cor:parallel-2}, 
+
+\begin{wrapfigure}{o}{45mm}
+\begin{lpic}[t(-5mm),b(0mm),r(0mm),l(0mm)]{pics/inscribed-angle-4b(1)}
+\lbl[r]{0,21;$A$}
+\lbl[rb]{5,35;$B$}
+\lbl[lb]{43,20;$C$}
+\lbl[l]{41,8;$D$}
+\end{lpic}
+\end{wrapfigure}
+
+$$(DA)\z\parallel(D'A).$$
+Hence $(DA)\z=(D'A)$. 
+From \ref{eq:DAnpCD} we get $D=D'$;
+hence the result follows.
+
+\parit{Case 2.} Now assume $(CD)$ is tangent of $\Gamma$.
+Let $O$ denotes the center of $\Gamma$.
+Then
+by Theorem~\ref{thm:tangent-angle}
+$$2\cdot\measuredangle ACD\equiv \measuredangle AOC.$$
+
+
+According to Theorem~\ref{thm:inscribed-angle},
+\begin{align*}
+2\cdot\measuredangle ABC&\equiv\measuredangle AOC.
+\end{align*}
+Therefore
+\begin{align*}
+2\cdot\measuredangle DCA+2\cdot\measuredangle ABC\equiv0.
+\end{align*}
+
+According to Corollary~\ref{cor:parallel-2}, $(DC)\z\parallel(DA)$. 
+Therefore $D\in (AC)$ which contradicts \ref{eq:DAnpCD}.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+First note that if $(AD)\perp(BC)$ then by angle-side-angle condition $\triangle A D B\cong\triangle ADC$.
+In particular $AB=AC$ and $DB=DC$; hence \ref{bisect-ratio} follows.
+
+In the remaining case we may assume that $\ang B D A$ is obtuse (otherwise switch labels of $B$ and $C$).
+
+Choose a point $D'\not=D$ on $(AD)$ such that $B D\z=B D'$ (it exists due to Lemma~\ref{lem:tangent}).
+
+Since $\measuredangle DAB\equiv-\measuredangle DAC$,
+the point
+$D$ lies between $C$ and $B$.
+Since $\triangle BDD'$ is isosceles,
+angle $\ang BDD'$ is acute.
+On the other hand $\ang B D A$ is obtuse, 
+which implies that $D$ lies between $A$ and $D'$.
+
+In particular the angles $\ang C D A$ and $\ang B D D'$ are vertical.
+Since $\triangle D B D'$ is isosceles, we have 
+\begin{align*}
+\measuredangle B D' A&\equiv \measuredangle B D' D\equiv
+\\
+&\equiv -\measuredangle B D D'\equiv
+\\
+&\equiv -\measuredangle C D A
+\end{align*}
+Since $(AD)$ bisects $\ang B A C$, we have $\measuredangle DAB\equiv -\measuredangle D A C$.
+Applying the AA condition, we get $\triangle ADC\sim \triangle A D' B$.
+Thus,
+$$\frac{DB}{DC}=\frac{D' B}{DC}=\frac{AB}{AC}.$$
+\qedsf
+
+
+
+
+
+
+
+
+
+\section*{Area of spherical triangle\footnote{This is a slightly modified version of ``Area of a spherical triangle''  by Thomas Foregger, Igor Khavkine, John Smith. Freely available at \href{http://planetmath.org/AreaOfASphericalTriangle.html}{PlanetMath.org}.}}
+\addtocontents{toc}{Area of spherical triangle.}
+
+\begin{wrapfigure}[9]{o}{31mm}
+\begin{lpic}[t(0mm),b(-0mm),r(0mm),l(0mm)]{pics/s-trig-my-1(1)}
+\end{lpic}
+\end{wrapfigure}
+
+A spherical triangle is formed by connecting three points, its vertices, 
+on the surface of a sphere with great arcs.
+The spherical triangle with vertices $A$, $B$ and $C$ will be denoted by $\triangle_s ABC$.
+
+The angle at each vertex is measured 
+as the angle between the tangents to the sides.
+
+The following theorem is analogous to Corollary~\ref{cor:area-h-trig}.
+
+\begin{thm}{Theorem}\label{thm:s-trig-area}
+Let $\triangle_s ABC$ be a spherical triangle on a unit sphere.
+Denote by $\alpha$, $\beta$ and $\gamma$ the internal angles of $\triangle_s ABC$ 
+at $A$, $B$ and $C$ correspondingly.
+Then
+$$\area (\triangle_s ABC) = \alpha+\beta+\gamma-\pi.$$
+
+\end{thm}
+
+\begin{thm}{Corollary}
+The sum of the internal angles of a spherical
+triangle is greater than or equal to $\pi$.
+\end{thm}
+
+\begin{thm}{Corollary}
+Let $\mathcal{P}$ be a spherical $n$-gon 
+with the internal angles $\alpha_1,\z\dots,\alpha_n$.
+Then 
+$$\area\mathcal{P}=\alpha_1+\dots+\alpha_n-\pi\cdot(n-2).$$
+
+\end{thm}
+
+In the following proof, we use that area of unit sphere is $4\cdot\pi$.
+This fact follows from the formula for area of surface of revolution;
+we do not present these calculations here.
+
+On the picture above, you see a spherical triangle $\triangle_sABC$.
+Note that by continuing the sides of the original triangle into
+great circles, another spherical triangle is formed. The triangle $\triangle_sA'B'C'$
+is antipodal to $\triangle_sABC$; it can be obtained by reflecting $\triangle_sABC$ through $O$. 
+By symmetry, both triangles must
+have the same area.
+
+\parit{Proof.}
+The \index{spherical diangle}\emph{spherical diangle} is a subset of the sphere which is bounded by two great arcs that intersect in two points, which must lie on a diameter. 
+
+Six diangles
+with vertices on the diameters $AA'$, $BB'$ and $CC'$ are shown on the picture.
+
+\begin{figure}[h]
+\includegraphics[scale=0.3]{pics/img4}\ \ 
+\includegraphics[scale=0.3]{pics/img5}\ \ 
+\includegraphics[scale=0.3]{pics/img6}
+\end{figure}
+
+Clearly, a diangle occupies an area that is proportional to the absolute value of the angle measure. 
+Since the area of the sphere
+is $4\cdot\pi$, 
+the area of the diangles are $2\cdot\alpha$, $2\cdot\beta$ and $2\cdot\gamma$ correspondingly.
+
+Note that these 6 diangles cover the entire sphere while overlapping
+only on the triangles $\triangle_s ABC$ and $\triangle_s A'B'C'$;
+the diangles cover these triangles three times and the remaining part of sphere only once.
+Therefore 
+$$
+4\cdot\pi + 4\cdot\area(\triangle_s ABC)= 4\cdot \alpha+4\cdot \beta+4\cdot\gamma.
+$$
+Hence, the result follows.
+\qeds
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{thm}{Theorem}\label{thm:sum-trig-h}
+Given three positive real numbers $\alpha$, $\beta$ and $\gamma$ such that
+$$\alpha+\beta+\gamma<\pi$$ 
+there is a hyperbolic triangle $\triangle_hABC$
+such that with
+$$|\measuredangle_hCAB|=\alpha,\ \ |\measuredangle_hABC|=\beta\ \ \text{and}\ \ |\measuredangle_hBCA|=\gamma.\eqlbl{eq:abc}$$
+ 
+Moreover this triangle is uniquely determined up to congruence. 
+\end{thm}
+
+%???PIC
+
+\parit{Proof.}
+Set 
+$$\epsilon=(\pi-\alpha-\beta-\gamma)/2.$$
+Note that there is a Euclidean triangle $\triangle ABC$ such that 
+$$\measuredangle CAB=\alpha,\ \ \measuredangle ABC=\beta+\epsilon\ \ \text{and}\ \ \measuredangle BCA=\gamma+\epsilon.$$
+
+Let us construct an arc $BQC$
+such that if $[BX)$ and $[CY)$ are tangents half-lines to arc $BQC$
+at $B$ and $C$ then $\measuredangle CBX=\measuredangle ACY=-\epsilon$.
+Denote by $\Gamma$ the circle containing arc $BQC$.
+
+Note that $O$ lies outside of $\Gamma$.
+Draw a line $(AW)$ which is tangent to $\Gamma$ at $W$.
+In this case the circle $\Omega$ centered at $A$  and passing through $W$
+is perpendicular to $\Gamma$.
+Note that $\triangle_h ABC$ in the model with absolute $\Omega$ satisfies \ref{eq:abc}. 
+
+To prove the last statement, first note that we can assume that $A$ is the center of absolute.
+In this case, if $\triangle_hABC$ satisfies \ref{eq:abc}
+then $\triangle ABC$ has angles with measures 
+$\pm \alpha$, $\pm \beta+\epsilon$ and $\gamma+\epsilon$
+and the arc forming $[BC]_h$ is completely determined by  $B$, $C$ and $\epsilon$.
+Therefore if $W$ is an ideal point of $(BC)_h$ then $\tfrac {AB}{AW}$ and $\tfrac {AC}{AW}$ are completely determined by $\alpha$, $\beta$ and $\gamma$.
+Therefore so are the h-distances $AB_h$ and $AC_h$. 
+It remains to apply SAS congruence condition in h-plane.
+\qeds
+
+
+
+
+
+
+
+
+
+
+
+
+\section*{Existence of area}
+
+\begin{thm}{Proposition}
+Given a finite collection of polygonal regions $\mathcal{R}_1,\mathcal{R}_2,\dots, 
+\end{thm}
+
+
+Fix small $\epsilon>0$.
+Given a polygonal region $\mathcal R$,
+consider the maximal integer number $n$ such that there are $n$ points $P_1,P_2,\dots P_n$ in $\mathcal R$ such that $P_iP_j>\epsilon$ for all $i\ne j$.
+Set $\pack_\epsilon \mathcal R=n$.
+
+\begin{thm}{Exercise}
+Show that $\pack_\epsilon \mathcal R$ is well defined integer number for any polygonal region.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:bounded}
+For any polygonal region $\mathcal R$ there is a constant $C$ such that
+$$\epsilon^2\cdot\pack_\epsilon \mathcal R\le C$$
+for any $\epsilon>0$.
+
+Moreover if $\mathcal R$ is nondegenerate then there is a constrant $c>0$ such that 
+$$\epsilon^2\cdot\pack_\epsilon \mathcal R> c$$
+for any $\epsilon>0$.
+\end{thm}
+
+There is a set-theoretical monster-construction
+which named \emph{ultralimit}.
+Given a bounded sequence of real numbers $(x_n)=(x_1,x_2,\dots)$,
+it gives a real number $\mathfrak{F}(x_n)$ such that
+\begin{itemize}
+\item $x=\mathfrak{F}(x_n)$ is a partial limit of the sequence $x_1,x_2,\dots$; i.e., $x$ is a limit of a subsequence of $x_1,x_2,\dots,x_n$.
+\item $\mathfrak{F}(x_n+y_n)=\mathfrak{F}(x_n)+\mathfrak{F}(y_n)$;
+i.e., given two bounded sequences of real numbers $(x_n)$ and $(y_n)$, consider sequence $(z_n)$ such that $z_n=x_n+y_n$ for each $n$ then $\mathfrak{F}(z_n)=\mathfrak{F}(x_n)+\mathfrak{F}(y_n)$.
+\item $\mathfrak{F}(c\cdot x_n)=c\cdot \mathfrak{F}(x_n)$;
+i.e., given two bounded sequence of real numbers $(x_n)$ and a real number $c$, consider sequence $(z_n)$ such that $z_n=c\cdot x_n$ for each $n$ then $\mathfrak{F}(z_n)=c\cdot \mathfrak{F}(x_n)$.
+\end{itemize}
+
+The construction is not unique. 
+For the sequence $x_n=(-1)^n$,
+depending on the construction we might have $\mathfrak{F}(x_n)=1$ or $\mathfrak{F}(x_n)=-1$.
+
+We will need only existence of one such construction
+and we are not going to prove. %REF???
+
+Note that if $x_n$ converges then
+$$\mathfrak{F}(x_n)=\lim_{n\to\infty} x_n.$$
+The ultralimits behave unpredictably when you pass to a subsequence.
+ while
+$\mathfrak{F}(x_n)=1$.
+In fact it is true that if $\mathfrak{F}(x_n)$ does not depend on the choice of  $\mathfrak{F}$ then the sequence $(x_n)$ is converging.
+
+Let $\mathcal R$ be a polygonal region.
+Consider sequence $(x_n)$ with elements
+$$x_n=\frac{\pack_{1/n} \mathcal R}{n^2}.$$
+Note that according to the Exercise~\ref{ex:bounded} the sequence $x_n$ is bounded.
+Define 
+$$s(\mathcal R)=\mathfrak{F}(x_n).$$
+
+Note that $x_n\ge 0$ for any $n$, therefore 
+$$s(\mathcal R)\ge 0$$
+for any polygonal region $\mathcal R$.
+According to Exercise~\ref{ex:bounded},
+$$s(\mathcal R)> 0$$
+for any nongedenerate polygonal regions.
+
+
+\begin{thm}{Exercise}
+Let $\mathcal R_1$ and $\mathcal R_2$ be  two polygonal regions.
+Show that there is a constant $C$ such tat
+\begin{align*}
+\pack_\epsilon \mathcal R_1 +\pack_\epsilon\mathcal R_2 &-C\cdot\epsilon\le
+\\
+\le
+\pack_\epsilon (\mathcal R_1&\cup\mathcal R_2) +\pack_\epsilon (\mathcal R_1\cap\mathcal R_2)
+\le 
+\\
+&\le
+\pack_\epsilon \mathcal R_1 +\pack_\epsilon\mathcal R_2 +C\cdot\epsilon.
+\end{align*}
+
+Conclude that 
+$$s(\mathcal{R}_1)+s (\mathcal{R}_2)=s(\mathcal{R}_1\cup\mathcal{R}_2)+s(\mathcal{R}_1\cap\mathcal{R}_2)$$
+for any two polygonal regions $\mathcal R_1$ and $\mathcal R_2$.
+\end{thm}
+
+Denote by $\mathcal{Q}_1$ the unit square.
+From the last exercise it follows that if one sets
+$$\area\mathcal{R}=s(\mathcal{R})/s(\mathcal{Q}_1),$$
+then the obtained functional satisfies all the properties of area.
+
+\section*{Uniqueness of area}
+
+Once the existence of area functional is proved we can use the properties of area alone to find the area of different polygonal regions.
+
+\begin{thm}{Theorem}
+Any degenerate polygonal region has zero area.
+In particular, the are of segment is zero.
+\end{thm}
+
+
+\begin{thm}{Theorem}
+The area of rectangular region with sides $a$ and $b$ is equal to $a\cdot b$. 
+\end{thm}
+
+
+\begin{thm}{Theorem}
+Area of triangular region is equal to ...
+\end{thm}
+
+Finally note that any polygonal region can be presented as a union of finite number of triangles in such a way that distinct triangle do not have common points inside.
+Applying the 
+
+???
+
+Consider triangle $\triangle ABC$.
+Recall that altitude at $A$ is the distance from $A$ to its foot point on $(BC)$
+Denote the altitude at $A$, $B$ and $C$ by $h_a$, $h_b$ and $h_c$ correspondingly.
+Set $a=BC$, $b=CA$ and $c=AB$.
+
+\begin{thm}{Exercise}
+Show that 
+$$h_a\cdot a=h_b\cdot b=h_c\cdot c.$$
+\end{thm}
+
+
+Let us define area of triangle $\triangle ABC$ the following way.
+$$\area \triangle ABC= \tfrac12\cdot h_a\cdot a.
+$$
+From the above exercise we get that 
+
+$$\area \triangle ABC=\area \triangle BAC=\area ACB=\dots$$
+
+
+\begin{thm}{Exercise}
+Assume $D$ lies between $B$ and $C$.
+Show that 
+$$\area \triangle ABC=\area \triangle ABD+\area \triangle ADC$$
+\end{thm}
+
+
+
+Given triangle $\triangle ABC$ denote by
+$h_a$ to be the distance from $A$ to its foot point on $(BC)$;
+the value $h_a$ sometimes called altitude 
+
+Let us first define area of triangle as 
+
+
+\section*{Existence of area in Euclidean plane}
+
+\section*{Existence of area in hyperbolic plane}
+
+
+
+
+\section*{The sum of angles of polygon} 
+\addtocontents{toc}{The sum of angles of polygon.}
+
+In this section we work in an absolute plane;
+i.e., we do not want to specify is it Euclidean or hyperbolic geometry.
+
+A \index{broken line}\emph{broken line} $A_1A_2\dots A_n$
+is the union of segments $[A_1A_2]$, $[A_2A_3]$, ..., $[A_{n-1}A_n]$
+and  \index{broken line!closed broken line}\emph{closed broken line} $A_1A_2\dots A_n$
+is the union of segments $[A_1A_2]$, $[A_2A_3]$, ..., $[A_{n-1}A_n]$, $[A_nA_1]$.
+A closed broken line  $A_1A_2\dots A_n$ is called \index{broken line!simple closed broken line}\emph{simple} if the segments  $[A_1A_2]$, $[A_2A_3], \z\dots,[A_{n-1}A_n]$ intersect each other only at the common ends.
+
+The set $\mathcal{P}$ bounded by simple closed broken line $A_1A_2\dots A_n$ is called
+\index{polygon}\emph{polygon} or \index{$n$-gon}\emph{$n$-gon}.
+
+Here is a formal definition, $X\in\mathcal{P}$ if $X$ lie on the closed broken line $A_1A_2\dots A_n$ or one (and therefore any) half-line $[XY)$ which does not pass through any of $A_i$, intersects the broken line $A_1A_2\dots A_n$ at odd number of points.
+
+In this case
+\begin{itemize}
+\item the points $A_1$, $A_2$, ..., $A_n$ are called \index{vertex of polygon}\emph{vertices} of $\mathcal{P}$;
+\item the segments $[A_1A_2]$, $[A_2A_3]$, ..., $[A_{n}A_1]$ 
+are called 
+\emph{side of polygon}\emph{sides} of $\mathcal{P}$;
+\item the remaining segments of the form $[A_iA_j]$ are called  
+\index{diagonal of polygon}\emph{diagonals} of $\mathcal{P}$.
+\end{itemize}
+
+The  $n$-gon $\mathcal{P}$ can be always divided by diagonals into $(n-2)$ triangles $\triangle A_iA_jA_k$.
+This fact is not completely obvious, but it is not hard to prove.
+
+Without loss of generality, we may assume that all the angles $\ang A_iA_jA_k$,
+$\ang A_jA_kA_i$ and $\ang A_kA_iA_j$ in these triangles are positive.
+
+Denote by $\alpha_i$ the sum of angles of all these triangles at vertex $A_i$.
+Note that $\alpha_i$ takes value in $(0,2\cdot\pi)$ and it does not depend on choice of subdivision into triangles.
+The angle $\alpha_i$ is called 
+\index{angle!internal angle}\emph{internal angle} of $\mathcal{P}$ at $A_i$.
+
+By Theorem~\ref{thm:sum-trig-h}, the sum of angles of each nondegenerate triangle in the subdivision is less than $\pi$.
+Since the $n$-gon is divided into $n-2$ triangles, 
+it follows that if $\mathcal{P}$ is a polygon in h-plane then
+$$\alpha_1+\alpha_2+\dots+\alpha_n< (n-2)\cdot\pi.$$
+In Eulcidean plane, according to Theorem~\ref{thm:3sum}, we have 
+$$\alpha_1+\alpha_2+\dots+\alpha_n=(n-2)\cdot\pi.$$
+Therefore the value
+$$S(\mathcal{P})=\pi\cdot(n-2)-\alpha_1-\alpha_2-\dots-\alpha_n$$
+is positive for any $n$-gon in the hyperbolic plane and zreo for any $n$-gon $\mathcal{P}$ in Euclidean plane .
+
+\begin{thm}{Lemma}\label{lem:n-sum-angle}
+The functional $S$ defined above satisfies additivity; 
+i.e. if a polygon $\mathcal{P}$ is cut by a broken line into two polygons 
+$\mathcal{Q}_1$ and $\mathcal{Q}_2$ then
+$$S(\mathcal{P})=
+S(\mathcal{Q}_1)+S(\mathcal{Q}_2).$$
+
+\end{thm}
+
+\begin{wrapfigure}{o}{52mm}
+\begin{lpic}[t(-10mm),b(0mm),r(0mm),l(-6mm)]{pics/two-poly(1)}
+\lbl[]{20,25;$\mathcal{Q}_1$}
+\lbl[]{35,33;$\mathcal{Q}_2$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Proof.}
+Assume $\mathcal{P}$ be an $n$-gon
+and the cutting the broken line has $m$ vertices inside $\mathcal{P}$.
+Assume polygon $\mathcal{Q}_1$ has $n_1$ vertex shared with of $\mathcal{P}$ 
+and $\mathcal{Q}_2$ has $n_2$ vertex shared with of $\mathcal{P}$.
+
+Thus $\mathcal{Q}_1$ is an $(n_1+m)$-gon and $\mathcal{Q}_2$ is an $(n_2+m)$-gon
+and 
+$$n_1+n_2=n+2.\eqlbl{n1+n2}$$
+
+Denote by $\phi$ the sum of internal angles of $\mathcal{P}$ 
+and by $\psi_i$  the sum of internal angles of $\mathcal{Q}_i$.
+Note that each internal angle of $\mathcal{Q}_i$ either contributes to $\phi$ or it is an angle of the broken line.
+Further, each of vertex of the broken line inside of $\mathcal{P}$ contributes $2\cdot\pi$ to $\psi_1+\psi_2$.
+Hence 
+$$\phi+2\cdot m\cdot\pi=\psi_1+\psi_2.\eqlbl{phi1+phi2}$$
+Further,
+$$\begin{aligned}
+S(\mathcal{P})&=(n-2)\cdot\pi-\phi
+&
+S(\mathcal{Q}_i)&=(n_i+m-2)\cdot\pi-\psi_i.
+\end{aligned}\eqlbl{S(P)}$$
+The identities \ref{n1+n2}, \ref{phi1+phi2} and \ref{S(P)} imply the result.
+\qeds
+
+
+
+\section*{Area}\label{def:area}
+\addtocontents{toc}{Area.}
+
+Area is a function of the set of all polygons in the plane (Euclidean or hyperbolic).
+Which satisfies the following conditions:
+
+\begin{enumerate}[(a)]
+\item\label{area:0} $\area\mathcal P>0$ for any polygon $\mathcal P$.
+\item\label{area:1} If $\mathcal P$ and $\mathcal P'$ are congruent polygons then
+$$\area\mathcal P=\area\mathcal P'.$$
+\item\label{area:2}  Additivity:
+ if a polygon $\mathcal{P}$ is cut by a broken line into two polygons 
+$\mathcal{Q}_1$ and $\mathcal{Q}_2$ then
+$$\area\mathcal{P}=
+\area\mathcal{Q}_1+\area\mathcal{Q}_2.$$
+\item\label{area:3}  Normalzation\footnote{In Euclidean geometry this condition is equivalent to the fact that the unit square has area $1$. In hyperbolic plane there are no squares, so we can not normalize the area this way.}: if $a(\epsilon)$ is the area of right triangle with legs equal $\epsilon$ then
+$$\lim_{\epsilon\to0} \tfrac{a(\epsilon)}{\epsilon^2}=\tfrac12.$$
+\end{enumerate}
+
+In Euclidean geometry, existence of area has a  long and tedious proof.
+By that reason generic textbooks 
+take the existence of area as an ``obvious fact''.
+That is also the reason why we did not mention area up to now in this course.
+
+Once the existence of area is proved, 
+one can derive formulas for area of triangles and use it to show uniqueness of area functional.
+One could also extend the definition of area to a bigger class of sets,
+in particular one can talk about area of set bounded by a circle.
+
+In hyperbolic geometry,
+proving the existence of area functional is easy;
+one can take 
+$$\area\mathcal{P}= S(\mathcal{P})$$
+where $S(\mathcal{P})$ is defined in the previous section.
+
+Let us check that the conditions (\ref{area:0})--(\ref{area:3}).
+The condition (\ref{area:0}) is proved in the previous section.
+The condition (\ref{area:1}) is obvious.
+The condition (\ref{area:2}) follows from Lemma~\ref{lem:n-sum-angle}.
+The condition (\ref{area:3}) can be checked by direct calculations.
+\qeds
+
+
+The area functional is unique (we do not prove it but it is true).
+Therefore further we can always assume that
+$$\area\mathcal{P}= S(\mathcal{P})$$
+for any polygon $\mathcal{P}$ in h-plane.
+
+
+\begin{thm}{Corollary}\label{cor:area-h-trig}
+Let $\Delta$ be a triangle in h-plane with absolute values of the internal angles $\alpha$, $\beta$ and $\gamma$.
+Then 
+$$\area\Delta=\pi-\alpha-\beta-\gamma.$$
+
+In particular, by Theorem~\ref{thm:3sum-h},
+area of any triangle in h-plane is less than $\pi$ and it is equal to $\pi$ for the ideal triangle.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:area-sup}
+Let $ABCD$ be a quadrilateral in h-plane such that the h-angles at $A$, $B$ and $C$ are right and $AB_h=BC_h$.
+ Find the optimal upper for $\area(ABCD)$
+\end{thm}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\parbf{Exercise~\ref{ex:area-sup}.}
+Note that 
+\begin{align*}
+\area ABCD
+&=
+2\cdot\pi-|\measuredangle ABC|-|\measuredangle BCD|-|\measuredangle CDA|-|\measuredangle DAB|=
+\\
+&=\tfrac{\pi}2-|\measuredangle CDA|.
+\end{align*}
+The value $|\measuredangle CDA|$ can be arbitrary close to $0$.
+Therefore $\tfrac{\pi}2$ is the optimal upper bound.
+
+
+
+
+
+
+
+
+
+;
+it is
+Consider the two lines $m$ and $n$ passing through $P$ and tangent to the circle containing $\ell$.
+Note that the intersections of $m$ and $n$ with the h-plane are h-lines, which do not intersect $\ell$.
+Hence Axiom~h-$\!$\ref{def:birkhoff-axioms:4} follows.
+
+
+
+
+
+
+
+
+
+
+\parit{Proof.} 
+Follows from Exercise~\ref{ex:centers-of-perp-circles}.
+Note that given a point $Z$ outside of $\Omega$,
+there is unique circle $\Gamma$ centered at $Z$ and perpendicular to $\Omega$.
+
+Indeed, it is sufficient to show that the radius of $\Gamma$ is uniquely determined by $Z$ and $\Omega$.
+By Lemma~\ref{lem:tangent}, 
+if $T$ is a point of intersection of the circles 
+$\Gamma$ and $\Omega$ then $\ang OTZ$ is right.
+Clearly $ZT$ is the radius of $\Gamma$.
+By Pythagorean theorem, 
+\begin{align*}
+ZT^2&=ZO^2-OT^2=
+\\
+&=ZO^2-r^2,
+\end{align*}
+where $r$ is the radius of $\Omega$.
+
+\begin{wrapfigure}{o}{43mm}
+\begin{lpic}[t(-5mm),b(0mm),r(0mm),l(0mm)]{pics/PO-Gamma(1)}
+\lbl[br]{6,31.5;$\Omega$}
+\lbl[b]{40,31.5;$\Gamma$}
+\lbl[t]{18,16;$O$}
+\lbl[t]{33,16;$P$}
+\lbl[t]{40,16;$Z$}
+\lbl[b]{33,30;$T$}
+\end{lpic}
+\end{wrapfigure}
+
+If in addition $O$ is the inversion of $P$ in $\Gamma$ then 
+$Z\in (OP)$ and $OZ\cdot PZ=ZT^2$.
+In particular, $\triangle OTZ\sim \triangle TPZ$.
+
+Since $\ang OTZ$ is right, 
+so are $\ang ZPT$ and $\ang OPT$.
+It follows that $\triangle OPT\sim OTZ$ 
+since $\ang POT$ is shared.
+In particular,
+$$OP\cdot OZ=OT^2;$$
+i.e., $Z$ is the inversion of $P$ in $\Omega$
+
+Summarizing, we get that a circle $\Gamma$ satisfies the condition of the lemma
+if and only if $\Gamma\perp\Omega$
+and
+its center  $Z$ is the inversion of $P$ in $\Omega$.
+Hence the result follows.
+\qeds
+
+
+
+
+
+
+
+
+
+
+
+
+
+\parbf{Exercise~\ref{ex:hat-d-and-+}.} 
+Notice that for a fixed $\alpha$,
+ the map $\beta\mapsto f(\alpha,\beta)$ is a motion of $((-\pi,\pi],\hat d)$.
+The same way, for fixed $\beta$ the map $\alpha\mapsto f(\alpha,\beta)$ is a motion of $((-\pi,\pi],\hat d)$.
+
+Applying triangle inequality, we get
+\begin{align*}
+\hat d(f(\alpha_n,\beta_n),f(\alpha,\beta))
+&\le\hat d(f(\alpha_n,\beta_n),f(\alpha_n,\beta)
++
+\hat d(f(\alpha_n,\beta),f(\alpha,\beta)
+=
+\\
+&=
+\hat d(\beta_n,\beta)+\hat d(\alpha_n,\alpha).
+\end{align*}
+In particular, $\alpha_n\to\alpha$ and $\beta_n\to \beta$
+implies that $f(\alpha_n,\beta_n)\to f(\alpha,\beta)$
+in $((-\pi,\pi],\hat d)$ as $n\to\infty$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section*{Congruent sets}
+\addtocontents{toc}{Congruent sets.}
+
+
+
+(In a more abstract language this means that  the set of motions $\mathcal X\to\mathcal X$ forms a {}\emph{group}.
+This group is called \index{group of motions}\emph{group of motions} of $\mathcal X$.
+The identity map $\mathcal X\to\mathcal X$ serves as the unit element  and composition is the group operation.)
+
+\begin{thm}{Definition}
+Two subsets $V,W\subset \mathcal X$ are called \index{congruent subsets}\emph{congruent} (briefly \index{$\cong$}$V\z\cong W$)
+if there is a motion $f\:\mathcal X\to\mathcal X$ which sends $V$ to $W$.
+\end{thm}
+
+It is evident from the above that ``$\cong$'' is an  \index{equivalence relation}\emph{equivalence relation};
+i.e., 
+\begin{itemize}
+\item $V\cong W$ if and only if $W\cong V$ and 
+\item if $U\cong V$ and $V\cong W$ then $U\cong W$.
+\end{itemize}
+
+
+Note that congruent sets have to be isometric to each other.
+The following example shows that on the Manhattan plane $(\mathbb{R}^2,d_1)$ isometric subsets might be not congruent.
+
+On the other hand,
+any pair isometric sets of Euclidean plane $(\mathbb{R}^2,d_2)$ are congruent.
+We will not use, but it might be useful to know.
+
+
+
+therefore all the sets $\{A,B\}$, $\{A,C\}$ and $\{B,C\}$ are isometric to each other.
+Note that the map $f\:(x,y)\mapsto (-x,y)$ is a motion of $(\mathbb{R}^2,d_1)$; 
+$f(A)=A$ and $f(B)=C$.
+Thus the set $\{A,B\}$ is congruent to the set $\{A,C\}$.
+
+
+
+
+
+
+
+
+
+\section*{Metric on $\bm{(-\pi,\pi]}$}
+\addtocontents{toc}{Metric on $(-\pi,\pi]$.}
+
+Note that for any real number $\alpha$ there is unique value $\beta\in(-\pi,\pi]$ such that
+$\beta\equiv \alpha$.
+By that reason we may assume that angle measure takes value in the real interval $(-\pi,\pi]$
+
+We need to introduce a metric $\hat{d}$ on $(-\pi,\pi]$
+different from the metric induced from $\mathbb{R}$.
+Further we will use this metric in the formulation 
+of continuity of angle measure.
+Note that angles with measures $\pm(\pi-\epsilon)$ are ``geometrically close'' for small $\epsilon>0$;
+so, in this metric $\hat{d}$, the values $\pm(\pi-\epsilon)$ have to be close to each other.
+
+Given two real numbers 
+$\alpha,\beta\in (-\pi,\pi]$,
+set \label{def:max-dist}\index{$\hat{d}$}
+$$\hat{d}(\alpha,\beta)
+=
+\min\{|\alpha-\beta|,2\cdot\pi-|\alpha-\beta|\}.
+\eqlbl{eq:def-hat-d}
+$$
+
+Next we will show that $\hat{d}$ is a metric.
+
+\begin{thm}{Proposition}
+The function $\hat{d}(\alpha,\beta)$ is a metric on the set $(-\pi,\pi]$.
+\end{thm}
+
+\parit{Proof.}
+Among the conditions in the Definition~\ref{def:metric-space}, we need to prove only triangle inequality
+$$\hat{d}(\alpha,\gamma)\le \hat{d}(\alpha,\beta)+\hat{d}(\beta,\gamma);
+\eqlbl{eq:trig-inq-hat-d}$$
+the rest of conditions are  evident.
+
+Note that if $\alpha-\beta\equiv \alpha'-\beta'$
+for some values 
+$\alpha,\beta,\alpha',\beta'\in (-\pi,\pi]$
+then 
+$$\hat{d}(\alpha,\beta)
+=
+\hat{d}(\alpha',\beta').
+\eqlbl{eq:hat-d+shift}$$
+Indeed, without loss of generality we may assume that $\delta=\alpha-\beta>0$;
+since $\alpha-\beta\equiv \alpha'-\beta'$,
+we have $\alpha'-\beta'$ may only take  values $\delta$, or $\delta-2\cdot\pi $.
+In both cases \ref{eq:hat-d+shift} follows from \ref{eq:def-hat-d}.
+
+Therefore we can assume in \ref{eq:trig-inq-hat-d}
+that $\beta=0$;
+i.e., we need to prove that
+$$\hat{d}(\alpha,\gamma)
+\le 
+\hat{d}(\alpha,0)+\hat{d}(0,\gamma);
+$$
+Or equivalently,
+$$\min\{|\alpha+\gamma|,2\cdot\pi-|\alpha+\gamma|\}\le |\alpha|+|\gamma|.$$
+The later is true since 
+$|\alpha+\gamma|\le |\alpha|+|\gamma|$.
+\qeds
+
+\begin{thm}{Exercise}\label{ex:hat-d-and-+}
+Consider the map 
+$f(\alpha,\beta)$ which returns a number in $(-\pi,\pi]$ for any pair of numbers $\alpha,\beta\in (-\pi,\pi]$
+such that 
+$$f(\alpha,\beta)\equiv \alpha+\beta.$$
+(By now, it should be evident that $f$ is uniquely defined.)
+
+Show that $f$ is continuous with respect to the metric $\hat d$.
+\end{thm}
+
+
+
+
+
+
+
+
+
+
+
+\parit{Proof.}
+Recall that $\hat d$ denotes the metric on the interval $(-\pi,\pi]$
+introduced on page \pageref{def:max-dist}.
+Consider function $s\:(-\pi,\pi]\to \mathbb{R}$
+defined as 
+$$s(\alpha)=\left[
+\begin{aligned}
+&\pi-\alpha&&\text{if}&&\alpha\ge\tfrac\pi2
+\\
+&\alpha&&\text{if}&&-\tfrac\pi2\le\alpha\le\tfrac\pi2
+\\
+-\,&\pi-\alpha&&\text{if}&&\alpha\le-\tfrac\pi2
+\end{aligned}
+\right.
+.$$
+Note that for any $\alpha\in (-\pi,\pi]$ we have
+$s(\alpha)=\tfrac\pi2-\hat d(\alpha,\tfrac\pi2)$.
+Therefore by triangle inequality
+$|s(\alpha)-s(\beta)|\le d(\alpha,\beta)$. 
+In particular 
+$$s\:((-\pi,\pi],\hat{d})\to\mathbb{R}$$ 
+is a continuous function.
+Further note that
+\begin{itemize}
+\item $s(\alpha)=0$ if and only if $\alpha=0$ or $\pi$;
+\item $s(\alpha)>0$ if and only if $0<\alpha<\pi$;
+\item $s(\alpha)<0$ if and only if $\alpha<0$.
+\end{itemize}
+In particular, if $\measuredangle AOB\ne 0,\pi$ 
+then the angle $\ang AOB$ and the real number $s(\measuredangle AOB)$ have the same sign.
+
+Consider the function 
+$f(t)=\measuredangle A_tO_tB_t$.
+
+Since 
+the points $O_t$, $A_t$ and $B_t$ do not lie on one line,
+Theorem~\ref{thm:straight-angle} implies that $f(t)=\measuredangle A_tO_tB_t\ne 0$ or $\pi$ for any $t\in[0,1]$.
+Therefore by Axiom~\ref{def:birkhoff-axioms:2c},
+$f$ is a continuous function.
+Further,
+by Intermediate value theorem, $f(0)$ and $f(1)$ have the same sign;
+hence the result follows.
+\qeds
+
+
+
+
+
+
+
+
+\item\label{def:birkhoff-axioms:2c} 
+The function $\measuredangle\:(A,O,B)\mapsto\measuredangle A O B$
+is defined at the set $W$ of all triples 
+$(A,O,B)$ such that $O\ne A$ and $O\ne B$.
+Moreover if $\hat{d}$ denotes the metric on $(-\pi,\pi]$ introduced above then
+$$\measuredangle\: W\to ((-\pi,\pi],\hat{d})$$ 
+is continuous.
+
+
+
+
+
+
+
+
+
+\begin{thm}{Exercise}\label{ex:angle-signs-in-trig}
+Assume $\triangle ABC\cong\triangle A'B'C'$. 
+Note that by Axiom~\ref{def:birkhoff-axioms:3},
+\begin{align*}
+\measuredangle C'A'B'&\equiv\pm\measuredangle CAB,
+&
+\measuredangle A'B'C'&\equiv\pm\measuredangle ABC,
+\\
+&\text{and}&\measuredangle B'C'A'&\equiv\pm\measuredangle BCA,
+\end{align*}
+Show that the signs in the above three identities can be chosen
+to be the same. 
+\end{thm}
+
+
+
+
+
+
+
+
+
+\parit{Proof.}
+Assume first that $C_1=C_2$, so we can set 
+\begin{align*}
+C&=C_1=C_2,
+&
+C'&=C_1'=C_2.
+\end{align*}
+
+
+Applying to Proposition~\ref{prop:arc(angle=tan)},
+\begin{align*}
+\measuredangle X_1AX_2&\equiv\measuredangle X_1AC+\measuredangle CAX_2\equiv
+\\
+&\equiv(\pi-\measuredangle CB_1A)+(\pi-\measuredangle AB_2 C)\equiv
+\\
+&
+\equiv -(\measuredangle CB_1A+\measuredangle AB_2 C)
+\end{align*}
+
+Analogously,
+\begin{align*}
+\measuredangle Y_1A'Y_2&
+\equiv -(\measuredangle C'B_1'A'+\measuredangle A'B_2' C').
+\end{align*}
+
+By Theorem~\ref{lem:inverse-4-angle}(\ref{lem:inverse-4-angle:angle}), 
+\[\measuredangle CB_1A+\measuredangle AB_2 C
+\equiv
+-(\measuredangle C'B_1'A'+\measuredangle A'B_2' C')
+\]
+Hence the result follows.
+
+Now let us come back to the general case.
+
+Let $\Gamma_1$ and $\Gamma_2$ be the circlines containing the arcs $AB_1C_1$ and $AB_2C_2$.
+Assume $\Gamma_1$ and $\Gamma_2$ intersect at two points at $A$ and say at $C$.
+In this case we can extend or shorten the arcs  $AB_iC_i$ in $\Gamma_i$ to make the $C_1=C_2=C$;
+note that it will not change the angles between tangent half-lines at $A$.
+This way we reduce the problem to the case which was already considered.
+
+The remaining case when $\Gamma_1$ and $\Gamma_2$ are tangent at $A$ is left to the reader;
+it can be proved applying the case above twice.
+\qeds
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{thm}{Proposition}\label{prop:parallel-2}
+$(AB)\parallel(C D)$ if and only if 
+$$\measuredangle A B C+\measuredangle B C D\equiv 0\ \text{or}\ \pi.\eqlbl{A B C + B C D}$$ 
+Moreover, if $\measuredangle A B C+\measuredangle B C D\equiv 0$
+then the points $A$ and $D$ lie on the opposite sides from $(BC)$ 
+and if $\measuredangle A B C+\measuredangle B C D\equiv \pi$
+ the points $A$ and $D$ lie on the same side from $(BC)$.
+\end{thm}
+
+\parit{Proof.}
+We may assume that $\measuredangle ABC\ne 0$ or $\pi$;
+otherwise the statement is evident. 
+
+\parit{}($\Leftarrow$).
+Arguing by contradiction, 
+assume \ref{A B C + B C D} holds, but $(AB)\z\nparallel(C D)$.
+Let $Z$ be the point of intersection of $(AB)$ and $(CD)$.
+
+Denote by $M$ be the midpoint of $[BC]$; note that $M\ne Z$.
+Choose $Z'\in (ZM)$ distinct from $Z$ such that $MZ'=MZ$.
+
+Note that two pairs of angles 
+$\ang ZMB$, $\ang Z'MC$
+and
+$\ang ZMC$, $\ang Z'MB$
+are vertical.
+It follows that
+\begin{align*}
+\triangle MZB&\cong \triangle MZ'C,
+& 
+\triangle MZC&\cong \triangle MZ'B,
+\\
+\measuredangle MBZ&=\measuredangle MCZ',
+&
+\measuredangle MCZ&=\measuredangle MBZ'.
+\end{align*}
+
+Since $Z$ lies on $(AB)$ and $(CD)$,
+we have
+\begin{align*}
+2\cdot\measuredangle ABC&\equiv 2\cdot\measuredangle ZBC
+&
+2\cdot\measuredangle BCD &\equiv 2\cdot\measuredangle BCZ
+\end{align*}
+Therefore
+\begin{align*}
+2\cdot\measuredangle ZBZ'
+&\equiv 2\cdot \measuredangle ZBC+2\cdot \measuredangle CBZ'\equiv
+\\
+&\equiv 2\cdot \measuredangle ZBC+2\cdot \measuredangle BCZ\equiv
+\\
+&\equiv 0
+\end{align*}
+That is, $Z'\in (AB)$.
+
+The same way we get that $Z'\in (CD)$.
+By Axiom~\ref{def:birkhoff-axioms:2}, $(CD)=(AB)$,
+in particular $(CD)=(AB)$.
+
+\parit{}($\Rightarrow$). Assume $(AB)\parallel(C D)$.
+Choose $D'$ so that 
+$$2\cdot \measuredangle A B C+2\cdot \measuredangle B C D'\equiv 0.$$
+Then according to ``if''-part, $(AB)\parallel (CD')$.
+
+From the uniqueness of parallel line (Theorem~\ref{thm:parallel})
+we get $(CD)=(CD')$.
+In particular, $2\cdot\measuredangle BCD\equiv 2\cdot\measuredangle BCD'$.
+Hence the result follows.
+\qeds
+
+
+
+
+
+
+
+
+%??? REDO with P in the center of absolute.
+
+\begin{wrapfigure}{o}{43mm}
+\begin{lpic}[t(-5mm),b(0mm),r(0mm),l(0mm)]{pics/angle-par(0.85)}
+\lbl[tr]{21,18;$Q$}
+\lbl[tr]{21,29;$P$}
+\lbl[br]{22,60;$P'$}
+\lbl[bl]{42,39;$H$}
+\lbl[bl]{24,46;$M$}
+\lbl[tl]{43,18;$A$}
+\lbl[tr]{3,18;$B$}
+\lbl[tr]{37,43.5;\small{$\phi$}}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Proof.}
+Denote by $A$ and $B$ the ideal points of $\ell$.
+
+Applying an isometry of h-plane if necessary,
+we may assume $Q$ is the center of absolute, 
+so $[AB]$ is a diameter of absolute.
+
+Draw the h-line $(PZ)_h$
+so
+the circle $\Gamma$ containing $(PZ)_h$ is tangent to $(AB)$ at $A$.
+Clearly $|\measuredangle_h Q P Z|=\phi$; without loss of generality 
+we may assume that $\measuredangle_h Q P Z=\phi$.
+
+Set $a=QP$; by Lemma~\ref{lem:O-h-dist},
+$$a=\frac{e^h-1}{e^h+1}.$$
+
+Let $P'$ be the inverse of $P$ in the absolute
+and $M$ be the midpoint of $[PP']$.
+Clearly 
+$$PM=\tfrac12\cdot(QP'-QP)=\frac{\frac1a-a}{2}.$$
+
+Note that $\phi=\measuredangle MHP$.
+Since $HM=AQ=1$, we get
+$$\tan\phi=\frac{MP}{HM}=\frac{\frac1a-a}{2}$$
+
+
+Therefore
+$$\tan \phi
+=\frac{\frac{e^h+1}{e^h-1}-\frac{e^h-1}{e^h+1}}2
+=\frac{4\cdot e^{h}}{2\cdot( e^{2\cdot h}-1)}
+=\frac{2}{e^{h}-e^{-h}}=\frac1{\sinh h}.$$
+\qedsf
+
+
+
+
+
+
+
+
+
+
+
+
+\parit{Proof.} %???CHANGE THE PROOF???
+Further we assume that both arcs are nondegenerate.
+The degenerate cases are left to the reader.
+
+According to Theorem~\ref{thm:tangent-angle},
+\begin{align*}
+2\cdot \measuredangle X_1AC
+&\equiv -2\cdot \measuredangle Y_1CA,
+\\
+2\cdot \measuredangle CAX_2
+&\equiv -2\cdot \measuredangle ACY_2.
+\end{align*}
+Since the pairs of points $(X_1, Y_1)$ and $(X_2, Y_2)$
+lie on the same side from $(AC)$,
+we get that the  angles in the pairs of angles 
+$\ang X_1AC$, $\ang Y_1CA$ 
+and $\ang CAX_2$, $\ang ACY_2$
+have opposite signs.
+Therefore 
+\begin{align*}
+\measuredangle X_1AC
+&\equiv - \measuredangle Y_1CA,
+\\
+ \measuredangle CAX_2
+&\equiv - \measuredangle ACY_2.
+\end{align*}
+Adding these two identities, we get the result.
+\qeds
+
+
+
+
+
+
+
+
+\begin{thm}{Exercise}\label{ex:3-inverions}
+Consider the three inversions
+in the circles centered at $O$ and radii $r_1$, $r_2$ and $r_3$.
+Show that the composition of these three inversions is an inversion in a circle centered at $O$.
+Find the radius of this circle.
+
+Try to use this problem to finish the proof of Theorem \ref{thm:angle-inversion} in case $A\in\Omega$.
+\end{thm}
+
+
+
+
+
+
+
+Two arcs $AB_1C_1$ and $AB_2C_2$ are called \index{tangent!tangent arcs}\emph{tangent} at $A$ if their tangent half-lines at $A$ coincide.
+
+\begin{thm}{Lemma}\label{lem:tangent-to-tangent}
+Let $AB_1C_1$ and $AB_2C_2$ be arcs tangent at $A$.
+Assume $A'B_1'C_1'$ and $A'B_2'C_2'$ be their inversions in a circle.
+Then the arcs $A'B_1'C_1'$ and $A'B_2'C_2'$ are tangent at $A'$.
+\end{thm}
+
+This lemma might look evident, 
+but the formal proof is not short and tedious.
+
+\parit{Proof.}
+Denote by $\Gamma_1$, $\Gamma_2$, $\Gamma_1'$ and $\Gamma_2'$ the circles containing arcs $AB_1C_1$, $AB_2C_2$, $A'B_1'C_1'$ and $A'B_2'C_2'$ correspondingly.
+
+Note that $\Gamma_1$ and $\Gamma_2$ are tangent at $A$; i.e., $A$ is the only point of intersection of 
+$\Gamma_1$ and $\Gamma_2$.
+Therefore $\Gamma_1'$ and $\Gamma_2'$ are tangent at $A'$.
+In particular the tangent lines to $\Gamma_1'$ and $\Gamma_2'$ at $A'$ coincide.
+
+It remains to show that the half lines tangent to $A'B_1'C_1'$ and $A'B_2'C_2'$ at $A'$ can not be opposite. 
+
+Let $[AX)$ be the tangent half-line to arcs $AB_1C_1$ and $AB_2C_2$  at $A$ 
+and $[AY_1)$ be the tangent half-lines to arcs $A'B_1'C_1'$   at $A'$.
+Denote by $O$ the center of inversion.
+
+Note that
+ the angles $\ang OAX$ and $\ang OAY_1$ have the same signs.
+Further $\ang OAX$ is acute (obtuse)
+if and only if $\ang OAY_1$  is obtuse (correspondingly acute).
+
+Repeating the same argument for half-line $[AY_2)$ which is tangent  to the arcs $A'B_2'C_2'$   at $A'$,
+we get that angles $\ang OAY_1$ and $\ang OAY_2$ have the same sign which implies that they can not be opposite unless the angles are $0$ and $\pi$.
+In the remaining case these angle have to be both  acute or  both obtuse;
+which means they both $0$ or both $\pi$.
+\qeds
+
+
+
+
+
+
+
+\begin{wrapfigure}{o}{58mm}
+\begin{lpic}[t(-10mm),b(0mm),r(0mm),l(0mm)]{pics/angle-inversion(0.8)}
+\lbl[rb]{47,33;$A$}
+\lbl[lt]{39,31;$A'$}
+\lbl[rb]{57,11;$B_1$}
+\lbl[lt]{34,22;$B_1'$}
+\lbl[r]{36,3;$C_1$}
+\lbl[rt]{31,12;$C_1'$}
+\lbl[t]{48,15;$Z_1$}
+\lbl[b]{69,28;$X_1$}
+\lbl[br]{22,15;$Y_1$}
+
+\lbl[lb]{49,43;$B_2$}
+\lbl[b]{41,43;$C_2$}
+\lbl[rw]{35,35;$B_2'$}
+\lbl[rb]{37,39;$C_2'$}
+\lbl[br]{36,55;$Z_2$}
+\lbl[tl]{65,44.5;$X_2$}
+\lbl[t]{10,34;$Y_2$}
+\end{lpic}
+\end{wrapfigure}
+
+ 
+\parit{Proof.}
+Assume $A\ne A'$; i.e., $A$ does not lie on the circle of inversion.
+
+According to Exercise~\ref{ex:tangent-arc},
+there are arcs $AZ_1A'$ and $AZ_2A'$ such that the half-lines $[AX_1)$ and $[AX_2)$
+are tangent to these arcs at $A$.
+
+From Corollary~\ref{cor:perp-inverse}, it follows that
+the arcs $AZ_1A'$ and $AZ_2A'$ are inverted to themselves.
+By Lemma~\ref{lem:tangent-to-tangent}, 
+arc $AZ_1A'$ is tangent to arc $A'B_1'C_1'$
+and  $AZ_2A'$ is tangent to arc $A'B_2'C_2'$ at $A'$.
+
+From Exercise~\ref{ex:two-arcs}, the result follows.
+
+The remaining special case $A\in\Omega$ is left to the reader;
+see Exercise~\ref{ex:3-inverions} for a hint.
+\qeds
+
+
+
+
+
+
+
+
+
+ \begin{wrapfigure}{o}{50mm}
+\begin{lpic}[t(-5mm),b(-1mm),r(0mm),l(0mm)]{pics/P-hat(1)}
+\lbl[rt]{31.5,31.5;$O$}
+\lbl[t]{43,37;$P$}
+\lbl[b]{87,71;$P'$}
+\lbl[l]{55,42;$Q$}
+\lbl[t]{63,22;$A$}
+\lbl[b]{45,62;$B$}
+\end{lpic}
+\caption*{$\hat P=\hat P'=Q$}
+\end{wrapfigure}
+
+
+\parit{Proof.} Denote by $Q$ the intersection of $[OP)$ and $[AB]$.
+We need to show that $Q=\hat P$.
+
+Let $P'$ be inverse of $P$ in $\Omega$.
+According to ???, $P'\in \Gamma$.
+Set $x=OP$, so $OP'=\tfrac1x$.
+
+By ??? $$\triangle QPA\sim\triangle QBP'\ \ \text{and}\ \ \triangle QPB\sim\triangle QAP'.$$
+Further by ???
+$$\triangle OPA\sim\triangle OAP'\ \ \text{and}\ \ \triangle OPB\sim\triangle OBP'.$$
+Therefore
+\begin{align*}
+\frac{P'Q}{PQ}&=\frac{AQ}{PQ}\cdot\frac{P'Q}{AQ}=
+\\
+&=\frac{P'A}{BP}\cdot\frac{P'B}{PA}=
+\\
+&=\frac{P'B}{BP}\cdot\frac{P'A}{PA}=
+\\
+&=\frac{OP'}{OB}\cdot\frac{OP'}{OA}=\frac1{x^2}.
+\end{align*}
+It follows that
+$$PQ=$$
+
+
+Without loss of generality, we may assume that $P$ lies inside $\Omega$;
+otherwise sqitch $P$ with $P'$.
+Set $a=OP$, so
+
+Then 
+\begin{align*}
+OQ&=OP+PQ=
+\\
+&=OP+PP'\cdot \frac{PQ}{P'Q}
+\end{align*}
+
+
+\qeds
+
+
+
+\begin{thm}{Lemma}
+Let $P$ and $Q$ be distinct points in h-plane and the points $A$ and $B$ are the ideal points of h-line $(PQ)_h$.
+Then the points $A$, $\hat P$, $\hat Q$ and $B$ lie on one line.
+More over 
+$$PQ_h=\tfrac12\cdot\ln\frac{A\hat P\cdot B\hat Q}{\hat PB\cdot \hat QA}.$$
+\end{thm}
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ In hyperbolic geometry the definition of parallel lines is slightly different.
+Given a point $P$ off the h-line $(AB)_h$ 
+there are infinite number of h-lines passing through $P$ and not intersecting $(AB)_h$. 
+Among them there are only two parallel h-lines to $(AB)_h$. 
+An h-line $(PQ)_h$ is called parallel to $(AB)_h$
+in direction from $A$ to $B$ if the points $Q$ and $B$ lie on one side from $(AP)_h$, but any line from $P$ which leaves $Q$ and $A$ on the opposite sides is intersecting $(AB)_h$.
+
+If $Q$ as above and $F$ is the foot point of $P$ on $(AB)_h$ then $\phi=|\measuredangle_h FPQ|$ is called angle of parallelism.
+Clearly $\phi$ is completely determined by $h=PF_h$.
+
+The same way one can define an h-line parallel to $(AB)_h$
+in direction from $B$ to $A$.
+The remaining lines through $P$ which do not intesect $(AB)_h$ are called ultra parallel.
+
+
+
+
+
+
+
+
+
+
+
+
+\section{}
+
+Let $P$ and $Q$ be two points of h-plane.
+Define h-distance  as 
+$$PQ_h=-\ln\delta(P,Q).$$
+\parbf{Comments.}
+Since $\delta(P,Q)\le 1$, we need to use negative constant in front of $\ln\delta(P,Q)$ to make $PQ_h$ nonnegative.
+We might use any negative constant instead of $-1$, all of them will give a metric; the choice of the constant is made to have some formulas simpler.
+
+
+\begin{thm}{Theorem} \label{lem:h-dist}
+The function $(P,Q)\mapsto PQ_h$ is a distance function on h-plane.
+Moreover, if we equip h-plane with h-distance function then
+\begin{enumerate}[(a)]
+\item Any inverse in extended line is an isometry of h-plane.
+\item  h-lines and only they form a lines in h-plane.
+\end{enumerate}
+\end{thm}
+
+
+
+\parit{Proof.}
+From Lemma~\ref{lem:0-1}, $PQ_h\ge0$ and $PQ_h=0$ iff $P=Q$.
+
+From Lemma~\ref{lem:delta-inverse}, it follows that inverse in extended line 
+preserves h-distance. 
+Further, from Lemma~\ref{lem:perp-inverse}, any such inverse is a bijection of h-plane. 
+
+It remains to prove triangle inequality;
+i.e.
+$$PQ_h\le PZ_h+ZQ_h\eqlbl{eq:h-tringle}$$
+for any $Z$ in h-plane.
+
+\begin{wrapfigure}{o}{35mm}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/h-triangle-in(0.8)}
+\lbl[t]{8,26;$P$}
+\lbl[t]{29,38;${\leftarrow} Q$}
+\lbl[t]{21,30;$Z$}
+\end{lpic}
+\end{wrapfigure}
+
+From Lemma~\ref{lem:delta-dot}, it follows that \ref{eq:h-tringle} becomes equality for any $Z\in[PQ]_h$.
+Thus, if \ref{eq:h-tringle} does not hold, then for some $Z\in[PQ]_h$ there is $Z'$ in the h-plane such that $PZ'_h<PZ_h$ and $QZ'_h<QZ_h$.
+
+Apply Lemma~\ref{lem:delta-inverse}, for $P$ and $\lambda=\delta(P,Z)$ and for $Q$ and $\lambda=\delta(Q,Z)$.
+We get two circles $\Gamma_P$ and $\Gamma_Q$,
+both of them are passing through $Z$ and perpendicular to $(PQ)_h$.
+It follows that circles $\Gamma_P$ and $\Gamma_Q$ are tangent at $Z$
+and there is no point $Z'$ which lie inside $\Gamma_P$ and $\Gamma_Q$ at the same time.
+Moreover $Z$ is the only point of intersection of $\Gamma_P$ and $\Gamma_Q$.
+
+Finally note that since \ref{eq:h-tringle} becomes equality for any $Z\in[PQ]_h$, 
+any h-line forms a line in h-plane with h-distance;
+i.e. any h-line equipped with h-distance is isometric to $\mathbb{R}$. 
+Since $Z$ is the only point of intersection of $\Gamma_P$ and $\Gamma_Q$, it follows that there no other lines in this metric space.
+\qeds
+ 
+\section*{Axiom~IV}
+
+Further we always assume that h-plane is equipped with h-distance function.
+
+Above we proved (Theorem~\ref{lem:h-dist}) that h-plane is a metric space, obliviously it contains at least two points.
+Further, theorems~\ref{lem:h-dist} and \ref{thm:h-line} show that that Axiom~I holds for h-plane.
+The fact that Axiom~II holds for h-plane follows directly from the definition of h-angle.
+
+To show that model Poincar\'e satisfies Definition~\ref{def:birkhoff-axioms-absolute},
+it remains to prove that Axiom~IV holds in h-plane.
+That is, we need to prove the following theorem:
+
+\begin{thm}{Theorem}
+Assume that for h-triangles $\triangle_h A B C$ and $\triangle_h A' B' C'$ in the h-plane, we have
+$$A' B'_h= A B_h,
+\ A' C'_h= A C_h$$
+$$\ \text{and}\ 
+\measuredangle_h C' A' B'=\pm\measuredangle_h C A B.\eqlbl{birkhoff-signs}$$
+Then 
+$$ B' C'_h= B C_h,
+\ \measuredangle_h A' B' C'=\pm\measuredangle_h A B C,
+\ \measuredangle_h B' C' A'=\pm\measuredangle_h B  C A $$
+With signs as in \ref{birkhoff-signs}.
+
+In particular $\triangle_h A B C\cong\triangle_h A' B' C'$.
+\end{thm}
+
+
+\parit{Proof.}
+Note that there is an h-line $\ell$ such that the inverse in the extension of $\ell$ sends $A$ to the center of absolute.
+Recall that inverse in $\ell$ preserves h-distance only changes the sign of h-angles.%???
+Thus, we may assume that $A$ is the center of absolute.
+The same way we may assume that $A'$ is also the center of absolute (so $A'=A$).
+
+It follows that the sides $[AB]_h$, $[AC]_h$, $[AB']_h$ and $[AC']_h$ are also segments in ordinary Euclidean sense.
+In particular 
+$$\measuredangle B'AC'\equiv\measuredangle_h B'AC'\equiv\pm\measuredangle_h BAC\equiv\pm\measuredangle BAC.$$
+Direct calculation show that 
+$$AB_h=-\ln\frac{r-AB}{r+AB},$$
+where $r$ is the radius of absolute.
+Therefore $A B'=AB$ and $A C'=AC$.
+It follows that there is a rotation or reflection of euclidean plane which does not move $A$ and sends $B\mapsto B'$, $C\mapsto C'$.
+Note that the rotation or reflection described above is also an isometry of h-plane,
+moreover it preserves h-angles.
+Hence   
+$$ B' C'_h= B C_h,
+\ \measuredangle_h A' B' C'=\pm\measuredangle_h A B C,
+\ \measuredangle_h B' C' A'=\pm\measuredangle_h B  C A.$$
+\qedsf
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Absolute geometry}
+
+
+
+
+
+
+ 
+
+
+\section*{Larger angle---longer side}
+
+The next corollary states that in a nondegenerate triangle 
+the larger side corresponds to a larger angle.
+
+\begin{thm}{Corollary}\label{cor:larger-side=>larger-angle}
+Assume that in a triangle $\triangle ABC$ the angles $\ang CAB$ and $\ang ABC$ are positive.
+Then then 
+$CA>CB$ if and only if $\measuredangle CAB>\measuredangle ABC$.
+\end{thm}
+
+\parit{Proof.}
+Note that for degenerate triangle the statement is trivially holds.
+
+Set $\alpha=\measuredangle CAB$ and $\beta=\measuredangle ABC$.
+If $\alpha=\beta$ then by Theorem~\ref{thm:isos},
+$CA=CB$.
+
+Therefore,  $\pi>\alpha> \beta>0$ or $\pi> \beta>\alpha>0$.
+We will consider the first case; 
+the second is completely analogous.
+
+\begin{wrapfigure}[13]{o}{32mm}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(2mm)]{pics/ABCXZ(0.7)}
+\lbl[rt]{2,1;$A$}
+\lbl[lt]{38,1;$B$}
+\lbl[rb]{10,42;$C$}
+\lbl[tl]{31,35;$X$}
+\lbl[l]{22,24;$Z$}
+\lbl[r]{31,5;$\beta$}
+\lbl[lw]{13,10;$\alpha$}
+\end{lpic}
+\end{wrapfigure}
+
+Use Axiom \ref{def:birkhoff-axioms:2a}
+to construct the half-line $[AX)$ 
+such that $\measuredangle XAB=\beta$.
+
+Note that the angle
+$\measuredangle XAC= \beta-\alpha$ is negative.
+By Proposition~\ref{prop:half-plane}, 
+$C$ and $B$ lie on the opposite sides of $(AX)$.
+Hence $[CB]$ intersects $(AX)$ at a point, say at $Z$.
+
+Note that $\measuredangle ZAB$ is either $\beta$ or $\beta-\pi$.
+On the other hand $Z$ and $C$ lie on the same side from $(AB)$ and therefore the $\measuredangle ZAB>0$.
+Hence 
+$$\measuredangle ZAB=\beta.$$
+
+By ASA consition (\ref{thm:ASA}), 
+$$ZA=ZB.$$
+By Corollary \ref{cor:degenerate-trig},
+$$AC>AZ+CZ$$.
+Therefore
+$$AC>AZ+CZ=BZ+ZC=BZ.$$
+\qedsf

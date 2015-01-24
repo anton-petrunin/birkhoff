@@ -1,0 +1,557 @@
+\part*{Non-Euclidean geometry}
+\addtocontents{toc}{\protect\begin{center}}
+\addtocontents{toc}{\large{\bf Non-Euclidean geometry}}
+\addtocontents{toc}{\protect\end{center}}
+\chapter{Absolute plane}\label{chap:non-euclid}
+\addtocontents{toc}{\protect\begin{quote}}
+
+Let us remove Axiom \ref{def:birkhoff-axioms:4} from our axiomatic system, see pages \pageref{def:birkhoff-axioms:0}--\pageref{def:birkhoff-axioms:4}.
+This way we define a new object called 
+\index{plane!absolute plane}\index{absolute plane}\emph{absolute plane} or \index{plane!neutral plane}\index{neutral plane}\emph{neutral plane}.
+(In the absolute plane, 
+the Axiom \ref{def:birkhoff-axioms:4} may or may not hold.)
+
+Clearly any theorem in absolute geometry holds in Euclidean geometry.
+In other words, Euclidean plane is an example of absolute plane. 
+In the next chapter we will show that besides the Euclidean plane
+there are other examples of absolute plane.
+
+Many theorems in Euclidean geometry  hold in absolute geometry.
+
+In this book, 
+the Axiom \ref{def:birkhoff-axioms:4} was used
+for the first time in the proof of uniqueness of parallel line in Theorem~\ref{thm:parallel}.
+Therefore all the statements before Theorem~\ref{thm:parallel} also hold in absolute geometry.
+
+It makes all the discussed results
+about
+half-planes,
+signs of angles,
+congruence conditions,
+perpendicular lines and reflections 
+true in absolute plane.
+If in the formulation of a statement above you do not see words ``Euclidean plane'' or ``inversive plane'',
+it means that the statement holds in absolute plane and the same proof works.
+
+Let us give an example of theorem in absolute geometry,
+which admits a simpler proof in Euclidean geometry. 
+
+\begin{thm}{Theorem}
+Assume that triangles $\triangle ABC$ and $\triangle A'B'C'$
+have right angles at $C$ and $C'$ correspondingly, 
+$AB=A'B'$ and $AC\z=A'C'$.
+Then $\triangle ABC\cong\triangle A'B'C'$.
+\end{thm}
+
+
+\parit{Euclidean proof.} 
+By Pythagorean theorem $BC=B'C'$.
+Then the statement follows from SSS congruence condition.
+\qeds
+
+Note that the proof of Pythagorean theorem used properties of similar triangles, which in turn used Axiom~\ref{def:birkhoff-axioms:4}. 
+Whence the above proof is not working in absolute plane.
+
+\begin{wrapfigure}[8]{o}{28mm}
+\begin{lpic}[t(-0mm),b(8mm),r(0mm),l(3mm)]{pics/ABC-D(1)}
+\lbl[l]{23,2;$A$}
+\lbl[b]{12,24.5;$B$}
+\lbl[t]{12,1;$C$}
+\lbl[r]{0.5,2;$D$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Absolute proof.}
+Denote by $D$ the reflection of $A$ through $(BC)$
+and by $D'$ the reflection of $A'$ through $(B'C')$.
+Note that 
+$$
+AD=2\cdot AC=2\cdot A'C'=A'D',
+$$
+$$
+BD=BA=B'A'=B'D'.
+$$
+
+By SSS, 
+we get  $\triangle ABD\cong \triangle A'B'D'$.
+
+The theorem follows since $C$ is the midpoint of $[AD]$
+and $C'$ is the midpoint of $[A'D']$.  
+\qeds
+
+\begin{thm}{Exercise}\label{ex:abs-bisect=median}
+Give a proof of Exercise~\ref{ex:bisect=median}
+which works in the absolute plane. 
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:abs-inscibed}
+Let $ABCD$ be an inscribed quadrilateral in the absolute plane.
+Show that
+$$\measuredangle ABC+\measuredangle CDA\equiv \measuredangle BCD+\measuredangle DAB.$$
+
+\end{thm}
+
+
+Note that the Theorem~\ref{thm:inscribed-quadrilateral} can not be applied in the above exercise;
+it use Theorems~\ref{thm:tangent-angle} and \ref{thm:inscribed-angle}; which in turns use Theorem~\ref{thm:3sum}.
+
+
+\section*{Two angles of triangle}
+\addtocontents{toc}{Two angles of triangle.}
+
+In this section we will prove a weaker form of Theorem~\ref{thm:3sum}
+which holds in absolute plane.
+
+\begin{thm}{Proposition}\label{prop:2sum}
+Let $\triangle ABC$ be nondegenerate triangle in the absolute plane.
+Then 
+$$|\measuredangle CAB|+|\measuredangle ABC|< \pi.$$
+
+\end{thm}
+
+Note according to \ref{thm:signs-of-triug}, the angles 
+$\angle ABC$, 
+$\angle BCA$ and $\angle CAB$
+have the same sign.
+Therefore in Euclidean plane the theorem follows immediately from Theorem~\ref{thm:3sum}.
+In absolute geometry we need to work more.
+
+\parit{Proof.}
+By \ref{thm:signs-of-triug}, 
+we may assume that $\angle CAB$
+and $\angle ABC$ are positive.
+
+Let $M$ be the midpoint of $[AB]$.
+Chose $C'\in (CM)$ distinct from $C$ so that $C'M=CM$.
+
+\begin{wrapfigure}[10]{o}{37mm}
+\begin{lpic}[t(4mm),b(0mm),r(0mm),l(2mm)]{pics/2sum(1)}
+\lbl[lt]{22.5,1;$B$}
+\lbl[br]{10.5,22;$A$}
+\lbl[tr]{0,1;$C$}
+\lbl[lb]{33,22;$C'$}
+\lbl[b]{18,14;$M$}
+\end{lpic}
+\end{wrapfigure}
+
+Note that the angles $\angle AMC$ and $\angle BMC'$
+are vertical;
+in particular 
+$$\measuredangle AMC=\measuredangle BMC'.$$
+By construction $AM\z=BM$ and $CM\z=C'M$.
+Therefore $\triangle AMC\cong \triangle BMC'$; 
+in particular 
+$$\measuredangle CAB=\pm\measuredangle C'BA.$$
+According to \ref{thm:signs-of-triug}, 
+the angles $\angle CAB$ and $\angle C'BA$ have the same sign as $\angle AMC$ and $\angle BMC'$.
+Therefore
+$$\measuredangle CAB=\measuredangle C'BA.$$
+
+In particular,
+\begin{align*}
+\measuredangle C'BC&\equiv \measuredangle C'BA+\measuredangle ABC\equiv
+\\
+&\equiv \measuredangle CAB+\measuredangle ABC.
+\end{align*}
+
+Finally note that $C'$ and $A$ lie on the same side from $(CB)$.
+Therefore the angles $\angle CAB$, $\angle ABC$ and $\angle C'BC$ are positive.
+By Exercise~\ref{ex:PP(PN)}, the result follows.
+\qeds
+
+\begin{thm}{Exercise}\label{ex:parallel-abs}
+Assume $A$, $B$, $C$ and $D$ be points in absolute plane
+such that 
+$$2\cdot \measuredangle ABC+2\cdot\measuredangle BCD\equiv 0.$$
+Show that $(AB)\parallel (CD)$.
+\end{thm}
+
+Note that one can not extract the solution of the above exercise from the proof of Transversal property (\ref{thm:parallel-2})
+
+
+\begin{thm}{Exercise}\label{ex:SAA}
+Prove \index{side-angle-angle congruence condition}\index{SAA condition}\emph{side-angle-angle congruence condition} in absolute plane.
+
+In other words, let $\triangle ABC$ and $\triangle A'B'C'$ be two triangles in absolute plane.
+Show that $\triangle ABC\cong \triangle A'B'C'$
+if 
+$$AB=A'B',\ \ \measuredangle ABC=\pm\measuredangle A'B'C'\ \ \text{and}\ \  \measuredangle BCA=\pm\measuredangle B'C'A'.$$
+
+\end{thm}
+
+Note that in the Euclidean plane, the above exercise follows from ASA and the theorem on sum of angles of triangle (\ref{thm:3sum}).
+However, Theorem~\ref{thm:3sum} can not be used here since its proof use Axiom~\ref{def:birkhoff-axioms:4}.
+Later, in theorem Theorem~\ref{thm:3sum-h}, 
+we will show that Theorem~\ref{thm:3sum} does not hold in absolute plane.
+
+\begin{thm}{Exercise}\label{ex:chev<side}
+Assume that point $D$ lies between the vertices $A$ and $B$ of triangle $\triangle ABC$ in the absolute plane.
+Show that 
+$$CD<CA\ \ \text{or}\ \ CD<CB.$$
+
+\end{thm}
+
+\section*{Three angles of triangle}
+\addtocontents{toc}{Three angles of triangle.}
+
+\begin{thm}{Proposition}\label{prop:angle-side}
+Let $\triangle ABC$ and $\triangle A'B'C'$ be two triangles in the absolute plane
+such that $AC=A'C'$ and $BC=B'C'$.
+Then 
+$$AB\z<A'B'\ \ \text{if and only if}\ \  
+|\measuredangle ACB|<|\measuredangle A'C'B'|.$$
+
+\end{thm}
+
+\begin{wrapfigure}{o}{41mm}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(2mm)]{pics/ABBCX(1)}
+\lbl[l]{37,1;$A$}
+\lbl[r]{4,1;$C$}
+\lbl[lb]{17,20;$B$}
+\lbl[b]{2,23;$B'$}
+\lbl[l]{11.5,26;$X$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Proof.}
+Without loss of generality, we may assume that $A=A'$ and $C=C'$ and $\measuredangle ACB,\measuredangle ACB'\ge 0$.
+In this case we need to show that 
+$$AB<AB'\ \ \iff\ \  
+\measuredangle ACB<\measuredangle ACB'.$$
+
+Choose a point $X$ so that 
+$$\measuredangle ACX=\tfrac12\cdot(\measuredangle ACB+\measuredangle ACB').$$
+Note that 
+\begin{itemize}
+\item $(CX)$ bisects $\angle BCB'$
+\item $(CX)$ is the perpendicular bisector of $[BB']$.
+\item $A$ and $B$ lie on the same side from $(CX)$ if and only if $$\measuredangle ACB<\measuredangle ACB'.$$
+\end{itemize}
+From Exercise~\ref{ex:pbisec-side}, $A$ and $B$ lie on the same side from $(CX)$ if and only if $AB<AB'$.
+Hence the result follows.
+\qeds
+
+\begin{thm}{Theorem}\label{thm:3sum-a}
+Let $\triangle ABC$ be a triangle in the absolute plane.
+Then 
+$$|\measuredangle ABC|+|\measuredangle BCA|+|\measuredangle CAB|\le \pi.$$
+
+\end{thm}
+
+The following proof is due to Legendre \cite{legendre}, 
+earlier proofs were due to Saccheri \cite{saccheri}
+and Lambert \cite{lambert}.
+
+\parit{Proof.} 
+Let $\triangle ABC$ be the given triangle.
+Set 
+\begin{align*}
+a&=BC,
+&
+b&=CA,
+&
+c&=AB,
+\\
+\alpha&=\measuredangle CAB,
+&
+\beta&=\measuredangle ABC,
+&
+\gamma&=\measuredangle BCA.
+\end{align*}
+Without loss of generality, we may assume that $\alpha,\beta,\gamma\ge 0$.
+
+Fix a positive integer $n$.
+Consider points $A_0$, $A_1,\dots,A_n$ on the half-line
+$[BA)$ so that $BA_i=i\cdot c$ for each $i$.
+(In particular, $A_0=B$ and $A_1=A$.)
+Let us construct the points $C_1$, $C_2,\dots,C_n$,
+so that
+$\measuredangle A_iA_{i-1}C_i\z=\beta$ and $A_{i-1}C_i=a$ for each $i$.
+
+\begin{center}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/legendre(1)}
+\lbl[t]{2,0;$A_0$}
+\lbl[t]{22,0;$A_1$}
+\lbl[t]{42,0;$A_2$}
+\lbl[]{63,-1;$\dots$}
+\lbl[t]{82,0;$A_n$}
+\lbl[b]{10,24;$C_1$}
+\lbl[b]{30,24;$C_2$}
+\lbl[b]{50,25;$\dots$}
+\lbl[b]{70,24;$C_n$}
+\lbl[w]{12,2.5;$\,c\,$}
+\lbl[w]{32,2.5;$\,c\,$}
+\lbl[w]{52,2.5;$\,c\,$}
+\lbl[w]{72,2.5;$\,c\,$}
+\lbl[W]{7,12;$\,a$}
+\lbl[W]{15,12;$\,b$}
+\lbl[w]{21,22;$\,d$}
+\lbl[W]{27,12;$\,a$}
+\lbl[W]{35,12;$\,b$}
+\lbl[w]{41,22;$\,d$}
+\lbl[W]{47,12;$\,a$}
+\lbl[W]{55,12;$\,b$}
+\lbl[w]{61,22;$\,d$}
+\lbl[W]{67,12;$\,a$}
+\lbl[W]{75,12;$\,b$}
+\lbl[rb]{16,5;$\alpha$}
+\lbl[lb]{8,5;$\beta$}
+\lbl[t]{10,16;$\gamma$}
+\lbl[b]{22,9;$\delta$}
+\lbl[rb]{36,5;$\alpha$}
+\lbl[lb]{28,5;$\beta$}
+\lbl[t]{30,16;$\gamma$}
+\end{lpic}
+\end{center}
+
+This way we construct $n$ congruent triangles 
+\begin{align*}
+\triangle ABC&=\triangle A_{1}A_0C_1\cong
+\\
+&\cong\triangle A_2A_{1}C_2\cong
+\\
+&\ \ \ \ \ \ \ \ \ \ \dots
+\\
+&\cong\triangle A_nA_{n-1}C_n.
+\end{align*}
+
+
+Set $d=C_1C_2$ and $\delta=\measuredangle C_2A_1C_1$.
+Note that 
+$$\alpha+\beta+\delta=\pi.
+\eqlbl{eq:gamma'}$$
+By Proposition~\ref{prop:2sum}, $\delta\ge 0$.
+
+By construction
+\begin{align*}
+\triangle A_1C_1C_2&\cong\triangle A_{2}C_2C_3\cong\dots
+\cong\triangle A_{n-1}C_{n-1}C_n.
+\end{align*}
+In particular, $C_iC_{i+1}=d$ 
+for each $i$.
+
+
+By repeated application
+of the triangle inequality, we get 
+that
+\begin{align*}
+n\cdot c&=A_0A_n\le 
+\\
+&\le A_0C_1+C_1C_2+\dots+C_{n-1}C_n+C_nA_n=
+\\
+&=a+(n-1)\cdot d+b.
+\end{align*}
+
+In particular, 
+$$c\le  d+\tfrac1n\cdot (a+b-d).$$
+Since  $n$ is arbitrary positive integer,
+the later implies
+$$c\le d.$$
+
+From Proposition~\ref{prop:angle-side} and SAS, 
+the later is equivalent to 
+$$\gamma\le \delta.$$ 
+From \ref{eq:gamma'}, 
+the theorem follows.
+\qeds
+
+The \index{defect of triangle}\emph{defect of triangle} $\triangle ABC$ is defined as 
+$$\defect(\triangle ABC)
+\df 
+\pi-|\measuredangle ABC|+|\measuredangle BCA|+|\measuredangle CAB|.$$
+
+Note that Theorem~\ref{thm:3sum-a} sates that, defect of any triangle in absolute plane has to be nonnegative.
+According to Theorem~\ref{thm:3sum}, any triangle in
+Euclidean plane has zero defect.
+
+\begin{wrapfigure}{o}{19mm}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(2mm)]{pics/defect(1)}
+\lbl[tr]{1,1;$A$}
+\lbl[r]{6,19;$C$}
+\lbl[lt]{15,1;$B$}
+\lbl[t]{9,1.5;$D$}
+\end{lpic}
+\end{wrapfigure}
+
+\begin{thm}{Exercise}\label{ex:defect}
+Let $\triangle ABC$ be nondegenerate triangle in the absolute plane.
+Assume $D$ lies between $A$ and $B$.
+Show that 
+$$\defect(\triangle ABC)=\defect(\triangle ADC)+\defect(\triangle DBC).$$
+
+\end{thm}
+
+
+
+\section*{How to prove that something\\ 
+can not be proved?}
+\addtocontents{toc}{How to prove that something can not be proved?}
+
+Many attempts were made to prove that any theorem in Euclidean geometry holds in absolute geometry.
+The later is equivalent to the statement that Axiom \ref{def:birkhoff-axioms:4} is a {}\emph{theorem} in absolute geometry.
+
+Many these attempts being accepted as proofs for long periods of time until the mistake was found.
+
+There is a number of statements in the geometry of absolute plane which are equivalent to the Axiom~\ref{def:birkhoff-axioms:4}.
+It means that if we exchange the Axiom~\ref{def:birkhoff-axioms:4}  to any of these statements then we will obtain an equivalent axiomatic system.
+
+Here we give a short list of such statements.
+We are not going to prove the equivalence in the book.
+
+\begin{thm}{Theorem}\label{thm:=IV}
+An absolute plane is Euclidean if and only if one of the following equivalent conditions hold.
+\begin{enumerate}[(a)]
+\item\label{thm:=IV:main} There is a line $\ell$ and a point $P\notin\ell$ such that there is only one line passing through $P$ and parallel to $\ell$.
+\item 
+Every nondegenerate triangle can be circumscribed.
+\item
+There exists a pair of distinct lines which lie on a bounded distance from each other.
+\item
+There is a triangle with arbitrary large inradius.
+\item
+There is a nondegenerate triangle with zero defect.
+\item
+There exists a quadrilateral in which all angles are right.
+\end{enumerate}
+\end{thm}
+
+It is hard to imagine an absolute plane, which does not satisfy some of the properties above.
+That is partly the reason why for the large number of false proofs;
+each used one of such statements by accident.
+
+Let us formulate the negation of (\ref{thm:=IV:main}) above.
+
+\medskip
+
+\begin{description}
+\item[{\rm h-$\!$\ref{def:birkhoff-axioms:4}.}]\label{def:hyperbolic-4a}  
+For any line $\ell$ and any point $P\notin\ell$ there are at least two lines which pass through $P$ and parallel to $\ell$.
+\end{description}
+
+\medskip
+
+By Theorem~\ref{thm:parallel}, an absolute plane which satisfies Axiom~h-$\!$\ref{def:birkhoff-axioms:4} is not Euclidean. 
+Moreover, according to the Theorem~\ref{thm:=IV} (which we do not prove) 
+any non-Euclidean absolute plane Axiom~h-$\!$\ref{def:birkhoff-axioms:4} holds.
+
+It opens a way to look for a proof by contradiction.
+Simply exchange  Axiom~\ref{def:birkhoff-axioms:4} to Axiom~h-$\!$\ref{def:birkhoff-axioms:4}
+ and start to prove theorems in the obtained axiomatic system.
+In the case if we arrive to a contradiction, 
+we prove the Axiom~\ref{def:birkhoff-axioms:4} in absolute plane.  
+
+This idea was growing since 5th century;
+the most notable result were obtained by Saccheri in \cite{saccheri}.
+The more this new geometry was developed,
+it became more and more believable that there will be no contradiction;
+that is, the system of axioms \ref{def:birkhoff-axioms:0}--\ref{def:birkhoff-axioms:3} and h-$\!$\ref{def:birkhoff-axioms:4} is \index{consistent}\emph{consistent}.
+
+This new type of geometry is now called \index{hyperbolic geometry}\emph{hyperbolic} or  \index{Lobachevskian geometry}\emph{Lobachevskian geometry}.
+In fact the following theorem holds.
+
+\begin{thm}{Theorem}\label{thm:consistent}
+The hyperbolic geometry is consistent if and only if so is the Euclidean geometry.
+\end{thm}
+
+The statement
+that hyperbolic geometry has no contradiction appears first in private letters of
+Bolyai,  Gauss, Schweikart and Taurinus%
+\footnote{The oldest surviving letters were the Gauss letter to Gerling 1816 
+and yet more convincing letter dated by 1818 
+of Schweikart sent to Gauss via Gerling.}.
+They all seem to be afraid to state it in public.
+Say, in 1818  
+Gauss writes to Gerling
+
+\begin{quotation}{\it
+\dots I am happy that you have the courage to express yourself as if you recognized the possibility
+that our parallels theory along with our entire geometry could be false. But the wasps whose
+nest you disturb will fly around your head.\dots}
+\end{quotation}
+
+Lobachevsky came to the same conclusion independently.
+Unlike the others he had courage to state it in public and in print
+(see \cite{lobachevsky}).
+That cost him serious troubles.
+
+It seems that Lobachevsky was also the first who had a proof of Theorem \ref{thm:consistent}.
+Later Beltrami gave a cleaner proof of ``if'' part of the theorem.
+It was done by modeling points, lines, distances and angle measures of one geometry using some other objects in the other geometry.
+The same idea was used originally by Lobachevsky in the proof of the ``only if'' part of the theorem, see \cite[34]{lobachevsky-1840}.
+
+The proof of Beltrami is the subject of the next chapter. 
+
+\medskip
+
+Arguably, the discovery of hyperbolic geometry was the second main discoveries of 19th century, 
+trailing only the Mendel's laws.
+
+\section*{Curvature}
+\addtocontents{toc}{Curvature.}
+In a letter from 1824 Gauss writes: 
+
+\begin{quotation}{\it
+The assumption that the sum of the three angles is less than $\pi$ leads to a curious geometry, quite different from ours but thoroughly consistent, which I have developed to my entire satisfaction, so that I can solve every problem in it with the exception of a determination of a constant, which cannot be designated a priori. 
+The greater one takes this constant, the nearer one comes to Euclidean geometry, and when it is chosen indefinitely large the two coincide.
+The theorems of this geometry appear to be paradoxical and, 
+to the uninitiated, absurd; but calm, steady reflection reveals that they contain nothing at all impossible. 
+For example, the three angles of a triangle become as small as one wishes, if only the sides are taken large enough; 
+yet the area of the triangle can never exceed a definite limit, regardless how great the sides are taken, 
+nor indeed can it ever reach it.}
+\end{quotation} 
+
+In the modern terminology the constant which Gauss mentions, 
+can be expressed as $1/\sqrt{-k}$, 
+where $k$ denotes so called \index{curvature}\emph{curvature} of the absolute plane which we are about to introduce.
+
+The identity in the Exercise~\ref{ex:defect}
+suggests that defect of triangle 
+should be proportional to its area.%
+\footnote{We did not define \index{area}\emph{area};
+instead we refer to intuitive understanding of area which reader might have. 
+The formal definition of area is quite long and tedious.}
+
+In fact for any absolute plane there is a nonpositive real number $k$
+such that 
+$$k\cdot\area(\triangle ABC)+\defect(\triangle ABC)=0$$
+for any triangle $\triangle ABC$.
+This number $k$ is called \index{curvature}\emph{curvature} of the plane.
+
+For example, by Theorem~\ref{thm:3sum}, the Euclidean plane has zero curvature.
+By Theorem~\ref{thm:3sum-a}, curvature of any absolute plane is nonpositive.
+
+It turns out that up to isometry, the absolute plane is characterized by its curvature;
+that is, two absolute planes are isometric if and only if they have the same curvature. 
+
+
+
+In the next chapter we will construct hyperbolic plane,
+this is an example of absolute plane with curvature $k=-1$.
+
+Any absolute planes, distinct from Euclidean,
+can be obtained by rescaling metric on the hyperbolic plane.
+Indeed,
+if we rescale the metric by a positive factor $c$,
+the area changes by factor $c^2$, 
+while defect stays the same.
+Therefore taking $c=\sqrt{-k}$,
+we can get the absolute plane given curvature $k<0$.
+In other words, all the non-Euclidean absolute planes become identical
+if we use $r=1/\sqrt{-k}$ as the unit of length.
+
+\medskip
+
+In the Chapter~\ref{chap:sphere},
+we briefly discuss the geometry of the unit sphere.
+Although spheres are not absolute planes,
+the spherical geometry is a close relative of Euclidean and hyperbolic geometries.
+
+The nondegenerate spherical triangles have negative defect.
+Moreover if $R$ is the radius of the sphere then 
+$$\tfrac1{R^2}\cdot\area(\triangle ABC)+\defect(\triangle ABC)=0$$
+for any spherical triangle $\triangle ABC$.
+In other words, 
+the sphere of radius $R$ has positive curvature $k=\tfrac1{R^2}$.
+
+
+\addtocontents{toc}{\protect\end{quote}}

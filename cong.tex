@@ -1,0 +1,223 @@
+\chapter{Congruent triangles}\label{chap:cong}
+\addtocontents{toc}{\protect\begin{quote}}
+
+\section*{Side-angle-side condition}
+\addtocontents{toc}{Side-angle-side condition.}
+
+Our next goal is to give conditions which guarantee congruence of two triangles.
+One of such conditions is Axiom~\ref{def:birkhoff-axioms:3}, it is also called \index{side-angle-side condition}\emph{side-angle-side condition} or briefly \index{SAS condition}\emph{SAS condition}.
+
+\section*{Angle-side-angle condition}
+\addtocontents{toc}{Angle-side-angle condition.}
+
+\begin{thm}{ASA condition}\label{thm:ASA}\index{ASA congruence condition}\index{angle-side-angle congruence condition}
+Assume that 
+\begin{align*}
+AB&=A'B',
+&
+\measuredangle A B C &\equiv \pm\measuredangle A' B' C', 
+&
+\measuredangle C A B&\equiv\pm\measuredangle C' A' B'
+\end{align*}
+ and $\triangle A' B' C'$ is nondegenerate.
+Then 
+$$\triangle A B C\cong\triangle A' B' C'.$$
+
+\end{thm}
+
+Note that for degenerate triangles the statement does not hold,
+say consider one triangle with sides $1$, $4$, $5$ 
+and the other with sides $2$, $3$,~$5$.
+
+\begin{wrapfigure}[7]{o}{26mm}
+\begin{lpic}[t(-0mm),b(3mm),r(0mm),l(0mm)]{pics/AA(1)}
+\lbl[t]{1,.5;$A'$}
+\lbl[b]{10.5,29;$B'$}
+\lbl[t]{16,.5;$C'$}
+\lbl[lt]{21,.5;$C''$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Proof.} 
+According to Theorem~\ref{thm:signs-of-triug},
+either
+$$\begin{aligned}
+ \measuredangle A B C &\equiv \measuredangle A' B' C',
+\\
+\measuredangle C A B&\equiv\measuredangle C' A' B'
+\end{aligned}\eqlbl{eq:+angles}$$
+or
+$$\begin{aligned}
+\measuredangle A B C &\equiv -\measuredangle A' B' C',
+\\
+\measuredangle C A B&\equiv-\measuredangle C' A' B'.
+\end{aligned}\eqlbl{eq:-angles}$$
+Further we assume that \ref{eq:+angles} holds; 
+the case \ref{eq:-angles} is analogous.
+
+
+
+Let $C''$ be the point on the half-line $[A' C')$ such that 
+that $A' C''\z=A C$. 
+
+By Axiom~\ref{def:birkhoff-axioms:3}, 
+$\triangle A' B' C''\cong \triangle A B C$. 
+Applying Axiom~\ref{def:birkhoff-axioms:3} again,
+we get 
+$$\measuredangle A' B' C'' \equiv  \measuredangle A B C\equiv\measuredangle A' B' C' .$$
+By Axiom~\ref{def:birkhoff-axioms:2a}, $[B'C')=[B C'')$. 
+Whence
+$C''$ lies on $(B' C')$ as well as on $(A' C')$.
+
+Since $\triangle A' B' C'$ is not degenerate, $(A' C')$ is distinct from $(B' C')$.
+Applying  Axiom~\ref{def:birkhoff-axioms:1}, we get $C''=C'$. 
+
+Therefore 
+$\triangle A' B' C'=\triangle A' B' C''\cong\triangle A B C$.
+\qeds
+
+\section*{Isosceles triangles}
+\addtocontents{toc}{Isosceles triangles.}
+
+A triangle with two equal sides is called \index{isosceles triangle}\emph{isosceles};
+the remaining side is called \index{base of isosceles triangle}\emph{base} of isosceles triangle.
+
+\begin{thm}{Theorem}\label{thm:isos}
+Assume $\triangle A B C$ is an isosceles triangle with the base $[A  B]$. 
+Then 
+$$\measuredangle A B C\equiv -\measuredangle B A C.$$
+Moreover, the converse holds if $\triangle A B C$ is nondegenerate.
+\end{thm}
+
+\begin{wrapfigure}{o}{29mm}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(2mm)]{pics/isos(1)}
+\lbl[rt]{0,1;$A$}
+\lbl[lt]{23,1;$B$}
+\lbl[b]{11.5,27;$C$}
+\end{lpic}
+\end{wrapfigure}
+
+The following proof is due to Pappus of Alexandria.
+
+\parit{Proof.}
+Note that
+$$C A = C B,\ C B=C A,\ \measuredangle A C B \equiv -\measuredangle B C A.$$
+Therefore by Axiom~\ref{def:birkhoff-axioms:3},
+$$\triangle C A B\cong\triangle C B A.$$
+Applying the theorem on the signs of angles of triangles (\ref{thm:signs-of-triug}) and Axiom~\ref{def:birkhoff-axioms:3} again,
+we get  
+$$\measuredangle C A B\equiv -\measuredangle C B A.$$
+
+To prove the converse, we assume
+$\measuredangle C A B \z\equiv - \measuredangle C B A$.
+By ASA condition \ref{thm:ASA}, $\triangle C A B\z\cong\triangle CBA$.
+Therefore $C A\z=C B$.
+\qeds
+
+A triangle with three equal sides is called\index{equilateral triangle}\emph{equilateral}. 
+
+\begin{thm}{Exercise}\label{ex:equilateral}
+Let $\triangle ABC$ be an equilateral triangle.
+Show that 
+\[\measuredangle ABC=\measuredangle BCA=\measuredangle CAB.\]
+
+\end{thm}
+
+
+\section*{Side-side-side condition}
+\addtocontents{toc}{Side-side-side condition.}
+\index{side-side-side congruence condition}
+
+\begin{thm}{SSS condition}\label{thm:SSS}
+$\triangle A B C\cong\triangle A' B' C'$  if  
+$$A' B'=A B,\ \ B' C'=B C\ \ \text{and}\ \  C' A'=C A.$$
+
+\end{thm}
+
+\parit{Proof.} 
+Choose $C''$ so that $A' C''= A' C'$ and $\measuredangle B' A' C''\equiv \measuredangle B A C$.
+According to Axiom~\ref{def:birkhoff-axioms:3},
+$$\triangle A' B' C''\cong\triangle A B C.$$
+
+\begin{wrapfigure}{o}{40mm}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(2mm)]{pics/SSS(1)}
+\lbl[r]{1.5,20.5;$A'$}
+\lbl[l]{35.5,20.5;$B'$}
+\lbl[b]{24,40.5;$C'$}
+\lbl[t]{24,1;$C''$}
+\end{lpic}
+\end{wrapfigure}
+
+It will suffice to
+prove that 
+$$\triangle A' B' C'\cong\triangle  A' B' C''.\eqlbl{eq:A'B'C'simA'B'C''}$$
+The condition \ref{eq:A'B'C'simA'B'C''} trivially holds if $C''\z=C'$.
+Thus it remains to consider the case $C''\z\ne C'$.
+
+Clearly, the corresponding  sides of $\triangle A' B' C'$ and $\triangle  A' B' C''$ are equal.
+Whence the triangles
+$\triangle C' A' C''$ and $\triangle C' B' C''$ are  isosceles.
+By Theorem~\ref{thm:isos}, we have 
+\begin{align*}
+ \measuredangle A' C'' C'&\equiv  -\measuredangle A' C' C'',
+\\
+\measuredangle C' C'' B'&\equiv    -\measuredangle    C'' C' B'.
+\end{align*}
+By addition
+$$\measuredangle  A' C' B' \equiv    -\measuredangle     A' C'' B'.$$
+Applying Axiom~\ref{def:birkhoff-axioms:3} again,
+we get \ref{eq:A'B'C'simA'B'C''}.
+\qeds
+
+\begin{thm}{Advanced exercise}\label{ex:SMS}
+Let $M$ be the midpoint of side $[A B]$ of a triangle $\triangle A B C$ and
+$M'$ be the midpoint of side $[A' B']$ of a triangle $\triangle A' B' C'$.
+Assume $C' A'=C A$, $C' B'= C B$ and $C' M'= C M$.
+Prove that $\triangle A' B' C'\cong\triangle A B C$.
+\end{thm}
+
+\begin{wrapfigure}[3]{o}{34mm}
+\begin{lpic}[t(-8mm),b(-0mm),r(0mm),l(1mm)]{pics/isos-2(1)}
+\lbl[t]{30,1;$B$}
+\lbl[t]{1,1;$A$}
+\lbl[lb]{26,13;$A'$}
+\lbl[rb]{7,13;$B'$}
+\lbl[b]{16,28.5;$C$}
+\end{lpic}
+\end{wrapfigure}
+
+\begin{thm}{Exercise}\label{ex:isos-sides}
+Let $\triangle A B C$ be an isosceles triangle with the base $[A B]$
+and the points $A'\in [B C]$ and $B'\z\in[A C]$ be such that $C A'=C B'$.
+Show that
+\begin{enumerate}[(a)]
+\item $\triangle A A' C\cong \triangle B B' C$;
+\item $\triangle A B B'\cong \triangle B A A'$.
+\end{enumerate}
+\end{thm}
+
+
+
+\begin{thm}{Exercise}\label{ex:degenerate-trig}
+Show that if $AB+BC=AC$
+ then $B\in [AC]$.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:ABC-motion}
+Let $\triangle ABC$ be a nondegenerate triangle and 
+let $\iota$ be a motion of the plane 
+such that 
+$$\iota(A)=A,\ \ \iota(B)=B\ \ \text{and}\ \ \iota(C)=C.$$
+
+Show that $\iota$ is the identity;
+that is, $\iota(X)=X$ for any point $X$ on the plane.
+\end{thm}
+
+
+
+
+\addtocontents{toc}{
+{\sloppy
+
+}
+\protect\end{quote}}

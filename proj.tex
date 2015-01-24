@@ -1,0 +1,509 @@
+\chapter{Projective geometry}\label{chap:proj}
+\addtocontents{toc}{\protect\begin{quote}}
+
+\section*{Real projective plane}
+\addtocontents{toc}{Real projective plane.}
+
+In the Euclidean plane two distinct lines might have one or zero points of intersection 
+(in the later case the lines are called parallel).
+Our aim is to extend Euclidean plane by ideal points so that any two distinct lines will have exactly one point of intersection.
+
+\begin{wrapfigure}{o}{31mm}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/pensil-tip(1)}
+\end{lpic}
+\begin{lpic}[t(5mm),b(0mm),r(0mm),l(0mm)]{pics/pensil-par(1)}
+\end{lpic}
+\end{wrapfigure}
+
+A collection of lines in the Euclidean plane is called \index{concurrent}\emph{concurrent} if they all intersect at single point or all of them pairwise parallel.
+A set of concurrent lines passing through each point in the plane is called \index{pencil}\emph{pencil}.
+There are two types of pencils 
+first is the set of all lines passing through given point called the \index{center of the pencil}\emph{center of the pencil}
+and  
+second is the set of pairwise parallel lines.
+
+Note that each point in Euclidean plane uniquely defines a pencil with center in it, 
+but the parallel pencils have no center.
+Also any two lines completely determine the pencil containing both.
+
+Let us add one ideal point for each parallel pencil,
+and assume that all these ideal points lie on one ideal line.
+
+We obtain so called \index{real projective plane}\emph{real projective plane}.
+Each point in the real projective plane defined as a pencil of lines in Euclidean plane.
+We say that three points lie on one line the corresponding pencils contain a common line. 
+(We assume that the ideal line belongs to each parallel pencil).
+
+
+\section*{Euclidean space}
+\addtocontents{toc}{Euclidean space.}
+
+Let us repeat the construction of metric $d_2$ (page 
+\pageref{def:d_2}) in the space.
+
+We will denote by $\mathbb{R}^3$ the set of all triples $(x,y,z)$ of real numbers.
+Assume $A=(x_A,y_A,z_A)$ and $B=(x_B,y_B,z_B)$ are arbitrary points.
+Define the metric on $\mathbb{R}^3$ the following way
+$$AB
+\df
+\sqrt{(x_A-x_B)^2+(y_A-y_B)^2+(z_A-z_B)^2}.$$
+The obtained metric space is called \index{Euclidean space}\emph{Euclidean space}.
+
+Assume at least one of the real numbers $a$, $b$ or $c$ is distinct from zero.
+Then the subset of points $(x,y,z)\in\mathbb{R}^3$ 
+described by equation
+$$a\cdot x+b\cdot y+c\cdot z+d=0$$ 
+is called \index{plane!plane in the space}\emph{plane};
+here $d$ is a real number.
+
+It is straightforward to show that any plane in Euclidean space is isometric to Euclidean plane.
+Further, any three points on the space lie on one plane.
+And any nonempty intersection of two distinct planes forms a line in each of these planes. 
+
+The later statements makes possible to generalize many notions and results from Euclidean plane geometry to Euclidean space
+by applying plane geometry in the planes of the space.
+
+\section*{Perspective projection}
+\addtocontents{toc}{Perspective projection.}
+
+Consider two planes $\Pi$ and $\Pi'$ 
+in the Euclidean space. 
+Let $O$ be a point which does not belong neither to $\Pi$ nor $\Pi'$.
+
+Consider the \index{perspective projection}\emph{perspective projection from $\Pi$ to $\Pi'$ with center at $O$}.
+The projection of $P\in \Pi$
+is defined as the point $P'\in\Pi'$ which lies on the line $(OP)$.
+
+\begin{center}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/perspective(1)}
+\end{lpic} 
+\end{center}
+
+Note that the perspective projection sends collinear points to collinear.
+Indeed, assume three points $P$, $Q$, $R$ lie on one line $\ell$ in $\Pi$
+and $P'$, $Q'$, $R'$ are their images in $\Pi'$.
+Then all the points $P$, $Q$, $R$, $P'$, $Q'$, $R'$ lie in the plane, say $\Theta$, containing $O$ and $\ell$.
+Therefore the points $P',Q',R'$ lie in the line formed by intersection $\ell'=\Theta\cap \Pi'$.
+
+The perspective projection is not a bijection between the planes;.
+Indeed, if the line $(OP)$ is parallel to $\Pi'$ (i.e., if $(OP)\cap\Pi'=\emptyset$)
+then the perspective projection is not defined.
+Also if  $(OP')\parallel \Pi$ 
+for a point $P'\in \Pi'$
+then point $P'$ is not an image of the perspective projection.
+
+A similar story happened with inversion.
+If inversion is considered for the Euclidean plane
+then is not defied at the center of inversion;
+it is also not the image of any point.
+To deal with this problem we passed to inversive plane 
+which is Euclidean plane extended by one ideal point.
+
+A similar strategy works for perspective projection $\Pi\to\Pi'$, but this time real projective plane is the right choice of extension.
+Denote by $\hat \Pi$ and $\hat \Pi'$ 
+the corresponding real projective planes.
+
+Note that there is a natural bijection between points in the real projective plane $\hat \Pi$ and all the lines passing through $O$.
+If $P\in \Pi$ then take the line $(OP)$;
+if $P$ is an ideal point of $\hat \Pi$, so defined by a parallel pencil of lines then take the line through $O$ which is parallel to each lines in this pencil. 
+
+The same construction gives a bijection between points in the real projective plane $\hat \Pi'$ and all the lines passing through $O$.
+Composing these bijections we get a bijection $\hat \Pi\to \hat \Pi'$ which coincides with the perspective projection $P\mapsto P'$
+where it is defined.
+
+Note that the ideal line of $\hat\Pi$ maps to the line formed by intersection of $\Pi'$ and the plane through $O$ parallel to $\Pi$.
+Similarly the ideal line of $\hat\Pi'$
+is the image of the line formed by intersection of $\Pi$ and the plane through $O$ parallel to $\Pi'$.
+
+Strictly speaking this gives a transformation from one real projective plane to another, 
+but if we identify the two planes, say by fixing a coordinate system in each, 
+we get a projective transformation from the plane to itself. 
+
+\begin{thm}{Exercise}\label{ex:persect}
+Let $O$ be the origin of $(x,y,z)$-coordinate space
+and the planes $\Pi$ and $\Pi'$ formed by the solutions of equations
+$x=1$ and $y=1$ correspondingly.
+The perspective projection from $\Pi$ to $\Pi'$ with center at $O$ sends $P$ to $P'$.
+Assume $P$ has coordinates $(1,y,z)$, find the coordinates of $P'$.
+
+For which points $P\in \Pi$ the perspective projection is undefined?
+Which points $P'\in\Pi'$ are not images of points under perspective projection?
+\end{thm}
+
+\section*{Projective transformations}
+\addtocontents{toc}{Projective transformations.}
+
+A bijection from real projective plane to itself 
+which sends lines to lines 
+is called \index{projective transformation}\emph{projective transformation}.
+
+Projective and affine geometries study incidence structure of Euclidean and real projective plane correspondingly.
+One may also say that
+projective geometry studies the properties of real projective plane which preserved under projective transformations.
+
+
+Note that any affine transformation defines  a projective transformation on the corresponding real projective plane.
+We will call such projective transformations \index{affine transformation}\emph{affine}; 
+these are projective transformations which send the ideal line to itself.
+
+The perspective projection discussed in the previous section 
+gives an example of projective transformation which is not affine.
+
+\begin{thm}{Theorem}
+Any projective transformation can be obtained as a composition of an affine transformation and a perspective projection.
+\end{thm}
+
+\parit{Proof.}
+Assume $\alpha$ is a projective transformation. 
+If is $\alpha$ sends ideal line to itself then it has to be affine. 
+Hence the theorem follows.
+
+Assume $\alpha$ sends the ideal line to line $\ell$, choose a perspective projection $\beta$ which sends $\ell$ back to the ideal line.
+To do this we have to identify our plane with a plane $\Pi$ in the space, 
+then fix a point $O\notin \Pi$  
+and then choose a plane $\Pi'$ which is
+parallel to the plane containing $\ell$ and $O$.
+
+The composition $\beta\circ\alpha$ sends ideal line to itself,
+therefore it has to be affine. 
+Hence the result follows.
+\qeds
+
+\section*{Desargues' theorem}
+\addtocontents{toc}{Desargues' theorem.}
+
+Loosely speaking, 
+ any statement in projective geometry 
+ can be formulated using only terms \index{collinear points}\emph{collinear points},
+\emph{concurrent lines}.
+
+Here is a classical example of a theorem in projective geometry.
+
+\begin{thm}{Desargues' theorem}\label{thm:desargues}
+Consider three concurrent lines $(AA')$, $(BB')$ and $(CC')$ in the real projective plane.
+Set
+\begin{align*}
+X&=(BC)\cap (B'C'),\\
+Y&=(CA)\cap (C'A'),\\
+Z&=(AB)\cap (A'B')
+\end{align*}
+Then the points $X$, $Y$ and $Z$ are collinear.
+\end{thm}
+
+\begin{wrapfigure}{o}{44mm}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/desargues(0.9)}
+\lbl[r]{15,32;$A$}
+\lbl[lw]{35,42;$A'$}
+\lbl[rw]{13,24;$B$}
+\lbl[bl]{44,28.5;$B'$}
+\lbl[rw]{18,19;$C$}
+\lbl[ltw]{29,20;$C'$}
+\lbl[rw]{22,55;$Z$}
+\lbl[rtw]{22.5,18;$X$}
+\lbl[r]{23,4;$Y$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Proof.}
+Without loss of generality, we may assume that the line $(XY)$ is ideal.
+If not, apply a perspective projection which sends the line $(XY)$ to the ideal line.
+
+In other words, we can assume that $(BC)\z\parallel (B'C')$ and  $(CA)\z\parallel (C'A')$ and we need to show that $(AB)\z\parallel(A'B')$.
+
+Assume that the lines $(AA')$, $(BB')$ and $(CC')$ intersect at point $O$.
+Since $(BC)\parallel (B'C')$, 
+Transversal property~\ref{thm:parallel-2}, implies that that $\measuredangle OBC\z\equiv \measuredangle OB'C'$ and $\measuredangle OCB\z\equiv \measuredangle OC'B'$.
+By AA-similarity condition, $\triangle OBC\z\sim\triangle OB'C'$.
+In particular,
+\[\frac{OB}{OB'}=\frac{OC}{OC'}.\]
+
+\begin{wrapfigure}{i}{48mm}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/desargues-par(1)}
+\lbl[r]{15,32;$A$}
+\lbl[lw]{35,42;$A'$}
+\lbl[rw]{13,24;$B$}
+\lbl[rbw]{29,27;$B'$}
+\lbl[rw]{18,19;$C$}
+\lbl[lw]{43,18;$C'$}
+\end{lpic}
+\end{wrapfigure}
+
+The same way we get $\triangle OAC\z\sim\triangle OA'C'$ and
+\[\frac{OA}{OA'}=\frac{OC}{OC'}.\]
+Therefore 
+\[\frac{OA}{OA'}=\frac{OB}{OB'}.\]
+By SAS-similarity condition, we get $\triangle OAB\sim\triangle OA'B'$,
+in particular $\measuredangle OAB\equiv \pm \measuredangle OA'B'$.
+
+Note that $\measuredangle AOB\equiv \measuredangle A'OB'$.
+Therefore 
+\[\measuredangle OAB\equiv \measuredangle OA'B'.\]
+By Transversal property~\ref{thm:parallel-2},
+$(AB)\parallel (A'B')$.
+
+The case when the lines $(AA')\parallel(BB')\parallel(CC')$ can be done similarly.
+In this case the quadrilaterals $B'BCC'$ and $A'ACC'$ are parallelograms.
+Therefore 
+\[BB'=CC'=AA'.\]
+Whence $B'BAA'$ is a parallelogram, in particular $(AB)\parallel (A'B')$.
+\qeds
+
+
+
+Here is an other classical theorem of of projective geometry.
+
+\begin{thm}{Pappus's theorem}\label{thm:pappus}
+Assume that two triples of points $A$, $B$, $C$,
+and $A'$, $B'$, $C'$ are collinear.
+Set 
+\begin{align*}
+X&=(BC')\cap(B'C),
+&
+Y&=(CA')\cap(C'A),
+&
+Z&=(AB')\cap(A'B).
+\end{align*}
+Then the points $X$, $Y$, $Z$ are collinear.
+\end{thm}
+
+
+\begin{center}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/pappus(1)}
+\lbl[lb]{3,23;$A$}
+\lbl[tw]{3,2;$A'$}
+\lbl[bw]{12,25;$B$}
+\lbl[tw]{12,2;$B'$}
+\lbl[bw]{21,28;$C$}
+\lbl[tw]{23,2;$C'$}
+
+\lbl[bw]{69,14.5;$A$}
+\lbl[tw]{95,1;$A'$}
+\lbl[bw]{77,21;$B$}
+\lbl[tw]{78,1;$B'$}
+\lbl[bw]{84,27;$C$}
+\lbl[tw]{71,1;$C'$}
+\lbl[lw]{18,16;$X$}
+\lbl[bw]{11,16;$Y$}
+\lbl[rw]{5.5,14;$Z$}
+\end{lpic}
+\end{center}
+
+Pappus's theorem can be proved the same way as Desargues' theorem.
+
+\parit{Idea of the proof.}
+Applying a perspective projection, we can assume that $X$ and $Y$ lie on the ideal line.
+It remains to show that $Z$ lies on the ideal line.
+
+In other words, assuming that $(AB')\parallel (A'B)$ and $(AC')\parallel (A'C)$, we need to show that $(BC')\parallel(B'C)$.
+
+
+\begin{thm}{Exercise}\label{ex:pappus}
+Finish the proof of Pappus's theorem using the idea described above.
+\end{thm}
+
+
+
+
+
+\section*{Duality}
+\addtocontents{toc}{Duality.}
+
+Let us fix a bijection between the set of lines and the set of points of the plane.
+Given a point $P$ let us denote by lower case letter $p$ the corresponding line.
+Also the other way around, 
+given a line $s$ we will denote upper case letter $S$ the corresponding point. 
+
+The bijection between points and lines is called \index{duality}\emph{duality}%
+\footnote{Usual definition of duality is more general; we consider a special case which is also called \index{polarity}\emph{polarity}.}
+if 
+\[P\in s\ \ \iff\ \  p\ni S.\]
+for any point $P$ and line $s$.
+
+\begin{center}
+\begin{lpic}[t(0mm),b(5mm),r(0mm),l(0mm)]{pics/dual(1)}
+\lbl[tr]{2,17.5;$p$}
+\lbl[tr]{11,25;$q$}
+\lbl[lt]{20,25;$r$}
+\lbl[tlw]{24,13;$s$}
+\lbl[tr]{21,5;$A$}
+\lbl[r]{13.5,19;$D$}
+\lbl[t]{14,8.5;$C$}
+\lbl[rw]{9,12;$B$}
+\lbl[b]{19.5,13;$E$}
+\lbl[tl]{6.5,6;$F$}
+
+
+\lbl[bl]{53,18;$P$}
+\lbl[tlw]{63.5,19;$Q$}
+\lbl[tr]{62.5,3.5;$R$}
+\lbl[br]{51.5,8.5;$S$}
+\lbl[t]{45,18;$a$}
+\lbl[lb]{48,22;$b$}
+\lbl[rt]{52,1;$c$}
+\lbl[l]{63.4,10;$d$}
+\lbl[tr]{47,3;$e$}
+\lbl[b]{45,7;$f$}
+\lbl[t]{38,-2;A diagram and its dual.}
+\end{lpic}
+\end{center}
+
+Existence of duality in a plane 
+says that the lines and the points in this plane have the same rights in terms of incidence.
+
+\begin{thm}{Exercise}\label{ex:dual-euclid}
+Show that Euclidean plane does not admit a duality. 
+\end{thm}
+
+\begin{thm}{Theorem}\label{thm:dual}
+The real projective plane admits a duality.
+\end{thm}
+
+\parit{Proof.}
+Consider a plane $\Pi$ and a point $O\notin\Pi$ 
+in the Euclidean space;
+denote by $\hat \Pi$ the corresponding real projective plane.
+
+Recall that there is a natural bijection between points in the real projective plane $\hat \Pi$ and all the lines passing through $O$.
+If $P\in \Pi$ then the corresponding line is $(OP)$;
+if $P$ is an ideal point of $\hat \Pi$, 
+so $P$ is defined as a parallel pencil of lines,
+take the line through $O$ which is parallel to each lines in this pencil. 
+Given $P\in\hat \Pi$,
+denote the obtained line $\dot P$.
+
+Similarly there is a natural bijection between lines in  $\hat \Pi$ and all the planes passing through $O$.
+If is $s$ is a line in $\Pi$ then take the plane containing $O$ and $s$;
+if $s$ is the ideal line of $\hat \Pi$,
+take the plane through $O$ parallel to $\Pi$. 
+Given a line $s$ in $\hat \Pi$,
+denote the obtained plane as $\dot s$.
+
+It is straightforward to check that $\dot P\subset\dot s$
+if and only if $P\in s$;
+i.e., the bijections $P\mapsto \dot P$ and $s\mapsto \dot s$
+remember all the incidence structure of the real projective plane $\hat \Pi$.
+
+It remains to construct a bijection $\dot s\mapsto \dot S$
+between the set of planes and 
+the set of lines passing through $O$ 
+such that 
+\[\dot r\subset \dot S\ \ \iff \ \ \dot R\supset \dot s
+\eqlbl{iff-dual}\]
+for any two lines line $\dot r$ and $\dot s$ passing through $O$.
+
+Set $\dot S$ to be the plane through $O$ 
+which is perpendicular to $\dot s$.
+Note that both conditions \ref{iff-dual} are equivalent to $\dot r\perp \dot s$;
+hence the result follows.
+\qeds
+
+\begin{thm}{Exercise}\label{ex:dula-coordinates}
+Consider Euclidean plane with $(x,y)$-coordinates, denote by $O$ the origin.
+Given a point $P\ne O$ with coordinates $(a,b)$ consider the line $p$ 
+formed by solution of the equation 
+$a\cdot x+b\cdot y=1$.
+
+Show that the correspondence $P$ to $p$ extends to duality of corresponding real projective plane.
+
+Which line corresponds to $O$?
+
+Which point of real projective plane corresponds to the line formed by solutions $a\cdot x+b\cdot y=0$?
+\end{thm}
+
+The existence of duality in the real projective planes makes possible to formulate an equivalent dual statement to any statement in projective geometry.
+Say, the dual statement for ``the points $X$, $Y$ and $Z$ lie on one line $\ell$''
+would be the ``lines $x$, $y$ and $z$ intersect at one point $L$''.
+
+For example the dual statement for Desargues' theorem~\ref{thm:desargues} is its converse.
+ 
+
+\begin{thm}{Dual Desargues' theorem}
+Consider the collinear points $X$, $Y$ and $Z$.
+Assume that $X\z=(BC)\cap (B'C')$, $Y\z=(CA)\cap (C'A')$ and $Z=(AB)\cap (A'B')$.
+Then the lines  $(AA')$, $(BB')$ and $(CC')$ are concurrent.
+\end{thm}
+
+In this theorem the points $X$, $Y$ and $Z$ 
+are dual to the lines $(AA')$, $(BB')$ and $(CC')$ in the original formulation, and the other way around.
+
+\begin{thm}{Exercise}\label{ex:dual-pappus}
+Formulate Dual Pappus's theorem, see \ref{thm:pappus}.
+\end{thm}
+
+Proving Desargues' theorem 
+and applying duality (Theorem~\ref{thm:dual})
+we get Dual Desargues' theorem.
+The same can be done the other way around.
+
+The Desargues' theorem and its dual can be packed in the
+following strong version of Desargues' theorem.
+
+\begin{thm}{Strong Desargues' theorem}
+Assume that $X\z=(BC)\z\cap (B'C')$, $Y\z=(CA)\cap (C'A')$ and $Z=(AB)\cap (A'B')$.
+Then the lines  $(AA')$, $(BB')$ and $(CC')$ are concurrent if and only if the  points $X$, $Y$ and $Z$ are collinear.
+\end{thm}
+
+\section*{Axioms}
+\addtocontents{toc}{Axioms.}
+
+Note that the real projective plane described above satisfies the following set of axioms.
+
+\begin{enumerate}[I.]
+\item\label{def:proj-axioms:1} Any two distinct points lie on a unique line.
+\item\label{def:proj-axioms:2} Any two distinct lines pass through a unique point.
+\item\label{def:proj-axioms:3} There exist at least four points of which no three are collinear.
+\end{enumerate}
+
+Let us take these three axioms as a definition of \index{projective plane}\emph{projective plane};
+so the real projective plane discussed above becomes a particular example of projective plane.
+
+\begin{thm}{Exercise}\label{ex:finite-pp}
+Show that any line in projective plane contains at least three points.
+\end{thm}
+
+\begin{wrapfigure}{o}{20mm}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/fano(1)}
+%\lbl[r]{15,32;$A$}
+\end{lpic}
+\end{wrapfigure}
+
+It turns out that there is a projective plane which contains exactly 3 points on each line.
+This is so called \index{Fano plane}\emph{Fano plane} which you can see on the diagram;
+it contains $7$ points and $7$ lines.
+This is an example of \index{finite projective plane}\emph{finite projective plane};
+i.e., projective plane with finitely many points.
+
+Consider the following analog of Axiom~\ref{def:proj-axioms:3}.
+
+\medskip
+
+\noindent {\rm III$'$.} 
+There exist at least four lines of which no three are concurrent.
+
+\begin{thm}{Exercise}\label{ex:3=3'}
+Show that Axiom \ref{def:proj-axioms:3}$\,'$ is equivalent to Axiom \ref{def:proj-axioms:3}.
+\end{thm}
+
+Exercise above show that in the axiomatic system of projective plane,
+lines and points have the same rights.
+In fact one can switch everywhere words ``point'' with ``line'', ``pass trough'' with ``lies on'', ``collinear'' with ``concurrent'' and we get an equivalent set of axioms.
+
+\begin{thm}{Exercise}\label{ex:oder}
+Assume that one of the lines in a finite projective plane contains exactly $n+1$ points.
+\begin{enumerate}[(a)]
+\item\label{ex:oder:a} Show that each line contains exactly $n+1$ points.
+\item\label{ex:oder:b} Show that the number of the points in the plane has to be 
+\[n^2+n+1.\]
+\item\label{ex:oder:c} Show that in any finite projective plane the number of points coincides with the number of lines.
+\end{enumerate}
+\end{thm}
+
+The number $n$ in the above exercise is called \index{order of finite projective plane}\emph{order} of finite projective plane.
+For example Fano plane has order $2$.
+Here is one of the most famous conjecture in finite geometry.
+
+\begin{thm}{Conjecture}
+The order of a finite projective plane is the power of a prime.
+\end{thm}
+
+\addtocontents{toc}{\protect\end{quote}}

@@ -1,0 +1,667 @@
+\chapter{Parallel lines and similar triangles}\label{chap:parallel}
+\addtocontents{toc}{\protect\begin{quote}}
+
+\section*{Parallel lines}
+\addtocontents{toc}{Parallel lines.}
+
+In consequence of Axiom~\ref{def:birkhoff-axioms:1}, 
+any two distinct lines $\ell$ and $m$ have either one point
+in common or none. 
+In the first case they are \index{intersecting lines}\emph{intersecting}; 
+in the second case, $\ell$ and $m$ are said to be \index{parallel lines}\emph{parallel} (briefly \index{$\parallel$}$\ell\parallel m$);
+in addition, a line is always regarded as parallel to itself.
+
+
+\begin{thm}{Proposition}\label{prop:perp-perp}Let $\ell$, $m$ and $n$ be the lines in the plane.
+Assume that $n\perp m$ and $m\perp \ell$.
+Then $\ell\parallel n$. 
+\end{thm}
+
+\parit{Proof.}
+Assume contrary; 
+that is, $\ell\nparallel n$.
+Then there is a point, say $Z$, of intersection of $\ell$ and $n$.
+Then by Theorem \ref{perp:ex+un},
+$\ell=n$.
+In particular $\ell\parallel n$, a contradiction.
+\qeds
+
+\begin{thm}{Theorem}\label{thm:parallel}
+Given a point $P$ and line $\ell$ in the Euclidean plane
+there is unique line $m$
+which pass though $P$ and parallel to $\ell$.
+\end{thm}
+
+The above theorem has two parts, existence and uniqueness.
+In the proof of uniqueness we will use Axiom~\ref{def:birkhoff-axioms:4} for the first time in this book.
+
+\parit{Proof; existence.} 
+Apply Theorem \ref{perp:ex+un} two times,
+first to construct line $m$ through $P$ which is perpendicular to $\ell$
+and second to construct line $n$ through $P$ which is perpendicular to $m$.
+Then apply Proposition~\ref{prop:perp-perp}.
+
+\parit{Uniqueness.}
+If $P\in\ell$ then $m=\ell$ by the definition of parallel lines.
+Further we assume $P\notin\ell$.
+
+Let us construct lines $n\ni P$ and $m\ni P$ as in the proof of existence, so $m\parallel \ell$.
+
+Assume there is yet an other line $s\ni P$ which is distinct from $m$ and parallel to $\ell$.
+Choose a point $Q\in s$ which lies with $\ell$ on the same side from $m$.
+Let $R$ be the foot point of $Q$ on $n$.
+
+Let $D$ be the point of intersection of $n$ and $\ell$.
+According to Proposition~\ref{prop:perp-perp} $(QR)\parallel m$. 
+Therefore $Q$, $R$ and $\ell$ lie on the same side from $m$. 
+In particular, $R\in [P D)$.
+
+\begin{center}
+ \begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/parallel(1)}
+\lbl[br]{2,24.5;$P$}
+\lbl[r]{1,15;$R$}
+\lbl[rt]{2,1;$D$}
+\lbl[bl]{23,16;$Q$}
+\lbl[t]{55,1;$Z$}
+\lbl[t]{35,1.5;$\ell$}
+\lbl[b]{35,23;$m$}
+\lbl[b]{39,9.5,-15;$s$}
+\lbl[b]{2,9,90;$n$}
+\end{lpic}
+\end{center}
+
+Choose $Z\in [P Q)$ such that 
+$$\frac{PZ}{PQ}=\frac{PD}{PR}.$$
+Then
+by Axiom~\ref{def:birkhoff-axioms:4},  $(Z D)\perp(P D)$; 
+that is, $Z\in \ell\cap s$, a contradiction.\qeds
+
+\begin{thm}{Corollary}\label{cor:parallel-1}
+Assume $\ell$, $m$ and $n$ are lines in the Euclidean plane 
+such that $\ell\parallel m$ and $m\parallel n$.
+Then $\ell\parallel n$.
+\end{thm}
+
+\parit{Proof.}
+Assume contrary; that is, $\ell\nparallel n$.
+Then there is a point $P\in \ell\cap n$.
+By Theorem \ref{thm:parallel},
+$n=\ell$, a contradiction.
+\qeds
+
+Note that from the definition, we have $\ell\parallel m$ if and only if $m\z\parallel \ell$.
+Therefore according to the above corollary ``$\parallel$'' is an equivalence relation.
+
+\begin{thm}{Exercise}\label{ex:perp-perp}
+Let $k$, $\ell$, $m$ and $n$ be the lines in Euclidean plane.
+Assume that $k\perp \ell$ and $m\perp n$.
+Show that if $k\parallel m$ then $\ell\parallel n$.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:construction-parallel}
+Make a ruler-and-compass construction of the line though the given point which is parallel to the given line.
+\end{thm}
+
+\section*{Similar triangles}
+\addtocontents{toc}{Similar triangles.}
+
+Two triangles $\triangle A' B' C'$ and $\triangle A B C$ are 
+\index{triangle!similar triangles}\index{similar triangles}\emph{similar} (briefly \index{$\sim$}$\triangle A' B' C'\z\sim\triangle A B C$) if their sides are proportional, that is, 
+$$A' B'=k\cdot A B,\ \  B' C'=k\cdot B C
+\ \ \text{and}\ \ 
+C' A'=k\cdot C A
+\eqlbl{dist}
+$$
+for some $k>0$ and 
+$$
+\begin{aligned}
+\measuredangle A' B' C'&=\pm\measuredangle A B C,
+\\
+\measuredangle B' C' A'&=\pm\measuredangle B  C A,
+\\ 
+\measuredangle C' A' B'&=\pm\measuredangle CAB.
+\end{aligned}
+\eqlbl{angles}
+$$
+
+\parbf{Remarks.}
+\begin{itemize}
+\item According to \ref{thm:signs-of-triug},
+in the above three equalities the signs can be assumed to me the same.
+
+\item If $\triangle A' B' C'\sim\triangle A B C$ with $k=1$ in \ref{dist}, 
+ then $\triangle A' B' C'\z\cong\triangle A B C$.
+
+\item Note that ``$\sim$'' is an 
+\index{equivalence relation}\emph{equivalence relation}.
+That is, 
+\begin{enumerate}[(i)]
+\item $\triangle A B C\sim\triangle A B C$
+for any $\triangle A B C$.
+\item If $\triangle A' B' C'\sim\triangle A B C$ then
+$$\triangle A B C\sim\triangle A' B' C'$$
+\item If $\triangle A'' B'' C''\sim\triangle A' B' C'$ and $\triangle A' B' C'\z\sim\triangle A B C$ then 
+$$\triangle A'' B'' C''\sim\triangle A B C.$$
+\end{enumerate}
+\end{itemize}
+
+Using ``$\sim$'',
+the Axiom~\ref{def:birkhoff-axioms:4} can be formulated the following way.
+
+\begin{thm}{Reformulation of Axiom~\ref{def:birkhoff-axioms:4}}
+If for two triangles 
+$\triangle ABC$, 
+$\triangle AB'C'$
+and $k>0$ we have
+$B'\in [AB)$,
+$C'\in [AC)$,
+$AB'=k\cdot AB$ and
+$AC'=k\cdot AC$
+then $\triangle ABC\sim\triangle AB'C'$.
+\end{thm}
+
+In other words, the Axiom~\ref{def:birkhoff-axioms:4} provides 
+a condition which guarantee that two triangles are similar.
+Let us formulate yet three such conditions.
+
+\begin{thm}{Similarity conditions}\label{prop:sim}
+Two triangles 
+$\triangle ABC$ and $\triangle A'B'C'$ in the Euclidean plane
+are similar if one of the following conditions hold.
+
+(SAS) For some constant $k>0$ we have
+$$A B=k\cdot A' B',
+\ A C=k\cdot A' C'$$
+$$\ \text{and}\ \ 
+\measuredangle B A C=\pm\measuredangle B' A' C'.$$
+
+(AA) The triangle $\triangle A' B' C'$ is nondegenerate
+and $$\measuredangle  A B  C=\pm\measuredangle A' B' C',\ 
+\measuredangle B A C=\pm\measuredangle B' A' C'.$$
+
+(SSS) For some constant $k>0$ we have
+$$A B=k\cdot A' B',
+\ A C=k\cdot A' C',
+\ CB=k\cdot C'B'.$$
+
+\end{thm}
+
+Each of these conditions is proved by applying the Axiom~\ref{def:birkhoff-axioms:4} with SAS, ASA and SSS congruence conditions correspondingly
+(see Axiom~\ref{def:birkhoff-axioms:3} and the conditions \ref{thm:ASA}, \ref{thm:SSS}).
+
+
+\parit{Proof.}
+Set $k=\tfrac{AB}{A'B'}$.
+Choose points $B''\in [A'B')$ and $C''\in [A'C')$
+so that $A'B''=k\cdot A'B'$ and $A'C''=k\cdot A'C'$.
+By Axiom~\ref{def:birkhoff-axioms:4},
+$\triangle A'B'C'\z\sim \triangle A'B''C''$.
+
+Applying SAS, ASA or SSS congruence condition, depending on the case, 
+we get $\triangle A'B''C''\cong \triangle ABC$.
+Hence the result follows.
+\qeds
+
+A triangle with all acute angles 
+is called \index{acute!acute triangle}\emph{acute}.
+
+{
+
+\begin{wrapfigure}{o}{27mm}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(-0mm)]{pics/alt-two(1)}
+\lbl[rt]{1,1;$A$}
+\lbl[lt]{24,1;$B$}
+\lbl[b]{15,24.5;$C$}
+\lbl[lb]{22,10;$A'$}
+\lbl[rb]{8,12;$B'$}
+\end{lpic}
+\end{wrapfigure}
+
+\begin{thm}{Exercise}\label{ex:sim+foots}
+Let $\triangle A B C$ be an acute triangle in the Euclidean plane. 
+Denote by $A'$ the foot point of $A$ on $(BC)$ and
+by $B'$ the foot point of $B$ on $(AC)$.
+Prove that $\triangle A'B'C\sim \triangle ABC$.
+\end{thm}
+
+A bijection from plane to itself is called \emph{angle preserving transformation}{angle preserving} if 
+\[\measuredangle ABC= \measuredangle A'B'C'\]
+for any triangle $\triangle ABC$ and its image $\triangle A'B'C'$.
+
+}
+
+\begin{thm}{Exercise}\label{ex:angle-preserving-euclid}
+Show that any angle-preserving transformation of Euclidean plane multiplies all the distance by a fixed constant.
+\end{thm}
+
+
+\section*{Pythagorean theorem}
+\addtocontents{toc}{Pythagorean theorem.}
+
+A triangle is called \index{triangle!right triangle}\emph{right} if one of its angles is right.
+The side opposite the right angle is called the \index{hypotenuse}\emph{hypotenuse}. 
+The sides adjacent to the right angle are called \index{leg}\emph{legs}.  
+
+
+\begin{thm}{Theorem}\label{thm:pyth}
+Assume $\triangle ABC$ is a right triangle in the Euclidean plane with right angle at $C$.
+Then
+$$AC^2+BC^2=AB^2.$$ 
+
+\end{thm}
+
+\parit{Proof.}
+Let $D$ be the foot point of $C$ on $(AB)$.
+
+\begin{wrapfigure}[4]{o}{43mm}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/pyth(1)}
+\lbl[rt]{1,0;$A$}
+\lbl[lt]{40,0;$B$}
+\lbl[b]{9,19;$C$}
+\lbl[t]{9,0;$D$}
+\end{lpic}
+\end{wrapfigure}
+
+According to Lemma~\ref{lem:perp<oblique},
+\begin{align*}
+AD&<AC<AB
+\intertext{and}
+BD&<BC<AB.
+\end{align*}
+Therefore $D$ lies between $A$ and $B$;
+in particular, 
+$$AD+BD=AB.\eqlbl{AD+BD=AB}$$
+
+Note that by AA similarity condition, we have
+$$\triangle ADC\sim\triangle ACB\sim \triangle CDB.$$
+In particular 
+$$
+\begin{aligned}
+   \frac{A D}{A C}&=\frac{A C}{A B}
+   &
+   &\text{and}
+   &
+   \frac{B D}{B C}&=\frac{B C}{B A}.
+  \end{aligned}
+\eqlbl{BCD}$$
+
+Let us rewrite identities \ref{BCD} on an other way:
+\begin{align*}
+AC^2&=AB\cdot AD
+&
+&\text{and}
+&
+BC^2&=AB\cdot B D.
+\end{align*}
+Summing up above two identities and applying \ref{AD+BD=AB}, we get
+$$AC^2 +BC^2=AB\cdot (AD+ B D)=AB^2.$$
+\qedsf
+
+\begin{thm}{Exercise}\label{ex:pyth}
+Assume $A$, $B$, $C$ and $D$ are as in the proof above.
+Show that 
+$$CD^2=AD\cdot BD.$$
+
+\end{thm}
+
+The following exercise is the converse to Pythagorean theorem.
+
+\begin{thm}{Exercise}\label{ex:pyth-conv}
+Assume $\triangle ABC$ is a triangle in the Euclidean plane such that  
+$$AC^2+BC^2=AB^2.$$ 
+Prove that the angle at $C$ is right.
+\end{thm}
+
+
+
+
+
+\section*{Angles of triangle}
+\addtocontents{toc}{Angles of triangle.}
+
+\begin{thm}{Theorem}\label{thm:3sum}
+In any triangle $\triangle A B C$ in the Euclidean plane, we have
+$$\measuredangle A B C+ \measuredangle  B C A + \measuredangle  C A B \equiv \pi.$$
+
+\end{thm}
+
+\parit{Proof.} 
+First note that if $\triangle A B C$ is degenerate then the equality follows from Lemma~\ref{thm:straight-angle}.
+Further we assume that $\triangle A B C$ is nondegenerate.
+
+\begin{wrapfigure}{o}{43mm}
+\begin{lpic}[t(3mm),b(0mm),r(0mm),l(0mm)]{pics/3-sum(1)}
+\lbl[tr]{1,1;$A$}
+\lbl[lt]{40,1;$B$}
+\lbl[b]{23,26;$C$}
+\lbl[lb]{7,4;{\small $\alpha$}}
+\lbl[lb]{25.5,4;{\small $\alpha$}}
+\lbl[rb]{34.5,3;{\small $\beta$}}
+\lbl[t]{23,18;{\small $\gamma$}}
+\lbl[rb]{15.5,3;{\small $\beta$}}
+\lbl[b]{21,8;{\small $\pm\gamma$}}
+\lbl[t]{20,0;$M$}
+\lbl[lb]{32,14;$K$}
+\lbl[rb]{11,14;$L$}
+\end{lpic}
+\end{wrapfigure}
+
+Set 
+\begin{align*}
+\alpha&=\measuredangle C A B,
+\\
+\beta&=\measuredangle A B C,
+\\
+\gamma&=\measuredangle B C A.
+\end{align*}
+We need to prove that 
+$$\alpha+\beta+\gamma\equiv\pi.
+\eqlbl{eq:a+b+c}$$
+
+Let $K$, $L$, $M$ be the midpoints of the sides $[B C]$, $[C A]$, $[A B]$ respectively.
+By
+Axiom~\ref{def:birkhoff-axioms:4},
+\begin{align*}
+\triangle A M L&\sim \triangle A B C,
+&
+\triangle M B K&\sim \triangle A B C,
+&
+\triangle L K C &\sim  \triangle A B C
+\intertext{and}
+L M &=\tfrac12\cdot B C,
+&
+M K  &=\tfrac12\cdot   C A,
+&
+ K L &=  \tfrac12\cdot A B.
+\end{align*}
+According to SSS-condition (\ref{prop:sim}),
+$\triangle K L M\sim \triangle ABC$. 
+Thus,
+$$\measuredangle M K L=\pm \alpha,\ \  
+\measuredangle K L M=\pm\beta,\ \ 
+\measuredangle L M K=\pm\gamma.
+\eqlbl{eq:pm-a-b-c}$$
+According to \ref{thm:signs-of-triug}, the ``$+$'' or ``$-$''  sign is to be
+the same throughout \ref{eq:pm-a-b-c}.
+
+If in \ref{eq:pm-a-b-c} we have ``$+$'' 
+then \ref{eq:a+b+c} follows since
+$$\beta+\gamma+\alpha
+\equiv
+\measuredangle  A M L + \measuredangle L M K + \measuredangle K M B
+\equiv
+\measuredangle  A M B 
+\equiv
+\pi
+$$
+
+It remains to show that we can not have ``$-$'' in \ref{eq:pm-a-b-c}.
+In this case the same argument as above gives
+$$\alpha+\beta-\gamma\equiv\pi.$$
+The same way we get 
+$$\alpha-\beta+\gamma\equiv\pi$$
+Adding last two identities we get 
+$$2\cdot\alpha\equiv0.$$
+Equivalently 
+$\alpha\equiv\pi$ or $0$;
+that is, $\triangle A B C$ is degenerate, a contradiction.
+\qeds
+
+{
+
+\begin{wrapfigure}[6]{i}{43mm}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/bisector-BA=AD=DC(1)}
+\lbl[b]{9,26;$A$}
+\lbl[t]{2,1;$B$}
+\lbl[t]{38,1;$C$}
+\lbl[t]{16,1;$D$}
+\end{lpic}
+\end{wrapfigure}
+
+\begin{thm}{Exercise}\label{ex:pent}
+Let $\triangle ABC$ be a nondegenerate triangle.
+Assume there is a point $D\in [BC]$ 
+such that $(AD)$ bisects $\angle BAC$ and $BA\z=AD\z=DC$.
+Find the angles of $\triangle ABC$. 
+\end{thm}
+
+
+\begin{thm}{Exercise}\label{ex:|3sum|}
+Show that 
+$$|\measuredangle A B C|+ |\measuredangle  B C A| + |\measuredangle  C A B| = \pi.$$
+for any $\triangle ABC$ in the Euclidean plane.
+\end{thm} 
+
+}
+
+\begin{wrapfigure}[5]{o}{30mm}
+\begin{lpic}[t(-6mm),b(0mm),r(0mm),l(0mm)]{pics/right-isos(1)}
+\lbl[t]{3,0;$A$}
+\lbl[br]{15,10;$B$}
+\lbl[t]{28,0;$C$}
+\lbl[br]{28,19;$D$}
+\end{lpic}
+\end{wrapfigure}
+
+\begin{thm}{Exercise}\label{ex:right-isos}
+Let $\triangle ABC$ be an isosceles nondegenerate triangle with base $[AC]$.
+Consider the point $D$ on the extension of the side $[AB]$ 
+ such that $AB=BD$.
+Show that $\angle ACD$ is right.
+\end{thm}
+
+
+\section*{Transversal property}
+\addtocontents{toc}{Transversal property.}
+
+If a line $t$ intersects each line $\ell$ and $m$ at one point
+then we say that $t$ is a \index{transversal}\emph{transversal} to $\ell$ and $m$.
+On the diagram below, line $(CB)$ is a transversal 
+to $(AB)$ and $(CD)$.
+
+\begin{thm}{Transversal property}\label{thm:parallel-2} 
+In the Euclidean plane,
+$(AB)\parallel(C D)$ if and only if 
+$$2\cdot(\measuredangle A B C+\measuredangle B C D)\equiv 0.
+\eqlbl{A B C + B C D}$$ 
+Equivalently 
+$$\measuredangle A B C+\measuredangle B C D\equiv 0\ \ \text{or}\ \  \measuredangle A B C+\measuredangle B C D\equiv \pi;$$ 
+in the first case 
+$A$ and $D$ lie on the opposite sides of $(BC)$,
+in the second case  
+$A$ and $D$ lie on the same sides of $(BC)$.
+\end{thm}
+
+\begin{wrapfigure}[6]{o}{22mm}
+\begin{lpic}[t(-7mm),b(0mm),r(0mm),l(0mm)]{pics/parallel-2(1)}
+\lbl[b]{14.5,18;$A$}
+\lbl[b]{3,15;$B$}
+\lbl[b]{18,7.5;$C$}
+\lbl[b]{3,3;$D$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Proof.} 
+If $(AB)\nparallel(C D)$
+then there is $Z\in (AB)\cap(C D)$ 
+and $\triangle BCZ$ is nondegenerate.
+
+According to Theorem~\ref{thm:3sum}, 
+\begin{align*}
+\measuredangle ZBC+\measuredangle BCZ&\equiv \pi-\measuredangle CZB\not\equiv 
+\\&\not\equiv 0\ \text{nor}\ \pi.
+\end{align*}
+Note that $2\cdot\measuredangle Z B C\equiv 2\cdot\measuredangle A B C$ and $2\cdot\measuredangle B C Z\equiv2\cdot\measuredangle B C D$.
+Therefore 
+$$2\cdot(\measuredangle A B C+\measuredangle B C D)\equiv 2\cdot\measuredangle Z B C +2\cdot\measuredangle B C Z\not\equiv 0;$$
+that is, \ref{A B C + B C D} does not hold.
+
+Note that if the points $A$, $B$ and $C$ are fixed,
+the identity \ref{A B C + B C D} uniquely defines the line $(C D)$.
+Therefore by Theorem~\ref{thm:parallel}, if $(AB)\parallel(C D)$ then equality \ref{A B C + B C D} holds.
+
+Applying Proposition~\ref{prop:half-plane},
+we get the last part of Transversal property.
+\qeds
+
+
+\begin{thm}{Exercise}\label{ex:smililar+parallel}
+Let $\triangle ABC$ be a nondegenerate triangle.
+Assume $B'$ and $C'$ are points on sides $[AB]$ and $[AC]$ such that $(B'C')\parallel(BC)$.
+Show that $\triangle ABC\sim\triangle AB'C'$.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:trisection}
+Trisect given segment with ruler and compass.
+\end{thm}
+
+
+
+
+
+\section*{Parallelograms}
+\addtocontents{toc}{Parallelograms.}
+
+A \index{quadrilateral}\emph{quadrilateral} is an ordered quadruple of distinct points in the plane.
+A quadrilateral formed by quadruple $(A,B,C,D)$ will be called {}\emph{quadrilateral $ABCD$}.
+
+Given a quadrilateral $ABCD$,
+the four segments $[AB]$, $[BC]$, $[CD]$ and $[DA]$ are called \index{side!side of quadrilateral}\emph{sides of $ABCD$};
+the remaining two segments $[AC]$ and $[BD]$ are called \index{diagonal!diagonals of quadrilateral}\emph{diagonals of $ABCD$}.
+
+
+\begin{thm}{Exercise}\label{ex:quadrilateral}
+Show for any quadrilateral $ABCD$  in the Euclidean plane we have
+$$\measuredangle ABC+\measuredangle BCD+\measuredangle CDA+\measuredangle DAB\equiv 0.$$
+
+\end{thm}
+
+A quadrilateral $ABCD$ in the Euclidean plane is called \index{quadrilateral!nondegenerate quadrilateral}\emph{nondegenerate} if any three points from $A,B,C,D$ do not lie on one line.
+
+The nondegenerate quadrilateral $ABCD$ is called \index{parallelogram}\emph{parallelogram}
+if $(AB)\z\parallel (CD)$ and $(BC)\z\parallel (DA)$.
+
+{
+
+\begin{wrapfigure}{o}{32mm}
+\begin{lpic}[t(-3mm),b(0mm),r(1mm),l(1mm)]{pics/parallelogram(1)}
+\lbl[bl]{29,27.5;$A$}
+\lbl[br]{7,27.5;$B$}
+\lbl[t]{-.5,.5;$C$}
+\lbl[t]{22.5,.5;$D$}
+\end{lpic}
+\end{wrapfigure}
+
+\begin{thm}{Lemma}\label{lem:parallelogram}
+If $A B C D$ is a parallelogram then
+\begin{enumerate}[(a)]
+\item $\measuredangle D A B= \measuredangle B C D$;
+\item $AB=CD$.
+\end{enumerate}
+\end{thm}
+
+\parit{Proof.}
+Since $(AB)\parallel (CD)$,
+the points $C$ and $D$ lie on the same side from $(AB)$.
+Whence $\angle ABD$ and $\angle ABC$ have the same sign.
+
+}
+
+Analogously, 
+$\angle CBD$ and $\angle CBA$ have the same sign. 
+
+Since $\measuredangle ABC\equiv -\measuredangle CBA$,
+we get that the angles $\angle DBA$ and $\angle DBC$ have opposite signs; 
+that is,  $A$ and $C$ lie on the opposite sides of $(BD)$.
+
+According to Transversal property (\ref{thm:parallel-2}), 
+$$\measuredangle B D C\equiv -\measuredangle DBA\ \ \text{and}\ \ 
+ \measuredangle DBC \z\equiv -\measuredangle BDA.$$
+By angle-side-angle condition
+$\triangle A B D\cong \triangle C D B$.
+Which implies both statements in the lemma.
+\qeds
+
+\begin{thm}{Exercise}\label{ex:romb}
+Assume $ABCD$ is a nondegenerate quadrilateral such that
+$AB=CD=BC=DA$.
+Show that $ABCD$ is a parallelogram.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:diad-par}
+Show that diagonals of parallelogram intersect each other at the midpoint.
+\end{thm}
+
+
+\section*{Method of coordinates}
+\addtocontents{toc}{Method of coordinates.}
+
+The following exercise is important;
+it shows that our axiomatic definition agrees with the model definition described on page \pageref{def:d_2}.
+
+\begin{wrapfigure}{o}{33mm}
+\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(4mm)]{pics/PQlm(1)}
+\lbl[br]{12,10;$P$}
+\lbl[bl]{23,22;$Q$}
+\lbl[t]{11,0;$P_\ell$}
+\lbl[t]{22,0;$Q_\ell$}
+\lbl[r]{1,8;$P_m$}
+\lbl[r]{1,21;$Q_m$}
+\lbl[t]{28,1;$\ell$}
+\lbl[b]{1,28,90;$m$}
+\end{lpic}
+\end{wrapfigure}
+
+\begin{thm}{Exercise}\label{ex:coordinates} 
+Let $\ell$ and $m$ be perpendicular lines in the Euclidean plane.
+Given a points $P$  denote by $P_\ell$ and $P_m$ the foot points of $P$ on $\ell$ and $m$ correspondingly.
+
+\begin{enumerate}[(a)]
+\item Show that for any $X\in \ell$ and $Y\in m$ there is unique point $P$ such that $P_\ell=X$ and $P_m=Y$.
+\end{enumerate}
+
+\begin{enumerate}[(a)]\addtocounter{enumi}{1}
+\item
+Show that 
+$PQ^2=P_\ell Q_\ell^2+P_mQ_m^2$
+for any pair of points $P$ and $Q$.
+\end{enumerate}
+
+\begin{enumerate}[(a)]\addtocounter{enumi}{2}
+\item Conclude that Euclidean plane is isometric to $(\mathbb{R}^2,d_2)$ defined on page \pageref{def:d_2}.
+\end{enumerate}
+\end{thm}
+
+Once this exercise solved, we can apply 
+the method of coordinates
+to solve any problem in Euclidean plane geometry.
+Using this method is often considered as a bad style,
+but it is powerful.
+
+\begin{thm}{Exercise}\label{ex:abc}
+Use the Exercise~\ref{ex:coordinates},
+to give an alternative proof of Theorem~\ref{thm:abc} in the Euclidean plane.
+
+That is, prove that given real numbers $a$, $b$ and $c$ such that 
+ $$0<a\le b\le c\le a+c,$$
+there is a triangle $\triangle ABC$
+such that $a=BC$, $b=CA$ and $c=AB$.
+\end{thm} 
+
+\begin{thm}{Exercise}\label{ex:line-coord}
+Let $(x_A,y_A)$ and $(x_B,y_B)$ be the coordinates of distinct points $A$ and $B$ in the Euclidean plane.
+Show that the line $(AB)$ is formed by points with coordinates $(x,y)$ which satisfy the following equation
+\[(x-x_A)\cdot (y_B-y_A)=(y-y_A)\cdot (x_B-x_A).\]
+
+\end{thm}
+
+
+
+
+
+
+
+
+
+
+\addtocontents{toc}{\protect\end{quote}}

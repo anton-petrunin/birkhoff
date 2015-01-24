@@ -1,0 +1,655 @@
+\chapter{Perpendicular lines}\label{chap:perp}
+\addtocontents{toc}{\protect\begin{quote}}
+
+\section*{Right, acute and obtuse angles}
+\addtocontents{toc}{Right, acute and obtuse angles.}
+
+\begin{itemize}
+\item If $|\measuredangle A O B|=\tfrac\pi2$, we say that the angle $\angle A O B$ is  \index{angle!right angle}\emph{right};
+%\item If $\measuredangle A O B\ne\pm\tfrac\pi2$, we say that the angle  $\angle A O B$ is  \index{angle!oblique angle}\emph{oblique};
+\item If $|\measuredangle A O B|<\tfrac\pi2$, we say that the angle  $\angle A O B$ is  
+\index{angle!acute angle}\index{acute!acute angle}\emph{acute};
+\item If $|\measuredangle A O B|>\tfrac\pi2$, we say that the angle $\angle A O B$ is  \index{angle!obtuse angle}\index{obtuse!obtuse angle}\emph{obtuse}.
+\end{itemize}
+
+\begin{wrapfigure}{o}{30mm}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(2mm)]{pics/perp-notation(1)}
+\end{lpic}
+\end{wrapfigure}
+
+On the diagrams,
+the right angles will be marked with a little square, 
+as shown.
+
+If $\angle A O B$ is right,
+we say also
+that $[O A)$ is \index{perpendicular}\emph{perpendicular} to $[O B)$; 
+it will be written as \index{$\perp$}$[O A)\z\perp [O B)$.
+
+From Theorem~\ref{thm:straight-angle}, 
+it follows that two lines $(O A)$
+ and $(O B)$ are appropriately called {}\emph{perpendicular}, if  $[O A)\z\perp [O B)$.
+In this case we also write $(O A)\z\perp (O B)$.
+
+
+
+\begin{thm}{Exercise}\label{ex:acute-obtuce}
+Assume point $O$ lies between $A$ and $B$.
+Show that for any point $X$ the angle 
+$\angle XOA$ is acute if and only if 
+$\angle XOB$ is obtuse.
+\end{thm}
+
+
+
+\section*{Perpendicular bisector}
+\addtocontents{toc}{Perpendicular bisector.}
+
+Assume $M$ is the midpoint of the segment $[AB]$;
+that is, $M\in(A B)$ and $A M \z=  M B$.
+
+
+The line $\ell$ passing through $M$ and perpendicular to $(AB)$
+ is called \index{perpendicular bisector}\emph{perpendicular bisector} to the segment $[AB]$. 
+
+\begin{thm}{Theorem}\label{thm:perp-bisect}
+Given distinct points $A$ and $B$,
+all points equidistant from $A$ and $B$ and no
+others lie on the perpendicular bisector to $[A B]$.
+\end{thm}
+
+\begin{wrapfigure}{o}{40mm}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/perp-bisect(1)}
+\lbl[t]{2,7;$A$}
+\lbl[t]{38,7;$B$}
+\lbl[tl]{20.5,7;$M$}
+\lbl[lb]{20.5,36;$P$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Proof.} Let $M$ be the midpoint of $[A B]$.
+
+Assume $P A= P B$ and $P\ne M$.
+According to SSS-condition (\ref{thm:SSS}),
+$\triangle A M P \z\cong\triangle B M P$.
+Whence 
+$$\measuredangle A M P\equiv\pm \measuredangle B M P.$$   
+Since $A\not=B$, we have ``$-$'' in the above formula.
+Further,
+\begin{align*}
+\pi
+&\equiv
+\measuredangle A M B
+\equiv
+\\
+&\equiv\measuredangle A M P+\measuredangle P M B
+\equiv
+\\
+&\equiv
+2\cdot \measuredangle A M P.
+\end{align*}
+That is, $\measuredangle A M P
+\equiv
+\pm
+\tfrac\pi2$ and therefore $P$ lies on the perpendicular bisector.
+
+
+To prove converse, suppose $P\ne M$ is any point in the perpendicular bisector to $[A B]$.
+Then $\measuredangle A M P\equiv\pm \tfrac\pi2$, $\measuredangle B M P\equiv\pm \tfrac\pi2$ and
+$A M\z=B M$.
+Therefore $\triangle A M P\cong \triangle B M P$;
+in particular $A P= B P$.\qeds
+
+
+\begin{thm}{Exercise}\label{ex:pbisec-side}
+Let $\ell$ be the perpendicular bisector to the segment $[A B]$ and $X$ be an arbitrary point on the plane.
+
+Show that 
+$AX<BX$ if and only if $X$ and $A$ lie on the same side from  $\ell$.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:side-angle}
+Let $\triangle ABC$ be nondegenerate.
+Show that $AB>BC$ if and only if $|\measuredangle BCA|>|\measuredangle ABC|$.  
+\end{thm}
+
+
+
+\section*{Uniqueness of perpendicular}
+\addtocontents{toc}{Uniqueness of perpendicular.}
+
+\begin{thm}{Theorem}\label{perp:ex+un}
+There is one and only one line  which pass through a given point $P$ and perpendicular to a given line $\ell$.
+\end{thm}
+
+\begin{wrapfigure}{o}{36mm}
+\begin{lpic}[t(-0mm),b(-3mm),r(0mm),l(0mm)]{pics/perp(1)}
+\lbl[rb]{1.5,18;$A$}
+\lbl[lb]{33,18;$B$}
+\lbl[t]{15,16;$\ell$}
+\lbl[lb]{23,33;$P$}
+\lbl[lt]{23,2;$P'$}
+\end{lpic}
+\end{wrapfigure}
+
+According to the above theorem, 
+there is unique point $Q\in\ell$ such that $(QP)\perp\ell$.
+This point $Q$ is called \index{foot point}\emph{foot point} of $P$ on $\ell$. 
+
+\parit{Proof.} 
+If $P\in\ell$ then both, existence and uniqueness, follow from Axiom~\ref{def:birkhoff-axioms:2}.
+
+\parit{Existence for $P\not\in\ell$.} 
+Let $A$, $B$ be two distinct points of $\ell$. 
+Choose $P'$ so that $AP'\z=AP$ and $\measuredangle P' A B\equiv -\measuredangle P A B$.
+According to Axiom~\ref{def:birkhoff-axioms:3}, $\triangle A P' B\z\cong\triangle A P B$.
+Therefore $A P= A P'$ and $B P= B P'$.
+
+\begin{wrapfigure}{i}{36mm}
+\begin{lpic}[t(-0mm),b(-3mm),r(0mm),l(0mm)]{pics/perp-unique(1)}
+\lbl[rb]{2,16;$Q$}
+\lbl[lb]{33,16;$Q'$}
+\lbl[lb]{18.5,28;$P$}
+\lbl[lt]{18.5,2;$P'$}
+\lbl[t]{14,14;$\ell$}
+\lbl[b]{17,20,90;$m$}
+\end{lpic}
+\end{wrapfigure}
+
+According to Theorem~\ref{thm:perp-bisect}, $A$ and $B$ lie on perpendicular bisector to $[P P']$.
+In particular $(P P')\perp (A B)=\ell$.
+
+\parit{Uniqueness for $P\not\in\ell$.} 
+From above we can choose a point $P'$ in such a way that $\ell$ forms the perpendicular bisector to $[PP']$.
+
+Assume $m\perp \ell$ and $m\ni P$.
+Then $m$ a perpendicular bisector to some segment $[Q Q']$ of $\ell$;
+in particular, $P Q= P Q'$.
+
+Since $\ell$ is perpendicular bisector to $[P P']$,
+we get $PQ= P'Q$ and $PQ' = P'Q'$.
+Therefore 
+$$P' Q=P Q=P Q'= P' Q'.$$
+By Theorem~\ref{thm:perp-bisect}, 
+$P'$ lies on the perpendicular bisector to $[QQ']$ which is $m$.
+By Axiom~\ref{def:birkhoff-axioms:1}, $m=(P P')$.\qeds
+
+
+\section*{Reflection}
+\addtocontents{toc}{Reflection.}
+
+Assume a point $P$ and a line $(AB)$ are given.
+To find the \index{reflection}\emph{reflection} $P'$ of $P$   in $(AB)$,
+one drops a perpendicular from $P$ onto $(AB)$, 
+and continues it to the same distance on the other side.
+
+According to Theorem~\ref{perp:ex+un}, $P'$ is uniquely determined by $P$.
+
+Note that $P=P'$ if and only if $P\in(AB)$.
+
+\begin{thm}{Proposition}\label{prop:reflection}
+Assume $P'$ is a reflection of the point $P$ in the line $(AB)$.
+Then $AP'=AP$ and if 
+$A\ne P$ then
+$\measuredangle BAP'\equiv -\measuredangle BAP$.
+\end{thm}
+
+\parit{Proof.} 
+Note that if $P\in (AB)$ then $P\z=P'$ 
+and by Corollary~\ref{cor:degenerate=pi} $\measuredangle BAP=0$ or $\pi$.
+Hence the statement follows.
+
+{
+\begin{wrapfigure}{o}{43mm}
+\begin{lpic}[t(-2mm),b(8mm),r(0mm),l(0mm)]{pics/reflection(1)}
+\lbl[rb]{2,24;$A$}
+\lbl[lb]{39,24;$B$}
+\lbl[lb]{24.5,43.5;$P$}
+\lbl[lt]{24.5,2.5;$P'$}
+\end{lpic}
+\end{wrapfigure}
+
+If $P\notin (AB)$, then $P'\ne P$.
+By construction, the line $(AB)$ is perpendicular bisector of $[PP']$.
+Therefore, according to Theorem~\ref{thm:perp-bisect}, $AP'=AP$ and $BP'\z=BP$.
+In particular, 
+$\triangle ABP'\cong \triangle ABP$.
+Therefore $\measuredangle BAP'\equiv \pm \measuredangle BAP$.
+
+Since $P'\ne P$ and $AP'=AP$,
+we get $\measuredangle BAP'\ne \measuredangle BAP$.
+That is, we are left with the case
+$$\measuredangle BAP'\equiv -\measuredangle BAP.$$
+\qedsf
+}
+
+\begin{thm}{Corollary}\label{cor:reflection+angle}
+Reflection through the line is a motion of the plane. 
+More over if $\triangle P'Q'R'$ is the reflection of $\triangle PQR$
+then 
+$$\measuredangle Q'P'R'\equiv -\measuredangle QPR.$$
+
+\end{thm}
+
+
+\parit{Proof.}
+From the construction it follows that 
+the composition of two reflections through 
+the same line, say $(AB)$,
+is the identity map.
+In particular reflection is a bijection.
+
+Assume $P'$, $Q'$ and $R'$
+denote the reflections of the points
+$P$, $Q$ and $R$ through $(AB)$. 
+Let us first show that
+$$P'Q'=PQ\ \ \ \text{and}\ \ \ \measuredangle AP'Q'\equiv-\measuredangle APQ.
+\eqlbl{eq:P'Q'=PQ}$$
+
+Without loss of generality we may assume that the points $P$ and $Q$ are distinct from $A$ and $B$.
+By Proposition~\ref{prop:reflection},
+\begin{align*}
+\measuredangle BAP'&\equiv -\measuredangle BAP,
+&
+\measuredangle BAQ'&\equiv -\measuredangle BAQ,
+\\
+AP'&=AP,
+&
+AQ'&=AQ.
+\end{align*}
+It follows that
+$\measuredangle P'AQ'\equiv -\measuredangle PAQ$.
+Therefore
+$\triangle P'AQ'\cong\triangle PAQ$
+and \ref{eq:P'Q'=PQ} follows.
+
+Repeating the same argument for $P$ and $R$,
+we get 
+$$\measuredangle AP'R'\equiv-\measuredangle APR.$$
+Subtracting the second identity in  \ref{eq:P'Q'=PQ},
+we get 
+$$\measuredangle Q'P'R'\equiv-\measuredangle QPR.$$
+\qedsf
+
+\begin{thm}{Exercise}\label{ex:3-reflections}
+Show that any motion of the plane can be presented as a 
+composition of at most three reflections.
+\end{thm}
+
+Applying the exercise above 
+and Corollary~\ref{cor:reflection+angle},
+we can divide the motions of the plane in two types, 
+\index{direct motion}\emph{direct} 
+and 
+\index{indirect motion}\emph{indirect motions}.
+The motion $m$ is direct if 
+$$\measuredangle Q'P'R'= \measuredangle QPR$$ 
+for any $\triangle PQR$ and $P'=m(P)$, $Q'=m(Q)$ and $R'=m(R)$;
+if instead we have 
+$$\measuredangle Q'P'R'\equiv -\measuredangle QPR$$ 
+for any $\triangle PQR$ 
+then the motion $m$ is called indirect.
+
+\begin{thm}{Exercise}\label{ex:2-reflections}
+Let $X$ and $Y$ be the reflections of $P$ 
+through the lines $(AB)$ and $(BC)$ correspondingly.
+Show that 
+$$\measuredangle XBY\equiv 2\cdot \measuredangle ABC.$$
+
+\end{thm}
+
+\section*{Perpendicular is shortest}
+\addtocontents{toc}{Perpendicular is shortest.}
+
+\begin{thm}{Lemma}\label{lem:perp<oblique}
+Assume $Q$ is the foot point of $P$ on line $\ell$.
+Then 
+$$PX>PQ$$
+for any point $X$ on $\ell$ distinct from $Q$. 
+\end{thm}
+
+\begin{wrapfigure}[14]{o}{20mm}
+\begin{lpic}[t(-2mm),b(0mm),r(0mm),l(0mm)]{pics/oblique(1)}
+\lbl[tl]{17,21;$X$}
+\lbl[t]{1,21;$\ell$}
+\lbl[lb]{7.5,43;$P$}
+\lbl[tl]{7,21;$Q$}
+\lbl[lt]{7.5,2;$P'$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Proof.}
+If $P\in \ell$ then the result follows since  $PQ=0$.
+Further we assume that $P\notin \ell$.
+
+Let $P'$ be the reflection of $P$ in $\ell$.
+Note that $Q$ is the midpoint of $[PP']$
+and $\ell$ is perpendicular bisector of $[PP']$.
+Therefore
+$$PX=P'X\ \ \text{and}\ \ PQ=P'Q=\tfrac12\cdot PP'$$
+
+Note that $\ell$ meets $[PP']$ at the point $Q$ only.
+Therefore by the triangle inequality and  Exercise~\ref{ex:degenerate-trig},
+$$PX+P'X>PP'.$$
+Hence the result follows.
+\qeds
+
+\begin{thm}{Exercise}\label{ex:obtuce}
+Assume $\angle ABC$ is right or obtuse.
+Show that $$BC>AB.$$
+
+\end{thm}
+
+
+
+\section*{Angle bisectors}
+\addtocontents{toc}{Angle bisectors.}
+
+If $\measuredangle A B X\equiv-\measuredangle C B X$ then we say that line $(BX)$ {}\emph{bisects angle} $\angle ABC$,
+or line $(BX)$ is the \index{bisector}\emph{bisector} of $\angle ABC$.
+If $\measuredangle A B X\equiv\pi-\measuredangle C B X$ then the line $(BX)$ is called \index{bisector!external bisector}\emph{external bisector} of $\angle ABC$.
+
+Note that bisector and external bisector are uniquely defined by the angle.
+
+\begin{wrapfigure}[6]{o}{39mm}
+\begin{lpic}[t(-5mm),b(0mm),r(0mm),l(1mm)]{pics/bisectors(1)}
+\lbl[tr]{30,5;$A$}
+\lbl[rb]{9,10;$B$}
+\lbl[br]{31,29;$C$}
+\lbl[b]{30,16.7,17.5;bisector}
+\lbl[b]{6.3,26.5,-72.5;external} 
+\lbl[t]{4.7,26,-72.5;bisector}
+\end{lpic}
+\end{wrapfigure}
+
+
+
+Note that if $\measuredangle ABA'=\pi$;
+that is, if $B$ lies between $A$ and $A'$,
+then bisector of $\angle ABC$ is the external bisector of $\angle A' B C$ and the other way around.
+
+
+
+
+\begin{thm}{Exercise}\label{ex:perp-bisectors}
+Show that for any angle, its bisector and external bisector are perpendicular.
+\end{thm}
+
+
+\begin{thm}{Lemma}\label{lem:angle-bisect-dist}
+Assume $\measuredangle ABC\not\equiv\pi$ nor $0$.
+Given angle $\angle ABC$ and a point $X$, 
+consider foot points $Y$ and $Z$ of $X$ on $(AB)$ and $(BC)$.
+
+Then $X Y=X Z$ if and only if $X$ lies on the bisector or external bisector of $\angle ABC$.
+\end{thm}
+
+
+\parit{Proof.}
+Let $Y'$ and $Z'$ be the reflections of $X$ through $(AB)$ and $(BC)$ correspondingly.
+By Proposition~\ref{prop:reflection},
+$XB=Y'B=Z'B$.
+
+\begin{wrapfigure}[8]{o}{26mm}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(1mm)]{pics/angle-bisect-lemma(1)}
+\lbl[bl]{23,11;$A$}
+\lbl[br]{1,18;$B$}
+\lbl[rb]{21,36;$C$}
+\lbl[t]{13.5,26;$Z$}
+\lbl[l]{21,22;$X$}
+\lbl[br]{16,13;$Y$}
+\lbl[t]{14,0;$Y'$}
+\lbl[rb]{8,35;$Z'$}
+\end{lpic}
+\end{wrapfigure}
+
+Note that
+$$
+XY'=2\cdot XY
+\ \ \text{and}\  \ 
+XZ'=2\cdot XZ.
+$$
+Applying SSS and then SAS congruence conditions, we get
+$$\begin{aligned}
+XY&=XZ
+\\
+&\Updownarrow
+\\
+XY'&=XZ'
+\\
+&\Updownarrow
+\\
+\triangle BXY'&\cong\triangle BXZ'
+\\
+&\Updownarrow
+\\
+\measuredangle XBY'&\equiv \pm \measuredangle BXZ'.
+\end{aligned}
+\eqlbl{eq:iff-chain}$$
+According to Proposition~\ref{prop:reflection}, 
+\begin{align*}
+\measuredangle XBA&\equiv -\measuredangle Y'BA,
+\\
+\measuredangle XBC&\equiv -\measuredangle Z'BC.
+\end{align*}
+Therefore 
+$$2\cdot \measuredangle XBA\equiv \measuredangle XBY'
+\ \ \text{and}\ \ 
+2\cdot \measuredangle XBC\equiv -XBZ'.$$
+That is, we can continue the chain of equivalence conditions \ref{eq:iff-chain} the following way
+$$\measuredangle XBY'\equiv \pm \measuredangle BXZ' \ \ \iff\ \ 2\cdot \measuredangle XBA \equiv\pm 2\cdot \measuredangle XBC.$$
+
+
+Since $(AB)\ne(BC)$, we have
+$$2\cdot \measuredangle XBA\not\equiv 2\cdot \measuredangle XBC$$
+(compare to Exercise~\ref{ex:ABCO-line}).
+Therefore
+$$XY=XZ
+\ \ \iff\ \  2\cdot \measuredangle XBA \equiv- 2\cdot \measuredangle XBC.$$
+
+The last identity means either
+\begin{align*}
+\measuredangle XBA+\measuredangle XBC&\equiv 0
+\intertext{or}
+\measuredangle XBA+\measuredangle XBC&\equiv \pi.
+\end{align*}
+Hence the result follows.
+\qeds
+
+
+\section*{Circles}
+\addtocontents{toc}{Circles.}
+
+Given a positive real number $r$ and a point $O$,
+the set $\Gamma$ of all points on distant $r$ from $O$ is called \index{circle}\emph{circle} 
+with \index{radius}\emph{radius} $r$ and  \index{center}\emph{center} $O$.
+
+We say that a point $P$ lies {}\emph{inside} $\Gamma$ if $OP<r$ 
+and if $OP>r$, we say that $P$ lies {}\emph{outside} $\Gamma$.
+
+\begin{thm}{Exercise}\label{ex:inside-outside}
+Let $\Gamma$ be a circle and $P\notin \Gamma$.
+Assume a line $\ell$ is passing through the point $P$
+intersects $\Gamma$ at two distinct points $X$ and $Y$.
+Show that $P$ is inside $\Gamma$ if and only if $P$ lies between $X$ and $Y$.
+\end{thm}
+
+
+A segment between two points on $\Gamma$ is called \index{chord}\emph{chord} of $\Gamma$.
+A chord passing through the center is called \index{diameter}\emph{diameter}.
+%A segment between a point on the circle and its center is called \index{radius}\emph{radius}.
+
+\begin{thm}{Exercise}\label{ex:chord-perp}
+Assume two distinct circles $\Gamma$ and $\Gamma'$ have a common chord $[A B]$.
+Show that the line between centers of $\Gamma$ and $\Gamma'$ forms a perpendicular bisector to $[A B]$.
+\end{thm}
+
+
+
+\begin{thm}{Lemma}\label{lem:line-circle}
+A line and a circle can have at most two points of intersection.
+\end{thm}
+
+\begin{center}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/line-circ(1)}
+\lbl[t]{2,3.5;$A$}
+\lbl[t]{23,3.5;$B$}
+\lbl[t]{63,3.5;$C$}
+\lbl[b]{29,6.5;$\ell$}
+\lbl[b]{12,17,90;$m$}
+\lbl[b]{42,17,90;$n$}
+\end{lpic}
+\end{center}
+
+\parit{Proof.} Assume $A$, $B$ and $C$ are distinct points which lie on a line $\ell$ and a circle $\Gamma$ with center $O$.
+
+Then $OA=OB=OC$; in particular $O$ lies on the perpendicular bisectors 
+$m$ and $n$ to $[A B]$ and $[B C]$ correspondingly.
+
+Note that the midpoints of $[AB]$ and $[BC]$ are distinct.
+Therefore $m$ and $n$ are distinct.
+The later contradicts the uniqueness of perpendicular (Theorem~\ref{perp:ex+un}).
+\qeds
+
+\begin{thm}{Exercise}\label{ex:two-circ}
+Show that two distinct circles can have at most two points of intersection.
+\end{thm}
+
+In consequence of the above lemma, 
+a line $\ell$ and a circle $\Gamma$ might have 2, 1 or 0 points of intersections.
+In the first case the line is called \index{secant line}\emph{secant line}, in the second case it is \index{tangent line}\emph{tangent line};
+if $P$ is the only point of intersection of $\ell$ and $\Gamma$,
+we say that \index{tangent line}\emph{$\ell$ is tangent to $\Gamma$ at $P$}. 
+
+Similarly, according Exercise \ref{ex:two-circ},
+two circles might have 2, 1 or 0 points of intersections.
+If $P$ is the only point of intersection of circles $\Gamma$ and $\Gamma'$,
+we say that \index{tangent circles}\emph{$\Gamma$ is tangent to $\Gamma$ at $P$}. 
+
+\begin{thm}{Lemma}\label{lem:tangent}
+Let $\ell$ be a line and $\Gamma$ be a circle with center $O$.
+Assume $P$ is a common point of $\ell$ and $\Gamma$. 
+Then $\ell$ is tangent to $\Gamma$ at $P$ if and only if $(PO)\perp \ell$.
+\end{thm}
+
+\parit{Proof.}
+Let $Q$ be the foot point of $O$ on $\ell$.
+
+Assume $P\ne Q$.
+Denote by $P'$ the reflection of $P$ through $(OQ)$.
+
+Note that $P'\in\ell$ and $(OQ)$ is perpendicular bisector of $[PP']$.
+Therefore $OP=OP'$.
+Hence $P,P'\in \Gamma\cap \ell$;
+that is, $\ell$ is  secant to $\Gamma$.
+
+If $P=Q$ then according to Lemma~\ref{lem:perp<oblique},
+$OP<OX$ for any point $X\in \ell$ distinct from $P$.
+Hence $P$ is the only point in the intersection $\Gamma\cap\ell$;
+that is, $\ell$ is tangent to $\Gamma$ at $P$. 
+\qeds
+
+\begin{thm}{Exercise}\label{ex:tangent-circles}
+Let $\Gamma$ and $\Gamma'$ be two distinct circles with centers at $O$ and $O'$ correspondingly. 
+Assume $\Gamma$ and $\Gamma'$ intersect at point $P$.
+Show that $\Gamma$ is tangent to $\Gamma'$ if and only if $O$, $O'$ and $P$ lie on one line.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:tangent-circles-2}
+Let $\Gamma$ and $\Gamma'$ be two distinct circles with centers at $O$ and $O'$ and radii $r$ and $r'$.
+
+\begin{enumerate}[(a)]
+\item\label{ex:tangent-circles-2:a} Show that $\Gamma$ is tangent to $\Gamma'$ if and only if $$OO'=r+r'\ \ \text{or}\ \  OO'=|r-r'|.$$
+\item \label{ex:tangent-circles-2:b}
+Show that $\Gamma$ intersects $\Gamma'$ if and only if
+$$|r-r'|\le OO'\le r+r'.$$
+\end{enumerate}
+
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:tangent-circles-3}
+ Assume three circles  intersect at two points.
+ Show that the centers of these circles lie on one line.
+\end{thm}
+
+\section*{Geometric constructions}
+\addtocontents{toc}{Geometric constructions.}
+
+The \index{ruler-and-compass construction}\emph{ruler-and-compass constructions} in the plane is the construction of points, lines, and circles using only an idealized ruler and compass.
+These construction problems provide a valuable source of exercises in geometry 
+which we will use further in the book.
+
+The idealized ruler can be used only to draw a line through given two points.
+The idealized compass can be used only to draw a \index{circle}\emph{circle} with given center and radius.
+That is, given three points $A$, $B$ and $O$ 
+we can draw the set of all points on distant $AB$ from $O$.
+We may also mark new points in the plane
+as well as on the constructed lines, circles 
+and their intersections (assuming that such points exist).
+
+We can also look at the different set of instruments.
+For example,
+we may only use the ruler or
+we may invent a new instrument, 
+say an instrument which produce midpoint for given two points.
+
+As an example, let us consider the following problem:
+
+\begin{thm}{Construction of midpoint}
+Construct the midpoint of the given segment $[AB]$.
+\end{thm}
+
+\begin{wrapfigure}{o}{31mm}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(1mm)]{pics/constr-perp-bisect(1)}
+\lbl[b]{4.3,28.5;$A$}
+\lbl[t]{26,12;$B$}
+\lbl[t]{26,35;$P$}
+\lbl[b]{4.5,5;$Q$}
+\lbl[b]{14.5,22.5;$M$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Construction.}
+\begin{enumerate}[1.]
+\item Construct the circle 
+with center at $A$ 
+which is passing through $B$.
+\item Construct the circle 
+with center at $B$ 
+which is passing through $A$.
+\item Mark both points of intersection of these circles, label them by $P$ and $Q$.
+\item Draw the line $(PQ)$.
+\item Mark the point of intersection of $(PQ)$ and $[AB]$; this is the midpoint.
+\end{enumerate}
+
+\medskip
+
+Typically, you need to proof that the construction produce what was expected. Here is a proof for the example above.
+
+\parit{Proof.}
+According to Theorem~\ref{thm:perp-bisect}, $(PQ)$ is the perpendicular bisector to $[AB]$.
+Therefore $M=(AB)\cap(PQ)$ is the midpoint of $[AB]$. 
+\qeds
+
+\begin{thm}{Exercise}\label{ex:construction-perpendicular}
+Make a ruler-and-compass construction of the line though the given point which is perpendicular to the given line.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:center}
+Make a ruler-and-compass construction of the center of given circle.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:tangent}
+Make a ruler-and-compass construction of the lines tangent to the given circle which pass through given point.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:tangent-circle}
+Given two circles $\Gamma_1$ and $\Gamma_2$ and a segment $[AB]$
+make a ruler-and-compass construction of a circle of radius $AB$ 
+which is tangent to each circle $\Gamma_1$ and $\Gamma_2$.
+\end{thm}
+
+
+
+
+\addtocontents{toc}{\protect\end{quote}}

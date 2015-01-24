@@ -1,0 +1,514 @@
+\chapter{Half-planes}\label{chap:half-planes}
+\addtocontents{toc}{\protect\begin{quote}}
+
+This chapter contains long proofs of intuitively evident statements.
+It is okay to skip it, but make sure you know definitions of positive/negative angles and that your intuition agrees with \ref{prop:half-plane}, \ref{thm:pasch}, \ref{thm:signs-of-triug} and \ref{thm:abc}.
+
+ 
+                            
+\section*{Sign of angle}
+\addtocontents{toc}{Sign of angle.}
+
+\begin{itemize}
+\item The angle $\angle A O B$ is called \index{angle!positive angle}\emph{positive} 
+if $0<\measuredangle A O B<\pi$;
+\item The  angle $\angle A O B$ is called \index{angle!negative angle}\emph{negative} 
+if $\measuredangle A O B<0$.
+\end{itemize}
+
+Note that according to the above definitions the straight angle as well as zero angle 
+are neither positive nor negative.
+
+\begin{thm}{Exercise}\label{ex:AOB+<=>BOA-}
+Show that $\angle A O B$ is positive if and only if $\angle B O A$ is negative.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:straight-sign}
+Let $\angle AOB$ be a straight angle.
+Show that $\angle AOX$ is positive 
+if and only if $\angle BOX$ is negative.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:PP(PN)}
+Assume that the angles $\angle AOB$ and $\angle BOC$ are positive. 
+Show that
+$$\measuredangle AOB+\measuredangle BOC+\measuredangle COA=2\cdot\pi.$$
+if $\angle COA$ is positive
+and
+$$\measuredangle AOB+\measuredangle BOC+\measuredangle COA=0.$$
+if $\angle COA$ is negative.
+\end{thm}
+
+
+
+
+\section*{Intermediate value theorem}
+\addtocontents{toc}{Intermediate value theorem.}
+
+
+\begin{thm}{Intermediate value theorem}\label{thm:intermidiate}
+Let $f\:[a,b]\to \mathbb{R}$ be a continuous function.
+Assume 
+$f(a)$ and $f(b)$ have the opposite signs
+then $f(t_0)=0$ for some $t_0\in[a,b]$.
+\end{thm}
+
+\begin{wrapfigure}{o}{37mm}
+\begin{lpic}[t(-3mm),b(0mm),r(0mm),l(5mm)]{pics/ivt(1)}
+\lbl[r]{2,20;$f(b)$}
+\lbl[r]{2,1;$f(a)$}
+\lbl[tl]{11,8;$t_0$}
+\lbl[t]{27.5,8;$b$}
+\lbl[b]{7.5,10.5;$a$}
+\end{lpic}
+\end{wrapfigure}
+
+
+
+The Intermediate value theorem is assumed to be known;
+it should be covered in any calculus course.
+We will use the following corollary.
+
+\begin{thm}{Corollary}\label{cor:intermidiate}
+Assume that for any $t\z\in [0,1]$ we have three points in the plane  $O_t$, $A_t$ and $B_t$ such that 
+\begin{enumerate}[(a)]
+\item Each  function $t\mapsto O_t$, $t\mapsto A_t$ and $t\mapsto B_t$ is continuous.
+\end{enumerate}
+
+\begin{enumerate}[(a)]\addtocounter{enumi}{1}
+\item For for any $t\in [0,1]$, the points $O_t$, $A_t$ and $B_t$ do not lie on one line.  
+\end{enumerate}
+Then the angles $\angle A_0O_0B_0$ 
+and $\angle A_1O_1B_1$ have the same sign.
+\end{thm}
+
+\parit{Proof.}
+Consider the function 
+$f(t)=\measuredangle A_tO_tB_t$.
+
+Since 
+the points $O_t$, $A_t$ and $B_t$ do not lie on one line,
+Theorem~\ref{thm:straight-angle} implies that $f(t)=\measuredangle A_tO_tB_t\ne 0$ nor $\pi$ for any $t\in[0,1]$.
+
+Therefore by Axiom~\ref{def:birkhoff-axioms:2c} and Exercise~\ref{ex:comp+cont},
+$f$ is a continuous function.
+
+Further,
+by Intermediate value theorem, $f(0)$ and $f(1)$ have the same sign;
+hence the result follows.
+\qeds
+
+\section*{Same sign lemmas}
+\addtocontents{toc}{Same sign lemmas.}
+
+\begin{thm}{Lemma}\label{lem:signs}
+Assume $Q'\in [PQ)$ and $Q'\z\ne P$.
+Then for any $X\z\notin (PQ)$ the angles 
+$\angle PQX$ and $\angle PQ'X$ have the same sign. 
+\end{thm}
+
+\begin{wrapfigure}{o}{33mm}
+\begin{lpic}[t(-4mm),b(1mm),r(0mm),l(0mm)]{pics/PQX(1)}
+\lbl[t]{30,1;$P$}
+\lbl[t]{18,1;$Q'$}
+\lbl[t]{1,1;$Q$}
+\lbl[r]{11,27;$X$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Proof.}
+By Proposition~\ref{prop:point-on-half-line},
+for any $t\in [0,1]$ there is unique point $Q_t\in[PQ)$ 
+such that 
+\[PQ_t=  (1-t)\cdot PQ+t\cdot PQ'.\]
+Note that the map $t\mapsto Q_t$ is continuous,
+\begin{align*}
+Q_0&=Q,
+&
+Q_1&=Q'
+\end{align*}
+and for any $t\in [0,1]$, 
+we have $P\z\ne Q_t$.
+
+Applying Corollary \ref{cor:intermidiate},
+for $P_t=P$, $Q_t$ and $X_t=X$, we get that
+$\angle PQX$ has the same sign as $\angle PQ'X$.
+\qeds
+
+\begin{thm}{Lemma}\label{lem:signsXY}
+Assume $[XY]$ does not intersect $(PQ)$ 
+then the angles $\angle PQX$ and $\angle PQY$ 
+have the same sign.
+\end{thm}
+
+\begin{wrapfigure}{o}{34mm}
+\begin{lpic}[t(-2mm),b(0mm),r(0mm),l(0mm)]{pics/PQY(1)}
+\lbl[t]{30,1;$P$}
+\lbl[t]{1,1;$Q$}
+\lbl[r]{11,27;$X$}
+\lbl[l]{24,13;$Y$}
+\end{lpic}
+\end{wrapfigure}
+
+The proof is nearly identical to the one above.
+
+\parit{Proof.}
+According to Proposition~\ref{prop:point-on-half-line},
+for any $t\in [0,1]$ there is a point  $X_t\in[XY]$ 
+such that 
+\[XX_t= t\cdot XY.\]
+Note that the map $t\mapsto X_t$ is continuous,
+$X_0=X$ and $X_1=Y$ and for any $t\in [0,1]$, 
+we have $Y_t\notin(QP)$.
+
+Applying Corollary \ref{cor:intermidiate},
+for $P_t\z=P$, $Q_t\z=Q$ and $X_t$, we get that
+$\angle PQX$ has the same sign as $\angle PQY$.
+\qeds
+
+
+
+\section*{Half-planes}
+\addtocontents{toc}{Half-planes.}
+
+\begin{thm}{Proposition}\label{prop:half-plane}
+The complement of a line $(PQ)$ in the plane 
+can be presented in the unique way as a union of two disjoint subsets 
+called \index{half-plane}\emph{half-planes}
+such that 
+\begin{enumerate}[(a)]
+\item\label{prop:half-plane:angle} Two points $X,Y\notin(PQ)$ lie in the same half-plane if and only if the angles $\angle PQX$ and $\angle PQY$ have the same sign.
+\item\label{prop:half-plane:intersect} Two points $X,Y\notin(PQ)$ lie in the same half-plane if and only if $[XY]$ does not intersect  $(PQ)$.
+\end{enumerate}
+
+\end{thm}
+
+
+Further we say that $X$ and $Y$ lie on 
+{}\emph{one side from} $(PQ)$ if they lie in one of the half-planes of $(PQ)$ and we say that  $P$ and $Q$ lie on the {}\emph{opposite sides from} $\ell$ if they lie in the different half-planes of $\ell$.
+
+\begin{wrapfigure}{o}{34mm}
+\begin{lpic}[t(-4mm),b(-3mm),r(0mm),l(0mm)]{pics/PQY-3(1)}
+\lbl[t]{30,8;$P$}
+\lbl[t]{1,8;$Q$}
+\lbl[]{22,15;$\mathcal{H}_+$}
+\lbl[]{22,5;$\mathcal{H}_-$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Proof.}
+Let us denote by $\mathcal{H}_+$ (correspondingly $\mathcal{H}_-$) 
+the set of points $X$ in the plane such that
+$\angle PQX$ is positive (correspondingly negative).
+
+According to Theorem~\ref{thm:straight-angle},
+$X\notin (PQ)$ if and only if 
+$\measuredangle PQX\z\ne 0$ nor $\pi$.
+Therefore $\mathcal{H}_+$ and $\mathcal{H}_-$
+give the unique subdivision of the complement of $(PQ)$ which satisfies property (\ref{prop:half-plane:angle}).
+
+\medskip
+
+Now let us prove that the 
+this subdivision depends only on the line $(PQ)$;
+that is, if $(P'Q')=(PQ)$ and $X,Y\notin (PQ)$
+then the angles 
+$\angle PQX$ and $\angle PQY$ have the same sign
+if and only if the angles $\angle P'Q'X$ and $\angle P'Q'Y$ have the same sign.
+
+Applying Exercise~\ref{ex:straight-sign},
+we can assume that $P=P'$ and $Q'\z\in [PQ)$.
+It remains to apply Lemma \ref{lem:signs}.
+
+\parit{(\ref{prop:half-plane:intersect}).}
+Assume $[XY]$ intersects $(PQ)$.
+Since the subdivision depends only on the line $(PQ)$, 
+we can assume that $Q\in[XY]$.
+In this case, by Exercise~\ref{ex:straight-sign},
+the angles $\angle PQX$ and $\angle PQY$ have opposite signs.
+
+\begin{wrapfigure}[6]{o}{25mm}
+\begin{lpic}[t(-0mm),b(-5mm),r(0mm),l(0mm)]{pics/vert-intersect(1)}
+\lbl[l]{10.5,13.5;$O$}
+\lbl[tr]{20,3;$A$}
+\lbl[t]{7.5,8.5;$B$}
+\lbl[b]{6,17.5;$A'$}
+\lbl[tl]{19,24;$B'$}
+\end{lpic}
+\end{wrapfigure}
+
+Now assume $[XY]$ does not intersect $(PQ)$.
+In this case, by Lemma~\ref{lem:signsXY},
+$\angle PQX$ and $\angle PQY$ have the same sign.
+\qeds
+
+
+\begin{thm}{Exercise}\label{ex:vert-intersect}
+Assume that the angles $\angle AOB$ and $\angle A'OB'$ are vertical.
+Show that the line $(AB)$ does not intersect the segment $[A'B']$.
+\end{thm}
+
+
+Consider triangle $\triangle ABC$.
+The segments $[AB]$, $[BC]$ and $[CA]$ are called 
+\index{side!side of the triangle}\emph{sides of the triangle}.
+
+The following theorem is a corollary of Proposition~\ref{prop:half-plane}.
+
+\begin{thm}{Pasch's theorem}\label{thm:pasch}
+Assume line $\ell$ does not pass through any vertex a triangle.
+Then it intersects either two or zero sides of the triangle.
+\end{thm}
+
+\begin{thm}{Signs of angles of triangle}\label{thm:signs-of-triug}
+In any nondegenerate triangle $\triangle ABC$
+the angles $\angle ABC$, $\angle BCA$ and $\angle CAB$ have the same sign. 
+\end{thm}
+
+\begin{wrapfigure}{o}{33mm}
+\begin{lpic}[t(-0mm),b(1mm),r(0mm),l(0mm)]{pics/PQX-2(1)}
+\lbl[t]{30,1;$Z$}
+\lbl[t]{18,1;$A$}
+\lbl[t]{2,1;$B$}
+\lbl[b]{12.5,28.5;$C$}
+\end{lpic}
+\end{wrapfigure}
+
+
+\parit{Proof.}
+Choose a point $Z\in (AB)$ so that $A$ lies between $B$ and $Z$.
+
+
+According to Lemma~\ref{lem:signs},
+the angles $\angle ZBC$ and $\angle ZAC$ have the same sign.
+
+Note that $\measuredangle ABC=\measuredangle ZBC$
+and 
+$$\measuredangle ZAC+\measuredangle CAB\equiv \pi.$$
+Therefore $\angle CAB$ has the same sign as $\angle ZAC$
+which in turn has the same sign as $\measuredangle ABC\z=\measuredangle ZBC$.
+
+
+Repeating the same argument for $\angle BCA$ and $\angle CAB$,
+we get the result.
+\qeds
+
+\begin{thm}{Exercise}\label{ex:signs-PXQ-PYQ}
+Show that two points $X,Y\notin(PQ)$ lie on the same side from $(PQ)$
+if and only if the angles $\angle PXQ$ and $\angle PYQ$ have the same sign.
+\end{thm}
+
+\medskip
+
+\begin{multicols}{2}
+\begin{center}
+\begin{lpic}[t(-3mm),b(0mm),r(0mm),l(0mm)]{pics/PQY-1(1)}
+\lbl[t]{30,1;$P$}
+\lbl[t]{1,1;$Q$}
+\lbl[b]{12,28.5;$X$}
+\lbl[rb]{17,12;$Y$}
+\end{lpic}
+\end{center}
+\columnbreak
+\begin{center}
+\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/PQY-2(1)}
+\lbl[t]{30,1;$B$}
+\lbl[t]{1,1;$A$}
+\lbl[lb]{23,15;$A'$}
+\lbl[rb]{8,19;$B'$}
+\lbl[b]{12,28.5;$C$}
+\end{lpic} 
+\end{center}
+\end{multicols}
+
+\begin{thm}{Exercise}\label{ex:chevinas}
+Let $\triangle ABC$ be a nondegenerate triangle,
+$A'\in[BC]$  and 
+$B'\in [AC]$.
+Show that the segments $[AA']$ and $[BB']$ intersect.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:Z}
+Assume that the points $X$ and $Y$ lie on the opposite sides from the line $(PQ)$.
+Show that the half-line $[PX)$ does not interests $[QY)$. 
+\end{thm}
+
+\begin{thm}{Advanced exercise}\label{ex:angle-measures}
+Note that the following quantity 
+$$\tilde\measuredangle ABC=\left[
+\begin{aligned}
+&\pi&&\text{if}&\measuredangle ABC&=\pi
+\\
+-&\measuredangle ABC&&\text{if}&\measuredangle ABC&<\pi
+\end{aligned}
+\right.$$
+can serve as the angle measure; 
+that is, the axioms hold if one changes everywhere $\measuredangle$ to $\tilde\measuredangle$.
+
+Show that $\measuredangle$ and $\tilde\measuredangle$ are the only possible angle measures on the plane. 
+
+Show that without Axiom \ref{def:birkhoff-axioms:2c}, this is not longer true.
+\end{thm}
+ 
+
+
+\section*{Triangle with the given sides}
+\addtocontents{toc}{Triangle with the given sides.}
+
+Consider a triangle $\triangle ABC$.
+Set 
+\begin{align*}
+a&=BC,
+&
+b&=CA,
+&
+c&=AB.
+\end{align*}
+Without loss of generality we may assume that 
+\[a\le b \le c.\]
+Then all three triangle inequalities for $\triangle ABC$
+hold if and only if 
+\[c\le a+b.\]
+The following theorem states that this is the only restriction on $a$, $b$ and $c$.
+
+
+
+\begin{thm}{Theorem}\label{thm:abc}
+Assume that $0<a\le b\le c\le a+b$.
+Then there is a triangle $\triangle ABC$ such that $a=BC$, $b=CA$ and $c=AB$.
+\end{thm}
+
+The proof requires some preparation.
+
+\begin{wrapfigure}{o}{25mm}
+\begin{lpic}[t(2mm),b(0mm),r(0mm),l(0mm)]{pics/sbr(1)}
+\lbl[t]{2,0;$A$}
+\lbl[t]{22,0;$C$}
+\lbl[b]{12.5,29;$B$}
+\lbl[w]{12.5,2.5;$\,s(\beta,r)\,$}
+\lbl[W]{7.5,13;$r$}
+\lbl[W]{19,13;$r$}
+\lbl[t]{12.5,20;$\beta$}
+\end{lpic}
+\end{wrapfigure}
+
+Assume $r>0$ and $\pi>\beta>0$.
+Consider triangle $\triangle ABC$ such that 
+$AB=BC=r$ and $\measuredangle ABC=\beta$.
+The existence of such triangle follow from Axiom~\ref{def:birkhoff-axioms:2a} and Proposition~\ref{prop:point-on-half-line}.
+
+Note that according to Axiom~\ref{def:birkhoff-axioms:3}, 
+the values
+$\beta$ and $r$ define the triangle up to congruence.
+In particular the distance $AC$ depends only on $\beta$ and $r$.
+Set 
+$$s(\beta,r)\df AC.$$
+
+\begin{thm}{Proposition}\label{prop:f(r,a)}
+Given $r>0$ and $\epsilon>0$ there is $\delta>0$ such that
+if $0<\beta<\delta$ then $s(r,\beta)<\epsilon$.
+\end{thm}
+
+
+\parit{Proof.}
+Fix two point $A$ and $B$ such that $AB=r$.
+
+Choose a point $X$ such that $\measuredangle ABX$ is positive.
+Let $Y\in [AX)$ be the point such that $AY=\tfrac\epsilon8$;
+it exists by Proposition~\ref{prop:point-on-half-line}.
+
+\begin{wrapfigure}{o}{33mm}
+\begin{lpic}[t(-2mm),b(0mm),r(0mm),l(0mm)]{pics/fra(1)}
+\lbl[t]{22.5,0;$A$}
+\lbl[t]{2.5,0;$B$}
+\lbl[b]{20,14;$C$}
+\lbl[tl]{25,7;$D$}
+\lbl[tl]{30,8;$Z$}
+\lbl[r]{28,20;$Y$}
+\lbl[rb]{30,27;$X$}
+\lbl[w]{15,2;$\,r\,$}
+\lbl[w]{13,8,30;$\,r\,$}
+\end{lpic}
+\end{wrapfigure}
+
+Note that $X$ and $Y$ lie on the same side from $(AB)$;
+therefore $\angle ABY$ is positive. 
+Set $\delta=\measuredangle ABY$.
+
+Assume $0<\beta<\delta$,
+$\measuredangle ABC=\beta$
+and $BC\z=r$.
+
+
+Applying Axiom~\ref{def:birkhoff-axioms:2a},
+we can choose a half-line $[BZ)$ such that $\measuredangle ABZ=\tfrac12\cdot \beta$.
+Note that $A$ and $Y$ lie on the opposite sides from $(BZ)$.
+Therefore $(BZ)$ intersects $[AY]$;
+denote by $D$ the point of intersection.
+
+Since $D\in (BZ)$, we get $\measuredangle ABD=\tfrac \beta2$ or $\tfrac\beta2-\pi$.
+The later is impossible since $D$ and $Y$ lie on the same side from $(AB)$.
+Therefore 
+$$\measuredangle ABD=\measuredangle DBC=\tfrac \beta2.$$
+
+By Axiom~\ref{def:birkhoff-axioms:3},
+$\triangle ABD\cong \triangle CBD$.
+In particular
+\begin{align*}
+AC&\le AD+DC=
+\\
+&=2\cdot AD\le 
+\\
+&\le 2\cdot AY=
+\\
+&=\tfrac\epsilon4.
+\end{align*}
+Hence the result follows.
+\qeds
+
+\begin{thm}{Corollary}\label{cor:C-cont}
+Fix a real number $r>0$ 
+and two distinct points $A$ and $B$.
+Then for 
+any real number $\beta\in [0,\pi]$,
+there is unique point $C_\beta$ such that $BC_\beta=r$
+and $\measuredangle ABC_\beta=\beta$.
+Moreover, the map $\beta\mapsto C_\beta$ 
+is a continuous map from $[0,\pi]$ to the plane.
+\end{thm}
+
+\parit{Proof.}
+The existence and uniqueness of $C_\beta$ follows from Axiom~\ref{def:birkhoff-axioms:2a} and Proposition~\ref{prop:point-on-half-line}.
+
+Note that if $\beta_1\ne\beta_2$ then
+$$C_{\beta_1}C_{\beta_2}=s(r,|\beta_1-\beta_2|).$$
+
+Therefore Proposition~\ref{prop:f(r,a)} implies that  the map $\beta\mapsto C_\beta$ is continuous.
+\qeds
+
+
+
+
+
+\parit{Proof of Theorem~\ref{thm:abc}.}
+Fix points $A$ and $B$ such that $AB=c$.
+Given $\beta\in [0,\pi]$,
+denote by $C_\beta$ the point in the plane such that $BC_\beta=a$ and $\measuredangle ABC=\beta$.
+
+According to Corollary~\ref{cor:C-cont},
+the map
+$\beta\mapsto C_\beta$ is a continuous.
+Therefore function $b(\beta)=AC_\beta$ is continuous
+(formally it follows from Exercise~\ref{ex:dist-cont} and Exercise~\ref{ex:comp+cont}).
+
+Note that $b(0)=c-a$ and $b(\pi)=c+a$.
+Since $c-a\le b\le c+a$,
+by Intermediate value theorem (\ref{thm:intermidiate})
+there is $\beta_0\in[0,\pi]$ such that
+$b(\beta_0)=b$.
+Hence the result follows. 
+\qeds
+
+
+
+\addtocontents{toc}{\protect\end{quote}}

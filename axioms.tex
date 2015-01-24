@@ -1,0 +1,304 @@
+\part*{Euclidean geometry}
+\addtocontents{toc}{\protect\begin{center}}
+\addtocontents{toc}{\large{\bf Euclidean geometry}}
+\addtocontents{toc}{\protect\end{center}}
+
+\chapter{The Axioms}\label{chap:axioms}
+\addtocontents{toc}{\protect\begin{quote}}
+
+
+
+
+
+\section*{The Axioms}
+\addtocontents{toc}{The Axioms.}\label{def:birkhoff-axioms} 
+
+Summarizing the above discussion, let us give an axiomatic system of the Euclidean plane.
+This set of axioms is very close to the one given by Birkhoff in \cite{birkhoff}.
+
+
+\begin{enumerate}[I.]
+\item\label{def:birkhoff-axioms:0} The \index{plane!Euclidean plane}\index{Euclidean plane}\emph{Euclidean plane} is a metric space with at least two points.
+
+
+\item\label{def:birkhoff-axioms:1} There is one and only one line, 
+that contains any two given distinct points $P$ and $Q$ in the Euclidean plane.
+
+\item\label{def:birkhoff-axioms:2} 
+Any angle $\angle AOB$ in the Euclidean plane 
+defines a real number in the interval $(-\pi,\pi]$.
+This number is called \index{angle measure}\emph{angle measure of $\angle AOB$}
+and denoted by $\measuredangle A O B$.
+It satisfies the following conditions:
+\begin{enumerate}
+\item\label{def:birkhoff-axioms:2a} Given a half-line $[O A)$ and $\alpha\in(-\pi,\pi]$ there is unique  half-line $[O B)$ such that $\measuredangle A O B= \alpha$
+\item\label{def:birkhoff-axioms:2b} For any points $A$, $B$ and $C$ distinct from $O$ we have
+$$\measuredangle A O B+\measuredangle B O C\equiv \measuredangle A O C.$$
+\item\label{def:birkhoff-axioms:2c} 
+The function 
+$$\measuredangle\:(A,O,B)\mapsto\measuredangle A O B$$
+is continuous at any triple of points $(A,O,B)$
+such that $O\ne A$ and $O\ne B$ and $\measuredangle A O B\ne\pi$.
+
+\end{enumerate}
+
+\item\label{def:birkhoff-axioms:3}  In the Euclidean plane, we have
+$\triangle A B C\cong\triangle A' B' C'$
+if and only if 
+\begin{align*}
+A' B'&=A B, & A' C'&= A C, &&\text{and}
+&\measuredangle C' A' B'&=\pm\measuredangle C A B.
+\end{align*}
+\item\label{def:birkhoff-axioms:4}
+If for two triangles 
+$\triangle ABC$, 
+$\triangle AB'C'$ in the Euclidean plane
+and $k>0$ we have
+\begin{align*}
+B'&\in [AB),
+& C'&\in [AC)
+\\
+AB'&=k\cdot AB,&
+AC'&=k\cdot AC
+\end{align*}
+then
+\begin{align*}
+B'C'&=k\cdot BC,&
+\measuredangle ABC&=\measuredangle AB'C'
+&&\text{and}
+&
+\measuredangle ACB&=\measuredangle AC'B'.
+\end{align*}
+\end{enumerate}
+
+
+From now on,  
+we can use no information about Euclidean plane which does not follow from the five axioms above.
+
+\section*{Lines and half-lines}
+\addtocontents{toc}{Lines and half-lines.}
+
+\begin{thm}{Proposition}\label{lem:line-line}
+Any two distinct lines intersect at most at one point.
+\end{thm}
+
+\parit{Proof.}
+Assume two lines $\ell$ and $m$ intersect at two distinct points $P$ and $Q$.
+Applying Axiom~\ref{def:birkhoff-axioms:1}, we get $\ell=m$.
+\qeds
+
+\begin{thm}{Exercise}\label{ex:[OA)=[OA')}
+Suppose $A'\in[OA)$ and $A'\not=O$ show that 
+\[[O A)\z=[O A').\]
+
+\end{thm}
+
+\begin{thm}{Proposition}\label{prop:point-on-half-line}
+Given $r\ge 0$ and a half-line $[O A)$ there is unique $A'\in [O A)$  such that $O A'=r$.
+\end{thm}
+
+\parit{Proof.}
+According to definition of half-line, 
+there is an isometry 
+$$f\:[O A)\to [0,\infty),$$
+such that $f(O)=0$.
+By the definition of isometry, $O A'=f(A')$ for any $A'\z\in [O A)$.
+Thus, $O A'=r$ if and only if $f(A')=r$.
+
+Since isometry has to be bijective, the statement follows.
+\qeds
+
+\section*{Zero angle}
+\addtocontents{toc}{Zero angle.}
+
+\begin{thm}{Proposition}\label{lem:AOA=0}
+$\measuredangle A O A= 0$ for any $A\not=O$.
+\end{thm}
+
+\parit{Proof.}
+According to Axiom~\ref{def:birkhoff-axioms:2b},
+$$\measuredangle A O A
++
+\measuredangle A O A 
+\equiv
+\measuredangle A O A.$$
+Subtract  $\measuredangle A O A$ from both sides, we get 
+$\measuredangle A O A \equiv 0$.
+Hence $\measuredangle A O A \z= 0$.
+\qeds
+
+\begin{thm}{Exercise}\label{ex:2.4} 
+Assume $\measuredangle A O B= 0$.
+Show that $[OA)=[OB)$.
+\end{thm}
+
+
+\begin{thm}{Proposition}\label{lem:AOB+BOA=0}
+For any $A$ and $B$ distinct from $O$,
+we have 
+$$\measuredangle A O B\equiv-\measuredangle B O A.$$
+
+\end{thm}
+
+\parit{Proof.}
+According to Axiom~\ref{def:birkhoff-axioms:2b},
+$$\measuredangle A O B+\measuredangle B O A \equiv\measuredangle A O A$$
+By Proposition~\ref{lem:AOA=0} $\measuredangle A O A=0$.
+Hence the result follows.
+\qeds
+
+\section*{Straight angle}
+\addtocontents{toc}{Straight angle.}
+
+If $\measuredangle A O B=\pi$,
+we say that $\angle A O B$ is a 
+\index{angle!straight angle}\emph{straight angle}.
+Note that by Proposition~\ref{lem:AOB+BOA=0}, 
+if $\angle A O B$ is a straight angle 
+then so is $\angle B O A$.
+
+We say that point $O$ \index{between}\emph{lies between} points $A$ and $B$ if $O\not= A$, $O\not= B$ and $O\in[A B]$.
+
+\begin{thm}{Theorem}\label{thm:straight-angle}
+The angle $\angle A O B$ is straight 
+if and only if $O$ 
+\index{between}\emph{lies between} $A$ and $B$.
+\end{thm}
+
+\begin{wrapfigure}[3]{o}{40mm}
+\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/AOB(1)}
+\lbl[t]{6,0;$B$}
+\lbl[t]{19,0;$O$}
+\lbl[t]{31,0;$A$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Proof.}
+By Proposition~\ref{prop:point-on-half-line},  we may assume that
+$O A = O B = 1$.
+
+\parit{}($\Leftarrow$).
+Assume $O$  
+lies between $A$ and $B$.
+Let  $\alpha=\measuredangle A O B$.
+
+Applying Axiom~\ref{def:birkhoff-axioms:2a},
+we get a half-line $[OA')$ such that $\alpha\z=\measuredangle B O A'$.
+By Proposition~\ref{prop:point-on-half-line}, we can assume that $OA'=1$.
+According to Axiom~\ref{def:birkhoff-axioms:3},
+\[\triangle AOB\z\cong\triangle BOA'.\]
+Denote by $h$ the corresponding motion of the plane;
+i.e., $h$ is a motion such that $h(A)=B$, $h(O)=O$ and $h(B)=A'$. 
+
+Then $(A'B)=h(AB)\ni h(O)=O$.
+Therefore both lines $(AB)$ and $(A'B)$, 
+ contain $B$ and $O$.
+By Axiom~\ref{def:birkhoff-axioms:1}, $(AB)=(A'B)$.
+
+By the definition of the line,
+$(AB)$ contains exactly two points $A$ and $B$ on distance $1$ from $O$.
+Since $OA'=1$ and $A'\ne B$, we get $A=A'$.
+
+By Axiom \ref{def:birkhoff-axioms:2b} and Proposition~\ref{lem:AOA=0}, we get
+\begin{align*}
+2\cdot\alpha&\equiv
+\measuredangle AOB+\measuredangle BOA'\equiv
+\\
+&\equiv\measuredangle AOB+\measuredangle BOA\equiv
+\\
+&\equiv\measuredangle AOA\equiv
+\\
+&\equiv 0
+\end{align*}
+Therefore, by Exercise~\ref{ex:2a=0}, $\alpha$ is either $0$ or $\pi$.
+
+Since $[OA)\ne [OB)$,  
+we have $\alpha\ne 0$, see Exercise~\ref{ex:2.4}.
+Therefore $\alpha=\pi$.
+
+
+\parit{}($\Rightarrow$).
+Suppose that $\measuredangle A O B\equiv \pi$.
+Consider line $(OA)$ and choose point $B'$ on $(OA)$ so that $O$ lies between $A$ and $B'$.
+
+From above, we have $\measuredangle AOB'=\pi$.
+Applying Axiom~\ref{def:birkhoff-axioms:2a}, 
+we get $[O B)\z=[O B')$.
+In particular, $O$ lies between $A$ and $B$.
+\qeds 
+
+A triangle $\triangle ABC$ is called 
+\index{triangle!degenerate triangle}\emph{degenerate}
+if $A$, $B$ and $C$ lie on one line.
+The following corollary is just a reformulation of Theorem~\ref{thm:straight-angle}.
+
+\begin{thm}{Corollary}\label{cor:degenerate=pi}
+A triangle is degenerate if and only if one of its angles is equal to $\pi$ or $0$.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:lineAOB}
+Show that three distinct points $A$, $O$ and $B$ lie on one line if and only if 
+$$2\cdot \measuredangle AOB\equiv 0.$$ 
+
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:ABCO-line}
+Let $A$, $B$ and $C$ be three points distinct from $O$.
+Show that $B$, $O$ and $C$ lie on one line if and only if
+$$2\cdot \measuredangle AOB\equiv 2\cdot \measuredangle AOC.$$ 
+
+\end{thm}
+
+\section*{Vertical angles}
+\addtocontents{toc}{Vertical angles.}
+
+\begin{wrapfigure}[7]{o}{28mm}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/vertical(1)}
+\lbl[b]{0,4;$A$}
+\lbl[br]{22,22;$A'$}
+\lbl[t]{13.5,11.5;$O$}
+\lbl[tr]{4,20;$B$}
+\lbl[bl]{24,6;$B'$}
+\end{lpic}
+\end{wrapfigure}
+
+A pair of angles $\angle AOB$ and $\angle A'OB'$ 
+is called \index{angle!vertical angles}\index{vertical angles}\emph{vertical}
+if the point $O$ 
+lies between $A$ and $A'$ 
+and between $B$ and $B'$ at the same time.
+
+
+\begin{thm}{Proposition}\label{prop:vert}
+The vertical angles have equal measures.
+\end{thm}
+
+\parit{Proof.}
+Assume that the angles $\angle AOB$ and $\angle A'OB'$ are vertical.
+
+Note that the angles $\angle AOA'$ and $\angle BOB'$ are straight.
+Therefore $\measuredangle AOA'=\measuredangle BOB'=\pi$.
+It follows that
+\begin{align*}
+0&=\measuredangle AOA'-\measuredangle BOB'\equiv
+\\
+&\equiv 
+\measuredangle AOB+\measuredangle BOA'-\measuredangle BOA'-\measuredangle A'OB'
+\equiv
+\\
+&\equiv\measuredangle AOB-\measuredangle A'OB'.
+\end{align*}
+Hence the result follows.
+\qeds
+
+\begin{thm}{Exercise}\label{ex:O-mid-AB+CD}
+Assume $O$ 
+is the midpoint for both segments 
+$[A B]$ and $[C D]$.
+Prove that $A C= B D$. 
+\end{thm}
+
+
+
+
+\addtocontents{toc}{\protect\end{quote}}

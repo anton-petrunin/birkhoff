@@ -1,0 +1,334 @@
+\chapter{Triangle geometry}\label{chap:triangle}
+\addtocontents{toc}{\protect\begin{quote}}
+
+Triangle geometry studies of the properties of triangles, including associated centers and circles.
+
+In this chapter we discuss the most basic results in triangle geometry, mostly to show that we develop enough machinery to prove things.
+
+\section*{Circumcircle and circumcenter}
+\addtocontents{toc}{Circumcircle and circumcenter.}
+
+\begin{thm}{Theorem}\label{thm:circumcenter}
+Perpendicular bisectors to the sides of any nondegenerate triangle  in the Euclidean plane intersect at one point.
+\end{thm}
+
+The point of the intersection of the perpendicular bisectors is called circumcenter.
+It is the center of the circumcircle of the triangle;
+that is, the circle which pass through all three vertices of the triangle.
+The circumcenter of the triangle is usually denoted by $O$.
+
+\begin{wrapfigure}{o}{25mm}
+\begin{lpic}[t(-5mm),b(0mm),r(0mm),l(0mm)]{pics/circum(1)}
+\lbl[tr]{0.5,0;$B$}
+\lbl[b]{14,33;$A$}
+\lbl[tl]{23,0;$C$}
+\lbl[t]{11.5,12;$O$}
+\lbl[b]{3,19,-30;$\ell$}
+\lbl[b]{22,18,17;$m$}
+\end{lpic}
+\end{wrapfigure}
+
+
+\parit{Proof.}
+Let $\triangle ABC$ be nondegenerate.
+Let $\ell$ and $m$ be perpendicular bisectors to sides $[AB]$ and $[AC]$ correspondingly.
+
+Assume $\ell$ and $m$ intersect,
+let $O=\ell\cap n$.
+
+Let us Theorem \ref{thm:perp-bisect}.
+Since $O\in\ell$, we have $OA=OB$ and since $O\in m$, we have $OA=OC$.
+It follows that $OB\z=OC$;
+that is, $O$ lies on the perpendicular bisector to $[B C]$.
+
+It remains to show that $\ell\nparallel m$;
+assume contrary.
+Since
+$\ell\perp(AB)$ and $m\perp (AC)$, we get $(AC)\z\parallel (AB)$ 
+(see Exercise~\ref{ex:perp-perp}).
+Therefore by Theorem \ref{perp:ex+un}, $(AC)=(AB)$;
+that is, $\triangle ABC$ is degenerate, a contradiction.
+\qeds
+
+\begin{thm}{Exercise}\label{ex:unique-cline}
+There is unique circle which pass through vertices of a given nondegenerate triangle in the Euclidean plane. 
+\end{thm}
+
+
+
+
+\section*{Altitudes and orthocenter}
+\addtocontents{toc}{Altitudes and orthocenter.}
+
+An \index{altitude}\emph{altitude} of a triangle is a line through a vertex and perpendicular to the line containing the opposite side.
+The term \index{altitude}\emph{altitude} maybe also used for the distance from the vertex to its foot point on the line containing opposite side.
+
+\begin{thm}{Theorem}\label{thm:orthocenter}
+The three altitudes of any nondegenerate triangle in the Euclidean plane intersect in a single point.
+\end{thm}
+
+The point of intersection of altitudes is called \index{orthocenter}\emph{orthocenter}; 
+it is usually denoted as $H$.
+
+
+\begin{wrapfigure}{o}{28mm}
+\begin{lpic}[t(-2mm),b(0mm),r(-0mm),l(2mm)]{pics/median-triangle(1)}
+\lbl[br]{2,24;$B'$}
+\lbl[tr]{4,12;$A$}
+\lbl[lb]{23,24;$A'$}
+\lbl[tl]{17,12;$B$}
+\lbl[b]{12,24;$C$}
+\lbl[t]{9,0;$C'$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Proof.}
+Let $\triangle A B C$ be nondegenerate.
+
+Consider three lines $\ell\parallel(BC)$ through $A$,
+$m\z\parallel(CA)$ through $B$ and
+$n\parallel(AB)$ through $C$.
+Since $\triangle A B C$ is nondegenerate,
+no pair of the lines $\ell$, $m$ and $n$ is parallel.
+Set $A'=m\cap n$, $B'=n\cap \ell$ and $C'=\ell\cap m$.
+
+Note that $A B A' C$, $B C B' A$ and $C B C' A$ are parallelograms.
+Applying Lemma~\ref{lem:parallelogram} we get that $\triangle ABC$ is the median triangle of $\triangle A' B' C'$;
+that is, $A$, $B$ and $C$ are the midpoints of $[B' C']$, $[C' A']$ and $[A' B']$ correspondingly.
+
+By Exercise \ref{ex:perp-perp},
+$(B' C')\parallel (BC)$,
+the altitudes from $A$ is perpendicular to $[B' C']$ 
+and from above it bisects $[B' C']$.
+
+Whence the altitudes of $\triangle A B C$ 
+are also perpendicular bisectors of the triangle $\triangle A' B' C'$.
+Applying Theorem~\ref{thm:circumcenter}, we get that altitudes of $\triangle ABC$ intersect at one point.
+\qeds
+
+\begin{thm}{Exercise}\label{ex:orthic-4}
+Assume $H$ is the orthocenter of an acute triangle $\triangle A B C$ in the Euclidean plane.
+Show that $A$ is orthocenter of  
+$\triangle H B C$.
+\end{thm}
+
+
+\section*{Medians and centroid}
+\addtocontents{toc}{Medians and centroid.}
+
+A median of a triangle is a segment joining a vertex to the midpoint of the opposing side. 
+
+\begin{thm}{Theorem}\label{thm:centroid}
+The three medians of any nondegenerate triangle in the Euclidean plane intersect in a single point.
+Moreover the point of intersection divides each median in ratio 2:1.
+\end{thm}
+
+The point of intersection of medians is called
+\index{centroid}\emph{centroid}; 
+it is usually denoted by $M$.
+
+\parit{Proof.}
+Consider a nondegenerate triangle $\triangle A B C$.
+Let $[A A']$ and $[B B']$ be its medians.
+
+According to Exercise~\ref{ex:chevinas}, 
+$[A A']$ and $[B B']$ are intersecting. 
+Let us denote by $M$ the point of intersection.
+
+By SAS, $\triangle B' A' C\z\sim \triangle A B C$ and $A' B'=\tfrac12\cdot A B$.
+In particular $\measuredangle A B C\equiv \measuredangle B' A' C$.
+
+Since $A'$ lies between $B$ and $C$,
+we get $\measuredangle BA'B'+\measuredangle B'A'C=\pi$.
+Therefore 
+$$\measuredangle B'A'B+\measuredangle A'BA=\pi.$$
+By Transversal property (\ref{thm:parallel-2}), 
+$(A B)\z\parallel (A' B')$.
+
+\begin{wrapfigure}{o}{28mm}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(1mm)]{pics/medians(1)}
+\lbl[tr]{1,1;$A$}
+\lbl[l]{15,23;$A'$}
+\lbl[t]{24,1;$B$}
+\lbl[r]{3,23;$B'$}
+\lbl[b]{6,45;$C$}
+\lbl[t]{10,13;$M$}
+\end{lpic}
+\end{wrapfigure}
+
+Note that $A'$ and $A$ lie on the opposite sides from $(BB')$.
+Therefore by Transversal property (\ref{thm:parallel-2})
+we get 
+$$\measuredangle B'A'M=\measuredangle BAM.$$
+The same way we get,
+$$\measuredangle A'B'M=\measuredangle ABM.$$
+By AA condition,
+$\triangle A B M\sim\triangle A' B' M$.
+
+Since $A' B'=\tfrac12\cdot A B$, 
+we have
+$$\frac{A' M}{A M}=\frac{B' M}{B M}=\frac12.$$
+In particular $M$ divides medians $[A A']$ and $[B B']$ in ratio 2:1.
+
+Note that $M$ is unique point on $[B B']$ 
+such that $$\frac{B' M}{B M}=\frac12.$$
+Repeating the same argument for vertices $B$ and $C$ we get that all medians
+$[C C']$ and $[B B']$ intersect in $M$.\qeds
+
+
+
+\section*{Bisector of triangle}
+\addtocontents{toc}{Bisector of triangle.}
+
+\begin{thm}{Lemma}\label{lem:bisect-ratio}
+Let $\triangle A B C$ be  a nondegenerate triangle in the Euclidean plane.
+Assume that the bisector of $\angle BAC$ 
+intersects $[BC]$ at the point $D$.
+Then 
+$$\frac{AB}{AC}=\frac{DB}{DC}.
+\eqlbl{bisect-ratio}$$
+
+\end{thm}
+
+\begin{wrapfigure}{o}{28mm}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(1mm)]{pics/angle-bisect-ratio-new(1)}
+\lbl[br]{14,36;$A$}
+\lbl[lt]{24.5,22;$B$}
+\lbl[rt]{0.5,22;$C$}
+\lbl[tl]{14,21.5;$D$}
+\lbl[r]{10,7;$E$}
+\lbl[l]{16,3;$\ell$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Proof.}
+Let $\ell$ be the line through $C$ parallel to $(AB)$.
+Note that $\ell\nparallel (AD)$;
+set $E=\ell\cap (AD)$.
+
+Note that $B$ and $C$ lie on the opposite sides of $(AD)$.
+Therefore by Transversal property (\ref{thm:parallel-2}),
+$$\measuredangle BAD=\measuredangle CED.\eqlbl{eq:<BAD=<CED}$$
+
+Further, note that the angles $\angle ADB$ and $\angle EDC$ are vertical; in particular, by \ref{prop:vert} 
+$$\measuredangle ADB=\measuredangle EDC.$$
+
+By AA-similarity condition, 
+$\triangle ABD\sim \triangle ECD$.
+In particular, 
+$$\frac{AB}{EC}=\frac{DB}{DC}.\eqlbl{eq:AB/EC=DB/DC}$$
+
+Since $(AD)$ bisects $\angle BAC$, we get
+$\measuredangle BAD=\measuredangle DAC$.
+Together with \ref{eq:<BAD=<CED},
+it implies that 
+$\measuredangle CEA=\measuredangle EAC$.
+By Theorem~\ref{thm:isos}, $\triangle ACE$ is isosceles; 
+that is, $$EC=AC.$$
+Together with \ref{eq:AB/EC=DB/DC}, it implies \ref{bisect-ratio}.
+\qeds 
+
+
+
+\begin{thm}{Exercise}\label{ex:ext-disect}
+Prove an analog of Lemma~\ref{lem:bisect-ratio} for the external bisector.
+\end{thm}
+
+
+
+\section*{Incenter}
+\addtocontents{toc}{Incenter.}
+
+\begin{thm}{Theorem}\label{thm:incenter}
+The angle bisectors of any nondegenerate triangle intersect at one point.
+\end{thm}
+
+\begin{wrapfigure}{i}{37mm}
+\begin{lpic}[t(-5mm),b(-2mm),r(0mm),l(3mm)]{pics/triangle-bisector(0.9)}
+\lbl[rt]{2,0;$A$}
+\lbl[lt]{34,0;$B$}
+\lbl[b]{24.5,56.5;$C$}
+\lbl[lb]{21,16;$I$}
+\lbl[t]{19.5,0;$Z$}
+\lbl[lb]{32.5,21;$A'$}
+\lbl[l]{33,16;$X$}
+\lbl[r]{8,18;$Y$}
+\lbl[rb]{11,23;$B'$}
+\end{lpic}
+\end{wrapfigure}
+
+The point of intersection of bisectors is called \index{incenter}\emph{incenter}; 
+it is usually denoted as $I$.
+The point $I$ lies on the same distance from each side,
+it is the center of a circle tangent to each side of triangle.
+This circle is called 
+\index{incircle}\emph{incircle} and its radius is called 
+\index{inradius}\emph{inradius} of the triangle.
+
+\parit{Proof.} 
+Let $\triangle ABC$ be a nondegenerate triangle.
+
+Note that points $B$ and $C$ lie on the opposite sides from the bisector of $\angle BAC$.
+Hence this bisector intersects $[BC]$ at a point, say $A'$.
+
+Analogously, there is $B'\in[AC]$ 
+such the $(BB')$ bisects $\angle ABC$.
+
+Applying Pasch's theorem (\ref{thm:pasch}), twice
+for the triangles $\triangle AA'C$ and $\triangle BB'C$,
+we get that $[AA']$ and $[BB']$ intersect.
+Let us denote by $I$ the point of intersection.
+
+Let $X$, $Y$ and $Z$ be the foot points of $I$ on  $(B C)$, $(C A)$ and $(A B)$ correspondingly.
+Applying Lemma~\ref{lem:angle-bisect-dist}, we get 
+$$I Y=I Z=I X.$$
+From the same lemma we get that $I$ lies on a bisector or exterior bisector of $\angle B C A$.
+
+The line $(C I)$ intersects $[B B']$,
+the points $B$ and $B'$ lie on opposite sides of $(C I)$.
+Therefore  the angles $\angle I C B'$ and $\angle I C B$ have opposite signs.
+Note that $\angle I C A=\angle I C B'$.
+Therefore $(C I)$ can not be exterior bisector of $\angle B C A$.
+Hence the result follows.
+\qeds
+
+\section*{More exercises}
+
+\begin{thm}{Exercise}\label{ex:bisect=median}
+Assume that bisector at one vertex of a nondegenerate triangle bisects the opposite side. 
+Show that the triangle is isosceles.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:bisect=altitude}
+Assume that at one vertex of a nondegenerate triangle bisector coincides with the altitude.
+Show that  the triangle is isosceles.
+\end{thm}
+
+\begin{wrapfigure}[5]{o}{26mm}
+\begin{lpic}[t(-7mm),b(0mm),r(0mm),l(0mm)]{pics/incircle(1)}
+\lbl[rt]{1,1;$A$}
+\lbl[tl]{22,1;$B$}
+\lbl[b]{17,25;$C$}
+\lbl[l]{21,11;$X$}
+\lbl[rb]{8,13;$Y$}
+\lbl[t]{13.5,1;$Z$}
+\end{lpic}
+\end{wrapfigure}
+
+\begin{thm}{Exercise}\label{ex:2x=b+c-a}
+Assume sides $[B C]$, $[C A]$ and $[A B]$ of $\triangle A B C$ are tangent to incircle at $X$, $Y$ and $Z$ correspondingly. 
+Show that 
+$$AY=AZ= \tfrac12\cdot(A B+ A C- B C).$$
+
+\end{thm}
+
+By the definition, the \index{triangle!orthic triangle}\index{orthic triangle}\emph{orthic triangle} is formed by the base points of its altitudes of the given triangle.
+
+\begin{thm}{Exercise}\label{ex:orthic-triangle}
+Prove that orthocenter of an acute triangle coincides with incenter of its orthic triangle.
+
+What should be an analog of this statement for an obtuse triangle?
+\end{thm}
+
+
+\addtocontents{toc}{\protect\end{quote}}

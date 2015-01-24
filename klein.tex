@@ -1,0 +1,451 @@
+\chapter{Klein model}\label{chap:klein}
+\addtocontents{toc}{\protect\begin{quote}}
+
+Klein model is an other model of hyperbolic plane discovered by Beltrami.
+The Klein and Poincar\'e models are saying exactly the same thing but in two different languages. 
+Some problems in hyperbolic geometry
+admit simpler proof using Klein model 
+and
+others have simpler proof in Poincar\'e model.
+Therefore it worth to know both. 
+
+\section*{Special bijection of h-plane to itself}
+\addtocontents{toc}{Special bijection of h-plane to itself.}
+
+Consider the Poincar\'e disc model with absolute at the unit circle $\Omega$ centered at $O$.
+Choose a coordinate system $(x,y)$ on the plane with origin at $O$, 
+so the circle $\Omega$ is described by the equation $x^2+y^2=1$.
+
+\label{pic:stereographic_projection-klein}
+\begin{wrapfigure}{o}{48mm}
+\begin{lpic}[t(-4mm),b(-0mm),r(0mm),l(0mm)]{pics/stereographic_projection-klein(1)}
+\lbl[rb]{23,24;$O$}
+\lbl[br]{31,24;$P$}
+\lbl[tr]{23,41.5;$N$}
+\lbl[br]{23,4;$S$}
+\lbl[lb]{37.5,39;$P'$}
+\lbl[t]{36.5,21;$\hat P$}
+\end{lpic}
+\caption*{The plane through $P$, $O$ and $S$.}
+\end{wrapfigure}
+
+Let us think of our plane $\Pi$ as it lies in the Euclidean space as the $xy$-plane.
+Denote by $\Sigma$ the unit sphere centered at $O$;
+it is described by the equation 
+$$x^2+y^2+z^2=1.$$
+Set $S=(0,0,-1)$ and $N=(0,0,1)$; 
+these are the South and North Poles of $\Sigma$.
+
+Consider stereographic projection $\Pi\to\Sigma$ from $S$;
+given point $P\in\Pi$ denote its image in $\Sigma$ as $P'$.
+Note that the  h-plane is mapped to the North Hemisphere;
+that is, to the set of points $(x,y,z)$ in $\Sigma$ described by inequality $z>0$.
+
+For a point $P'\in \Sigma$ consider its foot point $\hat P$
+on $\Pi$;
+this is the closest point on $\Pi$ from $P'$.
+
+The composition $P\z\mapsto \hat P$ of these two maps
+is a bijection of h-plane to itself.
+
+Note that $P=\hat P$
+ if and only if  $P\in \Omega$ or $P=O$.
+
+\begin{thm}{Exercise}\label{ex:P-->hat-P}
+Show that the map $P\mapsto \hat P$ described above can be 
+described the following way: 
+set $\hat O=O$ and for any other point point $P$ take $\hat P\in [OP)$
+such that 
+$$O\hat P=\frac{2\cdot x}{1+x^2},$$
+where $x=OP$. 
+\end{thm}
+
+\begin{thm}{Lemma}\label{lem:P-hat-chord}
+Let $(PQ)_h$ be an h-line with the ideal points $A$ and $B$.
+Then $\hat P,\hat Q\in[AB]$.
+
+Moreover 
+$$\frac{A\hat Q\cdot B\hat P}{\hat QB\cdot \hat PA}
+=
+\left(\frac{AQ\cdot BP}{QB\cdot PA}\right)^2.
+\eqlbl{eq:lem:P-hat-chord}$$
+In particular, if $A,P,Q,B$ appear on the line in the same order then
+$$PQ_h=\tfrac12\cdot\ln\frac{A\hat Q\cdot B\hat P}{\hat QB\cdot \hat PA}.$$
+\end{thm}
+
+\parit{Proof.}
+Consider the stereographic projection $\Pi\to \Sigma$ from the South Pole.
+Denote by $P'$ and $Q'$ the images of $P$ and $Q$.
+
+
+\begin{wrapfigure}[10]{o}{35mm}
+\begin{lpic}[t(-4mm),b(-3mm),r(0mm),l(2mm)]{pics/lambda-plane(1)}
+\lbl[rt]{0,15;$A$}
+\lbl[lt]{32,15;$B$}
+\lbl[t]{8,14;$\hat P$}
+\lbl[br]{8,29;$P'$}
+\end{lpic}
+\caption*{The plane $\Lambda$.\\}
+\end{wrapfigure}
+
+According to Theorem~\ref{thm:inverion-3d}(\ref{thm:inverion-3d:cross-ratio}),
+$$\frac{AQ\cdot BP}{QB\cdot PA}=\frac{AQ'\cdot BP'}{Q'B\cdot P'A}.\eqlbl{eq:(AB;PQ)=(AB;P'Q')}$$
+
+By Theorem~\ref{thm:inverion-3d}(\ref{thm:inverion-3d:angle}), 
+each circline in $\Pi$ which is perpendicular to $\Omega$ 
+is mapped to a circle in $\Sigma$ which is still perpendicular to $\Omega$.
+It follows that the stereographic projection sends $(PQ)_h$ to the intersection of the north hemisphere of $\Sigma$ with a plane, say $\Lambda$, perpendicular to $\Pi$.
+
+
+Consider the plane $\Lambda$.
+It contains points $A$, $B$, $P'$, $\hat P$  and the circle $\Gamma=\Sigma\cap\Lambda$.
+(It also contains $Q'$ and $\hat Q$ but we will not use these points for a while.)
+
+
+
+Note that 
+\begin{itemize}
+\item 
+$A,B,P'\in\Gamma$,
+\item $[AB]$ is a diameter of $\Gamma$,
+\item $(AB)=\Pi\cap\Lambda$,
+\item $\hat P\in [AB]$
+\item $(P'\hat P)\perp (AB)$.
+\end{itemize}
+
+Since $[AB]$ is the diameter of $\Gamma$, 
+by Corollary~\ref{cor:right-angle-diameter},
+the angle $\angle AP'B$ is right. 
+Hence $\triangle A\hat PP'\z\sim \triangle AP'B\z\sim \triangle P'\hat PB$.
+In particular
+$$\frac{AP'}{BP'}=\frac{A\hat P}{P'\hat P}=\frac{P'\hat P}{B\hat P}.$$
+Therefore
+$$\frac{A\hat P}{B\hat P}=\left(\frac{AP'}{BP'}\right)^2.\eqlbl{eq:AP/BP}$$
+
+The same way we get 
+$$\frac{A\hat Q}{B\hat Q}=\left(\frac{AQ'}{BQ'}\right)^2.\eqlbl{eq:AQ/BQ}$$
+Finally note that
+\ref{eq:(AB;PQ)=(AB;P'Q')}+\ref{eq:AP/BP}+\ref{eq:AQ/BQ} imply \ref{eq:lem:P-hat-chord}.
+
+The last statement follows from \ref{eq:lem:P-hat-chord} and the definition of h-distance.
+Indeed,
+\begin{align*}
+PQ_h&\df\ln\frac{A Q\cdot B P}{QB\cdot PA}=
+\\
+&=\ln\left(\frac{A \hat Q\cdot B \hat P}{\hat QB\cdot \hat PA}\right)^{\frac12}=
+\\
+&=\tfrac12\cdot\ln\frac{A \hat Q\cdot B \hat P}{\hat QB\cdot \hat PA}.
+\end{align*}
+\qedsf
+
+\begin{wrapfigure}[10]{o}{51mm}
+\begin{lpic}[t(-5mm),b(-0mm),r(0mm),l(0mm)]{pics/ex-hex(1)}
+\lbl[t]{26,8;$A_1$}
+\lbl[b]{26,31.5;$B_1$}
+\lbl[tl]{31,19;$A_2$}
+\lbl[br]{15,35;$B_2$}
+\lbl[tr]{15,5;$A_3$}
+\lbl[lw]{29,28;$B_3$}
+\lbl[lt]{46,10;$\Gamma_1$}
+\lbl[r]{42,38;$\Gamma_2$}
+\lbl[b]{49,31;$\Gamma_3$}
+\lbl[lb]{3,15;$\Omega$}
+\end{lpic}
+\end{wrapfigure}
+
+\begin{thm}{Exercise}\label{ex:hex}
+Let $\Gamma_1$, $\Gamma_2$ and $\Gamma_3$ 
+be three circles perpendicular to the circle $\Omega$.
+Let us denote by $[A_1B_1]$, $[A_2B_2]$ and $[A_3B_3]$
+the common chords of $\Omega$ and $\Gamma_1$, $\Gamma_2$, $\Gamma_3$ correspondingly.
+Show that the chords $[A_1B_1]$, $[A_2B_2]$ and $[A_3B_3]$ intersect at one point inside $\Omega$ if and only if $\Gamma_1$, $\Gamma_2$ and $\Gamma_3$ intersect at two points.
+\end{thm}
+
+
+
+
+\section*{Klein model}
+\addtocontents{toc}{Klein model.}
+
+The following picture illustrates the map $P\mapsto \hat P$ described in the previous section.
+If you take the picture on the left and apply the map $P\mapsto \hat P$,
+you get the picture on the right.
+The picture on the right gives a new way to look at the hyperbolic plane, which is called \index{Klein model}\emph{Klein model}.
+One may think of the map $P\mapsto \hat P$ as about 
+translation from one language to the other.
+
+\begin{center}
+\begin{lpic}[t(0mm),b(3mm),r(0mm),l(0mm)]{pics/poincare-klein(1)}
+\lbl[t]{23,0;Poincar\'e model}
+\lbl[t]{72,0;Klein model}
+\end{lpic}
+\end{center} 
+
+In the Klein model things look different;
+some become simpler,
+other things become more complicated.
+
+\parbf{Lines.}
+The h-lines in the Klein model 
+are formed by chords.
+More precisely, they are formed by the intersections of chords of the absolute with the h-plane.
+
+\parbf{Circles and equidistants.}
+The h-circles and equidistants in the Klein model are formed by the certain type of ellipses and their arcs.
+It follows since the stereographic projection sends circles one the plane to the circles on the unit sphere and the foot point projection of circle back to plane is formed by ellipse.
+(One may define ellipse
+as the foot point projection of a circle which lies in the space to the plane.)
+
+\parbf{Distance.}
+To find the h-distance between the points $P$ and $Q$ in the Klein model,
+ you have to find the points of intersection, say $A$ and $B$, 
+ of the Euclidean line $(PQ)$ with the absolute;
+then, by Lemma~\ref{lem:P-hat-chord},
+$$PQ_h=\tfrac12\cdot\ln\frac{AQ\cdot BP}{QB\cdot PA},$$
+assuming the points $A, P, Q, R$ appear on the line in the same order.
+
+\begin{wrapfigure}[9]{o}{36mm}
+\begin{lpic}[t(-0mm),b(-0mm),r(0mm),l(0mm)]{pics/h-klein-perp(1)}
+\lbl[rb]{5,32;$A$}
+\lbl[lb]{36,32;$B$}
+\lbl[lt]{13,29;$P$}
+\lbl[rt]{28,29;$Q$}
+\end{lpic}
+\end{wrapfigure}
+
+\parbf{Angles.}
+The angle measures in Klein model are very different from the Euclidean angles and it is hard to figure out by looking on the picture.\label{klein-angles}
+For example all the intersecting h-lines on the picture are perpendicular.
+There are two useful exceptions
+
+\begin{itemize}
+\item If $O$ is the center of absolute then 
+$$\measuredangle_hAOB=\measuredangle AOB.$$
+\item If $O$ is the center of absolute 
+and 
+$\measuredangle OAB\z=\pm\tfrac\pi2$ then 
+$$\measuredangle_h OAB=\measuredangle OAB=\pm\tfrac\pi2.$$
+\end{itemize}
+To find the angle measure in Klein model,
+you may apply a motion of h-plane which moves 
+the vertex of the angle to the center of absolute;
+once it is done the hyperbolic and Euclidean angles have the same measure.
+
+\parbf{Motions.}
+The motions of h-plane in Poincar\'e and Klein model are relevant to inversive transformations and projective transformation in the same way. Namely: 
+\begin{itemize}
+\item Any inversive transformations which preserve h-plane describe a motion of h-plane with Poincar\'e model.
+\item Any projective transformation which preserve h-plane describes a motion of Klein model.
+\end{itemize}
+
+The following exercise is hyperbolic analog of Exercise~\ref{ex:s-medians}. 
+This is the first example of a statement which admits an easier proof using  Klein model.
+
+\begin{thm}{Exercise}\label{ex:h-median}
+Let $P$ and $Q$ be the point in h-plane which lie on the same distance from the center of absolute.
+Observe that in Klein model, h-midpoint of $[PQ]_h$ coincides with the Euclidean midpoint of $[PQ]_h$.
+
+Conclude that if an h-triangle is inscribed in an h-circle then its medians intersect at one point.
+
+Think how to prove the same for a general h-triangle.
+\end{thm}
+
+\begin{wrapfigure}[6]{o}{31mm}
+\begin{lpic}[t(-3mm),b(-0mm),r(0mm),l(0mm)]{pics/perp-klein(1)}
+\lbl[t]{8,12.6,-10;$m$}
+\lbl[l]{14.2,8;$\ell$}
+\lbl[tl]{21,6;$s$}
+\lbl[bl]{21,14;$t$}
+\end{lpic}
+\end{wrapfigure}
+
+\begin{thm}{Exercise}\label{ex:klein-perp}
+Let $\ell$ and $m$ are  h-lines in the Klein model.
+Denote by $s$ and $t$ the Euclidean lines tangent to the absolute
+at the ideal points of $\ell$ and denote by $\tilde m$ the Euclidean line which contains $m$.
+Show that if the lines $s$, $t$ and $\tilde m$ meet at one point then $\ell$ and $m$ are perpendicular h-lines in the Klein model. 
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:klein-for-angle-parallelism}
+Give a proof of Proposition~\ref{prop:angle-parallelism} using Klein model. 
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:klein-inradius}
+Use Klein model to find the inradius of the ideal triangle.
+\end{thm}
+
+
+\section*{Hyperbolic Pythagorean theorem}
+\addtocontents{toc}{Hyperbolic Pythagorean theorem.}
+
+\begin{thm}{Theorem}\label{thm:pyth-h}
+Assume that $\triangle_hACB$ is a triangle in h-plane with right angle at $C$.
+Set $a=BC_h$, $b=CB_h$ and $c=AB_h$.
+Then
+$$\cosh c=\cosh a\cdot\cosh b.\eqlbl{eq:pyth-h}$$
+where $\cosh$ denotes \index{$\cosh$}\index{hyperbolic cosine}\emph{hyperbolic cosine};
+that is, the function defined the following way
+$$\cosh x\df \tfrac{e^x+e^{-x}}2.$$ 
+
+\end{thm}
+
+\begin{wrapfigure}[10]{o}{24mm}
+\begin{lpic}[t(-1mm),b(-0mm),r(0mm),l(0mm)]{pics/h-pyth-klein(1)}
+\lbl[br]{3,23;$A$}
+\lbl[lb]{15,29;$B$}
+\lbl[tl]{15,21;$C$}
+\lbl[l]{15,25;$s$}
+\lbl[t]{8,20;$t$}
+\lbl[b]{8,26,37;$u$}
+\lbl[bl]{15,39;$X$}
+\lbl[tl]{15,4;$Y$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Proof.}
+We will use Klein model of h-plane with a unit circle as the absolute.
+
+We can assume that $A$ is the center of absolute.
+Therefore both $\angle_h ACB$ and $\angle ACB$ are right.
+
+Set 
+$s=BC$, $t =CA$, $u= AB$.
+According to Euclidean Pythagorean theorem (\ref{thm:pyth}),
+$$u^2=s^2+t^2.$$
+Note that
+
+\[
+b=\tfrac12\cdot\ln\frac{1+t}{1-t};\]
+therefore
+\[
+\begin{aligned}
+\cosh b&=
+\frac{\left(\frac{1+t}{1-t}\right)^{\frac12}+\left(\frac{1-t}{1+t}\right)^{\frac12}}2=
+\\
+&=\frac1{\sqrt{1-t^2}}.
+\end{aligned}
+\eqlbl{cosh(b)}
+\]
+The same way we get
+\[
+c=\tfrac12\cdot\ln\frac{1+u}{1-u}
+\]
+and
+\[\begin{aligned}\cosh c&=\frac{\left(\frac{1+u}{1-u}\right)^{\frac12}+\left(\frac{1-u}{1+u}\right)^{\frac12}}2=
+\\
+&=\frac1{\sqrt{1-u^2}}.
+\end{aligned}
+\eqlbl{cosh(c)}\]
+
+Let $X$ and $Y$ are the ideal points of $(BC)_h$.
+Applying the Pythagorean theorem (\ref{thm:pyth}) again,
+we get 
+$$CX=CY=\sqrt{1-t^2}.$$
+Therefore 
+\[
+a
+=
+\tfrac12\cdot\ln\frac{\sqrt{1-t^2}+s}{\sqrt{1-t^2}-s}\]
+and
+\[
+\begin{aligned}
+\cosh a&=\frac
+{\left(\frac{\sqrt{1-t^2}+s}{\sqrt{1-t^2}-s}\right)^{\frac12}
++
+\left(\frac{\sqrt{1-t^2}-s}{\sqrt{1-t^2}+s}\right)^{\frac12}}2=
+\\
+&=\frac{\sqrt{1-t^2}}{\sqrt{1-t^2-s^2}}
+\\
+&=\frac{\sqrt{1-t^2}}{\sqrt{1-u^2}}
+\end{aligned}
+\eqlbl{cosh(a)}
+\]
+
+Finally note that \ref{cosh(b)}+\ref{cosh(c)}+\ref{cosh(a)} implies \ref{eq:pyth-h}.
+\qedsf
+
+\section*{Bolyai's construction}
+\addtocontents{toc}{Bolyai's construction.}
+
+Assume we need to construct a line asymptotically parallel to the given line through the given point.
+The initial configuration is given by three points, 
+say $P$, $A$ and $B$
+and we need to construct a line through $P$ which is asymptotically parallel to $\ell=(AB)$.
+
+Note that ideal points do not lie in the h-plane,
+so there is no way to use them in the construction.
+
+The following construction was given by Bolyai.
+We assume that you know a compass-and-ruler construction of the perpendicular line to the given line through the given point; see the solution of Exercise~\ref{ex:construction-perpendicular}.
+
+\begin{thm}{Bolyai's construction}
+\begin{enumerate}
+\item Construct the line $m$ through $P$ which perpendicular  to $\ell$. 
+Denote by $Q$ the foot point of $P$ on $\ell$.
+\item Construct the line $n$ through $P$ which perpendicular  to $m$.
+\item Draw the circle $\Gamma_1$ with center $Q$ through $P$ and mark by $R$ a point of intersection of $\Gamma_1$ with $\ell$.
+\item Construct the line $k$ through $R$ which perpendicular  to $n$. 
+\item Draw the circle $\Gamma_2$ with center $P$ through $Q$ and mark by $T$ a point of intersection of $\Gamma_2$ with $k$.
+\item The line $(PT)_h$ is asymptotically parallel to $\ell$.
+\end{enumerate}
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:Boyai-in-Euclid}
+Explain what happens if one performs the Bolyai construction in the Euclidean plane.
+\end{thm}
+
+To prove that Bolyai's construction gives the asymptotically parallel line in h-plane,
+it is sufficient to show the following.
+
+\begin{thm}{Proposition}\label{prop:boyai}
+Assume $P$, $Q$, $R$, $S$, $T$ be points in h-plane
+such that 
+\begin{itemize}
+\item $S\in (RT)_h$,
+\item $(PQ)_h\perp (QR)_h$,
+\item $(PS)_h\perp(PQ)_h$,
+\item $(RT)_h\perp (PS)_h$ and 
+\item $(PT)_h$ and $(QR)_h$ are asymptotically parallel.
+\end{itemize}
+Then $QR_h=PT_h$.
+\end{thm}
+
+\begin{wrapfigure}{o}{44mm}
+\begin{lpic}[t(-0mm),b(-0mm),r(0mm),l(0mm)]{pics/boyai-constr(1)}
+\lbl[bl]{21.5,21.5;$P$}
+\lbl[tl]{21.5,12.5;$Q$}
+\lbl[tr]{8.5,12.5;$R$}
+\lbl[tr]{8.5,20;$S$}
+\lbl[lb]{10.5,26;$T$}
+\lbl[t]{40,12.5;$A$}
+\lbl[tr]{1,12.5;$B$}
+\lbl[br]{1,28;$C$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Proof.}
+We will use the Klein's model.
+Without loss of generality, we may assume that $P$ is the center of absolute.
+As it was noted on page \pageref{klein-angles},
+in this case the corresponding Euclidean lines are also perpendicular;
+that is, $(PQ)\perp (QR)$, $(PS)\perp(PQ)$ and $(RT)\perp (PS)$.
+
+Denote by $A$ be the ideal point of $(QR)_h$ and $(PT)_h$.
+Denote by $B$ and $C$ the remaining ideal points of $(QR)_h$ and $(PT)_h$
+correspondingly.
+
+Note that the Euclidean lines $(PQ)$, $(TR)$ and $(CB)$ are parallel.
+
+Therefore $\triangle AQP\sim \triangle ART \sim\triangle ABC$.
+In particular,
+$$\frac{AC}{AB}=\frac{AT}{AR}=\frac{AP}{AQ}.$$
+
+It follows that
+$$\frac{AT}{AR}=\frac{AP}{AQ}=\frac{BR}{CT}=\frac{BQ}{CP}.$$
+In particular
+$$\frac{AT\cdot CP}{TC\cdot PA}=\frac{AR\cdot BQ}{RB\cdot QA};$$
+hence $QR_h=PT_h$.
+\qeds
+ 
+
+\addtocontents{toc}{\protect\end{quote}}
