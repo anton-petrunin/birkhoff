@@ -1,4 +1,6 @@
 # birkhoff
+all-lectures.pdf
+
 Euclidean Plane and its Relatives; a minimalistic introduction.
 
 The book grew from my lecture notes which I have been polishing since 2001. 
