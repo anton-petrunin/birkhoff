@@ -531,22 +531,22 @@ Trisect given segment with ruler and compass.
 \addtocontents{toc}{Parallelograms.}
 
 A \index{quadrilateral}\emph{quadrilateral} is an ordered quadruple of distinct points in the plane.
-A quadrilateral formed by quadruple $(A,B,C,D)$ will be called {}\emph{quadrilateral $ABCD$}.
+A quadrilateral formed by quadruple $(A,B,C,D)$ will be denoted as $\square ABCD$.
 
-Given a quadrilateral $ABCD$,
-the four segments $[AB]$, $[BC]$, $[CD]$ and $[DA]$ are called \index{side!side of quadrilateral}\emph{sides of $ABCD$};
+Given a quadrilateral $\square ABCD$,
+the four segments $[AB]$, $[BC]$, $[CD]$ and $[DA]$ are called \index{side!side of quadrilateral}\emph{sides of $\square ABCD$};
 the remaining two segments $[AC]$ and $[BD]$ are called \index{diagonal!diagonals of quadrilateral}\emph{diagonals of $ABCD$}.
 
 
 \begin{thm}{Exercise}\label{ex:quadrilateral}
-Show for any quadrilateral $ABCD$  in the Euclidean plane we have
+Show for any quadrilateral $\square ABCD$  in the Euclidean plane we have
 $$\measuredangle ABC+\measuredangle BCD+\measuredangle CDA+\measuredangle DAB\equiv 0.$$
 
 \end{thm}
 
-A quadrilateral $ABCD$ in the Euclidean plane is called \index{quadrilateral!nondegenerate quadrilateral}\emph{nondegenerate} if any three points from $A,B,C,D$ do not lie on one line.
+A quadrilateral $\square ABCD$ in the Euclidean plane is called \index{quadrilateral!nondegenerate quadrilateral}\emph{nondegenerate} if any three points from $A,B,C,D$ do not lie on one line.
 
-The nondegenerate quadrilateral $ABCD$ is called \index{parallelogram}\emph{parallelogram}
+The nondegenerate quadrilateral $\square ABCD$ is called \index{parallelogram}\emph{parallelogram}
 if $(AB)\z\parallel (CD)$ and $(BC)\z\parallel (DA)$.
 
 {
@@ -561,7 +561,7 @@ if $(AB)\z\parallel (CD)$ and $(BC)\z\parallel (DA)$.
 \end{wrapfigure}
 
 \begin{thm}{Lemma}\label{lem:parallelogram}
-If $A B C D$ is a parallelogram then
+If $\square A B C D$ is a parallelogram then
 \begin{enumerate}[(a)]
 \item $\measuredangle D A B= \measuredangle B C D$;
 \item $AB=CD$.
@@ -590,15 +590,43 @@ $\triangle A B D\cong \triangle C D B$.
 Which implies both statements in the lemma.
 \qeds
 
-\begin{thm}{Exercise}\label{ex:romb}
-Assume $ABCD$ is a nondegenerate quadrilateral such that
-$AB=CD=BC=DA$.
-Show that $ABCD$ is a parallelogram.
+\begin{thm}{Exercise}\label{ex:midle}
+Let $\square ABCD$ be a nondegenerate quadrilateral
+and $X$, $Y$, $V$, $W$ be the midpoints of its sides 
+$[AB]$, $[BC]$, $[CD]$ and $[DA]$.
+Show that $\square XYVW$ is a parallelogram.
 \end{thm}
+
+
+\begin{thm}{Exercise}\label{ex:romb}
+Assume $\square ABCD$ is a quadrilateral such that
+\[AB=CD=BC=DA.\]
+Show that $\square ABCD$ is a parallelogram.
+\end{thm}
+
+A quadrilateral as in the exercise above is called \index{rhombus}\emph{rhombus}.
 
 \begin{thm}{Exercise}\label{ex:diad-par}
 Show that diagonals of parallelogram intersect each other at the midpoint.
 \end{thm}
+
+A quadraliteral $\square ABCD$ is called \index{rectangle}\emph{rectangle} if the angles $\angle ABC$, $\angle BCD$, $\angle CDA$ and $\angle DAB$ are right.
+Note that according to Transversal property (\ref{thm:parallel-2}),
+any rectangle is a parallelogram.
+
+If in addition $AB=BC=CD=DA$ then the rectangle $\square ABCD$ is called \index{square}\emph{square}.
+In other words a square is a rectangle which is also a rhombus.
+
+\begin{thm}{Exercise}\label{ex:rectangle}
+Show that parallelogram $\square ABCD$ is a rectangle
+if and only if $AC=BD$.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:romb2}
+Show that parallelogram $\square ABCD$ is a rhombus
+if and only if $(AC)\perp (BD)$.
+\end{thm}
+
 
 
 \section*{Method of coordinates}
@@ -643,8 +671,8 @@ for any pair of points $P$ and $Q$.
 Once this exercise solved, we can apply 
 the method of coordinates
 to solve any problem in Euclidean plane geometry.
-Using this method is often considered as a bad style,
-but it is powerful.
+This method is powerful, 
+but it is often considered as a bad style.
 
 \begin{thm}{Exercise}\label{ex:abc}
 Use the Exercise~\ref{ex:coordinates},

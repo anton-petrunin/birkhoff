@@ -1,4 +1,691 @@
 
+\section*{Area of disc}
+\addtocontents{toc}{Area of disc.}
+
+A \emph{disc} is the set 
+formed points inside and on a given circle.
+
+The area .
+
+For example one can define the area of any disc;
+that is the set formed by circle and the points inside it.
+Let us try to make sense of it.
+
+Fix a large positive integer $n$.
+Inscrive in $\Gamma$ the regular $n$-gon $\bm{A}=A_1\dots A_n$.
+Surcumscribe $\Gamma$ by a regular $n$-gon $\bm{B}=B_1\dots B_n$.
+Note that 
+\[\bar{\bm{A}}\subset D\subset\bar{\bm{B}}.\]
+
+It is reasonable to assume that area of $D$ satisfies monotonicity property;
+for polygons it is proved in ???.
+In this case 
+\[\area\bm{A}\le\area D\le \area\bm{B}.\]
+
+One the other hand taking $n$ large enough, 
+the difference $\area\bm{B}-\area\bm{A}$ can be made arbitrary small.
+Indeed, straightforward computations show that
+$\area\bm{A}=\cos\tfrac\pi n\cdot\area\bm{B}$. 
+Since $\cos\tfrac\pi n\ge 1-\tfrac2n $ and $\area \bm{A}\le 4$,
+we get
+\[\area\bm{B}-\area\bm{A}\le \tfrac8n.\]
+
+
+
+
+
+
+
+
+
+
+\section*{Quadrable sets}
+\addtocontents{toc}{Quadrable  sets.}
+
+As we showed in the previous section,
+one can extend the notion of area to the sets in the plane which can be squized between two bodies of polygons with arbitrary close area.
+The class of such sets is called quadrable sets;
+in this section we define them formally.
+
+Given a subset  $\mathcal{S}$ in the plane
+set
+\[\overline\area\,\mathcal{S}=\inf_{\bar{\bm{B}}\supset \mathcal{S}}\{\area\bm{B}\};\]
+that is $\bar a=\overline\area\,\mathcal{S}$ is the maximal number such that $\bar a\le \area\bm{B}$ for any polygon $\bm{B}$ such that $\bar{\bm{B}}\supset \mathcal{S}$.
+
+If $\mathcal{S}$ is unbounded
+then there is no polygon $\bm{B}$ such that $\bar{\bm{B}}\supset \mathcal{S}$.
+In this case we assume $\overline\area\,\mathcal{S}=\infty$.
+
+In a similar way let us define lower area 
+\[\underline\area\,\mathcal{S}=\sup_{\bar{\bm{A}}\subset \mathcal{S}}\{\area\bm{A}\};\]
+
+Note that for any set 
+\[\underline\area\,\mathcal{S}\le\overline\area\,\mathcal{S}.\]
+Indeed, assume contrary. Then there is a real number $a$ such that 
+\[\underline\area\,\mathcal{S}>a>\overline\area\,\mathcal{S}.\]
+By definition of $\underline\area$ and $\overline\area$ there are 
+polygonal sets $\mathcal{P}$ and $\mathcal{Q}$ 
+such that $\area\mathcal{P}>a$, $\area \mathcal{Q}<a$
+and $\mathcal{P}\subset \mathcal{S}\subset\mathcal{Q}$.
+In particular $\mathcal{P}\subset \mathcal{Q}$ 
+and $\area\mathcal{P}>\area \mathcal{Q}$;
+the later contradicts ???
+
+If
+\[\underline\area\,\mathcal{S}=\overline\area\,\mathcal{S}\]
+then the set $\mathcal{S}$ is called quadrable;
+in this case we define 
+\[\area\mathcal{S}\df\underline\area\,\mathcal{S}=\overline\area\,\mathcal{S}\]
+
+The argument above shows that for any disc is a quadrable set.
+
+Let $\mathcal S$ be a set in the plane.
+We say that $\mathcal S$ is squareble if 
+given $\epsilon>0$ there are collection of disjoint polygons $\bm{A}_1,\dots, \bm{A}_n$ and $\bm{B}_1,\dots, \bm{B}_k$
+such that
+\[\bar{\bm{A}}_1\cup\dots\cup\bar{\bm{A}}_n\subset\mathcal S\subset \bar{\bm{B}}_1\cup\dots\cup\bar{\bm{A}}_k\]
+and 
+\[\area\bm{A}_1+\dots+\area\bm{A}_n
+>
+\area\bm{B}_1+\dots+\area\bm{B}_k-\epsilon.\]
+
+\begin{thm}{Exercse}
+Show that any line segment is a quadrable set with vanishing area.
+\end{thm}
+
+\begin{thm}{Exercse}
+Show that any circle is a quadrable set with vanishing area.
+\end{thm}
+
+A plane set $\mathcal{S}$
+is called \emph{convex} if for any two points $X,Y\in \mathcal{S}$
+we have $[XY]\subset \mathcal{S}$
+
+\begin{thm}{Advanced exercse}
+Show that any bounded convex set is quadrable.
+\end{thm}
+
+
+
+Informally squeezed
+
+
+\section*{Area of triangle}
+\addtocontents{toc}{Area  of triangle.}
+
+
+A function $F$ which returns a real number 
+for any solid triangle is called \emph{area functional} if it satisfies the followng conditions.
+
+\begin{enumerate}
+\item For any triangle $\triangle ABC$ we have $F(\triangle ABC)\ge 0$ and 
+if  $\triangle ABC$ nondegenerate then $F(\triangle ABC)>0$.
+\item If $\triangle ABC\cong\triangle A'B'C'$ 
+ then $F(\triangle ABC)=F(\triangle A'B'C')$
+\item For any triangle $ \triangle ABC$ and point $D$ between $B$ and $C$, we have
+$$F(\triangle ABC)=F(\triangle ABD)+F(\triangle ADC).$$
+\end{enumerate}
+
+The proof of the following proposition is quite nontrivial.
+
+\begin{thm}{Proposition}
+There is an area functional. 
+
+Moreover it is unique up to multiplication by a positive constant. 
+That is, if $F$ and $F'$ are area functionals then there is a positive real number $k$ such that 
+\[F'(\triangle ABC)=k\cdot F(\triangle ABC)\]
+for any triangle $\triangle ABC$.
+\end{thm}
+
+Let $\triangle ABC$ be a right triagle with unit length
+and $F$ be an area functional such that $F(\triangle ABC)=\tfrac12$.
+Then for any triangle $\triangle XYZ$ the value $a=F(\triangle XYZ)$ is called \emph{area} of $\triangle XYZ$;
+brifly $a=\area(\triangle XYZ)$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section*{Subdivisions and area}
+\addtocontents{toc}{Subdivisions and area.}
+
+\begin{thm}{Definition}
+Let $\bm{A}$, $\bm{B}_1,\dots,\bm{B}_k$
+be a finite collection of polygons.
+We say tath $\bm{A}$ 
+is subdivided into $\bm{B}_1,\dots,\bm{B}_k$
+if 
+\[\bar{\bm{A}}=\bar{\bm{B}}_1\cup\dots\cup\bar{\bm{B}}_k\]
+and 
+\[\mathring{\bm{B}}_i\cap\mathring{\bm{B}}_j=\emptyset\]
+for any $i\ne j$.
+\end{thm}
+
+A function $F$ which returns a nondegenerate real value for any poygon 
+is called area functional if it satisfies the following conditions.
+
+\begin{enumerate}
+\item If  two polygons $\bm{A}$ and $\bm{A}'$ have congruent bodies (that is $\bar{\bm{A}}\cong \bar{\bm{A}}'$)
+then 
+\[F(\bm{A})=F(\bm{A}')\]
+\item If a polygon $\bm{A}$ is subdivided into polygons $\bm{B}_1, \dots,\bm{B}_n$
+then 
+\[F(\bm{A})=F(\bm{B}_1)+\dots+F(\bm{B}_n)\]
+\item If $\bm{B}$ is a square with unit side then 
+\[F(\bm{B})=1.\]
+\end{enumerate}
+
+The proof of the following theorem is long and not at all simple.
+
+\begin{thm}{Proposition}
+There is unique area functional.
+\end{thm}
+
+From now on we will denote the area of polygon $\bm{A}$ as $\area \bm{A}$.
+
+Use the definition of area to prove the following two statements.
+
+
+\begin{thm}{Exercise}
+Assume $\square ABCD$ is a parallelogram.
+Show that 
+\[\area\triangle ABC=\area\triangle BCD.\]
+
+\end{thm}
+
+\begin{thm}{Exercise}
+Let $A'$ be the medpoint of side $[BC]$ of the triangle $\triangle ABC$.
+Show that 
+\[\area\triangle AA'B=\area\triangle AA'C.\]
+
+\end{thm}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section*{Two propositions}
+\addtocontents{toc}{Two propositions.}
+
+\begin{thm}{Proposition}\label{prop:monotonicity-of-area}
+Assume $\bm{A}$ and $\bm{B}$ are two polygons such that $\bar{\bm{A}}\supset \bar{\bm{B}}$.
+Then $\area \bm{A}\ge \area \bm{B}$.
+\end{thm}
+
+To prove the statement it is sufficient to subdivide $\bm{A}$ into collction of polygons which include $\bm{B}$, say $\bm{B}$, $R_1,\dots,R_n$.
+Then by ???
+\[\area \bm{A}=\area \bm{B}+\area R_1+\dots +\area R_n.\]
+The statement follows since $\area R_i\ge 0$.
+
+Two construct the nesesury subdivision, extend all the sides of $\bm{B}$.
+These lines cut $\bm{A}$ into polygons.
+Denote by $R_1,\dots,R_n$ those of these polygons which do not lie inside $\bar{\bm{B}}$.
+Note that $\bm{B}$, $R_1,\dots,R_n$ form a subdivision of $\bm{A}$.
+
+
+\begin{thm}{Proposition}\label{prop:1/n}
+If $\bm{B}_n$ is a square with side $\tfrac1n$ then 
+\[\area \bm{B}_n=\tfrac1{n^2}.\]
+
+\end{thm}
+
+\parit{Proof.}
+Set $a_n=\area \bm{B}_n$.
+Recall that according to ???, $a_1=1$.
+
+Note that the unit square $\bm{B}_1$ can be divided into $n^2$ squires congruent to $\bm{B}_n$.
+Therefore
+\[n^2\cdot a_n=a_1=1.\]
+Hence the result follows.
+\qeds
+
+
+
+
+\section*{Polygons}
+\addtocontents{toc}{Polygons.}
+
+A \emph{polygon} is a finite sequence of distrinct points in the plane, say
+\[\bm{A} =A_1A_2\dots A_n.\]
+The points $A_i$ in the sequence are called \emph{vertices} of the polygon $\bm{A}$.
+
+A polygon with three vertices is called \emph{triangle}
+polygon with four vertices is called \emph{quadrilateral}
+and a polygon with $n$ vertices is called also \emph{$n$-gon}.
+
+\begin{wrapfigure}{o}{28mm}
+\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/polygon(1)}
+\lbl[tr]{6,1;$A_1$}
+\lbl[tl]{16,1;$A_2$}
+\lbl[tl]{17,8;$A_3$}
+\lbl[b]{25,17,-75;$\dots$}
+\lbl[b]{2,22;$A_n$}
+\lbl[r]{22.5,15.5;$\partial\bm{A}\rightarrow$}
+\lbl[b]{15.5,17.5;$\uparrow$}
+\lbl[rb]{20.5,10.5;$\searrow$}
+\lbl[b]{11,22,10;side}
+\lbl[b]{8,13,-50;diagonal}
+\end{lpic}
+\end{wrapfigure}
+
+The segments $[A_nA_1],[A_1A_2],\dots,[A_{n-1} A_n]$
+are called \emph{sides} and the remaining segments $[A_iA_j]$ are called \emph{diagonals} of the polygon $\bm{A}$.
+
+The union of all the sides of a polygon $\bm{A}$ is called its contour,
+and denoted as $\partial \bm{A}$.
+
+If any two sides of the polygon 
+intersect only at the common end 
+then the polygon is called  \emph{simple}\index{simple polygon}.
+
+\section*{Interior and body}
+\addtocontents{toc}{Interior and body.}
+
+It is intuitively clear that 
+the complement to the contour of a simple polygon
+has exactly two components 
+one is \emph{bounded} 
+and the other is \emph{unbounded}. 
+
+Let us make this statement more presise.
+First let us define bounded and unbounded sets.
+
+\begin{thm}{Definition}
+A set $\mathcal{S}$ in the plane 
+is called \emph{bounded} 
+if for some (and therefore any) point $Z$ 
+there real number $r$ such that $ZX<r$ for any $X\in \mathcal{S}$.
+
+If there is there is no such number $r$, 
+then the set is called \emph{unbounded}.
+\end{thm}
+
+Now we need to explain the meaning of word \emph{component} above. 
+
+Fix a polygon $\bm{A}$.
+We say that two points $X,Y\notin \partial \bm{A}$,
+lie
+on the same side from $\partial\bm{A}$ (briefly $X\leftrightarrow Y$)
+if there is a finite sequence of points
+\[X=X_0, X_1,\dots, X_k=Y\]
+such that non of the segments $[X_{i-1}X_i]$ intersects $\partial\bm{A}$.
+(It means that one can get from $X$ to $Y$ without crossing $\partial\bm{A}$.)
+
+Note that ``$\leftrightarrow$'' is an \emph{equivalent relation}.
+That is, 
+for any three points $X,Y,Z\notin\partial \bm{A}$,
+we have 
+(1) $X\leftrightarrow X$,
+(2) if $X\leftrightarrow Y$
+then  $Y\leftrightarrow X$
+and 
+(3) if $X\leftrightarrow Y$ 
+and $Y\leftrightarrow Z$ 
+then  $X\leftrightarrow Z$.
+
+The set of points which lie one the same side with a given one (and therefore with each other) is called \emph{component}.
+
+\begin{thm}{Proposition-Definition}
+Let $\bm{A}$ be a simple polygon.
+Then the complement of $\partial\bm{A}$
+has exactly two components,
+one bounded and the other is unbounded. 
+
+\begin{center}
+\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/polygons(1)}
+\lbl[tr]{6,1;$A_1$}
+\lbl[tl]{16,1;$A_2$}
+\lbl[tl]{17,8;$A_3$}
+\lbl[b]{25,17,-75;$\dots$}
+\lbl[b]{2,22;$A_n$}
+\lbl[r]{22.5,15.5;$\partial\bm{A}\rightarrow$}
+\lbl[b]{15.5,17.5;$\uparrow$}
+\lbl[rb]{20.5,10.5;$\searrow$}
+\lbl[b]{11,22,10;side}
+\lbl[b]{8,13,-50;diagonal}
+\end{lpic}
+\end{center}
+
+The bounded component is called \emph{interior of polygon} and denoted as $\mathring{\bm{A}}$
+and the unbounded component is called \emph{exterior of polygon}.
+The union of interior and the contour is called \emph{body of the the polygon} it will be denoted as $\bar{\bm{A}}$, so 
+\[\bar{\bm{A}}=\mathring{\bm{A}}\cup \partial\bm{A}.\]
+\end{thm}
+
+We omit the proof of the proposition; it is not hard but tedious.
+
+\section*{Congruence}
+\addtocontents{toc}{Congruence.}
+
+By now we have three important sets
+contour $\partial\bm{A}$,
+interior $\mathring{\bm{A}}$
+and the body $\bar{\bm{A}}$
+associated with any simple polygon $\bm{A}$.
+Note that these sets for different polygons might coincide.
+For example polygon $\bm{A}=A_1A_2\dots A_n$ is different from
+the polygon $\bm{A}'=A_2\dots A_nA_1$, 
+so 
+\[\bm{A}'\ne \bm{A},
+\ \ \text{but}\ \ 
+\partial\bm{A}'=\partial\bm{A},\ \  
+\mathring{\bm{A}}'=\mathring{\bm{A}},\ \ 
+\bar{\bm{A}}'=\bar{\bm{A}}.\]
+
+Similarly polygons and their bodies behave with respect to congruence,
+which we about to define.
+
+\begin{thm}{Definition}
+Two polygons $\bm{A}$ and $\bm{B}$
+are called congruent (briefly $\bm{A}\cong\bm{B}$)
+if they have the same number of vertices 
+and there is a motion of the plane 
+which sends every vertex of $\bm{A}$ to the correspondig vertex of $\bm{B}$.
+That is, $\bm{A}=A_1\dots A_n$ and $\bm{B}=B_1\dots B_n$
+for some positive integer $n$ and there is a motion $f$
+such that $B_i=f(A_i)$ for every $i$.
+\end{thm}
+
+\begin{thm}{Definition}\label{def:cong-sets}
+Two sets $\mathcal{S}$ and $\mathcal{T}$ in the plane  
+are called congruent 
+(briefly $\mathcal{S}\cong \mathcal{T}$)
+if 
+$\mathcal{T}=f(\mathcal{S})$ for some motion $f$ of the plane.
+\end{thm}
+
+Applying this definition with the identity map $f$,
+we get 
+\[\partial\bm{A}'\cong\partial\bm{A},\ \  
+\mathring{\bm{A}}'\cong\mathring{\bm{A}},\ \ 
+\bar{\bm{A}}'\cong\bar{\bm{A}}\]
+where polygons $\bm{A}$ and $\bm{A}$ as above.
+
+On the other hand $\bm{A}'\ncong\bm{A}$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section*{Scissors-congruence}
+\addtocontents{toc}{Scissors-congruence.}
+
+We say that two subsets $X$ and $Y$ 
+of the plane are congruent (briefly $X\cong Y$)
+if there is a motion of the plane $m$
+such that $Y=m(X)$.
+
+Recall that $\triangle ABC\cong\triangle A'B'C'$ means that there is a motion of the plane, say $m$, 
+such that $A'=m(A)$, $B'=m(B)$ and $C'=m(C)$.
+Now for the sets of their vertices,
+$\{A,B,C\}\cong\{A',B',C'\}$ means that there is a motion $m$ such that $\{A',B',C'\}=m(\{A,B,C\})$.
+For example it might happen that $A'=m(B)$, $B'=m(C)$ and $C'=m(A)$
+in this case $\triangle ABC\cong\triangle C'A'B'$ and in general $\triangle ABC\not\cong\triangle A'B'C'$.
+
+We say that polygon $P$ is subdivided into polygons $\bm{B}_1,\dots, \bm{B}_n$
+if $P=\bm{B}_1\cup\dots\cup \bm{B}_n$ and no pairs of polygons $\bm{B}_i$, $\bm{B}_j$ have common interior point.
+
+Two polygons $P$ and $P'$ are called scissors-congruent
+if one can subdivide $P$ into polygons $\bm{B}_1,\dots, \bm{B}_n$
+and $P'$ into polygons $\bm{B}_1',\dots, \bm{B}_n'$
+in such a way that $\bm{B}_i\cong \bm{B}_j$.
+
+
+
+The following theorem is qute nontrivial.
+
+\begin{thm}{Theorem}
+There is a function $S$ which returns a nonnegative real number for any polygon $P$ such that two polygons $P$ and $P'$ are scissors-congruent
+if and only if $S(P)=S(P')$.
+\end{thm}
+
+Note that if $S$ is a function satisfying the theorem then so is any function $S'(P)=k\cdot S(P)$ with $k>0$.
+Given a polygon $\bm{B}$ we can take $k=\tfrac{1}{S(\bm{B})}$,
+in this case $S'(\bm{B})=1$;
+in other words $\bm{B}$ will become the unit of area.
+
+\parbf{Comment.}
+Analogous theoerem holds for sphere and hyperbolic plane.
+In the $3$-dimensional Euclidean space the theorem does not hold.
+
+
+\section*{Defining properties of area}
+\addtocontents{toc}{Defining properties of area.}
+
+We say that a solid polygon $P$ is subdivided 
+into two polygons $P_1$ and $P_2$ 
+if $P=P_1\cup P_2$ 
+and the polygons $P_1$ and $P_2$ do not have common interior points. 
+
+A function $S$ 
+which returns a real number for any solid polygon is called \emph{area}
+if it is satisfies the following conditions.
+
+\begin{enumerate}[(i)]
+\item\label{area:positive} The area of any polygon is nonnegative.
+\item\label{area:additive} If polygon $P$ is subdivided in two polygons $P_1$ and $P_2$ then 
+\[S(P)=S(P_1)+S(P_2).\]
+\item\label{area:equal} If two solid polygons $P_1$ and $P_2$ are congruent then $S(P_1)=S(P_2)$
+\item\label{area:unit} Unit square has unit area; that is $S(\bm{B})=1$ if $\bm{B}$ a unit squre.
+\end{enumerate}
+
+
+\begin{thm}{Proposition}
+There is unique are functional for polygons in the Euuclidean plane. 
+\end{thm}
+
+We omit the proof of this proposition;
+it is quite technical and tedious. 
+
+\parbf{Remark.}
+Analogous statement hold for hyperbolic geometry, but the normalization property has to be formulated differently.
+For example one can state it as 
+\[\lim_{\epsilon\to0}\frac{S(T_\epsilon)}{\epsilon^2}=\tfrac12,\]
+where 
+$T_\epsilon$ is right the isosceles triangle with legs $\epsilon$.
+
+
+\begin{thm}{Corollary}
+Let $P$ and $\bm{B}$ be twopolygons and $P\subset \bm{B}$.
+Then $\area P\le \area \bm{B}$.
+\end{thm}
+
+To prove the above corollary one has to subdivide $\bm{B}$ into into polygons
+such that $P$ is one of them and apply additivity of area.
+corrolary above 
+follows from properties 
+(\ref{area:positive}) and (\ref{area:additive}).
+
+
+
+
+
+
+\section*{Area functional}
+\addtocontents{toc}{Area functional.}
+
+A function $F$ which returns a real number 
+for any triangle is called \emph{area functional} if it satisfies the followng conditions.
+
+\begin{enumerate}
+\item For any triangle $\triangle ABC$ we have $F(\triangle ABC)\ge 0$ and 
+if  $\triangle ABC$ nondegenerate then $F(\triangle ABC)>0$.
+\item If $\triangle ABC\cong\triangle A'B'C'$ 
+ then $F(\triangle ABC)=F(\triangle A'B'C')$
+\item For any triangle $ \triangle ABC$ and $D\in [BC]$ we have
+$$F(\triangle ABC)=F(\triangle ABD)+F(\triangle ADC).$$
+\end{enumerate}
+
+The proof of the following proposition is quite nontrivial.
+
+\begin{thm}{Proposition}
+There is an area functional. 
+
+Moreover it is unique up to multiplication by a positive constant. 
+That is, if $F$ and $F'$ are area functionals then there is a positive real number $k$ such that 
+\[F'(\triangle ABC)=k\cdot F(\triangle ABC)\]
+for any triangle $\triangle ABC$.
+\end{thm}
+
+Let $\triangle ABC$ be a right triagle with unit length
+and $F$ be an area functional such that $F(\triangle ABC)=\tfrac12$.
+Then for any triangle $\triangle XYZ$ the value $a=F(\triangle XYZ)$ is called \emph{area} of $\triangle XYZ$;
+brifly $a=\area(\triangle XYZ)$.
+
+
+
+
+
+
+\section*{Area of polygons}
+\addtocontents{toc}{Area of polygons.}
+
+We say that point $X$ belongs to the \emph{interior} of traingle $\triangle ABC$
+if $A$ and $X$ lie on the same side from the line $(BC)$,
+$B$ and $X$ lie on the same side from the line $(CA)$
+and 
+$C$ and $X$ lie on the same side from the line $(AB)$.
+
+Note that according to the definition,
+a degenerate triangle has emplty interior.
+
+The union of interior of $\triangle ABC$ and its sides $[AB]$, $[BC]$, $[CA]$
+will be called triangular set and denoted by $\bar\triangle ABC$.
+Recall that $\triangle ABC$ is just an ordered triple of distinct points in the plane,
+while $\bar\triangle ABC$ is a set.
+In particular $\bar\triangle ABC=\bar\triangle BAC$, while $\triangle ABC\ne\triangle BAC$.
+
+We say that two trianglar set do not \emph{overlap} if the interiors of the corresponding triangles do not interect.
+The nonoverlaping trianglar set might intesect along s subsets of its sides, in particular they might share a vertex.
+
+Assume that  $\bar\triangle_1,\dots,\bar\triangle_n$ a finite collection of pairwise nonvoerlapping triangles
+and $S$ is the union of all their interiours and sides.
+In this case we say that $S$ is subdivided into triangular sets $\bar\triangle_1,\dots,\bar\triangle_n$.
+The set which admit a subdivision into triangles are called \emph{polygonal sets}.
+
+\begin{thm}{Proposition-Definition}
+Assume that polygonal set $S$ admits two subdivision into triangles
+$\triangle_1,\dots,\triangle_n$
+and $\triangle'_1,\dots,\triangle'_k$
+then
+\[\area\triangle_1+\dots+\area\triangle_n
+=\area\triangle'_1+\dots+\area\triangle'_k.\]
+
+In particular, we can define the area of $S$ using the following formula
+\[\area S=\area\triangle_1+\dots+\area\triangle_n.\]
+
+\end{thm}
+
+Instead of giving the proof of the proposition above we will give one illustration s an exercis;
+in fact this exercise leads to the proof of the proposition.
+
+\begin{thm}{Exercise}
+Assume that the diagonals of quadrilateral $ABCD$ intersect at the point $M$.
+Show that
+\[\area\triangle ABC+\area\triangle CDA=\area\triangle BCD+\area\triangle DAB.\]
+\end{thm}
+
+Assume that diagonals of quadrilateral $ABCD$ interect at a point $M$.
+In this case the union of triangular sets $\bar\triangle ABC$ and 
+
+Assume $S$ is a \emph{polygonal sets} subdivided into triangles sets $\bar\triangle_1,\dots,\bar\triangle_n$.
+Set 
+\[\area S=\area\bar\triangle_1+\dots+\area\triangle_n.\]
+We claim that the right hand side does not depend on the choice of the subdivision that is, if $S$ admits an other subdivided into triangles sets $\bar\triangle_1',\dots,\bar\triangle_k'$
+then 
+\[\area\bar\triangle'_1+\dots+\area\bar\triangle'_k
+=
+\area\bar\triangle_1+\dots+\area\bar\triangle_n.\]
+
+
+Assume the point $D$ lies the vertices $B$ and $C$ of the $\triangle ABC$.
+Then trianglar set $\bar\triangle ABC$ admits a subdivision into  $\bar\triangle ABD$ and $\bar\triangle ACD$.
+
+Further, given a subdivision of polygonal set into trianglar sets $\bar\triangle_1,\dots,\bar\triangle_n$,
+we can subdivide as above 
+any trianglar set, say $\bar\triangle_1$,
+into two $\bar\triangle_1'$ and $\bar\triangle_1''$.
+Then 
+$\bar\triangle_1',\bar\triangle_1'',\bar\triangle_2\dots,\bar\triangle_n$
+forms a new subdivision of $S$.
+We also can revert this construction if the union of two triangular sets 
+say $\bar\triangle_i\cup \bar\triangle_j$ forms a triangular set.
+These two operations produce a new subdivision from the old one \emph{elmentary move}.
+
+According to ???,
+the elementary moves do not change the total sum of the areas of the triangular sets in the subdivision.
+In particular if two one subdivision of polygonal set can be obtained from the other by applying a sequence of elementary moves then 
+
+The following proposition 
+
+
+
+The proposition above makes possible to define area of polgonal sets
+as the sum of areas of all the tringle in its subdivision into triangles.
+
+
+\begin{thm}{Exercise}
+Assume $\blacktriangle ABC\supset \blacktriangle XYZ$.
+Show that 
+\[\area \triangle ABC\ge \area \triangle XYZ\]
+
+\end{thm}
+
+
+Any finite union of solid triangles segments and points is called polygonal set.
+
+A point $X$ in a polygonal set $P$ is called interior point of $P$ 
+if for some $\epsilon>0$ all the points $Y$ in the plane such that $XY<\epsilon$ lie in $P$.
+
+We say that a polygonal sets $P$ 
+is subdivided into polygonal sets $\bm{B}_1,\dots, \bm{B}_n$
+if $P=\bm{B}_1\cup\dots\cup \bm{B}_n$
+and no pair $\bm{B}_i$, $\bm{B}_j$ has common interior point.
+
+We say that a polygonal set $P$ 
+is smaller than a polygonal set $P'$
+if $P$ admis a subdivision into $\bm{B}_1,\dots, \bm{B}_n$
+and $P'$ contains 
+
+Two polygonal sets called 
+
+
+
+
 
 
 

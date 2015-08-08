@@ -123,10 +123,12 @@ Conclude that the graph is a line in $(\mathbb{R}^2,d_\infty)$.
 Applying the definition of line,
 the problems are reduced to the following:
 find the number of solutions for each of the following two equations
-$$|x-a|=|x-b|$$
-and 
-$$|x-a|=2\cdot |x-b|$$
-if $a\ne b$.
+\begin{align*}
+|x-a|&=|x-b|
+\intertext{and}
+|x-a|&=2\cdot |x-b|
+\end{align*}
+for $a\ne b$.
 
 Each can be solved by taking square of left and right hand sides.
 The numbers of solutions are 1 and 2 correspondingly.
@@ -322,7 +324,7 @@ By SSS,
 \parbf{Exercise~\ref{ex:ABC-motion}.}
 Without loss of generality, we may assume that $X$ is distinct from $A$, $B$ and $C$.
 
-Set $\iota(X)=X'$; assume $X'\ne X$.
+Set $f(X)=X'$; assume $X'\ne X$.
 
 Note that $AX=AX'$, $BX=BX'$ and $CX=CX'$.
 Therefore $\measuredangle ABX\equiv \pm \measuredangle ABX'$.
@@ -331,8 +333,8 @@ $$\measuredangle ABX\equiv - \measuredangle ABX'.$$
 The same way we get 
 $$\measuredangle CBX\equiv - \measuredangle CBX'.$$
 Subtracting these two identities from each other, we get
-$$\measuredangle ABC\equiv -\measuredangle ABC,$$
-that is, $\triangle ABC$ is degenerate, a contradiction. 
+$$\measuredangle ABC\equiv -\measuredangle ABC.$$
+Therefore $\triangle ABC$ is degenerate, a contradiction. 
 
 
 \section*{Chapter~\ref{chap:perp}}
@@ -605,6 +607,8 @@ The points of intersections of these two lines with $(AB)$ trisect the segment $
 \parbf{Exercise~\ref{ex:quadrilateral}.}
 Apply Theorem~\ref{thm:3sum} to $\triangle ABC$ and $\triangle BDA$.
 
+\parbf{Exercise~\ref{ex:midle}.}???
+
 \parbf{Exercise~\ref{ex:romb}.}
 Since $\triangle ABC$ is isosceles, $\measuredangle CAB=\measuredangle BCA$.
  
@@ -620,6 +624,10 @@ It follows that $(AB)\parallel (CD)$.
 \parbf{Exercise~\ref{ex:diad-par}.}
 Apply Lemma~\ref{lem:parallelogram},
 Transversal property (\ref{thm:parallel-2}) to the diagonals and a pair of opposite sides and then ASA-congruence condition (\ref{thm:ASA}).
+
+\parbf{Exercise~\ref{ex:rectangle}.}???
+
+\parbf{Exercise~\ref{ex:romb2}.}???
 
 \parbf{Exercise~\ref{ex:coordinates}.} \textit{(a).} Use the uniqueness of parallel line (Theorem~\ref{thm:parallel}).
 
@@ -764,7 +772,7 @@ and two inscribed angles with vertex at $O$.
 \parbf{Exercise~\ref{ex:VVAA}.} 
 Note that $\measuredangle AA'B=\pm\tfrac\pi2$ and $\measuredangle AB'B=\pm\tfrac\pi2$.
 Then apply Theorem~\ref{thm:inscribed-quadrilateral}
-to quadrilateral $AA'BB'$.
+to $\square AA'BB'$.
 
 \begin{wrapfigure}{o}{34mm}
 \begin{lpic}[t(-0mm),b(-2mm),r(-1mm),l(0mm)]{pics/perp=constr(1)}
@@ -783,7 +791,7 @@ apply Theorem~\ref{thm:orthocenter} and Corollary~\ref{cor:right-angle-diameter}
 
 
 \parbf{Exercise~\ref{ex:secant-circles}.}
-Apply Theorem~\ref{thm:inscribed-quadrilateral} twice for quadrilaterals $ABYX$ and $ABY'X'$ and use Transversal property (\ref{thm:parallel-2}).
+Apply Theorem~\ref{thm:inscribed-quadrilateral} twice for $\square ABYX$ and $\square ABY'X'$ and use Transversal property (\ref{thm:parallel-2}).
 
 \parbf{Exercise~\ref{ex:two-chords}.} Apply Transversal property (\ref{thm:parallel-2}) and the theorem on inscribed angle (\ref{thm:inscribed-angle}).
 
@@ -1225,7 +1233,7 @@ Guess the construction from the diagram.
 \parbf{Exercise~\ref{ex:R-hom}.}
 Let us denote by $O$, $E$, $A$ and $B$ the points with coordinates $(0,0)$, $(1,0)$, $(a,0)$ and $(b,0)$ correspondingly.
 
-To construct point $W$ with coordinates $(0,a+b)$, try to construct two parallelograms $ABPQ$ and $BWPQ$.
+To construct point $W$ with coordinates $(0,a+b)$, try to construct two parallelograms $\square ABPQ$ and $\square BWPQ$.
 
 To construct $Z$ with coordinates $(0,a\cdot b)$
 choose a line $(OE')\ne (OE)$
@@ -1714,3 +1722,247 @@ Set  $Z=(XY)\cap (X'Y')$.
 Note that $(PZ)$ pass through the common center.
 
 The center can be found as the intersection of the constructed line and an other line constructed the same way.
+
+\section*{Chapter~\ref{chap:area}}
+\setcounter{eqtn}{0} 
+
+\parbf{Exercise~\ref{ex:triangle-convex}.}
+Assume contrary; 
+that is there is a point $W\in [XY]$ such that $W\notin\solidtriangle ABC$.
+
+Without loss of generality, we may assume that $W$ and $A$ lie on opposite sides from the line $(BC)$.
+
+It imples that both segments $[WX]$ and $[WY]$ intersect $(BC)$.
+By Axiom~\ref{def:birkhoff-axioms:1}, $W\in (BC)$,
+a contradiction.
+
+\parbf{Exercise~\ref{ex:vertex}.} 
+To prove the ``only if'' part consider the line passing through the vertex and parallel to the opposite side.
+
+To prove ``if'' part, use Pasch's theorem \ref{thm:pasch}.
+
+\begin{wrapfigure}[6]{o}{26mm}
+\begin{lpic}[t(-6mm),b(0mm),r(0mm),l(0mm)]{pics/two-parallelograms-sol(1)}
+\lbl[tr]{1,7;$A$}
+\lbl[t]{12,0;$B$}
+\lbl[l]{21,20;$C$}
+\lbl[b]{9,27.5;$D$}
+\lbl[tl]{16,9;$B'$}
+\lbl[b]{18,28.5;$C'$}
+\lbl[br]{4,26;$D'$}
+\lbl[b]{23,29;$E$}
+\end{lpic}
+\end{wrapfigure}
+
+\parbf{Exercise~\ref{ex:two-parallelograms}.}
+Denote by $E$ the point of intersection 
+of the lines $(BC)$ and $(C'D')$.
+
+Use Proposition~\ref{prop:area-parallelogram} to prove two identities
+\begin{align*}
+\area(\solidsquare AB'ED)
+&=\area(\solidsquare ABCD),
+\\
+\area(\solidsquare AB'ED)
+&=\area(\solidsquare AB'C'D').
+\end{align*}
+Hence the exercise follows.
+
+\parbf{Exercise~\ref{ex:three-trig}.}
+Without loss of generality, we may assume that the angles $\angle ABC$ and $\angle BCA$ are acute.
+
+\begin{wrapfigure}{o}{20mm}
+\begin{lpic}[t(-2mm),b(0mm),r(0mm),l(0mm)]{pics/three-areas(1)}
+\lbl[tr]{0,0;$A$}
+\lbl[tl]{18,0;$B$}
+\lbl[b]{6,16;$C$}
+\lbl[bl]{12,10;$A'$}
+\lbl[br]{3,7;$B'$}
+\end{lpic}
+\end{wrapfigure}
+
+Denote by $A'$ and $B'$ the foot points of $A$ and $B$ on $(BC)$ and $(AC)$ correspondingly.
+Note that $h_A=AA'$ and $h_B=BB'$.
+
+Note that $\triangle AA'C\sim \triangle BB'C$;
+indeed the the angle at $C$ is shared and the angles at $A'$ and $B'$ are right.
+In particular
+\[\frac{AA'}{BB'}=\frac{AC}{BC}\]
+or, equivalently,
+\[h_A\cdot BC=h_B\cdot AC.\]
+
+The same argument, we get 
+\[h_C\cdot AB=h_B\cdot AC.\]
+Hence the statement follows.
+
+\begin{wrapfigure}{o}{22mm}
+\begin{lpic}[t(-6mm),b(0mm),r(0mm),l(0mm)]{pics/trigs-in-parallelogram(1)}
+\lbl[tr]{0,1;$A$}
+\lbl[tl]{15,1;$B$}
+\lbl[tl]{19,17;$C$}
+\lbl[br]{5,15;$D$}
+\lbl[l]{17.5,6.5;$E$}
+\lbl[r]{1,6.5;$F$}
+\lbl[b]{11.5,8.5;$M$}
+
+\end{lpic}
+\end{wrapfigure}
+
+\parbf{Exercise~\ref{ex:half-parallelogram}.}
+Draw the line $\ell$ 
+through $M$ parallel to the sides $[AB]$ and $[CD]$;
+it subdivides $\solidsquare ABCD$ into two solid parallelograms,
+say 
+$\solidsquare ABEF$ and
+$\solidsquare CDFE$.
+In particular,
+\[\area(\solidsquare ABCD)
+=
+\area(\solidsquare ABEF)+\area(\solidsquare CDFE).\]
+
+By Proposition~\ref{prop:area-parallelogram} and Theorem~\ref{thm:area-of-triangle} we get 
+\begin{align*}
+\area(\solidsquare ABM)&=\tfrac12\cdot\area(\solidsquare ABEF),
+\\
+\area(\solidsquare CDM)&=\tfrac12\cdot\area(\solidsquare CDFE)
+\end{align*}
+Hence the result follows.
+
+\parbf{Exercise~\ref{ex:area-diag}.}
+Denote by $h_A$ and $h_C$ the distances from $A$ and $C$ to the line $(BD)$.
+According to Theorem~\ref{thm:area-of-triangle},
+\begin{align*}
+\area(\solidtriangle ABM)&=\tfrac12\cdot h_A\cdot BM;
+\\
+\area(\solidtriangle BCM)&=\tfrac12\cdot h_C\cdot BM;
+\\
+\area(\solidtriangle CDM)&=\tfrac12\cdot h_C\cdot DM;
+\\
+\area(\solidtriangle ABM)&=\tfrac12\cdot h_A\cdot DM;
+\end{align*}
+Therefore
+\begin{align*}
+\area(\solidtriangle ABM)\cdot \area(\solidtriangle CDM)
+&=\tfrac14 \cdot h_A\cdot h_C\cdot DM\cdot BM=
+\\
+&=\area(\solidtriangle BCM)\cdot \area(\solidtriangle DAM).
+\end{align*}
+
+\parbf{Exercise~\ref{ex:pyth-2}.}
+Assuming $a>b$,
+we subdivided $\solidsquare_c$ into $\solidsquare_{a-b}$ and for triangles congruent to $\solidtriangle$.
+Therefore
+\[\area\solidsquare_c=\area\solidsquare_{a-b}+4\area\solidtriangle.
+\eqlbl{eq:pyth-2}\]
+
+According to Theorem~\ref{thm:area-of-triangle},
+\[\area\solidtriangle=\tfrac12\cdot a\cdot b.\]
+Therefore the identity \ref{eq:pyth-2} can be written as 
+\[c^2=(a-b)^2+2\cdot a\cdot b.\]
+Simplifying, we get Pythagorean theorem.
+
+The cases $a=b$ is simpler.
+The case $b>a$ can be done the same way.
+
+\parbf{Exercise~\ref{ex:sum-3-dist}.} Let $X$ be a point inside of triangle $\triangle ABC$.
+Note that $\solidtriangle ABC$ is subdivided into $\solidtriangle ABX$, $\solidtriangle BCX$ and $\solidtriangle CAX$.
+Therefore
+\[\area(\solidtriangle ABX)
++\area(\solidtriangle BCX)
++\area(\solidtriangle CAX)
+=\area(\solidtriangle ABC).\]
+
+Set $a=AB=BC=CA$.
+Denote by $h_1$, $h_2$ and $h_3$ are the distances from $X$ to the sides $[AB]$, $[BC]$ and $[CA]$. 
+Then by Theorem~\ref{thm:area-of-triangle},
+\begin{align*}
+\area(\solidtriangle ABX)&=\tfrac12\cdot h_1\cdot a
+\\
+\area(\solidtriangle BCX)&=\tfrac12\cdot h_2\cdot a
+\\
+\area(\solidtriangle CAX)&=\tfrac12\cdot h_3\cdot a
+\end{align*}
+Therefore 
+\[h_1+h_2+h_3=2\cdot\frac{\area(\solidtriangle ABC)}a.\]
+
+{
+
+\begin{wrapfigure}{o}{37mm}
+\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/area-median-sol(1)}
+\lbl[r]{8.5,23.5;$X$}
+\lbl[tr]{2,36;$A$}
+\lbl[tl]{36,6.5;$B$}
+\lbl[tr]{1,6.5;$C$}
+\lbl[tr]{18,6.5;$Y$}
+\lbl[W]{8,12,30;$b$}
+\lbl[W]{29,4.5,30;$c$}
+\end{lpic}
+\end{wrapfigure}
+
+\parbf{Exercise~\ref{ex:area-medians}.}
+Let $X$ be a point inside $\triangle ABC$.
+Denote by $Y$ the point of intersection of $(AX)$ and $[BC]$.
+
+Denote by $b$ and $c$ the distances from $B$ and $C$ to the line $(AX)$. 
+
+By Theorem~\ref{thm:area-of-triangle}, 
+we get that the following equivalences
+\begin{align*}
+\area (\solidtriangle AXB)&=\area (\solidtriangle AXC),
+\\
+&\Updownarrow
+\\
+b&=c,
+\\
+&\Updownarrow
+\\
+\area (\solidtriangle AYB)&=\area (\solidtriangle AYC),
+\\
+&\Updownarrow
+\\
+BY&=CY
+\end{align*}
+Hence the first part follows.
+
+}
+
+\begin{wrapfigure}{o}{37mm}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/area-median-sol2(1)}
+\lbl[trw]{13,10;$M$}
+\lbl[b]{13,25.5;$A$}
+\lbl[tl]{31,0;$B$}
+\lbl[tr]{1,4;$C$}
+\lbl[t]{11,3;$A'$}
+\lbl[bl]{22,13;$B'$}
+\lbl[br]{6,16;$C'$}
+\end{lpic}
+\end{wrapfigure}
+
+\parbf{Exercise~\ref{ex:area-medians-2}.}
+Denote by $M$ the intersection of 
+two medians $[AA']$ and $[BB']$.
+From Exercise~\ref{ex:area-medians} we have 
+\begin{align*}
+\area (\solidtriangle ABM)
+&=\area (\solidtriangle ACM)
+\\
+\area (\solidtriangle ABM)
+&=\area (\solidtriangle CBM)
+\end{align*}
+
+Therefore 
+\[\area (\solidtriangle BCM)
+=\area (\solidtriangle ACM)\]
+and according to Exercise~\ref{ex:area-medians},
+we $M$ lies on the median $[CC']$.
+That is, medians $[AA']$, $[BB']$ and $[CC']$ intersect at one point $M$.
+
+By Theorem~\ref{thm:area-of-triangle},
+we get
+\[\area (\solidtriangle C'AM)
+=\tfrac12\cdot\area (\solidtriangle BAM)
+=\tfrac12\cdot\area (\solidtriangle CAM) \]
+Applying Claim\ref{clm:area-ratio},
+we get 
+\[\frac{MC'}{MC}=\frac{\area (\solidtriangle C'AM)}{\area (\solidtriangle CAM)}=\tfrac12.\]
+

@@ -73,6 +73,7 @@
   \indexspace
 
   \item defect of triangle, \hyperpage{93}
+  \item degenerate polygonal set, \hyperpage{176}
   \item diagonal
     \subitem diagonals of quadrilateral, \hyperpage{58}
   \item diameter, \hyperpage{47}
@@ -84,6 +85,7 @@
 
   \indexspace
 
+  \item elementary set, \hyperpage{176}
   \item elementary transformation, \hyperpage{161}
   \item endpoint, \hyperpage{73}
   \item equidistant, \hyperpage{114}
@@ -93,7 +95,7 @@
   \item Euclidean plane, \hyperpage{23}
   \item Euclidean space, \hyperpage{132}
   \item Euler's formula, \hyperpage{159}
-  \item excenter, \hyperpage{186}
+  \item excenter, \hyperpage{196}
 
   \indexspace
 
@@ -130,7 +132,7 @@
   \indexspace
 
   \item ideal point, \hyperpage{100}
-  \item identity map, \hyperpage{199}
+  \item identity map, \hyperpage{209}
   \item imaginary complex number, \hyperpage{158}
   \item imaginary line, \hyperpage{158}
   \item incenter, \hyperpage{64}
@@ -194,6 +196,7 @@
   \item parallel tool, \hyperpage{123}
   \item parallel translation, \hyperpage{161}
   \item parallelogram, \hyperpage{58}
+    \subitem solid parallelogram, \hyperpage{176}
   \item pencil, \hyperpage{131}
   \item perpendicular, \hyperpage{41}
   \item perpendicular bisector, \hyperpage{41}
@@ -213,8 +216,11 @@
   \item Poincar\'e disk model, \hyperpage{99}
   \item point, \hyperpage{13}
     \subitem ideal point, \hyperpage{100}
+    \subitem point inside a triangle, \hyperpage{175}
   \item polar coordinates, \hyperpage{160}
   \item polarity, \hyperpage{136}
+  \item polygonal set, \hyperpage{176}
+    \subitem degenerate polygonal set, \hyperpage{176}
   \item projective plane, \hyperpage{138}
   \item projective transformation, \hyperpage{134}
 
@@ -223,6 +229,7 @@
   \item quadrilateral, \hyperpage{58}
     \subitem inscribed quadrilateral, \hyperpage{72}
     \subitem nondegenerate quadrilateral, \hyperpage{58}
+    \subitem solid quadrilateral, \hyperpage{176}
 
   \indexspace
 
@@ -231,7 +238,10 @@
   \item real complex number, \hyperpage{158}
   \item real line, \hyperpage{13}, \hyperpage{158}
   \item real projective plane, \hyperpage{131}
+  \item rectangle, \hyperpage{59}
+    \subitem solid rectangle, \hyperpage{176}
   \item reflection, \hyperpage{43}
+  \item rhombus, \hyperpage{59}
   \item rotational homothety, \hyperpage{162}
   \item ruler-and-compass construction, \hyperpage{48}
 
@@ -248,9 +258,17 @@
   \item side-angle-side condition, \hyperpage{37}
   \item side-side-side congruence condition, \hyperpage{39}
   \item similar triangles, \hyperpage{52}
+  \item solid parallelogram, \hyperpage{176}
+  \item solid quadrilateral, \hyperpage{176}
+  \item solid rectangle, \hyperpage{176}
+  \item solid square, \hyperpage{176}
+  \item solid triange, \hyperpage{175}
   \item sphere, \hyperpage{143}
   \item spherical distance, \hyperpage{143}
+  \item square, \hyperpage{59}
+    \subitem solid square, \hyperpage{176}
   \item stereographic projection, \hyperpage{147}
+  \item subdivision of polygonal set, \hyperpage{179}
 
   \indexspace
 
@@ -258,6 +276,8 @@
   \item tangent half-line, \hyperpage{73}
   \item tangent line, \hyperpage{47}
   \item transversal, \hyperpage{57}
+  \item triange
+    \subitem solid triange, \hyperpage{175}
   \item triangle, \hyperpage{19}
     \subitem congruent triangles, \hyperpage{19}
     \subitem degenerate triangle, \hyperpage{26}
