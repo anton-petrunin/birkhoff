@@ -1,5 +1,5 @@
-\part*{Additional topics}
-\addtocontents{toc}{\newpage\protect\begin{center}}
+%\part*{Additional topics}
+\addtocontents{toc}{\protect\begin{center}}
 \addtocontents{toc}{\large{\bf Additional topics}}
 \addtocontents{toc}{\protect\end{center}}
 
@@ -90,15 +90,8 @@ where
 |v_B|&=\sqrt{x_B^2+y_B^2+z_B^2}.
 \end{align*}
 
-Now, assume the points $A$ and $B$ 
-lie on the unit sphere in $\mathbb{R}^3$ centered at the origin.
-In this case $|v_A|=|v_B|=1$.
-By \ref{eq:scal-angle} we get
-$$\cos AB_s=\langle v_A,v_B\rangle.
-\eqlbl{eq:scalar-s-dist}$$
-
-\begin{wrapfigure}[7]{o}{33mm}
-\begin{lpic}[t(-0mm),b(-0mm),r(0mm),l(0mm)]{pics/s-right-trig-new(1)}
+\begin{wrapfigure}[8]{o}{33mm}
+\begin{lpic}[t(-5mm),b(-0mm),r(0mm),l(0mm)]{pics/s-right-trig-new(1)}
 \lbl[t]{15,13;$O$}
 \lbl[rbw]{14,28;$C$}
 \lbl[rb]{9,20;$B$}
@@ -108,6 +101,13 @@ $$\cos AB_s=\langle v_A,v_B\rangle.
 \lbl[lb]{16,32;$z$}
 \end{lpic}
 \end{wrapfigure}
+
+Now, assume the points $A$ and $B$ 
+lie on the unit sphere in $\mathbb{R}^3$ centered at the origin.
+In this case $|v_A|=|v_B|=1$.
+By \ref{eq:scal-angle} we get
+$$\cos AB_s=\langle v_A,v_B\rangle.
+\eqlbl{eq:scalar-s-dist}$$
 
 \parit{Proof.}
 Since the angle at $C$ is right,
@@ -124,6 +124,7 @@ z_A&=\langle v_C,v_A\rangle
 z_B&=\langle v_C,v_B\rangle
 =\cos a.
 \end{align*}
+
 Applying, \ref{eq:scalar-s-dist} again, we get
 \begin{align*}
 \cos c &=\langle v_A,v_B\rangle=
@@ -304,7 +305,7 @@ The described map $\Sigma^+\to \Pi^+$ is called \index{central projection}\emph{
 
 In spherical geometry,
 central projection is analogous to
-the Klein model of hyperbolic plane which is discussed in Chapter~\ref{chap:klein}.
+the projective model of hyperbolic plane which is discussed in Chapter~\ref{chap:klein}.
 
 Note that the central projection sends intersections of great circles with $\Sigma^+$ to the lines in $\Pi^+$.
 The later follows since great circles are formed by intersection of $\Sigma$ with planes passing through the origin and the lines in  $\Pi^+$ are formed by intersection of $\Pi^+$ with these planes.

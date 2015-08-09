@@ -1,298 +1,310 @@
 \begin{theindex}
 
-  \item $(u,v;w,z)$, \hyperpage{163}
-  \item $\cong$, \hyperpage{19}
-  \item $\cosh$, \hyperpage{154}
-  \item $\infty$, \hyperpage{80}
-  \item $\parallel$, \hyperpage{51}
-  \item $\perp$, \hyperpage{41}
-  \item $\sim$, \hyperpage{52}
-  \item $\sinh$, \hyperpage{118}
-  \item $d_1$, \hyperpage{13}
-  \item $d_2$, \hyperpage{13}
-  \item $d_\infty$, \hyperpage{13}
+  \item $\angle$, \hyperpage{14}
+  \item $\infty$, \hyperpage{70}
+  \item $\measuredangle$, \hyperpage{14}
+  \item $\solidsquare$, \hyperpage{153}
+  \item $\solidtriangle$, \hyperpage{152}
+  \item $\square$, \hyperpage{52}
+  \item $\triangle$, \hyperpage{17}
+  \item $\cong$, \hyperpage{17}, \hyperpage{153}
+  \item $\equiv$, \hyperpage{15}
+  \item $\parallel$, \hyperpage{45}
+  \item $\perp$, \hyperpage{36}
+  \item $\sim$, \hyperpage{46}
+  \item $(PQ)$, $[PQ)$, $[PQ]$, \hyperpage{13}
+  \item $(PQ)_h$, $[PQ)_h$,$[PQ]_h$, \hyperpage{87}
+  \item $(u,v;w,z)$, \hyperpage{142}
 
   \indexspace
 
-  \item absolute, \hyperpage{100}
-  \item absolute plane, \hyperpage{89}
-  \item absolute value, \hyperpage{158}
+  \item AA similarity condition, \hyperpage{47}
+  \item absolute, \hyperpage{87}
+  \item absolute plane, \hyperpage{77}
+  \item absolute value, \hyperpage{137}
   \item acute
-    \subitem acute angle, \hyperpage{41}
-    \subitem acute triangle, \hyperpage{54}
-  \item affine transformation, \hyperpage{123}, \hyperpage{134}
-  \item altitude, \hyperpage{62}
-  \item angle, \hyperpage{16}
-    \subitem acute angle, \hyperpage{41}
-    \subitem angle of parallelism, \hyperpage{111}
-    \subitem negative angle, \hyperpage{29}
-    \subitem obtuse angle, \hyperpage{41}
-    \subitem positive angle, \hyperpage{29}
-    \subitem right angle, \hyperpage{41}
-    \subitem straight angle, \hyperpage{25}
-    \subitem vertical angles, \hyperpage{26}
-  \item angle measure, \hyperpage{23}
-    \subitem hyperbolic angle measure, \hyperpage{101}
-  \item angle-side-angle congruence condition, \hyperpage{37}
-  \item arc, \hyperpage{73}
-  \item area, \hyperpage{96}
-  \item ASA congruence condition, \hyperpage{37}
-  \item asymptotically parallel lines, \hyperpage{111}
+    \subitem angle, \hyperpage{36}
+    \subitem triangle, \hyperpage{48}
+  \item affine transformation, \hyperpage{106}, \hyperpage{116}
+  \item altitude, \hyperpage{56}
+  \item angle, \hyperpage{14}
+    \subitem angle of parallelism, \hyperpage{97}
+    \subitem negative angle, \hyperpage{25}
+    \subitem obtuse angle, \hyperpage{36}
+    \subitem positive angle, \hyperpage{25}
+    \subitem right angle, \hyperpage{36}
+    \subitem straight angle, \hyperpage{22}
+    \subitem vertical angles, \hyperpage{23}
+  \item angle measure, \hyperpage{20}
+    \subitem hyperbolic angle measure, \hyperpage{88}
+  \item arc, \hyperpage{64}
+  \item area, \hyperpage{154}
+  \item ASA congruence condition, \hyperpage{32}
+  \item asymptotically parallel lines, \hyperpage{97}
 
   \indexspace
 
-  \item base of isosceles triangle, \hyperpage{38}
-  \item between, \hyperpage{25}
-  \item bijection, \hyperpage{14}
-  \item bisector, \hyperpage{45}
-    \subitem external bisector, \hyperpage{45}
+  \item base, \hyperpage{33}
+  \item between, \hyperpage{22}
+  \item bijection, \hyperpage{12}
+  \item bisector
+    \subitem angle bisector, \hyperpage{40}
+    \subitem external bisector, \hyperpage{40}
+    \subitem perpendicular bisector, \hyperpage{36}
 
   \indexspace
 
-  \item center, \hyperpage{47}
-  \item center of the pencil, \hyperpage{131}
-  \item central projection, \hyperpage{148}
-  \item centroid, \hyperpage{63}
-  \item chord, \hyperpage{47}
-  \item circle, \hyperpage{47, 48}
-  \item circle arc, \hyperpage{73}
-  \item circle of Apollonius, \hyperpage{78}
-  \item circline, \hyperpage{80}
-  \item circumtool, \hyperpage{171}
-  \item collinear, \hyperpage{123}
-  \item collinear points, \hyperpage{134}
-  \item complex conjugate, \hyperpage{158}
-  \item concurrent, \hyperpage{131}
-  \item conformal factor, \hyperpage{117}
-  \item congruent triangles, \hyperpage{19}
-  \item consistent, \hyperpage{95}
-  \item cross-ratio, \hyperpage{78}
-    \subitem complex cross-ratio, \hyperpage{161}, \hyperpage{163}
-  \item curvature, \hyperpage{96}
+  \item center, \hyperpage{42}
+    \subitem center of the pencil, \hyperpage{113}
+  \item central projection, \hyperpage{126}
+  \item centroid, \hyperpage{57}
+  \item $\cosh$, \hyperpage{133}
+  \item chord, \hyperpage{42}
+  \item circle, \hyperpage{42}
+    \subitem circle of Apollonius, \hyperpage{68}
+  \item circle arc, \hyperpage{64}
+  \item circline, \hyperpage{70}
+  \item circumtool, \hyperpage{149}
+  \item collinear, \hyperpage{106}
+  \item collinear points, \hyperpage{116}
+  \item complex conjugate, \hyperpage{137}
+  \item concurrent, \hyperpage{113}
+  \item conformal disk model, \hyperpage{86}
+  \item conformal factor, \hyperpage{103}
+  \item congruent
+    \subitem sets, \hyperpage{153}
+  \item congruent triangles, \hyperpage{17}
+  \item consistent, \hyperpage{83}
+  \item convex set, \hyperpage{152}
+  \item cross-ratio, \hyperpage{68}
+    \subitem complex cross-ratio, \hyperpage{140}, \hyperpage{142}
+  \item curvature, \hyperpage{84}
 
   \indexspace
 
-  \item defect of triangle, \hyperpage{93}
-  \item degenerate polygonal set, \hyperpage{176}
-  \item diagonal
-    \subitem diagonals of quadrilateral, \hyperpage{58}
-  \item diameter, \hyperpage{47}
-  \item direct motion, \hyperpage{44}
-  \item discrete metric, \hyperpage{13}
-  \item distance, \hyperpage{13}
-  \item distance-preserving map, \hyperpage{14}
-  \item duality, \hyperpage{136}
+  \item $d_1$, $d_2$, $d_\infty$, \hyperpage{11}
+  \item defect of triangle, \hyperpage{81}
+  \item degenerate
+    \subitem  triangle, \hyperpage{23}
+    \subitem polygonal set, \hyperpage{153}
+    \subitem quadrilateral, \hyperpage{52}
+  \item diagonals of quadrilateral, \hyperpage{52}
+  \item diameter, \hyperpage{42}
+  \item direct motion, \hyperpage{39}
+  \item discrete metric, \hyperpage{11}
+  \item distance, \hyperpage{11}
+  \item distance-preserving map, \hyperpage{12}
+  \item duality, \hyperpage{118}
 
   \indexspace
 
-  \item elementary set, \hyperpage{176}
-  \item elementary transformation, \hyperpage{161}
-  \item endpoint, \hyperpage{73}
-  \item equidistant, \hyperpage{114}
-  \item equilateral triangle, \hyperpage{38}
-  \item equivalence relation, \hyperpage{53}
-  \item Euclidean metric, \hyperpage{13}
-  \item Euclidean plane, \hyperpage{23}
-  \item Euclidean space, \hyperpage{132}
-  \item Euler's formula, \hyperpage{159}
-  \item excenter, \hyperpage{196}
+  \item elementary set, \hyperpage{153}
+  \item elementary transformation, \hyperpage{140}
+  \item endpoint of arc, \hyperpage{64}
+  \item equidistant, \hyperpage{100}
+  \item equilateral triangle, \hyperpage{33}
+  \item equivalence relation, \hyperpage{47}
+  \item Euclidean metric, \hyperpage{11}
+  \item Euclidean plane, \hyperpage{20}
+  \item Euclidean space, \hyperpage{114}
+  \item Euler's formula, \hyperpage{138}
+  \item excenter, \hyperpage{174}
 
   \indexspace
 
-  \item Fano plane, \hyperpage{139}
-  \item Fermat prime, \hyperpage{168}
-  \item field automorphism, \hyperpage{125}
-  \item finite projective plane, \hyperpage{139}
-  \item foot point, \hyperpage{42}
+  \item Fano plane, \hyperpage{121}
+  \item Fermat prime, \hyperpage{146}
+  \item field automorphism, \hyperpage{108}
+  \item finite projective plane, \hyperpage{121}
+  \item foot point, \hyperpage{37}
 
   \indexspace
 
-  \item great circle, \hyperpage{144}
+  \item great circle, \hyperpage{123}
 
   \indexspace
 
-  \item h-angle measure, \hyperpage{101}
-  \item h-circle, \hyperpage{104}
-  \item h-half-line, \hyperpage{100}
-  \item h-line, \hyperpage{100}
-  \item h-plane, \hyperpage{100}
-  \item h-point, \hyperpage{100}
-  \item h-radius, \hyperpage{104}
-  \item h-segment, \hyperpage{100}
-  \item half-plane, \hyperpage{31}
-  \item holomorphic function, \hyperpage{164}
-  \item horocycle, \hyperpage{114}
-  \item hyperbolic angle measure, \hyperpage{101}
-  \item hyperbolic cosine, \hyperpage{154}
-  \item hyperbolic geometry, \hyperpage{95}
-  \item hyperbolic plane, \hyperpage{100}
-  \item hyperbolic sine, \hyperpage{118}
-  \item hypotenuse, \hyperpage{54}
+  \item h-angle measure, \hyperpage{88}
+  \item h-circle, \hyperpage{91}
+  \item h-half-line, \hyperpage{87}
+  \item h-line, \hyperpage{87}
+  \item h-plane, \hyperpage{87}
+  \item h-point, \hyperpage{87}
+  \item h-radius, \hyperpage{91}
+  \item h-segment, \hyperpage{87}
+  \item half-plane, \hyperpage{27}
+  \item holomorphic function, \hyperpage{143}
+  \item horocycle, \hyperpage{100}
+  \item hyperbolic angle measure, \hyperpage{88}
+  \item hyperbolic cosine, \hyperpage{133}
+  \item hyperbolic geometry, \hyperpage{83}
+  \item hyperbolic plane, \hyperpage{87}
+  \item hyperbolic sine, \hyperpage{104}
+  \item hypotenuse, \hyperpage{48}
 
   \indexspace
 
-  \item ideal point, \hyperpage{100}
-  \item identity map, \hyperpage{209}
-  \item imaginary complex number, \hyperpage{158}
-  \item imaginary line, \hyperpage{158}
-  \item incenter, \hyperpage{64}
-  \item incidence structure, \hyperpage{123}
-  \item incircle, \hyperpage{64}
-  \item indirect motion, \hyperpage{44}
-  \item inradius, \hyperpage{64}
-  \item inscribed triangle, \hyperpage{70}
-  \item intersecting lines, \hyperpage{51}
-  \item inverse, \hyperpage{14}
-  \item inversion, \hyperpage{77}
-    \subitem center of inversion, \hyperpage{77}, \hyperpage{145}
-    \subitem circle of inversion, \hyperpage{77}
-    \subitem inversion in a sphere, \hyperpage{145}
-    \subitem sphere of inversion, \hyperpage{145}
-  \item inversion in  circline, \hyperpage{83}
-  \item inversion in the line, \hyperpage{83}
-  \item inversive plane, \hyperpage{80}
-  \item inversive space, \hyperpage{145}
-  \item inversive transformation, \hyperpage{127}
-  \item irrational point, \hyperpage{171}
-  \item isometry, \hyperpage{14}
-  \item isosceles triangle, \hyperpage{38}
+  \item ideal point, \hyperpage{87}
+  \item identity map, \hyperpage{187}
+  \item imaginary complex number, \hyperpage{137}
+  \item imaginary line, \hyperpage{137}
+  \item incenter, \hyperpage{58}
+  \item incidence structure, \hyperpage{106}
+  \item incircle, \hyperpage{58}
+  \item indirect motion, \hyperpage{39}
+  \item inradius, \hyperpage{58}
+  \item inscribed triangle, \hyperpage{61}
+  \item inside
+    \subitem inside a circle, \hyperpage{42}
+    \subitem inside a triangle, \hyperpage{152}
+  \item intersecting lines, \hyperpage{45}
+  \item inverse, \hyperpage{12}
+  \item inversion, \hyperpage{67}
+    \subitem center of inversion, \hyperpage{67}, \hyperpage{124}
+    \subitem circle of inversion, \hyperpage{67}
+    \subitem inversion in  circline, \hyperpage{73}
+    \subitem inversion in a sphere, \hyperpage{124}
+    \subitem inversion in the line, \hyperpage{73}
+    \subitem sphere of inversion, \hyperpage{124}
+  \item inversive plane, \hyperpage{70}
+  \item inversive space, \hyperpage{124}
+  \item inversive transformation, \hyperpage{110}
+  \item irrational point, \hyperpage{149}
+  \item isometry, \hyperpage{12}
+  \item isosceles triangle, \hyperpage{33}
 
   \indexspace
 
-  \item Klein model, \hyperpage{152}
+  \item Klein mode, \hyperpage{128}
 
   \indexspace
 
-  \item leg, \hyperpage{54}
-  \item line, \hyperpage{15}
-  \item Lobachevskian geometry, \hyperpage{95}
+  \item leg, \hyperpage{48}
+  \item line, \hyperpage{13}
+  \item Lobachevskian geometry, \hyperpage{83}
 
   \indexspace
 
-  \item M\"obius transformation, \hyperpage{161}
-    \subitem elementary transformation, \hyperpage{161}
-  \item Manhattan metric, \hyperpage{13}
-  \item maximum metric, \hyperpage{13}
-  \item metric, \hyperpage{12}
-  \item metric space, \hyperpage{13}
-  \item motion, \hyperpage{14}
+  \item M\"obius transformation, \hyperpage{140}
+  \item Manhattan metric, \hyperpage{11}
+  \item maximum metric, \hyperpage{11}
+  \item metric, \hyperpage{10}
+  \item metric space, \hyperpage{11}
+  \item motion, \hyperpage{12}
 
   \indexspace
 
-  \item neutral plane, \hyperpage{89}
+  \item neutral plane, \hyperpage{77}
 
   \indexspace
 
-  \item obtuse
-    \subitem obtuse angle, \hyperpage{41}
-  \item order of finite projective plane, \hyperpage{139}
-  \item orthic triangle, \hyperpage{65}
-  \item orthocenter, \hyperpage{62}
+  \item obtuse angle, \hyperpage{36}
+  \item order of finite projective plane, \hyperpage{121}
+  \item orthic triangle, \hyperpage{59}
+  \item orthocenter, \hyperpage{56}
+  \item outside a circle, \hyperpage{42}
 
   \indexspace
 
-  \item parallel lines, \hyperpage{51}
-    \subitem ultra parallel lines, \hyperpage{111}
-  \item parallel tool, \hyperpage{123}
-  \item parallel translation, \hyperpage{161}
-  \item parallelogram, \hyperpage{58}
-    \subitem solid parallelogram, \hyperpage{176}
-  \item pencil, \hyperpage{131}
-  \item perpendicular, \hyperpage{41}
-  \item perpendicular bisector, \hyperpage{41}
-  \item perpendicular circles, \hyperpage{82}
-  \item perpendicular circlines, \hyperpage{82}
-  \item perspective projection, \hyperpage{132}
-  \item pint at infinity, \hyperpage{79}
-  \item plan
-    \subitem hyperbolic plane, \hyperpage{100}
+  \item parallel lines, \hyperpage{45}
+    \subitem ultra parallel lines, \hyperpage{97}
+  \item parallel tool, \hyperpage{106}
+  \item parallel translation, \hyperpage{140}
+  \item parallelogram, \hyperpage{52}
+    \subitem solid parallelogram, \hyperpage{153}
+  \item pencil, \hyperpage{113}
+  \item perpendicular, \hyperpage{36}
+  \item perpendicular bisector, \hyperpage{36}
+  \item perpendicular circlines, \hyperpage{72}
+  \item perspective projection, \hyperpage{114}
+  \item pint at infinity, \hyperpage{69}
   \item plane
-    \subitem absolute plane, \hyperpage{89}
-    \subitem Euclidean plane, \hyperpage{23}
-    \subitem h-plane, \hyperpage{100}
-    \subitem inversive plane, \hyperpage{80}
-    \subitem neutral plane, \hyperpage{89}
-    \subitem plane in the space, \hyperpage{132}
-  \item Poincar\'e disk model, \hyperpage{99}
-  \item point, \hyperpage{13}
-    \subitem ideal point, \hyperpage{100}
-    \subitem point inside a triangle, \hyperpage{175}
-  \item polar coordinates, \hyperpage{160}
-  \item polarity, \hyperpage{136}
-  \item polygonal set, \hyperpage{176}
-    \subitem degenerate polygonal set, \hyperpage{176}
-  \item projective plane, \hyperpage{138}
-  \item projective transformation, \hyperpage{134}
+    \subitem absolute plane, \hyperpage{77}
+    \subitem Euclidean plane, \hyperpage{20}
+    \subitem h-plane, \hyperpage{87}
+    \subitem hyperbolic plane, \hyperpage{87}
+    \subitem inversive plane, \hyperpage{70}
+    \subitem neutral plane, \hyperpage{77}
+    \subitem plane in the space, \hyperpage{114}
+  \item Poincar\'e disc mode, \hyperpage{86}
+  \item point, \hyperpage{11}
+    \subitem ideal point, \hyperpage{87}
+  \item polar coordinates, \hyperpage{139}
+  \item polarity, \hyperpage{118}
+  \item polygonal set, \hyperpage{153}
+    \subitem degenerate polygonal set, \hyperpage{153}
+  \item projective model, \hyperpage{131}
+  \item projective plane, \hyperpage{120}
+  \item projective transformation, \hyperpage{116}
 
   \indexspace
 
-  \item quadrilateral, \hyperpage{58}
-    \subitem inscribed quadrilateral, \hyperpage{72}
-    \subitem nondegenerate quadrilateral, \hyperpage{58}
-    \subitem solid quadrilateral, \hyperpage{176}
+  \item quadrilateral, \hyperpage{52}
+    \subitem degenerate quadrilateral, \hyperpage{52}
+    \subitem inscribed quadrilateral, \hyperpage{63}
+    \subitem solid quadrilateral, \hyperpage{153}
 
   \indexspace
 
-  \item radius, \hyperpage{47}
-  \item rational point, \hyperpage{171}
-  \item real complex number, \hyperpage{158}
-  \item real line, \hyperpage{13}, \hyperpage{158}
-  \item real projective plane, \hyperpage{131}
-  \item rectangle, \hyperpage{59}
-    \subitem solid rectangle, \hyperpage{176}
-  \item reflection, \hyperpage{43}
-  \item rhombus, \hyperpage{59}
-  \item rotational homothety, \hyperpage{162}
-  \item ruler-and-compass construction, \hyperpage{48}
+  \item radius, \hyperpage{42}
+  \item rational point, \hyperpage{149}
+  \item real complex number, \hyperpage{137}
+  \item real line, \hyperpage{11}, \hyperpage{137}
+  \item real projective plane, \hyperpage{113}
+  \item rectangle, \hyperpage{53}
+    \subitem solid rectangle, \hyperpage{153}
+  \item reflection, \hyperpage{38}
+  \item rhombus, \hyperpage{53}
+  \item rotational homothety, \hyperpage{141}
+  \item ruler-and-compass construction, \hyperpage{43}
 
   \indexspace
 
-  \item SAA condition, \hyperpage{91}
-  \item SAS condition, \hyperpage{37}
-  \item secant line, \hyperpage{47}
-  \item shear mapping, \hyperpage{127}
+  \item SAA congruence condition, \hyperpage{79}
+  \item SAS congruence condition, \hyperpage{32}
+  \item SAS similarity condition, \hyperpage{47}
+  \item secant line, \hyperpage{42}
+  \item $\sinh$, \hyperpage{104}
   \item side
-    \subitem side of quadrilateral, \hyperpage{58}
-    \subitem side of the triangle, \hyperpage{32}
-  \item side-angle-angle congruence condition, \hyperpage{91}
-  \item side-angle-side condition, \hyperpage{37}
-  \item side-side-side congruence condition, \hyperpage{39}
-  \item similar triangles, \hyperpage{52}
-  \item solid parallelogram, \hyperpage{176}
-  \item solid quadrilateral, \hyperpage{176}
-  \item solid rectangle, \hyperpage{176}
-  \item solid square, \hyperpage{176}
-  \item solid triange, \hyperpage{175}
-  \item sphere, \hyperpage{143}
-  \item spherical distance, \hyperpage{143}
-  \item square, \hyperpage{59}
-    \subitem solid square, \hyperpage{176}
-  \item stereographic projection, \hyperpage{147}
-  \item subdivision of polygonal set, \hyperpage{179}
+    \subitem side of quadrilateral, \hyperpage{52}
+    \subitem side of the triangle, \hyperpage{28}
+  \item similar triangles, \hyperpage{46}
+  \item solid
+    \subitem quadrilateral, parallelogram, rectangle, square, 
+		\hyperpage{153}
+    \subitem triangle, \hyperpage{152}
+  \item sphere, \hyperpage{122}
+  \item spherical distance, \hyperpage{122}
+  \item square, \hyperpage{53}
+    \subitem solid square, \hyperpage{153}
+  \item SSS congruence condition, \hyperpage{34}
+  \item SSS similarity condition, \hyperpage{47}
+  \item stereographic projection, \hyperpage{125}
+  \item subdivision of polygonal set, \hyperpage{156}
 
   \indexspace
 
-  \item tangent circles, \hyperpage{47}
-  \item tangent half-line, \hyperpage{73}
-  \item tangent line, \hyperpage{47}
-  \item transversal, \hyperpage{57}
-  \item triange
-    \subitem solid triange, \hyperpage{175}
-  \item triangle, \hyperpage{19}
-    \subitem congruent triangles, \hyperpage{19}
-    \subitem degenerate triangle, \hyperpage{26}
-    \subitem ideal triangle, \hyperpage{113}
-    \subitem orthic triangle, \hyperpage{65}
-    \subitem right triangle, \hyperpage{54}
-    \subitem similar triangles, \hyperpage{52}
+  \item tangent
+    \subitem circles, \hyperpage{42}
+    \subitem half-line, \hyperpage{64}
+    \subitem line, \hyperpage{42}
+  \item transversal, \hyperpage{51}
+  \item triangle, \hyperpage{17}
+    \subitem congruent triangles, \hyperpage{17}
+    \subitem degenerate triangle, \hyperpage{23}
+    \subitem ideal triangle, \hyperpage{99}
+    \subitem orthic triangle, \hyperpage{59}
+    \subitem right triangle, \hyperpage{48}
+    \subitem similar triangles, \hyperpage{46}
+    \subitem solid triangle, \hyperpage{152}
 
   \indexspace
 
-  \item unit complex number, \hyperpage{158}
+  \item unit complex number, \hyperpage{137}
 
   \indexspace
 
-  \item vertex of the angle, \hyperpage{16}
-  \item vertical angles, \hyperpage{26}
+  \item vertex of the angle, \hyperpage{14}
+  \item vertical angles, \hyperpage{23}
 
 \end{theindex}

@@ -1,20 +1,19 @@
-\part*{Euclidean geometry}
+%\part*{Euclidean geometry}
 \addtocontents{toc}{\protect\begin{center}}
 \addtocontents{toc}{\large{\bf Euclidean geometry}}
 \addtocontents{toc}{\protect\end{center}}
-
-\chapter{The Axioms}\label{chap:axioms}
+\chapter{The Axioms}
+\label{chap:axioms}
 \addtocontents{toc}{\protect\begin{quote}}
 
-
-
-%??? move to one page???
 
 \section*{The Axioms}
 \addtocontents{toc}{The Axioms.}\label{def:birkhoff-axioms} 
 
 Summarizing the above discussion, let us give an axiomatic system of the Euclidean plane.
-This set of axioms is very close to the one given by Birkhoff in \cite{birkhoff}.
+
+
+\bigskip 
 
 \begin{enumerate}[I.]
 \item\label{def:birkhoff-axioms:0} The \index{plane!Euclidean plane}\index{Euclidean plane}\emph{Euclidean plane} is a metric space with at least two points.
@@ -70,6 +69,10 @@ B'C'&=k\cdot BC,&
 \end{align*}
 \end{enumerate}
 
+\bigskip 
+
+
+This set of axioms is very close to the one given by Birkhoff in \cite{birkhoff}.
 
 From now on,  
 we can use no information about Euclidean plane which does not follow from the five axioms above.
@@ -142,7 +145,7 @@ $$\measuredangle A O B\equiv-\measuredangle B O A.$$
 \parit{Proof.}
 According to Axiom~\ref{def:birkhoff-axioms:2b},
 $$\measuredangle A O B+\measuredangle B O A \equiv\measuredangle A O A$$
-By Proposition~\ref{lem:AOA=0} $\measuredangle A O A=0$.
+By Proposition~\ref{lem:AOA=0}, $\measuredangle A O A=0$.
 Hence the result follows.
 \qeds
 
@@ -227,7 +230,7 @@ In particular, $O$ lies between $A$ and $B$.
 \qeds 
 
 A triangle $\triangle ABC$ is called 
-\index{triangle!degenerate triangle}\emph{degenerate}
+\index{triangle!degenerate triangle}\index{degenerate! triangle}\emph{degenerate}
 if $A$, $B$ and $C$ lie on one line.
 The following corollary is just a reformulation of Theorem~\ref{thm:straight-angle}.
 
@@ -248,18 +251,10 @@ $$2\cdot \measuredangle AOB\equiv 2\cdot \measuredangle AOC.$$
 
 \end{thm}
 
+
+
 \section*{Vertical angles}
 \addtocontents{toc}{Vertical angles.}
-
-\begin{wrapfigure}[7]{o}{28mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/vertical(1)}
-\lbl[b]{0,4;$A$}
-\lbl[br]{22,22;$A'$}
-\lbl[t]{13.5,11.5;$O$}
-\lbl[tr]{4,20;$B$}
-\lbl[bl]{24,6;$B'$}
-\end{lpic}
-\end{wrapfigure}
 
 A pair of angles $\angle AOB$ and $\angle A'OB'$ 
 is called \index{angle!vertical angles}\index{vertical angles}\emph{vertical}
@@ -277,6 +272,19 @@ Assume that the angles $\angle AOB$ and $\angle A'OB'$ are vertical.
 
 Note that the angles $\angle AOA'$ and $\angle BOB'$ are straight.
 Therefore $\measuredangle AOA'=\measuredangle BOB'=\pi$.
+
+{
+
+\begin{wrapfigure}{o}{28mm}
+\begin{lpic}[t(-2mm),b(0mm),r(0mm),l(0mm)]{pics/vertical(1)}
+\lbl[b]{0,4;$A$}
+\lbl[br]{22,22;$A'$}
+\lbl[t]{13.5,11.5;$O$}
+\lbl[tr]{4,20;$B$}
+\lbl[bl]{24,6;$B'$}
+\end{lpic}
+\end{wrapfigure}
+
 It follows that
 \begin{align*}
 0&=\measuredangle AOA'-\measuredangle BOB'\equiv
@@ -289,6 +297,8 @@ It follows that
 \end{align*}
 Hence the result follows.
 \qeds
+
+}
 
 \begin{thm}{Exercise}\label{ex:O-mid-AB+CD}
 Assume $O$ 

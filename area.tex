@@ -18,7 +18,7 @@ and it easily follows from the properties of Lebesgue measure.
 \addtocontents{toc}{Solid  triangles.}
 
 We say that a point $X$ 
-lies \index{point!point inside a triangle}\emph{inside} a nondegenerate traingle $\triangle ABC$
+lies \index{inside!inside a triangle}\emph{inside} a nondegenerate traingle $\triangle ABC$
 if the following three condition hold:
 \begin{itemize}
 \item $A$ and $X$ lie on the same side from the line $(BC)$;
@@ -37,10 +37,10 @@ if the following three condition hold:
 
 The set of all points inside $\triangle ABC$ 
 and on its sides $[AB]$, $[BC]$, $[CA]$
-will be called \index{triangle!solid triangle}\index{solid triangle}\emph{solid triangle} and denoted by $\solidtriangle ABC$.
+will be called \index{triangle!solid triangle}\index{solid!triangle}\emph{solid triangle} and denoted by \index{1fig@$\solidtriangle$}$\solidtriangle ABC$.
 
 \begin{thm}{Exercise}\label{ex:triangle-convex}
-Show that solit triangle is convex;
+Show that solit triangle is \index{convex set}\emph{convex};
 that is if $X,Y\in\solidtriangle ABC$
 then $[XY]\subset \solidtriangle ABC$.
 \end{thm}
@@ -63,8 +63,8 @@ Also, in general  $\triangle ABC\ncong\triangle BAC$, but it is allways true tha
 
 \begin{thm}{Definition}\label{def:cong-sets}
 Two sets $\mathcal{S}$ and $\mathcal{T}$ in the plane  
-are called congruent 
-(briefly $\mathcal{S}\cong \mathcal{T}$)
+are called \index{congruent!sets}\emph{congruent} 
+(briefly \index{1rel@$\cong$}$\mathcal{S}\cong \mathcal{T}$)
 if 
 $\mathcal{T}=f(\mathcal{S})$ for some motion $f$ of the plane.
 \end{thm}
@@ -95,13 +95,13 @@ is a set of one of the following three types:
 \end{itemize}
 
 \begin{wrapfigure}[5]{o}{24mm}
-\begin{lpic}[t(-3mm),b(0mm),r(0mm),l(0mm)]{pics/polygonal-set(1)}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/polygonal-set(1)}
 \end{lpic}
 \end{wrapfigure}
 
 A set in the plane is called \index{polygonal set}\emph{polygonal set} if it can be presented as a union of finite collection of elementary sets.
 
-A polygonal set is called \index{polygonal set!degenerate polygonal set}\index{degenerate polygonal set}\emph{degenerate} if it can be presetned as union of finite number of one-point sets and segments.
+A polygonal set is called \index{polygonal set!degenerate polygonal set}\index{degenerate!polygonal set}\emph{degenerate} if it can be presetned as union of finite number of one-point sets and segments.
 
 According to this definition, empty set $\emptyset$
 is a polygonal set.
@@ -110,9 +110,10 @@ Indeed, $\emptyset$ is a union of empty collection of elementary sets.
 If $X$ and $Y$ lie on the opposite sides of the line $(AB)$
 then the union of solid triangles
 $\solidtriangle AXB\cup \solidtriangle BYA$
-is a polygonal set which is called \index{solid quadrilateral}\index{quadrilateral!solid quadrilateral}\emph{solid quadrilateral} and denoted as  $\solidsquare AXBY$.
+is a polygonal set which is called \index{solid!quadrilateral, parallelogram, rectangle, square}\index{quadrilateral!solid quadrilateral}\emph{solid quadrilateral} and denoted as 
+\index{1fig@$\solidsquare$}$\solidsquare AXBY$.
 In particular, 
-we can talk about \index{solid parallelogram}\index{parallelogram!solid parallelogram}\emph{solid parallelograms}, \index{solid rectangle}\index{rectangle!solid rectangle}\emph{rectangles} and \index{solid square}\index{square!solid square}\emph{squares} in the Euclidean plane.
+we can talk about \index{parallelogram!solid parallelogram}\emph{solid parallelograms}, \index{rectangle!solid rectangle}\emph{rectangles} and \index{square!solid square}\emph{squares} in the Euclidean plane.
 
 \begin{wrapfigure}{o}{38mm}
 \begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/two-subdivisions(1)}
@@ -183,7 +184,7 @@ as a function which returns a real number for any polygonal set and satisfying c
 \begin{thm}{Theorem}\label{thm:area}
 For each polyhedral set $\mathcal{P}$ in the Euclidean plane 
 there is a real number $s$ 
-called \emph{area of $\mathcal{P}$} 
+called \index{area}\emph{area of $\mathcal{P}$} 
 (briefly $s=\area \mathcal{P}$) such that 
 \[\area\emptyset=0\ \ \text{and}\ \ \area\mathcal{K}=1\]
 where  $\mathcal{K}$ the solid square with unit side
@@ -217,7 +218,8 @@ without cheating.
 
 
 \begin{thm}{Proposition}\label{prop:area-positive}
-For any polyhedral set $\mathcal{P}$, we have
+For any polyhedral set $\mathcal{P}$ in the Euclidean plane, 
+we have
 \[\area\mathcal{P}\ge 0.\]
 
 \end{thm}
@@ -229,46 +231,13 @@ we get
 
 Since $\area\emptyset=0$ the result follows.\qeds
 
-\section*{Remark on area in\\
-absolute planes and spheres}
-\addtocontents{toc}{Area in absolute planes and spheres.}
 
-The theorem Theorem \ref{thm:area} will hold in the absolute planes and spheres if the solid unit square $\mathcal{K}$
-exchanged to a fixed nondegenerate polygonal set.
-One has to make such change for good reason --- 
-hyperbolic plane and sphere have no unit squares.
-
-The set $\mathcal{K}$ in this case plays role of is unit measure for the area
-and changing $\mathcal{K}$ will require conversion of area units.
-
-\begin{wrapfigure}{o}{17mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/lambert-square(1)}
-\lbl[rb]{1,14;$A$}
-\lbl[rt]{1,1;$B$}
-\lbl[lt]{13.5,.5;$C$}
-\lbl[bl]{15,15;$D$}
-\lbl[]{9,7;{\color{white} $\mathcal{K}_n$}}
-\lbl[t]{8,1;$\tfrac1n$}
-\lbl[r]{1.5,7;$\tfrac1n$}
-\end{lpic}
-\end{wrapfigure}
-
-According to the standard convention, the set $\mathcal{K}$
-is taken so that on small scales area behaves like area in the Euclidean plane.
-Say if $\mathcal{K}_n$ denotes the solid quadrilateral $\solidsquare ABCD$ in the  
-with right angles at $A$, $B$ and $C$ and $AB=BC=\tfrac1n$ then we may assume that
-\[n^2\cdot\area \mathcal{K}_n\to 1 \ \ \text{as}\ \ n\to\infty.
-\eqlbl{eq:lim-Kn}\]
-
-This conention works equally well for spheres and absolute planes, including Euclidean plane.
-In spherical geometry  equivalently we may assume that if $r$ is the radius of the sphere then 
-the area of whole sphere is $4\cdot\pi\cdot r^2$.
 
 \section*{Vanishing area and subdivisions}
 \addtocontents{toc}{Vanishing area and subdivisions.}
 
 \begin{thm}{Proposition}\label{prop:area-segment}
-Any one-point set as well as any segment have vanishing area.
+Any one-point set as well as any segment in the Euclidean plane have  vanishing area.
 \end{thm}
 
 \parit{Proof.}
@@ -285,8 +254,8 @@ such that each $[A_iB_i]$ is congruent to $[AB]$ in the sense of the Definition~
 \begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/segments-in-square(1)}
 \lbl[b]{1,25;$A_1$}
 \lbl[t]{1,0;$B_1$}
-\lbl[t]{13,26;$\dots$}
-\lbl[b]{13,-1;$\dots$}
+\lbl[t]{13,27;$\dots$}
+\lbl[b]{13,-2;$\dots$}
 \lbl[b]{24,25;$A_n$}
 \lbl[t]{24,0;$B_n$}
 \end{lpic}
@@ -319,7 +288,7 @@ Whence $\area\{A\}=0$.
 \qeds
 
 \begin{thm}{Corollary}\label{cor:degenerate}
-Any degenerate polygonal set has vanishing area.
+Any degenerate polygonal set in the Euclidean plane has vanishing area.
 \end{thm}
 
 \parit{Proof.}
@@ -368,7 +337,8 @@ Hence the result follows.
 \addtocontents{toc}{Area of solid rectangles,}
 
 \begin{thm}{Theorem}\label{thm:area-rect}
-The solid rectangle with sides $a$ and $b$ has area $a\cdot b$.
+The solid rectangle in the Euclidean plane 
+with sides $a$ and $b$ has area $a\cdot b$.
 \end{thm}
 
 \begin{thm}{Algebraic lemma}\label{lem:alg-area}
@@ -402,7 +372,7 @@ $s(1,1)=1$.
 That is, the first identity in the Algebraic Lemma holds.
 
 \begin{wrapfigure}{o}{26mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/two-rectangles(1)}
+\begin{lpic}[t(-5mm),b(5mm),r(0mm),l(0mm)]{pics/two-rectangles(1)}
 \lbl[]{6,7;$\mathcal{R}_{a,c}$}
 \lbl[]{17,7;$\mathcal{R}_{b,c}$}
 \lbl[t]{12,0;$\mathcal{R}_{a+b,c}$}
@@ -428,7 +398,7 @@ It remains to apply Algebraic lemma.
 \addtocontents{toc}{parallelograms}
 
 \begin{thm}{Proposition}\label{prop:area-parallelogram}
-Let $\square ABCD$ be a parallelogram, $a=AB$ and $h$ be the distance between the lines $(AB)$ and $(CD)$.
+Let $\square ABCD$ be a parallelogram in the Euclidean plane, $a=AB$ and $h$ be the distance between the lines $(AB)$ and $(CD)$.
 Then 
 \[\area(\solidsquare ABCD)=a\cdot h.\]
 
@@ -444,7 +414,7 @@ Therefore, by Proposition~\ref{thm:area-rect},
 \[\area( \solidsquare ABB'A')=h\cdot a.\eqlbl{eq:ABBA}\]
 
 \begin{wrapfigure}{o}{41mm}
-\begin{lpic}[t(-3mm),b(0mm),r(0mm),l(0mm)]{pics/par-rect(1)}
+\begin{lpic}[t(2mm),b(0mm),r(0mm),l(0mm)]{pics/par-rect(1)}
 \lbl[t]{1,-1;$A$}
 \lbl[t]{17,-1;$B$}
 \lbl[b]{39,12.5;$C$}
@@ -521,14 +491,26 @@ Show that
 
 
 \begin{thm}{Theorem}\label{thm:area-of-triangle}
-Given a triangle $\triangle ABC$,
+Given a triangle $\triangle ABC$ in the Euclidean plane,
 set $a=BC$ and $h_A$ to be the altitude from $A$.
 Then 
 \[\area(\solidtriangle ABC)=\tfrac12\cdot a\cdot h_A.\]
 \end{thm}
 
+\parbf{Remark.}
+Since $\triangle ABC$ completely determines the solid triangle $\solidtriangle ABC$,
+it is acceptable to write 
+$\area(\triangle ABC)$ for $\area(\solidtriangle ABC)$.
+
+\parit{Proof.}
+Draw the line $m$ through $A$ which is parallel to $(BC)$
+and line $n$ through $C$ parallel to $(AB)$.
+Note that $m\nparallel n$.
+Therefore we can choose $D=m\cap n$;
+by construction $\square ABCD$ is a parallelogram.
+
 \begin{wrapfigure}{o}{24mm}
-\begin{lpic}[t(-5mm),b(0mm),r(0mm),l(0mm)]{pics/two-triangles(1)}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/two-triangles(1)}
 \lbl[t]{5,0;$A$}
 \lbl[t]{21,0;$B$}
 \lbl[b]{17.5,18;$C$}
@@ -537,14 +519,6 @@ Then
 \lbl[b]{10,17;$n$}
 \end{lpic}
 \end{wrapfigure}
-
-
-\parit{Proof.}
-Draw the line $m$ through $A$ which is parallel to $(BC)$
-and line $n$ through $C$ parallel to $(AB)$.
-Note that $m\nparallel n$.
-Therefore we can choose $D=m\cap n$;
-by construction $\square ABCD$ is a parallelogram.
 
 Note that parallelogram $\square ABCD$ admits a subdivision into $\solidtriangle ABC$ and $\solidtriangle CDA$.
 Therefore 
@@ -602,6 +576,16 @@ Show that
  
 \end{thm}
 
+\begin{thm}{Exercise}\label{ex:area-inradius}
+Let $r$ be the inradius of $\triangle ABC$
+and $p$ be its semiperimeter; 
+that is $p=\tfrac12\cdot(AB+BC+CA)$.
+Show that
+\[\area(\solidtriangle ABC)=p\cdot r.\]
+
+\end{thm}
+
+
 
 
 \section*{Area method}
@@ -609,12 +593,9 @@ Show that
 
 Slim proofs using area 
 are often used to impress students.
-Well educated students however
-should know that 
-these proofs do not bit 
-the price one should pay to introduce area.
-
-Let us give couple of examples.
+We will show couple of such examples in this section,
+but one should be aware --- these proofs are not trully elementary; to do these proofs, 
+one pays high price of introducing area..
 
 \parit{Proof of the Pythogorean theorem via the area method.}
 We need to show that if $a$ and $b$ are legs and $c$ is the hypothenuse 
@@ -680,7 +661,8 @@ The following claim is simple but very useful.
 
 \begin{thm}{Claim}\label{clm:area-ratio}
 Asssume  that two triangles $\triangle ABC$
-and $\triangle A'B'C'$ have equal altitudes dropped from $A$ and $A'$ correspondingly.
+and $\triangle A'B'C'$ in the Euclidean plane 
+have equal altitudes dropped from $A$ and $A'$ correspondingly.
 Then
 \[\frac{\solidtriangle A'B'C'}{\solidtriangle ABC}
 =
@@ -737,5 +719,39 @@ Build a proof of Theorem~\ref{thm:centroid} via area method based on the exercis
 Namely, show that medians of nondegenerate triangle intersect at one point and the point of their intersection  divides each median in the ration 1:2.
 \end{thm}
 
+\section*{Remark on area in\\
+absolute planes and spheres}
+\addtocontents{toc}{Area in absolute planes and spheres.}
+
+The theorem Theorem \ref{thm:area} will hold in the absolute planes and spheres if the solid unit square $\mathcal{K}$
+exchanged to a fixed nondegenerate polygonal set.
+One has to make such change for good reason --- 
+hyperbolic plane and sphere have no unit squares.
+
+The set $\mathcal{K}$ in this case plays role of is unit measure for the area
+and changing $\mathcal{K}$ will require conversion of area units.
+
+\begin{wrapfigure}{o}{17mm}
+\begin{lpic}[t(4mm),b(0mm),r(0mm),l(0mm)]{pics/lambert-square(1)}
+\lbl[rb]{1,14;$A$}
+\lbl[rt]{1,1;$B$}
+\lbl[lt]{13.5,.5;$C$}
+\lbl[bl]{15,15;$D$}
+\lbl[]{9,7;{\color{white} $\mathcal{K}_n$}}
+\lbl[t]{8,1;$\tfrac1n$}
+\lbl[r]{1.5,7;$\tfrac1n$}
+\end{lpic}
+\end{wrapfigure}
+
+According to the standard convention, the set $\mathcal{K}$
+is taken so that on small scales area behaves like area in the Euclidean plane.
+Say if $\mathcal{K}_n$ denotes the solid quadrilateral $\solidsquare ABCD$ in the  
+with right angles at $A$, $B$ and $C$ and $AB=BC=\tfrac1n$ then we may assume that
+\[n^2\cdot\area \mathcal{K}_n\to 1 \ \ \text{as}\ \ n\to\infty.
+\eqlbl{eq:lim-Kn}\]
+
+This conention works equally well for spheres and absolute planes, including Euclidean plane.
+In spherical geometry  equivalently we may assume that if $r$ is the radius of the sphere then 
+the area of whole sphere is $4\cdot\pi\cdot r^2$.
 
 \addtocontents{toc}{\protect\end{quote}}                          

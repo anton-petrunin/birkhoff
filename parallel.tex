@@ -1,4 +1,4 @@
-\chapter{Parallel lines and similar triangles}\label{chap:parallel}
+\chapter{Parallel lines and\\ similar triangles}\label{chap:parallel}
 \addtocontents{toc}{\protect\begin{quote}}
 
 \section*{Parallel lines}
@@ -8,7 +8,7 @@ In consequence of Axiom~\ref{def:birkhoff-axioms:1},
 any two distinct lines $\ell$ and $m$ have either one point
 in common or none. 
 In the first case they are \index{intersecting lines}\emph{intersecting}; 
-in the second case, $\ell$ and $m$ are said to be \index{parallel lines}\emph{parallel} (briefly \index{$\parallel$}$\ell\parallel m$);
+in the second case, $\ell$ and $m$ are said to be \index{parallel lines}\emph{parallel} (briefly \index{1rel@$\parallel$}$\ell\parallel m$);
 in addition, a line is always regarded as parallel to itself.
 
 
@@ -106,7 +106,7 @@ Make a ruler-and-compass construction of the line though the given point which i
 \addtocontents{toc}{Similar triangles.}
 
 Two triangles $\triangle A' B' C'$ and $\triangle A B C$ are 
-\index{triangle!similar triangles}\index{similar triangles}\emph{similar} (briefly \index{$\sim$}$\triangle A' B' C'\z\sim\triangle A B C$) if their sides are proportional, that is, 
+\index{triangle!similar triangles}\index{similar triangles}\emph{similar} (briefly \index{1rel@$\sim$}$\triangle A' B' C'\z\sim\triangle A B C$) if their sides are proportional, that is, 
 $$A' B'=k\cdot A B,\ \  B' C'=k\cdot B C
 \ \ \text{and}\ \ 
 C' A'=k\cdot C A
@@ -169,17 +169,17 @@ Two triangles
 $\triangle ABC$ and $\triangle A'B'C'$ in the Euclidean plane
 are similar if one of the following conditions hold.
 
-(SAS) For some constant $k>0$ we have
+(SAS)\index{SAS similarity condition} For some constant $k>0$ we have
 $$A B=k\cdot A' B',
 \ A C=k\cdot A' C'$$
 $$\ \text{and}\ \ 
 \measuredangle B A C=\pm\measuredangle B' A' C'.$$
 
-(AA) The triangle $\triangle A' B' C'$ is nondegenerate
+(AA)\index{AA similarity condition} The triangle $\triangle A' B' C'$ is nondegenerate
 and $$\measuredangle  A B  C=\pm\measuredangle A' B' C',\ 
 \measuredangle B A C=\pm\measuredangle B' A' C'.$$
 
-(SSS) For some constant $k>0$ we have
+(SSS)\index{SSS similarity condition} For some constant $k>0$ we have
 $$A B=k\cdot A' B',
 \ A C=k\cdot A' C',
 \ CB=k\cdot C'B'.$$
@@ -203,7 +203,7 @@ Hence the result follows.
 \qeds
 
 A triangle with all acute angles 
-is called \index{acute!acute triangle}\emph{acute}.
+is called \index{acute!triangle}\emph{acute}.
 
 {
 
@@ -333,16 +333,16 @@ Further we assume that $\triangle A B C$ is nondegenerate.
 \begin{lpic}[t(3mm),b(0mm),r(0mm),l(0mm)]{pics/3-sum(1)}
 \lbl[tr]{1,1;$A$}
 \lbl[lt]{40,1;$B$}
-\lbl[b]{23,26;$C$}
-\lbl[lb]{7,4;{\small $\alpha$}}
-\lbl[lb]{25.5,4;{\small $\alpha$}}
-\lbl[rb]{34.5,3;{\small $\beta$}}
-\lbl[t]{23,18;{\small $\gamma$}}
-\lbl[rb]{15.5,3;{\small $\beta$}}
-\lbl[b]{21,8;{\small $\pm\gamma$}}
+\lbl[b]{23,25;$C$}
+\lbl[lb]{7,3;{\small $\alpha$}}
+\lbl[lb]{25.5,3;{\small $\alpha$}}
+\lbl[rb]{34.5,2;{\small $\beta$}}
+\lbl[t]{23,17;{\small $\gamma$}}
+\lbl[rb]{15.5,2;{\small $\beta$}}
+\lbl[b]{21,7;{\small $\pm\gamma$}}
 \lbl[t]{20,0;$M$}
-\lbl[lb]{32,14;$K$}
-\lbl[rb]{11,14;$L$}
+\lbl[lb]{32,13;$K$}
+\lbl[rb]{11,13;$L$}
 \end{lpic}
 \end{wrapfigure}
 
@@ -374,7 +374,7 @@ M K  &=\tfrac12\cdot   C A,
 &
  K L &=  \tfrac12\cdot A B.
 \end{align*}
-According to SSS-condition (\ref{prop:sim}),
+According to SSS condition (\ref{prop:sim}),
 $\triangle K L M\sim \triangle ABC$. 
 Thus,
 $$\measuredangle M K L=\pm \alpha,\ \  
@@ -531,11 +531,11 @@ Trisect given segment with ruler and compass.
 \addtocontents{toc}{Parallelograms.}
 
 A \index{quadrilateral}\emph{quadrilateral} is an ordered quadruple of distinct points in the plane.
-A quadrilateral formed by quadruple $(A,B,C,D)$ will be denoted as $\square ABCD$.
+A quadrilateral formed by quadruple $(A,B,C,D)$ will be denoted as \index{1gon@$\square$}$\square ABCD$.
 
 Given a quadrilateral $\square ABCD$,
 the four segments $[AB]$, $[BC]$, $[CD]$ and $[DA]$ are called \index{side!side of quadrilateral}\emph{sides of $\square ABCD$};
-the remaining two segments $[AC]$ and $[BD]$ are called \index{diagonal!diagonals of quadrilateral}\emph{diagonals of $ABCD$}.
+the remaining two segments $[AC]$ and $[BD]$ are called \index{diagonals of quadrilateral}\emph{diagonals of $ABCD$}.
 
 
 \begin{thm}{Exercise}\label{ex:quadrilateral}
@@ -544,21 +544,10 @@ $$\measuredangle ABC+\measuredangle BCD+\measuredangle CDA+\measuredangle DAB\eq
 
 \end{thm}
 
-A quadrilateral $\square ABCD$ in the Euclidean plane is called \index{quadrilateral!nondegenerate quadrilateral}\emph{nondegenerate} if any three points from $A,B,C,D$ do not lie on one line.
+A quadrilateral $\square ABCD$ in the Euclidean plane is called \index{quadrilateral!degenerate quadrilateral}\index{degenerate!quadrilateral}\emph{nondegenerate} if any three points from $A,B,C,D$ do not lie on one line.
 
 The nondegenerate quadrilateral $\square ABCD$ is called \index{parallelogram}\emph{parallelogram}
 if $(AB)\z\parallel (CD)$ and $(BC)\z\parallel (DA)$.
-
-{
-
-\begin{wrapfigure}{o}{32mm}
-\begin{lpic}[t(-0mm),b(0mm),r(1mm),l(1mm)]{pics/parallelogram(1)}
-\lbl[bl]{29,27.5;$A$}
-\lbl[br]{7,27.5;$B$}
-\lbl[t]{-.5,.5;$C$}
-\lbl[t]{22.5,.5;$D$}
-\end{lpic}
-\end{wrapfigure}
 
 \begin{thm}{Lemma}\label{lem:parallelogram}
 If $\square A B C D$ is a parallelogram then
@@ -573,7 +562,17 @@ Since $(AB)\parallel (CD)$,
 the points $C$ and $D$ lie on the same side from $(AB)$.
 Whence $\angle ABD$ and $\angle ABC$ have the same sign.
 
-}
+{
+
+\begin{wrapfigure}{o}{32mm}
+\begin{lpic}[t(-0mm),b(0mm),r(1mm),l(1mm)]{pics/parallelogram(1)}
+\lbl[bl]{29,27.5;$A$}
+\lbl[br]{7,27.5;$B$}
+\lbl[t]{-.5,.5;$C$}
+\lbl[t]{22.5,.5;$D$}
+\end{lpic}
+\end{wrapfigure}
+
 
 Analogously, 
 $\angle CBD$ and $\angle CBA$ have the same sign. 
@@ -582,21 +581,16 @@ Since $\measuredangle ABC\equiv -\measuredangle CBA$,
 we get that the angles $\angle DBA$ and $\angle DBC$ have opposite signs; 
 that is,  $A$ and $C$ lie on the opposite sides of $(BD)$.
 
+
 According to Transversal property (\ref{thm:parallel-2}), 
 $$\measuredangle B D C\equiv -\measuredangle DBA\ \ \text{and}\ \ 
  \measuredangle DBC \z\equiv -\measuredangle BDA.$$
-By angle-side-angle condition
+By ASA condition
 $\triangle A B D\cong \triangle C D B$.
 Which implies both statements in the lemma.
 \qeds
 
-\begin{thm}{Exercise}\label{ex:midle}
-Let $\square ABCD$ be a nondegenerate quadrilateral
-and $X$, $Y$, $V$, $W$ be the midpoints of its sides 
-$[AB]$, $[BC]$, $[CD]$ and $[DA]$.
-Show that $\square XYVW$ is a parallelogram.
-\end{thm}
-
+}
 
 \begin{thm}{Exercise}\label{ex:romb}
 Assume $\square ABCD$ is a quadrilateral such that
@@ -627,8 +621,6 @@ Show that parallelogram $\square ABCD$ is a rhombus
 if and only if $(AC)\perp (BD)$.
 \end{thm}
 
-
-
 \section*{Method of coordinates}
 \addtocontents{toc}{Method of coordinates.}
 
@@ -636,7 +628,7 @@ The following exercise is important;
 it shows that our axiomatic definition agrees with the model definition described on page \pageref{def:d_2}.
 
 \begin{wrapfigure}{o}{33mm}
-\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(4mm)]{pics/PQlm(1)}
+\begin{lpic}[t(2mm),b(0mm),r(0mm),l(4mm)]{pics/PQlm(1)}
 \lbl[br]{12,10;$P$}
 \lbl[bl]{23,22;$Q$}
 \lbl[t]{11,0;$P_\ell$}
@@ -652,6 +644,7 @@ it shows that our axiomatic definition agrees with the model definition describe
 Let $\ell$ and $m$ be perpendicular lines in the Euclidean plane.
 Given a points $P$  denote by $P_\ell$ and $P_m$ the foot points of $P$ on $\ell$ and $m$ correspondingly.
 
+
 \begin{enumerate}[(a)]
 \item Show that for any $X\in \ell$ and $Y\in m$ there is unique point $P$ such that $P_\ell=X$ and $P_m=Y$.
 \end{enumerate}
@@ -666,6 +659,7 @@ for any pair of points $P$ and $Q$.
 \begin{enumerate}[(a)]\addtocounter{enumi}{2}
 \item Conclude that Euclidean plane is isometric to $(\mathbb{R}^2,d_2)$ defined on page \pageref{def:d_2}.
 \end{enumerate}
+
 \end{thm}
 
 Once this exercise solved, we can apply 

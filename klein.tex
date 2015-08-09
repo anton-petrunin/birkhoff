@@ -1,18 +1,18 @@
-\chapter{Klein model}\label{chap:klein}
+\chapter{Projective model}\label{chap:klein}
 \addtocontents{toc}{\protect\begin{quote}}
 
-Klein model is an other model of hyperbolic plane discovered by Beltrami.
-The Klein and Poincar\'e models are saying exactly the same thing but in two different languages. 
+The {}\emph{projective model} is an other model of hyperbolic plane discovered by Beltrami; it is often called \index{Klein mode}\emph{Klein model}.
+The projective and conformal models are saying exactly the same thing but in two different languages. 
 Some problems in hyperbolic geometry
-admit simpler proof using Klein model 
+admit simpler proof using the projective model 
 and
-others have simpler proof in Poincar\'e model.
+others have simpler proof in the conformal model.
 Therefore it worth to know both. 
 
 \section*{Special bijection of h-plane to itself}
 \addtocontents{toc}{Special bijection of h-plane to itself.}
 
-Consider the Poincar\'e disc model with absolute at the unit circle $\Omega$ centered at $O$.
+Consider the conformal disc model with absolute at the unit circle $\Omega$ centered at $O$.
 Choose a coordinate system $(x,y)$ on the plane with origin at $O$, 
 so the circle $\Omega$ is described by the equation $x^2+y^2=1$.
 
@@ -164,59 +164,53 @@ Show that the chords $[A_1B_1]$, $[A_2B_2]$ and $[A_3B_3]$ intersect at one poin
 
 
 
-\section*{Klein model}
-\addtocontents{toc}{Klein model.}
+\section*{Projective model}
+\addtocontents{toc}{Projective  model.}
 
 The following picture illustrates the map $P\mapsto \hat P$ described in the previous section.
 If you take the picture on the left and apply the map $P\mapsto \hat P$,
 you get the picture on the right.
-The picture on the right gives a new way to look at the hyperbolic plane, which is called \index{Klein model}\emph{Klein model}.
+The picture on the right gives a new way to look at the hyperbolic plane, 
+which is called \index{projective model}\emph{projective model}.
 One may think of the map $P\mapsto \hat P$ as about 
 translation from one language to the other.
 
 \begin{center}
 \begin{lpic}[t(0mm),b(3mm),r(0mm),l(0mm)]{pics/poincare-klein(1)}
-\lbl[t]{23,0;Poincar\'e model}
-\lbl[t]{72,0;Klein model}
+\lbl[t]{23,0;Conformal model}
+\lbl[t]{72,0;Projective model}
 \end{lpic}
 \end{center} 
 
-In the Klein model things look different;
+In the projective model things look different;
 some become simpler,
 other things become more complicated.
 
 \parbf{Lines.}
-The h-lines in the Klein model 
+The h-lines in the projective model 
 are formed by chords.
 More precisely, they are formed by the intersections of chords of the absolute with the h-plane.
 
 \parbf{Circles and equidistants.}
-The h-circles and equidistants in the Klein model are formed by the certain type of ellipses and their arcs.
+The h-circles and equidistants in the projective model are formed by the certain type of ellipses and their arcs.
 It follows since the stereographic projection sends circles one the plane to the circles on the unit sphere and the foot point projection of circle back to plane is formed by ellipse.
 (One may define ellipse
 as the foot point projection of a circle which lies in the space to the plane.)
 
 \parbf{Distance.}
-To find the h-distance between the points $P$ and $Q$ in the Klein model,
+To find the h-distance between the points $P$ and $Q$ in the projective model,
  you have to find the points of intersection, say $A$ and $B$, 
  of the Euclidean line $(PQ)$ with the absolute;
 then, by Lemma~\ref{lem:P-hat-chord},
 $$PQ_h=\tfrac12\cdot\ln\frac{AQ\cdot BP}{QB\cdot PA},$$
 assuming the points $A, P, Q, R$ appear on the line in the same order.
 
-\begin{wrapfigure}[9]{o}{36mm}
-\begin{lpic}[t(-0mm),b(-0mm),r(0mm),l(0mm)]{pics/h-klein-perp(1)}
-\lbl[rb]{5,32;$A$}
-\lbl[lb]{36,32;$B$}
-\lbl[lt]{13,29;$P$}
-\lbl[rt]{28,29;$Q$}
-\end{lpic}
-\end{wrapfigure}
 
 \parbf{Angles.}
-The angle measures in Klein model are very different from the Euclidean angles and it is hard to figure out by looking on the picture.\label{klein-angles}
+The angle measures in the projective model are very different from the Euclidean angles and it is hard to figure out by looking on the picture.\label{klein-angles}
 For example all the intersecting h-lines on the picture are perpendicular.
 There are two useful exceptions
+
 
 \begin{itemize}
 \item If $O$ is the center of absolute then 
@@ -226,24 +220,34 @@ and
 $\measuredangle OAB\z=\pm\tfrac\pi2$ then 
 $$\measuredangle_h OAB=\measuredangle OAB=\pm\tfrac\pi2.$$
 \end{itemize}
-To find the angle measure in Klein model,
+
+\begin{wrapfigure}[11]{o}{38mm}
+\begin{lpic}[t(-5mm),b(-0mm),r(2mm),l(0mm)]{pics/h-klein-perp(1)}
+\lbl[rb]{5,32;$A$}
+\lbl[lb]{36,32;$B$}
+\lbl[lt]{13,29;$P$}
+\lbl[rt]{28,29;$Q$}
+\end{lpic}
+\end{wrapfigure}
+
+To find the angle measure in the projective model,
 you may apply a motion of h-plane which moves 
 the vertex of the angle to the center of absolute;
 once it is done the hyperbolic and Euclidean angles have the same measure.
 
 \parbf{Motions.}
-The motions of h-plane in Poincar\'e and Klein model are relevant to inversive transformations and projective transformation in the same way. Namely: 
+The motions of h-plane in the conformal and projective models are relevant to inversive transformations and projective transformation in the same way. Namely: 
 \begin{itemize}
-\item Any inversive transformations which preserve h-plane describe a motion of h-plane with Poincar\'e model.
-\item Any projective transformation which preserve h-plane describes a motion of Klein model.
+\item Any inversive transformations which preserve h-plane describe a motion of h-plane in the conformal model.
+\item Any projective transformation which preserve h-plane describes a motion in the projective model.
 \end{itemize}
 
 The following exercise is hyperbolic analog of Exercise~\ref{ex:s-medians}. 
-This is the first example of a statement which admits an easier proof using  Klein model.
+This is the first example of a statement which admits an easier proof using  the projective model.
 
 \begin{thm}{Exercise}\label{ex:h-median}
 Let $P$ and $Q$ be the point in h-plane which lie on the same distance from the center of absolute.
-Observe that in Klein model, h-midpoint of $[PQ]_h$ coincides with the Euclidean midpoint of $[PQ]_h$.
+Observe that in the projective model, h-midpoint of $[PQ]_h$ coincides with the Euclidean midpoint of $[PQ]_h$.
 
 Conclude that if an h-triangle is inscribed in an h-circle then its medians intersect at one point.
 
@@ -260,18 +264,18 @@ Think how to prove the same for a general h-triangle.
 \end{wrapfigure}
 
 \begin{thm}{Exercise}\label{ex:klein-perp}
-Let $\ell$ and $m$ are  h-lines in the Klein model.
+Let $\ell$ and $m$ are  h-lines in the projective model.
 Denote by $s$ and $t$ the Euclidean lines tangent to the absolute
 at the ideal points of $\ell$ and denote by $\tilde m$ the Euclidean line which contains $m$.
-Show that if the lines $s$, $t$ and $\tilde m$ meet at one point then $\ell$ and $m$ are perpendicular h-lines in the Klein model. 
+Show that if the lines $s$, $t$ and $\tilde m$ meet at one point then $\ell$ and $m$ are perpendicular h-lines in the projective model. 
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:klein-for-angle-parallelism}
-Give a proof of Proposition~\ref{prop:angle-parallelism} using Klein model. 
+Give a proof of Proposition~\ref{prop:angle-parallelism} using projective model. 
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:klein-inradius}
-Use Klein model to find the inradius of the ideal triangle.
+Use projective model to find the inradius of the ideal triangle.
 \end{thm}
 
 
@@ -283,7 +287,7 @@ Assume that $\triangle_hACB$ is a triangle in h-plane with right angle at $C$.
 Set $a=BC_h$, $b=CB_h$ and $c=AB_h$.
 Then
 $$\cosh c=\cosh a\cdot\cosh b.\eqlbl{eq:pyth-h}$$
-where $\cosh$ denotes \index{$\cosh$}\index{hyperbolic cosine}\emph{hyperbolic cosine};
+where $\cosh$ denotes \index{ch@$\cosh$}\index{hyperbolic cosine}\emph{hyperbolic cosine};
 that is, the function defined the following way
 $$\cosh x\df \tfrac{e^x+e^{-x}}2.$$ 
 
@@ -303,7 +307,7 @@ $$\cosh x\df \tfrac{e^x+e^{-x}}2.$$
 \end{wrapfigure}
 
 \parit{Proof.}
-We will use Klein model of h-plane with a unit circle as the absolute.
+We will use projective model of h-plane with a unit circle as the absolute.
 
 We can assume that $A$ is the center of absolute.
 Therefore both $\angle_h ACB$ and $\angle ACB$ are right.
@@ -410,8 +414,20 @@ such that
 Then $QR_h=PT_h$.
 \end{thm}
 
-\begin{wrapfigure}[10]{o}{44mm}
-\begin{lpic}[t(-7mm),b(-0mm),r(0mm),l(0mm)]{pics/boyai-constr(1)}
+
+\parit{Proof.}
+We will use the projective model.
+Without loss of generality, we may assume that $P$ is the center of absolute.
+As it was noted on page \pageref{klein-angles},
+in this case the corresponding Euclidean lines are also perpendicular;
+that is, $(PQ)\perp (QR)$, $(PS)\perp(PQ)$ and $(RT)\perp (PS)$.
+
+Denote by $A$ be the ideal point of $(QR)_h$ and $(PT)_h$.
+Denote by $B$ and $C$ the remaining ideal points of $(QR)_h$ and $(PT)_h$
+correspondingly.
+
+\begin{wrapfigure}{o}{44mm}
+\begin{lpic}[t(-3mm),b(6mm),r(0mm),l(0mm)]{pics/boyai-constr(1)}
 \lbl[bl]{21.5,21.5;$P$}
 \lbl[tl]{21.5,12.5;$Q$}
 \lbl[tr]{8.5,12.5;$R$}
@@ -423,27 +439,17 @@ Then $QR_h=PT_h$.
 \end{lpic}
 \end{wrapfigure}
 
-\parit{Proof.}
-We will use the Klein's model.
-Without loss of generality, we may assume that $P$ is the center of absolute.
-As it was noted on page \pageref{klein-angles},
-in this case the corresponding Euclidean lines are also perpendicular;
-that is, $(PQ)\perp (QR)$, $(PS)\perp(PQ)$ and $(RT)\perp (PS)$.
-
-Denote by $A$ be the ideal point of $(QR)_h$ and $(PT)_h$.
-Denote by $B$ and $C$ the remaining ideal points of $(QR)_h$ and $(PT)_h$
-correspondingly.
-
 Note that the Euclidean lines $(PQ)$, $(TR)$ and $(CB)$ are parallel.
 
-Therefore $\triangle AQP\sim \triangle ART \sim\triangle ABC$.
+Therefore 
+\[\triangle AQP\sim \triangle ART \sim\triangle ABC.\]
 In particular,
-$$\frac{AC}{AB}=\frac{AT}{AR}=\frac{AP}{AQ}.$$
+\[\frac{AC}{AB}=\frac{AT}{AR}=\frac{AP}{AQ}.\]
 
 It follows that
-$$\frac{AT}{AR}=\frac{AP}{AQ}=\frac{BR}{CT}=\frac{BQ}{CP}.$$
-In particular
-$$\frac{AT\cdot CP}{TC\cdot PA}=\frac{AR\cdot BQ}{RB\cdot QA};$$
+\[\frac{AT}{AR}=\frac{AP}{AQ}=\frac{BR}{CT}=\frac{BQ}{CP}.\]
+In particular,
+\[\frac{AT\cdot CP}{TC\cdot PA}=\frac{AR\cdot BQ}{RB\cdot QA};\]
 hence $QR_h=PT_h$.
 \qeds
  

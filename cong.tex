@@ -5,12 +5,12 @@
 \addtocontents{toc}{Side-angle-side condition.}
 
 Our next goal is to give conditions which guarantee congruence of two triangles.
-One of such conditions is Axiom~\ref{def:birkhoff-axioms:3}, it is also called \index{side-angle-side condition}\emph{side-angle-side condition} or briefly \index{SAS condition}\emph{SAS condition}.
+One of such conditions is Axiom~\ref{def:birkhoff-axioms:3}, it is also called {}\emph{side-angle-side congruence condition} or briefly \index{SAS congruence condition}\emph{SAS congruence condition}.
 
 \section*{Angle-side-angle condition}
 \addtocontents{toc}{Angle-side-angle condition.}
 
-\begin{thm}{ASA condition}\label{thm:ASA}\index{ASA congruence condition}\index{angle-side-angle congruence condition}
+\begin{thm}{ASA condition}\label{thm:ASA}\index{ASA congruence condition}
 Assume that 
 \begin{align*}
 AB&=A'B',
@@ -80,7 +80,7 @@ $\triangle A' B' C'=\triangle A' B' C''\cong\triangle A B C$.
 \addtocontents{toc}{Isosceles triangles.}
 
 A triangle with two equal sides is called \index{isosceles triangle}\emph{isosceles};
-the remaining side is called \index{base of isosceles triangle}\emph{base} of isosceles triangle.
+the remaining side is called \index{base}\emph{base} of isosceles triangle.
 
 \begin{thm}{Theorem}\label{thm:isos}
 Assume $\triangle A B C$ is an isosceles triangle with the base $[A  B]$. 
@@ -126,9 +126,8 @@ Show that
 
 \section*{Side-side-side condition}
 \addtocontents{toc}{Side-side-side condition.}
-\index{side-side-side congruence condition}
 
-\begin{thm}{SSS condition}\label{thm:SSS}
+\begin{thm}{SSS condition}\label{thm:SSS}\index{SSS congruence condition}
 $\triangle A B C\cong\triangle A' B' C'$  if  
 $$A' B'=A B,\ \ B' C'=B C\ \ \text{and}\ \  C' A'=C A.$$
 
@@ -169,15 +168,10 @@ Applying Axiom~\ref{def:birkhoff-axioms:3} again,
 we get \ref{eq:A'B'C'simA'B'C''}.
 \qeds
 
-\begin{thm}{Advanced exercise}\label{ex:SMS}
-Let $M$ be the midpoint of side $[A B]$ of a triangle $\triangle A B C$ and
-$M'$ be the midpoint of side $[A' B']$ of a triangle $\triangle A' B' C'$.
-Assume $C' A'=C A$, $C' B'= C B$ and $C' M'= C M$.
-Prove that $\triangle A' B' C'\cong\triangle A B C$.
-\end{thm}
+{
 
-\begin{wrapfigure}[3]{o}{34mm}
-\begin{lpic}[t(-8mm),b(-0mm),r(0mm),l(1mm)]{pics/isos-2(1)}
+\begin{wrapfigure}{o}{34mm}
+\begin{lpic}[t(-4mm),b(-0mm),r(0mm),l(1mm)]{pics/isos-2(1)}
 \lbl[t]{30,1;$B$}
 \lbl[t]{1,1;$A$}
 \lbl[lb]{26,13;$A'$}
@@ -186,17 +180,26 @@ Prove that $\triangle A' B' C'\cong\triangle A B C$.
 \end{lpic}
 \end{wrapfigure}
 
+\begin{thm}{Advanced exercise}\label{ex:SMS}
+Let $M$ be the midpoint of side $[A B]$ of a triangle $\triangle A B C$ and
+$M'$ be the midpoint of side $[A' B']$ of a triangle $\triangle A' B' C'$.
+Assume $C' A'=C A$, $C' B'= C B$ and $C' M'= C M$.
+Prove that $\triangle A' B' C'\cong\triangle A B C$.
+\end{thm}
+
 \begin{thm}{Exercise}\label{ex:isos-sides}
 Let $\triangle A B C$ be an isosceles triangle with the base $[A B]$
 and the points $A'\in [B C]$ and $B'\z\in[A C]$ be such that $C A'=C B'$.
 Show that
+\end{thm}
+}
+\vskip-2mm
+{\it
 \begin{enumerate}[(a)]
 \item $\triangle A A' C\cong \triangle B B' C$;
 \item $\triangle A B B'\cong \triangle B A A'$.
 \end{enumerate}
-\end{thm}
-
-
+}
 
 \begin{thm}{Exercise}\label{ex:degenerate-trig}
 Show that if $AB+BC=AC$

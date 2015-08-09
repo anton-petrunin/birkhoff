@@ -10,15 +10,15 @@
 In this chapter we use inversive geometry 
 to construct the model of hyperbolic plane --- an example of absolute plane which is not Euclidean.
 
-Namely, we construct  so called \index{Poincar\'e disk model}\emph{Poincar\'e disk model} of hyperbolic plane.
+Namely, we construct  so called \index{conformal disk model}\emph{conformal disk model} of hyperbolic plane.
 This model was discovered by Beltrami in  \cite{beltrami} 
-and popularized later by Poincar\'e. 
+and often called \index{Poincar\'e disc mode}\emph{Poincar\'e disc model}. 
 %(Despite common believe, Beltrami was not the first who came up with the concept of model in this context,  in particular Lobachevsky modeled Euclidean plane in Hyperbolic space.)
 
-The figure above shows the Poincar\'e disk model of hyperbolic plane which is cut into congruent triangles with angles $\tfrac\pi3$, $\tfrac\pi3$ and $\tfrac\pi4$.
+The figure above shows the conformal disk model of hyperbolic plane which is cut into congruent triangles with angles $\tfrac\pi3$, $\tfrac\pi3$ and $\tfrac\pi4$.
 
-\section*{Poincar\'e disk model}
-\addtocontents{toc}{Poincar\'e disk model.}
+\section*{Conformal disk model}
+\addtocontents{toc}{Conformal disk model.}
 
 In this section we give new names for some objects in the Euclidean plane
 which will represent lines, angle measures, distances in the  hyperbolic plane.
@@ -26,7 +26,7 @@ which will represent lines, angle measures, distances in the  hyperbolic plane.
 \parbf{Hyperbolic plane.}
 Let us fix a circle on the Euclidean plane 
 and call it \index{absolute}\emph{absolute}.
-The set of points inside the absolute will be called \index{hyperbolic plane}\index{plan!hyperbolic plane}\emph{hyperbolic plane} (or \index{plane!h-plane}\index{h-plane}\emph{h-plane}).
+The set of points inside the absolute will be called \index{hyperbolic plane}\index{plane!hyperbolic plane}\emph{hyperbolic plane} (or \index{plane!h-plane}\index{h-plane}\emph{h-plane}).
 
 Note that the points on absolute do {}\emph{not} belong to the h-plane.
 The points in the h-plane will be also called \index{h-point}\emph{h-points}.
@@ -51,7 +51,7 @@ The intersections of h-plane with circlines perpendicular to the absolute are ca
 
 By Corollary~\ref{cor:h-line}, there is unique h-line which pass
 through given two distinct h-points $P$ and $Q$.
-This h-line will be denoted as $(PQ)_h$.
+This h-line will be denoted as \index{1set@$(PQ)_h$, $[PQ)_h$,$[PQ]_h$}$(PQ)_h$.
 
 The arcs of hyperbolic lines will be called {}\emph{hyperbolic segments} or \index{h-segment}\emph{h-segments}.
 An h-segment with endpoints $P$ and $Q$ will be denoted as $[PQ]_h$.
@@ -240,8 +240,8 @@ x&=\frac{e^y-1}{e^y+1}.
  
 \end{thm}
 
-\begin{wrapfigure}[10]{o}{41mm}
-\begin{lpic}[t(0mm),b(0mm),r(0mm),l(-4mm)]{pics/AOPB(1)}
+\begin{wrapfigure}[8]{o}{41mm}
+\begin{lpic}[t(-5mm),b(0mm),r(0mm),l(-4mm)]{pics/AOPB(1)}
 \lbl[tr]{2,20;$A$}
 \lbl[t]{22,20;$O$}
 \lbl[t]{30,20;$P$}
@@ -256,11 +256,10 @@ Therefore
 \begin{align*}
 OA&=OB=1,
 \\ PA&=1+x,\\
-PB&=1-x.
-\intertext{and}
-y&=\ln \frac{AP\cdot BO}{PB\cdot OA}=
-\\
-&=\ln\frac{1+x}{1-x}.
+PB&=1-x.\end{align*}
+In particular,
+\begin{align*}
+y&=\ln \frac{AP\cdot BO}{PB\cdot OA}=\ln\frac{1+x}{1-x}.
 \end{align*}
 
 Taking exponent of left and right hand side and applying obvious algebra manipulations we get
@@ -322,6 +321,16 @@ $OQ_h= \rho$ if and only if $$OQ= \hat\rho=\frac{e^\rho-1}{e^\rho+1}.$$
 Therefore the locus of h-points $Q$ such that $OQ_h= \rho$ is formed by the Euclidean circle, 
 denote it by $\Delta_\rho$.
 
+If $P\ne O$, applying Lemma~\ref{lem:P-->O} and the Main observation (\ref{thm:main-observ})
+we get
+a circle $\Gamma$ perpendicular to the absolute such that $P$ is the inversion of $O$ in $\Gamma$.
+
+Let $\Delta_\rho'$ be the inversion of $\Delta_\rho$ in $\Gamma$.
+Since the inversion in $\Gamma$ preserves the h-distance,
+$PQ_h=\rho$ if and only if $Q\z\in\Delta_\rho'$.
+
+{
+
 \begin{wrapfigure}{o}{44mm}
 \begin{lpic}[t(0mm),b(-3mm),r(0mm),l(-0mm)]{pics/h-circle-3(1)}
 \lbl[t]{22,20;$O$}
@@ -332,15 +341,6 @@ denote it by $\Delta_\rho$.
 \end{lpic}
 \end{wrapfigure}
 
-
-If $P\ne O$, applying Lemma~\ref{lem:P-->O} and the Main observation (\ref{thm:main-observ})
-we get
-a circle $\Gamma$ perpendicular to the absolute such that $P$ is the inversion of $O$ in $\Gamma$.
-
-Let $\Delta_\rho'$ be the inversion of $\Delta_\rho$ in $\Gamma$.
-Since the inversion in $\Gamma$ preserves the h-distance,
-$PQ_h=\rho$ if and only if $Q\z\in\Delta_\rho'$.
-  
 According to Theorem~\ref{thm:inverse-cline}, 
 $\Delta_\rho'$ is a Euclidean circle.
 Denote by $\hat P$ the Euclidean center and by $\hat\rho$ the Euclidean radius of $\Delta_\rho'$.
@@ -350,10 +350,11 @@ that is, the center $\hat P$ lies on $(OP)$.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:h-circle=circle}
-Assume $P$, $\hat P$ and $O$ be as in the Lemma~\ref{lem:h-circle=circle} and $P\ne O$.
+Assume $P$, $\hat P$ and $O$ be as in the Lemma~\ref{lem:h-circle=circle} and $P\z\ne O$.
 Show that  $\hat P\in [OP]$.
 \end{thm}
 
+}
 
 \section*{Axiom \ref{def:birkhoff-axioms:0}}
 \addtocontents{toc}{Axioms: \ref{def:birkhoff-axioms:0},}
@@ -401,18 +402,18 @@ For any h-points $P$ and $Q$, we have
 $PQ_h=QP_h$.
 \end{thm}
 
+\parit{Proof.}
+Let $A$ and $B$ be ideal points of $(PQ)_h$ and
+$A,P,Q,B$ appear on the circline containing $(PQ)_h$ in the same order.
+
 \begin{wrapfigure}[8]{o}{26mm}
-\begin{lpic}[t(-0mm),b(-2mm),r(0mm),l(0mm)]{pics/APQB-1(1)}
+\begin{lpic}[t(-3mm),b(-2mm),r(0mm),l(0mm)]{pics/APQB-1(1)}
 \lbl[rt]{15,16;$P$}
 \lbl[rb]{14,28;$Q$}
 \lbl[tl]{21,11;$A$}
 \lbl[bl]{21,35.5;$B$}
 \end{lpic}
 \end{wrapfigure}
-
-\parit{Proof.}
-Let $A$ and $B$ be ideal points of $(PQ)_h$ and
-$A,P,Q,B$ appear on the circline containing $(PQ)_h$ in the same order.
 
 Then
 \begin{align*}
@@ -438,18 +439,6 @@ we have
 Moreover, the equality holds if and only if $P$, $Q$ and $R$ lie on one h-line in the same order.
 \end{thm}
 
-\begin{wrapfigure}{o}{30mm}
-\begin{lpic}[t(-4mm),b(-3mm),r(0mm),l(0mm)]{pics/h-circle-4(1)}
-\lbl[tr]{6.5,19;$R$}
-\lbl[t]{21,19;$P$}
-\lbl[b]{18,22.5;$\hat P$}
-\lbl[b]{17,29;$\Delta$}
-\lbl[br]{10.5,22.5;$S$}
-\lbl[bl]{26,22.5;$T$}
-\lbl[tr]{12.5,14;$Q$}
-\end{lpic}
-\end{wrapfigure}
-
 \parit{Proof.}
 Without loss of generality, 
 we may assume that $RP_h\z\ge PQ_h>0$
@@ -469,6 +458,18 @@ According to Lemma~\ref{lem:h-circle=circle},
 $\Delta$ is a Euclidean circle;
 denote by $\hat P$ its Euclidean center.
 Note that $\hat P$ is the (Euclidean) midpoint of $[ST]$.
+
+\begin{wrapfigure}[8]{o}{30mm}
+\begin{lpic}[t(-4mm),b(-3mm),r(0mm),l(0mm)]{pics/h-circle-4(1)}
+\lbl[tr]{6.5,19;$R$}
+\lbl[t]{21,19;$P$}
+\lbl[b]{18,22.5;$\hat P$}
+\lbl[b]{17,29;$\Delta$}
+\lbl[br]{10.5,22.5;$S$}
+\lbl[bl]{26,22.5;$T$}
+\lbl[tr]{12.5,14;$Q$}
+\end{lpic}
+\end{wrapfigure}
 
 By the Euclidean triangle inequality 
 $$RT=R\hat P+\hat PQ\ge RQ\eqlbl{RT>RQ}$$

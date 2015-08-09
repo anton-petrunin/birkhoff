@@ -1,4 +1,4 @@
-\part*{Non-Euclidean geometry}
+%\part*{Non-Euclidean geometry}
 \addtocontents{toc}{\protect\begin{center}}
 \addtocontents{toc}{\large{\bf Non-Euclidean geometry}}
 \addtocontents{toc}{\protect\end{center}}
@@ -52,8 +52,8 @@ Then the statement follows from SSS congruence condition.
 Note that the proof of Pythagorean theorem used properties of similar triangles, which in turn used Axiom~\ref{def:birkhoff-axioms:4}. 
 Whence the above proof is not working in absolute plane.
 
-\begin{wrapfigure}[8]{o}{28mm}
-\begin{lpic}[t(-0mm),b(8mm),r(0mm),l(3mm)]{pics/ABC-D(1)}
+\begin{wrapfigure}[10]{o}{28mm}
+\begin{lpic}[t(2mm),b(8mm),r(0mm),l(3mm)]{pics/ABC-D(1)}
 \lbl[l]{23,2;$A$}
 \lbl[b]{12,24.5;$B$}
 \lbl[t]{12,1;$C$}
@@ -124,6 +124,17 @@ and $\angle ABC$ are positive.
 Let $M$ be the midpoint of $[AB]$.
 Chose $C'\in (CM)$ distinct from $C$ so that $C'M=CM$.
 
+
+Note that the angles $\angle AMC$ and $\angle BMC'$
+are vertical;
+in particular 
+$$\measuredangle AMC=\measuredangle BMC'.$$
+
+By construction $AM\z=BM$ and $CM\z=C'M$.
+Therefore $\triangle AMC\cong \triangle BMC'$; 
+in particular 
+$$\measuredangle CAB=\pm\measuredangle C'BA.$$
+
 \begin{wrapfigure}[10]{o}{37mm}
 \begin{lpic}[t(4mm),b(0mm),r(0mm),l(2mm)]{pics/2sum(1)}
 \lbl[lt]{22.5,1;$B$}
@@ -134,14 +145,6 @@ Chose $C'\in (CM)$ distinct from $C$ so that $C'M=CM$.
 \end{lpic}
 \end{wrapfigure}
 
-Note that the angles $\angle AMC$ and $\angle BMC'$
-are vertical;
-in particular 
-$$\measuredangle AMC=\measuredangle BMC'.$$
-By construction $AM\z=BM$ and $CM\z=C'M$.
-Therefore $\triangle AMC\cong \triangle BMC'$; 
-in particular 
-$$\measuredangle CAB=\pm\measuredangle C'BA.$$
 According to \ref{thm:signs-of-triug}, 
 the angles $\angle CAB$ and $\angle C'BA$ have the same sign as $\angle AMC$ and $\angle BMC'$.
 Therefore
@@ -170,7 +173,7 @@ Note that one can not extract the solution of the above exercise from the proof 
 
 
 \begin{thm}{Exercise}\label{ex:SAA}
-Prove \index{side-angle-angle congruence condition}\index{SAA condition}\emph{side-angle-angle congruence condition} in absolute plane.
+Prove \index{SAA congruence condition}\emph{side-angle-angle congruence condition} in absolute plane.
 
 In other words, let $\triangle ABC$ and $\triangle A'B'C'$ be two triangles in absolute plane.
 Show that $\triangle ABC\cong \triangle A'B'C'$
@@ -204,7 +207,7 @@ $$AB\z<A'B'\ \ \text{if and only if}\ \
 \end{thm}
 
 \begin{wrapfigure}{o}{41mm}
-\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(2mm)]{pics/ABBCX(1)}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(2mm)]{pics/ABBCX(1)}
 \lbl[l]{37,1;$A$}
 \lbl[r]{4,1;$C$}
 \lbl[lb]{17,20;$B$}
@@ -260,16 +263,8 @@ c&=AB,
 \end{align*}
 Without loss of generality, we may assume that $\alpha,\beta,\gamma\ge 0$.
 
-Fix a positive integer $n$.
-Consider points $A_0$, $A_1,\dots,A_n$ on the half-line
-$[BA)$ so that $BA_i=i\cdot c$ for each $i$.
-(In particular, $A_0=B$ and $A_1=A$.)
-Let us construct the points $C_1$, $C_2,\dots,C_n$,
-so that
-$\measuredangle A_iA_{i-1}C_i\z=\beta$ and $A_{i-1}C_i=a$ for each $i$.
-
 \begin{center}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/legendre(1)}
+\begin{lpic}[t(1mm),b(0mm),r(0mm),l(0mm)]{pics/legendre(1)}
 \lbl[t]{2,0;$A_0$}
 \lbl[t]{22,0;$A_1$}
 \lbl[t]{42,0;$A_2$}
@@ -303,6 +298,14 @@ $\measuredangle A_iA_{i-1}C_i\z=\beta$ and $A_{i-1}C_i=a$ for each $i$.
 \lbl[t]{30,16;$\gamma$}
 \end{lpic}
 \end{center}
+
+Fix a positive integer $n$.
+Consider points $A_0$, $A_1,\dots,A_n$ on the half-line
+$[BA)$ so that $BA_i=i\cdot c$ for each $i$.
+(In particular, $A_0=B$ and $A_1=A$.)
+Let us construct the points $C_1$, $C_2,\dots,C_n$,
+so that
+$\measuredangle A_iA_{i-1}C_i\z=\beta$ and $A_{i-1}C_i=a$ for each $i$.
 
 This way we construct $n$ congruent triangles 
 \begin{align*}
@@ -507,9 +510,8 @@ where $k$ denotes so called \index{curvature}\emph{curvature} of the absolute pl
 The identity in the Exercise~\ref{ex:defect}
 suggests that defect of triangle 
 should be proportional to its area.%
-\footnote{We did not define \index{area}\emph{area};
-instead we refer to intuitive understanding of area which reader might have. 
-The formal definition of area is quite long and tedious.}
+\footnote{The area in absolute plane discussed briefly in the end of Chapter~\ref{chap:area},
+but instead the reader could also refer to intuitive understanding of area.}
 
 In fact for any absolute plane there is a nonpositive real number $k$
 such that 

@@ -54,7 +54,7 @@ then $f(t_0)=0$ for some $t_0\in[a,b]$.
 \end{thm}
 
 \begin{wrapfigure}{o}{37mm}
-\begin{lpic}[t(-3mm),b(0mm),r(0mm),l(5mm)]{pics/ivt(1)}
+\begin{lpic}[t(-6mm),b(0mm),r(0mm),l(5mm)]{pics/ivt(1)}
 \lbl[r]{2,20;$f(b)$}
 \lbl[r]{2,1;$f(a)$}
 \lbl[tl]{11,8;$t_0$}
@@ -228,7 +228,7 @@ In this case, by Exercise~\ref{ex:straight-sign},
 the angles $\angle PQX$ and $\angle PQY$ have opposite signs.
 
 \begin{wrapfigure}[6]{o}{25mm}
-\begin{lpic}[t(-0mm),b(-5mm),r(0mm),l(0mm)]{pics/vert-intersect(1)}
+\begin{lpic}[t(-3mm),b(-5mm),r(0mm),l(0mm)]{pics/vert-intersect(1)}
 \lbl[l]{10.5,13.5;$O$}
 \lbl[tr]{20,3;$A$}
 \lbl[t]{7.5,8.5;$B$}
@@ -266,7 +266,7 @@ the angles $\angle ABC$, $\angle BCA$ and $\angle CAB$ have the same sign.
 \end{thm}
 
 \begin{wrapfigure}{o}{33mm}
-\begin{lpic}[t(-0mm),b(1mm),r(0mm),l(0mm)]{pics/PQX-2(1)}
+\begin{lpic}[t(-3mm),b(1mm),r(0mm),l(0mm)]{pics/PQX-2(1)}
 \lbl[t]{30,1;$Z$}
 \lbl[t]{18,1;$A$}
 \lbl[t]{2,1;$B$}
@@ -293,11 +293,6 @@ Repeating the same argument for $\angle BCA$ and $\angle CAB$,
 we get the result.
 \qeds
 
-\begin{thm}{Exercise}\label{ex:signs-PXQ-PYQ}
-Show that two points $X,Y\notin(PQ)$ lie on the same side from $(PQ)$
-if and only if the angles $\angle PXQ$ and $\angle PYQ$ have the same sign.
-\end{thm}
-
 \medskip
 
 \begin{multicols}{2}
@@ -320,6 +315,11 @@ if and only if the angles $\angle PXQ$ and $\angle PYQ$ have the same sign.
 \end{lpic} 
 \end{center}
 \end{multicols}
+
+\begin{thm}{Exercise}\label{ex:signs-PXQ-PYQ}
+Show that two points $X,Y\notin(PQ)$ lie on the same side from $(PQ)$
+if and only if the angles $\angle PXQ$ and $\angle PYQ$ have the same sign.
+\end{thm}
 
 \begin{thm}{Exercise}\label{ex:chevinas}
 Let $\triangle ABC$ be a nondegenerate triangle,
@@ -371,14 +371,17 @@ hold if and only if
 \[c\le a+b.\]
 The following theorem states that this is the only restriction on $a$, $b$ and $c$.
 
-
-
 \begin{thm}{Theorem}\label{thm:abc}
 Assume that $0<a\le b\le c\le a+b$.
 Then there is a triangle $\triangle ABC$ such that $a=BC$, $b=CA$ and $c=AB$.
 \end{thm}
 
 The proof requires some preparation.
+
+Assume $r>0$ and $\pi>\beta>0$.
+Consider triangle $\triangle ABC$ such that 
+$AB=BC=r$ and $\measuredangle ABC=\beta$.
+The existence of such triangle follow from Axiom~\ref{def:birkhoff-axioms:2a} and Proposition~\ref{prop:point-on-half-line}.
 
 \begin{wrapfigure}{o}{25mm}
 \begin{lpic}[t(2mm),b(0mm),r(0mm),l(0mm)]{pics/sbr(1)}
@@ -391,11 +394,6 @@ The proof requires some preparation.
 \lbl[t]{12.5,20;$\beta$}
 \end{lpic}
 \end{wrapfigure}
-
-Assume $r>0$ and $\pi>\beta>0$.
-Consider triangle $\triangle ABC$ such that 
-$AB=BC=r$ and $\measuredangle ABC=\beta$.
-The existence of such triangle follow from Axiom~\ref{def:birkhoff-axioms:2a} and Proposition~\ref{prop:point-on-half-line}.
 
 Note that according to Axiom~\ref{def:birkhoff-axioms:3}, 
 the values
@@ -417,6 +415,29 @@ Choose a point $X$ such that $\measuredangle ABX$ is positive.
 Let $Y\in [AX)$ be the point such that $AY=\tfrac\epsilon8$;
 it exists by Proposition~\ref{prop:point-on-half-line}.
 
+Note that $X$ and $Y$ lie on the same side from $(AB)$;
+therefore $\angle ABY$ is positive. 
+Set $\delta=\measuredangle ABY$.
+
+Assume $0<\beta<\delta$,
+$\measuredangle ABC=\beta$
+and $BC\z=r$.
+
+
+
+
+Applying Axiom~\ref{def:birkhoff-axioms:2a},
+we can choose a half-line $[BZ)$ such that $\measuredangle ABZ=\tfrac12\cdot \beta$.
+Note that $A$ and $Y$ lie on the opposite sides from $(BZ)$.
+Therefore $(BZ)$ intersects $[AY]$;
+denote by $D$ the point of intersection.
+
+Since $D\in (BZ)$, we get $\measuredangle ABD=\tfrac \beta2$ or $\tfrac\beta2-\pi$.
+The later is impossible since $D$ and $Y$ lie on the same side from $(AB)$.
+Therefore 
+$$\measuredangle ABD=\measuredangle DBC=\tfrac \beta2.$$
+
+{
 \begin{wrapfigure}{o}{33mm}
 \begin{lpic}[t(-2mm),b(0mm),r(0mm),l(0mm)]{pics/fra(1)}
 \lbl[t]{22.5,0;$A$}
@@ -430,26 +451,6 @@ it exists by Proposition~\ref{prop:point-on-half-line}.
 \lbl[w]{13,8,30;$\,r\,$}
 \end{lpic}
 \end{wrapfigure}
-
-Note that $X$ and $Y$ lie on the same side from $(AB)$;
-therefore $\angle ABY$ is positive. 
-Set $\delta=\measuredangle ABY$.
-
-Assume $0<\beta<\delta$,
-$\measuredangle ABC=\beta$
-and $BC\z=r$.
-
-
-Applying Axiom~\ref{def:birkhoff-axioms:2a},
-we can choose a half-line $[BZ)$ such that $\measuredangle ABZ=\tfrac12\cdot \beta$.
-Note that $A$ and $Y$ lie on the opposite sides from $(BZ)$.
-Therefore $(BZ)$ intersects $[AY]$;
-denote by $D$ the point of intersection.
-
-Since $D\in (BZ)$, we get $\measuredangle ABD=\tfrac \beta2$ or $\tfrac\beta2-\pi$.
-The later is impossible since $D$ and $Y$ lie on the same side from $(AB)$.
-Therefore 
-$$\measuredangle ABD=\measuredangle DBC=\tfrac \beta2.$$
 
 By Axiom~\ref{def:birkhoff-axioms:3},
 $\triangle ABD\cong \triangle CBD$.
@@ -465,6 +466,8 @@ AC&\le AD+DC=
 \end{align*}
 Hence the result follows.
 \qeds
+
+}
 
 \begin{thm}{Corollary}\label{cor:C-cont}
 Fix a real number $r>0$ 

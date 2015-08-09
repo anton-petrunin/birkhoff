@@ -8,8 +8,8 @@
 \item If $|\measuredangle A O B|=\tfrac\pi2$, we say that the angle $\angle A O B$ is  \index{angle!right angle}\emph{right};
 %\item If $\measuredangle A O B\ne\pm\tfrac\pi2$, we say that the angle  $\angle A O B$ is  \index{angle!oblique angle}\emph{oblique};
 \item If $|\measuredangle A O B|<\tfrac\pi2$, we say that the angle  $\angle A O B$ is  
-\index{angle!acute angle}\index{acute!acute angle}\emph{acute};
-\item If $|\measuredangle A O B|>\tfrac\pi2$, we say that the angle $\angle A O B$ is  \index{angle!obtuse angle}\index{obtuse!obtuse angle}\emph{obtuse}.
+\index{acute!angle}\emph{acute};
+\item If $|\measuredangle A O B|>\tfrac\pi2$, we say that the angle $\angle A O B$ is  \index{angle!obtuse angle}\index{obtuse angle}\emph{obtuse}.
 \end{itemize}
 
 \begin{wrapfigure}{o}{30mm}
@@ -24,7 +24,7 @@ as shown.
 If $\angle A O B$ is right,
 we say also
 that $[O A)$ is \index{perpendicular}\emph{perpendicular} to $[O B)$; 
-it will be written as \index{$\perp$}$[O A)\z\perp [O B)$.
+it will be written as \index{1rel@$\perp$}$[O A)\z\perp [O B)$.
 
 From Theorem~\ref{thm:straight-angle}, 
 it follows that two lines $(O A)$
@@ -50,7 +50,7 @@ that is, $M\in(A B)$ and $A M \z=  M B$.
 
 
 The line $\ell$ passing through $M$ and perpendicular to $(AB)$
- is called \index{perpendicular bisector}\emph{perpendicular bisector} to the segment $[AB]$. 
+ is called \index{bisector!perpendicular bisector}\index{perpendicular bisector}\emph{perpendicular bisector} to the segment $[AB]$. 
 
 \begin{thm}{Theorem}\label{thm:perp-bisect}
 Given distinct points $A$ and $B$,
@@ -70,7 +70,7 @@ others lie on the perpendicular bisector to $[A B]$.
 \parit{Proof.} Let $M$ be the midpoint of $[A B]$.
 
 Assume $P A= P B$ and $P\ne M$.
-According to SSS-condition (\ref{thm:SSS}),
+According to SSS (\ref{thm:SSS}),
 $\triangle A M P \z\cong\triangle B M P$.
 Whence 
 $$\measuredangle A M P\equiv\pm \measuredangle B M P.$$   
@@ -145,8 +145,12 @@ Choose $P'$ so that $AP'\z=AP$ and $\measuredangle P' A B\equiv -\measuredangle 
 According to Axiom~\ref{def:birkhoff-axioms:3}, $\triangle A P' B\z\cong\triangle A P B$.
 Therefore $A P= A P'$ and $B P= B P'$.
 
+
+According to Theorem~\ref{thm:perp-bisect}, $A$ and $B$ lie on perpendicular bisector to $[P P']$.
+In particular $(P P')\perp (A B)=\ell$.
+
 \begin{wrapfigure}{i}{36mm}
-\begin{lpic}[t(-0mm),b(-3mm),r(0mm),l(0mm)]{pics/perp-unique(1)}
+\begin{lpic}[t(-8mm),b(-3mm),r(0mm),l(0mm)]{pics/perp-unique(1)}
 \lbl[rb]{2,16;$Q$}
 \lbl[lb]{33,16;$Q'$}
 \lbl[lb]{18.5,28;$P$}
@@ -155,9 +159,6 @@ Therefore $A P= A P'$ and $B P= B P'$.
 \lbl[b]{17,20,90;$m$}
 \end{lpic}
 \end{wrapfigure}
-
-According to Theorem~\ref{thm:perp-bisect}, $A$ and $B$ lie on perpendicular bisector to $[P P']$.
-In particular $(P P')\perp (A B)=\ell$.
 
 \parit{Uniqueness for $P\not\in\ell$.} 
 From above we can choose a point $P'$ in such a way that $\ell$ forms the perpendicular bisector to $[PP']$.
@@ -346,13 +347,13 @@ Show that $$BC>AB.$$
 \addtocontents{toc}{Angle bisectors.}
 
 If $\measuredangle A B X\equiv-\measuredangle C B X$ then we say that line $(BX)$ {}\emph{bisects angle} $\angle ABC$,
-or line $(BX)$ is the \index{bisector}\emph{bisector} of $\angle ABC$.
+or line $(BX)$ is the \index{bisector!angle bisector}\emph{bisector} of $\angle ABC$.
 If $\measuredangle A B X\equiv\pi-\measuredangle C B X$ then the line $(BX)$ is called \index{bisector!external bisector}\emph{external bisector} of $\angle ABC$.
 
 Note that bisector and external bisector are uniquely defined by the angle.
 
-\begin{wrapfigure}[6]{o}{39mm}
-\begin{lpic}[t(-6mm),b(0mm),r(0mm),l(1mm)]{pics/bisectors(1)}
+\begin{wrapfigure}[7]{o}{39mm}
+\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(1mm)]{pics/bisectors(1)}
 \lbl[tr]{30,5;$A$}
 \lbl[rb]{9,10;$B$}
 \lbl[br]{31,29;$C$}
@@ -464,8 +465,8 @@ Given a positive real number $r$ and a point $O$,
 the set $\Gamma$ of all points on distant $r$ from $O$ is called \index{circle}\emph{circle} 
 with \index{radius}\emph{radius} $r$ and  \index{center}\emph{center} $O$.
 
-We say that a point $P$ lies {}\emph{inside} $\Gamma$ if $OP<r$ 
-and if $OP>r$, we say that $P$ lies {}\emph{outside} $\Gamma$.
+We say that a point $P$ lies \index{inside!inside a circle}\emph{inside} $\Gamma$ if $OP<r$ 
+and if $OP>r$, we say that $P$ lies \index{outside a circle}\emph{outside} $\Gamma$.
 \label{def:circle}
 
 \begin{thm}{Exercise}\label{ex:inside-outside}
@@ -518,14 +519,14 @@ Show that two distinct circles can have at most two points of intersection.
 
 In consequence of the above lemma, 
 a line $\ell$ and a circle $\Gamma$ might have 2, 1 or 0 points of intersections.
-In the first case the line is called \index{secant line}\emph{secant line}, in the second case it is \index{tangent line}\emph{tangent line};
+In the first case the line is called \index{secant line}\emph{secant line}, in the second case it is \index{tangent!line}\emph{tangent line};
 if $P$ is the only point of intersection of $\ell$ and $\Gamma$,
-we say that \index{tangent line}\emph{$\ell$ is tangent to $\Gamma$ at $P$}. 
+we say that {}\emph{$\ell$ is tangent to $\Gamma$ at $P$}. 
 
 Similarly, according Exercise \ref{ex:two-circ},
 two circles might have 2, 1 or 0 points of intersections.
 If $P$ is the only point of intersection of circles $\Gamma$ and $\Gamma'$,
-we say that \index{tangent circles}\emph{$\Gamma$ is tangent to $\Gamma$ at $P$}. 
+we say that \index{tangent!circles}\emph{$\Gamma$ is tangent to $\Gamma$ at $P$}. 
 
 \begin{thm}{Lemma}\label{lem:tangent}
 Let $\ell$ be a line and $\Gamma$ be a circle with center $O$.
@@ -582,7 +583,7 @@ which we will use further in the book.
 In addition, Chapter~\ref{chap:car} is devoted completely to the subject.
 
 The idealized ruler can be used only to draw a line through given two points.
-The idealized compass can be used only to draw a \index{circle}\emph{circle} with given center and radius.
+The idealized compass can be used only to draw a circle with given center and radius.
 That is, given three points $A$, $B$ and $O$ 
 we can draw the set of all points on distant $AB$ from $O$.
 We may also mark new points in the plane
