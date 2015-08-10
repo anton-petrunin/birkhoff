@@ -13,7 +13,7 @@ In this chapter we briefly discuss the classical results in geometric constructi
 \section*{Classical problems}
 \addtocontents{toc}{Classical problems.}
 
-Here we list couple of classical construction problems;
+In this section we list couple of classical construction problems;
 each known for more than thousand years. 
 The solutions of the following two problems are quite nontrivial.
 
@@ -36,7 +36,7 @@ The following exercise is a simplified version of Apollonius's problem, which is
 
 
 \begin{thm}{Exercise}\label{ex:simple-apollonius}
-Construct a circle which pass through given point and tangent to two intersecting lines.
+Construct a circle which pass through the given point and tangent to two intersecting lines.
 \end{thm}
 }
 
@@ -56,7 +56,7 @@ In other words,
 given a segment of length $a$
 one needs to construct a segment of length $\sqrt[3]{2}\cdot a$.
 
-\parbf{Squaring the circle.} {\it Construct a square with the same area as a given circle.} 
+\parbf{Squaring the circle.} {\it Construct a square with the same area as the given circle.} 
 
 \medskip
 
@@ -69,6 +69,7 @@ If $r$ is the radius of the given circle, we need to construct a segment of leng
 
 In fact there is no compass-and-ruler construction which trisects angle with measure $\tfrac\pi3$. 
 Existence of such construction would imply constructability of regular 9-gon which is prohibited by the following famous result.
+%???unefined n-gon
 
 \begin{thm}{Gauss--Wantzel theorem}
 A regular $n$-gon is constructable with ruler and compass 
@@ -81,7 +82,7 @@ Only five Fermat primes are known  today:
 $$3, 5, 17, 257, 65537.$$
 For example, 
 \begin{itemize}
-\item one can construct a regular 34-gon since $34=2\cdot 17$ and $17$ is a Fermat prime;
+\item one can construct a regular 340-gon since $340=2^2\cdot 5\cdot 17$ and $5$ as well as $17$ are Fermat primes;
 \item one can not construct a regular 7-gon since $7$ is not a Fermat prime;
 \item one can not construct a regular 9-gon; although $9=3\cdot 3$ is a product of two Fermat primes, these primes are not distinct.
 \end{itemize}
@@ -103,9 +104,12 @@ The same way the result of construction can be described by a finite collection 
 Choose a  coordinate system, such that one of the initial points as the origin $(0,0)$ and yet an other initial point has coordinates $(1,0)$.
 In this coordinate system,
 the initial configuration of $n$ points is described by 
-$2\cdot n-4$ numbers, their coordinates, say $(x_3,y_3,x_4,y_4,\dots,x_n,y_n)$.
-It is straightforward to show that coordinates of any point constructed 
-can be written through the numbers $x_3,y_3,x_4,y_4,\dots,x_n,y_n$ using the four arithmetic operations ``$+$'', ``$-$'', ``$\cdot$'', ``$/$''
+$2\cdot n-4$ numbers, their coordinates, say $(x_3,y_3,x_4,y_4,\z\dots,x_n,y_n)$.
+
+\medskip
+
+It turns out that the coordinates of any point constructed with compass and ruler
+can be written through the numbers $x_3,y_3,x_4,y_4,\z\dots,x_n,y_n$ using the four arithmetic operations ``$+$'', ``$-$'', ``$\cdot$'', ``$/$''
 and the square root ``$\sqrt{\phantom{a}}$''.
 
 For example, assume we want to find the points $X_1=(x_1,y_1)$ and $X_2\z=(x_2,y_2)$ of intersection of 
@@ -130,13 +134,12 @@ The intersection of two lines is even simpler;
 it described as a solution of two linear equations and can be expressed using only four arithmetic operations;
 the square root ``$\sqrt{\phantom{a}}$'' is not needed.
 
-Summarizing, the coordinates of any point which can be obtained by a compass-and-ruler construction can be expressed in terms of $x_3,y_3,x_4,y_4,\dots,x_n,y_n$ and integers using only ``$+$'', ``$-$'', ``$\cdot$'', ``$/$''
-and ``$\sqrt{\phantom{a}}$''.
+\medskip
 
 On the other hand, it is easy to produce  compass-and-ruler constructions which produce a segment of length $a+b$ and $a-b$ from two given segments of lengths $a>b$.
 
 \begin{wrapfigure}[11]{o}{47mm}
-\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(3mm)]{pics/geom-calc(1)}
+\begin{lpic}[t(-5mm),b(0mm),r(0mm),l(3mm)]{pics/geom-calc(1)}
 \lbl[r]{0,22;$A$}
 \lbl[l]{42,22;$B$}
 \lbl[t]{9,20;$D$}
@@ -168,7 +171,7 @@ $\sqrt a$, $a^2$, $\tfrac1b$.
 Further combining these constructions we can produce
 $a\cdot b=(\sqrt{a\cdot b})^2$,
 $\tfrac ab=a\cdot\tfrac 1b$.
-In other words we produced a compass-and-ruler calculator,
+In other words we produced a {}\emph{compass-and-ruler calculator},
 which can do ``$+$'', ``$-$'', ``$\cdot$'', ``$/$'' and ``$\sqrt{\phantom{a}}$''.
 
 The discussion above gives a rough sketch of the proof of the following theorem:
@@ -176,14 +179,18 @@ The discussion above gives a rough sketch of the proof of the following theorem:
 \begin{thm}{Theorem}\label{thm:constructable-numbers}
 Assume that initial configuration of geometric construction is given by points $A_1=(0,0)$, $A_2=(1,0)$, $A_3=(x_3,y_3),\z\dots,A_n=(x_n,y_n)$.
 Then a point $X=(x,y)$ can be constructed using a compass-and-ruler construction
-if and only if both coordinates $x$ and $y$ can be expressed from $x_3,y_3,x_4,y_4,\dots,x_n,y_n$ using the arithmetic operations ``$+$'', ``$-$'', ``$\cdot$'', ``$/$'' and the square root ``$\sqrt{\phantom{a}}$''.
+if and only if both coordinates $x$ and $y$ can be expressed from the integer numbers and $x_3,y_3,x_4,y_4,\dots,x_n,y_n$ using the arithmetic operations ``$+$'', ``$-$'', ``$\cdot$'', ``$/$'' and the square root ``$\sqrt{\phantom{a}}$''.
 \end{thm}
 
-This theorem translates any compass-and-ruler construction problem 
+The numbers which can be expressed from the given numbers using the arithmetic operations and the square root ``$\sqrt{\phantom{a}}$'' are called \index{constructable numbers}\emph{constructable};
+if the list of given numbers is not given then we can only use the integers.
+The theorem above translates any compass-and-ruler construction problem 
 into purely algebraic language --- we need to decide if the given number is constructable.
 For example:
 \begin{itemize}
 \item Impossibility of solution for doubling cube problem states that $\sqrt[3]{2}$ is not a constructable number.
+That is $\sqrt[3]{2}$ can not be expressed through integers using
+``$+$'', ``$-$'', ``$\cdot$'', ``$/$'' and ``$\sqrt{\phantom{a}}$''.
 \item Impossibility of solution for squaring the circle states that 
 $\sqrt{\pi}$, or equivalently $\pi$, is not a constructable number.
 \item Gauss--Wantzel theorem tells for which integers $n$ the number 
@@ -193,7 +200,7 @@ Some of these statements might look evident,
 but a rigorous proofs require some knowledge of field theory
 which is out of scope of this book. 
 
-In the next section we discuss a similar but simpler examples of impossible constructions with unusual tools.
+In the next section we discuss a similar but simpler examples of impossible constructions with an unusual tool.
 
 \section*{Constructions with set square}
 \addtocontents{toc}{Constructions with set square.}
@@ -270,7 +277,8 @@ Arguing by contradiction,
 assume we have a construction of the center. 
 
 Apply to whole construction an inversion in a circle perpendicular to  $\Gamma$.
-According to Corollary~\ref{cor:perp-inverse-clines}, 
+According to Corollary~\ref{cor:perp-inverse-clines},
+the circle
 $\Gamma$ maps to itself.
 Since inversion sends circline to circline, we get that all construction is mapped to an equivalent construction; 
 that is, a constriction with different choice of free points.
@@ -334,21 +342,21 @@ The line $p=(ZZ')$ does not depend on the choice of chords.
 Moreover $P\mapsto p$ is a duality (see page~\pageref{page:duality}).
 \end{thm}
 
-The line $p$ is called polar of $P$ with respect to $\Gamma$.
-The same way the point $P$ is called polar of the line $p$ with respect to $\Gamma$.
-
-\begin{wrapfigure}{o}{30mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/polar(1)}
+\begin{wrapfigure}[7]{o}{30mm}
+\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/polar(1)}
 \lbl[t]{27,8;$P$}
 \lbl[l]{15,0;$p$}
 \lbl[rb]{1,6;$X$}
 \lbl[ltw]{19.5,8;$X'$}
-\lbl[b]{9,19;$Y$}
-\lbl[b]{17.5,16;$Y'$}
+\lbl[b]{9,19.5;$Y$}
+\lbl[b]{17.5,16.5;$Y'$}
 \lbl[l]{14,24;$Z$}
 \lbl[trw]{12,12;$Z'$}
 \end{lpic}
 \end{wrapfigure}
+
+The line $p$ is called polar of $P$ with respect to $\Gamma$.
+The same way the point $P$ is called polar of the line $p$ with respect to $\Gamma$.
 
 We will not give a proof of this claim, but will try to use it in the constructions.
 

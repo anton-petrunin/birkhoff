@@ -114,7 +114,7 @@ One can equip $\mathbb{R}^2$ with the following metrics.
 $$d_2(A,B)=\sqrt{(x_A-x_B)^2+(y_A-y_B)^2}.$$
 \item\index{Manhattan metric}\emph{Manhattan metric,} denoted as $d_1$ and defined as 
 $$d_1(A,B)=|x_A-x_B|+|y_A-y_B|.$$
-\item\index{maximum metric}\emph{Maximum metric,} denoted as $d_\infty$ and defined as 
+\item{}\emph{Maximum metric,} denoted as $d_\infty$ and defined as 
 $$d_\infty(A,B)=\max\{|x_A-x_B|,|y_A-y_B|\}.$$
 \end{itemize}
 \end{itemize}
@@ -130,8 +130,7 @@ Prove that the following functions are metrics on $\mathbb{R}^2$:
 
 Most of the time  
 we study only one metric on the space.
-For example $\mathbb{R}$ will always refer to the real line.
-Thus we will not need to name the metric function each time.
+Therefore we will not need to name the metric function each time.
 
 Given a metric space $\mathcal X$,
 the distance between points $A$ and $B$ will be further denoted as $$AB\ \ \text{or}\ \ d_{\mathcal X}(A,B);$$
@@ -179,7 +178,7 @@ is also called \index{motion}\emph{motion} of the space.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:dist-preserv=>injective}
-Show that any distance preserving map  is injective;
+Show that any distance preserving map  is \index{injective map}\emph{injective};
 that is, if $f\:\mathcal X\to\mathcal Y$ is a distance preserving map then
 $f(A)\ne f(B)$
 for any pair of distinct points $A,  B\in \mathcal X$.
@@ -187,10 +186,11 @@ for any pair of distinct points $A,  B\in \mathcal X$.
 
 \begin{thm}{Exercise}\label{ex:motion-of-R}
 Show that if $f\:\mathbb{R}\to\mathbb{R}$ is a motion of the real line 
-then either 
-$$f(x)=f(0)+x\ \ \text{for any}\ \  x\in \mathbb{R}$$  
-or 
-$$f(x)=f(0)-x\ \ \text{for any}\ \  x\in \mathbb{R}.$$ 
+then either (a)
+$f(x)=f(0)+x$ for any $x\in \mathbb{R}$,  
+or (b)
+$f(x)=f(0)-x$ for any $x\in \mathbb{R}$. 
+
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:d_1=d_infty}
@@ -203,7 +203,8 @@ Describe all the motions of the Manhattan plane.
 
 If $\mathcal X$ is a metric space and $\mathcal Y$ is a subset of $\mathcal X$,
 then a metric on $\mathcal Y$ can be obtained by restricting the metric from $\mathcal X$. 
-In other words, the distance between points of $\mathcal Y$ is defined to be the distance between the same points in $\mathcal X$.
+In other words, 
+the distance between two points of $\mathcal Y$ is defined to be the distance between these points in $\mathcal X$.
 This way any subset of a metric space can be also considered as a metric space. 
 
 \begin{thm}{Definition}\label{def:line}
@@ -281,16 +282,17 @@ it corresponds to the angle measure in radians.
 
 The angle measure of $\angle AOB$ is denoted as \index{1fig@$\measuredangle$}$\measuredangle AOB$;
 it is a real number in the interval $(-\pi,\pi]$. 
+
 The notations $\angle AOB$ and $\measuredangle AOB$ look similar,
 they also have close but different meanings, 
 which better not to be confused.
 For example, the equality 
-$$\angle AOB=\angle A'O'B'$$ 
+$\angle AOB=\angle A'O'B'$
 means that
 $[OA)=[O'A')$ and $[OB)\z=[O'B')$,
 in particular $O=O'$.
 On the other hand the equality 
-$$\measuredangle AOB\z=\measuredangle A'O'B'$$ 
+$\measuredangle AOB\z=\measuredangle A'O'B'$ 
 means only equality of two real numbers;
 in this case $O$ may be distinct from $O'$.
 
@@ -328,7 +330,8 @@ The introduced relation ``$\equiv$'' behaves roughly as equality,
 but the angle measures which differ by full turn 
 \[\dots,\,\alpha-2\cdot\pi,\, \alpha,\, \alpha+2\cdot\pi,\, \alpha+4\cdot\pi,\,\dots\] 
 are considered to be the same.
-We can do addition subtraction and multiplication by integer number without getting into trouble.
+
+With ``$\equiv$'', we can do addition subtraction and multiplication by integer number without getting into trouble.
 That is, if
 $$\alpha\equiv\beta\ \ \ \ \text{and}\ \ \ \ \alpha'\equiv \beta'$$ 
 then
@@ -360,8 +363,8 @@ Further $\mathcal X$ and $\mathcal Y$ be two metric spaces
 and $d_{\mathcal X}$, $d_{\mathcal Y}$ be their metrics.
 
 A map $f\:\mathcal X\to\mathcal Y$ is called continuous at point $A\in \mathcal X$
-if for any  $\epsilon>0$ there is $\delta>0$ such that if $d_{\mathcal X}(A,A')<\delta$ then
-$$d_{\mathcal Y}(f(A),f(A'))<\epsilon.$$
+if for any  $\epsilon>0$ there is $\delta>0$ such that 
+\[d_{\mathcal X}(A,A')<\delta\ \ \Rightarrow\ \ d_{\mathcal Y}(f(A),f(A'))<\epsilon.\]
 
 The same way one may define a continuous map of several variables.
 Say, assume $f(A,B,C)$ is a function which returns a point in the space $\mathcal Y$ for a triple of points $(A,B,C)$
@@ -371,7 +374,7 @@ The map $f$ might be defined only for some triples in $\mathcal X$.
 Assume $f(A,B,C)$ is defined.
 Then we say that $f$ continuous at the triple $(A,B,C)$ 
 if for any $\epsilon>0$ there is $\delta>0$ such that 
-$$d_{\mathcal Y}(f(A,B,C),f(A',B',C'))<\epsilon.$$
+\[(f(A,B,C),f(A',B',C'))<\epsilon.\]
 if $d_{\mathcal X}(A,A')<\delta$, $d_{\mathcal X}(B,B')<\delta$ and $d_{\mathcal X}(C,C')<\delta$.
 
 
@@ -415,7 +418,7 @@ that is, if two triangles are congruent if they have two pairs of equal sides an
 An {}\emph{ordered} triple of distinct points in a metric space $\mathcal{X}$, 
 say $A,B,C$
 is called \index{triangle}\emph{triangle}\label{page:def:triangle} and denoted as \index{1gons@$\triangle$}$\triangle A B C$.
-So the triangles $\triangle A B C$ and $\triangle A C B$ are considered as different.
+Note that the triangles $\triangle A B C$ and $\triangle A C B$ are considered as different.
 
 Two triangles $\triangle A' B' C'$ and $\triangle A B C$ are called 
 \index{triangle!congruent triangles}
@@ -430,7 +433,7 @@ as well as the composition $f\circ g:\mathcal X\to\mathcal X$
 are also motions.
 
 It follows that ``$\cong$'' is an equivalence relation;
-that is, the following two conditions hold.
+that is, any triangle congruent to itself and the following two conditions hold.
 \begin{itemize} 
 \item If $\triangle A' B' C'\z\cong\triangle A B C$ then $\triangle A B C\z\cong\triangle A' B' C'$.
 \item If $\triangle A'' B'' C''\z\cong\triangle A' B' C'$ and $\triangle A' B' C'\z\cong\triangle A B C$ 
@@ -475,10 +478,5 @@ Note that a point $M$ is a midpoint\footnote{$M$ is a midpoint of $A$ and $B$ if
 The set of midpoints for $A$ and $B$ is infinite, it contains all points $(t,t)$ for $t\in[0,1]$ (it is the dark gray segment on the picture).
 On the other hand the midpoint for $B$ and $C$ is unique (it is the black point on the picture).
 Thus the map $f$ can not be bijective, a contradiction.
-
-\newpage
-
-\ %???blank page to start axioms on even page.
-
 
 \addtocontents{toc}{\protect\end{quote}}
