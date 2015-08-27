@@ -70,6 +70,58 @@ we develop Euclidean geometry to a dissent level.
 In Chapter~\ref{chap:triangle} we give the most classical theorem of triangle geometry;
 this chapter included mainly as an illustration.
 
+\medskip
+\begin{center}
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,scale=1.2,
+  thick,main node/.style={circle,draw,font=\sffamily\bfseries,minimum size=8mm}]
+
+  \node[main node] (1) at (1,3) {1};
+  \node[main node] (2) at (2,3){2};
+  \node[main node] (3) at (3,3) {3};
+  \node[main node] (4) at (4,3) {4};
+  \node[main node] (5) at (4,2) {5};
+  \node[main node] (6) at (4,1) {6};
+  \node[main node] (7) at (5,1) {7};
+  \node[main node] (8) at (3,1){8};
+  \node[main node] (9) at (2,1) {9};
+  \node[main node] (10) at (3,2) {10};
+  \node[main node] (11) at (2,2){11};
+  \node[main node] (12) at (1,2) {12};
+  \node[main node] (13) at (1,0) {13};
+  \node[main node] (14) at (0,0) {14};
+  \node[main node] (15) at (1,1) {15};
+  \node[main node] (16) at (0,1) {16};
+  \node[main node] (17) at (3,0) {17};
+  \node[main node] (18) at (4,0) {18};
+  \node[main node] (19) at (5,0) {19};
+
+  \path[every node/.style={font=\sffamily\small}]
+   (1) edge node[right]{}(2)
+   (2) edge node[right]{}(3)
+   (3) edge node[right]{}(4)
+   (4) edge node[right]{}(5)
+   (5) edge node[right]{}(6)
+   (6) edge node[right]{}(7)
+   (6) edge node[right]{}(19)
+   (9) edge node[right]{}(13)
+   (13) edge node[right]{}(14)
+   (6) edge node[right]{}(8)
+   (6) edge node[right]{}(18)
+   (8) edge node[right]{}(9)
+   (9) edge node[right]{}(11)
+   (9) edge node[right]{}(15)
+   (9) edge node[right]{}(17)
+   (5) edge node[right]{}(10)
+   (10) edge node[right]{}(11)
+   (11) edge node[right]{}(12)
+   (14) edge node[right]{}(16)
+   (15) edge node[right]{}(16)
+   (12) edge node[dashed,right]{}(16);
+\end{tikzpicture}
+\end{center}
+
+\medskip
+
 In the chapters \ref{chap:inscribed-angle}--\ref{chap:inversion} we discuss geometry of circles on the Euclidean plane. 
 These two chapters 
 will be used in the construction of the model of hyperbolic plane.
@@ -90,12 +142,12 @@ and
 discuss so called {}\emph{incidence geometry},
 it includes affine and projective geometries.
 
-The last few chapters contain additional topics:
+The chapters \ref{chap:sphere}--\ref{chap:area} contain additional topics:
 Spherical geometry, 
 Projective model,
 Complex coordinates,
 Geometric constructions
-and Area.
+and Area correspondingly
 The proofs in these chapters are not completely rigorous.
 
 \section*{Disclaimer}
@@ -122,7 +174,8 @@ should be good for further study.
 
 \item Methodologically my lectures
 were very close to Sharygin's  textbook \cite{sharygin}.
-Which I recommend to anyone who can read Russian.
+This is the greatest textbook in geometry for school students,
+I recommend it to anyone who can read Russian.
 
 
 \end{itemize}
@@ -133,8 +186,6 @@ Matthew Chao for thoughtful reading
 and correcting dozens of mistakes.
 
 %\epigraph{It is difficult if not impossible to manipulate the people who understand what a proof is.}{Igor Sharygin}
-
-
 
 
 

@@ -1,12 +1,12 @@
 \begin{theindex}
 
   \item $\angle$, \hyperpage{14}
-  \item $\infty$, \hyperpage{68}
   \item $\measuredangle$, \hyperpage{14}
   \item $\solidsquare$, \hyperpage{151}
   \item $\solidtriangle$, \hyperpage{150}
   \item $\square$, \hyperpage{50}
   \item $\triangle$, \hyperpage{17}
+  \item $\infty$, \hyperpage{68}
   \item $\cong$, \hyperpage{17}, \hyperpage{151}
   \item $\equiv$, \hyperpage{15}
   \item $\parallel$, \hyperpage{43}
@@ -66,7 +66,6 @@
   \item circline, \hyperpage{68}
   \item circumtool, \hyperpage{147}
   \item collinear, \hyperpage{104}
-  \item collinear points, \hyperpage{114}
   \item complex conjugate, \hyperpage{135}
   \item concurrent, \hyperpage{111}
   \item conformal disk model, \hyperpage{84}
@@ -94,6 +93,8 @@
   \item direct motion, \hyperpage{37}
   \item discrete metric, \hyperpage{11}
   \item distance, \hyperpage{11}
+    \subitem between parallel lines, \hyperpage{51}
+    \subitem from a point to a line, \hyperpage{38}
   \item distance-preserving map, \hyperpage{12}
   \item duality, \hyperpage{116}
 
@@ -113,10 +114,10 @@
 
   \indexspace
 
-  \item Fano plane, \hyperpage{119}
+  \item Fano plane, \hyperpage{118}
   \item Fermat prime, \hyperpage{144}
   \item field automorphism, \hyperpage{106}
-  \item finite projective plane, \hyperpage{119}
+  \item finite projective plane, \hyperpage{118}
   \item foot point, \hyperpage{35}
 
   \indexspace
@@ -177,10 +178,6 @@
 
   \indexspace
 
-  \item Klein mode, \hyperpage{126}
-
-  \indexspace
-
   \item leg, \hyperpage{46}
   \item line, \hyperpage{13}
   \item Lobachevskian geometry, \hyperpage{81}
@@ -188,7 +185,7 @@
   \indexspace
 
   \item M\"obius transformation, \hyperpage{138}
-  \item Manhattan metric, \hyperpage{11}
+  \item Manhattan plane, \hyperpage{11}
   \item metric, \hyperpage{10}
   \item metric space, \hyperpage{11}
   \item motion, \hyperpage{12}
@@ -227,7 +224,6 @@
     \subitem inversive plane, \hyperpage{68}
     \subitem neutral plane, \hyperpage{75}
     \subitem plane in the space, \hyperpage{112}
-  \item Poincar\'e disc mode, \hyperpage{84}
   \item point, \hyperpage{11}
     \subitem ideal point, \hyperpage{85}
   \item polar coordinates, \hyperpage{137}

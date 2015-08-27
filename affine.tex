@@ -25,7 +25,7 @@ In other words, you need to show that $f$ maps noncollinear points to noncolline
 
 \emph{Affine geometry} studies  so called \index{incidence structure}\emph{incidence structure} of Euclidean plane.
 The incidence structure is the data about which points lie on which lines and nothing else;
-we can not talk about distance angles and so on.
+we can not talk about distances, angles and so on.
 One may also say that affine geometry studies
 the properties of Euclidean plane which preserved under affine transformations.
 
@@ -39,9 +39,10 @@ Show that affine transformation sends parallel lines to the parallel lines.
 \addtocontents{toc}{Constructions with parallel tool and ruler.}
 
 Let us consider geometric constructions with ruler and \index{parallel tool}\emph{parallel tool};
-the later makes possible to draw a line through given point parallel to given line.
+the later makes possible to draw a line through the given point parallel to the given line.
 From the exercisers above it follows that any construction with these two tools are invariant with respect to affine transformation.
-For example to solve the following exercise,
+For example, 
+to solve the following exercise,
 it is sufficient to prove that midpoint of given segment can be constructed with ruler and parallel tool.
 
 \begin{thm}{Exercise}\label{ex:midpoint-affine}
@@ -60,7 +61,7 @@ Use ruler and parallel tool to construct the points with coordinates $(a\cdot b,
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:center-circ-affine}
-Use ruler and parallel tool to construct the center of given circle.
+Use ruler and parallel tool to construct the center of the given circle.
 \end{thm}
 
 \section*{Matrix form}
@@ -80,7 +81,7 @@ x\\y
 \end{smallmatrix} \right)$ instead of $(x,y)$.
 
 A map $\beta$ from the plane to itself
-is affine transformation if and only if 
+is an affine transformation if and only if 
 \[\beta\:\left(\begin{smallmatrix}
 x\\ y
 \end{smallmatrix} \right)
@@ -152,7 +153,8 @@ f(2)&=f(1)+f(1)=1+1=2\\
 f(3)&=f(2)+f(1)=2+1=3\\
 &\dots
 \end{align*}
-Together with \ref{eq:f-x} it implies that 
+Together with \ref{eq:f-x},
+the later implies that 
 $$f(n)=n\ \ \text{for any integer}\ \ n.$$ 
 
 Since
@@ -174,7 +176,8 @@ we also get
 
 Finally, assume $f(a)\ne a$ for some $a\in\mathbb{R}$.
 Then there is a rational number $\tfrac{m}{n}$ which lies between $a$ and $f(a)$;
-i.e, the numbers $x=a-\tfrac{m}{n}$ and $y=f(a)-\tfrac{m}{n}$ have opposite signs.
+that is, 
+the numbers $x\z=a-\tfrac{m}{n}$ and $y=f(a)-\tfrac{m}{n}$ have opposite signs.
 Since $f(\tfrac{m}{n})=\tfrac{m}{n}$, we get $f(x)=y$.
 The later contradicts \ref{a>0=>b>0} or \ref{a<0=>b<0}.
 \qeds
@@ -424,7 +427,12 @@ it maps circles to circles.
 
 Composing $\alpha$ with a reflection, say $\rho_1$, we can assume that $\alpha'=\rho_1\circ\alpha$ maps the unit circle with center at the origin to a concentric circle. 
 
-Composing the obtained map $\alpha'$ with a homothety $\chi$ with center at the origin,
+Composing the obtained map $\alpha'$ with a {}\emph{homothety} 
+\[\chi\:\left(\begin{smallmatrix}
+x\\ y
+\end{smallmatrix} \right)\mapsto \left(\begin{smallmatrix}
+k\cdot x\\ k\cdot y
+\end{smallmatrix} \right),\]
 we can assume that $\alpha''=\chi\circ\alpha'$ sends the unit circle to itself.
 
 

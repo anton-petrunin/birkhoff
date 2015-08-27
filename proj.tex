@@ -134,7 +134,7 @@ Which points $P'\in\Pi'$ are not images of points under perspective projection?
 \section*{Projective transformations}
 \addtocontents{toc}{Projective transformations.}
 
-A bijection from real projective plane to itself 
+A bijection from the real projective plane to itself 
 which sends lines to lines 
 is called \index{projective transformation}\emph{projective transformation}.
 
@@ -173,26 +173,8 @@ Hence the result follows.
 \section*{Desargues' theorem}
 \addtocontents{toc}{Desargues' theorem.}
 
-Loosely speaking, 
- any statement in projective geometry 
- can be formulated using only terms \index{collinear points}\emph{collinear points},
-\emph{concurrent lines}.
-
-Here is a classical example of a theorem in projective geometry.
-
-\begin{thm}{Desargues' theorem}\label{thm:desargues}
-Consider three concurrent lines $(AA')$, $(BB')$ and $(CC')$ in the real projective plane.
-Set
-\begin{align*}
-X&=(BC)\cap (B'C'),\\
-Y&=(CA)\cap (C'A'),\\
-Z&=(AB)\cap (A'B')
-\end{align*}
-Then the points $X$, $Y$ and $Z$ are collinear.
-\end{thm}
-
-\begin{wrapfigure}{o}{44mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/desargues(0.9)}
+\begin{wrapfigure}{r}{44mm}
+\begin{lpic}[t(-15mm),b(0mm),r(0mm),l(0mm)]{pics/desargues(0.9)}
 \lbl[r]{15,32;$A$}
 \lbl[lw]{35,42;$A'$}
 \lbl[rw]{13,24;$B$}
@@ -205,16 +187,33 @@ Then the points $X$, $Y$ and $Z$ are collinear.
 \end{lpic}
 \end{wrapfigure}
 
+Loosely speaking, 
+ any statement in projective geometry 
+ can be formulated using only terms {}\emph{collinear points},
+\emph{concurrent lines}.
+
+Here is a classical example of a theorem in projective geometry.
+
+\begin{thm}{Desargues' theorem}\label{thm:desargues}
+Consider three concurrent lines $(AA')$, $(BB')$ and $(CC')$ in the real projective plane.
+Set
+\begin{align*}
+X&=(BC)\cap (B'C'),&
+Y&=(CA)\cap (C'A'),&
+Z&=(AB)\cap (A'B')
+\end{align*}
+Then the points $X$, $Y$ and $Z$ are collinear.
+\end{thm}
+
 \parit{Proof.}
 Without loss of generality, we may assume that the line $(XY)$ is ideal.
 If not, apply a perspective projection which sends the line $(XY)$ to the ideal line.
-
-In other words, we can assume that $(BC)\z\parallel (B'C')$ and  $(CA)\z\parallel (C'A')$ and we need to show that $(AB)\z\parallel(A'B')$.
+That is, we can assume that $(BC)\z\parallel (B'C')$ and  $(CA)\z\parallel (C'A')$ and we need to show that $(AB)\z\parallel(A'B')$.
 
 Assume that the lines $(AA')$, $(BB')$ and $(CC')$ intersect at point $O$.
 Since $(BC)\parallel (B'C')$, 
 Transversal property~\ref{thm:parallel-2}, implies that that $\measuredangle OBC\z\equiv \measuredangle OB'C'$ and $\measuredangle OCB\z\equiv \measuredangle OC'B'$.
-By AA-similarity condition, $\triangle OBC\z\sim\triangle OB'C'$.
+By AA similarity condition, $\triangle OBC\z\sim\triangle OB'C'$.
 In particular,
 \[\frac{OB}{OB'}=\frac{OC}{OC'}.\]
 
@@ -233,7 +232,8 @@ The same way we get $\triangle OAC\z\sim\triangle OA'C'$ and
 \[\frac{OA}{OA'}=\frac{OC}{OC'}.\]
 Therefore 
 \[\frac{OA}{OA'}=\frac{OB}{OB'}.\]
-By SAS-similarity condition, we get $\triangle OAB\sim\triangle OA'B'$,
+By SAS similarity condition, 
+we get $\triangle OAB\sim\triangle OA'B'$,
 in particular $\measuredangle OAB\equiv \pm \measuredangle OA'B'$.
 
 Note that $\measuredangle AOB\equiv \measuredangle A'OB'$.
@@ -242,11 +242,11 @@ Therefore
 By Transversal property~\ref{thm:parallel-2},
 $(AB)\parallel (A'B')$.
 
-The case when the lines $(AA')\parallel(BB')\parallel(CC')$ can be done similarly.
+The case $(AA')\parallel(BB')\parallel(CC')$ is done similarly.
 In this case the quadrilaterals $\square B'BCC'$ and $\square A'ACC'$ are parallelograms.
 Therefore 
 \[BB'=CC'=AA'.\]
-Whence $\square B'BAA'$ is a parallelogram, in particular $(AB)\parallel (A'B')$.
+Whence $\square B'BAA'$ is a parallelogram and $(AB)\parallel (A'B')$.
 \qeds
 
 
@@ -322,9 +322,6 @@ if
 \[P\in s\ \ \iff\ \  p\ni S.\]
 for any point $P$ and line $s$.
 
-Existence of duality in a plane 
-says that the lines and the points in this plane have the same rights in terms of incidence.
-
 \begin{center}
 \begin{lpic}[t(0mm),b(5mm),r(0mm),l(0mm)]{pics/dual(1)}
 \lbl[tr]{2,17.5;$p$}
@@ -352,6 +349,9 @@ says that the lines and the points in this plane have the same rights in terms o
 \lbl[t]{38,-2;Dual configurations.}
 \end{lpic}
 \end{center}
+
+Existence of duality in a plane 
+says that the lines and the points in this plane have the same rights in terms of incidence.
 
 \begin{thm}{Exercise}\label{ex:dual-euclid}
 Show that Euclidean plane does not admit a duality. 
@@ -416,9 +416,8 @@ Which point of real projective plane corresponds to the line formed by solutions
 The existence of duality in the real projective planes makes possible to formulate an equivalent dual statement to any statement in projective geometry.
 Say, the dual statement for ``the points $X$, $Y$ and $Z$ lie on one line $\ell$''
 would be the ``lines $x$, $y$ and $z$ intersect at one point $L$''.
+Let us formulate the dual statement for Desargues' theorem~\ref{thm:desargues}.
 
-For example the dual statement for Desargues' theorem~\ref{thm:desargues} is its converse.
- 
 
 \begin{thm}{Dual Desargues' theorem}
 Consider the collinear points $X$, $Y$ and $Z$.
@@ -429,21 +428,19 @@ Then the lines  $(AA')$, $(BB')$ and $(CC')$ are concurrent.
 In this theorem the points $X$, $Y$ and $Z$ 
 are dual to the lines $(AA')$, $(BB')$ and $(CC')$ in the original formulation, and the other way around.
 
-\begin{thm}{Exercise}\label{ex:dual-pappus}
-Formulate Dual Pappus's theorem, see \ref{thm:pappus}.
-\end{thm}
-
-Proving Desargues' theorem 
-and applying duality (Theorem~\ref{thm:dual})
+Once Desargues' theorem is proved, applying duality (Theorem~\ref{thm:dual})
 we get Dual Desargues' theorem.
-The same can be done the other way around.
-
-The Desargues' theorem and its dual can be packed in the
+Note that the  Dual Desargues' theorem is the converse to the original Desargues' theorem~\ref{thm:desargues}.
+Thereofre Desargues' theorem and its dual can be packed in the
 following strong version of Desargues' theorem.
 
 \begin{thm}{Strong Desargues' theorem}
 Assume that $X\z=(BC)\z\cap (B'C')$, $Y\z=(CA)\cap (C'A')$ and $Z=(AB)\cap (A'B')$.
 Then the lines  $(AA')$, $(BB')$ and $(CC')$ are concurrent if and only if the  points $X$, $Y$ and $Z$ are collinear.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:dual-pappus}
+Formulate Dual Pappus's theorem, see \ref{thm:pappus}.
 \end{thm}
 
 \section*{Axioms}
@@ -460,21 +457,21 @@ Note that the real projective plane described above satisfies the following set 
 Let us take these three axioms as a definition of \index{projective plane}\emph{projective plane};
 so the real projective plane discussed above becomes a particular example of projective plane.
 
-\begin{thm}{Exercise}\label{ex:finite-pp}
-Show that any line in projective plane contains at least three points.
-\end{thm}
-
 \begin{wrapfigure}{o}{20mm}
 \begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/fano(1)}
 %\lbl[r]{15,32;$A$}
 \end{lpic}
 \end{wrapfigure}
 
-It turns out that there is a projective plane which contains exactly 3 points on each line.
+There is an example of projective plane which contains exactly 3 points on each line.
 This is so called \index{Fano plane}\emph{Fano plane} which you can see on the diagram;
 it contains $7$ points and $7$ lines.
 This is an example of \index{finite projective plane}\emph{finite projective plane};
 that is, projective plane with finitely many points.
+
+\begin{thm}{Exercise}\label{ex:finite-pp}
+Show that any line in projective plane contains at least three points.
+\end{thm}
 
 Consider the following analog of Axiom~\ref{def:proj-axioms:3}.
 
@@ -503,7 +500,7 @@ Assume that one of the lines in a finite projective plane contains exactly $n+1$
 
 The number $n$ in the above exercise is called \index{order of finite projective plane}\emph{order} of finite projective plane.
 For example Fano plane has order $2$.
-Here is one of the most famous conjecture in finite geometry.
+Here is one of the most famous open problem in finite geometry.
 
 \begin{thm}{Conjecture}
 The order of a finite projective plane is the power of a prime.
