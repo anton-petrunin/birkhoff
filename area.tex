@@ -3,19 +3,17 @@
 \addtocontents{toc}{\protect\begin{quote}}
 
 Any rigorous introduction to area 
-is tedious and long.
+is tedious.
 On the other hand, 
 there is a more general notion called \label{Lebesgue measure}\emph{Lebesgue measure}.
-The construction of Lebesgue measure is typically using 
+Historically, the notion of area inspire the development of Lebesgue measure;
+but we will use Lebesgue measure to define of area.
+
+The construction of Lebesgue measure typically use 
 the method of coordinates 
 and it is included in any textbook in Real Analysis.
-
-Historically, the notion of area inspire the development of Lebesgue measure;
-today we use Lebesgue measure to define of area.
-
-We use this construction without proof;
-namely we omit the proof Theorem~\ref{thm:area} 
-and it easily follows from the properties of Lebesgue measure.
+The tedious part based of the properties of Lebesgue measure is packed in proof Theorem~\ref{thm:area} 
+and it is given without proof.
 
 \section*{Solid triangles}
 \addtocontents{toc}{Solid  triangles.}
@@ -62,7 +60,8 @@ and the other way around.
 On the other hand,
 $\triangle ABC\ne\triangle BAC$ simply because the sequence of points $(A,B,C)$ is distinct from the sequence $(B,A,C)$.
 
-Also, in general  $\triangle ABC\ncong\triangle BAC$, but it is always true that $\solidtriangle ABC\cong\solidtriangle BAC$, where congruence of the sets $\solidtriangle ABC$ and $\solidtriangle BAC$ understood the following way.
+Also, in general  $\triangle ABC\ncong\triangle BAC$, but it is always true that $\solidtriangle ABC\cong\solidtriangle BAC$, where congruence of the sets $\solidtriangle ABC$ and $\solidtriangle BAC$ 
+is understood the following way.
 
 \begin{thm}{Definition}\label{def:cong-sets}
 Two sets $\mathcal{S}$ and $\mathcal{T}$ in the plane  
@@ -74,10 +73,10 @@ $\mathcal{T}=f(\mathcal{S})$ for some motion $f$ of the plane.
 
 If $\triangle ABC$ is not degenerate
 and \[\solidtriangle ABC\cong \solidtriangle A'B'C',\]
-then after appropriate relabeling of the vertices of $\triangle ABC$ 
+then after relabeling the vertices of $\triangle ABC$ 
 we will have 
 \[\triangle ABC\cong \triangle A'B'C'.\]
-The proof follow from the following exercise.
+The existence of such relabeling follow from the exercise.
 
 \begin{thm}{Exercise}\label{ex:vertex}
 Let $\triangle ABC$ be nondegenerate and $X\z\in \solidtriangle ABC$.
@@ -97,21 +96,21 @@ is a set of one of the following three types:
  \item solid triangle.
 \end{itemize}
 
-\begin{wrapfigure}[5]{o}{24 mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/polygonal-set(1)}
+\begin{wrapfigure}{o}{24 mm}
+\begin{lpic}[t(-13mm),b(0mm),r(0mm),l(0mm)]{pics/polygonal-set(1)}
 \end{lpic}
 \end{wrapfigure}
 
-A set in the plane is called \index{polygonal set}\emph{polygonal set} if it can be presented as a union of finite collection of elementary sets.
-
-A polygonal set is called \index{polygonal set!degenerate polygonal set}\index{degenerate!polygonal set}\emph{degenerate} if it can be presented as union of finite number of one-point sets and segments.
+A set in the plane is called \index{polygonal set}\emph{polygonal} if it can be presented as a union of finite collection of elementary sets.
 
 According to this definition, empty set $\emptyset$
 is a polygonal set.
-Indeed, $\emptyset$ is a union of empty collection of elementary sets.
+Indeed, $\emptyset$ is a union of an empty collection of elementary sets.
+
+A polygonal set is called \index{polygonal set!degenerate polygonal set}\index{degenerate!polygonal set}\emph{degenerate} if it can be presented as union of finite number of one-point sets and segments.
 
 If $X$ and $Y$ lie on the opposite sides of the line $(AB)$
-then the union of solid triangles
+then the union
 $\solidtriangle AXB\cup \solidtriangle BYA$
 is a polygonal set which is called \index{solid!quadrilateral, parallelogram, rectangle, square}\index{quadrilateral!solid quadrilateral}\emph{solid quadrilateral} and denoted as 
 \index{1fig@$\solidsquare$}$\solidsquare AXBY$.
@@ -119,14 +118,18 @@ In particular,
 we can talk about \index{parallelogram!solid parallelogram}\emph{solid parallelograms}, \index{rectangle!solid rectangle}\emph{rectangles} and \index{square!solid square}\emph{squares} in the Euclidean plane.
 
 \begin{wrapfigure}{o}{38 mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/two-subdivisions(1)}
+\begin{lpic}[t(-3mm),b(0mm),r(0mm),l(0mm)]{pics/two-subdivisions(1)}
 \end{lpic}
 \end{wrapfigure}
 
-One polyhedral set typically admits many 
+Typically a polygonal set admits many 
 presentation as union of finite collection of elementary sets.
 For example, if $\square AXBY$ is a parallelogram, then
 \[\solidsquare AXBY=\solidtriangle AXB\cup \solidtriangle BYA=\solidtriangle XAY\cup \solidtriangle YBX.\]
+
+\begin{thm}{Exercise}\label{ex:solid-square}
+Show that a solid square is not degenerate.
+\end{thm}
 
 \begin{thm}{Exercise}\label{ex:poly-circ}
 Show that a circle is not a polygonal set.
@@ -137,18 +140,18 @@ Show that a circle is not a polygonal set.
 \section*{Definition of area}
 \addtocontents{toc}{Definition of area.}
 
-\begin{thm}{Claim}
+\begin{thm}{Claim}\label{clm:poly-ring}
 For any two polygonal sets $\mathcal{P}$ and $\mathcal{Q}$,
 the union $\mathcal{P}\cup\mathcal{Q}$ 
 as well as the intersection $\mathcal{P}\cap\mathcal{Q}$ 
 are also polygonal sets.
 \end{thm}
 
-A class of sets which closed with respect to union and intersection sometimes is called a {}\emph{ring}.
+A class of sets which closed with respect to union and intersection  is called a {}\emph{ring}.
 The claim above therefore states that polygonal sets in the plane form a ring.
 
 \parit{Semi-proof.}
-Indeed, let us present the $\mathcal{P}$ and $\mathcal{Q}$
+Let us present $\mathcal{P}$ and $\mathcal{Q}$
 as a union of finite collection of elementary sets $\mathcal{P}_1,\dots,\mathcal{P}_k$ 
 and $\mathcal{Q}_1,\dots,\mathcal{Q}_n$ correspondingly.
 
@@ -170,7 +173,7 @@ Therefore $\mathcal{P}\cup\mathcal{Q}$ is polygonal.
 
 {
 \begin{wrapfigure}{o}{22 mm}
-\begin{lpic}[t(-5 mm),b(0mm),r(0mm),l(0mm)]{pics/intersection(1)}
+\begin{lpic}[t(-2 mm),b(0mm),r(0mm),l(0mm)]{pics/intersection(1)}
 \end{lpic}
 \end{wrapfigure}
 
@@ -178,17 +181,20 @@ Note that the union of all sets $\mathcal{P}_i\cap \mathcal{Q}_j$
 forms $\mathcal{P}\cap \mathcal{Q}$.
 
 Therefore in order to show that $\mathcal{P}\cap \mathcal{Q}$ is polygonal,
-it is sufficient to show that each $\mathcal{P}_i\cap \mathcal{Q}_j$ is polygonal. 
-The diagram should suggest an idea of proof.
+it is sufficient to show that each $\mathcal{P}_i\cap \mathcal{Q}_j$ is polygonal for any pair $i, j$. 
+The diagram should suggest an idea for the proof of the later statement.
 \qeds
 
 }
 
 The following theorem defines the area
 as a function which returns a real number for any polygonal set and satisfying certain conditions.
+We omit the proof of this theorem.
+It follows from the construction of Lebesgue measure 
+which can be found in any text book on Real Analysis.
 
 \begin{thm}{Theorem}\label{thm:area}
-For each polyhedral set $\mathcal{P}$ in the Euclidean plane 
+For each polygonal set $\mathcal{P}$ in the Euclidean plane 
 there is a real number $s$ 
 called \index{area}\emph{area of $\mathcal{P}$} 
 (briefly $s=\area \mathcal{P}$) such that 
@@ -205,15 +211,12 @@ and the conditions
 \area(\mathcal{P}\cup\mathcal{Q})+\area(\mathcal{P}\cap\mathcal{Q})
 \end{align*}
 hold 
-for any two polyhedral sets $\mathcal{P}$ and $\mathcal{Q}$.
+for any two polygonal sets $\mathcal{P}$ and $\mathcal{Q}$.
 
-Moreover the above conditions uniquely define the function \[\mathcal{P}\mapsto \area \mathcal{P}.\]
-
+Moreover the area function 
+\[\mathcal{P}\mapsto \area \mathcal{P}\]
+is uniquely defined by the above conditions.
 \end{thm}
-
-We omit the proof of this theorem.
-It follows from the construction of Lebesgue measure 
-which can be found in any text book on real analysis.
 
 Further you will see
 that
@@ -222,9 +225,14 @@ the concept of area
 can be painlessly developed to a dissent level 
 without cheating.
 
+It is also psossible to add Theorem~\ref{thm:area} as an extra axiom,
+then the rest of the section becomes completely rigorous.
+
+
+
 
 \begin{thm}{Proposition}\label{prop:area-positive}
-For any polyhedral set $\mathcal{P}$ in the Euclidean plane, 
+For any polygonal set $\mathcal{P}$ in the Euclidean plane, 
 we have
 \[\area\mathcal{P}\ge 0.\]
 
@@ -286,8 +294,7 @@ On the other hand, by Proposition~\ref{prop:area-positive},
 Hence the result follows.
 
 For any one-point set $\{A\}$ 
-we have 
-\[\emptyset\subset \{A\}\subset [AB].\]
+we have $\emptyset\subset \{A\}\subset [AB]$.
 Therefore 
 \[0\le \area\{A\}\le \area[AB]=0.\]
 Whence $\area\{A\}=0$.
@@ -319,10 +326,11 @@ We say that polygonal set $\mathcal{P}$ is \index{subdivision of polygonal set}\
 into two polygonal sets $\mathcal{Q}_1$ and $\mathcal{Q}_2$ 
 if $\mathcal{P}=\mathcal{Q}_1\cup\mathcal{Q}_2$ 
 and the intersection $\mathcal{Q}_1\cap\mathcal{Q}_2$ is degenerate.
-(Recall that the intersection $\mathcal{Q}_1\cap\mathcal{Q}_2$ has to be a polygonal set.)
+(Recall that according to Claim~\ref{clm:poly-ring},
+the set $\mathcal{Q}_1\cap\mathcal{Q}_2$ is polygonal.)
 
 \begin{thm}{Proposition}\label{prop:subdivision}
-Assume polygonal set $\mathcal{P}$ is subdivided into two polygonal set $\mathcal{Q}_1$ and $\mathcal{Q}_2$.
+Assume polygonal sets $\mathcal{P}$ is subdivided into two polygonal set $\mathcal{Q}_1$ and $\mathcal{Q}_2$.
 Then 
 \[\area\mathcal{P}=\area\mathcal{Q}_1+\area\mathcal{Q}_2.\]
 
@@ -387,8 +395,8 @@ That is, the first identity in the Algebraic Lemma holds.
 
 Note that the rectangle $\mathcal{R}_{a+b,c}$
 can be subdivided into two rectangle 
-congruent to $\mathcal{R}_{a,b}$
-and $\mathcal{R}_{a,c}$.
+congruent to $\mathcal{R}_{a,c}$
+and $\mathcal{R}_{b,c}$.
 Therefore by Proposition~\ref{prop:subdivision}, 
 \[
 \area \mathcal{R}_{a+b,c}=\area \mathcal{R}_{a,c}+\area \mathcal{R}_{b,c}
@@ -416,11 +424,11 @@ Let us denote by $A'$ and $B'$ the foot points of $A$ and $B$
 on the line $(CD)$.
 
 Note that $ABB'A'$ is a rectangle with sides $a$ and $h$.
-Therefore, by Proposition~\ref{thm:area-rect},
+By Proposition~\ref{thm:area-rect},
 \[\area( \solidsquare ABB'A')=h\cdot a.\eqlbl{eq:ABBA}\]
 
 \begin{wrapfigure}{o}{41 mm}
-\begin{lpic}[t(2 mm),b(0mm),r(0mm),l(0mm)]{pics/par-rect(1)}
+\begin{lpic}[t(-3mm),b(0mm),r(0mm),l(0mm)]{pics/par-rect(1)}
 \lbl[t]{1,-1;$A$}
 \lbl[t]{17,-1;$B$}
 \lbl[b]{39,12.5;$C$}
@@ -434,33 +442,25 @@ Without loss of generality we may assume that  $\solidsquare ABCA'$
 contains $\solidsquare ABCD$ and $\solidsquare ABB'A'$.
 
 In this case $\solidsquare ABB'D$ admits two subdivisions.
-First into $\solidsquare ABCD$ and $\solidtriangle BB'C$.
-Second into  $\solidsquare ABB'D$ and $\solidtriangle AA'D$.
+First into  $\solidsquare ABCD$ and $\solidtriangle AA'D$.
+Second into $\solidsquare ABB'A'$ and $\solidtriangle BB'C$.
 
 By Proposition~\ref{prop:subdivision},
 \[\begin{aligned}
-\area( \solidsquare ABCD)&+\area(\solidtriangle BB'C)=
+\area( \solidsquare ABCD)&+\area(\solidtriangle AA'D)=
 \\
 &=
-\area(\solidsquare ABB'D)+ \area (\solidtriangle AA'D).   
+\area(\solidsquare ABB'A')+ \area (\solidtriangle BB'C).   
   \end{aligned}
 \eqlbl{eq:area-sum}\]
 
 Note that 
-\[\triangle AA'D\cong \triangle BB'C\eqlbl{eq:cong-area}.\]
-Indeed, since $\square ABB'A'$ and $\square ABCD$ are parallelogram, 
+\[\triangle AA'D\cong \triangle BB'C.\eqlbl{eq:cong-area}\]
+Indeed, since $\square ABB'A'$ and $\square ABCD$ are parallelograms, 
 by Lemma~\ref{lem:parallelogram},
-we have $AA'=BB'$ $AD=BC$.
-Further by Transversal property~\ref{thm:parallel-2},
-\begin{align*}
-\measuredangle DAA'
-&=\measuredangle BAA'-\measuredangle BAD=
-\\
-&=\measuredangle CBA-\measuredangle B'BA=
-\\
-&=\measuredangle CBB'.
-\end{align*}
-Applying SAS congruence condition, we get \ref{eq:cong-area}.
+we have $AA'=BB'$, $AD=BC$ and $DC=AB=A'B'$.
+It follows that $A'D=B'C$.
+Applying SSS congruence condition, we get \ref{eq:cong-area}.
 
 In particular,
 \[\area(\solidtriangle BB'C)=\area (\solidtriangle AA'D).
@@ -497,8 +497,8 @@ Show that
 
 
 \begin{thm}{Theorem}\label{thm:area-of-triangle}
-Given a triangle $\triangle ABC$ in the Euclidean plane,
-set $a=BC$ and $h_A$ to be the altitude from $A$.
+Let $a=BC$ and $h_A$ to be the altitude from $A$
+in  $\triangle ABC$.
 Then 
 \[\area(\solidtriangle ABC)=\tfrac12\cdot a\cdot h_A.\]
 \end{thm}
@@ -511,9 +511,9 @@ $\area(\triangle ABC)$ for $\area(\solidtriangle ABC)$.
 \parit{Proof.}
 Draw the line $m$ through $A$ which is parallel to $(BC)$
 and line $n$ through $C$ parallel to $(AB)$.
-Note that $m\nparallel n$.
-Therefore we can choose $D=m\cap n$;
-by construction $\square ABCD$ is a parallelogram.
+Note that $m\nparallel n$;
+set $D=m\cap n$.
+By construction $\square ABCD$ is a parallelogram.
 
 \begin{wrapfigure}{o}{24 mm}
 \begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/two-triangles(1)}
@@ -526,7 +526,7 @@ by construction $\square ABCD$ is a parallelogram.
 \end{lpic}
 \end{wrapfigure}
 
-Note that parallelogram $\square ABCD$ admits a subdivision into $\solidtriangle ABC$ and $\solidtriangle CDA$.
+Note that $\solidsquare ABCD$ admits a subdivision into $\solidtriangle ABC$ and $\solidtriangle CDA$.
 Therefore 
 \[\area(\solidsquare ABCD)
 =
@@ -543,7 +543,7 @@ In particular
 =
 \area(\solidtriangle CDA).\]
 
-Therefore, from above and Proposition \ref{prop:area-parallelogram},
+From above and Proposition \ref{prop:area-parallelogram}, we get
 \begin{align*}
 \area(\solidtriangle ABC)
 &=\tfrac12\cdot\area(\solidsquare ABCD)=
@@ -564,7 +564,7 @@ Give a proof of this statement without using area.
 
 \begin{thm}{Exercise}\label{ex:half-parallelogram}
 Assume $M$ lies inside the parallelogram $\square ABCD$;
-that is $M$ belongs to the solid parallelogram $\solidsquare ABCD$, but does not lie on its sides.
+that is, $M$ belongs to the solid parallelogram $\solidsquare ABCD$, but does not lie on its sides.
 Show that
 \[\area(\solidtriangle ABM)+\area(\solidtriangle CDM)
 =\tfrac12\cdot \area(\solidsquare ABCD).\]
@@ -600,15 +600,16 @@ Show that
 Slim proofs using area 
 are often used to impress students.
 We will show couple of such examples in this section,
-but one should be aware --- these proofs are not truly elementary; to do these proofs, 
-one pays high price of introducing area..
+but one should be aware 
+that these proofs are not truly elementary ---
+the price one pays to introduce the area function is quite high.
 
 \parit{Proof of the Pythagorean theorem via the area method.}
 We need to show that if $a$ and $b$ are legs and $c$ is the hypotenuse 
-of right triangle  then
+of a right triangle  then
 \[a^2+b^2=c^2.\]
 
-Denote by $\solidtriangle$ the solid right triangle with legs $a$ and $b$
+Denote by $\solidtriangle$ the right solid triangle with legs $a$ and $b$
 and  by $\solidsquare_{x}$ be the solid square 
 with side $x$.
 
@@ -720,13 +721,13 @@ Show that $X$ lies on the median from $A$ if and only if
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:area-medians-2} 
-Build a proof of Theorem~\ref{thm:centroid} via area method based on the exercise above.
+Build a proof of Theorem~\ref{thm:centroid} via area method based on the Exercise~\ref{ex:area-medians}.
 
 Namely, show that medians of nondegenerate triangle intersect at one point and the point of their intersection  divides each median in the ration 1:2.
 \end{thm}
 
-\section*{Remark on area in\\
-absolute planes and spheres}
+\section*{Area in
+the absolute planes and spheres}
 \addtocontents{toc}{Area in absolute planes and spheres.}
 
 The theorem Theorem \ref{thm:area} will hold in the absolute planes and spheres if the solid unit square $\mathcal{K}$
@@ -734,7 +735,7 @@ exchanged to a fixed nondegenerate polygonal set.
 One has to make such change for good reason --- 
 hyperbolic plane and sphere have no unit squares.
 
-The set $\mathcal{K}$ in this case plays role of is unit measure for the area
+The set $\mathcal{K}$ in this case plays role of the unit measure for the area
 and changing $\mathcal{K}$ will require conversion of area units.
 
 \begin{wrapfigure}{o}{17 mm}
@@ -751,7 +752,7 @@ and changing $\mathcal{K}$ will require conversion of area units.
 
 According to the standard convention, the set $\mathcal{K}$
 is taken so that on small scales area behaves like area in the Euclidean plane.
-Say if $\mathcal{K}_n$ denotes the solid quadrilateral $\solidsquare ABCD$ in the  
+Say if $\mathcal{K}_n$ denotes the solid quadrilateral $\solidsquare ABCD$ 
 with right angles at $A$, $B$ and $C$ and $AB=BC=\tfrac1n$ then we may assume that
 \[n^2\cdot\area \mathcal{K}_n\to 1 \ \ \text{as}\ \ n\to\infty.
 \eqlbl{eq:lim-Kn}\]
@@ -759,5 +760,26 @@ with right angles at $A$, $B$ and $C$ and $AB=BC=\tfrac1n$ then we may assume th
 This convention works equally well for spheres and absolute planes, including Euclidean plane.
 In spherical geometry  equivalently we may assume that if $r$ is the radius of the sphere then 
 the area of whole sphere is $4\cdot\pi\cdot r^2$.
+
+Recall that {}\emph{defect of triangle} $\triangle ABC$ is defined as 
+$$\defect(\triangle ABC)
+\df 
+\pi-|\measuredangle ABC|+|\measuredangle BCA|+|\measuredangle CAB|.$$
+It turns out that any absolute plane and  sphere
+there is a real number $k$
+such that 
+$$k\cdot\area(\triangle ABC)+\defect(\triangle ABC)=0
+\eqlbl{eq:curv-defect}$$
+for any triangle $\triangle ABC$.
+
+This number $k$ is called \index{curvature}\emph{curvature};
+$k=0$ for the Euclidean plane,
+$k=-1$ for the h-plane and $k=1$ for the unit sphere
+and $k=\tfrac1{r^2}$ for the sphere of radius $r$.
+In particular it follows that any ideal triangle in h-plane has area $\pi$.
+
+The identity \ref{eq:curv-defect} suggest an easier way to introuduce area function which works on spheres and all absolute planes except the Euclidean plane.
+So one can say that Euclidean plane is the most complicated one.   
+
 
 \addtocontents{toc}{\protect\end{quote}}                          
