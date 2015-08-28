@@ -96,7 +96,7 @@ is a set of one of the following three types:
  \item solid triangle.
 \end{itemize}
 
-\begin{wrapfigure}{o}{24 mm}
+\begin{wrapfigure}{r}{24 mm}
 \begin{lpic}[t(-13mm),b(0mm),r(0mm),l(0mm)]{pics/polygonal-set(1)}
 \end{lpic}
 \end{wrapfigure}
@@ -739,7 +739,7 @@ The set $\mathcal{K}$ in this case plays role of the unit measure for the area
 and changing $\mathcal{K}$ will require conversion of area units.
 
 \begin{wrapfigure}{o}{17 mm}
-\begin{lpic}[t(4 mm),b(0mm),r(0mm),l(0mm)]{pics/lambert-square(1)}
+\begin{lpic}[t(-3 mm),b(0mm),r(0mm),l(0mm)]{pics/lambert-square(1)}
 \lbl[rb]{1,14;$A$}
 \lbl[rt]{1,1;$B$}
 \lbl[lt]{13.5,.5;$C$}
@@ -778,8 +778,55 @@ $k=-1$ for the h-plane and $k=1$ for the unit sphere
 and $k=\tfrac1{r^2}$ for the sphere of radius $r$.
 In particular it follows that any ideal triangle in h-plane has area $\pi$.
 
-The identity \ref{eq:curv-defect} suggest an easier way to introuduce area function which works on spheres and all absolute planes except the Euclidean plane.
-So one can say that Euclidean plane is the most complicated one.   
+The identity \ref{eq:curv-defect} suggest an alternative way to introuduce area function which works on spheres and all absolute planes except the Euclidean plane.
+
+\section*{Quadrable sets}
+\addtocontents{toc}{Quadrable  sets.}
+
+A set $\mathcal{S}$ 
+in the plane is called \index{quadrable set}\emph{quadrable}
+if for any $\epsilon>0$ there are two polygonal sets 
+$\mathcal{P}$ and $\mathcal{Q}$
+such that 
+\[\mathcal{P}\subset\mathcal{S}\subset\mathcal{Q}
+\ \ \ \ \text{and}\ \ \ \ 
+\area\mathcal{Q}-\area\mathcal{P}<\epsilon.\]
+
+If $\mathcal{S}$ is quadrable,
+its area  can be defined 
+as the (necessary unique) real number $\area\mathcal{S}$ 
+such that the inequality
+\[\area\mathcal{Q}\le \area\mathcal{S}\le \area\mathcal{P}
+\]
+holds if
+$\mathcal{P}$ and $\mathcal{Q}$ are polygonal sets and $\mathcal{P}\subset\mathcal{S}\subset\mathcal{Q}$.
+
+\begin{thm}{Exercise}\label{ex:circle-is-quadrable }
+Let $\mathcal{D}$ be the unit disk;
+that is $\mathcal{D}$ is a set which contains 
+the unit circle $\Gamma$ and all the points inside $\Gamma$.
+
+Show that $\mathcal{D}$ is a quadrable set.
+\end{thm}
+
+Since $\mathcal{D}$ is quadrable, 
+the expression $\area\mathcal{D}$ makes sense.
+The constant $\pi$ can be defined as 
+$\pi=\area\mathcal{D}$.
+
+\medskip
+
+It turns out that the class of quadrable sets is the largest class for which 
+the area can be defined in such a way that it satisfies all the conditions in Theorem~\ref{thm:area} incliding uniqueness.
+
+There is a way to define area for all bounded sets
+which satisfies all the conditions in the Theorem~\ref{thm:area} except uniqueness.
+(A set in the plane is called \index{bounded set}\emph{bounded} if it lies inside a circle.)
+
+In the hyperbolic plane and in the sphere sphere
+there is no similar construction.
+Read about Hausdorff--Banach--Tarski Paradox
+if you wonder why.
 
 
 \addtocontents{toc}{\protect\end{quote}}                          

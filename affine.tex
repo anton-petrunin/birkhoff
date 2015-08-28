@@ -19,8 +19,11 @@ Note that affine transformation sends collinear points to collinear; the followi
 \begin{thm}{Exercise}\label{ex:collinear=affine}
 Assume $f$ is a bijection from Euclidean plane to itself which sends collinear points to collinear points.
 Show that $f$ is an affine transformation.
+(In other words, show that $f$ maps noncollinear points to noncollinear.)
+\end{thm}
 
-In other words, you need to show that $f$ maps noncollinear points to noncollinear.
+\begin{thm}{Exercise}\label{ex:affine-par}
+Show that affine transformation sends parallel lines to the parallel lines.
 \end{thm}
 
 \emph{Affine geometry} studies  so called \index{incidence structure}\emph{incidence structure} of Euclidean plane.
@@ -29,18 +32,12 @@ we can not talk about distances, angles and so on.
 One may also say that affine geometry studies
 the properties of Euclidean plane which preserved under affine transformations.
 
-
-
-\begin{thm}{Exercise}\label{ex:affine-par}
-Show that affine transformation sends parallel lines to the parallel lines.
-\end{thm}
-
 \section*{Constructions with parallel tool and ruler}
 \addtocontents{toc}{Constructions with parallel tool and ruler.}
 
 Let us consider geometric constructions with ruler and \index{parallel tool}\emph{parallel tool};
 the later makes possible to draw a line through the given point parallel to the given line.
-From the exercisers above it follows that any construction with these two tools are invariant with respect to affine transformation.
+By Exercisers~\ref{ex:affine-par}, any construction with these two tools are invariant with respect to affine transformation.
 For example, 
 to solve the following exercise,
 it is sufficient to prove that midpoint of given segment can be constructed with ruler and parallel tool.
@@ -71,15 +68,30 @@ Since the lines are defined in terms of metric;
 any motion of Euclidean plane is also an affine transformation.
 
 On the other hand, 
-there are affine transformations of Euclidean plane which are not motions.  
+there are affine transformations of Euclidean plane which are not motions.
 
-\begin{thm}{Theorem}\label{thm:affine=linear}
 Consider Euclidean plane with coordinate system;
 let us use the column notation for the coordinates;
 that is, we will write $\left(\begin{smallmatrix}
 x\\y
 \end{smallmatrix} \right)$ instead of $(x,y)$.
 
+As it follows from the theorem below,
+the so called {}\emph{shear mapping} $\left(\begin{smallmatrix}
+x\\ y
+\end{smallmatrix} \right)\mapsto \left(\begin{smallmatrix}
+x+k\cdot y\\ y
+\end{smallmatrix} \right)$ is an affine transformation.
+The shear mapping can change the angle between vertical and horizontal lines almost arbitrary.
+The later can be used to prove impossibility of some constructions with ruler and parallel tool;
+here is one example.
+
+\begin{thm}{Exercise}\label{ex:affine-perp}
+Show that with ruler and parallel tool one can not construct
+a line perpendicular to the given line.
+\end{thm}
+
+\begin{thm}{Theorem}\label{thm:affine=linear}
 A map $\beta$ from the plane to itself
 is an affine transformation if and only if 
 \[\beta\:\left(\begin{smallmatrix}
@@ -375,22 +387,6 @@ and $\left(\begin{smallmatrix}
 \end{smallmatrix} \right)$.
 It remains to apply Lemma~\ref{lem:3-fix}.
 \qeds
-
-Consider so called {}\emph{shear mapping} $\left(\begin{smallmatrix}
-x\\ y
-\end{smallmatrix} \right)\mapsto \left(\begin{smallmatrix}
-x+k\cdot y\\ y
-\end{smallmatrix} \right)$.
-According to Theorem~\ref{thm:affine=linear},
-shear mapping is an affine transformation.
-The shear mapping can change the angle between vertical and horizontal lines almost arbitrary.
-The later can be used to prove impossibility of some constructions with ruler and parallel tool;
-here is one example.
-
-\begin{thm}{Exercise}\label{ex:affine-perp}
-Show that with ruler and parallel tool one can not construct
-a line perpendicular to the given line.
-\end{thm}
 
 \section*{On inversive transformations}
 \addtocontents{toc}{On inversive transformations.}
