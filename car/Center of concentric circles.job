@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CaR version="20150810">
+<Construction job="true" last="c2" target1="I5">
+<Window x="0.0" y="0.0" w="8.0"/>
+<Assignment>
+<P>Construct the center of the given concentric circles.</P>
+</Assignment>
+<Objects>
+<Point name="P1" n="0" hidden="true" x="-1.8797814207650276" y="-1.639344262295082" shape="circle">Point at -1.87978, -1.63934</Point>
+<Point name="P2" n="1" hidden="true" x="-0.306010928961749" y="1.5519125683060109" shape="circle">Point at -0.30601, 1.55191</Point>
+<Circle name="c1" n="2" through="P2" midpoint="P1" acute="true">Circle around P1 through P2</Circle>
+<Point name="P3" n="3" hidden="true" x="0.612021857923498" y="3.0382513661202184" shape="circle">Point at 0.61202, 3.03825</Point>
+<Circle name="c2" n="4" through="P3" midpoint="P1" acute="true">Circle around P1 through P3</Circle>
+<PointOn name="P4" n="9" on="c1" alpha="2.2191283158821573" x="-4.028435184361461" y="1.1968787056522099" shape="circle">Point on c1</PointOn>
+<PointOn name="P5" n="10" on="c1" alpha="1.5837826097150691" x="-1.9259880716950994" y="1.9185678593204436" shape="circle">Point on c1</PointOn>
+<PointOn name="P6" n="11" on="c1" alpha="0.8728935041998397" x="0.4067693389221412" y="1.0869277973319273" shape="circle">Point on c1</PointOn>
+<Circle name="c3" n="18" hidden="super" through="P5" midpoint="P4" acute="true">Circle around P4 through P5</Circle>
+<Circle name="c4" n="19" hidden="super" through="P4" midpoint="P5" acute="true">Circle around P5 through P4</Circle>
+<Intersection name="I1" n="20" hidden="super" first="c3" second="c4" which="second">Intersection between c3 and c4</Intersection>
+<Intersection name="I2" n="21" hidden="super" first="c4" second="c3" which="second">Intersection between c4 and c3</Intersection>
+<Line name="l1" n="22" from="I1" to="I2">Line through I1 and I2</Line>
+<Circle name="c5" n="29" hidden="super" through="P6" midpoint="P5" acute="true">Circle around P5 through P6</Circle>
+<Circle name="c6" n="30" hidden="super" through="P5" midpoint="P6" acute="true">Circle around P6 through P5</Circle>
+<Intersection name="I3" n="31" hidden="super" first="c5" second="c6" which="second">Intersection between c5 and c6</Intersection>
+<Intersection name="I4" n="32" hidden="super" first="c6" second="c5" which="second">Intersection between c6 and c5</Intersection>
+<Line name="l2" n="33" from="I3" to="I4">Line through I3 and I4</Line>
+<Intersection name="I5" n="5" first="l1" second="l2" shape="circle" valid="true">Intersection between l1 and l2</Intersection>
+</Objects>
+</Construction>
+</CaR>

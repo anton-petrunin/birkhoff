@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CaR version="20150810">
+<Construction job="true" last="A&apos;" target1="Z">
+<Window x="0.0" y="0.0" w="8.0"/>
+<Assignment>
+<P>Construct a point Z such that both angles ∠AZB and ∠A&apos;ZB&apos;
+are right.</P>
+</Assignment>
+<Objects>
+<Point name="P1" n="0" hidden="true" x="-1.0491803278688527" y="-0.9398907103825138" shape="circle">Point at -1.04918, -0.93989</Point>
+<Point name="A" n="1" showname="true" x="2.05464" y="2.4262300000000003" shape="circle">Point at 2.05464, 2.42623</Point>
+<Circle name="c1" n="2" hidden="true" through="A" midpoint="P1" acute="true">Circle around P1 through A</Circle>
+<Point name="P3" n="3" hidden="true" x="-4.459016393442623" y="4.000000000000001" shape="circle">Point at -4.45902, 4.0</Point>
+<Point name="B&apos;" n="4" showname="true" x="-1.22404" y="5.00546" shape="circle">Point at -1.22404, 5.00546</Point>
+<Circle name="c2" n="5" hidden="true" through="B&apos;" midpoint="P3" acute="true">Circle around P3 through B&apos;</Circle>
+<Line name="l1" n="6" hidden="true" from="B&apos;" to="P3">Line through B&apos; and P3</Line>
+<Line name="l2" n="7" hidden="true" from="P1" to="A">Line through P1 and A</Line>
+<Intersection name="B" n="8" showname="true" first="l2" second="c1" awayfrom="A" shape="circle" valid="true" which="second">Intersection between l2 and c1</Intersection>
+<Intersection name="A&apos;" n="9" showname="true" first="l1" second="c2" awayfrom="B&apos;" shape="circle" valid="true" which="first">Intersection between l1 and c2</Intersection>
+<Intersection name="Z" n="10" showname="true" first="c2" second="c1" shape="circle" valid="true" which="first">Intersection between c2 and c1</Intersection>
+<Segment name="s1" n="21" hidden="true" from="Z" to="B&apos;">Line segment from Z to B&apos;</Segment>
+<Segment name="s2" n="24" hidden="true" from="Z" to="A&apos;">Line segment from Z to A&apos;</Segment>
+<Segment name="s3" n="27" hidden="true" from="B" to="Z">Line segment from B to Z</Segment>
+<Segment name="s4" n="30" hidden="true" from="A" to="Z">Line segment from A to Z</Segment>
+<Angle name="a1" n="33" hidden="true" unit="°" first="B&apos;" root="Z" second="A&apos;" display="rectangle" acute="true">Angle B&apos; - Z - A&apos;</Angle>
+<Angle name="a2" n="36" hidden="true" unit="°" first="B" root="Z" second="A" display="rectangle" acute="true">Angle B - Z - A</Angle>
+</Objects>
+</Construction>
+</CaR>

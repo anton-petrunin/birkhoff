@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CaR version="20150810">
+<Construction job="true" last="P3" target1="I1">
+<Window x="0.0" y="0.0" w="8.0"/>
+<Assignment>
+<P>Construct the inversion of the given point in the given
+circle.</P>
+</Assignment>
+<Objects>
+<Point name="P1" n="0" x="-2.360655737704918" y="-1.0710382513661196" shape="circle">Point at -2.36066, -1.07104</Point>
+<Point name="P2" n="1" hidden="true" x="1.2677595628415297" y="1.1147540983606552" shape="circle">Point at 1.26776, 1.11475</Point>
+<Circle name="c1" n="3" through="P2" midpoint="P1" acute="true">Circle around P1 through P2</Circle>
+<Point name="P3" n="4" x="5.9016393442622945" y="2.6448087431694" shape="circle">Point at 5.90164, 2.64481</Point>
+<Ray name="r1" n="9" hidden="super" from="P1" to="P3">Ray from P1 pointing to P3</Ray>
+<Circle name="c2" n="2" hidden="super" fixed="c1^2/d(P3,P1)" midpoint="P1" acute="true">Circle around P1 with radius c1^2/d(P3,P1)</Circle>
+<Intersection name="I1" n="5" first="r1" second="c2" shape="circle" which="first">Intersection between r1 and c2</Intersection>
+</Objects>
+</Construction>
+</CaR>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CaR version="20150810">
+<Construction job="true" last="P3" target1="p1">
+<Window x="0.0" y="0.0" w="8.0"/>
+<Assignment>
+<P>Given a line and a circle with center on it, construct the
+perpendicular to the line through the given point.</P>
+</Assignment>
+<Objects>
+<Point name="P1" n="0" hidden="true" x="-4.852459016393443" y="-3.5191256830601096" shape="circle">Point at -4.85246, -3.51913</Point>
+<Point name="P2" n="1" hidden="true" x="-0.21857923497267784" y="-2.8196721311475406" shape="circle">Point at -0.21858, -2.81967</Point>
+<Line name="l1" n="2" from="P1" to="P2">Line through P1 and P2</Line>
+<Circle name="c1" n="3" through="P1" midpoint="P2" acute="true">Circle around P2 through P1</Circle>
+<Point name="P3" n="4" x="0.2622950819672134" y="5.573770491803278" shape="circle">Point at 0.2623, 5.57377</Point>
+<Plumb name="p1" n="5" point="P3" line="l1" valid="true">Perpendicular line through P3 to l1</Plumb>
+</Objects>
+</Construction>
+</CaR>

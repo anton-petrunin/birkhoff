@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CaR version="20150810">
+<Construction job="true" last="s1" target1="c7">
+<Window x="0.0" y="0.0" w="8.0"/>
+<Assignment>
+<P>Construct a circle of given radius which is tangent to each
+the given circles.</P>
+</Assignment>
+<Objects>
+<Point name="P1" n="0" x="-4.371584699453551" y="3.69398907103825" shape="circle">Point at -4.37158, 3.69399</Point>
+<Point name="P2" n="1" hidden="true" x="-2.579234972677596" y="3.4316939890710385" shape="circle">Point at -2.57923, 3.43169</Point>
+<Circle name="c1" n="2" through="P2" midpoint="P1" acute="true">Circle around P1 through P2</Circle>
+<Point name="P3" n="3" x="3.803278688524591" y="4.918032786885246" shape="circle">Point at 3.80328, 4.91803</Point>
+<Point name="P4" n="4" hidden="true" x="0.8743169398907096" y="3.3442622950819674" shape="circle">Point at 0.87432, 3.34426</Point>
+<Circle name="c2" n="5" through="P4" midpoint="P3" acute="true">Circle around P3 through P4</Circle>
+<Point name="P5" n="6" x="-5.0710382513661205" y="-2.2950819672131146" shape="circle">Point at -5.07104, -2.29508</Point>
+<Point name="P6" n="7" x="-2.4043715846994536" y="-3.693989071038252" shape="circle">Point at -2.40437, -3.69399</Point>
+<Segment name="s1" n="9" from="P5" to="P6">Line segment from P5 to P6</Segment>
+<PointOn name="P7" n="17" on="c1" alpha="-1.6172744581458998" x="-4.455746754387872" y="1.884504889950374" shape="circle">Point on c1</PointOn>
+<Circle3 name="c3" n="18" from="P5" to="P6" midpoint="P7" acute="true">Circle around P7 with radius from P5 to P6</Circle3>
+<PointOn name="P8" n="21" on="c2" alpha="-1.5985669633883177" x="3.7109534175745447" y="1.5943230326835982" shape="circle">Point on c2</PointOn>
+<Circle3 name="c4" n="22" from="P5" to="P6" midpoint="P8" acute="true">Circle around P8 with radius from P5 to P6</Circle3>
+<Line name="l1" n="25" from="P1" to="P7">Line through P1 and P7</Line>
+<Line name="l2" n="28" from="P3" to="P8">Line through P3 and P8</Line>
+<Intersection name="I1" n="31" first="l2" second="c4" shape="circle" valid="true" which="first">Intersection between l2 and c4</Intersection>
+<Circle name="c5" n="32" through="I1" midpoint="P3" acute="true">Circle around P3 through I1</Circle>
+<Intersection name="I3" n="35" first="l1" second="c3" shape="circle" valid="true" which="first">Intersection between l1 and c3</Intersection>
+<Circle name="c6" n="36" through="I3" midpoint="P1" acute="true">Circle around P1 through I3</Circle>
+<Intersection name="I6" n="37" first="c5" second="c6" shape="circle" valid="true" which="second">Intersection between c5 and c6</Intersection>
+<Line name="l3" n="40" from="I6" to="P3">Line through I6 and P3</Line>
+<Intersection name="I8" n="43" first="l3" second="c2" shape="circle" valid="true" which="second">Intersection between l3 and c2</Intersection>
+<Circle name="c7" n="8" through="I8" midpoint="I6" acute="true">Circle around I6 through I8</Circle>
+</Objects>
+</Construction>
+</CaR>

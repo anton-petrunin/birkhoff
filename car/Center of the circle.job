@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CaR version="20150810">
+<Construction job="true" last="c1" target1="I11">
+<Window x="0.0" y="0.0" w="8.0"/>
+<Assignment>
+<P>Construct the center of the given circle.</P>
+</Assignment>
+<Objects>
+<Point name="P1" n="0" hidden="true" x="-1.0928961748633883" y="-0.32786885245901587" shape="circle">Point at -1.0929, -0.32787</Point>
+<Point name="P2" n="1" hidden="true" x="0.6994535519125691" y="3.2131147540983607" shape="circle">Point at 0.69945, 3.21311</Point>
+<Circle name="c1" n="2" through="P2" midpoint="P1" acute="true">Circle around P1 through P2</Circle>
+<PointOn name="P3" n="7" hidden="true" on="c1" alpha="0.6135561455119165" x="2.1519871129308235" y="1.9572602234524" shape="circle">Point on c1</PointOn>
+<Circle name="c2" n="8" hidden="true" through="P3" midpoint="P2" acute="true">Circle around P2 through P3</Circle>
+<Circle name="c3" n="11" hidden="true" through="P2" midpoint="P3" acute="true">Circle around P3 through P2</Circle>
+<Intersection name="I1" n="12" hidden="true" first="c1" second="c3" awayfrom="P2" shape="circle" valid="true" which="first">Intersection between c1 and c3</Intersection>
+<Circle name="c4" n="15" hidden="true" through="P3" midpoint="I1" acute="true">Circle around I1 through P3</Circle>
+<Intersection name="I4" n="16" hidden="true" first="c2" second="c3" shape="circle" valid="true" which="second">Intersection between c2 and c3</Intersection>
+<Intersection name="I6" n="19" hidden="true" first="c3" second="c2" shape="circle" valid="true" which="second">Intersection between c3 and c2</Intersection>
+<Line name="l1" n="20" hidden="true" from="I4" to="I6">Line through I4 and I6</Line>
+<Intersection name="I7" n="21" hidden="true" first="c4" second="c3" shape="circle" valid="true" which="first">Intersection between c4 and c3</Intersection>
+<Intersection name="I9" n="24" hidden="true" first="c3" second="c4" shape="circle" valid="true" which="first">Intersection between c3 and c4</Intersection>
+<Line name="l2" n="25" hidden="true" from="I7" to="I9">Line through I7 and I9</Line>
+<Intersection name="I11" n="3" first="l2" second="l1" shape="circle" valid="true">Intersection between l2 and l1</Intersection>
+</Objects>
+</Construction>
+</CaR>

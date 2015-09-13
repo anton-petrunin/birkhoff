@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CaR version="20150810">
+<Construction job="true" last="P3" target1="l3" target2="l5">
+<Window x="0.0" y="0.0" w="8.0"/>
+<Assignment>
+<P>Construct the lines tangent to the given circle which pass
+through the given point.</P>
+</Assignment>
+<Objects>
+<Point name="P1" n="0" x="-3.060109289617486" y="-1.0710382513661196" shape="circle">Point at -3.06011, -1.07104</Point>
+<Point name="P2" n="1" hidden="true" x="-3.4098360655737707" y="2.1202185792349733" shape="circle">Point at -3.40984, 2.12022</Point>
+<Circle name="c1" n="2" through="P2" midpoint="P1" acute="true">Circle around P1 through P2</Circle>
+<Point name="P3" n="3" x="3.060109289617486" y="5.836065573770491" shape="circle">Point at 3.06011, 5.83607</Point>
+<PointOn name="P4" n="6" on="c1" alpha="-1.97568811307998" x="-4.324733131674265" y="-4.021827216165272" shape="circle">Point on c1</PointOn>
+<Circle name="c2" n="9" through="P1" midpoint="P4" acute="true">Circle around P4 through P1</Circle>
+<Line name="l1" n="12" from="P1" to="P4">Line through P1 and P4</Line>
+<Intersection name="I1" n="15" first="l1" second="c2" awayfrom="P1" shape="circle" valid="true" which="first">Intersection between l1 and c2</Intersection>
+<Circle name="c3" n="16" through="I1" midpoint="P1" acute="true">Circle around P1 through I1</Circle>
+<Circle name="c4" n="19" through="P1" midpoint="P3" acute="true">Circle around P3 through P1</Circle>
+<Intersection name="I4" n="22" first="c4" second="c3" shape="circle" valid="true" which="second">Intersection between c4 and c3</Intersection>
+<Line name="l2" n="23" from="P1" to="I4">Line through P1 and I4</Line>
+<Intersection name="I5" n="26" first="l2" second="c1" shape="circle" valid="true" which="first">Intersection between l2 and c1</Intersection>
+<Line name="l3" n="4" from="P3" to="I5">Line through P3 and I5</Line>
+<Intersection name="I7" n="28" first="c4" second="c3" shape="circle" valid="true" which="first">Intersection between c4 and c3</Intersection>
+<Line name="l4" n="31" from="I7" to="P1">Line through I7 and P1</Line>
+<Intersection name="I10" n="34" first="l4" second="c1" shape="circle" valid="true" which="second">Intersection between l4 and c1</Intersection>
+<Line name="l5" n="5" from="P3" to="I10">Line through P3 and I10</Line>
+</Objects>
+</Construction>
+</CaR>
