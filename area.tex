@@ -513,7 +513,7 @@ Draw the line $m$ through $A$ which is parallel to $(BC)$
 and line $n$ through $C$ parallel to $(AB)$.
 Note that $m\nparallel n$;
 set $D=m\cap n$.
-By construction $\square ABCD$ is a parallelogram.
+By construction, $\square ABCD$ is a parallelogram.
 
 \begin{wrapfigure}{o}{24 mm}
 \begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/two-triangles(1)}
@@ -590,6 +590,35 @@ Show that
 \[\area(\solidtriangle ABC)=p\cdot r.\]
 
 \end{thm}
+
+\begin{thm}{Advanced exercise}\label{ex:area-affine}
+Show that for any affine transformation $\beta$ there is a constant $k>0$
+such that the equality 
+\[\area[\beta(\solidtriangle)]=k\cdot\area\solidtriangle.\]
+holds for any solid triangle $\solidtriangle$.
+
+Moreover, if $\beta$ has the matrix form $\left(\begin{smallmatrix}
+x\\ y
+\end{smallmatrix} \right)
+  \mapsto
+  \left(\begin{smallmatrix}
+a&b\\ c&d
+\end{smallmatrix} \right)
+  \cdot
+  \left(\begin{smallmatrix}
+x\\ y
+\end{smallmatrix} \right)
+  +
+\left(\begin{smallmatrix}
+v\\ w
+\end{smallmatrix} \right)$
+then 
+\[k=|\det\left(\begin{smallmatrix}
+a&b\\ c&d
+\end{smallmatrix} \right)|=|a\cdot d-b\cdot c|.\]
+
+\end{thm}
+
 
 
 

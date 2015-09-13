@@ -9,7 +9,7 @@
 %\item If $\measuredangle A O B\ne\pm\tfrac\pi2$, we say that the angle  $\angle A O B$ is  \index{angle!oblique angle}\emph{oblique};
 \item If $|\measuredangle A O B|<\tfrac\pi2$, we say that the angle  $\angle A O B$ is  
 \index{acute!angle}\emph{acute};
-\item If $|\measuredangle A O B|>\tfrac\pi2$, we say that the angle $\angle A O B$ is  \index{angle!obtuse angle}\index{obtuse angle}\emph{obtuse}.
+\item If $|\measuredangle A O B|>\tfrac\pi2$, we say that the angle $\angle A O B$ is  \index{angle!acute and obtuse angles}\index{obtuse angle}\emph{obtuse}.
 \end{itemize}
 
 \begin{wrapfigure}{o}{30mm}
@@ -73,12 +73,12 @@ Assume $P A= P B$ and $P\ne M$.
 According to SSS (\ref{thm:SSS}),
 $\triangle A M P \z\cong\triangle B M P$.
 Whence 
-$$\measuredangle A M P\equiv\pm \measuredangle B M P.$$   
+$$\measuredangle A M P=\pm \measuredangle B M P.$$   
 Since $A\not=B$, we have ``$-$'' in the above formula.
 Further,
 \begin{align*}
 \pi
-&\equiv
+&=
 \measuredangle A M B
 \equiv
 \\
@@ -89,16 +89,19 @@ Further,
 2\cdot \measuredangle A M P.
 \end{align*}
 That is, $\measuredangle A M P
-\equiv
+=
 \pm
 \tfrac\pi2$ and therefore $P$ lies on the perpendicular bisector.
 
 
-To prove converse, suppose $P\ne M$ is any point in the perpendicular bisector to $[A B]$.
-Then $\measuredangle A M P\equiv\pm \tfrac\pi2$, $\measuredangle B M P\equiv\pm \tfrac\pi2$ and
+To prove the converse, 
+suppose $P\ne M$ 
+is any point on the perpendicular bisector to $[A B]$.
+Then $\measuredangle A M P=\pm \tfrac\pi2$, 
+$\measuredangle B M P=\pm \tfrac\pi2$ and
 $A M\z=B M$.
 Therefore $\triangle A M P\cong \triangle B M P$;
-in particular $A P= B P$.\qeds
+in particular $A P\z= B P$.\qeds
 
 
 \begin{thm}{Exercise}\label{ex:pbisec-side}
@@ -215,12 +218,12 @@ By construction, the line $(AB)$ is perpendicular bisector of $[PP']$.
 Therefore, according to Theorem~\ref{thm:perp-bisect}, $AP'=AP$ and $BP'\z=BP$.
 In particular, 
 $\triangle ABP'\cong \triangle ABP$.
-Therefore $\measuredangle BAP'\equiv \pm \measuredangle BAP$.
+Therefore $\measuredangle BAP'=\pm \measuredangle BAP$.
 
 Since $P'\ne P$ and $AP'=AP$,
 we get $\measuredangle BAP'\ne \measuredangle BAP$.
 That is, we are left with the case
-$$\measuredangle BAP'\equiv -\measuredangle BAP.$$
+$$\measuredangle BAP'=-\measuredangle BAP.$$
 \qedsf
 }
 
@@ -380,7 +383,7 @@ Show that for any angle, its bisector and external bisector are perpendicular.
 
 
 \begin{thm}{Lemma}\label{lem:angle-bisect-dist}
-Assume $\measuredangle ABC\not\equiv\pi$ nor $0$.
+Assume $\measuredangle ABC\ne\pi$ nor $0$.
 Given angle $\angle ABC$ and a point $X$, 
 consider foot points $Y$ and $Z$ of $X$ on $(AB)$ and $(BC)$.
 
@@ -426,7 +429,7 @@ XY'&=XZ'
 \\
 &\Updownarrow
 \\
-\measuredangle XBY'&\equiv \pm \measuredangle BXZ'.
+\measuredangle XBY'&= \pm \measuredangle BXZ'.
 \end{aligned}
 \eqlbl{eq:iff-chain}$$
 According to Proposition~\ref{prop:reflection}, 
@@ -436,15 +439,23 @@ According to Proposition~\ref{prop:reflection},
 \measuredangle XBC&\equiv -\measuredangle Z'BC.
 \end{align*}
 Therefore 
-$$2\cdot \measuredangle XBA\equiv \measuredangle XBY'
+$$2\cdot \measuredangle XBA
+\equiv \measuredangle XBY'
 \ \ \text{and}\ \ 
-2\cdot \measuredangle XBC\equiv -XBZ'.$$
+2\cdot \measuredangle XBC
+\equiv -XBZ'.$$
 That is, we can continue the chain of equivalence conditions \ref{eq:iff-chain} the following way
-$$\measuredangle XBY'\equiv \pm \measuredangle BXZ' \ \ \iff\ \ 2\cdot \measuredangle XBA \equiv\pm 2\cdot \measuredangle XBC.$$
+$$\measuredangle XBY'
+\equiv \pm \measuredangle BXZ'
+\ \ \iff\ \ 
+2\cdot \measuredangle XBA 
+\equiv\pm 2\cdot \measuredangle XBC.$$
 
 
 Since $(AB)\ne(BC)$, we have
-$$2\cdot \measuredangle XBA\not\equiv 2\cdot \measuredangle XBC$$
+$$2\cdot \measuredangle XBA
+\not\equiv 
+2\cdot \measuredangle XBC$$
 (compare to Exercise~\ref{ex:ABCO-line}).
 Therefore
 $$XY=XZ
@@ -641,11 +652,12 @@ Make a ruler-and-compass construction of the line though the given point which i
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:center}
-Make a ruler-and-compass construction of the center of given circle.
+Make a ruler-and-compass construction of the center 
+of the given circle.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:tangent}
-Make a ruler-and-compass construction of the lines tangent to the given circle which pass through given point.
+Make a ruler-and-compass construction of the lines tangent to the given circle which pass through the given point.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:tangent-circle}
