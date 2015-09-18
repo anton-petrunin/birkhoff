@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CaR version="20150810">
+<Macro Name="Poincare Geometry/01: Point (13)">
+<Parameter name="k">=k</Parameter>
+<Parameter name="P2">P2</Parameter>
+<Comment>
+<P>Create a point on k.</P>
+</Comment>
+<Objects>
+<Point name="P1" n="0" hidden="true" parameter="true" x="0.0" y="0.0">Point at 0.0, 0.0</Point>
+<Circle name="k" n="1" mainparameter="true" midpoint="P1">???</Circle>
+<PointOn name="P2" n="2" mainparameter="true" on="k" inside="true" x="1.2166064617758128" y="3.4297394493749858" shape="circle">Point on k</PointOn>
+</Objects>
+</Macro>
+<Macro Name="Poincare Geometry/03: Limited Line (27)">
+<Parameter name="k" fixed="k">k</Parameter>
+<Parameter name="P2">A</Parameter>
+<Parameter name="P3">B</Parameter>
+<Comment>
+<P>Line through A and B. Only the part of the line in the
+basic circle is shown.</P>
+</Comment>
+<Objects>
+<Point name="P1" n="0" hidden="true" parameter="true" x="0.0" y="0.0">Point at 0.0, 0.0</Point>
+<Circle name="k" n="1" mainparameter="true" midpoint="P1">???</Circle>
+<Point name="P2" n="2" mainparameter="true" x="-4.307444354036484" y="-0.30075007284748445">Point at -4.30744, -0.30075</Point>
+<Point name="P3" n="3" mainparameter="true" x="3.0368" y="4.18466">Point at 3.0368, 4.18466</Point>
+<Line name="g1" n="4" hidden="super" from="P1" to="P2">Gerade durch P1 und P2</Line>
+<Midpoint name="M1" n="5" hidden="super" first="P1" second="P2">Mitte zwischen P1 und P2</Midpoint>
+<Plumb name="l1" n="6" hidden="super" point="M1" line="g1" valid="true">Lot durch M1 zu g1</Plumb>
+<Intersection name="S1" n="7" hidden="super" first="l1" second="k" which="second">Schnitt zwischen l1 und k</Intersection>
+<Line name="g2" n="8" hidden="super" from="P1" to="S1">Gerade durch P1 und S1</Line>
+<Midpoint name="M2" n="9" hidden="super" first="P1" second="S1">Mitte zwischen P1 und S1</Midpoint>
+<Plumb name="l2" n="10" hidden="super" point="M2" line="g2" valid="true">Lot durch M2 zu g2</Plumb>
+<Intersection name="S2" n="11" hidden="super" first="g1" second="l2">Schnitt zwischen g1 und l2</Intersection>
+<Line name="g3" n="12" hidden="super" from="P2" to="P3">Gerade durch P2 und P3</Line>
+<Midpoint name="M3" n="13" hidden="super" first="P2" second="P3">Mitte zwischen P2 und P3</Midpoint>
+<Plumb name="l3" n="14" hidden="super" point="M3" line="g3" valid="true">Lot durch M3 zu g3</Plumb>
+<Line name="g4" n="15" hidden="super" from="P2" to="S2">Gerade durch P2 und S2</Line>
+<Midpoint name="M4" n="16" hidden="super" first="P2" second="S2">Mitte zwischen P2 und S2</Midpoint>
+<Plumb name="l4" n="17" hidden="super" point="M4" line="g4" valid="true">Lot durch M4 zu g4</Plumb>
+<Intersection name="S3" n="18" hidden="super" first="l3" second="l4">Schnitt zwischen l3 und l4</Intersection>
+<Circle name="k2" n="19" target="true" through="P2" midpoint="S3" start="S4" end="S5" acute="true">Kreis um S3 durch P2</Circle>
+<Intersection name="S4" n="20" hidden="true" target="true" first="k" second="k2" which="second">Schnitt zwischen k und k2</Intersection>
+<Intersection name="S5" n="21" hidden="true" target="true" first="k2" second="k" which="second">Schnitt zwischen k2 und k</Intersection>
+</Objects>
+</Macro>
+<Macro Name="Poincare Geometry/05: Circle (19)">
+<Parameter name="k" fixed="k">k</Parameter>
+<Parameter name="P16">M</Parameter>
+<Parameter name="P17">A</Parameter>
+<Comment>
+<P>Circle around M through A.</P>
+</Comment>
+<Objects>
+<Point name="P1" n="0" hidden="true" parameter="true" x="0.0" y="0.0">Point at 0.0, 0.0</Point>
+<Circle name="k" n="1" mainparameter="true" midpoint="P1">???</Circle>
+<Point name="P16" n="2" mainparameter="true" x="1.2081475452336594" y="1.7053522738256321">Point at 1.20815, 1.70535</Point>
+<Point name="P17" n="3" mainparameter="true" x="2.855222426515075" y="3.6112532078798423">Point at 2.85522, 3.61125</Point>
+<Line name="g1" n="4" hidden="super" from="P1" to="P16">Gerade durch P1 und P16</Line>
+<Midpoint name="M1" n="5" hidden="super" first="P1" second="P16">Mitte zwischen P1 und P16</Midpoint>
+<Plumb name="l1" n="6" hidden="super" point="M1" line="g1" valid="true">Lot durch M1 zu g1</Plumb>
+<Intersection name="S1" n="7" hidden="super" first="l1" second="k" which="second">Schnitt zwischen l1 und k</Intersection>
+<Line name="g2" n="8" hidden="super" from="P1" to="S1">Gerade durch P1 und S1</Line>
+<Midpoint name="M2" n="9" hidden="super" first="P1" second="S1">Mitte zwischen P1 und S1</Midpoint>
+<Plumb name="l2" n="10" hidden="super" point="M2" line="g2" valid="true">Lot durch M2 zu g2</Plumb>
+<Intersection name="S2" n="11" hidden="super" first="g1" second="l2">Schnitt zwischen g1 und l2</Intersection>
+<Line name="g3" n="12" hidden="super" from="P16" to="P17">Gerade durch P16 und P17</Line>
+<Midpoint name="M3" n="13" hidden="super" first="P16" second="P17">Mitte zwischen P16 und P17</Midpoint>
+<Plumb name="l3" n="14" hidden="super" point="M3" line="g3" valid="true">Lot durch M3 zu g3</Plumb>
+<Line name="g4" n="15" hidden="super" from="P16" to="S2">Gerade durch P16 und S2</Line>
+<Midpoint name="M4" n="16" hidden="super" first="P16" second="S2">Mitte zwischen P16 und S2</Midpoint>
+<Plumb name="l4" n="17" hidden="super" point="M4" line="g4" valid="true">Lot durch M4 zu g4</Plumb>
+<Intersection name="S3" n="18" hidden="super" first="l3" second="l4">Schnitt zwischen l3 und l4</Intersection>
+<Line name="g5" n="19" hidden="super" from="S3" to="P17">Gerade durch S3 und P17</Line>
+<Plumb name="l5" n="20" hidden="super" point="P17" line="g5" valid="true">Lot durch P17 zu g5</Plumb>
+<Line name="g6" n="21" hidden="super" from="P1" to="P16">Gerade durch P1 und P16</Line>
+<Intersection name="S4" n="22" hidden="super" first="l5" second="g6">Schnitt zwischen l5 und g6</Intersection>
+<Circle name="k2" n="23" target="true" through="P17" midpoint="S4" acute="true">Kreis um S4 durch P17</Circle>
+</Objects>
+</Macro>
+<Construction job="true" last="c2" target1="P2">
+<Window x="0.35844919012283327" y="-0.05720338860737417" w="7.204412273296672"/>
+<Comment>
+<P>Poincare (hyperbolic) geometry realized with macros. </P>
+<P></P>
+<P>This geometry can be realized on the southern hemisphere of
+a ball. You are viewing at it from the north pole. The
+green circle is the projection of the southern hemisphere,
+the boundary is the equator. This projection is called
+stereographical projection. It preserves angles. </P>
+<P></P>
+<P>Lines are circles on the ball, rectangular to the equator.
+These circles project to circles perpendicular to the
+boundary of the green circle. Circles are just circles on
+the ball. They project to circles, but with different
+midpoint. </P>
+<P></P>
+<P>Take care to use the macro for intersections. It will
+intersect two lines (circles in the projection), but choose
+the intersection in the green circle.</P>
+</Comment>
+<Assignment>
+<P>Construct the h-center of the given h-circle.</P>
+</Assignment>
+<Objects>
+<Point name="Mc" n="0" hidden="true" x="0" actx="0.0" y="0" acty="0.0" fixed="true">Point at &quot;0&quot;, &quot;0&quot;</Point>
+<Circle name="k" n="1" color="1" type="thin" background="true" decorative="true" fixed="1+5" midpoint="Mc" filled="true">Circle around Mc with radius 1+5</Circle>
+<Point name="P2" n="1" x="-4.0258148577715245" y="1.506912433884667" shape="circle">Point at -4.02581, 1.50691</Point>
+<Point name="P3" n="2" hidden="true" x="1.7803726651155964" y="-0.08090211319058671" shape="circle">Point at 1.78037, -0.0809</Point>
+<Line name="l1" n="3" hidden="super" from="Mc" to="P2">Line through Mc and P2</Line>
+<Midpoint name="M1" n="4" hidden="super" first="Mc" second="P2">Midpoint between Mc and P2</Midpoint>
+<Plumb name="p1" n="5" hidden="super" point="M1" line="l1" valid="true">Perpendicular line through M1 to l1</Plumb>
+<Intersection name="I1" n="6" hidden="super" first="p1" second="k" which="second">Intersection between p1 and k</Intersection>
+<Line name="l2" n="7" hidden="super" from="Mc" to="I1">Line through Mc and I1</Line>
+<Midpoint name="M2" n="8" hidden="super" first="Mc" second="I1">Midpoint between Mc and I1</Midpoint>
+<Plumb name="p2" n="9" hidden="super" point="M2" line="l2" valid="true">Perpendicular line through M2 to l2</Plumb>
+<Intersection name="I2" n="10" hidden="super" first="l1" second="p2">Intersection between l1 and p2</Intersection>
+<Line name="l3" n="11" hidden="super" from="P2" to="P3">Line through P2 and P3</Line>
+<Midpoint name="M3" n="12" hidden="super" first="P2" second="P3">Midpoint between P2 and P3</Midpoint>
+<Plumb name="p3" n="13" hidden="super" point="M3" line="l3" valid="true">Perpendicular line through M3 to l3</Plumb>
+<Line name="l4" n="14" hidden="super" from="P2" to="I2">Line through P2 and I2</Line>
+<Midpoint name="M4" n="15" hidden="super" first="P2" second="I2">Midpoint between P2 and I2</Midpoint>
+<Plumb name="p4" n="16" hidden="super" point="M4" line="l4" valid="true">Perpendicular line through M4 to l4</Plumb>
+<Intersection name="I3" n="17" hidden="super" first="p3" second="p4">Intersection between p3 and p4</Intersection>
+<Line name="l5" n="18" hidden="super" from="I3" to="P3">Line through I3 and P3</Line>
+<Plumb name="p5" n="19" hidden="super" point="P3" line="l5" valid="true">Perpendicular line through P3 to l5</Plumb>
+<Line name="l6" n="20" hidden="super" from="Mc" to="P2">Line through Mc and P2</Line>
+<Intersection name="I4" n="21" hidden="super" first="p5" second="l6">Intersection between p5 and l6</Intersection>
+<Circle name="c2" n="22" through="P3" midpoint="I4" acute="true">Circle around I4 through P3</Circle>
+</Objects>
+</Construction>
+</CaR>
