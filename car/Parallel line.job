@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CaR version="20150810">
+<Construction job="true" last="P3" target1="pl1">
+<Window x="0.0" y="0.0" w="8.0"/>
+<Assignment>
+<P>Construct the parallel line through through the given
+point.</P>
+</Assignment>
+<Objects>
+<Point name="P1" n="0" hidden="true" x="-3.3947368421052633" y="-1.6315789473684215" shape="circle">Point at -3.39474, -1.63158</Point>
+<Point name="P2" n="1" hidden="true" x="1.2105263157894746" y="-1.447368421052632" shape="circle">Point at 1.21053, -1.44737</Point>
+<Line name="l1" n="2" from="P1" to="P2">Line through P1 and P2</Line>
+<Point name="P3" n="3" x="-0.9736842105263162" y="2.131578947368421" shape="circle">Point at -0.97368, 2.13158</Point>
+<Parallel name="pl1" n="4" point="P3" line="l1">Parallel line through P3 to l1</Parallel>
+</Objects>
+</Construction>
+</CaR>

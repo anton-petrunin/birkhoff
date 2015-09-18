@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CaR version="20150810">
+<Construction job="true" last="s1" target1="I3" target2="M2">
+<Window x="0.0" y="0.0" w="8.0"/>
+<Assignment>
+<P>Trisect the given segment.</P>
+</Assignment>
+<Objects>
+<Point name="P1" n="0" x="-4.1530054644808745" y="-1.8142076502732234" shape="circle">Point at -4.15301, -1.81421</Point>
+<Point name="P2" n="1" x="3.7158469945355197" y="-0.1530054644808745" shape="circle">Point at 3.71585, -0.15301</Point>
+<Segment name="s1" n="2" from="P1" to="P2">Line segment from P1 to P2</Segment>
+<Point name="P3" n="7" x="2.7978142076502728" y="4.0437158469945365" shape="circle">Point at 2.79781, 4.04372</Point>
+<Circle name="c1" n="8" through="P3" midpoint="P2" acute="true">Circle around P2 through P3</Circle>
+<Line name="l1" n="11" from="P3" to="P2">Line through P3 and P2</Line>
+<Midpoint name="M1" n="17" first="P1" second="P3" shape="circle">Midpoint between P1 and P3</Midpoint>
+<Intersection name="I1" n="20" first="l1" second="c1" awayfrom="P3" shape="circle" valid="true" which="first">Intersection between l1 and c1</Intersection>
+<Line name="l2" n="21" from="M1" to="I1">Line through M1 and I1</Line>
+<Intersection name="I3" n="3" first="s1" second="l2" shape="circle" valid="true">Intersection between s1 and l2</Intersection>
+<Midpoint name="M2" n="4" first="P1" second="I3" shape="circle">Midpoint between P1 and I3</Midpoint>
+</Objects>
+</Construction>
+</CaR>
