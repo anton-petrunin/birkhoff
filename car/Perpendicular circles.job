@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CaR version="20150810">
+<Macro Name="Circumcircle (4)">
+<Parameter name="P2">P2</Parameter>
+<Parameter name="P3">P3</Parameter>
+<Parameter name="P1">P1</Parameter>
+<Objects>
+<Point name="P1" n="0" fillbackground="false" x="-4.0" y="1.8157894736842122">Point at -4.0, 1.81579</Point>
+<Point name="P2" n="1" fillbackground="false" x="0.8947368421052639" y="3.184210526315791">Point at 0.89474, 3.18421</Point>
+<Point name="P3" n="2" fillbackground="false" x="1.0526315789473681" y="-1.1315789473684212">Point at 1.05263, -1.13158</Point>
+<Circle name="c1" n="3" hidden="super" through="P2" midpoint="P1" acute="true">Circle around P1 through P2</Circle>
+<Circle name="c2" n="4" hidden="super" through="P1" midpoint="P2" acute="true">Circle around P2 through P1</Circle>
+<Intersection name="I1" n="5" hidden="super" first="c1" second="c2" which="second">Intersection between c1 and c2</Intersection>
+<Intersection name="I2" n="6" hidden="super" first="c2" second="c1" which="second">Intersection between c2 and c1</Intersection>
+<Line name="l1" n="7" hidden="super" from="I1" to="I2">Line through I1 and I2</Line>
+<Circle name="c3" n="8" hidden="super" through="P2" midpoint="P3" acute="true">Circle around P3 through P2</Circle>
+<Circle name="c4" n="9" hidden="super" through="P3" midpoint="P2" acute="true">Circle around P2 through P3</Circle>
+<Intersection name="I3" n="10" hidden="super" first="c3" second="c4" which="second">Intersection between c3 and c4</Intersection>
+<Intersection name="I4" n="11" hidden="super" first="c4" second="c3" which="second">Intersection between c4 and c3</Intersection>
+<Line name="l2" n="12" hidden="super" from="I3" to="I4">Line through I3 and I4</Line>
+<Intersection name="I5" n="13" hidden="super" first="l1" second="l2" shape="circle">Intersection between l1 and l2</Intersection>
+<Circle name="c5" n="14" target="true" through="P1" midpoint="I5" acute="true">Circle around I5 through P1</Circle>
+</Objects>
+</Macro>
+<Macro Name="Default Macros/Inverse (6)">
+<Parameter name="k">Reflection circle</Parameter>
+<Parameter name="P">Reflected point</Parameter>
+<Comment>
+<P>Reflect P at the circle k.</P>
+</Comment>
+<Objects>
+<Point name="P1" n="0" parameter="true" x="-0.72" y="-0.89">Point at -0.72, -0.89</Point>
+<Circle name="k" n="1" mainparameter="true" midpoint="P1">???</Circle>
+<Point name="P" n="2" mainparameter="true" x="1.45" y="1.86">Point at 1.45, 1.86</Point>
+<Ray name="r1" n="3" hidden="super" from="P1" to="P">Strahl von P1 in Richtung P</Ray>
+<Circle name="k2" n="4" hidden="super" fixed="k^2/d(P,P1)" midpoint="P1" acute="true">Kreis um P1 mit Radius 6.738402</Circle>
+<Intersection name="S1" n="5" target="true" first="r1" second="k2" which="first">Schnitt zwischen r1 und k2</Intersection>
+</Objects>
+</Macro>
+<Construction job="true" last="P4" target1="c9">
+<Window x="0.0" y="0.0" w="8.0"/>
+<Assignment>
+<P>Construct the circle which pass through the given point and
+perpendicular to the given two circles</P>
+</Assignment>
+<Objects>
+<Point name="P1" n="0" hidden="true" x="-4.315789473684212" y="0.6052631578947374" shape="circle">Point at -4.31579, 0.60526</Point>
+<Point name="P2" n="1" x="-1.5526315789473681" y="1.6052631578947376" shape="circle">Point at -1.55263, 1.60526</Point>
+<Circle name="c1" n="2" through="P2" midpoint="P1" acute="true">Circle around P1 through P2</Circle>
+<Point name="P3" n="3" hidden="true" x="-0.7105263157894737" y="-2.6842105263157894" shape="circle">Point at -0.71053, -2.68421</Point>
+<Circle name="c2" n="4" through="P2" midpoint="P3" acute="true">Circle around P3 through P2</Circle>
+<Point name="P4" n="5" x="0.13157894736842124" y="4.105263157894737" shape="circle">Point at 0.13158, 4.10526</Point>
+<Ray name="r1" n="13" hidden="super" from="P1" to="P4">Ray from P1 pointing to P4</Ray>
+<Circle name="c3" n="3" hidden="super" fixed="c1^2/d(P4,P1)" midpoint="P1" acute="true">Circle around P1 with radius c1^2/d(P4,P1)</Circle>
+<Intersection name="I1" n="14" first="r1" second="c3" shape="circle" which="first">Intersection between r1 and c3</Intersection>
+<Ray name="r2" n="18" hidden="super" from="P3" to="P4">Ray from P3 pointing to P4</Ray>
+<Circle name="c4" n="2" hidden="super" fixed="c2^2/d(P4,P3)" midpoint="P3" acute="true">Circle around P3 with radius c2^2/d(P4,P3)</Circle>
+<Intersection name="I2" n="19" first="r2" second="c4" shape="circle" which="first">Intersection between r2 and c4</Intersection>
+<Circle name="c5" n="26" hidden="super" through="P4" midpoint="I1" acute="true">Circle around I1 through P4</Circle>
+<Circle name="c6" n="27" hidden="super" through="I1" midpoint="P4" acute="true">Circle around P4 through I1</Circle>
+<Intersection name="I3" n="28" hidden="super" first="c6" second="c5" shape="circle" which="second">Intersection between c6 and c5</Intersection>
+<Intersection name="I4" n="29" hidden="super" first="c5" second="c6" shape="circle" which="second">Intersection between c5 and c6</Intersection>
+<Line name="l1" n="30" from="I3" to="I4">Line through I3 and I4</Line>
+<Circle name="c7" n="37" hidden="super" through="P4" midpoint="I2" acute="true">Circle around I2 through P4</Circle>
+<Circle name="c8" n="38" hidden="super" through="I2" midpoint="P4" acute="true">Circle around P4 through I2</Circle>
+<Intersection name="I5" n="39" hidden="super" first="c8" second="c7" shape="circle" which="second">Intersection between c8 and c7</Intersection>
+<Intersection name="I6" n="40" hidden="super" first="c7" second="c8" shape="circle" which="second">Intersection between c7 and c8</Intersection>
+<Line name="l2" n="41" from="I5" to="I6">Line through I5 and I6</Line>
+<Intersection name="I7" n="42" first="l2" second="l1" shape="circle">Intersection between l2 and l1</Intersection>
+<Circle name="c9" n="6" through="P4" midpoint="I7" acute="true">Circle around I7 through P4</Circle>
+</Objects>
+</Construction>
+</CaR>

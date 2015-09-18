@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CaR version="20150810">
+<Construction job="true" last="s3" target1="c5">
+<Window x="0.0" y="0.0" w="8.0"/>
+<Assignment>
+<P>Construct the circumcircle of the given triangle.</P>
+</Assignment>
+<Objects>
+<Point name="P1" n="0" x="-4.721311475409836" y="-0.5464480874316937" shape="circle">Point at -4.72131, -0.54645</Point>
+<Point name="P2" n="1" x="-1.0054644808743172" y="1.9890710382513666" shape="circle">Point at -1.00546, 1.98907</Point>
+<Segment name="s1" n="2" from="P1" to="P2">Line segment from P1 to P2</Segment>
+<Point name="P3" n="3" x="-0.6994535519125682" y="-1.5956284153005456" shape="circle">Point at -0.69945, -1.59563</Point>
+<Segment name="s2" n="4" from="P2" to="P3">Line segment from P2 to P3</Segment>
+<Segment name="s3" n="5" from="P3" to="P1">Line segment from P3 to P1</Segment>
+<Circle name="c1" n="25" hidden="super" through="P3" midpoint="P2" acute="true">Circle around P2 through P3</Circle>
+<Circle name="c2" n="26" hidden="super" through="P2" midpoint="P3" acute="true">Circle around P3 through P2</Circle>
+<Intersection name="I1" n="27" hidden="super" first="c1" second="c2" which="second">Intersection between c1 and c2</Intersection>
+<Intersection name="I2" n="28" hidden="super" first="c2" second="c1" which="second">Intersection between c2 and c1</Intersection>
+<Line name="l1" n="29" from="I1" to="I2">Line through I1 and I2</Line>
+<Circle name="c3" n="36" hidden="super" through="P1" midpoint="P2" acute="true">Circle around P2 through P1</Circle>
+<Circle name="c4" n="37" hidden="super" through="P2" midpoint="P1" acute="true">Circle around P1 through P2</Circle>
+<Intersection name="I3" n="38" hidden="super" first="c3" second="c4" which="second">Intersection between c3 and c4</Intersection>
+<Intersection name="I4" n="39" hidden="super" first="c4" second="c3" which="second">Intersection between c4 and c3</Intersection>
+<Line name="l2" n="40" from="I3" to="I4">Line through I3 and I4</Line>
+<Intersection name="I5" n="41" first="l2" second="l1" shape="circle" valid="true">Intersection between l2 and l1</Intersection>
+<Circle name="c5" n="6" through="P2" midpoint="I5" acute="true">Circle around I5 through P2</Circle>
+</Objects>
+</Construction>
+</CaR>

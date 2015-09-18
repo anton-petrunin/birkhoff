@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CaR version="20150810">
+<Construction job="true" last="s3" target1="c3">
+<Window x="0.0" y="0.0" w="8.0"/>
+<Assignment>
+<P>Construct the incircle of the given triangle.</P>
+</Assignment>
+<Objects>
+<Point name="P1" n="0" x="-4.502732240437158" y="-2.2950819672131146" shape="circle">Point at -4.50273, -2.29508</Point>
+<Point name="P2" n="1" x="-0.2622950819672134" y="3.7377049180327875" shape="circle">Point at -0.2623, 3.7377</Point>
+<Segment name="s1" n="2" from="P1" to="P2">Line segment from P1 to P2</Segment>
+<Point name="P3" n="3" x="2.0983606557377055" y="-1.2896174863387975" shape="circle">Point at 2.09836, -1.28962</Point>
+<Segment name="s2" n="4" from="P2" to="P3">Line segment from P2 to P3</Segment>
+<Segment name="s3" n="5" from="P3" to="P1">Line segment from P3 to P1</Segment>
+<Ray name="r1" n="18" hidden="super" from="P1" to="P2">Ray from P1 pointing to P2</Ray>
+<Circle name="c1" n="19" hidden="super" through="P3" midpoint="P1" acute="true">Circle around P1 through P3</Circle>
+<Intersection name="I1" n="20" hidden="super" first="r1" second="c1" which="first">Intersection between r1 and c1</Intersection>
+<Midpoint name="M1" n="21" hidden="super" first="I1" second="P3">Midpoint between I1 and P3</Midpoint>
+<Ray name="r2" n="22" from="P1" to="M1">Ray from P1 pointing to M1</Ray>
+<Ray name="r3" n="29" hidden="super" from="P3" to="P1">Ray from P3 pointing to P1</Ray>
+<Circle name="c2" n="30" hidden="super" through="P2" midpoint="P3" acute="true">Circle around P3 through P2</Circle>
+<Intersection name="I2" n="31" hidden="super" first="r3" second="c2" which="first">Intersection between r3 and c2</Intersection>
+<Midpoint name="M2" n="32" hidden="super" first="I2" second="P2">Midpoint between I2 and P2</Midpoint>
+<Ray name="r4" n="33" from="P3" to="M2">Ray from P3 pointing to M2</Ray>
+<Intersection name="I3" n="36" first="r4" second="r2" shape="circle" valid="true">Intersection between r4 and r2</Intersection>
+<Plumb name="p1" n="37" point="I3" line="s3" valid="true">Perpendicular line through I3 to s3</Plumb>
+<Intersection name="I4" n="40" first="s3" second="p1" shape="circle" valid="true">Intersection between s3 and p1</Intersection>
+<Circle name="c3" n="6" through="I4" midpoint="I3" acute="true">Circle around I3 through I4</Circle>
+</Objects>
+</Construction>
+</CaR>
