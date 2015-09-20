@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CaR version="20150810">
+<Construction job="true" last="s1" target1="M1">
+<Window x="0.0" y="0.0" w="8.0"/>
+<Assignment>
+<P>Bisect the given segment.</P>
+</Assignment>
+<Objects>
+<Point name="P1" n="0" x="-4.8" y="-0.13333333333333286" shape="circle">Point at -4.8, -0.13333</Point>
+<Point name="P2" n="3" x="0.9666666666666668" y="0.5000000000000009" shape="circle">Point at 0.96667, 0.5</Point>
+<Segment name="s1" n="4" from="P1" to="P2">Line segment from P1 to P2</Segment>
+<Midpoint name="M1" n="7" first="P1" second="P2" shape="circle">Midpoint between P1 and P2</Midpoint>
+</Objects>
+</Construction>
+</CaR>
