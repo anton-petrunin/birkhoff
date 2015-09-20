@@ -7,7 +7,7 @@
 through the given point.</P>
 </Assignment>
 <Objects>
-<Point name="P1" n="0" x="-3.060109289617486" y="-1.0710382513661196" shape="circle">Point at -3.06011, -1.07104</Point>
+<Point name="P1" n="0" hidden="true" x="-3.060109289617486" y="-1.0710382513661196" shape="circle">Point at -3.06011, -1.07104</Point>
 <Point name="P2" n="1" hidden="true" x="-3.409836065573771" y="2.1202185792349733" shape="circle">Point at -3.40984, 2.12022</Point>
 <Circle name="c1" n="2" through="P2" midpoint="P1" acute="true">Circle around P1 through P2</Circle>
 <Point name="P3" n="3" x="4.0655737704918025" y="1.1147540983606554" shape="circle">Point at 4.06557, 1.11475</Point>
