@@ -1346,6 +1346,14 @@ $a\cdot x+b\cdot y=1$ and $S$ is the point with coordinates $(p,q)$.
 
 To extend this bijection two whole plane assume that ideal line  corresponds to the origin and the ideal point formed by pencil of lines $ax-by=c$ for different values of $c$ corresponds to the line described by equation $ax+by=0$.
 
+\parbf{Exercise~\ref{ex:dual-desargues-construction}.}
+Assume $(AA')$ and $(BB')$ are the given lines and $C$ is the given point.
+Apply Dual Desargues' theorem (\ref{thm:dual-desargues}) to construct $C'$ so that $(AA')$, $(BB')$ and $(CC')$ are concurrent. 
+
+Since $(AA')\parallel (BB')$ 
+we get 
+$(AA')\parallel (BB')\parallel (CC')$.
+
 \begin{wrapfigure}{o}{24mm}
 \begin{lpic}[t(-4mm),b(-5mm),r(0mm),l(-0mm)]{pics/dual-desargues(1)}
 \lbl[l]{7.5,28;$P$}
@@ -1427,7 +1435,7 @@ $$
 Therefore $AB_s=\tfrac\pi3$.
 
 \begin{wrapfigure}{i}{36mm}
-\begin{lpic}[t(1mm),b(-3mm),r(-2mm),l(0mm)]{pics/tessellation(0.8)}
+\begin{lpic}[t(-8mm),b(-3mm),r(-2mm),l(0mm)]{pics/tessellation(0.8)}
 \lbl[br]{10,38;$A$}
 \lbl[bl]{33,38;$B$}
 \lbl[t]{21,35;$C$}
@@ -1527,7 +1535,7 @@ Note that $\hat P\in [A_iB_i]$ if and only if $P\in\Gamma_i$.
 {
 
 \begin{wrapfigure}{o}{42mm}
-\begin{lpic}[t(-0mm),b(-3mm),r(0mm),l(-0mm)]{pics/h-medians(1)}
+\begin{lpic}[t(-5mm),b(-3mm),r(0mm),l(-0mm)]{pics/h-medians(1)}
 \end{lpic}
 \end{wrapfigure}
 
@@ -1706,7 +1714,7 @@ Use that the number $\sqrt{3}$ is irrational
 to show that the third vertex is an irrational point.
 
 \begin{wrapfigure}{o}{25mm}
-\begin{lpic}[t(-4mm),b(-6mm),r(0mm),l(0mm)]{pics/equleteral-verify(1)}
+\begin{lpic}[t(-0mm),b(-6mm),r(0mm),l(0mm)]{pics/equleteral-verify(1)}
 \end{lpic}
 \end{wrapfigure}
 
@@ -1980,8 +1988,6 @@ b&=c,
 \\
 BY&=CY
 \end{align*}
-Hence the first part follows.
-
 }
 
 
@@ -1989,33 +1995,34 @@ Hence the first part follows.
 \parbf{Exercise~\ref{ex:area-medians-2}.}
 Denote by $M$ the intersection of 
 two medians $[AA']$ and $[BB']$.
-From Exercise~\ref{ex:area-medians} we have 
-\begin{align*}
-\area (\solidtriangle ABM)
-&=\area (\solidtriangle ACM)
-\\
-\area (\solidtriangle ABM)
-&=\area (\solidtriangle CBM)
-\end{align*}
-Therefore 
-\[\area (\solidtriangle BCM)
-=\area (\solidtriangle ACM)\]
-and according to Exercise~\ref{ex:area-medians},
-we $M$ lies on the median $[CC']$.
-That is, medians $[AA']$, $[BB']$ and $[CC']$ intersect at one point $M$.
 
 {
-\begin{wrapfigure}{o}{26mm}
-\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/area-median-sol2(1)}
+\begin{wrapfigure}[7]{o}{31mm}
+\begin{lpic}[t(-1mm),b(0mm),r(0mm),l(0mm)]{pics/area-median-sol2(1)}
 \lbl[trw]{13,10;$M$}
 \lbl[b]{13,25.5;$A$}
 \lbl[tl]{31,0;$B$}
 \lbl[tr]{1,4;$C$}
-\lbl[t]{16,3;$A'$}
+\lbl[t]{16,2;$A'$}
 \lbl[bl]{23,13;$B'$}
 \lbl[br]{7,16;$C'$}
 \end{lpic}
 \end{wrapfigure}
+
+From Exercise~\ref{ex:area-medians} we have 
+\begin{align*}
+\area (\solidtriangle ABM)
+&=\area (\solidtriangle ACM),
+\\
+\area (\solidtriangle ABM)
+&=\area (\solidtriangle CBM).
+\end{align*}
+Therefore 
+\[\area (\solidtriangle BCM)
+=\area (\solidtriangle ACM).\]
+According to Exercise~\ref{ex:area-medians},
+$M$ lies on the median $[CC']$.
+That is, medians $[AA']$, $[BB']$ and $[CC']$ intersect at one point $M$.
 
 By Theorem~\ref{thm:area-of-triangle},
 we get
@@ -2025,7 +2032,7 @@ we get
 &=\tfrac12\cdot\area (\solidtriangle CAM)
 \end{align*}
 
-Applying Claim\ref{clm:area-ratio},
+Applying Claim~\ref{clm:area-ratio},
 we get 
 \[\frac{MC'}{MC}=\frac{\area (\solidtriangle C'AM)}{\area (\solidtriangle CAM)}=\tfrac12.\]
 
@@ -2037,13 +2044,15 @@ so that $\Gamma$ is inscribed in $\mathcal{Q}_n$ and circumscribed around $\math
 Clearly 
 \[\mathcal{P}_n\subset\mathcal{D}\subset\mathcal{Q}_n.\]
 
-Show first that 
+Show that 
 $\tfrac{\area\mathcal{P}_n}{\area\mathcal{Q}_n}=(\cos\tfrac\pi n)^2$,
 in particular 
-\[\frac{\area\mathcal{P}_n}{\area\mathcal{Q}_n}\to 1\ \ \text{as}\ \ n\to\infty.\]
+$\frac{\area\mathcal{P}_n}{\area\mathcal{Q}_n}\to 1\ \ \text{as}\ \ n\to\infty$.
+
 Next show that $\area\mathcal{Q}_n<100$, say for all $n\ge 100$.
+
 These two statements imply that
-\[(\area\mathcal{Q}_n-\area\mathcal{P}_n)\to 0\ \ \text{as}\ \  n\to\infty.\]
+$(\area\mathcal{Q}_n-\area\mathcal{P}_n)\to 0$.
 Hence the result follows.
 
 
