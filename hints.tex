@@ -61,8 +61,6 @@ $$\max\{|x_1+x_2|,|y_1+y_2|\}=|x_1+x_2|.$$
 Further,
 \begin{align*}
 |x_1+x_2|&\le |x_1|+|x_2|\le 
-\\
-&\le
 \max\{|x_1|,|y_1|\}+\max\{|x_2|,|y_2|\}.
 \end{align*}
 Hence \ref{eq:max-trig} follows.
@@ -76,7 +74,6 @@ Therefore $d_\mathcal{Y}(f(A),f(B))>0$ and whence $f(A)\ne f(B)$.
 \parbf{Exercise~\ref{ex:motion-of-R}.}
 Set $f(0)=a$ and $f(1)=b$.
 Note that that $b=a+1$ or $a-1$.
-
 Moreover, $f(x)=a\pm x$ and at the same time, $f(x)=b\pm(x-1)$ for any $x$.
 
 If $b=a+1$, 
@@ -98,9 +95,9 @@ Then use above statement to prove that
 any motion of the Manhattan plane 
 can be written in one of the following two ways
 \begin{align*}
-(x,y)&\mapsto (\pm x+a,\pm y+b),
-\\
-(x,y)&\mapsto (\pm y+b,\pm x+a),
+(x,y)&\mapsto (\pm x+a,\pm y+b)
+&&\text{or} 
+&(x,y)&\mapsto (\pm y+b,\pm x+a),
 \end{align*}
 for some fixed real numbers $a$ and $b$.
 (In each case we have 4 choices of signs, so for fixed pair $(a,b)$ we have 8 distinct motions.)
@@ -121,14 +118,15 @@ Conclude that the graph is a line in $(\mathbb{R}^2,d_\infty)$.
 
 \parbf{Exercise~\ref{ex:2mid}.}
 Applying the definition of line,
-the problems are reduced to the following:
+the problems are reduced to the following.
+
+Assume $a\ne b$,
 find the number of solutions for each of the following two equations
 \begin{align*}
 |x-a|&=|x-b|
-\intertext{and}
-|x-a|&=2\cdot |x-b|
+&&\text{and}
+&|x-a|&=2\cdot |x-b|.
 \end{align*}
-for $a\ne b$.
 
 Each can be solved by taking square of left and right hand sides.
 The numbers of solutions are 1 and 2 correspondingly.
@@ -163,9 +161,7 @@ By triangle inequality
 \begin{align*}
 |f(A',B')-f(A,B)|
 &\le |f(A',B')-f(A,B')|
-+
-\\
-&\ \ \ \ \ \ +|f(A,B')-f(A,B)|
++|f(A,B')-f(A,B)|
 \le
 \\
 &\le d(A',A)+d(B',B)
@@ -354,8 +350,8 @@ $[AX]$ does not intersect $\ell$
 and $[BX]$ intersects $\ell$,
 say at the point $Y$.
 
-\begin{wrapfigure}[7]{o}{25mm}
-\begin{lpic}[t(-3mm),b(0mm),r(0mm),l(0mm)]{pics/pbisec-side(1)}
+\begin{wrapfigure}[7]{r}{25mm}
+\begin{lpic}[t(-5mm),b(0mm),r(0mm),l(0mm)]{pics/pbisec-side(1)}
 \lbl[tr]{1,1;$A$}
 \lbl[tl]{23,1;$B$}
 \lbl[br]{7,21;$X$}
@@ -408,18 +404,14 @@ Therefore
 &\equiv
 \measuredangle XBP+\measuredangle PBY
 \equiv
-\\
-&\equiv
  2\cdot(\measuredangle ABP+\measuredangle PBC)
 \equiv
-\\
-&\equiv
  2\cdot \measuredangle ABC.
 \end{align*}
 
 
-\begin{wrapfigure}{o}{21mm}
-\begin{lpic}[t(-7mm),b(0mm),r(0mm),l(0mm)]{pics/ex-obtuce(1)}
+\begin{wrapfigure}{r}{21mm}
+\begin{lpic}[t(-5mm),b(0mm),r(0mm),l(0mm)]{pics/ex-obtuce(1)}
 \lbl[t]{20,8;$A$}
 \lbl[tr]{5.5,8;$B$}
 \lbl[br]{2,21;$C$}
@@ -558,7 +550,7 @@ From \ref{eq:|3|<3pi} and \ref{eq:|3|==pi} the result follows.
 Apply twice Theorem~\ref{thm:isos} and once Theorem~\ref{thm:3sum}. 
 
 \begin{wrapfigure}{o}{25mm}
-\begin{lpic}[t(-2mm),b(-1mm),r(-0mm),l(1mm)]{pics/pi4-isos(1)}
+\begin{lpic}[t(-0mm),b(-1mm),r(-0mm),l(1mm)]{pics/pi4-isos(1)}
 \lbl[tr]{1,0;$A$}
 \lbl[b]{12,29.5;$B$}
 \lbl[tl]{21,0;$C$}
@@ -766,11 +758,8 @@ Thus
 \measuredangle A'OC
 &\equiv 
 2\cdot \measuredangle A' A C
-\equiv
-\\
-&\equiv-2\cdot\measuredangle B' B C\equiv
-\\
-&\equiv-\measuredangle B'OC.
+\equiv-2\cdot\measuredangle B' B C
+\equiv-\measuredangle B'OC.
 \end{align*}
 
 
@@ -838,14 +827,13 @@ Note that one the two arcs with endpoints $A$ and $C$ is tangent to $[AX)$.
 The uniqueness follow from the propositions \ref{prop:arc(angle=angle)}
 and \ref{prop:arc(angle=tan)}.
 
-\parbf{Exercise~\ref{ex:two-arcs}.} 
-Apply Proposition~\ref{prop:arc(angle=tan)} twice.
-
-
 \begin{wrapfigure}[7]{r}{35mm}
 \begin{lpic}[t(-5mm),b(0mm),r(0mm),l(0mm)]{pics/3x120(1)}
 \end{lpic}
 \end{wrapfigure}
+
+\parbf{Exercise~\ref{ex:two-arcs}.} 
+Apply Proposition~\ref{prop:arc(angle=tan)} twice.
 
 \parbf{Exercise~\ref{ex:3x120}.} Guess the construction from the diagram.
 To show that it produce needed point, apply theorem on inscribed angle (\ref{thm:inscribed-angle}).
@@ -881,13 +869,13 @@ By Lemma~\ref{lem:inversion-sim},
 \begin{align*}
 \measuredangle IA'B'&\equiv -\measuredangle IBA,
 &
-\measuredangle IB'A'&\equiv -\measuredangle IAB,
-\\
 \measuredangle IB'C'&\equiv -\measuredangle ICB,
 &
-\measuredangle IC'B'&\equiv -\measuredangle IBC,
-\\
 \measuredangle IC'A'&\equiv -\measuredangle IAC,
+\\
+\measuredangle IB'A'&\equiv -\measuredangle IAB,
+&
+\measuredangle IC'B'&\equiv -\measuredangle IBC,
 &
 \measuredangle IA'C'&\equiv -\measuredangle ICA.
 \end{align*}
@@ -898,7 +886,7 @@ and
 $(C'I)\perp (B'A')$.
 
 \begin{wrapfigure}[9]{o}{54mm}
-\begin{lpic}[t(2mm),b(0mm),r(0mm),l(0mm)]{pics/inv-constr(1)}
+\begin{lpic}[t(-3mm),b(0mm),r(0mm),l(0mm)]{pics/inv-constr(1)}
 \end{lpic}
 \end{wrapfigure}
 
@@ -926,7 +914,7 @@ Apply an inversion in a circle with the center at the only point of intersection
 then use Theorem~\ref{thm:inverse}.
 
 \begin{wrapfigure}[6]{o}{48mm}
-\begin{lpic}[t(-4mm),b(-1mm),r(0mm),l(0mm)]{pics/ex-inverse(1)}
+\begin{lpic}[t(-5mm),b(-1mm),r(0mm),l(0mm)]{pics/ex-inverse(1)}
 \lbl[bl]{28,9;$B'$}
 \lbl[br]{19,9;$A$}
 \end{lpic}
@@ -1007,19 +995,14 @@ but $(AB)\z\nparallel(C D)$.
 Let $Z$ be the point of intersection of $(AB)$ and $(CD)$.
 
 Note that 
-$$2\cdot \measuredangle  ABC\equiv 2\cdot \measuredangle ZBC$$
-and 
-$$2\cdot \measuredangle  BCD\equiv 2\cdot \measuredangle BCZ.$$
+\begin{align*}
+2\cdot \measuredangle  ABC&\equiv 2\cdot \measuredangle ZBC,
+&
+2\cdot \measuredangle  BCD&\equiv 2\cdot \measuredangle BCZ.
+\end{align*}
 
 
-
-Apply Proposition~\ref{prop:2sum} to $\triangle ZBC$ and try to arrive to a contradiction.
-
-
-\parbf{Exercise~\ref{ex:SAA}.}
-Let $C''\in [B'C')$ be the point such that $B'C''=BC$.
-
-\begin{wrapfigure}[9]{o}{26mm}
+\begin{wrapfigure}[9]{r}{26mm}
 \begin{lpic}[t(-0mm),b(2mm),r(0mm),l(0mm)]{pics/SAA(1)}
 \lbl[t]{1,.5;$B'$}
 \lbl[b]{10.5,29;$A'$}
@@ -1028,13 +1011,19 @@ Let $C''\in [B'C')$ be the point such that $B'C''=BC$.
 \end{lpic}
 \end{wrapfigure}
 
+Apply Proposition~\ref{prop:2sum} to $\triangle ZBC$ and try to arrive to a contradiction.
+
+
+\parbf{Exercise~\ref{ex:SAA}.}
+Let $C''\in [B'C')$ be the point such that $B'C''=BC$.
+
 Note that by SAS, $\triangle ABC\cong \triangle A'B'C''$.
 Conclude that $\measuredangle B'C'A'= \measuredangle B'C''A'$.
 
 Therefore it is sufficient to show that $C''=C'$.
 If $C'\ne C''$ apply Proposition~\ref{prop:2sum} to $\triangle A'C'C''$ and try to arrive to a contradiction.
 
-(The same proof is given in  the Euclid's Elements \cite[Book I, Proposition 26]{euclid}.)
+(This proof was given in the Euclid's Elements \cite[Book I, Proposition 26]{euclid}.)
 
 \parbf{Exercise~\ref{ex:chev<side}.} 
 Use Exercise~\ref{ex:side-angle} and Proposition~\ref{prop:2sum}.
@@ -1094,11 +1083,12 @@ is a line if and only if it pass through $O$.
 
 \parbf{Exercise~\ref{ex:h-dist-eq}.}
 Assume that the absolute is a unit circle.
+
 Set $a\z=OX\z=OY$.
 Note that $0<a<\tfrac12$ and
 \begin{align*}
 OX_h&=\ln \tfrac{1+a}{1-a},
-\\
+&
 XY_h&=\ln \tfrac{(1+2\cdot a)\cdot(1-a)}{(1-2\cdot a)\cdot(1+a)}.
 \end{align*}
 It remains to check that inequality 
@@ -1123,7 +1113,7 @@ we can assume that  midpoint of $[PQ]_h$ to the center of absolute.
 Set $a=OP=OQ$ then 
 \begin{align*}
 \theta(P,Q)&=\frac{8}{(\tfrac1a-a)^2},
-\\
+&
 \delta(P,Q)&=\frac{(1+a)^2}{(1-a)^2}.
 \end{align*}
 Hence the identity follows.
@@ -1134,7 +1124,7 @@ Consider an isometry $(OP)\to\mathbb{R}$ so that $O$ corresponds to $O$,
 denote by $x$, $y$, $p$ and $\hat p$ the real numbers corresponding to $X$, $Y$, $P$ and $\hat P$.
 
 {
-\begin{wrapfigure}{o}{44mm}
+\begin{wrapfigure}{r}{44mm}
 \begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/absolute-triangle-4(1)}
 \end{lpic}
 \end{wrapfigure}
@@ -1161,16 +1151,10 @@ $$BC_h<\tfrac12\cdot\ln\frac{1+\frac1{\sqrt{2}}}{1-\frac1{\sqrt{2}}}=\ln\left(1+
 The right hand side is the limit of $BC_h$ if $CD_h\to\infty$.
 Therefore $\ln\left(1+\sqrt{2}\right)$ is the optimal upper bound.
 
-\parbf{Exercise~\ref{ex:right-trig-horocycle}.}
-Consider hyperbolic triangle $\triangle_hPQR$
-with right angle at $Q$, such that $PQ=QR$
-and the vertices $P$, $Q$ and $R$ 
-lie on a horocycle.
-
 {
 
-\begin{wrapfigure}{o}{44mm}
-\begin{lpic}[t(-4mm),b(-1mm),r(0mm),l(-0mm)]{pics/h-circle-5(1)}
+\begin{wrapfigure}[9]{r}{44mm}
+\begin{lpic}[t(-9mm),b(-1mm),r(0mm),l(-0mm)]{pics/h-circle-5(1)}
 \lbl[tr]{22,20;$Q$}
 \lbl[t]{37,20;$P$}
 \lbl[br]{21,37;$R$}
@@ -1179,40 +1163,36 @@ lie on a horocycle.
 \end{lpic}
 \end{wrapfigure}
 
+\parbf{Exercise~\ref{ex:right-trig-horocycle}.}
+Consider hyperbolic triangle $\triangle_hPQR$
+with right angle at $Q$, such that $PQ=QR$
+and the vertices $P$, $Q$ and $R$ 
+lie on a horocycle.
+
+
 Without loss of generality, we may assume that $Q$ is the center of absolute.
 In this case $\measuredangle_hPQR=\measuredangle PQR=\pm\tfrac\pi2$.
 
 
+
 The rest of proof should be easy to guess from the picture.
 The answer is 
-\begin{align*}
-QP_h &=\ln \frac{AP}{PQ}
-\\
-&=\ln \frac{1+\frac1{\sqrt{2}}}{1-\frac1{\sqrt{2}}}=
-\\
-&=2\cdot \ln(1+\sqrt{2}).
-\end{align*}
+$2\cdot \ln(1+\sqrt{2})$.
 
-}
+
 
 \parbf{Exercise~\ref{ex:angle-preserving-hyp}.}
 In hyperbolic plane, the AAA-congruence condition (\ref{thm:AAA}) implies that any nondegenerate triangle is mapped to a congruent triangle.
 Hence the statement follows.
 
-
+}
 
 \parbf{Exercise~\ref{ex:circum}.}
 Let us apply Proposition~\ref{prop:circum}.
 \begin{align*}
-\circum_h(r+1)&=\pi\cdot(e^{r+1}-e^{-r-1})=
+\circum_h(r+1)&=\pi\cdot(e^{r+1}-e^{-r-1})=\pi\cdot e\cdot(e^{r}-e^{-r-2})>
 \\
-&=\pi\cdot e\cdot(e^{r}-e^{-r-2})>
-\\
-&>\pi\cdot e\cdot(e^{r}-e^{-r})=
-\\
-&=e\cdot\circum_h(r)\ge
-\\
-&\ge 2\cdot\circum_h(r).
+&>\pi\cdot e\cdot(e^{r}-e^{-r})=e\cdot\circum_h(r)\ge 2\cdot\circum_h(r).
 \end{align*}
 
 
@@ -1242,7 +1222,7 @@ that is, $\ell$ and $m$ are intersecting.
 Hence the result follows.
 
 \begin{wrapfigure}{r}{20mm}
-\begin{lpic}[t(-0mm),b(-3mm),r(0mm),l(-0mm)]{pics/bisection-affine(1)}
+\begin{lpic}[t(-3mm),b(-3mm),r(0mm),l(-0mm)]{pics/bisection-affine(1)}
 \lbl[t]{2,6;$A$}
 \lbl[t]{17,9;$B$}
 \lbl[br]{8.5,10;$M$}
@@ -1305,7 +1285,7 @@ Since $O$, $P$ and $P'$ lie on one line we have
 that coordinates of $P'$ are proportional to the coordinates of $P$.
 The $y$ coordinate of $P'$ has to be equal to $1$.
 Therefore $P'$ has coordinates 
-\[(\tfrac1y,1,\tfrac zy).\]
+$(\tfrac1y,1,\tfrac zy)$.
 
 
 \parbf{Exercise~\ref{ex:pappus}.}
@@ -1346,8 +1326,8 @@ To extend this bijection two whole plane assume that ideal line  corresponds to 
 
 
 
-\begin{wrapfigure}{o}{24mm}
-\begin{lpic}[t(-4mm),b(-5mm),r(0mm),l(-0mm)]{pics/dual-desargues(1)}
+\begin{wrapfigure}{r}{24mm}
+\begin{lpic}[t(-8mm),b(-5mm),r(0mm),l(-0mm)]{pics/dual-desargues(1)}
 \lbl[l]{7.5,28;$P$}
 \lbl[r]{8.5,12.6;$P'$}
 \lbl[tw]{6,6;$Q$}
@@ -1435,8 +1415,8 @@ $$
 $$
 Therefore $AB_s=\tfrac\pi3$.
 
-\begin{wrapfigure}{i}{36mm}
-\begin{lpic}[t(-8mm),b(-3mm),r(-2mm),l(0mm)]{pics/tessellation(0.8)}
+\begin{wrapfigure}{r}{36mm}
+\begin{lpic}[t(-5mm),b(-3mm),r(-2mm),l(0mm)]{pics/tessellation(0.8)}
 \lbl[br]{10,38;$A$}
 \lbl[bl]{33,38;$B$}
 \lbl[t]{21,35;$C$}
@@ -1506,7 +1486,7 @@ The remaining part of exercise is algebraic manipulations similar to the one giv
 \parbf{Exercise~\ref{ex:s-medians}.}
 To prove (\ref{ex:s-medians:a}),
 observe and use that 
-\[OA'=OB'=OC'.\]
+$OA'=OB'=OC'$.
 
 To prove (\ref{ex:s-medians:b}), note that medians of spherical triangle $\triangle_s ABC$ 
 map to the medians of Euclidean triangle $\triangle A'B'C'$.
@@ -1535,7 +1515,7 @@ Note that $\hat P\in [A_iB_i]$ if and only if $P\in\Gamma_i$.
 {
 
 \begin{wrapfigure}{o}{42mm}
-\begin{lpic}[t(-5mm),b(-3mm),r(0mm),l(-0mm)]{pics/h-medians(1)}
+\begin{lpic}[t(-0mm),b(-3mm),r(0mm),l(-0mm)]{pics/h-medians(1)}
 \end{lpic}
 \end{wrapfigure}
 
@@ -1548,23 +1528,14 @@ the center of circumcircle coincides with the center of absolute.
 In this case the h-median of the triangle coincide with the Euclidean medians.
 It remains to apply Theorem~\ref{thm:centroid}
 
-}
-
 \parbf{Exercise~\ref{ex:klein-perp}.} 
 Let us denote by $\check\ell$ and $\check m$
 the h-lines corresponding to $\ell$ and $m$ in the conformal model.
 We need to show that $\check\ell\perp\check m$ as arcs in the Euclidean plane.
 
+}
+
 Note that the point $Z$ where $s$ and $t$ meet is the center of the circle $\Gamma$ containing $\check\ell$.
-
-If $\tilde m$ passing through $Z$ then the inversion in $\Gamma$ exchanges the ideal points of $\check \ell$.
-In particular $\check\ell$ maps to itself. 
-Hence the result follows.
-
-\parbf{Exercise~\ref{ex:klein-for-angle-parallelism}.}
-We can assume that $P$ is the center of absolute.
-Then 
-\[PQ=\cos\phi.\]
 
 {
 
@@ -1575,6 +1546,19 @@ Then
 \lbl[lb]{26,23;$\phi$}
 \end{lpic}
 \end{wrapfigure}
+
+If $\tilde m$ passing through $Z$ then the inversion in $\Gamma$ exchanges the ideal points of $\check \ell$.
+In particular $\check\ell$ maps to itself. 
+Hence the result follows.
+
+
+
+\parbf{Exercise~\ref{ex:klein-for-angle-parallelism}.}
+We can assume that $P$ is the center of absolute.
+Then 
+\[PQ=\cos\phi.\]
+
+
 
 Therefore
 \[PQ_h=\tfrac12\cdot\ln\frac{1+\cos\phi}{1-\cos\phi}.\]
@@ -1605,14 +1589,14 @@ Then
 \\
 &\equiv\arg (-1)\equiv
 \\
-&\equiv\pi
+&\equiv\pi.
 \end{align*}
 
 \parbf{Exercise~\ref{ex:C-sim}.}
 Note and use that 
 \begin{align*}
-\measuredangle EOV&=\measuredangle WOZ=\arg v
-\\
+\measuredangle EOV&=\measuredangle WOZ=\arg v,
+&
 \frac{OW}{OZ}&=\frac{OZ}{OW}=|v|.
 \end{align*}
 
@@ -1663,11 +1647,9 @@ in the circle with center at $W$ with coordinate $w$ and radius $r$.
 
 By definition of inversion  
 \begin{align*}
-\arg (z-w)=\arg (z'-w)
-\ \ 
-\text{and}
-\ \ 
-|z-w|\cdot|z'-w|=r^2
+\arg (z-w)&=\arg (z'-w),
+&
+|z-w|\cdot|z'-w|&=r^2
 \end{align*}
 It follows that
 \[(\bar z'-\bar w)\cdot ( z- w)= r^2.\]
@@ -1680,10 +1662,22 @@ Check the statement for each elementary transformation.
 Then apply Proposition~\ref{prop:mob-comp}.
 
 \parbf{Exercise~\ref{ex:schwarz}.}
-Apply Schwarz--Pick theorem for function such that $f(0)=0$ and then apply Lemma~\ref{lem:O-h-dist}.
+Apply Schwarz--Pick theorem for a function $f$ such that $f(0)\z=0$ and then apply Lemma~\ref{lem:O-h-dist}.
+
+{
+
+\begin{wrapfigure}{o}{30mm}
+\begin{lpic}[t(6mm),b(-2mm),r(0mm),l(0mm)]{pics/appol(1)}
+\lbl[br]{6,5;$O$}
+\lbl[tl]{25,21;$P$}
+\lbl[b]{21,15;$X$}
+\end{lpic}
+\end{wrapfigure}
+
 
 \section*{Chapter~\ref{chap:car}}
 \setcounter{eqtn}{0}
+
 
 
 \parbf{Exercise~\ref{ex:simple-apollonius}.}
@@ -1691,32 +1685,25 @@ Draw a line $\ell$ through the given point $P$ and the point of intersection, sa
 Construct a circle $\Gamma$ tangent to both lines which crosses $\ell$. 
 Denote by $X$ one of the points of intersections.
 
-\begin{wrapfigure}{o}{30mm}
-\begin{lpic}[t(-0mm),b(-2mm),r(0mm),l(0mm)]{pics/appol(1)}
-\lbl[br]{6,5;$O$}
-\lbl[tl]{25,21;$P$}
-\lbl[b]{21,15;$X$}
-\end{lpic}
-\end{wrapfigure}
-
 Consider the homothety with the center at $O$ 
 which sends $X$ to $P$.
 The image of $\Gamma$ is the needed circle.
 
+}
 
 \parbf{Exercise~\ref{ex:trisect-set-square}.} 
 Note that with set square we can construct a line parallel to given line through the given point.
 It remains to modify the construction in Exercise~\ref{ex:midpoint-affine}.
 
+\begin{wrapfigure}{o}{25mm}
+\begin{lpic}[t(-3mm),b(-6mm),r(0mm),l(0mm)]{pics/equleteral-verify(1)}
+\end{lpic}
+\end{wrapfigure}
+
 \parbf{Exercise~\ref{ex:equilateral triangle}.}
 Assume that two vertices have rational coordinates, say $(a_1,b_1)$ and $(a_2,b_2)$.
 Use that the number $\sqrt{3}$ is irrational
 to show that the third vertex is an irrational point.
-
-\begin{wrapfigure}{o}{25mm}
-\begin{lpic}[t(-0mm),b(-6mm),r(0mm),l(0mm)]{pics/equleteral-verify(1)}
-\end{lpic}
-\end{wrapfigure}
 
 \parbf{Exercise~\ref{ex:equilateral triangle-verify}.}
 Guess the construction from the diagram.
@@ -1736,7 +1723,7 @@ Since $V\in p$, by Claim~\ref{clm:polar}, we get $P\in v$;
 that is, $(PV)=v$.
 Hence the statement follows.
 
-\begin{wrapfigure}{o}{35mm}
+\begin{wrapfigure}{r}{35mm}
 \begin{lpic}[t(1mm),b(0mm),r(0mm),l(0mm)]{pics/polar-polar(1)}
 \lbl[b]{32,21;$P$}
 \lbl[l]{23,8;$X'$}
@@ -1784,23 +1771,12 @@ Note that solid square contains infinte number of mutually nonparallel segments.
 Therefore we can choose a segment $[PQ]$ in the solid square 
 which is not parallel to any segment $[A_1B_1],\dots,[A_nB_n]$.
 
-It follows that $[PQ]$ has at most one common point with each set  $[A_1B_1],\z\dots,[A_nB_n]$ and $\{C_1\},\dots,\{C_k\}$.
+It follows that $[PQ]$ has at most one common point with each the sets  $[A_iB_i]$ and $\{C_i\}$.
 We arrive to a contradiction since $[PQ]$ contains infinte number of points.
 
-\parbf{Exercise~\ref{ex:poly-circ}.} 
-Note first that among elementary sets
-only one-point set are subsets of the a circle.
 
-It remains to note that any circle contains infinite number of points.
-
-
-
-\parbf{Exercise~\ref{ex:two-parallelograms}.}
-Denote by $E$ the point of intersection 
-of the lines $(BC)$ and $(C'D')$.
-
-\begin{wrapfigure}[8]{o}{26mm}
-\begin{lpic}[t(-2mm),b(0mm),r(0mm),l(0mm)]{pics/two-parallelograms-sol(1)}
+\begin{wrapfigure}[9]{r}{26mm}
+\begin{lpic}[t(-7mm),b(0mm),r(0mm),l(0mm)]{pics/two-parallelograms-sol(1)}
 \lbl[tr]{1,7;$A$}
 \lbl[t]{12,0;$B$}
 \lbl[l]{21,20;$C$}
@@ -1812,11 +1788,21 @@ of the lines $(BC)$ and $(C'D')$.
 \end{lpic}
 \end{wrapfigure}
 
+\parbf{Exercise~\ref{ex:poly-circ}.} 
+Note first that among elementary sets
+only one-point set are subsets of the a circle.
+
+It remains to note that any circle contains infinite number of points.
+
+\parbf{Exercise~\ref{ex:two-parallelograms}.}
+Denote by $E$ the point of intersection 
+of the lines $(BC)$ and $(C'D')$.
+
 Use Proposition~\ref{prop:area-parallelogram} to prove two identities
 \begin{align*}
 \area(\solidsquare AB'ED)
 &=\area(\solidsquare ABCD),
-\\
+&
 \area(\solidsquare AB'ED)
 &=\area(\solidsquare AB'C'D').
 \end{align*}
@@ -1829,7 +1815,7 @@ Denote by $A'$ and $B'$ the foot points of $A$ and $B$ on $(BC)$ and $(AC)$ corr
 Note that $h_A=AA'$ and $h_B=BB'$.
 
 \begin{wrapfigure}{o}{20mm}
-\begin{lpic}[t(-2mm),b(0mm),r(0mm),l(0mm)]{pics/three-areas(1)}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/three-areas(1)}
 \lbl[tr]{0,0;$A$}
 \lbl[tl]{18,0;$B$}
 \lbl[b]{6,16;$C$}
@@ -1850,7 +1836,7 @@ The same argument, we get
 Hence the statement follows.
 
 \begin{wrapfigure}{r}{22mm}
-\begin{lpic}[t(-7mm),b(0mm),r(0mm),l(0mm)]{pics/trigs-in-parallelogram(1)}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/trigs-in-parallelogram(1)}
 \lbl[tr]{0,1;$A$}
 \lbl[tl]{15,1;$B$}
 \lbl[tl]{19,17;$C$}
@@ -1877,7 +1863,7 @@ In particular,
 By Proposition~\ref{prop:area-parallelogram} and Theorem~\ref{thm:area-of-triangle} we get 
 \begin{align*}
 \area(\solidsquare ABM)&=\tfrac12\cdot\area(\solidsquare ABEF),
-\\
+&
 \area(\solidsquare CDM)&=\tfrac12\cdot\area(\solidsquare CDFE)
 \end{align*}
 Hence the result follows.
@@ -1887,12 +1873,12 @@ Denote by $h_A$ and $h_C$ the distances from $A$ and $C$ to the line $(BD)$.
 According to Theorem~\ref{thm:area-of-triangle},
 \begin{align*}
 \area(\solidtriangle ABM)&=\tfrac12\cdot h_A\cdot BM;
-\\
+&
 \area(\solidtriangle BCM)&=\tfrac12\cdot h_C\cdot BM;
 \\
 \area(\solidtriangle CDM)&=\tfrac12\cdot h_C\cdot DM;
-\\
-\area(\solidtriangle ABM)&=\tfrac12\cdot h_A\cdot DM;
+&
+\area(\solidtriangle ABM)&=\tfrac12\cdot h_A\cdot DM.
 \end{align*}
 Therefore
 \begin{align*}
@@ -1918,7 +1904,7 @@ to each of these triangles and summing up the results.
 Assuming $a>b$,
 we subdivided $\solidsquare_c$ into $\solidsquare_{a-b}$ and for triangles congruent to $\solidtriangle$.
 Therefore
-\[\area\solidsquare_c=\area\solidsquare_{a-b}+4\area\solidtriangle.
+\[\area\solidsquare_c=\area\solidsquare_{a-b}+4\cdot\area\solidtriangle.
 \eqlbl{eq:pyth-2}\]
 
 According to Theorem~\ref{thm:area-of-triangle},
@@ -1987,8 +1973,9 @@ b&=c,
 \\
 &\Updownarrow
 \\
-BY&=CY
+BY&=CY.
 \end{align*}
+
 }
 
 
@@ -1997,9 +1984,20 @@ BY&=CY
 Denote by $M$ the intersection of 
 two medians $[AA']$ and $[BB']$.
 
+
+
+From Exercise~\ref{ex:area-medians} we have 
+\begin{align*}
+\area (\solidtriangle ABM)
+&=\area (\solidtriangle ACM),
+&
+\area (\solidtriangle ABM)
+&=\area (\solidtriangle CBM).
+\end{align*}
+
 {
-\begin{wrapfigure}[7]{o}{31mm}
-\begin{lpic}[t(-1mm),b(0mm),r(0mm),l(0mm)]{pics/area-median-sol2(1)}
+\begin{wrapfigure}[7]{r}{34mm}
+\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/area-median-sol2(1)}
 \lbl[trw]{13,10;$M$}
 \lbl[b]{13,25.5;$A$}
 \lbl[tl]{31,0;$B$}
@@ -2010,15 +2008,8 @@ two medians $[AA']$ and $[BB']$.
 \end{lpic}
 \end{wrapfigure}
 
-From Exercise~\ref{ex:area-medians} we have 
-\begin{align*}
-\area (\solidtriangle ABM)
-&=\area (\solidtriangle ACM),
-\\
-\area (\solidtriangle ABM)
-&=\area (\solidtriangle CBM).
-\end{align*}
-Therefore 
+
+\noindent Therefore 
 \[\area (\solidtriangle BCM)
 =\area (\solidtriangle ACM).\]
 According to Exercise~\ref{ex:area-medians},
