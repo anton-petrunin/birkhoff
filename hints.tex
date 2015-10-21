@@ -226,7 +226,7 @@ It remains to apply Exercise~\ref{ex:2.4} and Theorem~\ref{thm:straight-angle} c
 
 \parbf{Exercise~\ref{ex:O-mid-AB+CD}.} 
 Applying Proposition~\ref{prop:vert}, we get 
-\[\measuredangle AOC= \measuredangle BOD.\]
+$\measuredangle AOC= \measuredangle BOD$.
 It remains to apply Axiom~\ref{def:birkhoff-axioms:3}.
 
 \section*{Chapter~\ref{chap:half-planes}}
@@ -311,9 +311,8 @@ and
 $M'$ is the midpoint of $[A'D']$.
 Show first that $\triangle ABD\z\cong \triangle A'B'D'$.
 
-\parbf{Exercise~\ref{ex:isos-sides}.} \textit{(a)} Apply SAS.
-
-\parit{(b)} Use \textit{(a)} and apply SSS.
+\parbf{Exercise~\ref{ex:isos-sides}.} To prove \textit{(a)}, apply SAS.
+To prove \textit{(b)}, use \textit{(a)} and apply SSS.
 
 \parbf{Exercise~\ref{ex:degenerate-trig}.}
 Choose $B'\in [AC]$ such that $AB=AB'$.
@@ -323,7 +322,6 @@ By SSS,
 
 \parbf{Exercise~\ref{ex:ABC-motion}.}
 Without loss of generality, we may assume that $X$ is distinct from $A$, $B$ and $C$.
-
 Set $f(X)=X'$; assume $X'\ne X$.
 
 Note that $AX=AX'$, $BX=BX'$ and $CX=CX'$.
@@ -356,8 +354,8 @@ $[AX]$ does not intersect $\ell$
 and $[BX]$ intersects $\ell$,
 say at the point $Y$.
 
-\begin{wrapfigure}[6]{o}{25mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/pbisec-side(1)}
+\begin{wrapfigure}[7]{o}{25mm}
+\begin{lpic}[t(-3mm),b(0mm),r(0mm),l(0mm)]{pics/pbisec-side(1)}
 \lbl[tr]{1,1;$A$}
 \lbl[tl]{23,1;$B$}
 \lbl[br]{7,21;$X$}
@@ -1046,7 +1044,7 @@ Alternatively, use the same argument as in the solution of Exercise~\ref{ex:insi
 
 \parbf{Exercise~\ref{ex:defect}.}
 Note that 
-$$|\measuredangle ADC|+|\measuredangle CDB|=\pi.$$
+$|\measuredangle ADC|+|\measuredangle CDB|=\pi$.
 Then apply the definition of defect.
 
 \parbf{Exercise~\ref{ex:abs-inscibed}.}
@@ -1346,13 +1344,7 @@ $a\cdot x+b\cdot y=1$ and $S$ is the point with coordinates $(p,q)$.
 
 To extend this bijection two whole plane assume that ideal line  corresponds to the origin and the ideal point formed by pencil of lines $ax-by=c$ for different values of $c$ corresponds to the line described by equation $ax+by=0$.
 
-\parbf{Exercise~\ref{ex:dual-desargues-construction}.}
-Assume $(AA')$ and $(BB')$ are the given lines and $C$ is the given point.
-Apply Dual Desargues' theorem (\ref{thm:dual-desargues}) to construct $C'$ so that $(AA')$, $(BB')$ and $(CC')$ are concurrent. 
 
-Since $(AA')\parallel (BB')$ 
-we get 
-$(AA')\parallel (BB')\parallel (CC')$.
 
 \begin{wrapfigure}{o}{24mm}
 \begin{lpic}[t(-4mm),b(-5mm),r(0mm),l(-0mm)]{pics/dual-desargues(1)}
@@ -1383,6 +1375,16 @@ R'&=a'\cap b
 \end{align*}
 Then the lines $(PP')$, $(QQ')$ and $(RR')$ are concurrent.
 
+\parbf{Exercise~\ref{ex:dual-desargues-construction}.}
+Assume $(AA')$ and $(BB')$ are the given lines and $C$ is the given point.
+Apply Dual Desargues' theorem \ref{thm:dual-desargues} to construct $C'$ so that $(AA')$, $(BB')$ and $(CC')$ are concurrent. 
+Since $(AA')\parallel (BB')$ 
+we get 
+$(AA')\parallel (BB')\parallel (CC')$.
+
+A similar solution can be build on the Dual Pappus's theorem, 
+see the solution of Exercise~\ref{ex:dual-pappus}.
+
 \parbf{Exercise~\ref{ex:finite-pp}.}
 Let $A$, $B$, $C$ and $D$ 
 be the point provided by Axiom~\ref{def:proj-axioms:3}.
@@ -1397,8 +1399,7 @@ Let $A$, $B$, $C$ and $D$
 be the point provided by Axiom~\ref{def:proj-axioms:3}.
 Show that the lines $(AB)$, $(BC)$, $(CD)$ and $(DA)$
 satisfy Axiom~\ref{def:proj-axioms:3}$'$.
-
-The same can be done the other way.
+The proof of converse is similar.
 
 \parbf{Exercise~\ref{ex:oder}.} 
 Let $\ell$ be a line with $n+1$ points on it.
@@ -1417,7 +1418,7 @@ From part (\ref{ex:oder:a}), each such line contains $X$ and yet $n$ point.
 Hence the (\ref{ex:oder:b}) follows.
 
 To prove (\ref{ex:oder:c}), show that the equation
-\[n^2+n+1=10\]
+$n^2+n+1=10$ %???LINE
 does not admit an integer solution and then apply part (\ref{ex:oder:b}).
 
 
@@ -1529,7 +1530,6 @@ $2\cdot NO\z=NS$.
 It remains to do algebraic manipulations.
 
 \parbf{Exercise~\ref{ex:hex}.} Consider the bijection $P\mapsto \hat P$ of the h-plane with absolute $\Omega$.
-
 Note that $\hat P\in [A_iB_i]$ if and only if $P\in\Gamma_i$.
 
 {
@@ -1922,7 +1922,7 @@ Therefore
 \eqlbl{eq:pyth-2}\]
 
 According to Theorem~\ref{thm:area-of-triangle},
-\[\area\solidtriangle=\tfrac12\cdot a\cdot b.\]
+$\area\solidtriangle=\tfrac12\cdot a\cdot b$. %???LINE
 Therefore the identity \ref{eq:pyth-2} can be written as 
 \[c^2=(a-b)^2+2\cdot a\cdot b.\]
 Simplifying, we get Pythagorean theorem.
@@ -1930,8 +1930,9 @@ Simplifying, we get Pythagorean theorem.
 The cases $a=b$ is yet simpler.
 The case $b>a$ can be done the same way.
 
-\parbf{Exercise~\ref{ex:sum-3-dist}.} Let $X$ be a point inside of triangle $\triangle ABC$.
-Note that $\solidtriangle ABC$ is subdivided into $\solidtriangle ABX$, $\solidtriangle BCX$ and $\solidtriangle CAX$.
+\parbf{Exercise~\ref{ex:sum-3-dist}.} 
+If $X$ is a point inside of triangle $\triangle ABC$
+then $\solidtriangle ABC$ is subdivided into $\solidtriangle ABX$, $\solidtriangle BCX$ and $\solidtriangle CAX$.
 Therefore
 \[\area(\solidtriangle ABX)
 +\area(\solidtriangle BCX)
@@ -1942,11 +1943,11 @@ Set $a=AB=BC=CA$.
 Denote by $h_1$, $h_2$ and $h_3$ are the distances from $X$ to the sides $[AB]$, $[BC]$ and $[CA]$. 
 Then by Theorem~\ref{thm:area-of-triangle},
 \begin{align*}
-\area(\solidtriangle ABX)&=\tfrac12\cdot h_1\cdot a
+\area(\solidtriangle ABX)&=\tfrac12\cdot h_1\cdot a,
 \\
-\area(\solidtriangle BCX)&=\tfrac12\cdot h_2\cdot a
+\area(\solidtriangle BCX)&=\tfrac12\cdot h_2\cdot a,
 \\
-\area(\solidtriangle CAX)&=\tfrac12\cdot h_3\cdot a
+\area(\solidtriangle CAX)&=\tfrac12\cdot h_3\cdot a.
 \end{align*}
 Therefore 
 \[h_1+h_2+h_3=2\cdot\frac{\area(\solidtriangle ABC)}a.\]
