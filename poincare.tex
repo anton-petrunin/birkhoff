@@ -442,51 +442,57 @@ Moreover, the equality holds if and only if $P$, $Q$ and $R$ lie on one h-line i
 
 \parit{Proof.}
 Without loss of generality, 
-we may assume that $RP_h\z\ge PQ_h>0$
-and $R$ is the center of absolute.
+we may assume that $P$ is the center of absolute
+and 
+$PQ_h\z\ge QR_h\z>0$.
 
 Denote by $\Delta$ 
-the h-circle with center $P$ 
-and h-radius $PQ_h$.
-Let $S$ and $T$ be the points of intersection of $(RP)$ and $\Delta$.
+the h-circle with center $Q$ 
+and h-radius $\rho=QR_h$.
+Let $S$ and $T$ be the points of intersection of $(PQ)$ and $\Delta$.
 
-Since $PQ_h\le RP_h$,
+Since $PQ_h\z\ge QR_h$,
 by Lemma~\ref{lem:h-tiangle=}
-we can assume that the points $R$, $S$, $P$ and $T$ appear on the h-line in the same order.
+we can assume that the points $P$, $S$, $Q$ and $T$ appear on the h-line in the same order.
 
-Set $\rho=PQ_h$.
 According to Lemma~\ref{lem:h-circle=circle},
 $\Delta$ is a Euclidean circle;
-denote by $\hat P$ its Euclidean center.
-Note that $\hat P$ is the (Euclidean) midpoint of $[ST]$.
+denote by $\hat Q$ its Euclidean center.
+Note that $\hat Q$ is the (Euclidean) midpoint of $[ST]$.
 
 \begin{wrapfigure}[8]{o}{30mm}
 \begin{lpic}[t(-4mm),b(-3mm),r(0mm),l(0mm)]{pics/h-circle-4(1)}
-\lbl[tr]{6.5,19;$R$}
-\lbl[t]{21,19;$P$}
-\lbl[b]{18,22.5;$\hat P$}
+\lbl[tr]{6.5,19;$P$}
+\lbl[t]{21,19;$Q$}
+\lbl[b]{18,22.5;$\hat Q$}
 \lbl[b]{17,29;$\Delta$}
 \lbl[br]{10.5,22.5;$S$}
 \lbl[bl]{26,22.5;$T$}
-\lbl[tr]{12.5,14;$Q$}
+\lbl[tr]{12.5,14;$R$}
 \end{lpic}
 \end{wrapfigure}
 
 By the Euclidean triangle inequality 
-$$RT=R\hat P+\hat PQ\ge RQ\eqlbl{RT>RQ}$$
-and the equality holds if and only if $T=Q$. 
+$$PT
+=
+P\hat Q+\hat Q R
+\ge 
+PR\eqlbl{RT>RQ}$$
+and the equality holds if and only if $T=R$. 
 
 By Lemma~\ref{lem:O-h-dist},
 \begin{align*}
-RT_h&=\ln\frac{1+RT}{1-RT}\\
-RQ_h&=\ln\frac{1+RQ}{1-RQ}.
+PT_h&=\ln\frac{1+PT}{1-PT}\\
+PR_h&=\ln\frac{1+PR}{1-PR}.
 \end{align*}
 Since the function $f(x)=\ln\frac{1+x}{1-x}$ is increasing for $x\in[0,1)$, 
 inequality \ref{RT>RQ} implies
-$$RT_h\ge RQ_h$$
-and the equality holds if and only if only if $T=Q$.
+$$PT_h\ge PR_h$$
+and the equality holds if and only if only if $T=R$.
 
-Finally applying Lemma~\ref{lem:h-tiangle=} again, we get $$RT_h=RP_h+PQ_h.$$
+Finally applying Lemma~\ref{lem:h-tiangle=} again, 
+we get 
+$$PT_h=PQ_h+QR_h.$$
 Hence the claim follows.
 \qeds
 
