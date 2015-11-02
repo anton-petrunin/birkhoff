@@ -1,7 +1,7 @@
 # Euclidean Plane and its Relatives
 ## A minimalistic introduction
 
- * http://www.math.psu.edu/petrunin/papers/birkhoff/
+ * http://anton-petrunin.github.io/birkhoff/
 
 The book grew from my lecture notes which I have been polishing since 2001. 
 It is designed for a semester-long course in Foundations of Geometry 
