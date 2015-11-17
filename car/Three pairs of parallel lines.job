@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CaR version="20150810">
+<Construction job="true" last="P6" target1="pl3">
+<Window x="0.0" y="0.0" w="8.0"/>
+<Assignment>
+<P>Two pairs of parallel lines are given construct the
+parralel line to the remaining 5th line through the given
+point.</P>
+</Assignment>
+<Objects>
+<Point name="P1" n="0" hidden="true" x="-4.8" y="-1.7333333333333334" shape="circle">Point at -4.8, -1.73333</Point>
+<Point name="P2" n="1" hidden="true" x="-4.866666666666667" y="1.0000000000000009" shape="circle">Point at -4.86667, 1.0</Point>
+<Line name="l1" n="2" from="P1" to="P2">Line through P1 and P2</Line>
+<Point name="P3" n="3" hidden="true" x="-1.0333333333333332" y="-1.8666666666666671" shape="circle">Point at -1.03333, -1.86667</Point>
+<Line name="l2" n="4" from="P1" to="P3">Line through P1 and P3</Line>
+<Parallel name="pl1" n="5" point="P3" line="l1">Parallel line through P3 to l1</Parallel>
+<Parallel name="pl2" n="6" point="P2" line="l2">Parallel line through P2 to l2</Parallel>
+<PointOn name="P4" n="7" hidden="true" on="l2" alpha="1.9333024060387325" x="-2.867907704341024" y="-1.8017259809672797" shape="circle">Point on l2</PointOn>
+<PointOn name="P5" n="8" hidden="true" on="pl1" alpha="1.438596554827804" x="-1.0684106222750696" y="-0.42849782005548964" shape="circle">Point on pl1</PointOn>
+<Line name="l3" n="9" from="P4" to="P5">Line through P4 and P5</Line>
+<PointOn name="P6" n="10" on="pl2" alpha="1.5394487899259324" x="-3.3281814626515445" y="0.9455403467605273" shape="circle">Point on pl2</PointOn>
+<Parallel name="pl3" n="11" point="P6" line="l3">Parallel line through P6 to l3</Parallel>
+</Objects>
+</Construction>
+</CaR>
