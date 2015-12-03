@@ -627,14 +627,15 @@ a&b\\ c&d
 \section*{Area method}
 \addtocontents{toc}{Area method.}
 
-Slim proofs using area 
-are often used to impress students.
-We will show couple of such examples in this section,
-but one should be aware 
-that these proofs are not truly elementary ---
-the price one pays to introduce the area function is quite high.
+In this section we will give examples of
+slim proofs using area.
+Note that these proofs are not truly elementary --- the price one pays to introduce the area function is high.
 
-\parit{Proof of the Pythagorean theorem via the area method.}
+We start with the proof of the Pythagorean theorem.
+In the Elements of Euclid, Pythagorean theorem was formulated as equality  \ref{eq:pyth+area} below
+and the proof used a similar technique.
+
+\parit{Proof.}
 We need to show that if $a$ and $b$ are legs and $c$ is the hypotenuse 
 of a right triangle  then
 \[a^2+b^2=c^2.\]
@@ -646,7 +647,7 @@ with side $x$.
 Let us construct two subdivisions of $\solidsquare_{a+b}$.
 
 \begin{wrapfigure}{o}{45 mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/pyth-area(1)}
+\begin{lpic}[t(-3mm),b(-3mm),r(0mm),l(0mm)]{pics/pyth-area(1)}
 \end{lpic}
 \end{wrapfigure}
 
@@ -668,7 +669,7 @@ we get.
 &=\area\solidsquare_{c}+4\cdot\area\solidtriangle.
 \end{align*}
 Therefore 
-\[\area\solidsquare_{a}+\area\solidsquare_{b}=\area\solidsquare_{c}.\]
+\[\area\solidsquare_{a}+\area\solidsquare_{b}=\area\solidsquare_{c}.\eqlbl{eq:pyth+area}\]
 
 Since 
 \[\area\solidsquare_x=x^2,\] 
@@ -687,7 +688,7 @@ based on the diagram.
 (In the notations above it shows a subdivision of $\solidsquare_c$ into $\solidsquare_{a-b}$ and 4 solid triangles congruent to $\solidtriangle$.)
 \end{thm}
 
-}
+} 
 
 \begin{thm}{Exercise}\label{ex:sum-3-dist}
 Show that the sum of distances from a point to the sides of an equilateral triangle is the same for all points inside the triangle.
@@ -719,7 +720,7 @@ By Theorem~\ref{thm:area-of-triangle},
 \qedsf
 
 \begin{wrapfigure}{r}{30 mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/area-bisector(1)}
+\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/area-bisector(1)}
 \lbl[b]{6.5,20.5;$A$}
 \lbl[lt]{27,0;$B$}
 \lbl[rt]{1,0;$C$}
@@ -809,6 +810,8 @@ and $k=\tfrac1{r^2}$ for the sphere of radius $r$.
 In particular it follows that any ideal triangle in h-plane has area $\pi$.
 
 The identity \ref{eq:curv-defect} suggest an alternative way to introuduce area function which works on spheres and all absolute planes except the Euclidean plane.
+
+
 
 \section*{Quadrable sets}
 \addtocontents{toc}{Quadrable  sets.}
