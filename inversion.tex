@@ -159,15 +159,26 @@ Hence (\ref{lem:inverse-4-angle:cross-ratio}) follows.
 
 \parit{(\ref{lem:inverse-4-angle:angle}).}
 According to Lemma~\ref{lem:inversion-sim},
-\begin{align*}
+\[\begin{aligned}
 \measuredangle ABO&\equiv -\measuredangle B'A'O,
 &
-\measuredangle OBC&\equiv -\measuredangle OA'B',\\
+\measuredangle OBC&\equiv -\measuredangle OC'B',\\
 \measuredangle CDO&\equiv -\measuredangle D'C'O,
 &
 \measuredangle ODA&\equiv -\measuredangle OA'D'.
+\end{aligned}\eqlbl{eq:angle=-angle}\]
+By Axiom~\ref{def:birkhoff-axioms:2b},
+\begin{align*}
+\measuredangle ABC&\equiv\measuredangle ABO+\measuredangle OBC,
+&
+\measuredangle D'C'B'&\equiv\measuredangle D'C'O+\measuredangle OC'B',
+\\
+\measuredangle CDA&\equiv\measuredangle CDO+\measuredangle ODA,
+&
+\measuredangle B'A'D'&\equiv\measuredangle B'A'O+\measuredangle OA'D'.
 \end{align*}
-Summing these four identities we get
+Therefore 
+summing the four identities in \ref{eq:angle=-angle}, we get
 \begin{align*}
 \measuredangle ABC+\measuredangle CDA
 &\equiv -(\measuredangle D'C'B'+\measuredangle B'A'D').
@@ -260,14 +271,15 @@ It follows that $O\in \Gamma'$.
 Assume that if circle $\Gamma'$ 
 is the inversion of circle $\Gamma$ in the Euclidean plane.
 Denote by $Q$ the center of $\Gamma$ and by $Q'$ the inversion of $Q$.
-
 Show that $Q'$ is not the center of $\Gamma'$.
 \end{thm}
+
+}
 
 Assume {}\emph{circumtool} is a geometric construction tool 
 which produce a circline passing thru the given three points.
 
-}
+
 
 \begin{thm}{Exercise}\label{ex:circumtool}
 Show that with circumtool only,
