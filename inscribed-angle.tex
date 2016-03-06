@@ -218,26 +218,6 @@ Given four points $A$, $B$, $A'$ and $B'$
 construct a point $Z$ such that both angles $\angle AZB$ and $\angle A'ZB'$ are right.
 \end{thm}
 
-{
-\begin{wrapfigure}{o}{26mm}
-\begin{lpic}[t(-7mm),b(0mm),r(0mm),l(0mm)]{pics/equileteral(1)}
-\lbl[tr]{19,0;$L$}
-\lbl[rb]{16,18;$M$}
-\lbl[r]{3,7.5;$N$}
-\lbl[t]{4,1.5;$O$}
-\lbl[l]{23.5,13.5;$X$}
-\end{lpic}
-\end{wrapfigure}
-
-\begin{thm}{Exercise}\label{ex:equilateral-2}
-Assume three lines $\ell, m$ and $n$ intersect at point $O$ and form six equal angles at $O$. 
-Let $X$ be a point distinct from $O$,
-denote by $L$, $M$ and $N$ be the footpoints of $X$ on $\ell, m$ and $n$ correspondingly.
-Show that $\triangle LMN$ is equilateral.
-\end{thm}
-}
-
-
 \begin{thm}{Exercise}\label{ex:VVAA}
 Let $\triangle A B C$ be a nondegenerate triangle in the Euclidean plane,
 $A'$ and $B'$ be foot points of altitudes from $A$ and $B$.
@@ -339,6 +319,85 @@ Show that $XX'=YY'$.
 \end{thm}
 
 }
+
+\section*{Method of additional circle}
+\addtocontents{toc}{Method of additional circle.}
+
+The theorems in this chapter provide a method to solve problems in Euclidean geometry which is called the \emph{method of additional circle}.
+
+Consider the following example.
+
+\begin{thm}{Problem}
+Assume that chords $[AA']$ and $[BB']$ intersect at the point $P$ inside their circle.
+Let $X$ be a point such that both angles $\angle XAA'$ and $XBB'$ are right.
+Show that $(XP)\perp(A'B')$.
+\end{thm}
+
+\begin{wrapfigure}{o}{39mm}
+\begin{lpic}[t(-0mm),b(-0mm),r(0mm),l(-1mm)]{pics/add-a-circle(1)}
+\lbl[t]{30,9;$A$}
+\lbl[r]{4,23;$B$}
+\lbl[l]{25,43;$A'$}
+\lbl[bl]{38,22;$B'$}
+\lbl[rbw]{25,24;$P$}
+\lbl[ltw]{6,6;$X$}
+\lbl[bw]{33.5,29;$Y$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Solution.}
+Denote by $Y$ the point of intersection of $(A'B')$ and $(XP)$.
+
+Both angles $\angle XAA'$ and $XBB'$ are right;
+therefore
+\[2\cdot\measuredangle XAA'
+\equiv
+2\cdot\measuredangle XBB'.\]
+By Theorem \ref{thm:inscribed-quadrilateral},  $\square XAPB$ is incribed.
+Applying this theorem again we get 
+\[2\cdot\measuredangle AXP
+\equiv
+2\cdot\measuredangle ABP.\]
+
+Since $\square ABA'B'$ is inscribed, 
+\[2\cdot\measuredangle ABB'
+\equiv
+2\cdot\measuredangle AAB'.\]
+
+It follows that 
+\[2\cdot\measuredangle AXY
+\equiv
+2\cdot\measuredangle AA'Y.\]
+By the same theorem $\square XAYA'$ is incribed
+and
+therefore 
+\[2\cdot\measuredangle XAA'
+\equiv
+2\cdot\measuredangle XYA'.\]
+Since $\angle XAA$ is right, 
+so is $\angle XYA'$. 
+That is $(XP)\perp(A'B')$.
+\qeds
+
+{
+\begin{wrapfigure}{o}{26mm}
+\begin{lpic}[t(-7mm),b(0mm),r(0mm),l(0mm)]{pics/equileteral(1)}
+\lbl[tr]{19,0;$L$}
+\lbl[rb]{16,18;$M$}
+\lbl[r]{3,7.5;$N$}
+\lbl[t]{4,1.5;$O$}
+\lbl[l]{23.5,13.5;$X$}
+\end{lpic}
+\end{wrapfigure}
+
+\begin{thm}{Exercise}\label{ex:equilateral-2}
+Assume three lines $\ell, m$ and $n$ intersect at point $O$ and form six equal angles at $O$. 
+Let $X$ be a point distinct from $O$,
+denote by $L$, $M$ and $N$ be the footpoints of $X$ on $\ell, m$ and $n$ correspondingly.
+Show that $\triangle LMN$ is equilateral.
+\end{thm}
+}
+
 
 \section*{Arcs}
 \addtocontents{toc}{Arcs.}
