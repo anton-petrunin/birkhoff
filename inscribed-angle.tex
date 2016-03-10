@@ -323,16 +323,14 @@ Show that $XX'=YY'$.
 \section*{Method of additional circle}
 \addtocontents{toc}{Method of additional circle.}
 
-Consider the following example.
-
 \begin{thm}{Problem}
-Assume that chords $[AA']$ and $[BB']$ intersect at the point $P$ inside their circle.
-Let $X$ be a point such that both angles $\angle XAA'$ and $XBB'$ are right.
+Assume that two chords $[AA']$ and $[BB']$ intersect at the point $P$ inside their circle.
+Let $X$ be a point such that both angles $\angle XAA'$ and $\angle XBB'$ are right.
 Show that $(XP)\perp(A'B')$.
 \end{thm}
 
 \begin{wrapfigure}{o}{39mm}
-\begin{lpic}[t(-0mm),b(-0mm),r(0mm),l(-1mm)]{pics/add-a-circle(1)}
+\begin{lpic}[t(-2mm),b(4mm),r(0mm),l(0mm)]{pics/add-a-circle(1)}
 \lbl[t]{30,9;$A$}
 \lbl[r]{4,23;$B$}
 \lbl[l]{25,43;$A'$}
@@ -344,7 +342,7 @@ Show that $(XP)\perp(A'B')$.
 \end{wrapfigure}
 
 \parit{Solution.}
-Denote by $Y$ the point of intersection of $(A'B')$ and $(XP)$.
+Set $Y=(A'B')\cap (XP)$.
 
 Both angles $\angle XAA'$ and $XBB'$ are right;
 therefore
@@ -372,21 +370,25 @@ therefore
 \[2\cdot\measuredangle XAA'
 \equiv
 2\cdot\measuredangle XYA'.\]
-Since $\angle XAA$ is right, 
+Since $\angle XAA'$ is right, 
 so is $\angle XYA'$. 
 That is $(XP)\perp(A'B')$.
 \qeds
 
+The method used in the solution 
+is called \emph{method of additional circle},
+since the circumcircles of the $\square XAPB$ and $\square XAPB$ 
+ above can be considered as \emph{additional constructions}.
  
-One could think of 
-the circumcircles of the $\square XAPB$ and $\square XAPB$ 
-in the solution above as about \emph{additional constructions}.
-The method is called \emph{method of additional circle}.
+\begin{thm}{Exercise}\label{ex:inaccuracy}
+Find an inaccuracy in the solution and try to fix it.
+\end{thm} 
+ 
 Here is an other problem of that type.
 
 {
-\begin{wrapfigure}{o}{26mm}
-\begin{lpic}[t(-7mm),b(0mm),r(0mm),l(0mm)]{pics/equileteral(1)}
+\begin{wrapfigure}{r}{26mm}
+\begin{lpic}[t(-5mm),b(0mm),r(0mm),l(0mm)]{pics/equileteral(1)}
 \lbl[tr]{19,0;$L$}
 \lbl[rb]{16,18;$M$}
 \lbl[r]{3,7.5;$N$}
@@ -539,6 +541,19 @@ with endpoints at the given points $A$ and $C$
 which is tangent at $A$ to the given half line $[AX)$.
 \end{thm}
 
+\begin{wrapfigure}{r}{28mm}
+\begin{lpic}[t(-4mm),b(-0mm),r(0mm),l(0mm)]{pics/two-arcs(1)}
+\lbl[l]{11,16;$A$}
+\lbl[bl]{22,24;$B_1$}
+\lbl[tr]{5,5;$B_2$}
+\lbl[bl]{16,11;$C$}
+\lbl[t]{26,7;$Y_1$}
+\lbl[l]{18,1;$Y_2$}
+\lbl[lb]{8,25;$X_1$}
+\lbl[t]{1,12;$X_2$}
+\end{lpic}
+\end{wrapfigure}
+
 
 \begin{thm}{Exercise}\label{ex:two-arcs}
 Given two arcs $AB_1C$ and $AB_2C$ in the Euclidean plane,
@@ -550,20 +565,8 @@ $$\measuredangle X_1AX_2\equiv -\measuredangle Y_1CY_2 .$$
 
 \end{thm}
 
-\begin{center}
-%\begin{wrapfigure}{r}{50mm}
-\begin{lpic}[t(0mm),b(-3mm),r(0mm),l(0mm)]{pics/two-arcs(1)}
-\lbl[l]{21,35;$A$}
-\lbl[bl]{42,42;$B_1$}
-\lbl[tr]{13,17;$B_2$}
-\lbl[bl]{32,20;$C$}
-\lbl[t]{50,16;$Y_1$}
-\lbl[l]{26,2;$Y_2$}
-\lbl[tl]{25,51;$X_1$}
-\lbl[b]{3,32;$X_2$}
-\end{lpic}
-%\end{wrapfigure}
-\end{center}
+
+
 
 
 \begin{thm}{Exercise}\label{ex:3x120}

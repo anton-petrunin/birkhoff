@@ -800,13 +800,27 @@ apply Theorem~\ref{thm:orthocenter} and Corollary~\ref{cor:right-angle-diameter}
 \parbf{Exercise~\ref{ex:secant-circles}.}
 Apply Theorem~\ref{thm:inscribed-quadrilateral} twice for $\square ABYX$ and $\square ABY'X'$ and use Transversal property (\ref{thm:parallel-2}).
 
+\parbf{Exercise~\ref{ex:two-chords}.} Apply Transversal property (\ref{thm:parallel-2}) and the theorem on inscribed angle (\ref{thm:inscribed-angle}).
+
+\parbf{Exercise~\ref{ex:inaccuracy}.}
+In the proof we assume that the lines $(A'B')$ and $(XP)$ are not parallel, otherwise the first line in the proof does not make sense.
+
+In addition we use without mentioning the following three identities:
+\begin{align*}
+2\cdot \measuredangle AXP&\equiv2\cdot \measuredangle AXY,
+\\
+2\cdot \measuredangle ABP&\equiv2\cdot \measuredangle ABB',
+\\
+2\cdot \measuredangle AA'B'&\equiv2\cdot \measuredangle AA'Y.
+\end{align*}
+
+
+
 \parbf{Exercise~\ref{ex:equilateral-2}.}
 By Corollary~\ref{cor:right-angle-diameter},
 the points $L$, $M$ and $N$ lie on the circle $\Gamma$ with diameter $[OX]$.
 It remains to apply Theorem \ref{thm:inscribed-angle} for the circle $\Gamma$ 
 and two inscribed angles with vertex at $O$.
-
-\parbf{Exercise~\ref{ex:two-chords}.} Apply Transversal property (\ref{thm:parallel-2}) and the theorem on inscribed angle (\ref{thm:inscribed-angle}).
 
 \parbf{Exercise~\ref{ex:arc-tan-straight}.}
 By Theorem~\ref{thm:3sum},
@@ -1129,7 +1143,7 @@ denote by $x$, $y$, $p$ and $\hat p$ the real numbers corresponding to $X$, $Y$,
 
 {
 \begin{wrapfigure}{r}{44mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/absolute-triangle-4(1)}
+\begin{lpic}[t(-3mm),b(0mm),r(0mm),l(0mm)]{pics/absolute-triangle-4(1)}
 \end{lpic}
 \end{wrapfigure}
 
@@ -1158,7 +1172,7 @@ Therefore $\ln\left(1+\sqrt{2}\right)$ is the optimal upper bound.
 {
 
 \begin{wrapfigure}[11]{r}{44mm}
-\begin{lpic}[t(-0mm),b(-1mm),r(0mm),l(-0mm)]{pics/h-circle-5(1)}
+\begin{lpic}[t(-5mm),b(-1mm),r(0mm),l(-0mm)]{pics/h-circle-5(1)}
 \lbl[tr]{22,20;$Q$}
 \lbl[t]{37,20;$P$}
 \lbl[br]{21,37;$R$}
@@ -1226,7 +1240,7 @@ that is, $\ell$ and $m$ are intersecting.
 Hence the result follows.
 
 \begin{wrapfigure}{r}{20mm}
-\begin{lpic}[t(-3mm),b(-3mm),r(0mm),l(-0mm)]{pics/bisection-affine(1)}
+\begin{lpic}[t(-0mm),b(-3mm),r(0mm),l(-0mm)]{pics/bisection-affine(1)}
 \lbl[t]{2,6;$A$}
 \lbl[t]{17,9;$B$}
 \lbl[br]{8.5,10;$M$}
@@ -1519,7 +1533,7 @@ Note that $\hat P\in [A_iB_i]$ if and only if $P\in\Gamma_i$.
 {
 
 \begin{wrapfigure}{o}{42mm}
-\begin{lpic}[t(-0mm),b(-3mm),r(0mm),l(-0mm)]{pics/h-medians(1)}
+\begin{lpic}[t(-5mm),b(-3mm),r(0mm),l(-0mm)]{pics/h-medians(1)}
 \end{lpic}
 \end{wrapfigure}
 
@@ -1541,6 +1555,10 @@ We need to show that $\check\ell\perp\check m$ as arcs in the Euclidean plane.
 
 Note that the point $Z$ where $s$ and $t$ meet is the center of the circle $\Gamma$ containing $\check\ell$.
 
+If $\tilde m$ passing thru $Z$ then the inversion in $\Gamma$ exchanges the ideal points of $\check \ell$.
+In particular $\check\ell$ maps to itself. 
+Hence the result follows.
+
 {
 
 \begin{wrapfigure}{o}{44mm}
@@ -1550,12 +1568,6 @@ Note that the point $Z$ where $s$ and $t$ meet is the center of the circle $\Gam
 \lbl[lb]{26,23;$\phi$}
 \end{lpic}
 \end{wrapfigure}
-
-If $\tilde m$ passing thru $Z$ then the inversion in $\Gamma$ exchanges the ideal points of $\check \ell$.
-In particular $\check\ell$ maps to itself. 
-Hence the result follows.
-
-
 
 \parbf{Exercise~\ref{ex:klein-for-angle-parallelism}.}
 We can assume that $P$ is the center of absolute.
@@ -1700,7 +1712,7 @@ Note that with set square we can construct a line parallel to given line thru th
 It remains to modify the construction in Exercise~\ref{ex:midpoint-affine}.
 
 \begin{wrapfigure}{o}{25mm}
-\begin{lpic}[t(-3mm),b(-6mm),r(0mm),l(0mm)]{pics/equleteral-verify(1)}
+\begin{lpic}[t(-0mm),b(-6mm),r(0mm),l(0mm)]{pics/equleteral-verify(1)}
 \end{lpic}
 \end{wrapfigure}
 
@@ -1943,15 +1955,15 @@ Therefore
 \[h_1+h_2+h_3=2\cdot\frac{\area(\solidtriangle ABC)}a.\]
 
 {
-
 \parbf{Exercise~\ref{ex:area-medians}.}
 Let $X$ be a point inside $\triangle ABC$.
 Denote by $Y$ the point of intersection of $(AX)$ and $[BC]$.
 
-Denote by $b$ and $c$ the distances from $B$ and $C$ to the line $(AX)$. 
 
-\begin{wrapfigure}{o}{37mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/area-median-sol(1)}
+Denote by $b$ and $c$ the distances from $B$ and $C$ to the line $(AX)$.
+
+\begin{wrapfigure}{r}{37mm}
+\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/area-median-sol(1)}
 \lbl[r]{8.5,23.5;$X$}
 \lbl[tr]{2,36;$A$}
 \lbl[tl]{36,6.5;$B$}
@@ -2001,7 +2013,7 @@ From Exercise~\ref{ex:area-medians} we have
 
 {
 \begin{wrapfigure}[8]{r}{34mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/area-median-sol2(1)}
+\begin{lpic}[t(-2mm),b(0mm),r(0mm),l(0mm)]{pics/area-median-sol2(1)}
 \lbl[trw]{13,10;$M$}
 \lbl[b]{13,25.5;$A$}
 \lbl[tl]{31,0;$B$}
