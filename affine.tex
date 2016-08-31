@@ -70,7 +70,7 @@ any motion of Euclidean plane is also an affine transformation.
 On the other hand, 
 there are affine transformations of Euclidean plane which are not motions.
 
-Consider Euclidean plane with coordinate system;
+Consider the Euclidean plane with coordinate system;
 let us use the column notation for the coordinates;
 that is, we will write $\left(\begin{smallmatrix}
 x\\y
@@ -109,6 +109,10 @@ x\\ y
 \left(\begin{smallmatrix}
 v\\ w
 \end{smallmatrix} \right)
+=\left(\begin{smallmatrix}
+a\cdot x+b\cdot y+v\\ 
+c\cdot x+d\cdot y+w 
+\end{smallmatrix} \right)
 \eqlbl{eq:affine=linear}
 \]
 for some fixed invertible matrix $\bigl(\begin{smallmatrix}
@@ -139,10 +143,10 @@ Note that we do not assume that $f$ is continuous.
 The function $f$ satisfying three conditions in the lemma
 is called \index{field automorphism}\emph{field automorphism}.
 Therefore the lemma states that the identity function is the only automorphism of the field of real numbers.
-
-On the other hand, the conjugation $z\mapsto\bar z$
+The latter does not hold for the field of complex numbers ---
+the conjugation $z\mapsto\bar z$
 (see page \pageref{page:cojugation=authomorphism})
-gives an example of nontrivial automorphism of complex numbers.
+gives an example of nontrivial automorphism.
 
 \parit{Proof.}
 Since 
@@ -421,7 +425,7 @@ it is an affine transformation.
 Further, $\alpha$ is not an arbitrary affine transformation,
 it maps circles to circles.
 
-Composing $\alpha$ with a reflection, say $\rho_1$, we can assume that $\alpha'=\rho_1\circ\alpha$ maps the unit circle with center at the origin to a concentric circle. 
+Composing $\alpha$ with a reflection, say $\rho_1$, we can assume that $\alpha'\z=\rho_1\circ\alpha$ maps the unit circle with center at the origin to a concentric circle. 
 
 Composing the obtained map $\alpha'$ with a {}\emph{homothety} 
 \[\chi\:\left(\begin{smallmatrix}
