@@ -5,12 +5,12 @@
 \addtocontents{toc}{What is the axiomatic approach?}
 
 In the axiomatic approach,
-one defines the plane as anything which satisfy 
+one defines the plane as anything which satisfies 
 a given list of properties.
 These properties are called {}\emph{axioms}.
 Axiomatic system for the theory 
-is like rules for the game.
-Once the axiom system is fixed, a statement considered to be true if it follows from the axioms and nothing else is considered to be true.
+is like the rules for a game.
+Once the axiom system is fixed, a statement is considered to be true if it follows from the axioms and nothing else is considered to be true.
 
 The formulations of the first axioms were not rigorous at all.
 For example, Euclid described a {}\emph{line} as {}\emph{breadthless length}
@@ -22,15 +22,15 @@ so that one mathematician could understand the other.
 The best way to understand an axiomatic system
 is to make one by yourself.
 Look around and choose a physical model 
-of the Euclidean plane, 
-say imagine an infinite and perfect surface of chalk board. 
+of the Euclidean plane;
+imagine an infinite and perfect surface of a chalk board. 
 Now try to collect the key observations
 about this model.
 Assume for now that we have intuitive understanding of such notions as {}\emph{line} and {}\emph{point}.
 \begin{enumerate}[(i)]
  \item\label{preaxiomI} We can measure distances between points.
  \item\label{preaxiomII} We can draw unique line 
- which pass thru two given points.
+ which passes thru two given points.
  \item\label{preaxiomIII} We can measure angles.
  \item\label{preaxiomIV} If we rotate or shift we will not see the difference.
  \item\label{preaxiomV} If we change scale we will not see the difference.
@@ -42,9 +42,9 @@ to reformulate them rigorously.
 \section*{What is a model?}
 \addtocontents{toc}{What is a model?}
 
-Euclidean plane can be defined rigorously the following way.
+The Euclidean plane can be defined rigorously the following way:
 
-{}\emph{Define a {}\emph{point} in the Euclidean plane is a pair of real numbers $(x,y)$ and define the {}\emph{distance} between two points $(x_1,y_1)$ and $(x_2,y_2)$ by the following formula.}
+{}\emph{Define a {}\emph{point} in the Euclidean plane as a pair of real numbers $(x,y)$ and define the {}\emph{distance} between the two points $(x_1,y_1)$ and $(x_2,y_2)$ by the following formula:}
 \[\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}.\]
 
 That is it!
@@ -59,7 +59,7 @@ On the other hand, the observations made in the previous section are  intuitivel
 this is the main advantage of the axiomatic approach.
 
 An other advantage lies in the fact that the axiomatic approach is easily adjustable. 
-For example we may remove one axiom from the list,
+For example, we may remove one axiom from the list,
 or exchange it to an other axiom. 
 We will do such modifications in Chapter \ref{chap:non-euclid} and further.
 
@@ -67,7 +67,7 @@ We will do such modifications in Chapter \ref{chap:non-euclid} and further.
 \addtocontents{toc}{Metric spaces.}
 
 The notion of metric space provides 
-a rigorous way to say {}\emph{``we can measure distances between points''}.
+a rigorous way to say: {}\emph{``we can measure distances between points''}.
 That is, instead of (\ref{preaxiomI}) on page \pageref{preaxiomI},
 we can say {}\emph{``Euclidean plane is a metric space''}.
 
@@ -92,9 +92,9 @@ $$d(A, C) \le d(A, B) + d(B, C).$$
 A \index{metric space}\emph{metric space} is a set with a metric on it. 
 More formally, a metric space is a pair $(\mathcal X, d)$ where $\mathcal X$ is a set and $d$ is a metric on $\mathcal X$.
 
-Elements of $\mathcal X$ are called \index{point}\emph{points} of the metric space.
-Given two points $A,B\z\in \mathcal X$ the value
-$d(A, B)$ is called \index{distance}\emph{distance} from $A$ to $B$.
+The elements of $\mathcal X$ are called \index{point}\emph{points} of the metric space.
+Given two points $A,B\z\in \mathcal X$, 
+the value $d(A, B)$ is called \index{distance}\emph{distance} from $A$ to $B$.
 \end{thm}
 
 \section*{Examples}
@@ -110,13 +110,13 @@ $$d(A,B)\df|A-B|.$$
 \item {}\emph{Metrics on the plane.}
 Let us denote by $\mathbb{R}^2$ the set of all pairs $(x,y)$ of real numbers.
 Assume $A=(x_A,y_A)$ and $B=(x_B,y_B)$ are arbitrary points in $\mathbb{R}^2$.
-One can equip $\mathbb{R}^2$ with the following metrics.
+One can equip $\mathbb{R}^2$ with the following metrics:
 \begin{itemize}
-\item\index{Euclidean metric}\emph{Euclidean metric,} denoted as \index{d@$d_1$, $d_2$, $d_\infty$}$d_2$ and defined as \label{def:d_2}
+\item\index{Euclidean metric}\emph{Euclidean metric,} denoted by \index{d@$d_1$, $d_2$, $d_\infty$}$d_2$ and defined as \label{def:d_2}
 $$d_2(A,B)=\sqrt{(x_A-x_B)^2+(y_A-y_B)^2}.$$
-\item\index{Manhattan plane}\emph{Manhattan metric,} denoted as $d_1$ and defined as 
+\item\label{Manhattan plane}\index{Manhattan plane}\emph{Manhattan metric,} denoted by $d_1$ and defined as 
 $$d_1(A,B)=|x_A-x_B|+|y_A-y_B|.$$
-\item{}\emph{Maximum metric,} denoted as $d_\infty$ and defined as 
+\item{}\emph{Maximum metric,} denoted by $d_\infty$ and defined as 
 $$d_\infty(A,B)=\max\{|x_A-x_B|,|y_A-y_B|\}.$$
 \end{itemize}
 \end{itemize}
@@ -130,35 +130,35 @@ Prove that the following functions are metrics on $\mathbb{R}^2$:
 \section*{Shortcut for distance}
 \addtocontents{toc}{Shortcut for distance.}
 
-Most of the time  
+Most of the time,  
 we study only one metric on the space.
 Therefore we will not need to name the metric function each time.
 
 Given a metric space $\mathcal X$,
-the distance between points $A$ and $B$ will be further denoted as 
+the distance between points $A$ and $B$ will be further denoted by 
 $$AB
 \quad
 \text{or}
 \quad
 d_{\mathcal X}(A,B);$$
-the latter is used only if we need to emphasize that $A$ and $B$ are points of the metric space $\mathcal X$.
+the latter is used only if we need to emphasize, that $A$ and $B$ are points of the metric space $\mathcal X$.
 
 For example, the triangle inequality can be written as 
 $$AC\le AB+BC.$$
 
-For the multiplication we will always use ``$\cdot$'',
+For the multiplication, we will always use ``$\cdot$'',
 so $AB$ should not be confused with $A\cdot B$.
 
 \section*{Isometries, motions and lines}
 \addtocontents{toc}{Isometries, motions and lines.}
 
-In this section we define {}\emph{lines} in a metric space.
-Once it is done the sentence  {}\emph{``We can draw unique line which pass thru two given points.''} becomes rigorous; see (\ref{preaxiomII}) on page \pageref{preaxiomII}. 
+In this section, we define {}\emph{lines} in a metric space.
+Once it is done the sentence  {}\emph{``We can draw unique line which passes thru two given points.''} becomes rigorous; see (\ref{preaxiomII}) on page \pageref{preaxiomII}. 
 
 Recall that a map $f\:\mathcal{X}\to\mathcal{Y}$
-is a \index{bijection}\emph{bijection} 
+is a \index{bijection}\emph{bijection},
 if it gives an exact pairing of the elements of two sets.
-Equivalently, $f\:\mathcal{X}\to\mathcal{Y}$ is a bijection if it has an \index{inverse}\emph{inverse};
+Equivalently, $f\:\mathcal{X}\to\mathcal{Y}$ is a bijection, if it has an \index{inverse}\emph{inverse};
 that is, a map $g\:\mathcal{Y}\to\mathcal{X}$
 such that 
 $g(f(A))\z=A$   for any $A\in\mathcal{X}$
@@ -167,7 +167,7 @@ $f(g(B))\z=B$ for any $B\in\mathcal{Y}$.
 
 \begin{thm}{Definition}\label{def:isom}
 Let $\mathcal X$ and $\mathcal Y$ be two metric spaces and $d_{\mathcal X}$, $d_{\mathcal Y}$ be their metrics. 
-A map 
+The map 
 $$f\:\mathcal X \z\to \mathcal Y$$ 
 is
 called \index{distance-preserving map}\emph{distance-preserving} if 
@@ -181,18 +181,17 @@ Two metric spaces are called
 \emph{isometric} if there exists an isometry from one to the other.
 
 The isometry from a metric space to itself 
-is also called \index{motion}\emph{motion} of the space.
+is also called a \index{motion}\emph{motion} of the space.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:dist-preserv=>injective}
 Show that any distance preserving map  is \index{injective map}\emph{injective};
-that is, if $f\:\mathcal X\to\mathcal Y$ is a distance preserving map then
-$f(A)\ne f(B)$
-for any pair of distinct points $A,  B\in \mathcal X$.
+that is, if $f\:\mathcal X\to\mathcal Y$ is a distance preserving map, 
+then $f(A)\ne f(B)$ for any pair of distinct points $A,  B\in \mathcal X$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:motion-of-R}
-Show that if $f\:\mathbb{R}\to\mathbb{R}$ is a motion of the real line 
+Show that if $f\:\mathbb{R}\to\mathbb{R}$ is a motion of the real line,
 then either (a)
 $f(x)=f(0)+x$ for any $x\in \mathbb{R}$,  
 or (b)
@@ -205,7 +204,7 @@ Prove that $(\mathbb{R}^2,d_1)$ is isometric to $(\mathbb{R}^2,d_\infty)$.
 \end{thm}
 
 \begin{thm}{Advanced exercise}\label{ad-ex:motions of Manhattan plane}
-Describe all the motions of the Manhattan plane.
+Describe all the motions of the Manhattan plane, defied on page~\pageref{Manhattan plane}.
 \end{thm}
 
 If $\mathcal X$ is a metric space and $\mathcal Y$ is a subset of $\mathcal X$,
@@ -215,11 +214,10 @@ the distance between two points of $\mathcal Y$ is defined to be the distance be
 This way any subset of a metric space can be also considered as a metric space. 
 
 \begin{thm}{Definition}\label{def:line}
-A subset $\ell$ of metric space is called \index{line}\emph{line}
-if it is isometric to the real line.
+A subset $\ell$ of metric space is called a \index{line}\emph{line}, if it is isometric to the real line.
 \end{thm}
 
-Note that a space with discrete metric has no lines.
+Note that a space with a discrete metric has no lines.
 The following picture shows examples of lines on the Manhattan plane $(\mathbb{R}^2,d_1)$. 
 
 \begin{center}
@@ -228,12 +226,17 @@ The following picture shows examples of lines on the Manhattan plane $(\mathbb{R
 \end{center}
 
 \begin{thm}{Exercise}\label{ex:y=|x|}
-Consider graph $y=|x|$ in $\mathbb{R}^2$.
-In which of the following spaces (a) $(\mathbb{R}^2,d_1)$, (b) $(\mathbb{R}^2,d_2)$ (c) $(\mathbb{R}^2,d_\infty)$ it forms a line? Why?
+Consider the graph $y=|x|$ in $\mathbb{R}^2$.
+In which of the following spaces 
+(a) $(\mathbb{R}^2,d_1)$, 
+(b) $(\mathbb{R}^2,d_2)$, 
+(c) $(\mathbb{R}^2,d_\infty)$ 
+does it form a line? 
+Why?
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:2mid}
-How many points $M$ on the line $(A B)$ for which we have
+How many points $M$ are there on the line $(A B)$ for which we have
 \begin{enumerate}
 \item $AM= MB$ ?
 \item $AM= 2\cdot MB$ ?
@@ -249,7 +252,7 @@ In this case we might denote $\ell$ as $(PQ)$.
 There might be more than one line thru $P$ and $Q$,
 but if we write \index{1set@$(PQ)$, $[PQ)$, $[PQ]$}$(PQ)$ we assume that we made a choice of such line. 
 
-Let us denote by $[P Q)$ the half-line
+Let us denote by $[P Q)$ the \index{half-line}\emph{half-line}
 which starts at $P$ and contains $Q$. 
 Formally speaking, $[P Q)$ is a subset of $(P Q)$ which corresponds to $[0,\infty)$ under an isometry $f\:(P Q)\to \mathbb{R}$ such that $f(P)=0$ and $f(Q)>0$.
 
@@ -258,15 +261,15 @@ Show that if $X\in [PQ)$ then
 $QX=|PX-PQ|$.
 \end{thm}
 
-The subset of line $(P Q)$ between $P$ and $Q$ is called segment between $P$ and $Q$ and denoted as $[P Q]$.
-Formally, segment can defined as the intersection of two half-lines: $[P Q]=[P Q)\cap[Q P)$.
+The subset of line $(P Q)$ between $P$ and $Q$ is called the \index{segment}\emph{segment} between $P$ and $Q$ and denoted by $[P Q]$.
+Formally, the segment can be defined as the intersection of two half-lines: $[P Q]=[P Q)\cap[Q P)$.
 
 
 \section*{Angles}
 \addtocontents{toc}{Angles.}
 
 Our next goal is to introduce {}\emph{angles} and {}\emph{angle measures}; 
-after that the statement {}\emph{``we can measure angles''} will become rigorous;
+after that, the statement {}\emph{``we can measure angles''} will become rigorous;
 see (\ref{preaxiomIII}) on page \pageref{preaxiomIII}.
 
 \begin{wrapfigure}{r}{40mm}
@@ -278,21 +281,21 @@ see (\ref{preaxiomIII}) on page \pageref{preaxiomIII}.
 \end{lpic}
 \end{wrapfigure}
 
-An ordered pair of half-lines which start at the same point is called \index{angle}\emph{angle}.
+An ordered pair of half-lines which start at the same point is called an \index{angle}\emph{angle}.
 An angle formed by two half-lines $[OA)$ and $[OB)$
-will be denoted as \index{1fig@$\angle$}$\angle AOB$.
-In this case the point $O$ is called \index{vertex of the angle}\emph{vertex} of the angle.
+will be denoted by \index{1fig@$\angle$}$\angle AOB$.
+In this case the point $O$ is called the \index{vertex of the angle}\emph{vertex} of the angle.
 
-Intuitively, the angle measure tells how much one has to rotate the first half-line counterclockwise so it gets the position of the second half-line of the angle. 
+Intuitively, the angle measure tells how much one has to rotate the first half-line counterclockwise, so it gets the position of the second half-line of the angle. 
 The full turn is assumed to be $2\cdot\pi$;
 it corresponds to the angle measure in radians.
 
-The angle measure of $\angle AOB$ is denoted as \index{1fig@$\measuredangle$}$\measuredangle AOB$;
+The angle measure of $\angle AOB$ is denoted by \index{1fig@$\measuredangle$}$\measuredangle AOB$;
 it is a real number in the interval $(-\pi,\pi]$. 
 
 The notations $\angle AOB$ and $\measuredangle AOB$ look similar,
 they also have close but different meanings, 
-which better not to be confused.
+which better not be confused.
 For example, the equality 
 $\angle AOB=\angle A'O'B'$
 means that
@@ -319,16 +322,17 @@ Consider three half-lines starting from the same point,
 They make three angles $\angle A O B$, $\angle B O C$ and $\angle A O C$,
 so the angle measure $\measuredangle A O C$ should coincide with
 the sum $\measuredangle A O B+\measuredangle B O C$ up to full rotation.
-This property will be expressed by a formula 
+This property will be expressed by the formula 
 $$\measuredangle A O B+\measuredangle B O C\equiv \measuredangle A O C,$$
 where \index{1rel@$\equiv$}``$\equiv$'' is a new notation which we are about to introduce.
 The last identity will become a part of the axiom.
 
 We will write 
-$$\alpha\equiv\beta
-\quad\text{or}
-\quad
-\alpha\equiv\beta\pmod{2\cdot\pi}$$ 
+\begin{align*}
+\alpha&\equiv\beta
+\intertext{or}
+\alpha&\equiv\beta\pmod{2\cdot\pi}
+\end{align*}
 if $\alpha=\beta+2\cdot\pi\cdot n$
 for some integer $n$.
 In this case we say 
@@ -344,12 +348,13 @@ $$-\pi
 \equiv
 -\tfrac32\cdot\pi.$$
 
-The introduced relation ``$\equiv$'' behaves as equality, 
-but the angle measures which differ by full turn 
-\[\dots,\,\alpha-2\cdot\pi,\, \alpha,\, \alpha+2\cdot\pi,\, \alpha+4\cdot\pi,\,\dots\] 
-are considered to be the same.
+The introduced relation ``$\equiv$'' behaves as an equality sing,
+but
+\[\dots\equiv\alpha-2\cdot\pi\equiv \alpha\equiv \alpha+2\cdot\pi\equiv \alpha+4\cdot\pi\equiv\dots;\] 
+that is, if the angle measures differ by full turn 
+then they are considered to be the same.
 
-With ``$\equiv$'', we can do addition subtraction and multiplication by integer number without getting into trouble.
+With ``$\equiv$'', we can do addition, subtraction and multiplication by integer numbers without getting into trouble.
 That is, if
 $$\alpha\equiv\beta
 \quad
@@ -365,7 +370,7 @@ $$\alpha+\alpha'\equiv\beta+\beta',
 \quad
 n\cdot\alpha\equiv n\cdot\beta$$
 for any integer $n$.
-But ``$\equiv$'' does not in general respect multiplication by non-integer numbers; for example 
+But ``$\equiv$'' does not in general respect multiplication with non-integer numbers; for example 
 $$\pi
 \equiv 
 -\pi
@@ -384,21 +389,21 @@ Show that $2\cdot\alpha\equiv0$ if and only if $\alpha\equiv0$ or $\alpha\equiv\
 \addtocontents{toc}{Continuity.}
 
 The angle measure is also assumed to be continuous.
-Namely, the following property of angle measure which will become a part of the axiom.
+Namely, the following property of angle measure will become a part of the axiom.
 
 \textit{The function}
 $$\measuredangle\:(A,O,B)\mapsto\measuredangle A O B$$
 \textit{is continuous at any triple of points $(A,O,B)$
 such that $O\ne A$ and $O\ne B$ and $\measuredangle A O B\ne\pi$.}
 
-To explain this property we need to extend the notion of {}\emph{continuity} to the functions between metric spaces.
+To explain this property, we need to extend the notion of {}\emph{continuity} to the functions between metric spaces.
 The definition is a straightforward generalization of the standard definition for the real-to-real functions.
 
-Further $\mathcal X$ and $\mathcal Y$ be two metric spaces 
+Further, let $\mathcal X$ and $\mathcal Y$ be two metric spaces,
 and $d_{\mathcal X}$, $d_{\mathcal Y}$ be their metrics.
 
 A map $f\:\mathcal X\to\mathcal Y$ is called continuous at point $A\in \mathcal X$
-if for any  $\epsilon>0$ there is $\delta>0$ such that 
+if for any  $\epsilon>0$ there is $\delta>0$, such that 
 \[d_{\mathcal X}(A,A')
 <
 \delta
@@ -409,15 +414,15 @@ d_{\mathcal Y}(f(A),f(A'))
 <
 \epsilon.\]
 
-The same way one may define a continuous map of several variables.
-Say, assume $f(A,B,C)$ is a function which returns a point in the space $\mathcal Y$ for a triple of points $(A,B,C)$
+One may define a continuous map of several variables the same way.
+Assume $f(A,B,C)$ is a function which returns a point in the space $\mathcal Y$ for a triple of points $(A,B,C)$
 in the space $\mathcal X$.
 The map $f$ might be defined only for some triples in $\mathcal X$.
 
 Assume $f(A,B,C)$ is defined.
-Then we say that $f$ continuous at the triple $(A,B,C)$ 
+Then, we say that $f$ is continuous at the triple $(A,B,C)$ 
 if for any $\epsilon>0$ there is $\delta>0$ such that 
-\[(f(A,B,C),f(A',B',C'))<\epsilon.\]
+\[d_{\mathcal Y}(f(A,B,C),f(A',B',C'))<\epsilon.\]
 if $d_{\mathcal X}(A,A')<\delta$, $d_{\mathcal X}(B,B')<\delta$ and $d_{\mathcal X}(C,C')<\delta$.
 
 
@@ -429,7 +434,7 @@ Show that the function
 $$f(B)\df
 d_{\mathcal{X}}(A,B)$$ 
 is continuous at any point $B$.
-\item Show that $d_{\mathcal{X}}(A,B)$ is a continuous  at any pair $A,B\in \mathcal{X}$.
+\item Show that $d_{\mathcal{X}}(A,B)$ is continuous  at any pair $A,B\in \mathcal{X}$.
 \end{enumerate}
 
 \end{thm}
@@ -437,7 +442,7 @@ is continuous at any point $B$.
 \begin{thm}{Exercise}\label{ex:comp+cont}
 Let $\mathcal{X}$, $\mathcal{Y}$ and $\mathcal{Z}$ be a metric spaces.
 Assume that the functions $f\:\mathcal{X}\to\mathcal{Y}$
-and $g\:\mathcal{Y}\to\mathcal{Z}$ are continuous at any point
+and $g\:\mathcal{Y}\to\mathcal{Z}$ are continuous at any point,
 and $h=g\circ f$ is its composition;
 that is, $h(A)=g(f(A))$ for any $A\in \mathcal{X}$.
 Show that $h\:\mathcal{X}\to\mathcal{Z}$ is continuous at any point.
@@ -455,12 +460,12 @@ Show that any distance preserving map is continuous.
 
 Our next goal is to give a rigorous meaning for  (\ref{preaxiomIV}) on page \pageref{preaxiomIV}.
 To do this, we introduce the notion of {}\emph{congruent triangles}
-so instead of {}\emph{``if we rotate or shift we will not see the difference''} we say that for triangles side-angle-side congruence holds;
-that is, if two triangles are congruent if they have two pairs of equal sides and the same angle measure between these sides.
+so instead of {}\emph{``if we rotate or shift we will not see the difference''} we say that for triangles, the side-angle-side congruence holds;
+that is, two triangles are congruent if they have two pairs of equal sides and the same angle measure between these sides.
 
 An {}\emph{ordered} triple of distinct points in a metric space $\mathcal{X}$, 
-say $A,B,C$
-is called \index{triangle}\emph{triangle}\label{page:def:triangle} and denoted as \index{1gons@$\triangle$}$\triangle A B C$.
+say $A,B,C$,
+is called a \index{triangle}\emph{triangle}\label{page:def:triangle}, and denoted by \index{1gons@$\triangle$}$\triangle A B C$.
 Note that the triangles $\triangle A B C$ and $\triangle A C B$ are considered as different.
 
 Two triangles $\triangle A' B' C'$ and $\triangle A B C$ are called 
@@ -475,14 +480,15 @@ B'=f(B)
 \quad
 C'=f(C).\]
 
-Let $\mathcal X$ be a metric space
+Let $\mathcal X$ be a metric space,
 and $f,g\:\mathcal X\to\mathcal X$ be two motions.
 Note that the inverse $f^{-1}:\mathcal X\to\mathcal X$,
 as well as the composition $f\circ g:\mathcal X\to\mathcal X$
 are also motions.
 
-It follows that ``$\cong$'' is an equivalence relation;
-that is, any triangle congruent to itself and the following two conditions hold.
+It follows that ``$\cong$'' is an \index{equivalence relation}\emph{equivalence relation};
+that is, any triangle congruent to itself, 
+and the following two conditions hold.
 \begin{itemize} 
 \item If $\triangle A' B' C'\z\cong\triangle A B C$ then $\triangle A B C\z\cong\triangle A' B' C'$.
 \item If $\triangle A'' B'' C''\z\cong\triangle A' B' C'$ and $\triangle A' B' C'\z\cong\triangle A B C$ 
@@ -495,7 +501,7 @@ Note that if $\triangle A' B' C'\z\cong\triangle A B C$
 then $AB\z=A'B'$,
 $BC=B'C'$ and $CA=C'A'$.
 
-For discrete metric, as well some other metric spaces 
+For a discrete metric, as well as some other metrics, 
 the converse also holds.
 The following example shows that it does not hold in the Manhattan plane.
 
@@ -512,20 +518,20 @@ $$d_1(A,B)=d_1(A,C)=d_1(B,C)=2.$$
 \end{lpic}
 \end{wrapfigure}
 
-On one hand 
+On one hand,
 $$\triangle ABC\cong \triangle ACB.$$
 
 Indeed, 
 it is easy to see that
- the map $(x,y)\mapsto (-x,y)$ is a motion of $(\mathbb{R}^2,d_1)$
+ the map $(x,y)\mapsto (-x,y)$ is a motion of $(\mathbb{R}^2,d_1)$,
 which sends $A\mapsto A$, $B\mapsto C$ and $C\mapsto B$.
 
-On the other hand 
+On the other hand,
 $$\triangle ABC\z\ncong \triangle BCA.$$
-Indeed, assume there is a motion $f$ of $(\mathbb{R}^2,d_1)$ which sends $A\mapsto B$ and $B\mapsto C$.
+Indeed, arguing by contradiction, assume there is a motion $f$ of $(\mathbb{R}^2,d_1)$ which sends $A\mapsto B$ and $B\mapsto C$.
 Note that a point $M$ is a midpoint\footnote{$M$ is a midpoint of $A$ and $B$ if $d_1(A,M)=d_1(B,M)=\tfrac12\cdot d_1(A,B)$.} of $A$ and $B$ if and only if $f(M)$ is a midpoint of $B$ and $C$.
-The set of midpoints for $A$ and $B$ is infinite, it contains all points $(t,t)$ for $t\in[0,1]$ (it is the dark gray segment on the picture).
-On the other hand the midpoint for $B$ and $C$ is unique (it is the black point on the picture).
-Thus the map $f$ can not be bijective, a contradiction.
+The set of midpoints for $A$ and $B$ is infinite, it contains all points $(t,t)$ for $t\in[0,1]$ (it is the dark gray segment on the picture above).
+On the other hand, the midpoint for $B$ and $C$ is unique (it is the black point on the picture).
+Thus, the map $f$ cannot be bijective, a contradiction.
 
 \addtocontents{toc}{\protect\end{quote}}

@@ -4,7 +4,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif
 kileprversion=2
 kileversion=2.1.3
-lastDocument=poincare.tex
+lastDocument=metric.tex
 masterDocument=
 name=lectures
 pkg_extIsRegExp=false
@@ -266,32 +266,32 @@ Mode=LaTeX
 
 [item:AA.tex]
 archive=true
-column=0
+column=23
 encoding=UTF-8
 highlight=LaTeX
-line=0
+line=69
 mode=LaTeX
 open=false
 order=19
 
 [item:absolute.tex]
 archive=true
-column=26
+column=59
 encoding=UTF-8
 highlight=LaTeX
-line=328
+line=91
 mode=LaTeX
-open=true
+open=false
 order=10
 
 [item:affine.tex]
 archive=true
-column=0
+column=6
 encoding=UTF-8
 highlight=LaTeX
-line=80
+line=30
 mode=LaTeX
-open=true
+open=false
 order=15
 
 [item:all-lectures.ind]
@@ -306,22 +306,22 @@ order=0
 
 [item:all-lectures.tex]
 archive=true
-column=10
+column=7
 encoding=UTF-8
 highlight=LaTeX
-line=16
+line=22
 mode=LaTeX
 open=true
 order=0
 
 [item:area.tex]
 archive=true
-column=0
+column=178
 encoding=UTF-8
 highlight=LaTeX
-line=204
+line=114
 mode=LaTeX
-open=true
+open=false
 order=7
 
 [item:axioms.tex]
@@ -331,7 +331,7 @@ encoding=UTF-8
 highlight=LaTeX
 line=80
 mode=LaTeX
-open=true
+open=false
 order=3
 
 [item:bibl.tex]
@@ -341,25 +341,25 @@ encoding=windows-1251
 highlight=LaTeX
 line=48
 mode=LaTeX
-open=true
+open=false
 order=12
 
 [item:car.tex]
 archive=true
-column=24
+column=32
 encoding=UTF-8
 highlight=LaTeX
-line=142
+line=46
 mode=LaTeX
-open=true
+open=false
 order=6
 
 [item:complex.tex]
 archive=true
-column=0
+column=21
 encoding=UTF-8
 highlight=LaTeX
-line=0
+line=417
 mode=LaTeX
 open=false
 order=21
@@ -371,7 +371,7 @@ encoding=UTF-8
 highlight=LaTeX
 line=102
 mode=LaTeX
-open=true
+open=false
 order=1
 
 [item:cover/cover-two-sided.tex]
@@ -429,7 +429,7 @@ archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
-line=0
+line=472
 mode=LaTeX
 open=false
 order=23
@@ -446,12 +446,12 @@ order=16
 
 [item:hints.tex]
 archive=true
-column=1
+column=11
 encoding=UTF-8
 highlight=LaTeX
-line=666
+line=1100
 mode=LaTeX
-open=true
+open=false
 order=5
 
 [item:inscribed-angle.tex]
@@ -461,17 +461,17 @@ encoding=UTF-8
 highlight=LaTeX
 line=21
 mode=LaTeX
-open=true
+open=false
 order=4
 
 [item:intro.tex]
 archive=true
-column=59
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=133
+line=134
 mode=LaTeX
-open=true
+open=false
 order=8
 
 [item:inversion.tex]
@@ -481,7 +481,7 @@ encoding=UTF-8
 highlight=LaTeX
 line=472
 mode=LaTeX
-open=true
+open=false
 order=9
 
 [item:klein.tex]
@@ -491,7 +491,7 @@ encoding=UTF-8
 highlight=LaTeX
 line=360
 mode=LaTeX
-open=true
+open=false
 order=13
 
 [item:lectures.kilepr]
@@ -511,27 +511,27 @@ encoding=UTF-8
 highlight=LaTeX
 line=50
 mode=LaTeX
-open=true
+open=false
 order=11
 
 [item:metric.tex]
 archive=true
-column=0
+column=30
 encoding=UTF-8
 highlight=LaTeX
-line=0
+line=533
 mode=LaTeX
-open=false
-order=22
+open=true
+order=1
 
 [item:parallel.tex]
 archive=true
-column=0
+column=30
 encoding=UTF-8
 highlight=LaTeX
-line=0
+line=424
 mode=LaTeX
-open=true
+open=false
 order=2
 
 [item:perp.tex]
@@ -541,7 +541,7 @@ encoding=UTF-8
 highlight=LaTeX
 line=253
 mode=LaTeX
-open=true
+open=false
 order=14
 
 [item:pics/2sum.eps]
@@ -3209,9 +3209,9 @@ archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
-line=260
+line=54
 mode=LaTeX
-open=true
+open=false
 order=16
 
 [item:proj.tex]
@@ -3226,12 +3226,12 @@ order=18
 
 [item:sphere.tex]
 archive=true
-column=0
+column=34
 encoding=UTF-8
 highlight=LaTeX
-line=214
+line=253
 mode=LaTeX
-open=true
+open=false
 order=17
 
 [item:title.tex]
@@ -3246,31 +3246,31 @@ order=20
 
 [item:triangle.tex]
 archive=true
-column=55
+column=21
 encoding=UTF-8
 highlight=LaTeX
-line=50
+line=301
 mode=LaTeX
 open=false
 order=9
 
 [view-settings,view=0,item:AA.tex]
-CursorColumn=0
-CursorLine=2644
+CursorColumn=23
+CursorLine=69
 JumpList=
-ViMarks=.,2646,1,[,2647,0,],-1,-1
+ViMarks=.,69,23,[,69,23,],69,23
 
 [view-settings,view=0,item:absolute.tex]
-CursorColumn=26
-CursorLine=328
+CursorColumn=59
+CursorLine=91
 JumpList=
-ViMarks=.,328,10,[,328,10,],328,25
+ViMarks=.,91,59,[,91,59,],91,59
 
 [view-settings,view=0,item:affine.tex]
-CursorColumn=0
-CursorLine=80
+CursorColumn=6
+CursorLine=30
 JumpList=
-ViMarks=.,132,8,[,133,0,],-1,-1
+ViMarks=.,30,6,[,30,6,],30,6
 
 [view-settings,view=0,item:all-lectures.ind]
 CursorColumn=0
@@ -3279,16 +3279,16 @@ JumpList=
 ViMarks=.,0,0,[,0,0,],-1,-1
 
 [view-settings,view=0,item:all-lectures.tex]
-CursorColumn=10
-CursorLine=16
+CursorColumn=7
+CursorLine=22
 JumpList=
 ViMarks=.,49,0,[,49,0,],49,0
 
 [view-settings,view=0,item:area.tex]
-CursorColumn=0
-CursorLine=204
+CursorColumn=178
+CursorLine=114
 JumpList=
-ViMarks=.,203,5,[,204,0,],-1,-1
+ViMarks=.,114,177,[,114,176,],114,177
 
 [view-settings,view=0,item:axioms.tex]
 CursorColumn=40
@@ -3303,16 +3303,16 @@ JumpList=
 ViMarks=.,53,40,[,53,40,],53,40
 
 [view-settings,view=0,item:car.tex]
-CursorColumn=24
-CursorLine=142
+CursorColumn=32
+CursorLine=46
 JumpList=
-ViMarks=.,142,23,[,142,23,],142,23,a,230,0
+ViMarks=.,46,32,[,46,32,],46,32,a,230,0
 
 [view-settings,view=0,item:complex.tex]
-CursorColumn=0
-CursorLine=351
+CursorColumn=21
+CursorLine=417
 JumpList=
-ViMarks=.,25,6,[,26,0,],-1,-1
+ViMarks=.,417,20,[,417,19,],417,20
 
 [view-settings,view=0,item:cong.tex]
 CursorColumn=9
@@ -3328,7 +3328,7 @@ ViMarks=.,10,0,[,10,0,],10,0
 
 [view-settings,view=0,item:h-plane.tex]
 CursorColumn=0
-CursorLine=305
+CursorLine=472
 JumpList=
 ViMarks=.,304,5,[,305,0,],-1,-1
 
@@ -3339,10 +3339,10 @@ JumpList=
 ViMarks=.,258,37,[,258,37,],258,37
 
 [view-settings,view=0,item:hints.tex]
-CursorColumn=1
-CursorLine=666
+CursorColumn=11
+CursorLine=1100
 JumpList=
-ViMarks=.,666,1,[,666,1,],666,1
+ViMarks=.,1100,11,[,1100,11,],1100,11
 
 [view-settings,view=0,item:inscribed-angle.tex]
 CursorColumn=0
@@ -3351,10 +3351,10 @@ JumpList=
 ViMarks=.,20,6,[,21,0,],-1,-1
 
 [view-settings,view=0,item:intro.tex]
-CursorColumn=59
-CursorLine=133
+CursorColumn=0
+CursorLine=134
 JumpList=
-ViMarks=.,133,59,[,133,59,],133,59,a,112,10
+ViMarks=.,138,42,[,138,39,],138,42,a,112,10
 
 [view-settings,view=0,item:inversion.tex]
 CursorColumn=0
@@ -3375,16 +3375,16 @@ JumpList=
 ViMarks=.,22,0,[,21,0,],22,32
 
 [view-settings,view=0,item:metric.tex]
-CursorColumn=0
-CursorLine=142
+CursorColumn=30
+CursorLine=533
 JumpList=
-ViMarks=.,141,5,[,142,0,],-1,-1
+ViMarks=.,534,21,[,534,21,],534,21
 
 [view-settings,view=0,item:parallel.tex]
-CursorColumn=0
-CursorLine=0
+CursorColumn=30
+CursorLine=424
 JumpList=
-ViMarks=.,113,5,[,114,0,],-1,-1
+ViMarks=.,424,30,[,424,30,],424,30
 
 [view-settings,view=0,item:perp.tex]
 CursorColumn=0
@@ -3394,9 +3394,9 @@ ViMarks=.,252,5,[,253,0,],-1,-1
 
 [view-settings,view=0,item:poincare.tex]
 CursorColumn=0
-CursorLine=260
+CursorLine=54
 JumpList=
-ViMarks=.,627,5,[,628,0,],-1,-1
+ViMarks=.,62,68,[,62,67,],62,68
 
 [view-settings,view=0,item:proj.tex]
 CursorColumn=0
@@ -3405,10 +3405,10 @@ JumpList=
 ViMarks=.,324,6,[,325,0,],-1,-1
 
 [view-settings,view=0,item:sphere.tex]
-CursorColumn=0
-CursorLine=214
+CursorColumn=34
+CursorLine=253
 JumpList=
-ViMarks=.,229,3,[,229,3,],229,3
+ViMarks=.,253,34,[,253,34,],253,34
 
 [view-settings,view=0,item:title.tex]
 CursorColumn=0
@@ -3417,7 +3417,7 @@ JumpList=
 ViMarks=.,8,0,[,8,0,],8,0
 
 [view-settings,view=0,item:triangle.tex]
-CursorColumn=55
-CursorLine=50
+CursorColumn=21
+CursorLine=301
 JumpList=
-ViMarks=.,37,16,[,37,16,],37,16
+ViMarks=.,301,21,[,301,21,],301,21
