@@ -6,21 +6,53 @@
 \label{chap:axioms}
 \addtocontents{toc}{\protect\begin{quote}}
 
+%???(
+
+The first system of axioms appears in the Euclid's ``Elements'', 
+around 300 BC --- the most successful and influential textbook ever written.
+
+The systematic study of geometries as axiomatic systems
+ was
+triggered by the discovery on non-Euclidean geometry in 19th century.
+This branch of mathematics is called ``Foundations of geometry''.
+
+The most popular system of axiom
+was proposed in 1899 by David Hilbert.
+This is also the first rigorous system by modern standards.
+It contains twenty axioms in five groups, six ``primitive notions'' three ``primitive terms'', these are not defined in terms of previously defined concepts.
+
+We will use an other system of axioms,
+which is very close to the system proposed by George Birkhoff in 1932.
+This choice is made to minimize the tedious parts
+which are unavoidable in the more conservative Hilbert's approach.
+
+This system is build upon metric spaces.
+In particular we use the real numbers as a building block. By that reason this approach reminds a model-based introduction to Euclidean geometry.
+
+\medskip
+
+The axioms use the notions of 
+metric space, 
+lines, 
+angles,
+triangles,
+as well as the relations ``$\equiv$'' and ``$\cong$''.
+All this discussed in the preliminaries.
+
+%???)
+
+\newpage
 
 \section*{The Axioms}
-\addtocontents{toc}{The Axioms.}\label{def:birkhoff-axioms} 
+\addtocontents{toc}{The Axioms.}
 
-Summarizing the above discussion, let us give an axiomatic system of the Euclidean plane.
-
-
-\bigskip 
-
+\begin{framed}
 \begin{enumerate}[I.]
 \item\label{def:birkhoff-axioms:0} The \index{plane!Euclidean plane}\index{Euclidean plane}\emph{Euclidean plane} is a metric space with at least two points.
 
 
-\item\label{def:birkhoff-axioms:1} There is one and only one line, 
-that contains any two given distinct points $P$ and $Q$ in the Euclidean plane.
+\item\label{def:birkhoff-axioms:1} 
+There is one and only one line, that contains any two given distinct points $P$ and $Q$ in the Euclidean plane.
 
 \item\label{def:birkhoff-axioms:2} 
 Any angle $\angle AOB$ in the Euclidean plane 
@@ -29,19 +61,24 @@ This number is called \index{angle measure}\emph{angle measure of $\angle AOB$}
 and denoted by $\measuredangle A O B$.
 It satisfies the following conditions:
 \begin{enumerate}
-\item\label{def:birkhoff-axioms:2a} Given a half-line $[O A)$ and $\alpha\in(-\pi,\pi]$ there is unique  half-line $[O B)$ such that $\measuredangle A O B= \alpha$
-\item\label{def:birkhoff-axioms:2b} For any points $A$, $B$ and $C$ distinct from $O$ we have
+\item\label{def:birkhoff-axioms:2a} 
+Given a half-line $[O A)$ and $\alpha\in(-\pi,\pi]$, 
+there is a unique  half-line $[O B)$, 
+such that $\measuredangle A O B= \alpha$.
+\item\label{def:birkhoff-axioms:2b} 
+For any points $A$, $B$ and $C$, distinct from $O$ we have
 $$\measuredangle A O B+\measuredangle B O C
 \equiv\measuredangle A O C.$$
 \item\label{def:birkhoff-axioms:2c} 
 The function 
 $$\measuredangle\:(A,O,B)\mapsto\measuredangle A O B$$
-is continuous at any triple of points $(A,O,B)$
+is continuous at any triple of points $(A,O,B)$,
 such that $O\ne A$ and $O\ne B$ and $\measuredangle A O B\ne\pi$.
 
 \end{enumerate}
 
-\item\label{def:birkhoff-axioms:3}  In the Euclidean plane, we have
+\item\label{def:birkhoff-axioms:3}  
+In the Euclidean plane, we have
 $\triangle A B C\cong\triangle A' B' C'$
 if and only if 
 \begin{align*}
@@ -49,39 +86,33 @@ A' B'&=A B, & A' C'&= A C, &&\text{and}
 &\measuredangle C' A' B'&=\pm\measuredangle C A B.
 \end{align*}
 \item\label{def:birkhoff-axioms:4}
-If for two triangles 
-$\triangle ABC$, 
-$\triangle AB'C'$ in the Euclidean plane
-and $k>0$ we have
+If for two triangles $\triangle ABC$, $\triangle AB'C'$ in the Euclidean plane
+and for $k>0$ we have
 \begin{align*}
 B'&\in [AB),
-& C'&\in [AC)
+& C'&\in [AC),
 \\
 AB'&=k\cdot AB,&
-AC'&=k\cdot AC
+AC'&=k\cdot AC,
 \end{align*}
 then
 \begin{align*}
 B'C'&=k\cdot BC,&
-\measuredangle ABC&=\measuredangle AB'C'
-&&\text{and}
+\measuredangle ABC&=\measuredangle AB'C',
 &
 \measuredangle ACB&=\measuredangle AC'B'.
 \end{align*}
 \end{enumerate}
-
-\bigskip 
-
-
-This set of axioms is very close to the one given by Birkhoff in \cite{birkhoff}.
+\end{framed}
 
 From now on,  
-we can use no information about Euclidean plane which does not follow from the five axioms above.
+we can use no information about the Euclidean plane which does not follow from the five axioms above.
 
 \begin{thm}{Exercise}\label{ex:infinite}
 Show that the plane contains an infinite set of points.
 \end{thm}
 
+\newpage
 
 \section*{Lines and half-lines}
 \addtocontents{toc}{Lines and half-lines.}
@@ -96,13 +127,14 @@ Applying Axiom~\ref{def:birkhoff-axioms:1}, we get $\ell=m$.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:[OA)=[OA')}
-Suppose $A'\in[OA)$ and $A'\not=O$ show that 
+Suppose $A'\in[OA)$ and $A'\not=O$. 
+Show that 
 \[[O A)\z=[O A').\]
 
 \end{thm}
 
 \begin{thm}{Proposition}\label{prop:point-on-half-line}
-Given $r\ge 0$ and a half-line $[O A)$ there is unique $A'\in [O A)$  such that $O A'=r$.
+Given $r\ge 0$ and a half-line $[O A)$ there is a unique $A'\in [O A)$  such that $O A'=r$.
 \end{thm}
 
 \parit{Proof.}
@@ -167,7 +199,8 @@ Note that by Proposition~\ref{lem:AOB+BOA=0},
 if $\angle A O B$ is a straight angle 
 then so is $\angle B O A$.
 
-We say that point $O$ \index{between}\emph{lies between} points $A$ and $B$ if $O\not= A$, $O\not= B$ and $O\in[A B]$.
+We say that point $O$ \index{between}\emph{lies between} points $A$ and $B$, 
+if $O\not= A$, $O\not= B$ and $O\in[A B]$.
 
 \begin{thm}{Theorem}\label{thm:straight-angle}
 The angle $\angle A O B$ is straight 
@@ -175,8 +208,8 @@ if and only if $O$
 \index{between}\emph{lies between} $A$ and $B$.
 \end{thm}
 
-\begin{wrapfigure}[3]{o}{40mm}
-\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/AOB(1)}
+\begin{wrapfigure}[2]{r}{40mm}
+\begin{lpic}[t(-6mm),b(0mm),r(0mm),l(0mm)]{pics/AOB(1)}
 \lbl[t]{6,0;$B$}
 \lbl[t]{19,0;$O$}
 \lbl[t]{31,0;$A$}
@@ -200,9 +233,9 @@ According to Axiom~\ref{def:birkhoff-axioms:3},
 Denote by $h$ the corresponding motion of the plane;
 that is, $h$ is a motion such that $h(A)=B$, $h(O)=O$ and $h(B)=A'$. 
 
-Then $(A'B)=h(AB)\ni h(O)=O$.
-Therefore both lines $(AB)$ and $(A'B)$, 
- contain $B$ and $O$.
+Then 
+\[(A'B)=h(AB)\ni h(O)=O.\]
+Therefore both lines $(AB)$ and $(A'B)$ contain $B$ and $O$.
 By Axiom~\ref{def:birkhoff-axioms:1}, $(AB)=(A'B)$.
 
 By the definition of the line,
@@ -229,7 +262,7 @@ Therefore $\alpha=\pi$.
 
 \parit{}($\Rightarrow$).
 Suppose that $\measuredangle A O B= \pi$.
-Consider line $(OA)$ and choose point $B'$ on $(OA)$ so that $O$ lies between $A$ and $B'$.
+Consider the line $(OA)$ and choose a point $B'$ on $(OA)$ so that $O$ lies between $A$ and $B'$.
 
 From above, we have $\measuredangle AOB'=\pi$.
 Applying Axiom~\ref{def:birkhoff-axioms:2a}, 

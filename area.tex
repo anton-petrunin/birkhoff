@@ -655,40 +655,51 @@ We need to show that if $a$ and $b$ are legs and $c$ is the hypotenuse
 of a right triangle  then
 \[a^2+b^2=c^2.\]
 
-Denote by $\solidtriangle$ the right solid triangle with legs $a$ and $b$
-and  by $\solidsquare_{x}$ be the solid square 
+Denote by $\mathcal{T}$ the right solid triangle with legs $a$ and $b$
+and  by $\mathcal{Q}_{x}$ be the solid square 
 with side $x$.
 
-Let us construct two subdivisions of $\solidsquare_{a+b}$.
+Let us construct two subdivisions of $\mathcal{Q}_{a+b}$.
 
 \begin{wrapfigure}{o}{45 mm}
 \begin{lpic}[t(-3mm),b(-3mm),r(0mm),l(0mm)]{pics/pyth-area(1)}
+\lbl{2.5,8.5;{\small $\mathcal{T}$}}
+\lbl{4.5,15.5;{\small $\mathcal{T}$}}
+\lbl{8.5,3;{\small $\mathcal{T}$}}
+\lbl{15.5,4.5;{\small $\mathcal{T}$}}
+\lbl{3.5,3.5;$\mathcal{Q}_a$}
+\lbl{12,12;$\mathcal{Q}_b$}
+\lbl{28,3;{\small $\mathcal{T}$}}
+\lbl{41,3;{\small $\mathcal{T}$}}
+\lbl{28,15.5;{\small $\mathcal{T}$}}
+\lbl{41,15.5;{\small $\mathcal{T}$}}
+\lbl{35,9.5;$\mathcal{Q}_c$}
 \end{lpic}
 \end{wrapfigure}
 
-1. Subdivide $\solidsquare_{a+b}$ into two solid squares congruent to $\solidsquare_a$ and $\solidsquare_b$
-and 4 solid triangles congruent to $\solidtriangle$,
+1. Subdivide $\mathcal{Q}_{a+b}$ into two solid squares congruent to $\mathcal{Q}_a$ and $\mathcal{Q}_b$
+and 4 solid triangles congruent to $\mathcal{T}$,
 see the left diagram.
 
-2. Subdivide $\solidsquare_{a+b}$ into one solid square congruent to $\solidsquare_c$
-and 4 solid right triangles congruent to $\solidtriangle$,
+2. Subdivide $\mathcal{Q}_{a+b}$ into one solid square congruent to $\mathcal{Q}_c$
+and 4 solid right triangles congruent to $\mathcal{T}$,
 see the right diagram.
 
 Applying Proposition \ref{prop:subdivision} few times,
 we get.
 \begin{align*}
-\area\solidsquare_{a+b}
+\area\mathcal{Q}_{a+b}
 &=
-\area\solidsquare_{a}+\area\solidsquare_{b}+4\cdot\area\solidtriangle=
+\area\mathcal{Q}_{a}+\area\mathcal{Q}_{b}+4\cdot\area\mathcal{T}=
 \\
-&=\area\solidsquare_{c}+4\cdot\area\solidtriangle.
+&=\area\mathcal{Q}_{c}+4\cdot\area\mathcal{T}.
 \end{align*}
 Therefore 
-\[\area\solidsquare_{a}+\area\solidsquare_{b}=\area\solidsquare_{c}.\eqlbl{eq:pyth+area}\]
-
-Since 
-\[\area\solidsquare_x=x^2,\] 
-the statement follows.\qeds
+\[\area\mathcal{Q}_{a}+\area\mathcal{Q}_{b}=\area\mathcal{Q}_{c}.\eqlbl{eq:pyth+area}\]
+By Theorem~\ref{thm:area-rect},
+\[\area\mathcal{Q}_x=x^2,\] 
+for any $x>0$. 
+Hence the statement follows.\qeds
 
 {
 \begin{wrapfigure}{r}{18.5mm}
@@ -700,7 +711,7 @@ the statement follows.\qeds
 Build an other proof of Pythagorean theorem
 based on the diagram. 
 
-(In the notations above it shows a subdivision of $\solidsquare_c$ into $\solidsquare_{a-b}$ and 4 solid triangles congruent to $\solidtriangle$.)
+(In the notations above it shows a subdivision of $\mathcal{Q}_c$ into $\mathcal{Q}_{a-b}$ and four copies of $\mathcal{T}$.)
 \end{thm}
 
 } 
@@ -717,7 +728,7 @@ Assume  that two triangles $\triangle ABC$
 and $\triangle A'B'C'$ in the Euclidean plane 
 have equal altitudes dropped from $A$ and $A'$ correspondingly.
 Then
-\[\frac{\solidtriangle A'B'C'}{\solidtriangle ABC}
+\[\frac{\area(\solidtriangle A'B'C')}{\area(\solidtriangle ABC)}
 =
 \frac{B'C'}{BC}.\]
 
@@ -727,7 +738,7 @@ In particular, the same identity holds if $A=A'$ and the bases $[BC]$ and $[B'C'
 \parit{Proof.}
 Let $h$ be the altitude.
 By Theorem~\ref{thm:area-of-triangle},
-\[\frac{\solidtriangle A'B'C'}{\solidtriangle ABC}
+\[\frac{\area(\solidtriangle A'B'C')}{\area(\solidtriangle ABC)}
 =
 \frac{\frac12 \cdot h\cdot B'C'}{\frac12 \cdot h\cdot BC}
 =
@@ -818,7 +829,7 @@ $$\defect(\triangle ABC)
 It turns out that any absolute plane and  sphere
 there is a real number $k$
 such that 
-$$k\cdot\area(\triangle ABC)+\defect(\triangle ABC)=0
+$$k\cdot\area(\solidtriangle ABC)+\defect(\triangle ABC)=0
 \eqlbl{eq:curv-defect}$$
 for any triangle $\triangle ABC$.
 
