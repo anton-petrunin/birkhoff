@@ -6,8 +6,8 @@ It is okay to skip it, but make sure you know definitions of positive/negative a
 
  
                             
-\section*{Sign of angle}
-\addtocontents{toc}{Sign of angle.}
+\section*{Sign of an angle}
+\addtocontents{toc}{Sign of an angle.}
 
 \begin{itemize}
 \item The angle $\angle A O B$ is called \index{angle!positive and negative angles}\emph{positive} 
@@ -16,7 +16,7 @@ if $0<\measuredangle A O B<\pi$;
 if $\measuredangle A O B<0$.
 \end{itemize}
 
-Note that according to the above definitions the straight angle as well as zero angle 
+Note that according to the above definitions the straight angle as well as the zero angle 
 are neither positive nor negative.
 
 \begin{thm}{Exercise}\label{ex:AOB+<=>BOA-}
@@ -33,7 +33,7 @@ if and only if $\angle BOX$ is negative.
 Assume that the angles $\angle AOB$ and $\angle BOC$ are positive. 
 Show that
 $$\measuredangle AOB+\measuredangle BOC+\measuredangle COA=2\cdot\pi.$$
-if $\angle COA$ is positive
+if $\angle COA$ is positive,
 and
 $$\measuredangle AOB+\measuredangle BOC+\measuredangle COA=0.$$
 if $\angle COA$ is negative.
@@ -70,7 +70,7 @@ it should be covered in any calculus course.
 We will use the following corollary.
 
 \begin{thm}{Corollary}\label{cor:intermidiate}
-Assume that for any $t\z\in [0,1]$ we have three points in the plane  $O_t$, $A_t$ and $B_t$ such that 
+Assume that for any $t\z\in [0,1]$ we have three points in the plane  $O_t$, $A_t$ and $B_t$, such that 
 \begin{enumerate}[(a)]
 \item Each  function $t\mapsto O_t$, $t\mapsto A_t$ and $t\mapsto B_t$ is continuous.
 \end{enumerate}
@@ -94,7 +94,7 @@ Therefore by Axiom~\ref{def:birkhoff-axioms:2c} and Exercise~\ref{ex:comp+cont},
 $f$ is a continuous function.
 
 Further,
-by Intermediate value theorem, $f(0)$ and $f(1)$ have the same sign;
+by the Intermediate value theorem, $f(0)$ and $f(1)$ have the same sign;
 hence the result follows.
 \qeds
 
@@ -136,13 +136,13 @@ $\angle PQX$ has the same sign as $\angle PQ'X$.
 \qeds
 
 \begin{thm}{Lemma}\label{lem:signsXY}
-Assume $[XY]$ does not intersect $(PQ)$ 
+Assume $[XY]$ does not intersect $(PQ)$,
 then the angles $\angle PQX$ and $\angle PQY$ 
 have the same sign.
 \end{thm}
 
-\begin{wrapfigure}{o}{34mm}
-\begin{lpic}[t(-2mm),b(0mm),r(0mm),l(0mm)]{pics/PQY(1)}
+\begin{wrapfigure}{r}{34mm}
+\begin{lpic}[t(-5mm),b(3mm),r(0mm),l(0mm)]{pics/PQY(1)}
 \lbl[t]{30,1;$P$}
 \lbl[t]{1,1;$Q$}
 \lbl[r]{11,27;$X$}
@@ -154,12 +154,11 @@ The proof is nearly identical to the one above.
 
 \parit{Proof.}
 According to Proposition~\ref{prop:point-on-half-line},
-for any $t\in [0,1]$ there is a point  $X_t\in[XY]$ 
+for any $t\in [0,1]$ there is a point  $X_t\in[XY]$, 
 such that 
 \[XX_t= t\cdot XY.\]
-Note that the map $t\mapsto X_t$ is continuous,
-$X_0=X$ and $X_1=Y$ and for any $t\in [0,1]$, 
-we have $Y_t\notin(QP)$.
+Note that the map $t\mapsto X_t$ is continuous.
+Moreover, $X_0=X$, $X_1=Y$ and $X_t\notin(QP)$ for any $t\in [0,1]$.
 
 Applying Corollary \ref{cor:intermidiate},
 for $P_t\z=P$, $Q_t\z=Q$ and $X_t$, we get that
@@ -173,7 +172,7 @@ $\angle PQX$ has the same sign as $\angle PQY$.
 
 \begin{thm}{Proposition}\label{prop:half-plane}
 The complement of a line $(PQ)$ in the plane 
-can be presented in the unique way as a union of two disjoint subsets 
+can be presented in a unique way as a union of two disjoint subsets 
 called \index{half-plane}\emph{half-planes}
 such that 
 \begin{enumerate}[(a)]
@@ -184,7 +183,7 @@ such that
 \end{thm}
 
 
-Further we say that $X$ and $Y$ lie on 
+We say that $X$ and $Y$ lie on 
 {}\emph{one side from} $(PQ)$ if they lie in one of the half-planes of $(PQ)$ and we say that  $P$ and $Q$ lie on the {}\emph{opposite sides from} $\ell$ if they lie in the different half-planes of $\ell$.
 
 \begin{wrapfigure}{o}{34mm}
@@ -205,13 +204,13 @@ According to Theorem~\ref{thm:straight-angle},
 $X\notin (PQ)$ if and only if 
 $\measuredangle PQX\z\ne 0$ nor $\pi$.
 Therefore $\mathcal{H}_+$ and $\mathcal{H}_-$
-give the unique subdivision of the complement of $(PQ)$ which satisfies property (\ref{prop:half-plane:angle}).
+give the unique subdivision of the complement of $(PQ)$ which satisfies the property (\ref{prop:half-plane:angle}).
 
 \medskip
 
 Now let us prove that the 
 this subdivision depends only on the line $(PQ)$;
-that is, if $(P'Q')=(PQ)$ and $X,Y\notin (PQ)$
+that is, if $(P'Q')=(PQ)$ and $X,Y\notin (PQ)$,
 then the angles 
 $\angle PQX$ and $\angle PQY$ have the same sign
 if and only if the angles $\angle P'Q'X$ and $\angle P'Q'Y$ have the same sign.
@@ -249,7 +248,7 @@ Show that the line $(AB)$ does not intersect the segment $[A'B']$.
 \end{thm}
 
 
-Consider triangle $\triangle ABC$.
+Consider the triangle $\triangle ABC$.
 The segments $[AB]$, $[BC]$ and $[CA]$ are called 
 \index{side!side of the triangle}\emph{sides of the triangle}.
 
@@ -260,8 +259,8 @@ Assume line $\ell$ does not pass thru any vertex a triangle.
 Then it intersects either two or zero sides of the triangle.
 \end{thm}
 
-\begin{thm}{Signs of angles of triangle}\label{thm:signs-of-triug}
-In any nondegenerate triangle $\triangle ABC$
+\begin{thm}{Signs of angles of a triangle}\label{thm:signs-of-triug}
+In any nondegenerate triangle $\triangle ABC$,
 the angles $\angle ABC$, $\angle BCA$ and $\angle CAB$ have the same sign. 
 \end{thm}
 
@@ -329,8 +328,8 @@ Show that the segments $[AA']$ and $[BB']$ intersect.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:Z}
-Assume that the points $X$ and $Y$ lie on the opposite sides from the line $(PQ)$.
-Show that the half-line $[PX)$ does not interests $[QY)$. 
+Assume that the points $X$ and $Y$ lie on opposite sides from the line $(PQ)$.
+Show that the half-line $[PX)$ does not interest $[QY)$. 
 \end{thm}
 
 \begin{thm}{Advanced exercise}\label{ex:angle-measures}
@@ -343,11 +342,11 @@ $$\tilde\measuredangle ABC=\left[
 \end{aligned}
 \right.$$
 can serve as the angle measure; 
-that is, the axioms hold if one changes everywhere $\measuredangle$ to $\tilde\measuredangle$.
+that is, the axioms hold if one exchanges $\measuredangle$ to $\tilde\measuredangle$ everywhere.
 
 Show that $\measuredangle$ and $\tilde\measuredangle$ are the only possible angle measures on the plane. 
 
-Show that without Axiom \ref{def:birkhoff-axioms:2c}, this is not longer true.
+Show that without Axiom \ref{def:birkhoff-axioms:2c}, this is no longer true.
 \end{thm}
  
 
@@ -355,7 +354,7 @@ Show that without Axiom \ref{def:birkhoff-axioms:2c}, this is not longer true.
 \section*{Triangle with the given sides}
 \addtocontents{toc}{Triangle with the given sides.}
 
-Consider a triangle $\triangle ABC$.
+Consider the triangle $\triangle ABC$.
 Set 
 \begin{align*}
 a&=BC,
@@ -364,7 +363,7 @@ b&=CA,
 &
 c&=AB.
 \end{align*}
-Without loss of generality we may assume that 
+Without loss of generality, we may assume that 
 \[a\le b \le c.\]
 Then all three triangle inequalities for $\triangle ABC$
 hold if and only if 
@@ -373,15 +372,17 @@ The following theorem states that this is the only restriction on $a$, $b$ and $
 
 \begin{thm}{Theorem}\label{thm:abc}
 Assume that $0<a\le b\le c\le a+b$.
-Then there is a triangle $\triangle ABC$ such that $a=BC$, $b=CA$ and $c=AB$.
+Then there is a triangle $\triangle ABC$ 
+such that $a=BC$, $b=CA$ and $c=AB$.
 \end{thm}
 
-The proof requires some preparation.
+The proof requires some preparation;
+it is given in the end of section.
 
 Assume $r>0$ and $\pi>\beta>0$.
-Consider triangle $\triangle ABC$ such that 
+Consider the triangle $\triangle ABC$ such that 
 $AB=BC=r$ and $\measuredangle ABC=\beta$.
-The existence of such triangle follow from Axiom~\ref{def:birkhoff-axioms:2a} and Proposition~\ref{prop:point-on-half-line}.
+The existence of such a triangle follows from Axiom~\ref{def:birkhoff-axioms:2a} and Proposition~\ref{prop:point-on-half-line}.
 
 \begin{wrapfigure}{o}{25mm}
 \begin{lpic}[t(2mm),b(0mm),r(0mm),l(0mm)]{pics/sbr(1)}
@@ -397,19 +398,19 @@ The existence of such triangle follow from Axiom~\ref{def:birkhoff-axioms:2a} an
 
 Note that according to Axiom~\ref{def:birkhoff-axioms:3}, 
 the values
-$\beta$ and $r$ define the triangle up to congruence.
+$\beta$ and $r$ define the triangle up to the congruence.
 In particular the distance $AC$ depends only on $\beta$ and $r$.
 Set 
 $$s(\beta,r)\df AC.$$
 
 \begin{thm}{Proposition}\label{prop:f(r,a)}
-Given $r>0$ and $\epsilon>0$ there is $\delta>0$ such that
-if $0<\beta<\delta$ then $s(r,\beta)<\epsilon$.
+Given $r>0$ and $\epsilon>0$, there is $\delta>0$ such that
+if $0<\beta<\delta$, then $s(r,\beta)<\epsilon$.
 \end{thm}
 
 
 \parit{Proof.}
-Fix two point $A$ and $B$ such that $AB=r$.
+Fix two points $A$ and $B$ such that $AB=r$.
 
 Choose a point $X$ such that $\measuredangle ABX$ is positive.
 Let $Y\in [AX)$ be the point such that $AY=\tfrac\epsilon8$;
@@ -454,7 +455,7 @@ $$\measuredangle ABD=\measuredangle DBC=\tfrac \beta2.$$
 
 By Axiom~\ref{def:birkhoff-axioms:3},
 $\triangle ABD\cong \triangle CBD$.
-In particular
+In particular,
 \begin{align*}
 AC&\le AD+DC=
 \\
@@ -474,7 +475,7 @@ Fix a real number $r>0$
 and two distinct points $A$ and $B$.
 Then for 
 any real number $\beta\in [0,\pi]$,
-there is unique point $C_\beta$ such that $BC_\beta=r$
+there is a unique point $C_\beta$ such that $BC_\beta=r$
 and $\measuredangle ABC_\beta=\beta$.
 Moreover, the map $\beta\mapsto C_\beta$ 
 is a continuous map from $[0,\pi]$ to the plane.
@@ -483,7 +484,7 @@ is a continuous map from $[0,\pi]$ to the plane.
 \parit{Proof.}
 The existence and uniqueness of $C_\beta$ follows from Axiom~\ref{def:birkhoff-axioms:2a} and Proposition~\ref{prop:point-on-half-line}.
 
-Note that if $\beta_1\ne\beta_2$ then
+Note that if $\beta_1\ne\beta_2$, then
 $$C_{\beta_1}C_{\beta_2}=s(r,|\beta_1-\beta_2|).$$
 
 Therefore Proposition~\ref{prop:f(r,a)} implies that  the map $\beta\mapsto C_\beta$ is continuous.
@@ -493,20 +494,20 @@ Therefore Proposition~\ref{prop:f(r,a)} implies that  the map $\beta\mapsto C_\b
 
 
 
-\parit{Proof of Theorem~\ref{thm:abc}.}
-Fix points $A$ and $B$ such that $AB=c$.
+\parit{Proof of Theorem~\ref{thm:abc}.}\label{page:proof:thm:abc}
+Fix the points $A$ and $B$ such that $AB=c$.
 Given $\beta\in [0,\pi]$,
 denote by $C_\beta$ the point in the plane such that $BC_\beta=a$ and $\measuredangle ABC=\beta$.
 
 According to Corollary~\ref{cor:C-cont},
 the map
-$\beta\mapsto C_\beta$ is a continuous.
+$\beta\mapsto C_\beta$ is continuous.
 Therefore function $b(\beta)=AC_\beta$ is continuous
-(formally it follows from Exercise~\ref{ex:dist-cont} and Exercise~\ref{ex:comp+cont}).
+(formally, it follows from Exercise~\ref{ex:dist-cont} and Exercise~\ref{ex:comp+cont}).
 
 Note that $b(0)=c-a$ and $b(\pi)=c+a$.
 Since $c-a\le b\le c+a$,
-by Intermediate value theorem (\ref{thm:intermidiate})
+by the Intermediate value theorem (\ref{thm:intermidiate})
 there is $\beta_0\in[0,\pi]$ such that
 $b(\beta_0)=b$.
 Hence the result follows. 
