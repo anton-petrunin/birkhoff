@@ -90,11 +90,11 @@ $$d(A,B)=0.$$
 $$d(A, C) \le d(A, B) + d(B, C).$$
 \end{enumerate}
 A \index{metric space}\emph{metric space} is a set with a metric on it. 
-More formally, a metric space is a pair $(\mathcal X, d)$ where $\mathcal X$ is a set and $d$ is a metric on $\mathcal X$.
+More formally, a metric space is a pair $(\mathcal X, d)$ where $\mathcal X$ is a set and $d$ is a metric on~$\mathcal X$.
 
 The elements of $\mathcal X$ are called \index{point}\emph{points} of the metric space.
 Given two points $A,B\z\in \mathcal X$, 
-the value $d(A, B)$ is called \index{distance}\emph{distance} from $A$ to $B$.
+the value $d(A, B)$ is called \index{distance}\emph{distance} from $A$ to~$B$.
 \end{thm}
 
 \section*{Examples}
@@ -104,12 +104,12 @@ the value $d(A, B)$ is called \index{distance}\emph{distance} from $A$ to $B$.
 \item {}\emph{Discrete metric.} Let $\mathcal X$ be an arbitrary set. 
 For any $A,B\z\in\mathcal X$, 
 set $d(A,B)\z=0$ if $A=B$ and $d(A,B)=1$ otherwise.
-The metric $d$ is called \index{discrete metric}\emph{discrete metric} on $\mathcal X$.
+The metric $d$ is called \index{discrete metric}\emph{discrete metric} on~$\mathcal X$.
 \item\index{real line}\emph{Real line.} Set of all real numbers ($\mathbb{R}$) with metric defined as 
 $$d(A,B)\df|A-B|.$$
 \item {}\emph{Metrics on the plane.}
 Let us denote by $\mathbb{R}^2$ the set of all pairs $(x,y)$ of real numbers.
-Assume $A=(x_A,y_A)$ and $B=(x_B,y_B)$ are arbitrary points in $\mathbb{R}^2$.
+Assume $A=(x_A,y_A)$ and $B=(x_B,y_B)$ are arbitrary points in~$\mathbb{R}^2$.
 One can equip $\mathbb{R}^2$ with the following metrics:
 \begin{itemize}
 \item\index{Euclidean metric}\emph{Euclidean metric,} denoted by \index{d@$d_1$, $d_2$, $d_\infty$}$d_2$ and defined as \label{def:d_2}
@@ -123,7 +123,7 @@ $$d_\infty(A,B)=\max\{|x_A-x_B|,|y_A-y_B|\}.$$
 
 \begin{thm}{Exercise}\label{ex:d_1+d_2+d_infty}
 Prove that the following functions are metrics on $\mathbb{R}^2$:
-(a) $d_1$; (b) $d_2$; (c) $d_\infty$.
+(a)~$d_1$; (b)~$d_2$; (c)~$d_\infty$.
 \end{thm}
 
 
@@ -141,7 +141,7 @@ $$AB
 \text{or}
 \quad
 d_{\mathcal X}(A,B);$$
-the latter is used only if we need to emphasize, that $A$ and $B$ are points of the metric space $\mathcal X$.
+the latter is used only if we need to emphasize, that $A$ and $B$ are points of the metric space~$\mathcal X$.
 
 For example, the triangle inequality can be written as 
 $$AC\le AB+BC.$$
@@ -208,9 +208,9 @@ Describe all the motions of the Manhattan plane, defied on page~\pageref{Manhatt
 \end{thm}
 
 If $\mathcal X$ is a metric space and $\mathcal Y$ is a subset of $\mathcal X$,
-then a metric on $\mathcal Y$ can be obtained by restricting the metric from $\mathcal X$. 
+then a metric on $\mathcal Y$ can be obtained by restricting the metric from~$\mathcal X$. 
 In other words, 
-the distance between two points of $\mathcal Y$ is defined to be the distance between these points in $\mathcal X$.
+the distance between two points of $\mathcal Y$ is defined to be the distance between these points in =~$\mathcal X$.
 This way any subset of a metric space can be also considered as a metric space. 
 
 \begin{thm}{Definition}\label{def:line}
@@ -226,7 +226,7 @@ The following picture shows examples of lines on the Manhattan plane $(\mathbb{R
 \end{center}
 
 \begin{thm}{Exercise}\label{ex:y=|x|}
-Consider the graph $y=|x|$ in $\mathbb{R}^2$.
+Consider the graph $y=|x|$ in =~$\mathbb{R}^2$.
 In which of the following spaces 
 (a) $(\mathbb{R}^2,d_1)$, 
 (b) $(\mathbb{R}^2,d_2)$, 
@@ -247,13 +247,13 @@ How many points $M$ are there on the line $(A B)$ for which we have
 \addtocontents{toc}{Half-lines and segments.}
 
 Assume there is a line $\ell$ passing thru
-two distinct points $P$ and $Q$.
+two distinct points $P$ and =~$Q$.
 In this case we might denote $\ell$ as $(PQ)$.
 There might be more than one line thru $P$ and $Q$,
 but if we write \index{1set@$(PQ)$, $[PQ)$, $[PQ]$}$(PQ)$ we assume that we made a choice of such line. 
 
 Let us denote by $[P Q)$ the \index{half-line}\emph{half-line}
-which starts at $P$ and contains $Q$. 
+which starts at $P$ and contains~$Q$. 
 Formally speaking, $[P Q)$ is a subset of $(P Q)$ which corresponds to $[0,\infty)$ under an isometry $f\:(P Q)\to \mathbb{R}$ such that $f(P)=0$ and $f(Q)>0$.
 
 \begin{thm}{Exercise}\label{ex:trig==}
@@ -261,7 +261,7 @@ Show that if $X\in [PQ)$, then
 $QX=|PX-PQ|$.
 \end{thm}
 
-The subset of line $(P Q)$ between $P$ and $Q$ is called the \index{segment}\emph{segment} between $P$ and $Q$ and denoted by $[P Q]$.
+The subset of line $(P Q)$ between $P$ and $Q$ is called the \index{segment}\emph{segment} between $P$ and $Q$ and denoted by~$[P Q]$.
 Formally, the segment can be defined as the intersection of two half-lines: $[P Q]=[P Q)\cap[Q P)$.
 
 
@@ -304,7 +304,7 @@ in particular $O=O'$.
 On the other hand the equality 
 $\measuredangle AOB\z=\measuredangle A'O'B'$ 
 means only equality of two real numbers;
-in this case $O$ may be distinct from $O'$.
+in this case $O$ may be distinct from~$O'$.
 
 Here is the first property of angle measure which will become a part of the axiom.
 
@@ -318,7 +318,7 @@ Here is the first property of angle measure which will become a part of the axio
 \addtocontents{toc}{Reals modulo $2\cdot\pi$.}
 
 Consider three half-lines starting from the same point,
- $[O A)$, $[O B)$ and $[O C)$.
+ $[O A)$, $[O B)$ and~$[O C)$.
 They make three angles $\angle A O B$, $\angle B O C$ and $\angle A O C$,
 so the angle measure $\measuredangle A O C$ should coincide with
 the sum $\measuredangle A O B+\measuredangle B O C$ up to full rotation.
@@ -334,7 +334,7 @@ We will write
 \alpha&\equiv\beta\pmod{2\cdot\pi}
 \end{align*}
 if $\alpha=\beta+2\cdot\pi\cdot n$
-for some integer $n$.
+for some integer~$n$.
 In this case we say 
 $$\textit{``$\alpha$ is equal to $\beta$ modulo $2\cdot\pi$''}.$$
 For example 
@@ -369,7 +369,7 @@ $$\alpha+\alpha'\equiv\beta+\beta',
 \text{and}
 \quad
 n\cdot\alpha\equiv n\cdot\beta$$
-for any integer $n$.
+for any integer~$n$.
 But ``$\equiv$'' does not in general respect multiplication with non-integer numbers; for example 
 $$\pi
 \equiv 
@@ -416,8 +416,8 @@ d_{\mathcal Y}(f(A),f(A'))
 
 One may define a continuous map of several variables the same way.
 Assume $f(A,B,C)$ is a function which returns a point in the space $\mathcal Y$ for a triple of points $(A,B,C)$
-in the space $\mathcal X$.
-The map $f$ might be defined only for some triples in $\mathcal X$.
+in the space~$\mathcal X$.
+The map $f$ might be defined only for some triples in~$\mathcal X$.
 
 Assume $f(A,B,C)$ is defined.
 Then, we say that $f$ is continuous at the triple $(A,B,C)$ 
@@ -433,7 +433,7 @@ Let $\mathcal{X}$ be a metric space.
 Show that the function 
 $$f(B)\df
 d_{\mathcal{X}}(A,B)$$ 
-is continuous at any point $B$.
+is continuous at any point~$B$.
 \item Show that $d_{\mathcal{X}}(A,B)$ is continuous  at any pair $A,B\in \mathcal{X}$.
 \end{enumerate}
 
@@ -529,7 +529,7 @@ which sends $A\mapsto A$, $B\mapsto C$ and $C\mapsto B$.
 On the other hand,
 $$\triangle ABC\z\ncong \triangle BCA.$$
 Indeed, arguing by contradiction, assume there is a motion $f$ of $(\mathbb{R}^2,d_1)$ which sends $A\mapsto B$ and $B\mapsto C$.
-Note that a point $M$ is a midpoint\footnote{$M$ is a midpoint of $A$ and $B$ if $d_1(A,M)=d_1(B,M)=\tfrac12\cdot d_1(A,B)$.} of $A$ and $B$ if and only if $f(M)$ is a midpoint of $B$ and $C$.
+Note that a point $M$ is a midpoint\footnote{$M$ is a midpoint of $A$ and $B$ if $d_1(A,M)=d_1(B,M)=\tfrac12\cdot d_1(A,B)$.} of $A$ and $B$ if and only if $f(M)$ is a midpoint of $B$ and~$C$.
 The set of midpoints for $A$ and $B$ is infinite, it contains all points $(t,t)$ for $t\in[0,1]$ (it is the dark gray segment on the picture above).
 On the other hand, the midpoint for $B$ and $C$ is unique (it is the black point on the picture).
 Thus, the map $f$ cannot be bijective, a contradiction.

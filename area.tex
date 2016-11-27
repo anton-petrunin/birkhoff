@@ -22,9 +22,9 @@ We say that a point $X$
 lies \index{inside!inside a triangle}\emph{inside} a nondegenerate triangle $\triangle ABC$
 if the following three condition hold:
 \begin{itemize}
-\item $A$ and $X$ lie on the same side from the line $(BC)$;
-\item $B$ and $X$ lie on the same side from the line $(CA)$;
-\item $C$ and $X$ lie on the same side from the line $(AB)$.
+\item $A$ and $X$ lie on the same side from the line~$(BC)$;
+\item $B$ and $X$ lie on the same side from the line~$(CA)$;
+\item $C$ and $X$ lie on the same side from the line~$(AB)$.
 \end{itemize}
 
 \begin{wrapfigure}[5]{o}{20 mm}
@@ -82,7 +82,7 @@ The existence of such relabeling follow from the exercise.
 Let $\triangle ABC$ be nondegenerate and $X\z\in \solidtriangle ABC$.
 Show that $X$ is a vertex of $\triangle ABC$
 if and only if there is a line $\ell$ which intersects $\solidtriangle ABC$
-at the single point $X$.
+at the single point~$X$.
 \end{thm}
 
 \section*{Polygonal sets}
@@ -181,7 +181,7 @@ Note that the union of all sets $\mathcal{P}_i\cap \mathcal{Q}_j$
 forms $\mathcal{P}\cap \mathcal{Q}$.
 
 Therefore, in order to show that $\mathcal{P}\cap \mathcal{Q}$ is polygonal,
-it is sufficient to show that each $\mathcal{P}_i\cap \mathcal{Q}_j$ is polygonal for any pair $i, j$. 
+it is sufficient to show that each $\mathcal{P}_i\cap \mathcal{Q}_j$ is polygonal for any pair $i$,~$j$. 
 The diagram should suggest an idea for the proof of the latter statement.
 \qeds
 
@@ -266,7 +266,7 @@ Any one-point set as well as any segment in the Euclidean plane have  vanishing 
 \end{thm}
 
 \parit{Proof.}
-Fix a line segment $[AB]$.
+Fix a line segment~$[AB]$.
 Consider a sold square $\solidsquare ABCD$.
 
 Note that given a positive integer $n$,
@@ -297,7 +297,7 @@ n\cdot \area[AB]
 \end{align*}
 That is
 \[\area[AB]\le \tfrac1n\cdot\area(\solidsquare ABCD)\] 
-for any positive integer $n$.
+for any positive integer~$n$.
 Therefore, $\area[AB]\le 0$.
 
 On the other hand, by Proposition~\ref{prop:area-positive},
@@ -388,7 +388,7 @@ The proof is similar to the proof of Lemma \ref{lem:R-auto};
 we omit it.
 
 \parit{Proof of Theorem~\ref{thm:area-rect}.}
-Denote by $\mathcal{R}_{a,b}$ the solid rectangle with sides $a$ and $b$.
+Denote by $\mathcal{R}_{a,b}$ the solid rectangle with sides $a$ and~$b$.
 Set 
 \[s(a,b)=\area \mathcal{R}_{a,b}.\]
 
@@ -408,7 +408,7 @@ That is, the first identity in the Algebraic Lemma holds.
 Note that the rectangle $\mathcal{R}_{a+b,c}$
 can be subdivided into two rectangle 
 congruent to $\mathcal{R}_{a,c}$
-and $\mathcal{R}_{b,c}$.
+and~$\mathcal{R}_{b,c}$.
 Therefore, by Proposition~\ref{prop:subdivision}, 
 \[
 \area \mathcal{R}_{a+b,c}=\area \mathcal{R}_{a,c}+\area \mathcal{R}_{b,c}
@@ -424,7 +424,7 @@ It remains to apply Algebraic lemma.
 \addtocontents{toc}{parallelograms}
 
 \begin{thm}{Proposition}\label{prop:area-parallelogram}
-Let $\square ABCD$ be a parallelogram in the Euclidean plane, $a=AB$ and $h$ be the distance between the lines $(AB)$ and $(CD)$.
+Let $\square ABCD$ be a parallelogram in the Euclidean plane, $a=AB$ and $h$ be the distance between the lines $(AB)$ and~$(CD)$.
 Then 
 \[\area(\solidsquare ABCD)=a\cdot h.\]
 
@@ -433,7 +433,7 @@ Then
 
 \parit{Proof.}
 Let us denote by $A'$ and $B'$ the foot points of $A$ and $B$
-on the line $(CD)$.
+on the line~$(CD)$.
 
 Note that $ABB'A'$ is a rectangle with sides $a$ and $h$.
 By Proposition~\ref{thm:area-rect},
@@ -468,7 +468,7 @@ By Proposition~\ref{prop:subdivision},
 
 Note that 
 \[\triangle AA'D\cong \triangle BB'C.\eqlbl{eq:cong-area}\]
-Indeed, since $\square ABB'A'$ and $\square ABCD$ are parallelograms, 
+Indeed, since both $\square ABB'A'$ and $\square ABCD$ are parallelograms, 
 by Lemma~\ref{lem:parallelogram},
 we have $AA'=BB'$, $AD=BC$ and $DC=AB=A'B'$.
 It follows that $A'D=B'C$.
@@ -516,13 +516,13 @@ Then
 \end{thm}
 
 \parbf{Remark.}
-Since $\triangle ABC$ completely determines the solid triangle $\solidtriangle ABC$,
-it is acceptable to write 
-$\area(\triangle ABC)$ for $\area(\solidtriangle ABC)$.
+It is acceptable to write 
+$\area(\triangle ABC)$ for $\area(\solidtriangle ABC)$,
+since $\triangle ABC$ completely determines the solid triangle $\solidtriangle ABC$.
 
 \parit{Proof.}
 Draw the line $m$ thru $A$ which is parallel to $(BC)$
-and line $n$ thru $C$ parallel to $(AB)$.
+and line $n$ thru $C$ parallel to~$(AB)$.
 Note that $m\nparallel n$;
 set $D=m\cap n$.
 By construction, $\square ABCD$ is a parallelogram.
@@ -546,7 +546,7 @@ Therefore,
 +
 \area(\solidtriangle CDA)\]
 
-Since $\square ABCD$ is a parallelogram, by Lemma~\ref{lem:parallelogram} we have
+Since $\square ABCD$ is a parallelogram,  Lemma~\ref{lem:parallelogram} implies that
 \[AB=CD
 \quad
 \text{and}
@@ -600,8 +600,8 @@ Show that
 
 \begin{thm}{Exercise}\label{ex:area-inradius}
 Let $r$ be the inradius of $\triangle ABC$
-and $p$ be its semiperimeter; 
-that is $p=\tfrac12\cdot(AB+BC+CA)$.
+and $p$ be its {}\emph{semiperimeter}; 
+that is, $p=\tfrac12\cdot(AB+BC+CA)$.
 Show that
 \[\area(\solidtriangle ABC)=p\cdot r.\]
 
@@ -611,7 +611,7 @@ Show that
 Show that for any affine transformation $\beta$ there is a constant $k>0$
 such that the equality 
 \[\area[\beta(\solidtriangle)]=k\cdot\area\solidtriangle.\]
-holds for any solid triangle $\solidtriangle$.
+holds for any solid triangle~$\solidtriangle$.
 
 Moreover, if $\beta$ has the matrix form $\left(\begin{smallmatrix}
 x\\ y
@@ -658,7 +658,7 @@ of a right triangle, then
 
 Denote by $\mathcal{T}$ the right solid triangle with legs $a$ and $b$
 and  by $\mathcal{Q}_{x}$ be the solid square 
-with side $x$.
+with side~$x$.
 
 Let us construct two subdivisions of $\mathcal{Q}_{a+b}$.
 
@@ -703,7 +703,7 @@ for any $x>0$.
 Hence the statement follows.\qeds
 
 {
-\begin{wrapfigure}{r}{18.5mm}
+\begin{wrapfigure}{r}{19mm}
 \begin{lpic}[t(-5mm),b(0mm),r(0mm),l(0mm)]{pics/pyth-area-2(1)}
 \end{lpic}
 \end{wrapfigure}
@@ -712,7 +712,7 @@ Hence the statement follows.\qeds
 Build another proof of Pythagorean theorem
 based on the diagram. 
 
-(In the notations above it shows a subdivision of $\mathcal{Q}_c$ into $\mathcal{Q}_{a-b}$ and four copies of $\mathcal{T}$.)
+(In the notations above it shows a subdivision of $\mathcal{Q}_c$ into $\mathcal{Q}_{a-b}$ and four copies of~$\mathcal{T}$.)
 \end{thm}
 
 } 
@@ -758,7 +758,7 @@ By Theorem~\ref{thm:area-of-triangle},
 \parit{Lemma~\ref{lem:bisect-ratio} via Area method.}
 We have to show that if $\triangle A B C$ is nondegenerate
 and the bisector of $\angle BAC$ 
-intersects $[BC]$ at the point $D$.
+intersects $[BC]$ at the point~$D$.
 Then 
 $$\frac{AB}{AC}=\frac{DB}{DC}.$$
 
@@ -766,7 +766,7 @@ Applying  Claim~\ref{clm:area-ratio}, we get
 \[\frac{\area(\solidtriangle ABD)}{\area(\solidtriangle ACD)}
 =\frac{BD}{CD}.\]
 
-By Lemma~\ref{lem:angle-bisect-dist} the triangles $\triangle ABD$ and $\triangle ACD$ have equal altitudes from $D$.
+By Lemma~\ref{lem:angle-bisect-dist} the triangles $\triangle ABD$ and $\triangle ACD$ have equal altitudes from~$D$.
 Applying  Claim~\ref{clm:area-ratio} again, we get
 \[\frac{\area(\solidtriangle ABD)}{\area(\solidtriangle ACD)}=\frac{AB}{AC}.\]
 Hence the result follows.
@@ -839,8 +839,8 @@ for any triangle $\triangle ABC$.
 This number $k$ is called \index{curvature}\emph{curvature};
 $k=0$ for the Euclidean plane,
 $k=-1$ for the h-plane and $k=1$ for the unit sphere
-and $k=\tfrac1{r^2}$ for the sphere of radius $r$.
-In particular it follows that any ideal triangle in h-plane has area $\pi$.
+and $k=\tfrac1{r^2}$ for the sphere of radius~$r$.
+In particular it follows that any ideal triangle in h-plane has area~$\pi$.
 
 The identity \ref{eq:curv-defect} suggest an alternative way to introuduce area function which works on spheres and all absolute planes except the Euclidean plane.
 
@@ -876,7 +876,7 @@ $\mathcal{P}$ and $\mathcal{Q}$ are polygonal sets and $\mathcal{P}\subset\mathc
 \begin{thm}{Exercise}\label{ex:circle-is-quadrable}
 Let $\mathcal{D}$ be the unit disk;
 that is $\mathcal{D}$ is a set which contains 
-the unit circle $\Gamma$ and all the points inside $\Gamma$.
+the unit circle $\Gamma$ and all the points inside~$\Gamma$.
 
 Show that $\mathcal{D}$ is a quadrable set.
 \end{thm}
