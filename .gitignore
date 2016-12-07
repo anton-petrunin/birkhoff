@@ -12,5 +12,6 @@ www/*
 *.ilg
 *.toc
 *.patch
+*.kilepr
 */*.zip
 
