@@ -49,8 +49,8 @@ Assume $M$ is the midpoint of the segment $[AB]$;
 that is, $M\in(A B)$ and $A M \z=  M B$.
 
 
-The line $\ell$ passing thru $M$ and perpendicular to $(AB)$
-is called \index{bisector!perpendicular bisector}\index{perpendicular bisector}\emph{perpendicular bisector} to the segment~$[AB]$. 
+The line $\ell$, that is passing thru $M$ and is perpendicular to $(AB)$,
+is called the \index{bisector!perpendicular bisector}\index{perpendicular bisector}\emph{perpendicular bisector} to the segment~$[AB]$. 
 
 \begin{thm}{Theorem}\label{thm:perp-bisect}
 Given distinct points $A$ and $B$,
@@ -96,8 +96,8 @@ Therefore, $P$ lies on the perpendicular bisector.
 
 
 To prove the converse, 
-suppose $P\ne M$ 
-is any point on the perpendicular bisector to $[A B]$.
+suppose $P$ 
+is any point on the perpendicular bisector to $[A B]$ and $P\ne M$.
 Then $\measuredangle A M P=\pm \tfrac\pi2$, 
 $\measuredangle B M P=\pm \tfrac\pi2$ and
 $A M\z=B M$.
@@ -119,11 +119,11 @@ Show that $AC>BC$ if and only if $|\measuredangle ABC|>|\measuredangle CAB|$.
 
 
 
-\section*{Uniqueness of perpendicular}
-\addtocontents{toc}{Uniqueness of perpendicular.}
+\section*{Uniqueness of a perpendicular}
+\addtocontents{toc}{Uniqueness of perpendicular lines.}
 
 \begin{thm}{Theorem}\label{perp:ex+un}
-There is one and only one line  which pass thru a given point $P$ and perpendicular to a given line~$\ell$.
+There is one and only one line  which passes thru a given point $P$ and is perpendicular to a given line~$\ell$.
 \end{thm}
 
 \begin{wrapfigure}{o}{36mm}
@@ -137,14 +137,14 @@ There is one and only one line  which pass thru a given point $P$ and perpendicu
 \end{wrapfigure}
 
 According to the above theorem, 
-there is unique point $Q\in\ell$ such that $(QP)\perp\ell$.
-This point $Q$ is called \index{foot point}\emph{foot point} of $P$ on~$\ell$. 
+there is a unique point $Q\in\ell$ such that $(QP)\perp\ell$.
+This point $Q$ is called the \index{foot point}\emph{foot point} of $P$ on~$\ell$. 
 
 \parit{Proof.} 
 If $P\in\ell$, then both, existence and uniqueness, follow from Axiom~\ref{def:birkhoff-axioms:2}.
 
 \parit{Existence for $P\not\in\ell$.} 
-Let $A$, $B$ be two distinct points of~$\ell$. 
+Let $A$ and $B$ be two distinct points of~$\ell$. 
 Choose $P'$ so that $AP'\z=AP$ and $\measuredangle P' A B\equiv -\measuredangle P A B$.
 According to Axiom~\ref{def:birkhoff-axioms:3}, $\triangle A P' B\z\cong\triangle A P B$.
 Therefore, $A P= A P'$ and $B P= B P'$.
@@ -171,12 +171,12 @@ Assume $m\perp \ell$ and $m\ni P$.
 Then $m$ is a perpendicular bisector to some segment $[Q Q']$ of $\ell$;
 in particular, $P Q= P Q'$.
 
-Since $\ell$ is perpendicular bisector to $[P P']$,
+Since $\ell$ is the perpendicular bisector to $[P P']$,
 we get $PQ= P'Q$ and $PQ' = P'Q'$.
 Therefore, 
 $$P' Q=P Q=P Q'= P' Q'.$$
 By Theorem~\ref{thm:perp-bisect}, 
-$P'$ lies on the perpendicular bisector to $[QQ']$ which is~$m$.
+$P'$ lies on the perpendicular bisector to $[QQ']$, which is~$m$.
 By Axiom~\ref{def:birkhoff-axioms:1}, $m=(P P')$.
 \qeds
 
@@ -184,7 +184,7 @@ By Axiom~\ref{def:birkhoff-axioms:1}, $m=(P P')$.
 \section*{Reflection}
 \addtocontents{toc}{Reflection.}
 
-Assume a point $P$ and a line $(AB)$ are given.
+Assume the point $P$ and the line $(AB)$ are given.
 To find the \index{reflection}\emph{reflection} $P'$ of $P$   in $(AB)$,
 one drops a perpendicular from $P$ onto $(AB)$, 
 and continues it to the same distance on the other side.
@@ -203,8 +203,8 @@ $\measuredangle BAP'\equiv -\measuredangle BAP$.
 
 \parit{Proof.} 
 Note that if $P\in (AB)$, 
-then $P\z=P'$ 
-and by Corollary~\ref{cor:degenerate=pi} $\measuredangle BAP=0$ or~$\pi$.
+then $P\z=P'$. 
+By Corollary~\ref{cor:degenerate=pi}, $\measuredangle BAP=0$ or~$\pi$.
 Hence the statement follows.
 
 {
@@ -218,22 +218,23 @@ Hence the statement follows.
 \end{wrapfigure}
 
 If $P\notin (AB)$, then~$P'\ne P$.
-By construction, the line $(AB)$ is perpendicular bisector of~$[PP']$.
-Therefore, according to Theorem~\ref{thm:perp-bisect}, $AP'=AP$ and $BP'\z=BP$.
+By the construction of $P'$, 
+the line $(AB)$ is perpendicular bisector of~$[PP']$.
+Therefore, according to Theorem~\ref{thm:perp-bisect}, $AP'\z=AP$ and $BP'\z=BP$.
 In particular, 
 $\triangle ABP'\cong \triangle ABP$.
 Therefore, $\measuredangle BAP'=\pm \measuredangle BAP$.
 
 Since $P'\ne P$ and $AP'=AP$,
-we get $\measuredangle BAP'\ne \measuredangle BAP$.
+we get that $\measuredangle BAP'\ne \measuredangle BAP$.
 That is, we are left with the case
 $$\measuredangle BAP'=-\measuredangle BAP.$$
 \qedsf
 }
 
 \begin{thm}{Corollary}\label{cor:reflection+angle}
-Reflection thru the line is a motion of the plane. 
-More over if $\triangle P'Q'R'$ is the reflection of $\triangle PQR$
+The reflection thru the line is a motion of the plane. 
+Moreover, if $\triangle P'Q'R'$ is the reflection of $\triangle PQR$
 then 
 $$\measuredangle Q'P'R'\equiv -\measuredangle QPR.$$
 
@@ -241,11 +242,11 @@ $$\measuredangle Q'P'R'\equiv -\measuredangle QPR.$$
 
 
 \parit{Proof.}
-From the construction it follows that 
+From the construction, it follows that 
 the composition of two reflections thru 
 the same line, say $(AB)$,
 is the identity map.
-In particular reflection is a bijection.
+In particular any reflection is a bijection.
 
 Assume $P'$, $Q'$ and $R'$
 denote the reflections of the points
@@ -258,7 +259,7 @@ $$P'Q'=PQ
 \measuredangle AP'Q'\equiv-\measuredangle APQ.
 \eqlbl{eq:P'Q'=PQ}$$
 
-Without loss of generality we may assume that the points $P$ and $Q$ are distinct from $A$ and~$B$.
+Without loss of generality, we may assume that the points $P$ and $Q$ are distinct from $A$ and~$B$.
 By Proposition~\ref{prop:reflection},
 \begin{align*}
 \measuredangle BAP'&\equiv -\measuredangle BAP,
@@ -299,8 +300,7 @@ $$\measuredangle Q'P'R'= \measuredangle QPR$$
 for any $\triangle PQR$ and $P'=m(P)$, $Q'=m(Q)$ and $R'=m(R)$;
 if instead we have 
 $$\measuredangle Q'P'R'\equiv -\measuredangle QPR$$ 
-for any $\triangle PQR$ 
-then the motion $m$ is called indirect.
+for any $\triangle PQR$, then the motion $m$ is called indirect.
 
 \begin{thm}{Exercise}\label{ex:2-reflections}
 Let $X$ and $Y$ be the reflections of $P$ 
@@ -314,14 +314,14 @@ $$\measuredangle XBY\equiv 2\cdot \measuredangle ABC.$$
 \addtocontents{toc}{Perpendicular is shortest.}
 
 \begin{thm}{Lemma}\label{lem:perp<oblique}
-Assume $Q$ is the foot point of $P$ on line~$\ell$.
-Then 
+Assume $Q$ is the foot point of $P$ on the line~$\ell$.
+Then the inequality
 $$PX>PQ$$
-for any point $X$ on $\ell$ distinct from~$Q$. 
+holds for any point $X$ on $\ell$ distinct from~$Q$. 
 \end{thm}
 
-If $P$, $Q$ and $\ell$ as above, 
-then $PQ$ is called \index{distance!from a point to a line}\emph{distance from $P$ to $\ell$}. 
+If $P$, $Q$ and $\ell$ are as above, 
+then $PQ$ is called the \index{distance!from a point to a line}\emph{distance from $P$ to $\ell$}. 
 
 \begin{wrapfigure}[14]{o}{20mm}
 \begin{lpic}[t(-2mm),b(0mm),r(0mm),l(0mm)]{pics/oblique(1)}
@@ -338,9 +338,9 @@ If $P\in \ell$,
 then the result follows since  $PQ=0$.
 Further we assume that $P\notin \ell$.
 
-Let $P'$ be the reflection of $P$ in~$\ell$.
+Let $P'$ be the reflection of $P$ in the line~$\ell$.
 Note that $Q$ is the midpoint of $[PP']$
-and $\ell$ is perpendicular bisector of $[PP']$.
+and $\ell$ is the perpendicular bisector of $[PP']$.
 Therefore
 $$PX=P'X
 \quad
@@ -348,7 +348,7 @@ $$PX=P'X
 \quad
 PQ=P'Q=\tfrac12\cdot PP'$$
 
-Note that $\ell$ meets $[PP']$ at the point $Q$ only.
+Note that $\ell$ meets $[PP']$ only at the point $Q$.
 Therefore, by the triangle inequality and  Exercise~\ref{ex:degenerate-trig},
 $$PX+P'X>PP'.$$
 Hence the result follows.
@@ -356,7 +356,8 @@ Hence the result follows.
 
 \begin{thm}{Exercise}\label{ex:obtuce}
 Assume $\angle ABC$ is right or obtuse.
-Show that $$BC>AB.$$
+Show that 
+$$AC>AB.$$
 
 \end{thm}
 
@@ -366,14 +367,13 @@ Show that $$BC>AB.$$
 \addtocontents{toc}{Angle bisectors.}
 
 If $\measuredangle A B X\equiv-\measuredangle C B X$, 
-then we say that line $(BX)$ {}\emph{bisects angle} $\angle ABC$,
+then we say that the line $(BX)$ {}\emph{bisects the angle} $\angle ABC$,
 or line $(BX)$ is the \index{bisector!angle bisector}\emph{bisector} of $\angle ABC$.
-If $\measuredangle A B X\equiv\pi-\measuredangle C B X$, then the line $(BX)$ is called \index{bisector!external bisector}\emph{external bisector} of $\angle ABC$.
+If $\measuredangle A B X\equiv\pi-\measuredangle C B X$, then the line $(BX)$ is called the \index{bisector!external bisector}\emph{external bisector} of $\angle ABC$.
 
-Note that bisector and external bisector are uniquely defined by the angle.
 
-\begin{wrapfigure}[7]{o}{39mm}
-\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(1mm)]{pics/bisectors(1)}
+\begin{wrapfigure}[8]{o}{39mm}
+\begin{lpic}[t(-2mm),b(0mm),r(0mm),l(1mm)]{pics/bisectors(1)}
 \lbl[tr]{30,5;$A$}
 \lbl[rb]{9,10;$B$}
 \lbl[br]{31,29;$C$}
@@ -383,13 +383,11 @@ Note that bisector and external bisector are uniquely defined by the angle.
 \end{lpic}
 \end{wrapfigure}
 
-
-
-Note that if $\measuredangle ABA'=\pi$;
+If $\measuredangle ABA'=\pi$;
 that is, if $B$ lies between $A$ and $A'$,
 then bisector of $\angle ABC$ is the external bisector of $\angle A' B C$ and the other way around.
 
-
+Note that the bisector and the external bisector are uniquely defined by the angle.
 
 
 \begin{thm}{Exercise}\label{ex:perp-bisectors}
@@ -399,7 +397,7 @@ Show that for any angle, its bisector and external bisector are perpendicular.
 
 \begin{thm}{Lemma}\label{lem:angle-bisect-dist}
 Assume $\measuredangle ABC\ne\pi$ nor~$0$.
-Given angle $\angle ABC$ and a point $X$, 
+Given the angle $\angle ABC$ and a point $X$, 
 consider foot points $Y$ and $Z$ of $X$ on $(AB)$ and~$(BC)$.
 
 Then $X Y=X Z$ if and only if $X$ lies on the bisector or external bisector of $\angle ABC$.
@@ -432,7 +430,7 @@ XY'=2\cdot XY
 \quad 
 XZ'=2\cdot XZ.
 $$
-Applying SSS and then SAS congruence conditions, we get
+Applying SSS and then SAS, we get
 $$\begin{aligned}
 XY&=XZ
 \\
@@ -465,7 +463,7 @@ $$2\cdot \measuredangle XBA
 2\cdot \measuredangle XBC
 \equiv 
 -XBZ'.$$
-That is, we can continue the chain of equivalence conditions \ref{eq:iff-chain} the following way
+That is, we can continue the chain of equivalence conditions \ref{eq:iff-chain} the following way:
 $$\measuredangle XBY'
 \equiv 
 \pm \measuredangle BXZ'
@@ -505,17 +503,17 @@ Hence the result follows.
 \addtocontents{toc}{Circles.}
 
 Given a positive real number $r$ and a point $O$,
-the set $\Gamma$ of all points on distance $r$ from $O$ is called \index{circle}\emph{circle} 
+the set $\Gamma$ of all points on distance $r$ from $O$ is called a \index{circle}\emph{circle} 
 with \index{radius}\emph{radius} $r$ and  \index{center}\emph{center}~$O$.
 
-We say that a point $P$ lies \index{inside!inside a circle}\emph{inside} $\Gamma$ if $OP<r$ 
-and if $OP>r$, we say that $P$ lies \index{outside a circle}\emph{outside}~$\Gamma$.
+We say that a point $P$ lies \index{inside!inside a circle}\emph{inside} $\Gamma$ if $OP<r$; 
+if $OP>r$, we say that $P$ lies \index{outside a circle}\emph{outside}~$\Gamma$.
 \label{def:circle}
 
 \begin{thm}{Exercise}\label{ex:inside-outside}
 Let $\Gamma$ be a circle and $P\notin \Gamma$.
 Assume a line $\ell$ is passing thru the point $P$
-intersects $\Gamma$ at two distinct points $X$ and~$Y$.
+and intersects $\Gamma$ at two distinct points, $X$ and~$Y$.
 Show that $P$ is inside $\Gamma$ if and only if $P$ lies between $X$ and~$Y$.
 \end{thm}
 
@@ -535,6 +533,16 @@ Show that the line between centers of $\Gamma$ and $\Gamma'$ forms a perpendicul
 A line and a circle can have at most two points of intersection.
 \end{thm}
 
+\parit{Proof.} Assume $A$, $B$ and $C$ are distinct points which lie on a line $\ell$ and a circle $\Gamma$ with the center~$O$.
+
+Then $OA=OB=OC$; in particular $O$ lies on the perpendicular bisectors 
+$m$ and $n$ to $[A B]$ and $[B C]$ correspondingly.
+
+Note that the midpoints of $[AB]$ and $[BC]$ are distinct.
+Therefore, $m$ and $n$ are distinct.
+The latter contradicts the uniqueness of the perpendicular (Theorem~\ref{perp:ex+un}).
+\qeds
+
 \begin{center}
 \begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/line-circ(1)}
 \lbl[t]{2,3.5;$A$}
@@ -545,16 +553,6 @@ A line and a circle can have at most two points of intersection.
 \lbl[b]{42,17,90;$n$}
 \end{lpic}
 \end{center}
-
-\parit{Proof.} Assume $A$, $B$ and $C$ are distinct points which lie on a line $\ell$ and a circle $\Gamma$ with center~$O$.
-
-Then $OA=OB=OC$; in particular $O$ lies on the perpendicular bisectors 
-$m$ and $n$ to $[A B]$ and $[B C]$ correspondingly.
-
-Note that the midpoints of $[AB]$ and $[BC]$ are distinct.
-Therefore, $m$ and $n$ are distinct.
-The latter contradicts the uniqueness of perpendicular (Theorem~\ref{perp:ex+un}).
-\qeds
 
 \begin{thm}{Exercise}\label{ex:two-circ}
 Show that two distinct circles can have at most two points of intersection.
@@ -572,7 +570,7 @@ If $P$ is the only point of intersection of circles $\Gamma$ and $\Gamma'$,
 we say that \index{tangent!circles}\emph{$\Gamma$ is tangent to $\Gamma$ at $P$}. 
 
 \begin{thm}{Lemma}\label{lem:tangent}
-Let $\ell$ be a line and $\Gamma$ be a circle with center~$O$.
+Let $\ell$ be a line and $\Gamma$ be a circle with the center~$O$.
 Assume $P$ is a common point of $\ell$ and~$\Gamma$. 
 Then $\ell$ is tangent to $\Gamma$ at $P$ if and only if $(PO)\perp \ell$.
 \end{thm}
@@ -583,7 +581,7 @@ Let $Q$ be the foot point of $O$ on~$\ell$.
 Assume~$P\ne Q$.
 Denote by $P'$ the reflection of $P$ thru~$(OQ)$.
 
-Note that $P'\in\ell$ and $(OQ)$ is perpendicular bisector of~$[PP']$.
+Note that $P'\in\ell$ and $(OQ)$ is the perpendicular bisector of~$[PP']$.
 Therefore, $OP=OP'$.
 Hence $P,P'\in \Gamma\cap \ell$;
 that is, $\ell$ is  secant to~$\Gamma$.
@@ -612,26 +610,36 @@ $$OO'=r+r'
 OO'=|r-r'|.$$
 \item \label{ex:tangent-circles-2:b}
 Show that $\Gamma$ intersects $\Gamma'$ if and only if
-$$|r-r'|\le OO'\le r+r'.$$
+$$|r-r'|\le OO'\le r+r'.\ \ \ \ \ \ \ \ \ \ \ \ \ $$%???space for the next pic???
+
 \end{enumerate}
 
 \end{thm}
 
+{
+
+\begin{wrapfigure}{r}{26mm}
+\begin{lpic}[t(-20mm),b(0mm),r(0mm),l(1mm)]{pics/3-circ-2-point(1)}
+\end{lpic}
+\end{wrapfigure}
+
 \begin{thm}{Exercise}\label{ex:tangent-circles-3}
- Assume three circles  intersect at two points.
- Show that the centers of these circles lie on one line.
+Assume three circles intersect at two points as shown on the diagram.
+Prove that the centers of these circles lie on one line.
 \end{thm}
+
+}
 
 \section*{Geometric constructions}
 \addtocontents{toc}{Geometric constructions.}
 
 The \index{ruler-and-compass construction}\emph{ruler-and-compass constructions} in the plane is the construction of points, lines, and circles using only an idealized ruler and compass.
-These construction problems provide a valuable source of exercises in geometry 
+These construction problems provide a valuable source of exercises in geometry, 
 which we will use further in the book.
 In addition, Chapter~\ref{chap:car} is devoted completely to the subject.
 
 The idealized ruler can be used only to draw a line thru the given two points.
-The idealized compass can be used only to draw a circle with given center and radius.
+The idealized compass can be used only to draw a circle with a given center and radius.
 That is, given three points $A$, $B$ and $O$ 
 we can draw the set of all points on distant $AB$ from~$O$.
 We may also mark new points in the plane
@@ -642,7 +650,7 @@ We can also look at the different set of construction tools.
 For example,
 we may only use the ruler or
 we may invent a new tool, 
-say a tool which produce midpoint for given two points.
+say a tool which produces a midpoint for any given two points.
 
 As an example, let us consider the following problem:
 
@@ -668,14 +676,14 @@ which is passing thru~$B$.
 \item Construct the circle 
 with center at $B$ 
 which is passing thru~$A$.
-\item Mark both points of intersection of these circles, label them by $P$ and~$Q$.
+\item Mark both points of intersection of these circles, label them with $P$ and~$Q$.
 \item Draw the line~$(PQ)$.
 \item Mark the point of intersection of $(PQ)$ and $[AB]$; this is the midpoint.
 \end{enumerate}
 
 \medskip
 
-Typically, you need to proof that the construction produce what was expected. Here is a proof for the example above.
+Typically, you need to prove that the construction produces what was expected. Here is a proof for the example above.
 
 \parit{Proof.}
 According to Theorem~\ref{thm:perp-bisect}, $(PQ)$ is the perpendicular bisector to~$[AB]$.
@@ -683,21 +691,21 @@ Therefore, $M=(AB)\cap(PQ)$ is the midpoint of~$[AB]$.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:construction-perpendicular}
-Make a ruler-and-compass construction of the line thru the given point which is perpendicular to the given line.
+Make a ruler-and-compass construction of a line thru a given point which is perpendicular to a given line.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:center}
 Make a ruler-and-compass construction of the center 
-of the given circle.
+of a given circle.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:tangent}
-Make a ruler-and-compass construction of the lines tangent to the given circle which pass thru the given point.
+Make a ruler-and-compass construction of the lines tangent to a given circle which pass thru a given point.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:tangent-circle}
 Given two circles $\Gamma_1$ and $\Gamma_2$ and a segment $[AB]$
-make a ruler-and-compass construction of a circle of radius $AB$ 
+make a ruler-and-compass construction of a circle with the radius $AB$, 
 which is tangent to each circle $\Gamma_1$ and~$\Gamma_2$.
 \end{thm}
 
