@@ -2,18 +2,19 @@
 \label{chap:area}
 \addtocontents{toc}{\protect\begin{quote}}
 
-Any rigorous introduction to area 
-is tedious.
-On the other hand, 
-there is a more general notion called \label{Lebesgue measure}\emph{Lebesgue measure}.
-Historically, the notion of area inspire the development of Lebesgue measure;
-but we will use Lebesgue measure to define of area.
+Historically, the notion of area inspired the development of so called \label{Lebesgue measure}\emph{Lebesgue measure}.
+We will use Lebesgue measure to define of area.
 
 The construction of Lebesgue measure typically use 
 the method of coordinates 
 and it is included in any textbook in Real Analysis.
-The tedious part based of the properties of Lebesgue measure is packed in proof Theorem~\ref{thm:area} 
+The usage of Lebesgue measure is packed in Theorem~\ref{thm:area} 
 and it is given without proof.
+Based on this theorem,  we develop the concept of area with no cheating.
+
+We choose this approach since any rigorous introduction to area is tedious.
+We do not want to cheat and at the same time we do not want to waste readers time; 
+soon or later you will have to learn Lebesgue measure if it is not already done.
 
 \section*{Solid triangles}
 \addtocontents{toc}{Solid  triangles.}
@@ -115,10 +116,10 @@ $\solidtriangle AXB\cup \solidtriangle BYA$
 is a polygonal set which is called \index{solid!quadrilateral, parallelogram,\\ rectangle, square}\index{quadrilateral!solid quadrilateral}\emph{solid quadrilateral} and denoted by 
 \index{1fig@$\solidsquare$}$\solidsquare AXBY$.
 In particular, 
-we can talk about \index{parallelogram!solid parallelogram}\emph{solid parallelograms}, \index{rectangle!solid rectangle}\emph{rectangles} and \index{square!solid square}\emph{squares} in the Euclidean plane.
+we can talk about \index{parallelogram!solid parallelogram}\emph{solid parallelograms}, \index{rectangle!solid rectangle}\emph{rectangles} and \index{square!solid square}\emph{squares}.
 
 \begin{wrapfigure}{o}{38 mm}
-\begin{lpic}[t(-3mm),b(0mm),r(0mm),l(0mm)]{pics/two-subdivisions(1)}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/two-subdivisions(1)}
 \end{lpic}
 \end{wrapfigure}
 
@@ -147,10 +148,10 @@ as well as the intersection $\mathcal{P}\cap\mathcal{Q}$
 are also polygonal sets.
 \end{thm}
 
-A class of sets which closed with respect to union and intersection  is called a {}\emph{ring}.
-The claim above, therefore, states that polygonal sets in the plane form a ring.
+A class of sets which closed with respect to union and intersection  is called a {}\emph{ring of sets}.
+The claim above, therefore, states that polygonal sets in the plane form a ring of sets.
 
-\parit{Semi-proof.}
+\parit{Informal proof.}
 Let us present $\mathcal{P}$ and $\mathcal{Q}$
 as a union of finite collection of elementary sets $\mathcal{P}_1,\dots,\mathcal{P}_k$ 
 and $\mathcal{Q}_1,\dots,\mathcal{Q}_n$ correspondingly.
@@ -171,27 +172,33 @@ Note that
 \mathcal{Q}_n.\]
 Therefore, $\mathcal{P}\cup\mathcal{Q}$ is polygonal.
 
-{
-\begin{wrapfigure}{o}{22 mm}
-\begin{lpic}[t(-2 mm),b(0mm),r(0mm),l(0mm)]{pics/intersection(1)}
-\end{lpic}
-\end{wrapfigure}
+
 
 Note that the union of all sets $\mathcal{P}_i\cap \mathcal{Q}_j$ 
 forms $\mathcal{P}\cap \mathcal{Q}$.
 
 Therefore, in order to show that $\mathcal{P}\cap \mathcal{Q}$ is polygonal,
-it is sufficient to show that each $\mathcal{P}_i\cap \mathcal{Q}_j$ is polygonal for any pair $i$,~$j$. 
-The diagram should suggest an idea for the proof of the latter statement.
-\qeds
+it is sufficient to show that each $\mathcal{P}_i\cap \mathcal{Q}_j$ is polygonal for any pair $i$,~$j$.
 
-}
+{
+
+\begin{wrapfigure}{o}{22 mm}
+\begin{lpic}[t(-2 mm),b(0mm),r(0mm),l(0mm)]{pics/intersection(1)}
+\end{lpic}
+\end{wrapfigure}
+
+The diagram should suggest an idea for the proof of the latter statement in case if $\mathcal{P}_i$ and  $\mathcal{Q}_j$ are solid triangles. 
+The other cases are simpler; a formal proof can be built on Exercise~\ref{ex:triangle-convex}
+\qeds
 
 The following theorem defines the area
 as a function which returns a real number for any polygonal set and satisfying certain conditions.
 We omit the proof of this theorem.
 It follows from the construction of Lebesgue measure 
 which can be found in any text book on Real Analysis.
+
+}
+
 
 \begin{thm}{Theorem}\label{thm:area}
 For each polygonal set $\mathcal{P}$ in the Euclidean plane 
@@ -203,7 +210,7 @@ called \index{area}\emph{area of $\mathcal{P}$}
 \text{and}
 \quad
 \area\mathcal{K}=1\]
-where  $\mathcal{K}$ the solid square with unit side
+where  $\mathcal{K}$ a solid square with unit side
 and the conditions
 \begin{align*}
 \mathcal{P}\cong\mathcal{Q}
@@ -228,19 +235,6 @@ Moreover, the area function
 \[\mathcal{P}\mapsto \area \mathcal{P}\]
 is uniquely defined by the above conditions.
 \end{thm}
-
-Further you will see
-that
-based on this theorem, 
-the concept of area 
-can be painlessly developed to a dissent level 
-without cheating.
-
-It is also psossible to add Theorem~\ref{thm:area} as an extra axiom,
-then the rest of the section becomes completely rigorous.
-
-
-
 
 \begin{thm}{Proposition}\label{prop:area-positive}
 For any polygonal set $\mathcal{P}$ in the Euclidean plane, 
@@ -329,14 +323,24 @@ we get
 &+\area\{C_1\}+\dots+\area\{C_k\}.
 \end{align*}
 By Proposition~\ref{prop:area-segment}, the right hand side vanish.
-Hence the statement follows.
+
+On the other hand, by Proposition~\ref{prop:area-positive},
+$\area\mathcal{P}\ge 0$;
+hence the statement follows.
 \qeds
 
+\begin{wrapfigure}[5]{o}{24 mm}
+\begin{lpic}[t(-5 mm),b(0 mm),r(0mm),l(0mm)]{pics/subdivision(1)}
+\lbl[]{6.5,6.5;$\mathcal{Q}_1$}
+\lbl[]{16,9;$\mathcal{Q}_2$}
+\lbl[t]{13,1;$\mathcal{R}$}
+\end{lpic}
+\end{wrapfigure}
 
 We say that polygonal set $\mathcal{P}$ is \index{subdivision of polygonal set}\emph{subdivided} 
 into two polygonal sets $\mathcal{Q}_1$ and $\mathcal{Q}_2$ 
 if $\mathcal{P}=\mathcal{Q}_1\cup\mathcal{Q}_2$ 
-and the intersection $\mathcal{Q}_1\cap\mathcal{Q}_2$ is degenerate.
+and the intersection $\mathcal{Q}_1\cap\mathcal{Q}_2$ is a degenerate polygonal set.
 (Recall that according to Claim~\ref{clm:poly-ring},
 the set $\mathcal{Q}_1\cap\mathcal{Q}_2$ is polygonal.)
 
@@ -441,12 +445,12 @@ By Proposition~\ref{thm:area-rect},
 
 \begin{wrapfigure}{o}{41 mm}
 \begin{lpic}[t(-3mm),b(0mm),r(0mm),l(0mm)]{pics/par-rect(1)}
-\lbl[t]{1,-1;$A$}
-\lbl[t]{17,-1;$B$}
-\lbl[b]{39,12.5;$C$}
-\lbl[b]{24,12.5;$D$}
-\lbl[b]{1.5,12.5;$A'$}
-\lbl[b]{17.5,12.5;$B'$}
+\lbl[t]{1,0;$A$}
+\lbl[t]{17,0;$B$}
+\lbl[b]{39,13.5;$C$}
+\lbl[b]{24,13.5;$D$}
+\lbl[b]{1.5,13.5;$A'$}
+\lbl[b]{17.5,13.5;$B'$}
 \end{lpic}
 \end{wrapfigure}
 
@@ -644,7 +648,7 @@ a&b\\ c&d
 
 In this section we will give examples of
 slim proofs using area.
-Note that these proofs are not truly elementary --- the price one pays to introduce the area function is high.
+Note that these proofs are not truly elementary since the price one pays to introduce the area function is high.
 
 We start with the proof of the Pythagorean theorem.
 In the Elements of Euclid, Pythagorean theorem was formulated as equality  \ref{eq:pyth+area} below
@@ -755,7 +759,7 @@ By Theorem~\ref{thm:area-of-triangle},
 \end{lpic}
 \end{wrapfigure}
 
-\parit{Lemma~\ref{lem:bisect-ratio} via Area method.}
+\parit{Proof of Lemma~\ref{lem:bisect-ratio} via Area method.}
 We have to show that if $\triangle A B C$ is nondegenerate
 and the bisector of $\angle BAC$ 
 intersects $[BC]$ at the point~$D$.
@@ -773,7 +777,7 @@ Hence the result follows.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:area-medians}
-Let $X$ lies inside a nondegenerate triangle $\triangle ABC$.
+Assume that the point $X$ lies inside a nondegenerate triangle $\triangle ABC$.
 Show that $X$ lies on the median from $A$ if and only if 
 \[\area(\solidtriangle ABX)=\area(\solidtriangle ACX).\]
 \end{thm}
@@ -842,7 +846,7 @@ $k=-1$ for the h-plane and $k=1$ for the unit sphere
 and $k=\tfrac1{r^2}$ for the sphere of radius~$r$.
 In particular it follows that any ideal triangle in h-plane has area~$\pi$.
 
-The identity \ref{eq:curv-defect} suggest an alternative way to introuduce area function which works on spheres and all absolute planes except the Euclidean plane.
+The identity \ref{eq:curv-defect} suggest a simpler way to introduce area function which works on spheres and all absolute planes except for the Euclidean plane.
 
 
 
