@@ -48,12 +48,15 @@ urlcolor=black%
 %THEOREM
 \newcounter{thm}[chapter]
 \renewcommand{\thethm}{\thechapter.\arabic{thm}}
-\def\claim#1{\par\medskip\noindent\refstepcounter{thm}\hbox{\bf \arabic{chapter}.\arabic{thm}. #1.}
+\newcommand\claim[2][{}]{\par\medskip\noindent\refstepcounter{thm}\hbox{\bf \arabic{chapter}.\arabic{thm}. #2.#1}
 \it\ %\ignorespaces
 }
 \def\endclaim{
 \par\medskip}
 \newenvironment{thm}{\claim}{\endclaim}
+
+\def\a{\textit{a}}
+\def\abs{$\!\!{}^{{}^{\a}}$}
 
 \def\epsilon{\varepsilon}
 \def\phi{\varphi}

@@ -52,7 +52,7 @@ that is, $M\in(A B)$ and $A M \z=  M B$.
 The line $\ell$, that is passing thru $M$ and is perpendicular to $(AB)$,
 is called the \index{bisector!perpendicular bisector}\index{perpendicular bisector}\emph{perpendicular bisector} to the segment~$[AB]$. 
 
-\begin{thm}{Theorem}\label{thm:perp-bisect}
+\begin{thm}[\abs]{Theorem}\label{thm:perp-bisect}
 Given distinct points $A$ and $B$,
 all points equidistant from $A$ and $B$ and no
 others lie on the perpendicular bisector to~$[A B]$.
@@ -122,19 +122,9 @@ Show that $AC>BC$ if and only if $|\measuredangle ABC|>|\measuredangle CAB|$.
 \section*{Uniqueness of a perpendicular}
 \addtocontents{toc}{Uniqueness of perpendicular lines.}
 
-\begin{thm}{Theorem}\label{perp:ex+un}
+\begin{thm}[\abs]{Theorem}\label{perp:ex+un}
 There is one and only one line  which passes thru a given point $P$ and is perpendicular to a given line~$\ell$.
 \end{thm}
-
-\begin{wrapfigure}{o}{36mm}
-\begin{lpic}[t(-0mm),b(-3mm),r(0mm),l(0mm)]{pics/perp(1)}
-\lbl[rb]{1.5,18;$A$}
-\lbl[lb]{33,18;$B$}
-\lbl[t]{15,16;$\ell$}
-\lbl[lb]{23,33;$P$}
-\lbl[lt]{23,2;$P'$}
-\end{lpic}
-\end{wrapfigure}
 
 According to the above theorem, 
 there is a unique point $Q\in\ell$ such that $(QP)\perp\ell$.
@@ -149,12 +139,35 @@ Choose $P'$ so that $AP'\z=AP$ and $\measuredangle P' A B\equiv -\measuredangle 
 According to Axiom~\ref{def:birkhoff-axioms:3}, $\triangle A P' B\z\cong\triangle A P B$.
 Therefore, $A P= A P'$ and $B P= B P'$.
 
+{
+
+\begin{wrapfigure}{o}{36mm}
+\begin{lpic}[t(-0mm),b(-3mm),r(0mm),l(0mm)]{pics/perp(1)}
+\lbl[rb]{1.5,18;$A$}
+\lbl[lb]{33,18;$B$}
+\lbl[t]{15,16;$\ell$}
+\lbl[lb]{23,33;$P$}
+\lbl[lt]{23,2;$P'$}
+\end{lpic}
+\end{wrapfigure}
+
 
 According to Theorem~\ref{thm:perp-bisect}, $A$ and $B$ lie on the perpendicular bisector to~$[P P']$.
 In particular $(P P')\perp (A B)=\ell$.
 
+\parit{Uniqueness for $P\not\in\ell$.} 
+From above we can choose a point $P'$ in such a way that $\ell$ forms the perpendicular bisector to~$[PP']$.
+
+Assume $m\perp \ell$ and $m\ni P$.
+Then $m$ is a perpendicular bisector to some segment $[Q Q']$ of $\ell$;
+in particular, $P Q= P Q'$.
+
+}
+
+{
+
 \begin{wrapfigure}{i}{36mm}
-\begin{lpic}[t(-8mm),b(-3mm),r(0mm),l(0mm)]{pics/perp-unique(1)}
+\begin{lpic}[t(-2mm),b(-0mm),r(0mm),l(0mm)]{pics/perp-unique(1)}
 \lbl[rb]{2,16;$Q$}
 \lbl[lb]{33,16;$Q'$}
 \lbl[lb]{18.5,28;$P$}
@@ -163,13 +176,6 @@ In particular $(P P')\perp (A B)=\ell$.
 \lbl[b]{17,20,90;$m$}
 \end{lpic}
 \end{wrapfigure}
-
-\parit{Uniqueness for $P\not\in\ell$.} 
-From above we can choose a point $P'$ in such a way that $\ell$ forms the perpendicular bisector to~$[PP']$.
-
-Assume $m\perp \ell$ and $m\ni P$.
-Then $m$ is a perpendicular bisector to some segment $[Q Q']$ of $\ell$;
-in particular, $P Q= P Q'$.
 
 Since $\ell$ is the perpendicular bisector to $[P P']$,
 we get $PQ= P'Q$ and $PQ' = P'Q'$.
@@ -180,6 +186,7 @@ $P'$ lies on the perpendicular bisector to $[QQ']$, which is~$m$.
 By Axiom~\ref{def:birkhoff-axioms:1}, $m=(P P')$.
 \qeds
 
+}
 
 \section*{Reflection}
 \addtocontents{toc}{Reflection.}
@@ -193,7 +200,7 @@ According to Theorem~\ref{perp:ex+un}, $P'$ is uniquely determined by~$P$.
 
 Note that $P=P'$ if and only if $P\in(AB)$.
 
-\begin{thm}{Proposition}\label{prop:reflection}
+\begin{thm}[\abs]{Proposition}\label{prop:reflection}
 Assume $P'$ is a reflection of the point $P$ in the line~$(AB)$.
 Then $AP'=AP$ 
 and if $A\ne P$, 
@@ -230,9 +237,11 @@ we get that $\measuredangle BAP'\ne \measuredangle BAP$.
 That is, we are left with the case
 $$\measuredangle BAP'=-\measuredangle BAP.$$
 \qedsf
-}
 
-\begin{thm}{Corollary}\label{cor:reflection+angle}
+}
+\newpage %???fix
+
+\begin{thm}[\abs]{Corollary}\label{cor:reflection+angle}
 The reflection thru the line is a motion of the plane. 
 Moreover, if $\triangle P'Q'R'$ is the reflection of $\triangle PQR$
 then 
@@ -313,7 +322,7 @@ $$\measuredangle XBY\equiv 2\cdot \measuredangle ABC.$$
 \section*{Perpendicular is shortest}
 \addtocontents{toc}{Perpendicular is shortest.}
 
-\begin{thm}{Lemma}\label{lem:perp<oblique}
+\begin{thm}[\abs]{Lemma}\label{lem:perp<oblique}
 Assume $Q$ is the foot point of $P$ on the line~$\ell$.
 Then the inequality
 $$PX>PQ$$
@@ -395,7 +404,7 @@ Show that for any angle, its bisector and external bisector are perpendicular.
 \end{thm}
 
 
-\begin{thm}{Lemma}\label{lem:angle-bisect-dist}
+\begin{thm}[\abs]{Lemma}\label{lem:angle-bisect-dist}
 Assume $\measuredangle ABC\ne\pi$ nor~$0$.
 Given the angle $\angle ABC$ and a point $X$, 
 consider foot points $Y$ and $Z$ of $X$ on $(AB)$ and~$(BC)$.
@@ -529,7 +538,7 @@ Show that the line between centers of $\Gamma$ and $\Gamma'$ forms a perpendicul
 
 
 
-\begin{thm}{Lemma}\label{lem:line-circle}
+\begin{thm}[\abs]{Lemma}\label{lem:line-circle}
 A line and a circle can have at most two points of intersection.
 \end{thm}
 
@@ -569,7 +578,7 @@ two circles might have 2, 1 or 0 points of intersections.
 If $P$ is the only point of intersection of circles $\Gamma$ and $\Gamma'$,
 we say that \index{tangent!circles}\emph{$\Gamma$ is tangent to $\Gamma$ at $P$}. 
 
-\begin{thm}{Lemma}\label{lem:tangent}
+\begin{thm}[\abs]{Lemma}\label{lem:tangent}
 Let $\ell$ be a line and $\Gamma$ be a circle with the center~$O$.
 Assume $P$ is a common point of $\ell$ and~$\Gamma$. 
 Then $\ell$ is tangent to $\Gamma$ at $P$ if and only if $(PO)\perp \ell$.
