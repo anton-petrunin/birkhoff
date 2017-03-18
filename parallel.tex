@@ -12,13 +12,13 @@ in the second case, $\ell$ and $m$ are said to be \index{parallel lines}\emph{pa
 in addition, a line is always regarded as parallel to itself.
 
 
-\begin{thm}[\abs]{Proposition}\label{prop:perp-perp}Let $\ell$, $m$ and $n$ be the lines.
+\begin{thm}[\abs]{Proposition}\label{prop:perp-perp}Let $\ell$, $m$ and $n$ be three lines.
 Assume that $n\perp m$ and $m\perp \ell$.
 Then $\ell\parallel n$. 
 \end{thm}
 
 \parit{Proof.}
-Assume contrary; 
+Assume the contrary; 
 that is, $\ell\nparallel n$.
 Then there is a point, say $Z$, of intersection of $\ell$ and~$n$.
 Then by Theorem \ref{perp:ex+un},
@@ -28,9 +28,9 @@ Since any line is parallel to itself, we have $\ell\parallel n$, a contradiction
 \qeds
 
 \begin{thm}{Theorem}\label{thm:parallel}
-Given a point $P$ and line $\ell$
-there is unique line $m$
-which pass thru $P$ and parallel to~$\ell$.
+For any point $P$ and any line $\ell$
+there is a unique line $m$
+which passes thru $P$ and is parallel to~$\ell$.
 \end{thm}
 
 The above theorem has two parts, existence and uniqueness.
@@ -38,15 +38,15 @@ In the proof of uniqueness we will use Axiom~\ref{def:birkhoff-axioms:4} for the
 
 \parit{Proof; existence.} 
 Apply Theorem \ref{perp:ex+un} two times,
-first to construct line $m$ thru $P$ which is perpendicular to $\ell$
-and second to construct line $n$ thru $P$ which is perpendicular to~$m$.
+first to construct the line $m$ thru $P$ which is perpendicular to $\ell$,
+and second to construct the line $n$ thru $P$ which is perpendicular to~$m$.
 Then apply Proposition~\ref{prop:perp-perp}.
 
 \parit{Uniqueness.}
 If $P\in\ell$, then $m=\ell$ by the definition of parallel lines.
 Further we assume $P\notin\ell$.
 
-Let us construct lines $n\ni P$ and $m\ni P$ as in the proof of existence, so $m\parallel \ell$.
+Let us construct the lines $n\ni P$ and $m\ni P$ as in the proof of existence, so $m\parallel \ell$.
 
 Assume there is yet another line $s\ni P$ which is distinct from $m$ and parallel to~$\ell$.
 Choose a point $Q\in s$ which lies with $\ell$ on the same side from~$m$.
@@ -99,14 +99,15 @@ Show that if $k\parallel m$, then $\ell\parallel n$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:construction-parallel}
-Make a ruler-and-compass construction of the line thru the given point which is parallel to the given line.
+Make a ruler-and-compass construction of a line thru a given point which is parallel to a given line.
 \end{thm}
 
 \section*{Similar triangles}
 \addtocontents{toc}{Similar triangles.}
 
 Two triangles $\triangle A' B' C'$ and $\triangle A B C$ are 
-\index{triangle!similar triangles}\index{similar triangles}\emph{similar} (briefly \index{1rel@$\sim$}$\triangle A' B' C'\z\sim\triangle A B C$) if their sides are proportional, that is, 
+\index{triangle!similar triangles}\index{similar triangles}\emph{similar} (briefly \index{1rel@$\sim$}$\triangle A' B' C'\z\sim\triangle A B C$) if their sides are proportional; 
+that is, 
 $$A' B'
 =
 k\cdot A B,
@@ -120,7 +121,7 @@ C' A'
 k\cdot C A
 \eqlbl{dist}
 $$
-for some $k>0$ and 
+for some $k>0$, and 
 $$
 \begin{aligned}
 \measuredangle A' B' C'&=\pm\measuredangle A B C,
@@ -134,8 +135,7 @@ $$
 
 \parbf{Remarks.}
 \begin{itemize}
-\item According to \ref{thm:signs-of-triug},
-in the above three equalities the signs can be assumed to me the same.
+\item According to \ref{thm:signs-of-triug}, in the above three equalities, the signs can be assumed to be the same.
 
 \item If $\triangle A' B' C'\sim\triangle A B C$ with $k=1$ in \ref{dist}, 
  then $\triangle A' B' C'\z\cong\triangle A B C$.
@@ -153,24 +153,23 @@ $$\triangle A'' B'' C''\sim\triangle A B C.$$
 \end{enumerate}
 \end{itemize}
 
-Using ``$\sim$'',
-the Axiom~\ref{def:birkhoff-axioms:4} can be formulated the following way.
+Using the notation ``$\sim$'', Axiom~\ref{def:birkhoff-axioms:4} can be formulated the following way.
 
 \begin{thm}{Reformulation of Axiom~\ref{def:birkhoff-axioms:4}}
-If for two triangles 
+If for the two triangles 
 $\triangle ABC$, 
-$\triangle AB'C'$
+$\triangle AB'C'$,
 and $k>0$ we have
 $B'\in [AB)$,
 $C'\in [AC)$,
 $AB'=k\cdot AB$ and
-$AC'=k\cdot AC$
+$AC'=k\cdot AC$,
 then $\triangle ABC\sim\triangle AB'C'$.
 \end{thm}
 
 In other words, the Axiom~\ref{def:birkhoff-axioms:4} provides 
-a condition which guarantee that two triangles are similar.
-Let us formulate yet three such conditions.
+a condition which guarantees that two triangles are similar.
+Let us formulate three more such {}\emph{similarity conditions}.
 
 \begin{thm}{Similarity conditions}\label{prop:sim}
 Two triangles 
@@ -205,13 +204,13 @@ CB=k\cdot C'B'.$$
 
 \end{thm}
 
-Each of these conditions is proved by applying the Axiom~\ref{def:birkhoff-axioms:4} with SAS, ASA and SSS congruence conditions correspondingly
+Each of these conditions is proved by applying Axiom~\ref{def:birkhoff-axioms:4} with SAS, ASA and SSS congruence conditions correspondingly
 (see Axiom~\ref{def:birkhoff-axioms:3} and the conditions \ref{thm:ASA}, \ref{thm:SSS}).
 
 
 \parit{Proof.}
 Set $k=\tfrac{AB}{A'B'}$.
-Choose points $B''\in [A'B')$ and $C''\in [A'C')$
+Choose points $B''\in [A'B')$ and $C''\in [A'C')$,
 so that $A'B''=k\cdot A'B'$ and $A'C''=k\cdot A'C'$.
 By Axiom~\ref{def:birkhoff-axioms:4},
 $\triangle A'B'C'\z\sim \triangle A'B''C''$.
@@ -243,7 +242,7 @@ by $B'$ the foot point of $B$ on~$(AC)$.
 Prove that $\triangle A'B'C\sim \triangle ABC$.
 \end{thm}
 
-A bijection from plane to itself is called \emph{angle preserving transformation}{angle preserving} if 
+A bijection from a plane to itself is called \index{angle preserving transformation}\emph{angle preserving transformation} if 
 \[\measuredangle ABC= \measuredangle A'B'C'\]
 for any triangle $\triangle ABC$ and its image $\triangle A'B'C'$.
 
@@ -263,7 +262,7 @@ The sides adjacent to the right angle are called \index{leg}\emph{legs}.
 
 
 \begin{thm}{Theorem}\label{thm:pyth}
-Assume $\triangle ABC$ is a right triangle with right angle at~$C$.
+Assume $\triangle ABC$ is a right triangle with the right angle at~$C$.
 Then
 $$AC^2+BC^2=AB^2.$$ 
 
@@ -291,34 +290,32 @@ Therefore, $D$ lies between $A$ and $B$;
 in particular, 
 $$AD+BD=AB.\eqlbl{AD+BD=AB}$$
 
-Note that by AA similarity condition, we have
+Note that by the AA similarity condition, we have
 $$\triangle ADC\sim\triangle ACB\sim \triangle CDB.$$
 In particular 
 $$
-\begin{aligned}
-   \frac{A D}{A C}&=\frac{A C}{A B}
-   &
-   &\text{and}
-   &
-   \frac{B D}{B C}&=\frac{B C}{B A}.
-  \end{aligned}
+\frac{A D}{A C}=\frac{A C}{A B}
+\quad
+\text{and}
+\quad
+\frac{B D}{B C}=\frac{B C}{B A}.
 \eqlbl{BCD}$$
 
-Let us rewrite identities \ref{BCD} on another way:
+Let us rewrite the two identities in \ref{BCD}:
 \begin{align*}
-AC^2&=AB\cdot AD
-&
-&\text{and}
-&
-BC^2&=AB\cdot B D.
+AC^2=AB\cdot AD
+\quad
+\text{and}
+\quad
+BC^2=AB\cdot B D.
 \end{align*}
-Summing up above two identities and applying \ref{AD+BD=AB}, we get
+Summing up these two identities and applying \ref{AD+BD=AB}, we get
 $$AC^2 +BC^2=AB\cdot (AD+ B D)=AB^2.$$
 \qedsf
 
-The idea the proof above appears in the Elements, see \cite[X.33]{euclid},
+The idea in the proof above appears in the Elements, see \cite[X.33]{euclid},
 but the proof given there \cite[I.47]{euclid} is different; 
-it use area method discussed in Chapter \ref{chap:area}.
+it uses area method discussed in Chapter \ref{chap:area}.
 
 
 \begin{thm}{Exercise}\label{ex:pyth}
@@ -328,7 +325,7 @@ $$CD^2=AD\cdot BD.$$
 
 \end{thm}
 
-The following exercise is the converse to Pythagorean theorem.
+The following exercise is the converse to the Pythagorean theorem.
 
 \begin{thm}{Exercise}\label{ex:pyth-conv}
 Assume $\triangle ABC$ is a triangle such that  
@@ -340,7 +337,7 @@ Prove that the angle at $C$ is right.
 
 
 
-\section*{Angles of triangle}
+\section*{Angles of triangles}
 \addtocontents{toc}{Angles of triangle.}
 
 \begin{thm}{Theorem}\label{thm:3sum}
@@ -399,7 +396,7 @@ M K  &=\tfrac12\cdot   C A,
 &
  K L &=  \tfrac12\cdot A B.
 \end{align*}
-According to SSS condition (\ref{prop:sim}),
+According to the SSS condition (\ref{prop:sim}),
 $\triangle K L M\sim \triangle ABC$. 
 Thus,
 $$\measuredangle M K L=\pm \alpha,
@@ -411,8 +408,7 @@ $$\measuredangle M K L=\pm \alpha,
 According to \ref{thm:signs-of-triug}, the ``$+$'' or ``$-$''  sign is to be
 the same in \ref{eq:pm-a-b-c}.
 
-If in \ref{eq:pm-a-b-c} we have ``$+$'' 
-then \ref{eq:a+b+c} follows since
+If in \ref{eq:pm-a-b-c} we have ``$+$'', then \ref{eq:a+b+c} follows since
 $$\beta+\gamma+\alpha
 \equiv
 \measuredangle  A M L + \measuredangle L M K + \measuredangle K M B
@@ -423,11 +419,11 @@ $$\beta+\gamma+\alpha
 $$
 
 It remains to show that we cannot have ``$-$'' in \ref{eq:pm-a-b-c}.
-In this case the same argument as above gives
+If this is the case, then the same argument as above gives
 $$\alpha+\beta-\gamma\equiv\pi.$$
 The same way we get 
-$$\alpha-\beta+\gamma\equiv\pi$$
-Adding last two identities we get 
+$$\alpha-\beta+\gamma\equiv\pi.$$
+Adding the last two identities, we get 
 $$2\cdot\alpha\equiv0.$$
 Equivalently 
 $\alpha\equiv\pi$ or $0$;
@@ -455,7 +451,7 @@ Find the angles of $\triangle ABC$.
 
 \begin{thm}{Exercise}\label{ex:|3sum|}
 Show that 
-$$|\measuredangle A B C|+ |\measuredangle  B C A| + |\measuredangle  C A B| = \pi.$$
+$$|\measuredangle A B C|+ |\measuredangle  B C A| + |\measuredangle  C A B| = \pi$$
 for any $\triangle ABC$.
 \end{thm} 
 
@@ -471,7 +467,7 @@ for any $\triangle ABC$.
 \end{wrapfigure}
 
 \begin{thm}{Exercise}\label{ex:right-isos}
-Let $\triangle ABC$ be an isosceles nondegenerate triangle with base~$[AC]$.
+Let $\triangle ABC$ be an isosceles nondegenerate triangle with the base~$[AC]$.
 Consider the point $D$ on the extension of the side $[AB]$ 
  such that $AB=BD$.
 Show that $\angle ACD$ is right.
@@ -479,7 +475,7 @@ Show that $\angle ACD$ is right.
 
 \begin{thm}{Exercise}\label{ex:pi/4-isos}
 Let $\triangle ABC$ be an isosceles nondegenerate triangle with base~$[AC]$. 
-Assume that circle $\Gamma$ pass thru $A$,
+Assume that a circle is passing thru $A$,
 centered at a point on $[AB]$ and tangent to $(BC)$ at the point~$X$.
 Show that $\measuredangle CAX=\pm\tfrac\pi4$.
 \end{thm}
@@ -489,8 +485,7 @@ Show that $\measuredangle CAX=\pm\tfrac\pi4$.
 \section*{Transversal property}
 \addtocontents{toc}{Transversal property.}
 
-If a line $t$ intersects each line $\ell$ and $m$ at one point
-then we say that $t$ is a \index{transversal}\emph{transversal} to $\ell$ and~$m$.
+If the line $t$ intersects each line $\ell$ and $m$ at one point, then we say that $t$ is a \index{transversal}\emph{transversal} to $\ell$ and~$m$.
 On the diagram below, line $(CB)$ is a transversal 
 to $(AB)$ and~$(CD)$.
 
@@ -524,7 +519,7 @@ $A$ and $D$ lie on the same sides of~$(BC)$.
 \end{wrapfigure}
 
 \parit{Proof.} 
-If $(AB)\nparallel(C D)$
+If $(AB)\nparallel(C D)$,
 then there is $Z\in (AB)\cap(C D)$ 
 and $\triangle BCZ$ is nondegenerate.
 
@@ -544,11 +539,11 @@ that is, \ref{A B C + B C D} does not hold.
 
 Note that if the points $A$, $B$ and $C$ are fixed,
 the identity \ref{A B C + B C D} uniquely defines the line~$(C D)$.
-Therefore, by Theorem~\ref{thm:parallel}, 
-if $(AB)\z\parallel(C D)$, then equality \ref{A B C + B C D} holds.
+By Theorem~\ref{thm:parallel}, it follows that
+if $(AB)\z\parallel(C D)$, then the equality \ref{A B C + B C D} holds.
 
 Applying Proposition~\ref{prop:half-plane},
-we get the last part of Transversal property.
+we get the last part of the transversal property.
 \qeds
 
 
@@ -559,7 +554,7 @@ Show that $\triangle ABC\sim\triangle AB'C'$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:trisection}
-Trisect given segment with ruler and compass.
+Trisect a given segment with a ruler and a compass.
 \end{thm}
 
 
@@ -574,19 +569,30 @@ A quadrilateral formed by quadruple $(A,B,C,D)$ will be denoted by \index{1gon@$
 
 Given a quadrilateral $\square ABCD$,
 the four segments $[AB]$, $[BC]$, $[CD]$ and $[DA]$ are called \index{side!side of quadrilateral}\emph{sides of $\square ABCD$};
-the remaining two segments $[AC]$ and $[BD]$ are called \index{diagonals of quadrilateral}\emph{diagonals of $ABCD$}.
+the remaining two segments $[AC]$ and $[BD]$ are called \index{diagonals of quadrilateral}\emph{diagonals of $\square ABCD$}.
 
 
 \begin{thm}{Exercise}\label{ex:quadrilateral}
-Show for any quadrilateral $\square ABCD$  in the Euclidean plane we have
+Show that for any quadrilateral $\square ABCD$, we have
 $$\measuredangle ABC+\measuredangle BCD+\measuredangle CDA+\measuredangle DAB\equiv 0.$$
 
 \end{thm}
 
 A quadrilateral $\square ABCD$ in the Euclidean plane is called \index{quadrilateral!degenerate quadrilateral}\index{degenerate!quadrilateral}\emph{nondegenerate} if any three points from $A,B,C,D$ do not lie on one line.
 
-The nondegenerate quadrilateral $\square ABCD$ is called \index{parallelogram}\emph{parallelogram}
+A nondegenerate quadrilateral $\square ABCD$ is called a \index{parallelogram}\emph{parallelogram}
 if $(AB)\z\parallel (CD)$ and $(BC)\z\parallel (DA)$.
+
+{
+
+\begin{wrapfigure}{o}{32mm}
+\begin{lpic}[t(-2mm),b(0mm),r(1mm),l(1mm)]{pics/parallelogram(1)}
+\lbl[bl]{29,27.5;$A$}
+\lbl[br]{7,27.5;$B$}
+\lbl[t]{-.5,.5;$C$}
+\lbl[t]{22.5,.5;$D$}
+\end{lpic}
+\end{wrapfigure}
 
 \begin{thm}{Lemma}\label{lem:parallelogram}
 If $\square A B C D$ is a parallelogram, then
@@ -596,16 +602,6 @@ If $\square A B C D$ is a parallelogram, then
 \end{enumerate}
 \end{thm}
 
-{
-
-\begin{wrapfigure}{o}{32mm}
-\begin{lpic}[t(2mm),b(0mm),r(1mm),l(1mm)]{pics/parallelogram(1)}
-\lbl[bl]{29,27.5;$A$}
-\lbl[br]{7,27.5;$B$}
-\lbl[t]{-.5,.5;$C$}
-\lbl[t]{22.5,.5;$D$}
-\end{lpic}
-\end{wrapfigure}
 
 \parit{Proof.}
 Since $(AB)\parallel (CD)$,
@@ -615,12 +611,14 @@ Hence $\angle ABD$ and $\angle ABC$ have the same sign.
 Analogously, 
 $\angle CBD$ and $\angle CBA$ have the same sign. 
 
+}
+
 Since $\measuredangle ABC\equiv -\measuredangle CBA$,
 we get that the angles $\angle DBA$ and $\angle DBC$ have opposite signs; 
 that is,  $A$ and $C$ lie on the opposite sides of~$(BD)$.
 
 
-According to Transversal property (\ref{thm:parallel-2}), 
+According to the transversal property (\ref{thm:parallel-2}), 
 $$\measuredangle B D C
 \equiv 
 -\measuredangle DBA
@@ -630,12 +628,12 @@ $$\measuredangle B D C
 \measuredangle DBC
 \equiv 
 -\measuredangle BDA.$$
-By ASA condition
+By the ASA condition
 $\triangle A B D\cong \triangle C D B$.
-Which implies both statements in the lemma.
+The latter implies both statements in the lemma.
 \qeds
 
-}
+
 
 \begin{thm}{Exercise}\label{ex:romb}
 Assume $\square ABCD$ is a quadrilateral such that
@@ -643,37 +641,34 @@ Assume $\square ABCD$ is a quadrilateral such that
 Show that $\square ABCD$ is a parallelogram.
 \end{thm}
 
-A quadrilateral as in the exercise above is called \index{rhombus}\emph{rhombus}.
+A quadrilateral as in the exercise above is called a \index{rhombus}\emph{rhombus}.
 
 \begin{thm}{Exercise}\label{ex:diad-par}
-Show that diagonals of parallelogram intersect each other at the midpoint.
+Show that diagonals of a parallelogram intersect each other at their midpoints.
 \end{thm}
 
-A quadraliteral $\square ABCD$ is called \index{rectangle}\emph{rectangle} if the angles $\angle ABC$, $\angle BCD$, $\angle CDA$ and $\angle DAB$ are right.
-Note that according to Transversal property (\ref{thm:parallel-2}),
+A quadraliteral $\square ABCD$ is called a \index{rectangle}\emph{rectangle} if the angles $\angle ABC$, $\angle BCD$, $\angle CDA$ and $\angle DAB$ are right.
+Note that according to the transversal property \ref{thm:parallel-2},
 any rectangle is a parallelogram.
 
-If in addition $AB=BC=CD=DA$, then the rectangle $\square ABCD$ is called \index{square}\emph{square}.
-In other words a square is a rectangle which is also a rhombus.
+A rectangle with equal sides is called a \index{square}\emph{square}.
 
 \begin{thm}{Exercise}\label{ex:rectangle}
-Show that parallelogram $\square ABCD$ is a rectangle
+Show that the parallelogram $\square ABCD$ is a rectangle
 if and only if $AC=BD$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:romb2}
-Show that parallelogram $\square ABCD$ is a rhombus
+Show that the parallelogram $\square ABCD$ is a rhombus
 if and only if $(AC)\perp (BD)$.
 \end{thm}
 
-Assume $\ell\parallel m$
-and $X,Y\in m$.
+Assume $\ell\parallel m$, and $X,Y\in m$.
 Denote by $X'$ and $Y'$ the foot points of $X$ and $Y$ on~$\ell$.
 Note that $\square XYY'X'$ is a rectangle.
-By Lemma~\ref{lem:parallelogram}, $XX'=YY'$;
-that is the distance from any point $X\in m$ to $\ell$ is the same.
-This distance is called \index{distance!between parallel lines}\emph{distance between} $\ell$ and~$m$.
-
+By Lemma~\ref{lem:parallelogram}, $XX'=YY'$.
+That is, any point on $m$ lies on the same distance from $\ell$.
+This distance is called the \index{distance!between parallel lines}\emph{distance between} $\ell$ and~$m$.
 
 
 \section*{Method of coordinates}
@@ -682,22 +677,10 @@ This distance is called \index{distance!between parallel lines}\emph{distance be
 The following exercise is important;
 it shows that our axiomatic definition agrees with the model definition described on page \pageref{def:d_2}.
 
-\begin{wrapfigure}{o}{33mm}
-\begin{lpic}[t(2mm),b(0mm),r(0mm),l(4mm)]{pics/PQlm(1)}
-\lbl[br]{12,10;$P$}
-\lbl[bl]{23,22;$Q$}
-\lbl[t]{11,0;$P_\ell$}
-\lbl[t]{22,0;$Q_\ell$}
-\lbl[r]{1,8;$P_m$}
-\lbl[r]{1,21;$Q_m$}
-\lbl[t]{28,1;$\ell$}
-\lbl[b]{1,28,90;$m$}
-\end{lpic}
-\end{wrapfigure}
 
 \begin{thm}{Exercise}\label{ex:coordinates} 
 Let $\ell$ and $m$ be perpendicular lines in the Euclidean plane.
-Given a points $P$  denote by $P_\ell$ and $P_m$ the foot points of $P$ on $\ell$ and $m$ correspondingly.
+Given a point $P$,  denote by $P_\ell$ and $P_m$ the foot points of $P$ on $\ell$ and $m$ correspondingly.
 
 
 \begin{enumerate}[(a)]
@@ -712,22 +695,35 @@ for any pair of points $P$ and~$Q$.
 \end{enumerate}
 
 \begin{enumerate}[(a)]\addtocounter{enumi}{2}
-\item Conclude that Euclidean plane is isometric to $(\mathbb{R}^2,d_2)$ defined on page \pageref{def:d_2}.
+\item Conclude that the plane is isometric to $(\mathbb{R}^2,d_2)$; see page \pageref{def:d_2}.
 \end{enumerate}
 
 \end{thm}
 
-Once this exercise solved, we can apply 
+\begin{wrapfigure}[8]{o}{33mm}
+\begin{lpic}[t(2mm),b(0mm),r(0mm),l(4mm)]{pics/PQlm(1)}
+\lbl[br]{12,10;$P$}
+\lbl[bl]{23,22;$Q$}
+\lbl[t]{11,0;$P_\ell$}
+\lbl[t]{22,0;$Q_\ell$}
+\lbl[r]{1,8;$P_m$}
+\lbl[r]{1,21;$Q_m$}
+\lbl[t]{28,1;$\ell$}
+\lbl[b]{1,28,90;$m$}
+\end{lpic}
+\end{wrapfigure}
+
+Once this exercise is solved, we can apply 
 the method of coordinates
 to solve any problem in Euclidean plane geometry.
 This method is powerful, 
 but it is often considered as a bad style.
 
 \begin{thm}{Exercise}\label{ex:abc}
-Use the Exercise~\ref{ex:coordinates},
+Use the Exercise~\ref{ex:coordinates}
 to give an alternative proof of Theorem~\ref{thm:abc} in the Euclidean plane.
 
-That is, prove that given real numbers $a$, $b$ and $c$ such that 
+That is, prove that given the real numbers $a$, $b$ and $c$ such that 
  $$0<a\le b\le c\le a+c,$$
 there is a triangle $\triangle ABC$
 such that $a=BC$, $b=CA$ and $c=AB$.
