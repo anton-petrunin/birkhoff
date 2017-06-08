@@ -43,7 +43,7 @@ will be called \index{triangle!solid triangle}\index{solid!triangle}\emph{solid 
 
 \begin{thm}{Exercise}\label{ex:triangle-convex}
 Show that solid triangle is \index{convex set}\emph{convex};
-that is if $X,Y\in\solidtriangle ABC$,
+that is, if $X,Y\in\solidtriangle ABC$,
 then $[XY]\subset \solidtriangle ABC$.
 \end{thm}
 
@@ -55,7 +55,8 @@ Recall that $\triangle ABC$ is an ordered triple of distinct points
 (see page \pageref{page:def:triangle}),
 while $\solidtriangle ABC$ is an infinite set of points.
 
-In particular $\solidtriangle ABC=\solidtriangle BAC$; indeed any point which belong to the set $\solidtriangle ABC$ 
+In particular, $\solidtriangle ABC=\solidtriangle BAC$. 
+Indeed, any point which belong to the set $\solidtriangle ABC$ 
 also belongs to the set $\solidtriangle BAC$
 and the other way around.
 On the other hand,
@@ -388,8 +389,80 @@ Then
 for any $a,b>0$.
 \end{thm}
 
-The proof is similar to the proof of Lemma \ref{lem:R-auto};
-we omit it.
+The following proof is similar to the proof of the lemma \ref{lem:R-auto}.
+
+\parit{Proof.}
+Note that if $a>a'$ and $b>b'$ then 
+\[s(a,b)\ge s(a',b').\eqlbl{s(a,b)>s(a',b')}\]
+Indeed, since $s$ returns nonnegative numbers, we get
+\begin{align*}
+s(a,b)&=s(a',b)+s(a-a',b)\ge
+\\
+&\ge s(a,b)=
+\\
+&\ge s(a',b')+s(a',b-b')\ge
+\\
+&\ge s(a',b').
+\end{align*}
+
+Applying the second and third identity few times we get that
+\begin{align*}
+s(a,m\cdot b)=s(m\cdot a,b)=m\cdot s(a,b)
+\end{align*}
+for any positive integer $m$. Therefore
+\begin{align*}
+s(\tfrac kl,\tfrac mn)&=k \cdot s(\tfrac 1l,\tfrac mn)=
+\\
+&=k\cdot m \cdot s(\tfrac 1l,\tfrac 1n)=
+\\
+&=k\cdot m\cdot \tfrac 1l\cdot s(1, \tfrac 1n)=
+\\
+&=k\cdot m\cdot \tfrac 1l\cdot \tfrac 1n\cdot s(1,1)=
+\\
+&=\tfrac kl\cdot\tfrac mn.
+\end{align*}
+That is, the needed identity holds for any pair of rational numbers of the form $a=\tfrac kl$ and $b=\tfrac mn$.
+
+Arguing by contradiction, assume $s(a,b)\ne a\cdot b$ for some pair of positive real numbers $(a,b)$. 
+We will consider two cases: $s(a,b)> a\cdot b$ and $s(a,b)< a\cdot b$.
+
+If $s(a,b)> a\cdot b$,
+we can choose a positive integer $n$ such that
+\[s(a,b)> (a+\tfrac1n)\cdot (b+\tfrac1n).\eqlbl{s(a,b)>}\]
+Set $k=\lfloor a\cdot n \rfloor+1$ and $m=\lfloor b\cdot n \rfloor+1$;
+equivalently, $k$ and $m$ are positive integers such that
+\[a< \tfrac kn\le a+\tfrac1n
+\quad\text{and}\quad 
+b<\tfrac mn\le b+\tfrac1n.\]
+By \ref{s(a,b)>s(a',b')}, we get
+\begin{align*}
+s(a,b)&\le s(\tfrac kn,\tfrac mn)=
+\\
+&=\tfrac kn\cdot\tfrac mn\le
+\\
+&\ge (a+\tfrac1n)(b+\tfrac1n),
+\end{align*}
+which contradicts \ref{s(a,b)>}.
+
+The case $s(a,b)< a\cdot b$ is similar.
+We can fix a positive integer $n$ such that $a>\tfrac1n$, $b>\tfrac1n$ and
+\[s(a,b)< (a-\tfrac1n)\cdot (b-\tfrac1n).\eqlbl{s(a,b)<}\]
+Set $k=\lceil a\cdot n \rceil-1$ and $m=\lceil b\cdot n \rceil-1$; that is,
+\[a> \tfrac kn\ge a-\tfrac1n
+\quad\text{and}\quad 
+b>\tfrac mn\ge b-\tfrac1n.\]
+Applying \ref{s(a,b)>s(a',b')} again, 
+we get
+\begin{align*}
+s(a,b)&\ge s(\tfrac kn,\tfrac mn)=
+\\
+&=\tfrac kn\cdot\tfrac mn\ge
+\\
+&\ge (a-\tfrac1n)(b-\tfrac1n),
+\end{align*}
+which contradicts \ref{s(a,b)<}.
+\qeds
+
 
 \parit{Proof of Theorem~\ref{thm:area-rect}.}
 Denote by $\mathcal{R}_{a,b}$ the solid rectangle with sides $a$ and~$b$.
@@ -417,10 +490,10 @@ Therefore, by Proposition~\ref{prop:subdivision},
 \[
 \area \mathcal{R}_{a+b,c}=\area \mathcal{R}_{a,c}+\area \mathcal{R}_{b,c}
 \]
-That is, the second identity in the Algebraic Lemma holds.
+That is, the second identity in the algebraic lemma holds.
 The proof of the third identity is analogues.
 
-It remains to apply Algebraic lemma.
+It remains to apply the algebraic lemma.
 \qeds
 
 
@@ -476,7 +549,7 @@ Indeed, since both $\square ABB'A'$ and $\square ABCD$ are parallelograms,
 by Lemma~\ref{lem:parallelogram},
 we have $AA'=BB'$, $AD=BC$ and $DC=AB=A'B'$.
 It follows that $A'D=B'C$.
-Applying SSS congruence condition, we get \ref{eq:cong-area}.
+Applying the SSS congruence condition, we get \ref{eq:cong-area}.
 
 In particular,
 \[\area(\solidtriangle BB'C)=\area (\solidtriangle AA'D).
@@ -556,7 +629,7 @@ Since $\square ABCD$ is a parallelogram,  Lemma~\ref{lem:parallelogram} implies 
 \text{and}
 \quad
 BC=DA.\]
-Therefore, by SSS congruence condition, we have
+Therefore, by the SSS congruence condition, we have
 $\triangle ABC\cong\triangle CDA$.
 In particular
 \[\area(\solidtriangle ABC)
@@ -844,7 +917,7 @@ This number $k$ is called \index{curvature}\emph{curvature};
 $k=0$ for the Euclidean plane,
 $k=-1$ for the h-plane and $k=1$ for the unit sphere
 and $k=\tfrac1{r^2}$ for the sphere of radius~$r$.
-In particular it follows that any ideal triangle in h-plane has area~$\pi$.
+In particular, it follows that any ideal triangle in h-plane has area~$\pi$.
 
 The identity \ref{eq:curv-defect} suggest a simpler way to introduce area function which works on spheres and all absolute planes except for the Euclidean plane.
 
@@ -879,7 +952,7 @@ $\mathcal{P}$ and $\mathcal{Q}$ are polygonal sets and $\mathcal{P}\subset\mathc
 
 \begin{thm}{Exercise}\label{ex:circle-is-quadrable}
 Let $\mathcal{D}$ be the unit disk;
-that is $\mathcal{D}$ is a set which contains 
+that is, $\mathcal{D}$ is a set which contains 
 the unit circle $\Gamma$ and all the points inside~$\Gamma$.
 
 Show that $\mathcal{D}$ is a quadrable set.
