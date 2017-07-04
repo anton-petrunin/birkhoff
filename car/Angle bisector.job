@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<CaR version="20150810">
+<CaR version="12.0">
 <Construction job="true" last="r2" target1="l1">
 <Window x="0.0" y="0.0" w="8.0"/>
 <Assignment>
 <P>Construct the bisector of the given angle.</P>
 </Assignment>
 <Objects>
-<Point name="P1" n="0" x="-2.885245901639344" y="-1.8142076502732234" shape="circle">Point at -2.88525, -1.81421</Point>
-<Point name="P2" n="1" hidden="true" x="-0.5683060109289615" y="3.169398907103825" shape="circle">Point at -0.56831, 3.1694</Point>
+<Point name="P1" n="0" x="-2.8852459016393444" y="-1.8142076502732238" shape="circle">Point at -2.88525, -1.81421</Point>
+<Point name="P2" n="1" hidden="true" x="-0.5683060109289616" y="3.169398907103825" shape="circle">Point at -0.56831, 3.1694</Point>
 <Ray name="r1" n="2" from="P1" to="P2">Ray from P1 pointing to P2</Ray>
-<Point name="P3" n="3" hidden="true" x="3.6284153005464486" y="-0.4590163934426226" shape="circle">Point at 3.62842, -0.45902</Point>
+<Point name="P3" n="3" hidden="true" x="3.628415300546449" y="-0.45901639344262263" shape="circle">Point at 3.62842, -0.45902</Point>
 <Ray name="r2" n="4" from="P1" to="P3">Ray from P1 pointing to P3</Ray>
 <Ray name="r3" n="18" hidden="true" from="P1" to="P3">Ray from P1 pointing to P3</Ray>
 <Circle name="c1" n="19" hidden="true" through="P2" midpoint="P1" acute="true">Circle around P1 through P2</Circle>
@@ -19,6 +19,10 @@
 <Intersection name="I3" n="23" hidden="super" first="c2" second="c3" which="second">Intersection between c2 and c3</Intersection>
 <Intersection name="I4" n="24" hidden="super" first="c3" second="c2" which="second">Intersection between c3 and c2</Intersection>
 <Line name="l1" n="5" from="I3" to="I4">Line through I3 and I4</Line>
+<Text name="Text1" n="25" x="-2.7631578947368407" y="-2.1052631578947363">Constuct the bisector
+of the given angle.</Text>
+<Text name="Text2" n="26" x="-2.6315789473684204" y="-3.7105263157894735"></Text>
+<Text name="Text3" n="27" x="-1.8421052631578947" y="-3.7368421052631584">???</Text>
 </Objects>
 </Construction>
 </CaR>
