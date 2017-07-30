@@ -201,8 +201,8 @@ Hence the result follows.
 \setcounter{eqtn}{0}
 
 \parbf{Exercise~\ref{ex:infinite}.} By Axiom~\ref{def:birkhoff-axioms:0}, there are at least two points in the plane.
-By Axioms~\ref{def:birkhoff-axioms:1}, 
-it contains a line. 
+Therefore, by Axioms~\ref{def:birkhoff-axioms:1}, 
+the plane contains a line. 
 It remains to note that line is an infinite set of points.
 
 \parbf{Exercise~\ref{ex:[OA)=[OA')}.}
@@ -235,7 +235,7 @@ $$2\cdot\measuredangle BOC
 By Exercise~\ref{ex:2a=0}, 
 it implies that 
 $\measuredangle BOC=0$ or~$\pi$.
-It remains to apply Exercise~\ref{ex:2.4} and Theorem~\ref{thm:straight-angle} correspondingly in these cases.
+It remains to apply Exercise~\ref{ex:2.4} and Theorem~\ref{thm:straight-angle} correspondingly in these two cases.
 
 \parbf{Exercise~\ref{ex:O-mid-AB+CD}.} 
 Applying Proposition~\ref{prop:vert}, we get 
@@ -291,14 +291,14 @@ Hence the result follows.
 
 \parbf{Exercise~\ref{ex:signs-PXQ-PYQ}.}
 Apply Theorem~\ref{thm:signs-of-triug} for $\triangle PQX$ and $\triangle PQY$ and then 
-Proposition~\ref{prop:half-plane}(\ref{prop:half-plane:angle}).
+apply Proposition~\ref{prop:half-plane}(\ref{prop:half-plane:angle}).
 
 \parbf{Exercise~\ref{ex:chevinas}.} 
-Note that it is sufficient to consider the cases when $A'\ne B,C$ and $B'\ne A, C$.
+Note that it is sufficient to consider the cases when $A'\z\ne B,C$ and $B'\ne A, C$.
 
 Apply Pasch's theorem (\ref{thm:pasch}) twice;
-for $\triangle AA'C$ with line $(BB')$
-and for $\triangle BB'C$ with line~$(AA')$.
+for $\triangle AA'C$ with  $(BB')$
+and for $\triangle BB'C$ with~$(AA')$.
 
 \parbf{Exercise~\ref{ex:Z}.}
 Assume that $Z$ is the point of intersection.
@@ -306,7 +306,7 @@ Assume that $Z$ is the point of intersection.
 Note that $Z\ne P$ and $Z\ne Q$.
 Therefore, $Z\notin (PQ)$.
 
-Then show that $Z$ and $X$ lie on one side from~$(PQ)$.
+Show that $Z$ and $X$ lie on one side from~$(PQ)$.
 Repeat the argument to show that $Z$ and $Y$ lie on one side from~$(PQ)$.
 It follows that $X$ and $Y$ lie on the same side from $(PQ)$, a contradiction.
 
@@ -315,21 +315,22 @@ It follows that $X$ and $Y$ lie on the same side from $(PQ)$, a contradiction.
 \setcounter{eqtn}{0}
 
 \parbf{Exercise~\ref{ex:equilateral}.}
-Apply Theorem~\ref{thm:isos} twice for different basis of $\triangle ABC$.
+Apply Theorem~\ref{thm:isos} twice.
 
 \parbf{Exercise~\ref{ex:SMS}.} 
-Consider point $D$ and $D'$, so that 
+Consider the points $D$ and $D'$, such that 
 $M$ is the midpoint of $[AD]$
 and 
 $M'$ is the midpoint of~$[A'D']$.
 Show first that $\triangle ABD\z\cong \triangle A'B'D'$.
 
-\parbf{Exercise~\ref{ex:isos-sides}.} To prove \textit{(a)}, apply SAS.
-To prove \textit{(b)}, use \textit{(a)} and apply SSS.
+\parbf{Exercise~\ref{ex:isos-sides}.} \textit{(a)} Apply SAS.
+
+\parit{(b)} Use \textit{(a)} and apply SSS.
 
 \parbf{Exercise~\ref{ex:degenerate-trig}.}
 Choose $B'\in [AC]$ such that $AB=AB'$.
-Note that $BC=B'C$.
+Note that $BC\z=B'C$.
 By SSS, 
  $\triangle ABC\cong AB'C$.
 
@@ -345,7 +346,8 @@ The same way we get
 $$\measuredangle CBX\equiv - \measuredangle CBX'.$$
 Subtracting these two identities from each other, we get
 $$\measuredangle ABC\equiv -\measuredangle ABC.$$
-Therefore, $\triangle ABC$ is degenerate, a contradiction. 
+Conclude that $\measuredangle ABC=0$ or $\pi$.
+That is, $\triangle ABC$ is degenerate, a contradiction. 
 
 
 \section*{Chapter~\ref{chap:perp}}
@@ -368,7 +370,7 @@ and $[BX]$ intersects $\ell$,
 say at the point~$Y$.
 
 \begin{wrapfigure}[7]{r}{25mm}
-\begin{lpic}[t(-5mm),b(0mm),r(0mm),l(0mm)]{pics/pbisec-side(1)}
+\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/pbisec-side(1)}
 \lbl[tr]{1,1;$A$}
 \lbl[tl]{23,1;$B$}
 \lbl[br]{7,21;$X$}
@@ -381,8 +383,8 @@ Note that $Y\notin [AX]$.
 By Exercise~\ref{ex:degenerate-trig},
 $$BX=AY+YX>AX.$$
 
-This way we proved ``if''-part.
-To prove ``only if'', it remains to switch $A$ and $B$,
+This way we proved the ``if'' part.
+To prove the ``only if'' part, it remains to switch $A$ and $B$,
 repeat the above argument and yet apply Theorem~\ref{thm:perp-bisect}.
 
 
@@ -426,6 +428,7 @@ Therefore,
  2\cdot \measuredangle ABC.
 \end{align*}
 
+{
 
 \begin{wrapfigure}{r}{21mm}
 \begin{lpic}[t(-6mm),b(0mm),r(0mm),l(0mm)]{pics/ex-obtuce(1)}
@@ -445,9 +448,11 @@ Draw a line $(BD)$ perpendicular to~$(BC)$.
 Since $\angle ABC$ is obtuse, 
 the angles $DBA$ and $DBC$ have opposite signs.
 
+}
+
 By Proposition~\ref{prop:half-plane},
-the points $A$ and $C$ lie on the opposite sides from~$(AD)$.
-In particular, $[AC]$ intersects $(BD)$, say at point~$X$.
+$A$ and $C$ lie on the opposite sides from~$(AD)$.
+In particular, $[AC]$ intersects $(BD)$ at a point; denote it by~$X$.
 
 Note that $AX<AC$ and by Lemma~\ref{lem:perp<oblique}, $AB\le AX$.
 Hence the result follows.
@@ -477,22 +482,21 @@ that is, $P$ lies  inside~$\Gamma$.
 If $P$ does not lie between $X$ and $Y$, we can assume that $X$ lies between $P$ and~$Y$.
 Since $OX=OY$, Exercise~\ref{ex:obtuce} implies that $\angle OXY$ is acute.
 Therefore,  $\angle OXP$ is obtuse.
-Applying Exercise~\ref{ex:obtuce} again we get $OP>OX$;
+Applying Exercise~\ref{ex:obtuce} again we get $OP\z>OX$;
 that is, $P$ lies outside~$\Gamma$.
 
 \parbf{Exercise~\ref{ex:chord-perp}.} Apply Theorem \ref{thm:perp-bisect}.
 
-\parbf{Exercise~\ref{ex:two-circ}.} Use Exercise~\ref{ex:chord-perp} and the uniqueness of perpendicular (Theorem~\ref{perp:ex+un}).
+\parbf{Exercise~\ref{ex:two-circ}.} Use Exercise~\ref{ex:chord-perp} and Theorem~\ref{perp:ex+un}.
 
 \parbf{Exercise~\ref{ex:tangent-circles}.} 
 Let $P'$ be the reflection of $P$ in~$(OO')$.
 Note that $P'$ lies on both circles and $P'\ne P$ if and only if $P\notin(OO')$.
 
 \parbf{Exercise~\ref{ex:tangent-circles-2}.} 
-To prove (a),
-apply Exercise~\ref{ex:tangent-circles}.
+\textit{(a)} Apply Exercise~\ref{ex:tangent-circles}.
 
-To prove (b), apply Theorem~\ref{thm:abc}.
+\parit{(b)} Apply Theorem~\ref{thm:abc}.
 
 \parbf{Exercise~\ref{ex:tangent-circles-3}.}
 Let $A$ and $B$ be the points of intersection.
@@ -526,14 +530,14 @@ Show first that~$k\perp n$.
 \parbf{Exercise~\ref{ex:construction-parallel}.}
 Repeat twice the construction in Exercise~\ref{ex:construction-perpendicular}.
 
-\parbf{Exercise~\ref{ex:sim+foots}.} 
-First show that $\triangle AA'C\sim \triangle BB'C$.
-
 \parbf{Exercise~\ref{ex:angle-preserving-euclid}.}
-Applying the AA similarity condition, the transformation multiplies the sides of any nondegenerate triangle by some number which may depend on the triangle. 
+By the AA similarity condition, the transformation multiplies the sides of any nondegenerate triangle by some number which may depend on the triangle. 
 
 Note that for any two nondegenerate triangles which share one side this number is the same.
 Applying this observation to a chain of triangles leads to a solution.
+
+\parbf{Exercise~\ref{ex:sim+foots}.} 
+First show that $\triangle AA'C\sim \triangle BB'C$.
 
 \parbf{Exercise~\ref{ex:pyth}.}
 Apply that $\triangle ADC\sim \triangle CDB$.
@@ -627,8 +631,9 @@ $$-\measuredangle DCA\equiv \measuredangle CAB.$$
 It follows that $(AB)\parallel (CD)$.
 
 \parbf{Exercise~\ref{ex:diad-par}.}
-Apply Lemma~\ref{lem:parallelogram},
-the transversal property (\ref{thm:parallel-2}) to the diagonals and a pair of opposite sides and then the ASA-congruence condition (\ref{thm:ASA}).
+Apply Lemma~\ref{lem:parallelogram} together with
+the transversal property (\ref{thm:parallel-2}) to the diagonals and a pair of opposite sides.
+After that use the ASA-congruence condition (\ref{thm:ASA}).
 
 \parbf{Exercise~\ref{ex:rectangle}.} 
 By Lemma~\ref{lem:parallelogram} and SSS, 
@@ -637,7 +642,7 @@ By Lemma~\ref{lem:parallelogram} and SSS,
 \iff
 \quad
 \measuredangle ABC=\pm \measuredangle BCD.\]
-By the transversal property~\ref{thm:parallel-2}, 
+By the transversal property~(\ref{thm:parallel-2}), 
 \[\measuredangle ABC+\measuredangle BCD\equiv \pi.\]
 
 Therefore, 
@@ -650,9 +655,9 @@ Therefore,
 =\pm\tfrac\pi2.\]
 
 \parbf{Exercise~\ref{ex:romb2}.} 
-Consider a parallelogram $ABCD$.
+Fix a parallelogram $ABCD$.
 By Exercise~\ref{ex:diad-par},
-the diagolals $[AC]$ and $[BD]$ have common midpoint, say~$M$.
+its diagolals $[AC]$ and $[BD]$ have common midpoint, say~$M$.
 
 Use SSS and Lemma \ref{lem:parallelogram} to show that
 \[AB=CD
@@ -671,7 +676,7 @@ Use SSS and Lemma \ref{lem:parallelogram} to show that
 
 \parbf{Exercise~\ref{ex:coordinates}.} \textit{(a).} Use the uniqueness of parallel line (Theorem~\ref{thm:parallel}).
 
-\parit{(b)} Use lemma about parallelogram (Lemma~\ref{lem:parallelogram}) and Pythagorean theorem (\ref{thm:pyth}).
+\parit{(b)} Use Lemma~\ref{lem:parallelogram} and the Pythagorean theorem (\ref{thm:pyth}).
 
 \parbf{Exercise~\ref{ex:abc}.}
 Set $A=(0,0)$, $B=(c,0)$ and $C=(x,y)$.
@@ -681,7 +686,7 @@ $AC^2=x^2+y^2$ and $BC^2=(c-x)^2+y^2$.
 It remains to show that the there is a pair of real numbers $(x,y)$ 
 which satisfy the following system of equations 
 $$
-\left[
+\left\{
 \begin{aligned}
 b^2&=x^2+y^2
 \\
@@ -716,17 +721,7 @@ Apply Theorem~\ref{thm:circumcenter} and Theorem~\ref{thm:perp-bisect}.
 \parbf{Exercise~\ref{ex:orthic-4}.}
 Note that $(AC)\perp (BH)$ and $(BC)\perp (AH)$ and apply Theorem~\ref{thm:orthocenter}.
 
-\parbf{Exercise~\ref{ex:angle-altitude}.}
-Show that $\triangle ABB'\sim\triangle ACC'$.
-Use it to show that $\triangle AB'C'\z\sim\triangle ABC$.
-Conclude that $\measuredangle ABC\equiv   \pm\measuredangle C'B'A$.
 
-Finally observe that $\measuredangle BAC\equiv -\measuredangle B'AC'$ and use \ref{thm:signs-of-triug}.
-
-
-\parbf{Exercise~\ref{ex:orthocener-bisects}.}
-Observe that $2\cdot A'H=A'A$.
-Apply AA similarity condition to show that $\triangle AA'C\sim\triangle BB'C \sim\triangle BA'H$  and use it.
 
 
 \parbf{Exercise~\ref{ex:midle}.}
@@ -743,11 +738,11 @@ It can be proved along the same lines as Lemma~\ref{lem:bisect-ratio}.
 
 \parbf{Exercise~\ref{ex:bisect=median}.}
 Apply Lemma~\ref{lem:bisect-ratio}.
-(Check Exercise~\ref{ex:abs-bisect=median} for yet another solution.)
+See also the solution of Exercise~\ref{ex:abs-bisect=median}.
 
 
 \parbf{Exercise~\ref{ex:bisect=altitude}.}
-Apply ASA for the two triangles which bisector cuts from the original triangle. 
+Apply ASA for the two triangles which the bisector cuts from the original triangle. 
 
 \parbf{Exercise~\ref{ex:2x=b+c-a}.}
 Let $I$ be the incenter.
@@ -786,16 +781,16 @@ therefore
 $$\measuredangle Y'X'P= \measuredangle PYX.$$
 It remains to apply the AA similarity condition.
 
-\parit{(c)} Apply (b) assuming $[YY']$ is the diameter of~$\Gamma$. 
+\parit{(c)} Apply \textit{(b)} assuming $[YY']$ is the diameter of~$\Gamma$. 
 
-\parbf{Exercise~\ref{ex:inscribed-hex}.} Apply Exercise~\ref{ex:inscribed-angle}(\ref{ex:inscribed-angle:b})
+\parbf{Exercise~\ref{ex:inscribed-hex}.} Apply Exercise~\ref{ex:inscribed-angle}\textit{\ref{ex:inscribed-angle:b}}
 three times.
 
 \parbf{Exercise~\ref{ex:altitudes-circumcircle}.}
 Let $X$ any $Y$ be the foot points of altitudes from $A$ and~$B$.
 Denote by $O$ the circumcenter.
  
-By angle-angle condition, $\triangle A X C\sim \triangle B Y C$.
+By AA condition, $\triangle A X C\sim \triangle B Y C$.
 Thus 
 \begin{align*}
 \measuredangle A'OC
@@ -831,8 +826,7 @@ That is, $O$ is the midpoint of~$[AB]$.
 
 \parbf{Exercise~\ref{ex:perpendicular-ruler}.}
 Guess the construction from the diagram.
-
-To prove that it produce perpendicular line,
+To prove it,
 apply Theorem~\ref{thm:orthocenter} and Corollary~\ref{cor:right-angle-diameter}.
 
 
@@ -844,7 +838,7 @@ Apply Theorem~\ref{thm:inscribed-quadrilateral} twice for $\square ABYX$ and $\s
 \parbf{Exercise~\ref{ex:inaccuracy}.}
 In the proof we assume that the lines $(A'B')$ and $(XP)$ are not parallel, otherwise the first line in the proof does not make sense.
 
-In addition we use without mentioning the following three identities:
+In addition, we use without mentioning the following three identities:
 \begin{align*}
 2\cdot \measuredangle AXP&\equiv2\cdot \measuredangle AXY,
 \\
@@ -908,11 +902,11 @@ $$OP\cdot OP'=OT^2.$$
 Hence the result follows.
 
 \parbf{Exercise~\ref{ex:appolo-circ}.}
-Suppose $O$ is the circle $\Gamma$
-and $X,Y\in \Gamma$;
+Denote by $O$ the center of $\Gamma$.
+Suppose $X,Y\in \Gamma$;
 in particular, $OX=OY$.
 
-Note that each $X$ and $Y$ is self-inverse.
+Note that the invesion sends $X$ and $Y$ to itself.
 By Lemma~\ref{lem:inversion-sim},
 $$\triangle OPX\z\sim \triangle OXP'
 \quad
@@ -938,7 +932,7 @@ By Lemma~\ref{lem:inversion-sim},
 &
 \measuredangle IA'C'&\equiv -\measuredangle ICA.
 \end{align*}
-It remains to apply the theorem on the sum of angles of triangle (Theorem~\ref{thm:3sum})
+It remains to apply the theorem on the sum of angles of triangle (\ref{thm:3sum})
 to show that $(A'I)\perp (B'C')$, 
 $(B'I)\perp (C'A')$
 and
@@ -960,14 +954,14 @@ $$\frac{r}{(x+y)/2}
 \ne
 \left(\frac rx+\frac ry\right)/2.$$
 
-Denote by $\ell$ the line passing thru $Q$, $Q'$ and the center of the inversion.
-Note that for appropriately chosen isometry $\ell\to\mathbb{R}$,
-the left hand side is the coordinate of $Q'$ 
-and the right hand side is the coordinate of the center of $\Gamma'$;
-here $x$ and $y$ denote the coordinates of two points of intersection $\ell\cap\Gamma$.
+Denote by $\ell$ the line passing thru $Q$, $Q'$ and the center of the inversion $O$.
+Choose an isometry $\ell\to\mathbb{R}$ which sends $O$ to $0$;
+assume $x$ and $y$ denote the values for the two points of intersection $\ell\cap\Gamma$.
+Then the left hand side above is the coordinate of $Q'$ 
+and the right hand side is the coordinate of the center of $\Gamma'$.
 
 \parbf{Exercise~\ref{ex:circumtool}.}
-The solution is given on page \pageref{page:solution-for-ex:circumtool}.
+A solution is given on page \pageref{page:solution-for-ex:circumtool}.
 
 \parbf{Exercise~\ref{ex:tangent-circ->parallels}.}
 Apply an inversion in a circle with the center at the only point of intersection of the circles;
@@ -983,9 +977,9 @@ then use Theorem~\ref{thm:inverse}.
 \parbf{Exercise~\ref{ex:inverse}.} 
 Apply the inversion in a circle with center~$A$. 
 The point $A$ will go to infinity, the two circles tangent at $A$ will become parallel lines
-and the two parallel lines will become circles tangent at~$A$.
+and the two parallel lines will become circles tangent at~$A$; see the diagram.
 
-Therefore, you will see the picture as on the diagram and the statement becomes evident from its symmetry.
+It remains to show that the dashed line $AB'$ is parallel to the other two lines.
 
 \parbf{Exercise~\ref{ex:cline-perp-to-two}.}
 Let $P_1$ and $P_2$ be the inversions of $P$ 
@@ -1107,7 +1101,7 @@ $COD$,
 $DOA$. 
 
 \textit{(Note that in the Euclidean plane the statement follows from Theorem~\ref{thm:inscribed-quadrilateral} and Exercise~\ref{ex:quadrilateral},
-but one cannot use these statements in the absolute plane.)}
+but one cannot use these statements in the neutral plane.)}
 
 \section*{Chapter~\ref{chap:poincare}}
 \setcounter{eqtn}{0}

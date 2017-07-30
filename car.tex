@@ -119,12 +119,12 @@ a line passing thru $A=(x_A,y_A)$ and $B\z=(x_B,y_B)$ and
 the circle with center $O=(x_O,y_O)$ which pass thru a point $W=(x_W,y_W)$.
 Let us write the equations of these circle and line in the coordinates $(x,y)$:
 $$
-\left[
-\begin{matrix}
-(x-x_O)^2+(y-y_O)^2=(x_W-x_O)^2+(y_W-y_O)^2    
+\left\{
+\begin{aligned}
+(x-x_O)^2+(y-y_O)^2&=(x_W-x_O)^2+(y_W-y_O)^2    
 \\
-(x-x_A)\cdot(y_B-y_A)=(y-y_A)\cdot(x_B-x_A)  
-\end{matrix}
+(x-x_A)\cdot(y_B-y_A)&=(y-y_A)\cdot(x_B-x_A)  
+\end{aligned}
 \right.
 $$
 Expressing $y$ from the second equation and substituting the result in the first one, gives us a quadratic equation in $x$, 
@@ -338,34 +338,35 @@ It follows that the perspective projection $\Pi\to \Pi'$ with center at $O$ send
 \section*{Construction of polar}
 
 
-Assume $\Gamma$ is a circle in the plane.
-Given point $P$ consider two chords $[XX']$ and $[YY']$ of $\Gamma$
-such that $(XX')\cap (YY')=P$.
+Assume $\Gamma$ is a circle in the plane and $P\notin \Gamma$.
+Draw two lines $x$ and $y$ thru $P$ which intersect $\Gamma$ at two pairs of points $X,X'$ and $Y,Y'$ .
 Let $Z=(XY)\cap(X'Y')$ and $Z'=(XY')\cap(X'Y)$ and $p=(ZZ')$.
-If $P\in \Gamma$ we assume that $p$ is the tangent to $\Gamma$ at~$P$.
+
+\begin{center}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/polar(1)}
+\lbl[rb]{10,32;$\Gamma$}
+\lbl[t]{60,12.5;$P$}
+\lbl[r]{29.5,7;$p$}
+\lbl[b]{29,39;$X$}
+\lbl[bl]{37,33;$X'$}
+\lbl[b]{8,13;$Y$}
+\lbl[bl]{42,14;$Y'$}
+\lbl[l]{36,44;$Z$}
+\lbl[r]{31.5,28;$Z'$}
+\end{lpic}
+\end{center}
+
+We will not give a proof of the following claim.
 
 \begin{thm}{Claim}\label{clm:polar}
-The line $p=(ZZ')$ does not depend on the choice of chords.
+The constructed line $p=(ZZ')$ does not depend on the choice of the lines $x$ and $y$.
 Moreover, $P\mapsto p$ is a duality (see page~\pageref{page:duality}).
 \end{thm}
-
-\begin{wrapfigure}[7]{o}{30mm}
-\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/polar(1)}
-\lbl[t]{27,8;$P$}
-\lbl[l]{15,0;$p$}
-\lbl[rb]{1,6;$X$}
-\lbl[ltw]{19.5,8;$X'$}
-\lbl[b]{9,19.5;$Y$}
-\lbl[b]{17.5,16.5;$Y'$}
-\lbl[l]{14,24;$Z$}
-\lbl[trw]{12,12;$Z'$}
-\end{lpic}
-\end{wrapfigure}
 
 The line $p$ is called polar of $P$ with respect to~$\Gamma$.
 The same way the point $P$ is called polar of the line $p$ with respect to~$\Gamma$.
 
-We will not give a proof of this claim, but will try to use it in the constructions.
+Let us use this claim in the constructions.
 
 \begin{thm}{Exercise}\label{ex:tangent ruler}
 Let $p$ be the polar line of point $P$ with respect to the circle~$\Gamma$.
