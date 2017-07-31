@@ -291,7 +291,7 @@ Hence the result follows.
 
 \parbf{Exercise~\ref{ex:signs-PXQ-PYQ}.}
 Apply Theorem~\ref{thm:signs-of-triug} for $\triangle PQX$ and $\triangle PQY$ and then 
-apply Proposition~\ref{prop:half-plane}(\ref{prop:half-plane:angle}).
+apply Proposition~\ref{prop:half-plane}\textit{\ref{prop:half-plane:angle}}.
 
 \parbf{Exercise~\ref{ex:chevinas}.} 
 Note that it is sufficient to consider the cases when $A'\z\ne B,C$ and $B'\ne A, C$.
@@ -370,7 +370,7 @@ and $[BX]$ intersects $\ell$,
 say at the point~$Y$.
 
 \begin{wrapfigure}[7]{r}{25mm}
-\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/pbisec-side(1)}
+\begin{lpic}[t(-3mm),b(0mm),r(0mm),l(0mm)]{pics/pbisec-side(1)}
 \lbl[tr]{1,1;$A$}
 \lbl[tl]{23,1;$B$}
 \lbl[br]{7,21;$X$}
@@ -815,14 +815,16 @@ Note that $\measuredangle AA'B=\pm\tfrac\pi2$ and $\measuredangle AB'B=\pm\tfrac
 Then apply Theorem~\ref{thm:inscribed-quadrilateral}
 to $\square AA'BB'$.
 
-\begin{wrapfigure}{o}{34mm}
-\begin{lpic}[t(-0mm),b(-2mm),r(-1mm),l(0mm)]{pics/perp=constr(1)}
-\end{lpic}
-\end{wrapfigure}
-
 If $O$ is the center of the circle, then 
 $$\measuredangle AOB\equiv 2\cdot \measuredangle AA'B\equiv\pi.$$
 That is, $O$ is the midpoint of~$[AB]$.
+
+{
+
+\begin{wrapfigure}[9]{o}{34mm}
+\begin{lpic}[t(-0mm),b(-2mm),r(-1mm),l(0mm)]{pics/perp=constr(1)}
+\end{lpic}
+\end{wrapfigure}
 
 \parbf{Exercise~\ref{ex:perpendicular-ruler}.}
 Guess the construction from the diagram.
@@ -835,8 +837,11 @@ Apply Theorem~\ref{thm:inscribed-quadrilateral} twice for $\square ABYX$ and $\s
 
 \parbf{Exercise~\ref{ex:two-chords}.} Apply the transversal property (\ref{thm:parallel-2}) and the theorem on inscribed angle (\ref{thm:inscribed-angle}).
 
+
 \parbf{Exercise~\ref{ex:inaccuracy}.}
 In the proof we assume that the lines $(A'B')$ and $(XP)$ are not parallel, otherwise the first line in the proof does not make sense.
+
+}
 
 In addition, we use without mentioning the following three identities:
 \begin{align*}
@@ -998,7 +1003,7 @@ and $\Gamma'\perp\Omega_1$, $\Gamma'\perp\Omega_2$, then by Theorem~\ref{thm:per
 That is, $\Gamma'=\Gamma$.
 
 \parbf{Exercise~\ref{ex:inscribed+inv}.}
-Apply Theorem~\ref{lem:inverse-4-angle}(\ref{lem:inverse-4-angle:angle}),  
+Apply Theorem~\ref{lem:inverse-4-angle}\textit{\ref{lem:inverse-4-angle:angle}},  
 Exercise~\ref{ex:quadrilateral}
 and Theorem~\ref{thm:inscribed-angle}.
 
@@ -1035,10 +1040,23 @@ Follow the solution of Exercise~\ref{ex:cline-perp-to-two}.
 Denote by $D$ the midpoint of~$[BC]$.
 Assume $(AD)$ is the bisector of the angle at~$A$.
 
-Mark point $A'\in [AD)$ which is distinct from $A$ and $AD=A'D$.
+Let $A'\in [AD)$ be the point distinct from $A$ such that $AD=A'D$.
 Note that $\triangle CAD\cong\triangle BA'D$.
 In particular, $\measuredangle BAA'=\measuredangle AA'B$.
 It remains to apply Theorem~\ref{thm:isos} for $\triangle ABA'$.
+
+\parbf{Exercise~\ref{ex:abs-inscibed}.}
+The statement is evident if $A$, $B$, $C$ and $D$ lie on one line.
+
+In the remaining case, denote by $O$ the circumcenter.
+Apply theorem about isosceles triangle (\ref{thm:isos}) to the triangles 
+$AOB$,
+$BOC$, 
+$COD$, 
+$DOA$. 
+
+\textit{(Note that in the Euclidean plane the statement follows from Theorem~\ref{thm:inscribed-quadrilateral} and Exercise~\ref{ex:quadrilateral},
+but one cannot use these statements in the neutral plane.)}
 
 \parbf{Exercise~\ref{ex:parallel-abs}.}
 Arguing by contradiction, 
@@ -1054,24 +1072,23 @@ Note that
 2\cdot \measuredangle  BCD&\equiv 2\cdot \measuredangle BCZ.
 \end{align*}
 
-
-\begin{wrapfigure}[9]{r}{26mm}
-\begin{lpic}[t(1mm),b(2mm),r(0mm),l(0mm)]{pics/SAA(1)}
-\lbl[t]{1,.5;$B'$}
-\lbl[b]{10.5,29;$A'$}
-\lbl[t]{16,.5;$C'$}
-\lbl[lt]{21,.5;$C''$}
-\end{lpic}
-\end{wrapfigure}
-
 Apply Proposition~\ref{prop:2sum} to $\triangle ZBC$ and try to arrive to a contradiction.
 
+\begin{wrapfigure}{r}{26mm}
+\begin{lpic}[t(-2mm),b(0mm),r(0mm),l(0mm)]{pics/SAA(1)}
+\lbl[t]{1,0;$B'$}
+\lbl[b]{10,29;$A'$}
+\lbl[t]{16,0;$C'$}
+\lbl[lt]{21,0;$C''$}
+\end{lpic}
+\end{wrapfigure}
 
 \parbf{Exercise~\ref{ex:SAA}.}
 Let $C''\in [B'C')$ be the point such that $B'C''=BC$.
 
 Note that by SAS, $\triangle ABC\cong \triangle A'B'C''$.
-Conclude that $\measuredangle B'C'A'= \measuredangle B'C''A'$.
+Conclude that $\measuredangle B'C'A'\z= \measuredangle B'C''A'$.
+
 
 Therefore, it is sufficient to show that $C''=C'$.
 If $C'\ne C''$ apply Proposition~\ref{prop:2sum} to $\triangle A'C'C''$ and try to arrive to a contradiction.
@@ -1088,20 +1105,6 @@ Alternatively, use the same argument as in the solution of Exercise~\ref{ex:insi
 Note that 
 $|\measuredangle ADC|+|\measuredangle CDB|=\pi$.
 Then apply the definition of the defect.
-
-\parbf{Exercise~\ref{ex:abs-inscibed}.}
-The statement is evident if $A$, $B$, $C$ and $D$ lie on one line.
-
-In the remaining case, 
-denote by $O$ the center of the circumscribed circle.
-Apply theorem about isosceles triangle (\ref{thm:isos}) to the triangles 
-$AOB$,
-$BOC$, 
-$COD$, 
-$DOA$. 
-
-\textit{(Note that in the Euclidean plane the statement follows from Theorem~\ref{thm:inscribed-quadrilateral} and Exercise~\ref{ex:quadrilateral},
-but one cannot use these statements in the neutral plane.)}
 
 \section*{Chapter~\ref{chap:poincare}}
 \setcounter{eqtn}{0}
@@ -1155,11 +1158,11 @@ holds if $0<a<\tfrac12$.
 Spell the meaning of terms ``perpendicular'' and ``h-line'' and then apply Exercise~\ref{ex:cline-perp-to-two}.
 
 \parbf{Exercise~\ref{ex:h-reflection}.}
-Apply the main observation (\ref{thm:main-observ}\ref{h-reflect}).
+Apply the main observation (\ref{thm:main-observ}\textit{\ref{h-reflect}}).
 
 \parbf{Exercise~\ref{ex:def-delta}.}
 By Corollary \ref{cor:invese-comp} and Theorem~\ref{lem:inverse-4-angle},
-the quantity $\theta$ survives under inversion in a circle perpendicular to the absolute.
+the quantity $\theta$ survives under an inversion in a circle perpendicular to the absolute.
 Therefore, by the main observation (\ref{thm:main-observ})
 we can assume that the midpoint of $[PQ]_h$ is the center of the absolute.
 
@@ -1173,7 +1176,7 @@ Hence the identity follows.
 
 \parbf{Exercise~\ref{ex:h-circle=circle}.}
 Denote by $X$ and $Y$ the points of intersections of $(OP)$ and~$\Delta_\rho'$.
-Consider an isometry $(OP)\to\mathbb{R}$ so that $O$ corresponds to $O$,
+Consider an isometry $(OP)\to\mathbb{R}$ so that $O$ corresponds to $0$,
 denote by $x$, $y$, $p$ and $\hat p$ the real numbers corresponding to $X$, $Y$, $P$ and~$\hat P$.
 
 {
@@ -1265,7 +1268,7 @@ The latter contradicts that the map is a bijection.
 
 
 \parbf{Exercise~\ref{ex:affine-par}.}
-Assume two distinct lines $\ell$ and $m$ 
+Assume the two distinct lines $\ell$ and $m$ 
 are mapped to intersecting lines $\ell'$ and~$m'$.
 Denote by $P'$ their point of intersection.
 
@@ -1276,7 +1279,7 @@ that is, $\ell$ and $m$ are intersecting.
 Hence the result follows.
 
 \begin{wrapfigure}{r}{20mm}
-\begin{lpic}[t(-4mm),b(-3mm),r(0mm),l(-0mm)]{pics/bisection-affine(1)}
+\begin{lpic}[t(-6mm),b(-3mm),r(0mm),l(-0mm)]{pics/bisection-affine(1)}
 \lbl[t]{2,6;$A$}
 \lbl[t]{17,9;$B$}
 \lbl[br]{8.5,10;$M$}
@@ -1291,21 +1294,21 @@ with ruler and parallel tool.
 Guess the construction from the diagram.
 
 \parbf{Exercise~\ref{ex:R-hom}.}
-Let us denote by $O$, $E$, $A$ and $B$ the points with coordinates $(0,0)$, $(1,0)$, $(a,0)$ and $(b,0)$ correspondingly.
+Let us denote by $O$, $E$, $A$ and $B$ the points with the coordinates $(0,0)$, $(1,0)$, $(a,0)$ and $(b,0)$ correspondingly.
 
-To construct point $W$ with coordinates $(0,a+b)$, try to construct two parallelograms $ABPQ$ and $BWPQ$.
+To construct a point $W$ with the coordinates $(0,a+b)$, try to construct two parallelograms $ABPQ$ and $BWPQ$.
 
 To construct $Z$ with coordinates $(0,a\cdot b)$
 choose a line $(OE')\ne (OE)$
 and try construct the points $A'\in (OE')$
 and $Z \in(OE)$
 so that 
-$\triangle OEE'\sim \triangle OAA'$ and $\triangle OE'B\sim \triangle OA'Z$.
+$\triangle OEE'\z\sim \triangle OAA'$ and $\triangle OE'B\sim \triangle OA'Z$.
 
 \parbf{Exercise~\ref{ex:center-circ-affine}.}
 Draw two parallel chords $[XX']$ and~$[YY']$.
 Set $Z\z=(XY)\cap (X'Y')$ and $Z'= (XY')\cap (X'Y)$.
-Note that $(ZZ')$ pass thru the center.
+Note that $(ZZ')$ passes thru the center.
 
 Repeat the same construction for another pair of parallel chords.
 The center lies in the intersection of the obtained lines.
@@ -1319,7 +1322,7 @@ Therefore, this construction does not produce perpendicular lines in general
  (it might be the center only by coincidence).
  
 \parbf{Exercise~\ref{ex:reflection/inversive}.}
-Denote by $\ell$ the line of the reflection.
+Fix a line $\ell$.
 Choose a circle $\Gamma$ with center not on~$\ell$.
 Let $\Omega$ be the inverse of $\ell$ in $\Gamma$;
 note that $\Omega$ is a circle.
@@ -1328,7 +1331,7 @@ Denote by $\iota_\Gamma$ and $\iota_\Omega$
 the inversions in $\Gamma$ and~$\Omega$.
 Show that the composition 
 $\iota_\Gamma\circ\iota_\Omega\circ\iota_\Gamma$
-gives the reflection in~$\ell$.
+is the reflection in~$\ell$.
 
 
 \section*{Chapter~\ref{chap:proj}}
@@ -1361,22 +1364,23 @@ Therefore, $(BC')\parallel (CB')$.
 The case $(AB)\parallel(A'B')$ is similar.
 
 \parbf{Exercise~\ref{ex:dual-euclid}.}
-Assume the contrary; let us use upper and lower cases of the same letter denote a point and its dual line.
-
+Assume the contrary.
 Choose two parallel lines $\ell$ and~$m$.
 Let $L$ and $M$ be their dual points.
 Set $s=(ML)$, then its dual point $S$ have to lie on both $\ell$ and $m$;
 a contradiction.
 
 \parbf{Exercise~\ref{ex:dula-coordinates}.}
-Assume that point $M$ has coordinates $(a,b)$ 
-and line $s$ described by equation $p\cdot x+q\cdot y=1$.
+Assume $M=(a,b)$ 
+and the line $s$ is given by the equation $p\cdot x+q\cdot y=1$.
 Then $M\in s$ is equivalent to $p\cdot a+q\cdot b=1$.
-The latter is equivalent to $m\ni S$
-if $m$ is the line formed by solution of the equation 
-$a\cdot x+b\cdot y=1$ and $S$ is the point with coordinates $(p,q)$.
 
-To extend this bijection two whole plane assume that ideal line  corresponds to the origin and the ideal point formed by pencil of lines $ax-by=c$ for different values of $c$ corresponds to the line described by equation $ax+by=0$.
+The latter is equivalent to $m\ni S$
+where $m$ is the line  given by the equation 
+$a\cdot x+b\cdot y=1$ and $S=(p,q)$.
+
+To extend this bijection to whole projective plane assume that (1) the ideal line  corresponds to the origin 
+and (2) the ideal point given by the pencil of the lines $ax-by=c$ for different values of $c$ corresponds to the line given by the equation $ax+by=0$.
 
 
 
@@ -1417,43 +1421,43 @@ we get
 $(AA')\parallel (BB')\parallel (CC')$.
 
 A similar solution can be build on the Dual Pappus's theorem, 
-see the solution of Exercise~\ref{ex:dual-pappus}.
+see Exercise~\ref{ex:dual-pappus}.
 
 \parbf{Exercise~\ref{ex:finite-pp}.}
 Let $A$, $B$, $C$ and $D$ 
-be the point provided by Axiom~\ref{def:proj-axioms:3}.
+be the point provided by Axiom~p-\ref{def:proj-axioms:3}.
 Given a line $\ell$ we can assume that $A\notin \ell$, 
-otherwise permute the labels on the points.
-Then by axioms \ref{def:proj-axioms:1} and \ref{def:proj-axioms:2},
+otherwise permute the labels of the points.
+Then by axioms p-\ref{def:proj-axioms:1} and p-\ref{def:proj-axioms:2},
 the three lines $(AB)$, $(AC)$ and $(AD)$ intersect $\ell$ at distinct points.
 In particular, $\ell$ contains 3 points. 
 
 \parbf{Exercise~\ref{ex:3=3'}.}
 Let $A$, $B$, $C$ and $D$ 
-be the point provided by Axiom~\ref{def:proj-axioms:3}.
+be the point provided by Axiom~p-\ref{def:proj-axioms:3}.
 Show that the lines $(AB)$, $(BC)$, $(CD)$ and $(DA)$
-satisfy Axiom~\ref{def:proj-axioms:3}$'$.
-The proof of converse is similar.
+satisfy Axiom~p-\ref{def:proj-axioms:3}$'$.
+The proof of the converse is similar.
 
 \parbf{Exercise~\ref{ex:oder}.} 
 Let $\ell$ be a line with $n+1$ points on it.
 
-By Axiom~\ref{def:proj-axioms:3}, given any line $m$ there is a point $P$ which does not lie on $\ell$ nor on~$m$.
+By Axiom~p-\ref{def:proj-axioms:3}, given any line $m$ there is a point $P$ which does not lie on $\ell$ nor on~$m$.
 
-By axioms \ref{def:proj-axioms:1} and \ref{def:proj-axioms:2}, there is a bijection between the lines passing thru $P$ and the points on~$\ell$.
+By axioms p-\ref{def:proj-axioms:1} and p-\ref{def:proj-axioms:2}, there is a bijection between the lines passing thru $P$ and the points on~$\ell$.
 In particular, there are exactly $n+1$ lines passing thru~$P$.
 
 The same way there is bijection between the lines passing thru $P$ and the points on~$m$. 
-Hence (\ref{ex:oder:a}) follows.
+Hence \textit{(\ref{ex:oder:a})} follows.
 
 Fix a point~$X$.
-By Axiom~\ref{def:proj-axioms:1}, any point $Y$ in the plane lies in a unique line passing thru~$X$.
-From part (\ref{ex:oder:a}), each such line contains $X$ and yet $n$ point.
-Hence the (\ref{ex:oder:b}) follows.
+By Axiom~p-\ref{def:proj-axioms:1}, any point $Y$ in the plane lies in a unique line passing thru~$X$.
+From part \textit{(\ref{ex:oder:a})}, each such line contains $X$ and yet $n$ point.
+Hence \textit{(\ref{ex:oder:b})} follows.
 
-To prove (\ref{ex:oder:c}), show that the equation
+To prove \textit{(\ref{ex:oder:c})}, show that the equation
 $n^2+n+1=10$ %???LINE
-does not admit an integer solution and then apply part (\ref{ex:oder:b}).
+does not admit an integer solution and then apply part \textit{(\ref{ex:oder:b})}.
 
 
 
@@ -1470,14 +1474,14 @@ $$
 Therefore, $AB_s=\tfrac\pi3$.
 
 \begin{wrapfigure}{r}{36mm}
-\begin{lpic}[t(-4mm),b(-3mm),r(-2mm),l(0mm)]{pics/tessellation(0.8)}
+\begin{lpic}[t(-0mm),b(-3mm),r(-2mm),l(0mm)]{pics/tessellation(0.8)}
 \lbl[br]{10,38;$A$}
 \lbl[bl]{33,38;$B$}
 \lbl[t]{21,35;$C$}
 \end{lpic}
 \end{wrapfigure}
 
-To see this without Pythagorean theorem, 
+Alternatively, 
 look at the tessellation of the sphere on the picture; 
 it is made from 24 copies of $\triangle_s A B C$ and yet 8 equilateral triangles.
 From the symmetry of this tessellation, it follows that $[AB]_s$ occupies $\tfrac16$ of the equator.
@@ -1487,7 +1491,7 @@ Note that points on $\Omega$ do not move.
 Moreover, the points inside $\Omega$ 
 are mapped outside of $\Omega$ and the other way around.
 
-Further, note that this maps sends circles to circles;
+Further, note that this map sends circles to circles;
 moreover, the perpendicular circles are mapped to perpendicular circles.
 In particular, the circle perpendicular to $\Omega$ are mapped to itself.
 
@@ -1500,10 +1504,10 @@ $\Gamma_1\perp \Omega$ and $\Gamma_2\perp \Omega$.
 Therefore, the inversion in $\Omega$ sends $\Gamma_1$ to itself and the same holds for~$\Gamma_2$. 
 
 The image of $P$ has to lie on $\Gamma_1$ and ~$\Gamma_2$.
-Since the image has to be distinct from $P$, we get that it has to be ~$P'$.
+Since the image of $P$ is distinct from $P$, we get that it has to be ~$P'$.
 
 \parbf{Exercise~\ref{ex:great-circ}.}
-Apply Theorem~\ref{thm:inverion-3d}\ref{thm:inverion-3d:b}.
+Apply Theorem~\ref{thm:inverion-3d}\textit{\ref{thm:inverion-3d:b}}.
 
 \parbf{Exercise~\ref{ex:conform-sphere}.}
 Set $z=P'Q'$.
@@ -1513,7 +1517,7 @@ It remains to show that
 $$\lim_{x\to 0} \frac{z}{x}=\frac{2}{1+OP^2}.$$
 
 Denote by $O$ the center of the unit sphere~$\Sigma$.
-Note that stereographic projection is the restriction of inversion in the sphere to the plane.
+Recall that stereographic projection is the inversion in the sphere $\Upsilon$ restricted to the plane.
 Note that there is plane $\Pi$ passing thru $O$, $P$, $Q$, $P'$ and~$Q'$.
 In the plane $\Pi$ the map $Q\mapsto Q'$ is an inversion in a circle $\Sigma\cap \Pi$.
 
@@ -1538,11 +1542,11 @@ consider the sections by the planes containing the following triple of points $(
 The remaining part of exercise is algebraic manipulations similar to the one given in the proof of Theorem~\ref{thm:pyth-h}.
 
 \parbf{Exercise~\ref{ex:s-medians}.}
-To prove (\ref{ex:s-medians:a}),
-observe and use that 
+\textit{(\ref{ex:s-medians:a})}.
+Observe and use that 
 $OA'=OB'=OC'$.
 
-To prove (\ref{ex:s-medians:b}), note that medians of spherical triangle $ABC$ 
+\parit{(\ref{ex:s-medians:b}).} Mote that medians of spherical triangle $ABC$ 
 map to the medians of Euclidean triangle $A'B'C'$.
 It remains to apply Theorem~\ref{thm:centroid} for $\triangle A'B'C'$.
 
