@@ -1579,7 +1579,8 @@ Note that $\hat P\in [A_iB_i]$ if and only if $P\in\Gamma_i$.
 
 \parbf{Exercise~\ref{ex:h-median}.} 
 The observation follows since the reflection in the perpendicular bisector of $[PQ]$ 
-is a motion of the Euclidean plane and the h-plane at the same time.
+is a motion of the Euclidean plane, 
+and a motion of the h-plane as well.
 
 Without loss of generality, we may assume that 
 the center of circumcircle coincides with the center of the absolute.
@@ -1589,14 +1590,14 @@ It remains to apply Theorem~\ref{thm:centroid}
 }
 
 \parbf{Exercise~\ref{ex:klein-perp}.} 
-Let us denote by $\check\ell$ and $\check m$
-the h-lines corresponding to $\ell$ and $m$ in the conformal model.
-We need to show that $\check\ell\perp\check m$ as arcs in the Euclidean plane.
+Let us denote by $\hat\ell$ and $\hat m$ the h-lines in the conformal model
+which correspond to $\ell$ and $m$.
+We need to show that $\hat\ell\perp\hat m$ as arcs in the Euclidean plane.
 
-Note that the point $Z$ where $s$ and $t$ meet is the center of the circle $\Gamma$ containing~$\check\ell$.
+The point $Z$ where $s$ and $t$ meet is the center of the circle $\Gamma$ containing~$\hat\ell$.
 
-If $\tilde m$ passing thru $Z$, then the inversion in $\Gamma$ exchanges the ideal points of~$\check\ell$.
-In particular, $\check\ell$ maps to itself. 
+If $\bar m$ passing thru $Z$, then the inversion in $\Gamma$ exchanges the ideal points of~$\hat\ell$.
+In particular, $\hat\ell$ maps to itself. 
 Hence the result follows.
 
 {
@@ -1627,7 +1628,7 @@ Apply Exercise~\ref{ex:klein-for-angle-parallelism} for $\phi=\tfrac\pi3$.
 }
 
 \parbf{Exercise~\ref{ex:Boyai-in-Euclid}.}
-In the Euclidean plane the circle $\Gamma_2$ is tangent to $k$; 
+In the Euclidean plane, the circle $\Gamma_2$ is tangent to $k$; 
 that is,  the point $T$ of intersection of $\Gamma_2$ and $k$ is unique.
 It defines a unique line $(PT)$  parallel to~$\ell$.
 
@@ -1665,11 +1666,11 @@ Note that
 \begin{align*}
 \arg\frac{(v-u)\cdot(z-w)}{(v-w)\cdot(z-u)}
 &\equiv
-(\arg\frac{v-u}{z-u}
+\arg\frac{v-u}{z-u}
 +
 \arg\frac{z-w}{v-w}\equiv
 \\
-&\equiv (\measuredangle ZUV+\measuredangle VWZ).
+&\equiv \measuredangle ZUV+\measuredangle VWZ.
 \end{align*}
 
 The statement follows since value $\tfrac{(v-u)\cdot(z-w)}{(v-w)\cdot(z-u)}$ is real if and only if 
@@ -1701,9 +1702,9 @@ that is, $h(z)=z$ for any~$z$.
 It follows that $g=f$.
 
 \parbf{Exercise~\ref{ex:invesion-Mob}.}
-Assume $z$ is the complex coordinate of point $Z$
-and $z'$ is the coordinate of its inversion $Z'$
-in the circle with center at $W$ with coordinate $w$ and radius~$r$.
+Let $Z'$ be the inverse of the point $Z$.
+Assume that the circle of the inversion has center $W$ and radius~$r$.
+Denote by $z$, $z'$ and $w$ the complex coordinate of the points $Z$, $Z'$ and $W$ correspondingly.
 
 By definition of inversion  
 \begin{align*}
@@ -1726,7 +1727,7 @@ Apply Schwarz--Pick theorem for a function $f$ such that $f(0)\z=0$ and then app
 
 {
 
-\begin{wrapfigure}{o}{30mm}
+\begin{wrapfigure}{r}{30mm}
 \begin{lpic}[t(6mm),b(-2mm),r(0mm),l(0mm)]{pics/appol(1)}
 \lbl[br]{6,5;$O$}
 \lbl[tl]{25,21;$P$}
@@ -1741,7 +1742,8 @@ Apply Schwarz--Pick theorem for a function $f$ such that $f(0)\z=0$ and then app
 
 
 \parbf{Exercise~\ref{ex:simple-apollonius}.}
-Draw a line $\ell$ thru the given point $P$ and the point of intersection, say $O$ of the lines.
+Let $O$ be the point of intersection of the lines.
+Draw a line $\ell$ thru the given point $P$ and $O$.
 Construct a circle $\Gamma$ tangent to both lines which crosses~$\ell$. 
 Denote by $X$ one of the points of intersections.
 
@@ -1762,17 +1764,20 @@ It remains to modify the construction in Exercise~\ref{ex:midpoint-affine}.
 
 \parbf{Exercise~\ref{ex:equilateral triangle}.}
 Assume that two vertices have rational coordinates, say $(a_1,b_1)$ and $(a_2,b_2)$.
+Find the coordinates of the third vertex.
 Use that the number $\sqrt{3}$ is irrational
 to show that the third vertex is an irrational point.
 
 \parbf{Exercise~\ref{ex:equilateral triangle-verify}.}
 Guess the construction from the diagram.
+Prove that it verifies that the triangle is equilateral.
 
-\parbf{Exercise~\ref{ex:center-verify}.} Apply the same reasoning as in the solution of Exercise~\ref{ex:circumtool}.
+\parbf{Exercise~\ref{ex:center-verify}.} Apply the same argument as in Exercise~\ref{ex:circumtool}.
 
 \parbf{Exercise~\ref{ex:midpoint-proj}.}
 Consider the perspective projection as in Exercise~\ref{ex:persect}.
-Choose $A\z=(1,1,1)$ and $B\z=(1,3,1)$, then $M\z=(1,2,1)$ is their midpoint.
+Let $A\z=(1,1,1)$, $B\z=(1,3,1)$ and $M\z=(1,2,1)$.
+Note that $M$ is the midpoint of $[AB]$.
 
 Their images are $A'\z=(1,1,1)$, $B'\z=(\tfrac13,1,\tfrac13)$ and $M'\z=(\tfrac12,1,\tfrac12)$.
 Clearly, $M'$ is not the midpoint of~$[A'B']$.
@@ -1799,10 +1804,9 @@ Choose a point $P$ outside of bigger circle.
 Construct the dual lines for given point for both circles.
 Note that these lines are parallel. 
 
-Assume the first line intersect the bigger circle at the points $X$ and~$X'$.
-the second line intersect the bigger circle at the points $Y$ and~$Y'$.
+Assume that the lines intersect the bigger circle at two pairs of points $X$, $X'$ and  $Y, Y'$.
 Set  $Z=(XY)\cap (X'Y')$.
-Note that $(PZ)$ pass thru the common center.
+Note that the line $(PZ)$ passes thru the common center.
 
 The center can be found as the intersection of the constructed line and another line constructed the same way.
 
@@ -1820,16 +1824,17 @@ By Axiom~\ref{def:birkhoff-axioms:1}, $W\in (BC)$,
 a contradiction.
 
 \parbf{Exercise~\ref{ex:vertex}.} 
-To prove the ``only if'' part consider the line passing thru the vertex and parallel to the opposite side.
+To prove the ``only if'' part, consider the line passing thru the vertex which is parallel to the opposite side.
 
-To prove ``if'' part, use Pasch's theorem \ref{thm:pasch}.
+To prove the ``if'' part, use Pasch's theorem (\ref{thm:pasch}).
 
 \parbf{Exercise~\ref{ex:solid-square}.}
-Assume the contrary; that is, a solid square can be presented as a union of finite collection of segments $[A_1B_1],\dots,[A_nB_n]$
+Assume the contrary; that is, a solid square $\mathcal{Q}$ can be presented as a union of finite collection of segments $[A_1B_1],\dots,[A_nB_n]$
 and one-point sets $\{C_1\},\dots,\{C_k\}$.
-Note that solid square contains infinite number of mutually nonparallel segments.
-Therefore, we can choose a segment $[PQ]$ in the solid square 
-which is not parallel to any segment $[A_1B_1],\dots,[A_nB_n]$.
+
+Note $\mathcal{Q}$ contains infinite number of mutually nonparallel segments.
+Therefore, we can choose a segment $[PQ]$ in $\mathcal{Q}$ 
+which is not parallel to any of the segments $[A_1B_1],\dots,[A_nB_n]$.
 
 It follows that $[PQ]$ has at most one common point with each the sets  $[A_iB_i]$ and~$\{C_i\}$.
 We arrive to a contradiction since $[PQ]$ contains infinte number of points.
@@ -1866,7 +1871,7 @@ Use Proposition~\ref{prop:area-parallelogram} to prove two identities
 \area(\solidsquare AB'ED)
 &=\area(\solidsquare AB'C'D').
 \end{align*}
-Hence the exercise follows.
+Hence the statement follows.
 
 \parbf{Exercise~\ref{ex:three-trig}.}
 Without loss of generality, we may assume that the angles $ABC$ and $BCA$ are acute.
@@ -1911,8 +1916,8 @@ Hence the statement follows.
 \parbf{Exercise~\ref{ex:half-parallelogram}.}
 Draw the line $\ell$ 
 thru $M$ parallel to the sides $[AB]$ and $[CD]$;
-it subdivides $\solidsquare ABCD$ into two solid parallelograms,
-say 
+it subdivides $\solidsquare ABCD$ into two solid parallelograms
+denoted by
 $\solidsquare ABEF$ and
 $\solidsquare CDFE$.
 In particular,
@@ -1922,9 +1927,9 @@ In particular,
 
 By Proposition~\ref{prop:area-parallelogram} and Theorem~\ref{thm:area-of-triangle} we get 
 \begin{align*}
-\area(\solidsquare ABM)&=\tfrac12\cdot\area(\solidsquare ABEF),
-&
-\area(\solidsquare CDM)&=\tfrac12\cdot\area(\solidsquare CDFE)
+\area(\solidtriangle ABM)&=\tfrac12\cdot\area(\solidsquare ABEF),
+\\
+\area(\solidtriangle CDM)&=\tfrac12\cdot\area(\solidsquare CDFE)
 \end{align*}
 Hence the result follows.
 
@@ -1957,21 +1962,21 @@ $\solidtriangle IBC$
 and $\solidtriangle ICA$.
 
 It remains to applying Theorem~\ref{thm:area-of-triangle} 
-to each of these triangles and summing up the results.
+to each of these triangles and sum up the results.
 
 
 \parbf{Exercise~\ref{ex:pyth-2}.}
 Assuming $a>b$,
-we subdivided $\solidsquare_c$ into $\solidsquare_{a-b}$ and for triangles congruent to~$\solidtriangle$.
+we subdivided $\mathcal{Q}_c$ into $\mathcal{Q}_{a-b}$ and four triangles congruent to~$\mathcal{T}$.
 Therefore
-\[\area\solidsquare_c=\area\solidsquare_{a-b}+4\cdot\area\solidtriangle.
+\[\area\mathcal{Q}_c=\area\mathcal{Q}_{a-b}+4\cdot\area\mathcal{T}.
 \eqlbl{eq:pyth-2}\]
 
 According to Theorem~\ref{thm:area-of-triangle},
-$\area\solidtriangle=\tfrac12\cdot a\cdot b$. %???LINE
+$\area\mathcal{T}=\tfrac12\cdot a\cdot b$. %???LINE
 Therefore, the identity \ref{eq:pyth-2} can be written as 
 \[c^2=(a-b)^2+2\cdot a\cdot b.\]
-Simplifying, we get Pythagorean theorem.
+Simplifying, we get the Pythagorean theorem.
 
 The cases $a=b$ is yet simpler.
 The case $b>a$ can be done the same way.
@@ -2018,7 +2023,7 @@ Denote by $b$ and $c$ the distances from $B$ and $C$ to the line~$(AX)$.
 \end{wrapfigure}
 
 By Theorem~\ref{thm:area-of-triangle}, 
-we get that the following equivalences
+we get the following equivalences
 \begin{align*}
 \area (\solidtriangle AXB)&=\area (\solidtriangle AXC),
 \\
@@ -2062,8 +2067,8 @@ From Exercise~\ref{ex:area-medians} we have
 \lbl[tl]{31,0;$B$}
 \lbl[tr]{1,4;$C$}
 \lbl[t]{16,2;$A'$}
-\lbl[bl]{23,13;$B'$}
-\lbl[br]{7,16;$C'$}
+\lbl[bl]{23,13;$C'$}
+\lbl[br]{7,16;$B'$}
 \end{lpic}
 \end{wrapfigure}
 

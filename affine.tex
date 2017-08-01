@@ -26,17 +26,17 @@ Show that $f$ is an affine transformation.
 Show that affine transformation sends parallel lines to the parallel lines.
 \end{thm}
 
-\emph{Affine geometry} studies  so called \index{incidence structure}\emph{incidence structure} of Euclidean plane.
-The incidence structure is the data about which points lie on which lines and nothing else;
-we cannot talk about distances, angles and so on.
-One may also say that affine geometry studies
-the properties of Euclidean plane which preserved under affine transformations.
+\emph{Affine geometry} studies the so called \index{incidence structure}\emph{incidence structure} of the Euclidean plane.
+The incidence structure says which points lie on which lines and nothing else;
+we cannot talk about distances, angle measures and so on.
+In other words, affine geometry studies
+the properties of the Euclidean plane which preserved under affine transformations.
 
 \section*{Constructions with parallel tool and ruler}
 \addtocontents{toc}{Constructions with parallel tool and ruler.}
 
 Let us consider geometric constructions with ruler and \index{parallel tool}\emph{parallel tool};
-the latter makes possible to draw a line thru the given point parallel to the given line.
+the latter makes possible to draw a line thru a given point parallel to a given line.
 By Exercisers~\ref{ex:affine-par}, any construction with these two tools are invariant with respect to affine transformation.
 For example, 
 to solve the following exercise,
@@ -44,7 +44,7 @@ it is sufficient to prove that midpoint of given segment can be constructed with
 
 \begin{thm}{Exercise}\label{ex:midpoint-affine}
 Let $M$ be the midpoint of segment $[AB]$ in the Euclidean plane.
-Assume that an affine transformation sends points $A$, $B$ and $M$
+Assume that an affine transformation sends the points $A$, $B$ and $M$
 to $A'$, $B'$ and $M'$ correspondingly.
 Show that $M'$ is the midpoint of~$[A'B']$.
 \end{thm}
@@ -52,9 +52,9 @@ Show that $M'$ is the midpoint of~$[A'B']$.
 The following exercise will be used in the proof of Theorem~\ref{thm:affine=linear}.
 
 \begin{thm}{Exercise}\label{ex:R-hom}
-Assume that in Euclidean plane we have 4 points with coordinates 
+Assume that in Euclidean plane we have 4 points with the coordinates 
 $(0,0)$, $(1,0)$, $(a,0)$ and $(b,0)$.
-Use ruler and parallel tool to construct the points with coordinates $(a\cdot b,0)$ and $(a+b,0)$.
+Using a ruler and a parallel tool, construct the points with the coordinates $(a\cdot b,0)$ and $(a+b,0)$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:center-circ-affine}
@@ -87,8 +87,7 @@ The latter can be used to prove impossibility of some constructions with ruler a
 here is one example.
 
 \begin{thm}{Exercise}\label{ex:affine-perp}
-Show that with ruler and parallel tool one cannot construct
-a line perpendicular to the given line.
+Show that with a ruler and a parallel tool one cannot construct a line perpendicular to a given line.
 \end{thm}
 
 \begin{thm}{Theorem}\label{thm:affine=linear}
@@ -115,16 +114,16 @@ c\cdot x+d\cdot y+w
 \end{smallmatrix} \right)
 \eqlbl{eq:affine=linear}
 \]
-for some fixed invertible matrix $\bigl(\begin{smallmatrix}
+for a fixed invertible matrix $\bigl(\begin{smallmatrix}
 a&b\\ c&d
-\end{smallmatrix} \bigr)$ and vector $\bigl(\begin{smallmatrix}
+\end{smallmatrix} \bigr)$ and a vector $\bigl(\begin{smallmatrix}
 v\\ w
 \end{smallmatrix} \bigr)$.
 
 In particular, any affine transformation of Euclidean plane is continuous.
 \end{thm}
 
-In the proof of ``only if'' part,
+In the proof of the ``only if'' part,
 we will use the following algebraic lemma.
 
 \begin{thm}{Algebraic lemma}\label{lem:R-auto}
@@ -145,10 +144,7 @@ Note that we do not assume that $f$ is continuous.
 The function $f$ satisfying three conditions in the lemma
 is called \index{field automorphism}\emph{field automorphism}.
 Therefore, the lemma states that the identity function is the only automorphism of the field of real numbers.
-The latter does not hold for the field of complex numbers ---
-the conjugation $z\mapsto\bar z$
-(see page \pageref{page:cojugation=authomorphism})
-gives an example of nontrivial automorphism.
+For the field of complex numbers, the conjugation $z\mapsto\bar z$ (see page \pageref{page:cojugation=authomorphism}) gives an example of nontrivial automorphism.
 
 \parit{Proof.}
 Since 
@@ -186,7 +182,7 @@ n.$$
 Since
 \[f(m)=f(\tfrac mn)\cdot f(n)\]
 we get
-$$f(\tfrac mn)=\tfrac mn$$
+$$f(\tfrac mn)=\tfrac mn \eqlbl{eq:m/n}$$
 for any rational number~$\tfrac mn$.
 
 Assume~$a\ge 0$.
@@ -203,8 +199,21 @@ we also get
 Finally, assume $f(a)\ne a$ for some $a\in\mathbb{R}$.
 Then there is a rational number $\tfrac{m}{n}$ which lies between $a$ and $f(a)$;
 that is, 
-the numbers $x\z=a-\tfrac{m}{n}$ and $y=f(a)-\tfrac{m}{n}$ have opposite signs.
-Since $f(\tfrac{m}{n})=\tfrac{m}{n}$, we get $f(x)=y$.
+the numbers 
+\[x\z=a-\tfrac{m}{n}\quad\text{and}\quad y=f(a)-\tfrac{m}{n}\]
+have opposite signs.
+
+By \ref{eq:m/n},
+\begin{align*}
+y+\tfrac{m}{n}&=f(a)=
+\\
+&=f(x+\tfrac{m}{n})=
+\\
+&=f(x)+f(\tfrac{m}{n})=
+\\
+&=f(x)+\tfrac{m}{n};
+\end{align*}
+that is, $f(x)=y$.
 The latter contradicts \ref{a>0=>b>0} or \ref{a<0=>b<0}.
 \qeds
 
@@ -295,7 +304,7 @@ x-v\\ y-w
 is inverse of~$\beta$.
 In particular, $\beta$ is a bijection.
 
-A line in the plane form the solutions of equations
+Any line in the plane is given by equation
 \[p\cdot x+q\cdot y+r=0,\eqlbl{ax+by+c=0}\]
 where $p\ne 0$ or $q\ne 0$.
 Find $\left(\begin{smallmatrix}
@@ -306,7 +315,7 @@ The equation has the same type as \ref{ax+by+c=0}, with different constants;
 in particular, it describes a line.
 Therefore, $\beta$ is an affine transformation.
 
-To prove ``only if'' part,
+To prove the ``only if'' part,
 fix an affine transformation~$\alpha$.
 Set 
 \begin{align*}
@@ -407,12 +416,12 @@ It remains to apply Lemma~\ref{lem:3-fix}.
 
 
 Recall that inversive plane is Euclidean plane with added a point at infinity, denoted by~$\infty$.
-We assume that any line pass thru~$\infty$.
-The term {}\emph{circline} stays for {}\emph{circle or line};
+We assume that every line passes thru~$\infty$.
+Recall that the term {}\emph{circline} stays for {}\emph{circle or line};
 
-The \index{inversive transformation}\emph{inversive transformation} is bijection from inversive plane to itself which sends circlines to circlines.
-Inversive geometry can be defined as geometry which  {}\emph{circline incidence structure} of inversive plane;
-that is, we can say which points lie on which circlines.
+An \index{inversive transformation}\emph{inversive transformation} is a bijection from inversive plane to itself which sends circlines to circlines.
+\emph{Inversive geometry} studies the {}\emph{circline incidence structure} of inversive plane;
+it says which points lie on which circlines.
 
 \begin{thm}{Theorem}\label{thm:inversions-inversive}
 A map from inversive plane to itself is an inversive transformation
@@ -421,9 +430,9 @@ if and only if it can be presented as a composition of inversions and reflection
 
 \parit{Proof.}
 According to Theorem~\ref{thm:inverse-cline} any inversion is a inversive transformation.
-Therefore, the same holds for composition of inversions.
+Therefore, the same holds for composition of inversions and reflection.
 
-To prove converse, 
+To prove the converse, 
 fix an inversive transformation~$\alpha$.
 
 Assume $\alpha(\infty)=\infty$.
@@ -432,8 +441,7 @@ If follows that $\alpha$ maps lines to lines;
 that is,
 it is an affine transformation.
 
-Further, $\alpha$ is not an arbitrary affine transformation,
-it maps circles to circles.
+Note that $\alpha$ is not an arbitrary affine transformation --- it maps circles to circles.
 
 Composing $\alpha$ with a reflection, say $\rho_1$, we can assume that $\alpha'\z=\rho_1\circ\alpha$ maps the unit circle with center at the origin to a concentric circle. 
 
@@ -446,8 +454,8 @@ k\cdot x\\ k\cdot y
 we can assume that $\alpha''=\chi\circ\alpha'$ sends the unit circle to itself.
 
 
-Composing the obtained map $\alpha''$ a reflection $\rho_2$ in a line thru the origin,
-we can assume that in addition $\alpha'''=\rho_2\circ\alpha''$ the point $(1,0)$ maps to itself.
+Composing the obtained map $\alpha''$ with a reflection $\rho_2$ in a line thru the origin,
+we can assume that $\alpha'''=\rho_2\circ\alpha''$ maps the point $(1,0)$ to itself.
 
 By Exercise~\ref{ex:center-circ-affine},
 $\alpha'''$ fixes the center of the circle;
@@ -493,9 +501,9 @@ that is, either $\alpha'''$ is the identity map
 or reflection the $x$-axis.
 
 Note that the homothety $\chi$ is a composition of two inversions in concentric circles.
-Hence the result follows.
+Therefore, $\alpha$ is a composition of inversions and reflections if and only are so is $\alpha'$, $\alpha''$ and $\alpha'''$.
 
-Now assume $P=\alpha(\infty)\ne \infty$.
+In the remaining case $\alpha(\infty)\ne \infty$, set $P=\alpha(\infty)$.
 Consider an inversion $\beta$ in a circle with center at~$P$.
 Note that $\beta(P)=\infty$; 
 therefore, $\beta\circ\alpha(\infty)=\infty$.
