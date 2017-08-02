@@ -2,25 +2,21 @@
 \label{chap:area}
 \addtocontents{toc}{\protect\begin{quote}}
 
-Historically, the notion of area inspired the development the integration and the so called \label{Lebesgue measure}\emph{Lebesgue measure}.
-We will use Lebesgue measure to define of area.
-
+The area functional will be defined by Theorem~\ref{thm:area}.
+This theorem is given without proof, but it follows immediately from the properties of \emph{Lebesgue measure}.
 The construction of Lebesgue measure typically use 
 the method of coordinates 
 and it is included in any textbook in Real Analysis.
-The usage of Lebesgue measure is packed in Theorem~\ref{thm:area} 
-and it is given without proof.
 Based on this theorem,  we develop the concept of area with no cheating.
 
 We choose this approach since any rigorous introduction to area is tedious.
-We do not want to cheat and at the same time we do not want to waste readers time; 
-soon or later you will have to learn Lebesgue measure if it is not already done.
+We do not want to cheat and at the same time we do not want to waste your time; 
+soon or later you will have to learn Lebesgue measure if it is not done already.
 
 \section*{Solid triangles}
 \addtocontents{toc}{Solid  triangles.}
 
-We say that a point $X$ 
-lies \index{inside!inside a triangle}\emph{inside} a nondegenerate triangle $ABC$
+We say that the point $X$ lies \index{inside!inside a triangle}\emph{inside} a nondegenerate triangle $ABC$
 if the following three condition hold:
 \begin{itemize}
 \item $A$ and $X$ lie on the same side from the line~$(BC)$;
@@ -42,7 +38,7 @@ and on its sides $[AB]$, $[BC]$, $[CA]$
 will be called \index{triangle!solid triangle}\index{solid!triangle}\emph{solid triangle} $ABC$ and denoted by \index{25@$\solidtriangle$}$\solidtriangle ABC$.
 
 \begin{thm}{Exercise}\label{ex:triangle-convex}
-Show that solid triangle is \index{convex set}\emph{convex};
+Show that any solid triangle is \index{convex set}\emph{convex};
 that is, if $X,Y\in\solidtriangle ABC$,
 then $[XY]\subset \solidtriangle ABC$.
 \end{thm}
@@ -50,7 +46,7 @@ then $[XY]\subset \solidtriangle ABC$.
 
 The notations $\triangle ABC$ and $\solidtriangle ABC$ look similar,
 they also have close but different meanings, 
-which better not to be confused.
+which better not to confuse.
 Recall that $\triangle ABC$ is an ordered triple of distinct points
 (see page \pageref{page:def:triangle}),
 while $\solidtriangle ABC$ is an infinite set of points.
@@ -62,7 +58,7 @@ and the other way around.
 On the other hand,
 $\triangle ABC\ne\triangle BAC$ simply because the sequence of points $(A,B,C)$ is distinct from the sequence $(B,A,C)$.
 
-Also, in general  $\triangle ABC\ncong\triangle BAC$, but it is always true that $\solidtriangle ABC\cong\solidtriangle BAC$, where congruence of the sets $\solidtriangle ABC$ and $\solidtriangle BAC$ 
+In general  $\triangle ABC\ncong\triangle BAC$, but $\solidtriangle ABC\cong\solidtriangle BAC$, where congruence of the sets $\solidtriangle ABC$ and $\solidtriangle BAC$ 
 is understood the following way.
 
 \begin{thm}{Definition}\label{def:cong-sets}
@@ -125,7 +121,7 @@ we can talk about \index{parallelogram!solid parallelogram}\emph{solid parallelo
 \end{wrapfigure}
 
 Typically a polygonal set admits many 
-presentation as union of finite collection of elementary sets.
+presentation as union of a finite collection of elementary sets.
 For example, if $\square AXBY$ is a parallelogram, then
 \[\solidsquare AXBY=\solidtriangle AXB\cup \solidtriangle BYA=\solidtriangle XAY\cup \solidtriangle YBX.\]
 
@@ -176,7 +172,7 @@ Therefore, $\mathcal{P}\cup\mathcal{Q}$ is polygonal.
 
 
 Note that the union of all sets $\mathcal{P}_i\cap \mathcal{Q}_j$ 
-forms $\mathcal{P}\cap \mathcal{Q}$.
+is $\mathcal{P}\cap \mathcal{Q}$.
 
 Therefore, in order to show that $\mathcal{P}\cap \mathcal{Q}$ is polygonal,
 it is sufficient to show that each $\mathcal{P}_i\cap \mathcal{Q}_j$ is polygonal for any pair $i$,~$j$.
@@ -206,13 +202,12 @@ For each polygonal set $\mathcal{P}$ in the Euclidean plane
 there is a real number $s$ 
 called \index{area}\emph{area of $\mathcal{P}$} 
 (briefly $s=\area \mathcal{P}$) such that 
-\[\area\emptyset=0
-\quad
-\text{and}
-\quad
-\area\mathcal{K}=1\]
-where  $\mathcal{K}$ a solid square with unit side
-and the conditions
+\begin{enumerate}[(a)]
+\item $\area\emptyset=0$ and
+$\area\mathcal{K}=1$
+where  $\mathcal{K}$ a solid square with unit side;
+
+\item the conditions
 \begin{align*}
 \mathcal{P}\cong\mathcal{Q}
 \quad 
@@ -231,6 +226,8 @@ and the conditions
 \end{align*}
 hold 
 for any two polygonal sets $\mathcal{P}$ and $\mathcal{Q}$.
+\end{enumerate}
+
 
 Moreover, the area function 
 \[\mathcal{P}\mapsto \area \mathcal{P}\]
@@ -341,7 +338,7 @@ hence the statement follows.
 We say that polygonal set $\mathcal{P}$ is \index{subdivision of polygonal set}\emph{subdivided} 
 into two polygonal sets $\mathcal{Q}_1$ and $\mathcal{Q}_2$ 
 if $\mathcal{P}=\mathcal{Q}_1\cup\mathcal{Q}_2$ 
-and the intersection $\mathcal{Q}_1\cap\mathcal{Q}_2$ is a degenerate polygonal set.
+and the intersection $\mathcal{Q}_1\cap\mathcal{Q}_2$ is degenerate.
 (Recall that according to Claim~\ref{clm:poly-ring},
 the set $\mathcal{Q}_1\cap\mathcal{Q}_2$ is polygonal.)
 
@@ -389,7 +386,7 @@ Then
 for any $a,b>0$.
 \end{thm}
 
-The following proof is similar to the proof of the lemma \ref{lem:R-auto}.
+The proof is similar to the proof of Lemma \ref{lem:R-auto}.
 
 \parit{Proof.}
 Note that if $a>a'$ and $b>b'$ then 
@@ -398,7 +395,7 @@ Indeed, since $s$ returns nonnegative numbers, we get
 \begin{align*}
 s(a,b)&=s(a',b)+s(a-a',b)\ge
 \\
-&\ge s(a,b)=
+&\ge s(a',b)=
 \\
 &\ge s(a',b')+s(a',b-b')\ge
 \\
@@ -422,7 +419,7 @@ s(\tfrac kl,\tfrac mn)&=k \cdot s(\tfrac 1l,\tfrac mn)=
 &=\tfrac kl\cdot\tfrac mn
 \end{align*}
 for any positive integers $k$, $l$, $m$ and $n$.
-That is, the needed identity holds for any pair of rational numbers of the form $a=\tfrac kl$ and $b=\tfrac mn$.
+That is, the needed identity holds for any pair of rational numbers $a=\tfrac kl$ and $b=\tfrac mn$.
 
 Arguing by contradiction, assume $s(a,b)\ne a\cdot b$ for some pair of positive real numbers $(a,b)$. 
 We will consider two cases: $s(a,b)> a\cdot b$ and $s(a,b)< a\cdot b$.
@@ -441,12 +438,12 @@ s(a,b)&\le s(\tfrac kn,\tfrac mn)=
 \\
 &=\tfrac kn\cdot\tfrac mn\le
 \\
-&\ge (a+\tfrac1n)(b+\tfrac1n),
+&\le (a+\tfrac1n)(b+\tfrac1n),
 \end{align*}
 which contradicts \ref{s(a,b)>}.
 
 The case $s(a,b)< a\cdot b$ is similar.
-We can fix a positive integer $n$ such that $a>\tfrac1n$, $b>\tfrac1n$ and
+Fix a positive integer $n$ such that $a>\tfrac1n$, $b>\tfrac1n$ and
 \[s(a,b)< (a-\tfrac1n)\cdot (b-\tfrac1n).\eqlbl{s(a,b)<}\]
 Set $k=\lceil a\cdot n \rceil-1$ and $m=\lceil b\cdot n \rceil-1$; that is,
 \[a> \tfrac kn\ge a-\tfrac1n
@@ -631,7 +628,7 @@ Since $\square ABCD$ is a parallelogram,  Lemma~\ref{lem:parallelogram} implies 
 \quad
 BC=DA.\]
 Therefore, by the SSS congruence condition, we have
-$\triangle ABC\cong\triangle CDA$.
+$\triangle ABC\z\cong\triangle CDA$.
 In particular
 \[\area(\solidtriangle ABC)
 =
@@ -790,7 +787,7 @@ Hence the statement follows.\qeds
 Build another proof of Pythagorean theorem
 based on the diagram. 
 
-(In the notations above it shows a subdivision of $\mathcal{Q}_c$ into $\mathcal{Q}_{a-b}$ and four copies of~$\mathcal{T}$.)
+(In the notations above it shows a subdivision of $\mathcal{Q}_c$ into $\mathcal{Q}_{a-b}$ and four copies of~$\mathcal{T}$ if $a>b$.)
 \end{thm}
 
 } 
@@ -799,8 +796,13 @@ based on the diagram.
 Show that the sum of distances from a point to the sides of an equilateral triangle is the same for all points inside the triangle.
 \end{thm}
 
-
-The following claim is simple but very useful.
+Let us prove of Lemma~\ref{lem:bisect-ratio} using the area method.
+That is, we need to show that if $\triangle A B C$ is nondegenerate
+and the bisector of $\angle BAC$ 
+intersects $[BC]$ at the point~$D$.
+Then 
+$$\frac{AB}{AC}=\frac{DB}{DC}.$$
+In the proof we will use the following claim.
 
 \begin{thm}{Claim}\label{clm:area-ratio}
 Assume  that two triangles $ABC$ and $A'B'C'$ in the Euclidean plane 
@@ -832,13 +834,7 @@ By Theorem~\ref{thm:area-of-triangle},
 \end{lpic}
 \end{wrapfigure}
 
-\parit{Proof of Lemma~\ref{lem:bisect-ratio} via Area method.}
-We have to show that if $\triangle A B C$ is nondegenerate
-and the bisector of $\angle BAC$ 
-intersects $[BC]$ at the point~$D$.
-Then 
-$$\frac{AB}{AC}=\frac{DB}{DC}.$$
-
+\parit{Proof of Lemma~\ref{lem:bisect-ratio}.}
 Applying  Claim~\ref{clm:area-ratio}, we get
 \[\frac{\area(\solidtriangle ABD)}{\area(\solidtriangle ACD)}
 =\frac{BD}{CD}.\]
@@ -856,9 +852,9 @@ Show that $X$ lies on the median from $A$ if and only if
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:area-medians-2} 
-Build a proof of Theorem~\ref{thm:centroid} via area method based on the Exercise~\ref{ex:area-medians}.
+Build a proof of Theorem~\ref{thm:centroid} based on the Exercise~\ref{ex:area-medians}.
 
-Namely, show that medians of nondegenerate triangle intersect at one point and the point of their intersection  divides each median in the ration 1:2.
+Namely, show that medians of nondegenerate triangle intersect at one point and the point of their intersection  divides each median in the ratio 1:2.
 \end{thm}
 
 \section*{Area in
@@ -876,7 +872,7 @@ The set $\mathcal{K}$ in this case plays role of the unit measure for the area
 and changing $\mathcal{K}$ will require conversion of area units.
 
 \begin{wrapfigure}{o}{17 mm}
-\begin{lpic}[t(-0 mm),b(0mm),r(0mm),l(0mm)]{pics/lambert-square(1)}
+\begin{lpic}[t(-4 mm),b(0mm),r(0mm),l(0mm)]{pics/lambert-square(1)}
 \lbl[rb]{1,14;$A$}
 \lbl[rt]{1,1;$B$}
 \lbl[lt]{13.5,.5;$C$}
@@ -891,7 +887,7 @@ According to the standard convention, the set $\mathcal{K}$
 is taken so that on small scales area behaves like area in the Euclidean plane.
 Say, 
 if $\mathcal{K}_n$ denotes the solid quadrilateral $\solidsquare ABCD$ 
-with right angles at $A$, $B$ and $C$ and $AB=BC=\tfrac1n$, 
+with right angles at $A$, $B$ and $C$ such that  $AB=BC=\tfrac1n$, 
 then we may assume that
 \[n^2\cdot\area \mathcal{K}_n\to 1
 \quad
@@ -908,7 +904,7 @@ Recall that {}\emph{defect of triangle} $\triangle ABC$ is defined as
 $$\defect(\triangle ABC)
 \df 
 \pi-|\measuredangle ABC|+|\measuredangle BCA|+|\measuredangle CAB|.$$
-It turns out that any neutral plane and  sphere
+It turns out that any neutral plane or  sphere
 there is a real number $k$
 such that 
 $$k\cdot\area(\solidtriangle ABC)+\defect(\triangle ABC)=0
@@ -924,7 +920,7 @@ In particular, it follows that any ideal triangle in h-plane has area~$\pi$.
 Similarly in the unit sphere the area of equilateral triangle with right angles has area $\tfrac\pi2$;
 since whole sphere can be subdivided in 8 such triangles, we get that the area of unit sphere is $4\cdot\pi$.
 
-The identity \ref{eq:curv-defect} suggest a simpler way to introduce area function which works on spheres and all neutral planes except for the Euclidean plane.
+The identity \ref{eq:curv-defect} suggest a simpler way to introduce area function which works on spheres and all neutral planes, but does not work for the Euclidean plane.
 
 \section*{Quadrable sets}
 \addtocontents{toc}{Quadrable  sets.}
@@ -946,12 +942,11 @@ such that
 
 If $\mathcal{S}$ is quadrable,
 its area  can be defined 
-as the (necessary unique) real number $\area\mathcal{S}$ 
+as the necessary unique real number $s=\area\mathcal{S}$
 such that the inequality
-\[\area\mathcal{Q}\le \area\mathcal{S}\le \area\mathcal{P}
+\[\area\mathcal{Q}\le s\le \area\mathcal{P}
 \]
-holds if
-$\mathcal{P}$ and $\mathcal{Q}$ are polygonal sets and $\mathcal{P}\subset\mathcal{S}\subset\mathcal{Q}$.
+holds for any polygonal sets $\mathcal{P}$ and $\mathcal{Q}$ such that $\mathcal{P}\subset\mathcal{S}\subset\mathcal{Q}$.
 
 \begin{thm}{Exercise}\label{ex:circle-is-quadrable}
 Let $\mathcal{D}$ be the unit disk;
@@ -961,10 +956,7 @@ the unit circle $\Gamma$ and all the points inside~$\Gamma$.
 Show that $\mathcal{D}$ is a quadrable set.
 \end{thm}
 
-Since $\mathcal{D}$ is quadrable, 
-the expression $\area\mathcal{D}$ makes sense.
-In fact, the constant $\pi$ can be defined as 
-$\pi=\area\mathcal{D}$.
+Since $\mathcal{D}$ is quadrable, the expression $\area\mathcal{D}$ makes sense and the constant $\pi$ can be defined as $\pi=\area\mathcal{D}$.
 
 \medskip
 
@@ -973,7 +965,7 @@ the area can be defined in such a way that it satisfies all the conditions in Th
 
 There is a way to define area for all bounded sets
 which satisfies all the conditions in the Theorem~\ref{thm:area} excluding uniqueness.
-(A set in the plane is called \index{bounded set}\emph{bounded} if it lies inside a circle.)
+(A set in the plane is called \index{bounded set}\emph{bounded} if it lies inside some circle.)
 
 In the hyperbolic plane and in the sphere
 there is no similar construction.
