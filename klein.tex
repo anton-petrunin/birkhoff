@@ -13,7 +13,7 @@ Therefore, it worth to know both.
 \addtocontents{toc}{Special bijection of the h-plane to itself.}
 
 Consider the conformal disc model with the absolute at the unit circle $\Omega$ centered at~$O$.
-Choose a coordinate system $(x,y)$ on the plane with origin at $O$, 
+Choose a coordinate system $(x,y)$ on the plane with the origin at $O$, 
 so the circle $\Omega$ is described by the equation $x^2+y^2=1$.
 
 \label{pic:stereographic_projection-klein}
@@ -29,23 +29,23 @@ so the circle $\Omega$ is described by the equation $x^2+y^2=1$.
 \caption*{The plane thru $P$, $O$ and $S$.}
 \end{wrapfigure}
 
-Let us think of our plane $\Pi$ as it lies in the Euclidean space as the $xy$-plane.
-Denote by $\Sigma$ the unit sphere centered at $O$;
+Let us think that our plane is the coordinate $xy$-plane in the Euclidean space; denote it by $\Pi$.
+Let $\Sigma$ be the unit sphere centered at $O$;
 it is described by the equation 
 $$x^2+y^2+z^2=1.$$
 Set $S=(0,0,-1)$ and $N=(0,0,1)$; 
-these are the South and North Poles of~$\Sigma$.
+these are the south and north poles of~$\Sigma$.
 
 Consider stereographic projection $\Pi\to\Sigma$ from $S$;
-given point $P\in\Pi$ denote its image in $\Sigma$ as~$P'$.
-Note that the  h-plane is mapped to the North Hemisphere;
-that is, to the set of points $(x,y,z)$ in $\Sigma$ described by inequality $z>0$.
+given point $P\in\Pi$ denote its image in $\Sigma$ by~$P'$.
+Note that the  h-plane is mapped to the {}\emph{north hemisphere};
+that is, to the set of points $(x,y,z)$ in $\Sigma$ described by the inequality $z>0$.
 
 For a point $P'\in \Sigma$ consider its foot point $\hat P$
 on $\Pi$;
 this is the closest point on $\Pi$ from~$P'$.
 
-The composition $P\z\mapsto \hat P$ of these two maps
+The composition $P\z\mapsto P'\z\mapsto\hat P$ of these two maps
 is a bijection of the h-plane to itself.
 
 Note that $P=\hat P$
@@ -74,7 +74,7 @@ $$PQ_h=\tfrac12\cdot\ln\frac{A\hat Q\cdot B\hat P}{\hat QB\cdot \hat PA}.$$
 \end{thm}
 
 \parit{Proof.}
-Consider the stereographic projection $\Pi\to \Sigma$ from the South Pole.
+Consider the stereographic projection $\Pi\to \Sigma$ from the south pole $S$.
 Denote by $P'$ and $Q'$ the images of $P$ and~$Q$.
 
 
@@ -167,13 +167,10 @@ Show that the chords $[A_1B_1]$, $[A_2B_2]$ and $[A_3B_3]$ intersect at one poin
 \section*{Projective model}
 \addtocontents{toc}{Projective  model.}
 
-The following picture illustrates the map $P\mapsto \hat P$ described in the previous section.
-If you take the picture on the left and apply the map $P\mapsto \hat P$,
+The following picture illustrates the map $P\mapsto \hat P$ described in the previous section --- if you take the picture on the left and apply the map $P\mapsto \hat P$,
 you get the picture on the right.
-The picture on the right gives a new way to look at the hyperbolic plane, 
-which is called \index{projective model}\emph{projective model}.
-One may think of the map $P\mapsto \hat P$ as about 
-translation from one language to the other.
+The pictures are \emph{conformal} and \index{projective model}\emph{projective model} of the hyperbolic plane correspondingly.
+The map $P\mapsto \hat P$ is a ``translation'' from one to another.
 
 \begin{center}
 \begin{lpic}[t(0mm),b(3mm),r(0mm),l(0mm)]{pics/poincare-klein(1)}
@@ -187,14 +184,14 @@ some become simpler,
 other things become more complicated.
 
 \parbf{Lines.}
-The h-lines in the projective model are chords.
-More precisely, they are intersections of chords of the absolute with the h-plane.
+The h-lines in the projective model are chords of the absolute;
+more precisely, chords with the endpoints removed.
 
 \parbf{Circles and equidistants.}
-The h-circles and equidistants in the projective model are certain type of ellipses and their arcs.
+The h-circles and equidistants in the projective model are certain type of ellipses and their open arcs.
+
 It follows since the stereographic projection sends circles on the plane to circles on the unit sphere and the foot point projection of circle back to the plane is an ellipse.
-(One may define ellipse
-as the foot point projection of a circle which lies in the space to the plane.)
+(One may define ellipse as a foot point projection of a circle.)
 
 \parbf{Distance.}
 To find the h-distance between the points $P$ and $Q$ in the projective model,
@@ -251,7 +248,8 @@ Observe that in the projective model, h-midpoint of $[PQ]_h$ coincides with the 
 
 Conclude that if an h-triangle is inscribed in an h-circle, then its medians intersect at one point.
 
-Think how to prove the same for a general h-triangle.
+Recall that an h-triangle might be also inscribed in a horocycle or an equidistant.
+Think how to prove the statement in this case.
 \end{thm}
 
 \begin{wrapfigure}[6]{o}{31mm}
@@ -290,7 +288,7 @@ Set $a=BC_h$, $b=CB_h$ and $c=AB_h$.
 Then
 $$\cosh c=\cosh a\cdot\cosh b.\eqlbl{eq:pyth-h}$$
 where $\cosh$ denotes \index{ch@$\cosh$}\index{hyperbolic cosine}\emph{hyperbolic cosine};
-that is, the function defined the following way
+that is, the function defined by
 $$\cosh x\df \tfrac{e^x+e^{-x}}2.$$ 
 
 \end{thm}
@@ -316,7 +314,7 @@ Therefore, both $\angle_h ACB$ and $\angle ACB$ are right.
 
 Set 
 $s=BC$, $t =CA$, $u= AB$.
-According to Euclidean Pythagorean theorem (\ref{thm:pyth}),
+According to the Euclidean Pythagorean theorem (\ref{thm:pyth}),
 $$u^2=s^2+t^2.$$
 Note that
 
@@ -373,25 +371,22 @@ Finally, note that \ref{cosh(b)}+\ref{cosh(c)}+\ref{cosh(a)} implies \ref{eq:pyt
 \section*{Bolyai's construction}
 \addtocontents{toc}{Bolyai's construction.}
 
-Assume we need to construct a line asymptotically parallel to the given line thru the given point.
-The initial configuration is given by three points, 
-say $P$, $A$ and $B$
-and we need to construct a line thru $P$ which is asymptotically parallel to $\ell=(AB)$.
+Assume we need to construct a line thru $P$ asymptotically parallel to the given line $\ell=(AB)$ in the h-plane.
 
 Note that ideal points do not lie in the h-plane,
 so there is no way to use them in the construction.
 
-The following construction was given by Bolyai.
-We assume that you know a compass-and-ruler construction of the perpendicular line to the given line thru the given point; see the solution of Exercise~\ref{ex:construction-perpendicular}.
+In the following construction we assume that you know a compass-and-ruler construction of the perpendicular line; see Exercise~\ref{ex:construction-perpendicular}.
 
 \begin{thm}{Bolyai's construction}
 \begin{enumerate}
-\item Construct the line $m$ thru $P$ which perpendicular  to~$\ell$. 
-Denote by $Q$ the foot point of $P$ on~$\ell$.
-\item Construct the line $n$ thru $P$ which perpendicular  to~$m$.
-\item Draw the circle $\Gamma_1$ with center $Q$ thru $P$ and mark by $R$ a point of intersection of $\Gamma_1$ with~$\ell$.
-\item Construct the line $k$ thru $R$ which perpendicular  to~$n$. 
-\item Draw the circle $\Gamma_2$ with center $P$ thru $Q$ and mark by $T$ a point of intersection of $\Gamma_2$ with~$k$.
+\item Drop a perpendicular from $P$ to~$\ell$; denote it by~$m$.
+Let $Q$ be the foot point of $P$ on~$\ell$.
+\item Drop a perpendicular from $P$ to~$m$; denote it by~$n$.
+\item Mark by $R$ a point on $\ell$ distinct from $Q$.
+\item Drop a perpendicular from $R$ to~$n$; denote it by~$k$. 
+\item Draw the circle $\Gamma_2$ with center $P$ and the radius $QR$. 
+Mark by $T$ a point of intersection of $\Gamma_2$ with~$k$.
 \item The line $(PT)_h$ is asymptotically parallel to~$\ell$.
 \end{enumerate}
 \end{thm}
@@ -400,7 +395,7 @@ Denote by $Q$ the foot point of $P$ on~$\ell$.
 Explain what happens if one performs the Bolyai construction in the Euclidean plane.
 \end{thm}
 
-To prove that Bolyai's construction gives the asymptotically parallel line in h-plane,
+To prove that Bolyai's construction gives the asymptotically parallel line in the h-plane,
 it is sufficient to show the following.
 
 \begin{thm}{Proposition}\label{prop:boyai}
@@ -438,6 +433,10 @@ correspondingly.
 \lbl[t]{40,12.5;$A$}
 \lbl[tr]{1,12.5;$B$}
 \lbl[br]{1,28;$C$}
+\lbl[t]{31,12.5;$\ell$}
+\lbl[b]{20,33,90;$m$}
+\lbl[b]{31,21.5;$n$}
+\lbl[b]{9,33,90;$k$}
 \end{lpic}
 \end{wrapfigure}
 
