@@ -1,3 +1,74 @@
+\section*{Method of complex coordinates}
+
+\begin{thm}{Problem}
+Assume that  $\square ABCD$, $\square ABB'A'$, $\square BCC'B'$, $\square CDD'C'$ and $\square DAA'D'$ are inscribed.
+Show that $\square A'B'C'D'$ is inscribed.
+\end{thm}
+
+{
+
+%\begin{center}
+\begin{wrapfigure}{o}{44mm}
+\begin{lpic}[t(-3mm),b(-0mm),r(0mm),l(0mm)]{pics/6-inscribed-quadrilaterals(1)}
+\lbl[r]{10,35;$A$}
+\lbl[tl]{37,25;$B$}
+\lbl[lt]{25,5;$C$}
+\lbl[br]{5.5,14;$D$}
+\lbl[bl]{16,30;$A'$}
+\lbl[tl]{30,22;$B'$}
+\lbl[lw]{24.5,12;$C'$}
+\lbl[bw]{11,18.5;$D'$}
+\end{lpic}
+\end{wrapfigure}
+%\end{center}
+
+Let us present a solution of this problem using the so called \emph{method of complex coordinates};
+namely we will apply Theorem~\ref{thm:inscribed-quadrilateral-C} few times.
+An alternative solution can be build on Theorem~\ref{thm:inscribed-quadrilateral}.
+
+\parit{Solution.}
+Denote by $a$, $b$, $c$, $d$, $a'$, $b'$, $c'$ and $d'$ the complex coordinates of 
+$A$, $B$, $C$, $D$, $A'$, $B'$, $C'$ and $D'$ correspondingly.
+Consider the following complex cross ratios:
+
+}
+\begin{align*}
+\alpha&=\frac{(a-b)\cdot(b'-a')}{(a-a')\cdot(b'-b)},
+&
+\beta&=\frac{(b-c)\cdot(c'-b')}{(b-b')\cdot(c'-c)},
+\\
+\gamma&=\frac{(c-d)\cdot(d'-c')}{(c-c')\cdot(d'-d)},
+&
+\delta&=\frac{(d-a)\cdot(a'-d')}{(d-d')\cdot(a'-a)},
+\\
+\epsilon&=\frac{(a-b)\cdot(c-d)}{(a-d)\cdot(c-b)},
+&
+\epsilon'&=\frac{(a'-b')\cdot(c'-d')}{(a'-d')\cdot(c'-b')}.
+\end{align*}
+Note that
+\[\epsilon'=\frac{\alpha\cdot \gamma}{\beta\cdot \delta\cdot\epsilon}.\eqlbl{eq:eps'}\]
+
+Since $\square ABCD$, $\square ABB'A'$, $\square BCC'B'$, $\square CDD'C'$ and $\square DAA'D'$ are inscribed, Theorem~\ref{thm:inscribed-quadrilateral-C} implies that the values $\alpha$, $\beta$, $\gamma$, $\delta$ and $\epsilon$ are real.
+By~\ref{eq:eps'}, $\epsilon'$ is also real.
+Applying the theorem again, we get that $\square A'B'C'D'$ is inscribed.
+\qeds
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \parbf{Exercise~\ref{ex:angle-altitude}.}
 Show that $\triangle ABB'\sim\triangle ACC'$.
 Use it to show that $\triangle AB'C'\z\sim\triangle ABC$.
