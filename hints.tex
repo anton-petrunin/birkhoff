@@ -238,14 +238,12 @@ $\measuredangle BOC=0$ or~$\pi$.
 It remains to apply Exercise~\ref{ex:2.4} and Theorem~\ref{thm:straight-angle} correspondingly in these two cases.
 
 \parbf{Exercise~\ref{ex:infinite-number-of-lines}.}
-Fix a line $(AB)$.
+Fix two points $A$ and $B$ provided by Axiom~\ref{def:birkhoff-axioms:0}.
 
-Use Axiom~\ref{def:birkhoff-axioms:2a} and Theorem~\ref{thm:straight-angle} to construct a point $C\notin (AB)$.
+Fix a real number $0<\alpha<\pi$.
+By Axiom~\ref{def:birkhoff-axioms:2a} there is a point $C$ such that $\measuredangle ABC=\alpha$.
 
-Fix two distinct points $X,Y\in (AB)$.
-Use  Proposition~\ref{lem:line-line} to show that the lines $(CX)$ and $(CY)$ are distinct.
-
-Conclude that the set of all lines $(CX)$ for $X\in(AB)$ is infinite.
+Use  Proposition~\ref{lem:line-line} to show that $\triangle ABC$ is nondegenerate.
 
 \parbf{Exercise~\ref{ex:O-mid-AB+CD}.} 
 Applying Proposition~\ref{prop:vert}, we get 
@@ -263,19 +261,6 @@ Note that $\alpha=\pi$ if and only if $\beta=\pi$.
 Otherwise $\alpha=-\beta$.
 Hence the result follows.
 
-\parbf{Exercise~\ref{ex:straight-sign}.}
-Set $\alpha=\measuredangle AOX$ 
-and 
-$\beta=\measuredangle BOX$.
-Since $\angle AOB$ is straight,
-$$\alpha-\beta\equiv \pi.\eqlbl{eq:alpha-beta}$$
-
-It follows that $\alpha=\pi$ $\Leftrightarrow$ $\beta=0$
-and $\alpha=0$ $\Leftrightarrow$ $\beta=\pi$.
-
-In the remaining cases we have $|\alpha|,|\beta|<\pi$.
-If $\alpha$ and $\beta$ have the same sign, then $|\alpha-\beta|<\pi$
-which contradicts \ref{eq:alpha-beta}.
 
 \parbf{Exercise~\ref{ex:PP(PN)}.}
 Set $\alpha=\measuredangle BOC$, $\beta=\measuredangle COA$ and $\gamma=\measuredangle AOB$.
@@ -301,7 +286,7 @@ Hence the result follows.
 
 \parbf{Exercise~\ref{ex:signs-PXQ-PYQ}.}
 Apply Theorem~\ref{thm:signs-of-triug} for $\triangle PQX$ and $\triangle PQY$ and then 
-apply Proposition~\ref{prop:half-plane}\textit{\ref{prop:half-plane:angle}}.
+apply Corollary~\ref{cor:half-plane}\textit{\ref{cor:half-plane:angle}}.
 
 \parbf{Exercise~\ref{ex:chevinas}.} 
 Note that it is sufficient to consider the cases when $A'\z\ne B,C$ and $B'\ne A, C$.
@@ -374,7 +359,7 @@ Hence the statement follows.
 Assume $X$ and $A$ lie on the same side from~$\ell$.
 
 Note that $A$ and $B$ lie on the opposite sides of~$\ell$.
-Therefore, by Proposition~\ref{prop:half-plane},  
+Therefore, by Corollary~\ref{cor:half-plane},  
 $[AX]$ does not intersect $\ell$ 
 and $[BX]$ intersects $\ell$,
 say at the point~$Y$.
@@ -460,7 +445,7 @@ the angles $DBA$ and $DBC$ have opposite signs.
 
 }
 
-By Proposition~\ref{prop:half-plane},
+By Corollary~\ref{cor:half-plane},
 $A$ and $C$ lie on the opposite sides from~$(AD)$.
 In particular, $[AC]$ intersects $(BD)$ at a point; denote it by~$X$.
 

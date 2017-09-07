@@ -2,7 +2,7 @@
 \addtocontents{toc}{\protect\begin{quote}}
 
 This chapter contains long proofs of intuitively evident statements.
-It is okay to skip it, but make sure you know definitions of positive/negative angles and that your intuition agrees with \ref{prop:half-plane}, \ref{thm:pasch}, \ref{thm:signs-of-triug} and \ref{thm:abc}.
+It is okay to skip it, but make sure you know definitions of positive/negative angles and that your intuition agrees with \ref{thm:signs-of-triug}, \ref{prop:half-plane}, \ref{cor:half-plane}, \ref{thm:pasch} and \ref{thm:abc}.
 
  
                             
@@ -23,11 +23,26 @@ are neither positive nor negative.
 Show that $\angle A O B$ is positive if and only if $\angle B O A$ is negative.
 \end{thm}
 
-\begin{thm}{Exercise}\label{ex:straight-sign}
+\begin{thm}{Lemma}\label{lem:straight-sign}
 Let $\angle AOB$ be straight.
 Show that $\angle AOX$ is positive 
 if and only if $\angle BOX$ is negative.
 \end{thm}
+
+\parit{Proof.}
+Set $\alpha=\measuredangle AOX$ 
+and 
+$\beta=\measuredangle BOX$.
+Since $\angle AOB$ is straight,
+$$\alpha-\beta\equiv \pi.\eqlbl{eq:alpha-beta}$$
+
+It follows that $\alpha=\pi$ $\Leftrightarrow$ $\beta=0$
+and $\alpha=0$ $\Leftrightarrow$ $\beta=\pi$.
+
+In the remaining cases we have $|\alpha|,|\beta|<\pi$.
+If $\alpha$ and $\beta$ have the same sign, then $|\alpha-\beta|<\pi$
+which contradicts \ref{eq:alpha-beta}.
+\qeds
 
 \begin{thm}{Exercise}\label{ex:PP(PN)}
 Assume that the angles $AOB$ and $BOC$ are positive. 
@@ -65,7 +80,7 @@ then $f(t_0)=0$ for some $t_0\in[a,b]$.
 
 
 
-The Intermediate value theorem is assumed to be known;
+The intermediate value theorem is assumed to be known;
 it should be covered in any calculus course.
 We will use the following corollary.
 
@@ -93,7 +108,7 @@ Therefore, by Axiom~\ref{def:birkhoff-axioms:2c} and Exercise~\ref{ex:comp+cont}
 $f$ is a continuous function.
 
 Further,
-by the Intermediate value theorem, $f(0)$ and $f(1)$ have the same sign;
+by the intermediate value theorem, $f(0)$ and $f(1)$ have the same sign;
 hence the result follows.
 \qeds
 
@@ -133,6 +148,44 @@ for $P_t=P$, $Q_t$ and $X_t=X$, we get that
 $\angle PQX$ has the same sign as $\angle PQ'X$.
 \qeds
 
+
+
+\begin{thm}[\abs]{Signs of angles of a triangle}\label{thm:signs-of-triug}
+In any nondegenerate triangle $ABC$,
+the angles $ABC$, $BCA$ and $CAB$ have the same sign. 
+\end{thm}
+
+{
+
+\begin{wrapfigure}{o}{33mm}
+\begin{lpic}[t(-3mm),b(1mm),r(0mm),l(0mm)]{pics/PQX-2(1)}
+\lbl[t]{30,1;$Z$}
+\lbl[t]{18,1;$A$}
+\lbl[t]{2,1;$B$}
+\lbl[b]{12.5,28.5;$C$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Proof.}
+Choose a point $Z\in (AB)$ so that $A$ lies between $B$ and~$Z$.
+
+
+According to Lemma~\ref{lem:signs},
+the angles $ZBC$ and $ZAC$ have the same sign.
+
+
+Note that $\measuredangle ABC=\measuredangle ZBC$
+and 
+$$\measuredangle ZAC+\measuredangle CAB\equiv \pi.$$
+Therefore, $\angle CAB$ has the same sign as $\angle ZAC$
+which in turn has the same sign as $\measuredangle ABC\z=\measuredangle ZBC$.
+
+}
+
+Repeating the same argument for $\angle BCA$ and $\angle CAB$,
+we get the result.
+\qeds
+
 \begin{thm}[\abs]{Lemma}\label{lem:signsXY}
 Assume $[XY]$ does not intersect $(PQ)$,
 then the angles $PQX$ and $PQY$ 
@@ -168,75 +221,55 @@ $\angle PQX$ has the same sign as $\angle PQY$.
 \section*{Half-planes}
 \addtocontents{toc}{Half-planes.}
 
-\begin{thm}[\abs]{Proposition}\label{prop:half-plane}
+\begin{thm}{Proposition}\label{prop:half-plane}
+Assume $X,Y\notin(PQ)$.
+Then the angles $PQX$ and $PQY$ have the same sign if and only if $[XY]$ does not intersect $(PQ)$.
+\end{thm}
+
+\begin{wrapfigure}{o}{30mm}
+\begin{lpic}[t(-4mm),b(-0mm),r(0mm),l(0mm)]{pics/PQXYZ(1)}
+\lbl[b]{11,14;$Q$}
+\lbl[b]{3,13.3;$P$}
+\lbl[l]{28,24;$X$}
+\lbl[l]{27,1;$Y$}
+\lbl[lt]{27,11;$Z$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Proof.} The if-part follows from Lemma~\ref{lem:signs}. 
+
+Assume $[XY]$ intersects $(PQ)$;
+denote by $Z$ the point of intersection.
+Without loss of generality, we can assume $Z\ne P$.
+
+Note that $Z$ lies between $X$ and $Y$.
+By Lemma~\ref{lem:straight-sign}, $\angle PZX$ and $\angle PZY$ have opposite signs.
+This proves the statement if $Z=Q$.
+
+If $Z\ne Q$, then $\angle ZQX$ and $\angle QZX$ have opposite signs by \ref{thm:signs-of-triug}.
+The same way we get that $\angle ZQY$ and $\angle QZY$ have opposite signs.
+
+If $Q$ lies between $Z$ and $P$, then by Lemma~\ref{lem:straight-sign} two pairs of angles $\angle PQX$, $\angle ZQX$ and $\angle PQY$, $\angle ZQY$ have the opposite signs. 
+It follows that $\angle PQX$ and $\angle PQY$ have opposite signs as required.
+
+In the remaining case $[QZ)=[QP)$ and therefore $\angle PQX=\angle ZQX$ and $\angle PQY=\angle ZQY$. 
+Hence again $\angle PQX$ and $\angle PQY$ have opposite signs as required.
+\qeds
+
+
+\begin{thm}[\abs]{Corollary}\label{cor:half-plane}
 The complement of a line $(PQ)$ in the plane 
 can be presented in a unique way as a union of two disjoint subsets 
 called \index{half-plane}\emph{half-planes}
 such that 
 \begin{enumerate}[(a)]
-\item\label{prop:half-plane:angle} Two points $X,Y\notin(PQ)$ lie in the same half-plane if and only if the angles $PQX$ and $PQY$ have the same sign.
-\item\label{prop:half-plane:intersect} Two points $X,Y\notin(PQ)$ lie in the same half-plane if and only if $[XY]$ does not intersect~$(PQ)$.
+\item\label{cor:half-plane:angle} Two points $X,Y\notin(PQ)$ lie in the same half-plane if and only if the angles $PQX$ and $PQY$ have the same sign.
+\item\label{cor:half-plane:intersect} Two points $X,Y\notin(PQ)$ lie in the same half-plane if and only if $[XY]$ does not intersect~$(PQ)$.
 \end{enumerate}
 
 \end{thm}
 
-
-We say that $X$ and $Y$ lie on 
-{}\emph{one side from} $(PQ)$ if they lie in one of the half-planes of $(PQ)$ and we say that  $P$ and $Q$ lie on the {}\emph{opposite sides from} $\ell$ if they lie in the different half-planes of~$\ell$.
-
-\begin{wrapfigure}{o}{34mm}
-\begin{lpic}[t(-4mm),b(-3mm),r(0mm),l(0mm)]{pics/PQY-3(1)}
-\lbl[t]{30,8;$P$}
-\lbl[t]{1,8;$Q$}
-\lbl[]{22,15;$\mathcal{H}_+$}
-\lbl[]{22,5;$\mathcal{H}_-$}
-\end{lpic}
-\end{wrapfigure}
-
-\parit{Proof.}
-Let us denote by $\mathcal{H}_+$ (correspondingly $\mathcal{H}_-$) 
-the set of points $X$ in the plane such that
-$\angle PQX$ is positive (correspondingly negative).
-
-According to Theorem~\ref{thm:straight-angle},
-$X\notin (PQ)$ if and only if 
-$\measuredangle PQX\z\ne 0$ nor~$\pi$.
-Therefore, $\mathcal{H}_+$ and $\mathcal{H}_-$
-give the unique subdivision of the complement of $(PQ)$ which satisfies the property \textit{(\ref{prop:half-plane:angle})}.
-
-\medskip
-
-Now let us prove that the 
-this subdivision depends only on the line $(PQ)$;
-that is, if $(P'Q')=(PQ)$ and $X,Y\notin (PQ)$,
-then the angles $PQX$ and $PQY$ have the same sign
-if and only if the angles $P'Q'X$ and $P'Q'Y$ have the same sign.
-
-Applying Exercise~\ref{ex:straight-sign},
-we can assume that $P=P'$ and $Q'\z\in [PQ)$.
-It remains to apply Lemma \ref{lem:signs}.
-
-\parit{(\ref{prop:half-plane:intersect}).}
-Assume $[XY]$ intersects~$(PQ)$.
-Since the subdivision depends only on the line $(PQ)$, 
-we can assume that $Q\in[XY]$.
-In this case, by Exercise~\ref{ex:straight-sign},
-the angles $PQX$ and $PQY$ have opposite signs.
-
-\begin{wrapfigure}[6]{o}{25mm}
-\begin{lpic}[t(-3mm),b(-5mm),r(0mm),l(0mm)]{pics/vert-intersect(1)}
-\lbl[l]{10.5,13.5;$O$}
-\lbl[tr]{20,3;$A$}
-\lbl[t]{7.5,8.5;$B$}
-\lbl[b]{6,17.5;$A'$}
-\lbl[tl]{19,24;$B'$}
-\end{lpic}
-\end{wrapfigure}
-
-Now assume $[XY]$ does not intersect~$(PQ)$.
-In this case, by Lemma~\ref{lem:signsXY},
-$\angle PQX$ and $\angle PQY$ have the same sign.
-\qeds
+We say that $X$ and $Y$ lie on  {}\emph{one side from} $(PQ)$ if they lie in one of the half-planes of $(PQ)$ and we say that  $P$ and $Q$ lie on the {}\emph{opposite sides from} $\ell$ if they lie in the different half-planes of~$\ell$.
 
 
 \begin{thm}{Exercise}\label{ex:vert-intersect}
@@ -249,51 +282,44 @@ Consider the triangle $ABC$.
 The segments $[AB]$, $[BC]$ and $[CA]$ are called 
 \index{side!side of the triangle}\emph{sides of the triangle}.
 
-The following theorem is a corollary of Proposition~\ref{prop:half-plane}.
+The following theorem follows from Corollary~\ref{cor:half-plane}.
+
+{
+
+\begin{wrapfigure}{o}{21mm}
+\begin{lpic}[t(-0mm),b(-5mm),r(0mm),l(0mm)]{pics/pasch(1)}
+\lbl[tr]{1,1;$A$}
+\lbl[b]{7,18.5;$B$}
+\lbl[tl]{19,4;$C$}
+\lbl[b]{18,12;$\ell$}
+\end{lpic}
+\end{wrapfigure}
 
 \begin{thm}[\abs]{Pasch's theorem}\label{thm:pasch}
 Assume line $\ell$ does not pass thru any vertex a triangle.
 Then it intersects either two or zero sides of the triangle.
 \end{thm}
 
-\begin{thm}[\abs]{Signs of angles of a triangle}\label{thm:signs-of-triug}
-In any nondegenerate triangle $ABC$,
-the angles $ABC$, $BCA$ and $CAB$ have the same sign. 
-\end{thm}
-
-\begin{wrapfigure}{o}{33mm}
-\begin{lpic}[t(-3mm),b(1mm),r(0mm),l(0mm)]{pics/PQX-2(1)}
-\lbl[t]{30,1;$Z$}
-\lbl[t]{18,1;$A$}
-\lbl[t]{2,1;$B$}
-\lbl[b]{12.5,28.5;$C$}
-\end{lpic}
-\end{wrapfigure}
-
-
 \parit{Proof.}
-Choose a point $Z\in (AB)$ so that $A$ lies between $B$ and~$Z$.
+Assume that line $\ell$ intersects side $[AB]$ of the triangle $ABC$ and does not pass thru $A$, $B$ and $C$.
 
+}
 
-According to Lemma~\ref{lem:signs},
-the angles $ZBC$ and $ZAC$ have the same sign.
+By Corollary~\ref{cor:half-plane}, the vertexes $A$ and $B$ lie on the opposite sides from $\ell$.
 
-Note that $\measuredangle ABC=\measuredangle ZBC$
-and 
-$$\measuredangle ZAC+\measuredangle CAB\equiv \pi.$$
-Therefore, $\angle CAB$ has the same sign as $\angle ZAC$
-which in turn has the same sign as $\measuredangle ABC\z=\measuredangle ZBC$.
-
-
-Repeating the same argument for $\angle BCA$ and $\angle CAB$,
-we get the result.
+The vertex $C$ may lie on the same side with $A$ and on the opposite side with $B$ or the other way around.
+By Corollary~\ref{cor:half-plane}, in the first case $\ell$ intersects side $[BC]$ and does not intersect $[AC]$ and in the second case $\ell$ intersects side $[AC]$ and does not intersect $[BC]$.
+Hence the statement follows.
 \qeds
 
-\medskip
+\begin{thm}{Exercise}\label{ex:signs-PXQ-PYQ}
+Show that two points $X,Y\notin(PQ)$ lie on the same side from $(PQ)$
+if and only if the angles $PXQ$ and $PYQ$ have the same sign.
+\end{thm}
 
 \begin{multicols}{2}
 \begin{center}
-\begin{lpic}[t(-3mm),b(0mm),r(0mm),l(0mm)]{pics/PQY-1(1)}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/PQY-1(1)}
 \lbl[t]{30,1;$P$}
 \lbl[t]{1,1;$Q$}
 \lbl[b]{12,28.5;$X$}
@@ -311,11 +337,6 @@ we get the result.
 \end{lpic} 
 \end{center}
 \end{multicols}
-
-\begin{thm}{Exercise}\label{ex:signs-PXQ-PYQ}
-Show that two points $X,Y\notin(PQ)$ lie on the same side from $(PQ)$
-if and only if the angles $PXQ$ and $PYQ$ have the same sign.
-\end{thm}
 
 \begin{thm}{Exercise}\label{ex:chevinas}
 Let $\triangle ABC$ be a nondegenerate triangle,
@@ -437,7 +458,7 @@ $$\measuredangle ABD=\measuredangle DBC=\tfrac \beta2.$$
 
 {
 \begin{wrapfigure}{o}{33mm}
-\begin{lpic}[t(-2mm),b(0mm),r(0mm),l(0mm)]{pics/fra(1)}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/fra(1)}
 \lbl[t]{22.5,0;$A$}
 \lbl[t]{2.5,0;$B$}
 \lbl[b]{20,14;$C$}
@@ -504,7 +525,7 @@ Therefore, the function $b(\beta)=AC_\beta$ is continuous
 
 Note that $b(0)=c-a$ and $b(\pi)=c+a$.
 Since $c-a\le b\le c+a$,
-by the Intermediate value theorem (\ref{thm:intermidiate})
+by the intermediate value theorem (\ref{thm:intermidiate})
 there is $\beta_0\in[0,\pi]$ such that
 $b(\beta_0)=b$.
 Hence the result follows. 
