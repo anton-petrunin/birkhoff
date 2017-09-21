@@ -9,6 +9,8 @@ It is okay to skip it, but make sure you know definitions of positive/negative a
 \section*{Sign of an angle}
 \addtocontents{toc}{Sign of an angle.}
 
+The positive and negative angles can be visualized as {}\emph{counterclockwise} and  {}\emph{clockwise} directions; formally, they are defined the following way.
+
 \begin{itemize}
 \item The angle $A O B$ is called \index{angle!positive and negative angles}\emph{positive} 
 if $0<\measuredangle A O B<\pi$;
@@ -25,7 +27,7 @@ Show that $\angle A O B$ is positive if and only if $\angle B O A$ is negative.
 
 \begin{thm}{Lemma}\label{lem:straight-sign}
 Let $\angle AOB$ be straight.
-Show that $\angle AOX$ is positive 
+Then $\angle AOX$ is positive 
 if and only if $\angle BOX$ is negative.
 \end{thm}
 
@@ -38,10 +40,12 @@ $$\alpha-\beta\equiv \pi.\eqlbl{eq:alpha-beta}$$
 
 It follows that $\alpha=\pi$ $\Leftrightarrow$ $\beta=0$
 and $\alpha=0$ $\Leftrightarrow$ $\beta=\pi$.
+In these two cases the sing of $\angle AOX$ and $\angle BOX$ are undefined.
 
 In the remaining cases we have $|\alpha|,|\beta|<\pi$.
 If $\alpha$ and $\beta$ have the same sign, then $|\alpha-\beta|<\pi$
 which contradicts \ref{eq:alpha-beta}.
+Hence the statement follows.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:PP(PN)}
@@ -121,7 +125,7 @@ Then for any $X\z\notin (PQ)$ the angles $PQX$ and $PQ'X$ have the same sign.
 \end{thm}
 
 \begin{wrapfigure}{o}{33mm}
-\begin{lpic}[t(-4mm),b(1mm),r(0mm),l(0mm)]{pics/PQX(1)}
+\begin{lpic}[t(-0mm),b(1mm),r(0mm),l(0mm)]{pics/PQX(1)}
 \lbl[t]{30,1;$P$}
 \lbl[t]{18,1;$Q'$}
 \lbl[t]{1,1;$Q$}
@@ -221,6 +225,8 @@ $\angle PQX$ has the same sign as $\angle PQY$.
 \section*{Half-planes}
 \addtocontents{toc}{Half-planes.}
 
+%(???
+
 \begin{thm}{Proposition}\label{prop:half-plane}
 Assume $X,Y\notin(PQ)$.
 Then the angles $PQX$ and $PQY$ have the same sign if and only if $[XY]$ does not intersect $(PQ)$.
@@ -256,6 +262,7 @@ In the remaining case $[QZ)=[QP)$ and therefore $\angle PQX=\angle ZQX$ and $\an
 Hence again $\angle PQX$ and $\angle PQY$ have opposite signs as required.
 \qeds
 
+%)???
 
 \begin{thm}[\abs]{Corollary}\label{cor:half-plane}
 The complement of a line $(PQ)$ in the plane 
@@ -268,6 +275,16 @@ such that
 \end{enumerate}
 
 \end{thm}
+
+\begin{wrapfigure}[6]{o}{25mm}
+\begin{lpic}[t(-3mm),b(-5mm),r(0mm),l(0mm)]{pics/vert-intersect(1)}
+\lbl[l]{10.5,13.5;$O$}
+\lbl[tr]{20,3;$A$}
+\lbl[t]{7.5,8.5;$B$}
+\lbl[b]{6,17.5;$A'$}
+\lbl[tl]{19,24;$B'$}
+\end{lpic}
+\end{wrapfigure}
 
 We say that $X$ and $Y$ lie on  {}\emph{one side from} $(PQ)$ if they lie in one of the half-planes of $(PQ)$ and we say that  $P$ and $Q$ lie on the {}\emph{opposite sides from} $\ell$ if they lie in the different half-planes of~$\ell$.
 
@@ -403,7 +420,7 @@ $AB=BC=r$ and $\measuredangle ABC=\beta$.
 The existence of such a triangle follows from Axiom~\ref{def:birkhoff-axioms:2a} and Proposition~\ref{prop:point-on-half-line}.
 
 \begin{wrapfigure}{o}{25mm}
-\begin{lpic}[t(2mm),b(0mm),r(0mm),l(0mm)]{pics/sbr(1)}
+\begin{lpic}[t(2mm),b(4mm),r(0mm),l(0mm)]{pics/sbr(1)}
 \lbl[t]{2,0;$A$}
 \lbl[t]{22,0;$C$}
 \lbl[b]{12.5,29;$B$}
@@ -416,16 +433,34 @@ The existence of such a triangle follows from Axiom~\ref{def:birkhoff-axioms:2a}
 
 Note that according to Axiom~\ref{def:birkhoff-axioms:3}, 
 the values
-$\beta$ and $r$ define the triangle up to the congruence.
+$\beta$ and $r$ define the triangle $ABC$ up to the congruence.
 In particular, the distance $AC$ depends only on $\beta$ and~$r$.
 Set 
 $$s(\beta,r)\df AC.$$
 
 \begin{thm}[\abs]{Proposition}\label{prop:f(r,a)}
 Given $r>0$ and $\epsilon>0$, there is $\delta>0$ such that
-if $0<\beta<\delta$, then $s(r,\beta)\z<\epsilon$.
+if $0<\beta<\delta$, then 
+\[s(r,\beta)<\epsilon.\]
+
 \end{thm}
 
+
+{
+
+\begin{wrapfigure}{o}{33mm}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/fra(1)}
+\lbl[t]{22.5,0;$A$}
+\lbl[t]{2.5,0;$B$}
+\lbl[b]{20,14;$C$}
+\lbl[tl]{25,7;$D$}
+\lbl[tl]{30,8;$Z$}
+\lbl[r]{28,20;$Y$}
+\lbl[rb]{30,27;$X$}
+\lbl[w]{15,2;$\,r\,$}
+\lbl[w]{13,8,30;$\,r\,$}
+\end{lpic}
+\end{wrapfigure}
 
 \parit{Proof.}
 Fix two points $A$ and $B$ such that $AB=r$.
@@ -456,20 +491,7 @@ The latter is impossible since $D$ and $Y$ lie on the same side from~$(AB)$.
 Therefore, 
 $$\measuredangle ABD=\measuredangle DBC=\tfrac \beta2.$$
 
-{
-\begin{wrapfigure}{o}{33mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/fra(1)}
-\lbl[t]{22.5,0;$A$}
-\lbl[t]{2.5,0;$B$}
-\lbl[b]{20,14;$C$}
-\lbl[tl]{25,7;$D$}
-\lbl[tl]{30,8;$Z$}
-\lbl[r]{28,20;$Y$}
-\lbl[rb]{30,27;$X$}
-\lbl[w]{15,2;$\,r\,$}
-\lbl[w]{13,8,30;$\,r\,$}
-\end{lpic}
-\end{wrapfigure}
+
 
 By Axiom~\ref{def:birkhoff-axioms:3},
 $\triangle ABD\cong \triangle CBD$.

@@ -205,15 +205,45 @@ $[AB]$, $[BC]$, $[CD]$ and~$[DA]$.
 Show that $\square XYVW$ is a parallelogram.
 \end{thm}
 
+%(???
+
+\section*{Angle bisectors}
+\addtocontents{toc}{Angle bisectors.}
+
+If $\measuredangle A B X\equiv-\measuredangle C B X$, 
+then we say that the line $(BX)$ {}\emph{bisects} $\angle ABC$,
+or line $(BX)$ is the \index{bisector!angle bisector}\emph{bisector} of $\angle ABC$.
+If $\measuredangle A B X\equiv\pi-\measuredangle C B X$, then the line $(BX)$ is called the \index{bisector!external bisector}\emph{external bisector} of $\angle ABC$.
 
 
-\section*{Bisector of triangle}
-\addtocontents{toc}{Bisector of triangle.}
+\begin{wrapfigure}[9]{o}{39mm}
+\begin{lpic}[t(-2mm),b(0mm),r(0mm),l(1mm)]{pics/bisectors(1)}
+\lbl[tr]{30,5;$A$}
+\lbl[rb]{9,10;$B$}
+\lbl[br]{31,29;$C$}
+\lbl[b]{30,16.7,17.5;bisector}
+\lbl[b]{6.3,26.5,-72.5;external} 
+\lbl[t]{4.7,26,-72.5;bisector}
+\end{lpic}
+\end{wrapfigure}
+
+If $\measuredangle ABA'=\pi$;
+that is, if $B$ lies between $A$ and $A'$,
+then bisector of $\angle ABC$ is the external bisector of $\angle A' B C$ and the other way around.
+
+Note that the bisector and the external bisector are uniquely defined by the angle.
+
+\begin{thm}{Exercise}\label{ex:perp-bisectors}
+Show that for any angle, its bisector and external bisector are perpendicular.
+\end{thm}
+
+The bisectors of  $\angle ABC$, $\angle BCA$ and $\angle CAB$ of a nondegenerate triangle $A B C$
+are called bisectors of $\triangle A B C$ at vertexes $A$, $B$ and $C$ correspondingly.
 
 \begin{thm}{Lemma}\label{lem:bisect-ratio}
 Let $\triangle A B C$ be  a nondegenerate triangle.
-Assume that the bisector of $\angle BAC$ 
-intersects $[BC]$ at the point~$D$.
+Assume that the bisector at the vertex $A$ 
+intersects the side $[BC]$ at the point~$D$.
 Then 
 $$\frac{AB}{AC}=\frac{DB}{DC}.
 \eqlbl{bisect-ratio}$$
@@ -262,10 +292,93 @@ Together with \ref{eq:AB/EC=DB/DC}, it implies \ref{bisect-ratio}.
 
 
 \begin{thm}{Exercise}\label{ex:ext-disect}
-Prove an analog of Lemma~\ref{lem:bisect-ratio} for the external bisector.
+Formulate and prove an analog of Lemma~\ref{lem:bisect-ratio} for the external bisector.
 \end{thm}
 
 
+\section*{Equidistant property}
+\addtocontents{toc}{Equidistant property.}
+
+Recall that distance from the line $\ell$ to the point $P$ is defined as the distance from $P$ to its foot point on $\ell$; see page~\pageref{distance!from a point to a line}. 
+
+\begin{thm}[\abs]{Proposition}\label{prop:angle-bisect-dist}
+Assume $\measuredangle ABC\ne\pi$ nor~$0$.
+
+Then a point $X$ lies on the bisector or external bisector of $\angle ABC$
+if and only if $X$ is equidistant from the lines $(AB)$ and $(BC)$.
+\end{thm}
+
+\parit{Proof.}
+We can assume that $X$ does not lie on the union of $(AB)$ and $(BC)$.
+Otherwise the distance to one of the lines vanish;
+in this case $X=B$ is the only point equidistant from the two lines.
+
+Let $Y$ and $Z$ be the reflections of $X$ in $(AB)$ and $(BC)$ correspondingly.
+Note that 
+By Proposition~\ref{prop:reflection},
+\[XB=YB=ZB.\]
+
+{
+
+\begin{wrapfigure}{o}{26mm}
+\begin{lpic}[t(-8mm),b(0mm),r(0mm),l(1mm)]{pics/angle-bisect-lemma(1)}
+\lbl[bl]{23,11;$A$}
+\lbl[br]{1,18;$B$}
+\lbl[rb]{21,36;$C$}
+%\lbl[t]{13.5,26;$Z$}
+\lbl[l]{21,22;$X$}
+%\lbl[br]{16,13;$Y$}
+\lbl[t]{14,0;$Y$}
+\lbl[rb]{8,35;$Z$}
+\end{lpic}
+\end{wrapfigure}
+
+Note that $X$ is equidistant from $(AB)$ and $(BC)$ if and only if $XY=XZ$.
+Applying SSS and then SAS, we get
+$$\begin{aligned}
+XY&=XZ
+\\
+&\hskip0.4mm\Updownarrow
+\\
+\triangle BXY&\cong\triangle BXZ
+\\
+&\hskip0.4mm\Updownarrow
+\\
+\measuredangle XBY&= \pm \measuredangle BXZ.
+\end{aligned}
+$$
+
+}
+
+If $\measuredangle XBY= \measuredangle BXZ$
+then $Z=Y$.
+In this case$(AB)=(BC)$ since both lines $(AB)$ and $(BC)$ are perpendicular bisectors of $[XY]$. 
+The latter contradicts the assumption.
+Therefore 
+\[\measuredangle XBY= -\measuredangle BXZ\eqlbl{eq:iff-chain}\]
+
+By Proposition~\ref{prop:reflection}, $A$ lies on the bisector of $\angle XBY$
+and $B$ lies on the bisector of $\angle XBZ$.
+Therefore
+\begin{align*}
+2\cdot \measuredangle XBA&\equiv \measuredangle XBY,
+&
+2\cdot \measuredangle XBC&\equiv \measuredangle XBZ.
+\end{align*}
+By \ref{eq:iff-chain},
+\[2\cdot \measuredangle XBA\equiv -2\cdot \measuredangle XBC\]
+The last identity means either
+\[
+\measuredangle XBA+\measuredangle XBC\equiv 0
+\quad
+\text{or}
+\quad
+\measuredangle XBA+\measuredangle XBC\equiv \pi.
+\]
+Hence the result follows.
+\qeds
+
+%???)
 
 \section*{Incenter}
 \addtocontents{toc}{Incenter.}
@@ -313,7 +426,7 @@ we get that $[AA']$ and $[BB']$ intersect.
 Let us denote by $I$ the point of intersection.
 
 Let $X$, $Y$ and $Z$ be the foot points of $I$ on  $(B C)$, $(C A)$ and $(A B)$ correspondingly.
-Applying Lemma~\ref{lem:angle-bisect-dist}, we get 
+Applying Proposition~\ref{prop:angle-bisect-dist}, we get 
 $$I Y=I Z=I X.$$
 From the same lemma, we get that $I$ lies on the bisector or on the exterior bisector of $\angle B C A$.
 

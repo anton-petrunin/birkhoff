@@ -327,7 +327,7 @@ holds for any point $X$ on $\ell$ distinct from~$Q$.
 \end{thm}
 
 If $P$, $Q$ and $\ell$ are as above, 
-then $PQ$ is called the \index{distance!from a point to a line}\emph{distance from $P$ to $\ell$}. 
+then $PQ$ is called the \label{distance!from a point to a line}\index{distance!from a point to a line}\emph{distance from $P$ to $\ell$}. 
 
 \begin{wrapfigure}[14]{o}{20mm}
 \begin{lpic}[t(-2mm),b(0mm),r(0mm),l(0mm)]{pics/oblique(1)}
@@ -369,140 +369,7 @@ $$AC>AB.$$
 
 
 
-\section*{Angle bisectors}
-\addtocontents{toc}{Angle bisectors.}
 
-If $\measuredangle A B X\equiv-\measuredangle C B X$, 
-then we say that the line $(BX)$ {}\emph{bisects} $\angle ABC$,
-or line $(BX)$ is the \index{bisector!angle bisector}\emph{bisector} of $\angle ABC$.
-If $\measuredangle A B X\equiv\pi-\measuredangle C B X$, then the line $(BX)$ is called the \index{bisector!external bisector}\emph{external bisector} of $\angle ABC$.
-
-
-\begin{wrapfigure}[8]{o}{39mm}
-\begin{lpic}[t(-2mm),b(0mm),r(0mm),l(1mm)]{pics/bisectors(1)}
-\lbl[tr]{30,5;$A$}
-\lbl[rb]{9,10;$B$}
-\lbl[br]{31,29;$C$}
-\lbl[b]{30,16.7,17.5;bisector}
-\lbl[b]{6.3,26.5,-72.5;external} 
-\lbl[t]{4.7,26,-72.5;bisector}
-\end{lpic}
-\end{wrapfigure}
-
-If $\measuredangle ABA'=\pi$;
-that is, if $B$ lies between $A$ and $A'$,
-then bisector of $\angle ABC$ is the external bisector of $\angle A' B C$ and the other way around.
-
-Note that the bisector and the external bisector are uniquely defined by the angle.
-
-
-\begin{thm}{Exercise}\label{ex:perp-bisectors}
-Show that for any angle, its bisector and external bisector are perpendicular.
-\end{thm}
-
-
-\begin{thm}[\abs]{Lemma}\label{lem:angle-bisect-dist}
-Assume $\measuredangle ABC\ne\pi$ nor~$0$.
-Given the angle $ABC$ and a point $X$, 
-consider foot points $Y$ and $Z$ of $X$ on $(AB)$ and~$(BC)$.
-
-Then $X Y=X Z$ if and only if $X$ lies on the bisector or external bisector of $\angle ABC$.
-\end{thm}
-
-
-\parit{Proof.}
-Let $Y'$ and $Z'$ be the reflections of $X$ in $(AB)$ and $(BC)$ correspondingly.
-By Proposition~\ref{prop:reflection},
-$XB=Y'B=Z'B$.
-
-\begin{wrapfigure}[8]{o}{26mm}
-\begin{lpic}[t(2mm),b(0mm),r(0mm),l(1mm)]{pics/angle-bisect-lemma(1)}
-\lbl[bl]{23,11;$A$}
-\lbl[br]{1,18;$B$}
-\lbl[rb]{21,36;$C$}
-\lbl[t]{13.5,26;$Z$}
-\lbl[l]{21,22;$X$}
-\lbl[br]{16,13;$Y$}
-\lbl[t]{14,0;$Y'$}
-\lbl[rb]{8,35;$Z'$}
-\end{lpic}
-\end{wrapfigure}
-
-Note that
-$$
-XY'=2\cdot XY
-\quad
-\text{and}
-\quad 
-XZ'=2\cdot XZ.
-$$
-Applying SSS and then SAS, we get
-$$\begin{aligned}
-XY&=XZ
-\\
-&\Updownarrow
-\\
-XY'&=XZ'
-\\
-&\Updownarrow
-\\
-\triangle BXY'&\cong\triangle BXZ'
-\\
-&\Updownarrow
-\\
-\measuredangle XBY'&= \pm \measuredangle BXZ'.
-\end{aligned}
-\eqlbl{eq:iff-chain}$$
-According to Proposition~\ref{prop:reflection}, 
-\begin{align*}
-\measuredangle XBA&\equiv -\measuredangle Y'BA,
-&
-\measuredangle XBC&\equiv -\measuredangle Z'BC.
-\end{align*}
-Therefore, 
-$$2\cdot \measuredangle XBA
-\equiv 
-\measuredangle XBY'
-\quad 
-\text{and}
-\quad
-2\cdot \measuredangle XBC
-\equiv 
--XBZ'.$$
-That is, we can continue the chain of equivalence conditions \ref{eq:iff-chain} the following way:
-$$\measuredangle XBY'
-\equiv 
-\pm \measuredangle BXZ'
-\quad 
-\iff
-\quad 
-2\cdot \measuredangle XBA 
-\equiv
-\pm 2\cdot \measuredangle XBC.$$
-
-
-Since $(AB)\ne(BC)$, we have
-$$2\cdot \measuredangle XBA
-\not\equiv 
-2\cdot \measuredangle XBC$$
-(compare to Exercise~\ref{ex:ABCO-line}).
-Therefore
-$$XY=XZ
-\quad
-\iff
-\quad  
-2\cdot \measuredangle XBA 
-\equiv
-- 2\cdot \measuredangle XBC.$$
-
-The last identity means either
-\begin{align*}
-\measuredangle XBA+\measuredangle XBC&\equiv 0
-\intertext{or}
-\measuredangle XBA+\measuredangle XBC&\equiv \pi.
-\end{align*}
-Hence the result follows.
-\qeds
 
 
 \section*{Circles}
@@ -664,16 +531,6 @@ As an example, let us consider the following problem:
 Construct the midpoint of the given segment~$[AB]$.
 \end{thm}
 
-\begin{wrapfigure}{o}{31mm}
-\begin{lpic}[t(0mm),b(0mm),r(0mm),l(1mm)]{pics/constr-perp-bisect(1)}
-\lbl[b]{4.3,28.5;$A$}
-\lbl[t]{26,12;$B$}
-\lbl[t]{26,35;$P$}
-\lbl[b]{4.5,5;$Q$}
-\lbl[b]{14.5,22.5;$M$}
-\end{lpic}
-\end{wrapfigure}
-
 \parit{Construction.}
 \begin{enumerate}[1.]
 \item Construct the circle 
@@ -686,6 +543,16 @@ which is passing thru~$A$.
 \item Draw the line~$(PQ)$.
 \item Mark the point of intersection of $(PQ)$ and $[AB]$; this is the midpoint.
 \end{enumerate}
+
+\begin{wrapfigure}[9]{o}{31mm}
+\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(1mm)]{pics/constr-perp-bisect(1)}
+\lbl[b]{4.3,28.5;$A$}
+\lbl[t]{26,12;$B$}
+\lbl[t]{26,35;$P$}
+\lbl[b]{4.5,5;$Q$}
+\lbl[b]{14.5,22.5;$M$}
+\end{lpic}
+\end{wrapfigure}
 
 \medskip
 
