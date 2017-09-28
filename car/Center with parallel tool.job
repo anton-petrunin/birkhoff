@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CaR version="12.0">
+<Construction job="true" last="c1" target1="P1">
+<Window x="0.0" y="0.0" w="8.0"/>
+<Objects>
+<Point name="P1" n="0" x="-3.1530139103554866" y="0.13601236476043255" shape="circle">Точка на -3.15301, 0.13601</Point>
+<Point name="P2" n="1" hidden="true" x="-1.4466769706336944" y="1.1251931993817612" shape="circle">Точка на -1.44668, 1.12519</Point>
+<Circle name="c1" n="2" through="P2" midpoint="P1" acute="true">Окружность вокруг P1  через P2</Circle>
+</Objects>
+</Construction>
+</CaR>
