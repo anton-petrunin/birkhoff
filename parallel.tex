@@ -242,33 +242,41 @@ Show that any angle-preserving transformation of the plane multiplies all the di
 \section*{Method of similar triangles}
 \addtocontents{toc}{Method of similar triangles.}
 
-%???
-
-The similarity of triangles provides a method for solving geometrical problems.
-To apply this method, we have to search for pairs of similar triangles and then use the proportionality of corresponding sides and/or equalities of corresponding angles.
+%(???
 
 {
 
-\begin{wrapfigure}{r}{27mm}
-\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(-0mm)]{pics/alt-two(1)}
-\lbl[rt]{1,1;$A$}
-\lbl[lt]{24,1;$B$}
-\lbl[b]{15,24.5;$C$}
-\lbl[lb]{22,10;$A'$}
-\lbl[rb]{8,12;$B'$}
+\begin{wrapfigure}{r}{25mm}
+\begin{lpic}[t(-10mm),b(0mm),r(0mm),l(-0mm)]{pics/two-pairs-sim(1)}
+\lbl[b]{2,31;$A$}
+\lbl[b]{23,29.5;$B$}
+\lbl[bl]{8,24.5;$Z$}
+\lbl[lt]{6,4;$C$}
+\lbl[rb]{2,21;$X$}
+\lbl[l]{15,15;$Y$}
 \end{lpic}
 \end{wrapfigure}
 
-The following exercise is a classical illustration of this method.
+The similarity of triangles provides a method for solving geometrical problems.
+To apply this method, one has to search for pairs of similar triangles and then use the proportionality of corresponding sides and/or equalities of corresponding angles.
 
-\begin{thm}{Exercise}\label{ex:sim+foots}
-Let $\triangle A B C$ be an \index{acute!triangle}\emph{acute} triangle; that is, all its angles are acute. 
-Denote by $A'$ the foot point of $A$ on $(BC)$ and
-by $B'$ the foot point of $B$ on~$(AC)$.
-Prove that $\triangle A'B'C\sim \triangle ABC$.
-\end{thm}
+Finding such pairs might be tricky at first. 
 
 }
+
+\begin{thm}{Exercise}\label{ex:two-pairs-sim}
+Let $ABC$ be a nondegenerate triangle,
+$X$ lies between $A$ and $C$, 
+$Y$ lies between $B$ and $C$.
+Assume $Z=[AX]\cap [BY]$ and $\measuredangle CAY\z\equiv\measuredangle XBC$.
+Find three pairs of similar triangles with these six points as the vertexes
+and prove their similarity.
+\end{thm}
+
+
+
+
+%???)
 
 \section*{Pythagorean theorem}
 \addtocontents{toc}{Pythagorean theorem.}
@@ -446,7 +454,7 @@ that is, $\triangle A B C$ is degenerate, a contradiction.
 
 {
 
-\begin{wrapfigure}[6]{i}{43mm}
+\begin{wrapfigure}[8]{i}{43mm}
 \begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/bisector-BA=AD=DC(1)}
 \lbl[b]{9,26;$A$}
 \lbl[t]{2,1;$B$}
@@ -458,7 +466,10 @@ that is, $\triangle A B C$ is degenerate, a contradiction.
 \begin{thm}{Exercise}\label{ex:pent}
 Let $\triangle ABC$ be a nondegenerate triangle.
 Assume there is a point $D\in [BC]$ 
-such that $(AD)$ bisects $\angle BAC$ and $BA\z=AD\z=DC$.
+such that 
+\[\measuredangle BAD\equiv \measuredangle DAC,
+\quad
+BA=AD\z=DC.\]
 Find the angles of $\triangle ABC$. 
 \end{thm}
 
@@ -516,15 +527,15 @@ $$\measuredangle A B C+\measuredangle B C D
 \quad
 \measuredangle A B C+\measuredangle B C D
 \equiv
-\pi;$$ 
-in the first case 
+\pi.$$ 
+Moreover, if $(AB)\ne(C D)$, then in the first case 
 $A$ and $D$ lie on the opposite sides of $(BC)$,
 in the second case  
 $A$ and $D$ lie on the same sides of~$(BC)$.
 \end{thm}
 
 \begin{wrapfigure}[6]{o}{22mm}
-\begin{lpic}[t(-3mm),b(0mm),r(0mm),l(0mm)]{pics/parallel-2(1)}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/parallel-2(1)}
 \lbl[b]{14.5,18;$A$}
 \lbl[b]{3,15;$B$}
 \lbl[b]{18,7.5;$C$}
@@ -556,8 +567,7 @@ the identity \ref{A B C + B C D} uniquely defines the line~$(C D)$.
 By Theorem~\ref{thm:parallel}, it follows that
 if $(AB)\z\parallel(C D)$, then the equality \ref{A B C + B C D} holds.
 
-Applying Corollary~\ref{cor:half-plane},
-we get the last part of the transversal property.
+The last part follows from Corollary~\ref{cor:half-plane}.
 \qeds
 
 

@@ -302,8 +302,7 @@ Formulate and prove an analog of Lemma~\ref{lem:bisect-ratio} for the external b
 Recall that distance from the line $\ell$ to the point $P$ is defined as the distance from $P$ to its foot point on $\ell$; see page~\pageref{distance!from a point to a line}. 
 
 \begin{thm}[\abs]{Proposition}\label{prop:angle-bisect-dist}
-Assume $\measuredangle ABC\ne\pi$ nor~$0$.
-
+Assume $\triangle ABC$ is not degenerate.
 Then a point $X$ lies on the bisector or external bisector of $\angle ABC$
 if and only if $X$ is equidistant from the lines $(AB)$ and $(BC)$.
 \end{thm}
@@ -313,15 +312,10 @@ We can assume that $X$ does not lie on the union of $(AB)$ and $(BC)$.
 Otherwise the distance to one of the lines vanish;
 in this case $X=B$ is the only point equidistant from the two lines.
 
-Let $Y$ and $Z$ be the reflections of $X$ in $(AB)$ and $(BC)$ correspondingly.
-Note that 
-By Proposition~\ref{prop:reflection},
-\[XB=YB=ZB.\]
-
 {
 
 \begin{wrapfigure}{o}{26mm}
-\begin{lpic}[t(-8mm),b(0mm),r(0mm),l(1mm)]{pics/angle-bisect-lemma(1)}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(1mm)]{pics/angle-bisect-lemma(1)}
 \lbl[bl]{23,11;$A$}
 \lbl[br]{1,18;$B$}
 \lbl[rb]{21,36;$C$}
@@ -329,18 +323,28 @@ By Proposition~\ref{prop:reflection},
 \lbl[l]{21,22;$X$}
 %\lbl[br]{16,13;$Y$}
 \lbl[t]{14,0;$Y$}
-\lbl[rb]{8,35;$Z$}
+\lbl[rb]{8,35.5;$Z$}
 \end{lpic}
 \end{wrapfigure}
+
+Let $Y$ and $Z$ be the reflections of $X$ in $(AB)$ and $(BC)$ correspondingly.
+Note that 
+\[Y\ne Z.\]
+Otherwise both lines $(AB)$ and $(BC)$ are perpendicular bisectors of $[XY]$, that is $(AB)=(BC)$ which is impossible since $\triangle ABC$ is not degenerate.
+
+By Proposition~\ref{prop:reflection},
+\[XB=YB=ZB.\]
+
+
 
 Note that $X$ is equidistant from $(AB)$ and $(BC)$ if and only if $XY=XZ$.
 Applying SSS and then SAS, we get
 $$\begin{aligned}
-XY&=XZ
+XY&=XZ.
 \\
 &\hskip0.4mm\Updownarrow
 \\
-\triangle BXY&\cong\triangle BXZ
+\triangle BXY&\cong\triangle BXZ.
 \\
 &\hskip0.4mm\Updownarrow
 \\
@@ -350,23 +354,20 @@ $$
 
 }
 
-If $\measuredangle XBY= \measuredangle BXZ$
-then $Z=Y$.
-In this case$(AB)=(BC)$ since both lines $(AB)$ and $(BC)$ are perpendicular bisectors of $[XY]$. 
-The latter contradicts the assumption.
-Therefore 
-\[\measuredangle XBY= -\measuredangle BXZ\eqlbl{eq:iff-chain}\]
+Since $Y\ne Z$, we get $\measuredangle XBY\ne \measuredangle BXZ$;
+therefore
+\[\measuredangle XBY= -\measuredangle BXZ.
+\eqlbl{eq:iff-chain}\]
 
 By Proposition~\ref{prop:reflection}, $A$ lies on the bisector of $\angle XBY$
-and $B$ lies on the bisector of $\angle XBZ$.
-Therefore
+and $B$ lies on the bisector of $\angle XBZ$; that is,
 \begin{align*}
 2\cdot \measuredangle XBA&\equiv \measuredangle XBY,
 &
 2\cdot \measuredangle XBC&\equiv \measuredangle XBZ.
 \end{align*}
 By \ref{eq:iff-chain},
-\[2\cdot \measuredangle XBA\equiv -2\cdot \measuredangle XBC\]
+\[2\cdot \measuredangle XBA\equiv -2\cdot \measuredangle XBC.\]
 The last identity means either
 \[
 \measuredangle XBA+\measuredangle XBC\equiv 0
@@ -396,14 +397,6 @@ This circle is called
 the \index{incircle}\emph{incircle} and its radius is called 
 the \index{inradius}\emph{inradius} of the triangle.
 
-\parit{Proof.} 
-Let $\triangle ABC$ be a nondegenerate triangle.
-
-Note that the points $B$ and $C$ lie on opposite sides of the bisector of $\angle BAC$.
-Hence this bisector intersects $[BC]$ at a point, say~$A'$.
-
-Analogously, there is $B'\in[AC]$ 
-such that $(BB')$ bisects $\angle ABC$.
 
 \begin{wrapfigure}{o}{34mm}
 \begin{lpic}[t(-0mm),b(2mm),r(0mm),l(0mm)]{pics/triangle-bisector(0.9)}
@@ -419,6 +412,14 @@ such that $(BB')$ bisects $\angle ABC$.
 \end{lpic}
 \end{wrapfigure}
 
+\parit{Proof.} 
+Let $\triangle ABC$ be a nondegenerate triangle.
+
+Note that the points $B$ and $C$ lie on opposite sides of the bisector of $\angle BAC$.
+Hence this bisector intersects $[BC]$ at a point, say~$A'$.
+
+Analogously, there is $B'\in[AC]$ 
+such that $(BB')$ bisects $\angle ABC$.
 
 Applying Pasch's theorem (\ref{thm:pasch}) twice
 for the triangles $AA'C$ and $BB'C$,
