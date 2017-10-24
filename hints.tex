@@ -303,7 +303,7 @@ Therefore, $Z\notin (PQ)$.
 
 Show that $Z$ and $X$ lie on one side from~$(PQ)$.
 Repeat the argument to show that $Z$ and $Y$ lie on one side from~$(PQ)$.
-It follows that $X$ and $Y$ lie on the same side from $(PQ)$, a contradiction.
+It follows that $X$ and $Y$ lie on the same side from $(PQ)$ --- a contradiction.
 
 
 \section*{Chapter~\ref{chap:cong}}
@@ -342,7 +342,7 @@ $$\measuredangle CBX\equiv - \measuredangle CBX'.$$
 Subtracting these two identities from each other, we get
 $$\measuredangle ABC\equiv -\measuredangle ABC.$$
 Conclude that $\measuredangle ABC=0$ or $\pi$.
-That is, $\triangle ABC$ is degenerate, a contradiction. 
+That is, $\triangle ABC$ is degenerate --- a contradiction. 
 
 
 \section*{Chapter~\ref{chap:perp}}
@@ -520,7 +520,9 @@ Note that the centers lie on the perpendicular bisector of the segment~$[AB]$.
 \setcounter{eqtn}{0}
 
 \parbf{Exercise~\ref{ex:perp-perp}.}
-Show first that~$k\perp n$.
+Apply Proposition~\ref{prop:perp-perp} to show that $k\parallel m$.
+By Corollary~\ref{cor:parallel-1}, $k\parallel n$ $\Rightarrow$ $m\parallel n$.
+The latter contradicts that $m\perp n$.
 
 \parbf{Exercise~\ref{ex:construction-parallel}.}
 Repeat twice the construction in Exercise~\ref{ex:construction-perpendicular}.
@@ -778,11 +780,18 @@ the point of intersection of two external and one internal bisectors of $\triang
 Apply Theorem~\ref{thm:inscribed-angle} for $\angle XX'Y$ and $\angle X'YY'$
 and Theorem~\ref{thm:3sum} for $\triangle PYX'$.
 
-\parit{(b)} Note first that the angles $XPY$ and $X'PY'$ are vertical.
-Therefore, $\measuredangle XPY=\measuredangle X'PY'$.
+\parit{(b)} If $P$ is inside of $\Gamma$ then $P$ lies between $X$ and $X'$ and between $Y$ and $Y'$ in this case $\angle XPY$ is vertical to $\angle X'PY'$.
+If $P$ is outside of $\Gamma$ then $[PX)\z=[PX')$ and $[PY)=[PY')$.
+In both cases we have $\measuredangle XPY=\measuredangle X'PY'$.
 
-Applying Theorem~\ref{thm:inscribed-angle} we get
-$$2\cdot \measuredangle Y'X'P\equiv 2\cdot\measuredangle PYX.$$
+Applying Theorem~\ref{thm:inscribed-angle} and Exercise~\ref{ex:ABCO-line}, we get
+\[2\cdot \measuredangle Y'X'P
+\equiv
+2\cdot \measuredangle Y'X'X 
+\equiv
+2\cdot\measuredangle Y'YX
+\equiv
+2\cdot\measuredangle PYX.\]
 According to Theorem~\ref{thm:signs-of-triug}, $\angle Y'X'P$ and $\angle PYX$ have the same sign;
 therefore
 $$\measuredangle Y'X'P= \measuredangle PYX.$$
@@ -822,16 +831,17 @@ Note that $\measuredangle AA'B=\pm\tfrac\pi2$ and $\measuredangle AB'B=\pm\tfrac
 Then apply Theorem~\ref{thm:inscribed-quadrilateral}
 to $\square AA'BB'$.
 
+{
+
+\begin{wrapfigure}{o}{34mm}
+\begin{lpic}[t(-0mm),b(-0mm),r(-1mm),l(0mm)]{pics/perp=constr(1)}
+\end{lpic}
+\end{wrapfigure}
+
+
 If $O$ is the center of the circle, then 
 $$\measuredangle AOB\equiv 2\cdot \measuredangle AA'B\equiv\pi.$$
 That is, $O$ is the midpoint of~$[AB]$.
-
-{
-
-\begin{wrapfigure}[9]{o}{34mm}
-\begin{lpic}[t(-0mm),b(-2mm),r(-1mm),l(0mm)]{pics/perp=constr(1)}
-\end{lpic}
-\end{wrapfigure}
 
 \parbf{Exercise~\ref{ex:perpendicular-ruler}.}
 Guess the construction from the diagram.
@@ -842,13 +852,15 @@ apply Theorem~\ref{thm:orthocenter} and Corollary~\ref{cor:right-angle-diameter}
 \parbf{Exercise~\ref{ex:secant-circles}.}
 Apply Theorem~\ref{thm:inscribed-quadrilateral} twice for $\square ABYX$ and $\square ABY'X'$ and use the transversal property (\ref{thm:parallel-2}).
 
+}
+
 \parbf{Exercise~\ref{ex:two-chords}.} Apply the transversal property (\ref{thm:parallel-2}) and the theorem on inscribed angle (\ref{thm:inscribed-angle}).
 
 
 \parbf{Exercise~\ref{ex:inaccuracy}.}
 In the proof we assume that the lines $(A'B')$ and $(XP)$ are not parallel, otherwise the first line in the proof does not make sense.
 
-}
+
 
 In addition, we use without mentioning the following three identities:
 \begin{align*}
@@ -1287,9 +1299,9 @@ Hence the result follows.
 
 \begin{wrapfigure}{r}{20mm}
 \begin{lpic}[t(-6mm),b(-3mm),r(0mm),l(-0mm)]{pics/bisection-affine(1)}
-\lbl[t]{2,6;$A$}
-\lbl[t]{17,9;$B$}
-\lbl[br]{8.5,10;$M$}
+\lbl[t]{2,7;$A$}
+\lbl[t]{17,10;$B$}
+\lbl[br]{8.5,11;$M$}
 \end{lpic}
 \end{wrapfigure}
 
@@ -1374,7 +1386,7 @@ The case $(AB)\parallel(A'B')$ is similar.
 Assume the contrary.
 Choose two parallel lines $\ell$ and~$m$.
 Let $L$ and $M$ be their dual points.
-Set $s=(ML)$, then its dual point $S$ have to lie on both $\ell$ and $m$;
+Set $s=(ML)$, then its dual point $S$ have to lie on both $\ell$ and $m$ ---
 a contradiction.
 
 \parbf{Exercise~\ref{ex:dula-coordinates}.}
@@ -1481,11 +1493,11 @@ $$
 $$
 Therefore, $AB_s=\tfrac\pi3$.
 
-\begin{wrapfigure}{r}{36mm}
-\begin{lpic}[t(-0mm),b(-3mm),r(-2mm),l(0mm)]{pics/tessellation(0.8)}
-\lbl[br]{10,38;$A$}
-\lbl[bl]{33,38;$B$}
-\lbl[t]{21,35;$C$}
+\begin{wrapfigure}{r}{30mm}
+\begin{lpic}[t(-7mm),b(-3mm),r(-2mm),l(0mm)]{pics/tessellation(1)}
+\lbl[br]{8,27;$A$}
+\lbl[bl]{22,27;$B$}
+\lbl[t]{15,23;$C$}
 \end{lpic}
 \end{wrapfigure}
 
@@ -1613,7 +1625,7 @@ Hence the result follows.
 \begin{wrapfigure}{o}{44mm}
 \begin{lpic}[t(-6mm),b(-2mm),r(0mm),l(0mm)]{pics/absolute-triangle-2-k(1)}
 \lbl[tr]{20,21;$P$}
-\lbl[tl]{32,21;$Q$}
+\lbl[tl]{33,21;$Q$}
 \lbl[lb]{26,23;$\phi$}
 \end{lpic}
 \end{wrapfigure}
@@ -1828,8 +1840,7 @@ that is, there is a point $W\in [XY]$ such that $W\notin\solidtriangle ABC$.
 Without loss of generality, we may assume that $W$ and $A$ lie on opposite sides from the line~$(BC)$.
 
 It imples that both segments $[WX]$ and $[WY]$ intersect $(BC)$.
-By Axiom~\ref{def:birkhoff-axioms:1}, $W\in (BC)$,
-a contradiction.
+By Axiom~\ref{def:birkhoff-axioms:1}, $W\in (BC)$ --- a contradiction.
 
 \parbf{Exercise~\ref{ex:vertex}.} 
 To prove the ``only if'' part, consider the line passing thru the vertex which is parallel to the opposite side.
@@ -1845,7 +1856,7 @@ Therefore, we can choose a segment $[PQ]$ in $\mathcal{Q}$
 which is not parallel to any of the segments $[A_1B_1],\dots,[A_nB_n]$.
 
 It follows that $[PQ]$ has at most one common point with each the sets  $[A_iB_i]$ and~$\{C_i\}$.
-We arrive to a contradiction since $[PQ]$ contains infinte number of points.
+We arrive to a contradiction since $[PQ]$ contains infinite number of points.
 
 
 \parbf{Exercise~\ref{ex:poly-circ}.} 

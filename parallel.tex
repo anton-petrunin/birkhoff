@@ -4,15 +4,29 @@
 \section*{Parallel lines}
 \addtocontents{toc}{Parallel lines.}
 
+
+
+{
+
+\begin{wrapfigure}{r}{19mm}
+\begin{lpic}[t(-3mm),b(0mm),r(0mm),l(-0mm)]{pics/parallel-notation(1)}
+\end{lpic}
+\end{wrapfigure}
+
 In consequence of Axiom~\ref{def:birkhoff-axioms:1}, 
 any two distinct lines $\ell$ and $m$ have either one point
 in common or none. 
-In the first case they are \index{intersecting lines}\emph{intersecting}; 
+In the first case they are \index{intersecting lines}\emph{intersecting} (briefly \index{36@$\parallel$}$\ell\nparallel m$); 
 in the second case, $\ell$ and $m$ are said to be \index{parallel lines}\emph{parallel} (briefly \index{36@$\parallel$}$\ell\parallel m$);
 in addition, a line is always regarded as parallel to itself.
 
+}
 
-\begin{thm}[\abs]{Proposition}\label{prop:perp-perp}Let $\ell$, $m$ and $n$ be three lines.
+To emphasize that two non-intersecting line on a diagram are parallel we will mark them arrows of the same type.
+
+
+
+\begin{thm}[\abs]{Proposition}\label{prop:perp-perp} Let $\ell$, $m$ and $n$ be three lines.
 Assume that $n\perp m$ and $m\perp \ell$.
 Then $\ell\parallel n$. 
 \end{thm}
@@ -24,7 +38,7 @@ Then there is a point, say $Z$, of intersection of $\ell$ and~$n$.
 Then by Theorem \ref{perp:ex+un},
 $\ell=n$.
 
-Since any line is parallel to itself, we have $\ell\parallel n$, a contradiction.
+Since any line is parallel to itself, we have $\ell\parallel n$ --- a contradiction.
 \qeds
 
 \begin{thm}{Theorem}\label{thm:parallel}
@@ -61,9 +75,9 @@ In particular, $R\in [P D)$.
  \begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/parallel(1)}
 \lbl[br]{2,24.5;$P$}
 \lbl[r]{1,15;$R$}
-\lbl[rt]{2,1;$D$}
+\lbl[rt]{2,.5;$D$}
 \lbl[bl]{23,16;$Q$}
-\lbl[t]{55,1;$Z$}
+\lbl[t]{55,.5;$Z$}
 \lbl[t]{35,1.5;$\ell$}
 \lbl[b]{35,23;$m$}
 \lbl[b]{39,9.5,-15;$s$}
@@ -75,7 +89,7 @@ Choose $Z\in [P Q)$ such that
 $$\frac{PZ}{PQ}=\frac{PD}{PR}.$$
 Then
 by Axiom~\ref{def:birkhoff-axioms:4},  $(Z D)\perp(P D)$; 
-that is, $Z\in \ell\cap s$, a contradiction.\qeds
+that is, $Z\in \ell\cap s$ --- a contradiction.\qeds
 
 \begin{thm}{Corollary}\label{cor:parallel-1}
 Assume $\ell$, $m$ and $n$ are lines
@@ -87,7 +101,7 @@ Then $\ell\parallel n$.
 Assume the contrary; that is, $\ell\nparallel n$.
 Then there is a point $P\in \ell\cap n$.
 By Theorem \ref{thm:parallel},
-$n=\ell$, a contradiction.
+$n=\ell$ --- a contradiction.
 \qeds
 
 Note that from the definition, we have $\ell\parallel m$ if and only if $m\z\parallel \ell$.
@@ -102,8 +116,8 @@ $\ell\parallel n$.
 \end{enumerate}
 
 \begin{thm}{Exercise}\label{ex:perp-perp}
-Let $k$, $\ell$, $m$ and $n$ be  lines such that $k\perp \ell$ and $m\perp n$.
-Show that if $k\parallel m$, then $\ell\parallel n$.
+Let $k$, $\ell$, $m$ and $n$ be  lines such that $k\perp \ell$, $\ell\perp m$ and $m\perp n$.
+Show that $k\nparallel n$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:construction-parallel}
@@ -449,7 +463,7 @@ Adding the last two identities, we get
 $$2\cdot\alpha\equiv0.$$
 Equivalently 
 $\alpha\equiv\pi$ or $0$;
-that is, $\triangle A B C$ is degenerate, a contradiction.
+that is, $\triangle A B C$ is degenerate --- a contradiction.
 \qeds
 
 {
@@ -534,9 +548,9 @@ in the second case
 $A$ and $D$ lie on the same sides of~$(BC)$.
 \end{thm}
 
-\begin{wrapfigure}[6]{o}{22mm}
+\begin{wrapfigure}[6]{o}{30mm}
 \begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/parallel-2(1)}
-\lbl[b]{14.5,18;$A$}
+\lbl[b]{14.5,18.5;$A$}
 \lbl[b]{3,15;$B$}
 \lbl[b]{18,7.5;$C$}
 \lbl[b]{3,3;$D$}
@@ -564,7 +578,8 @@ that is, \ref{A B C + B C D} does not hold.
 
 Note that if the points $A$, $B$ and $C$ are fixed,
 the identity \ref{A B C + B C D} uniquely defines the line~$(C D)$.
-By Theorem~\ref{thm:parallel}, it follows that
+By Theorem~\ref{thm:parallel}, there is unique line thru $C$ which is parallel to $(AB)$;
+it follows that
 if $(AB)\z\parallel(C D)$, then the equality \ref{A B C + B C D} holds.
 
 The last part follows from Corollary~\ref{cor:half-plane}.
@@ -610,7 +625,7 @@ if $(AB)\z\parallel (CD)$ and $(BC)\z\parallel (DA)$.
 {
 
 \begin{wrapfigure}{o}{32mm}
-\begin{lpic}[t(-2mm),b(0mm),r(1mm),l(1mm)]{pics/parallelogram(1)}
+\begin{lpic}[t(-0mm),b(0mm),r(1mm),l(1mm)]{pics/parallelogram(1)}
 \lbl[bl]{29,27.5;$A$}
 \lbl[br]{7,27.5;$B$}
 \lbl[t]{-.5,.5;$C$}
@@ -725,7 +740,7 @@ for any pair of points $P$ and~$Q$.
 \end{thm}
 
 \begin{wrapfigure}[8]{o}{33mm}
-\begin{lpic}[t(2mm),b(0mm),r(0mm),l(4mm)]{pics/PQlm(1)}
+\begin{lpic}[t(-2mm),b(0mm),r(0mm),l(4mm)]{pics/PQlm(1)}
 \lbl[br]{12,10;$P$}
 \lbl[bl]{23,22;$Q$}
 \lbl[t]{11,0;$P_\ell$}
