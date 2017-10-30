@@ -762,8 +762,11 @@ Hence the result follows.
 \parbf{Exercise~\ref{ex:orthic-triangle}.}
 Let $\triangle ABC$ be the given acute triangle and $\triangle A'B'C'$ 
 be its orthic triangle.
-Apply Exercise~\ref{ex:sim+foots} to show that 
-$\measuredangle A'B'C\z=\measuredangle AB'C'$.
+Note that $\triangle AA'C\sim\triangle BB'C$.
+Use it to show that $\triangle A'B'C\sim \triangle ABC$.
+
+The same way we get $\triangle AB'C'\sim \triangle ABC$.
+It follows that $\measuredangle A'B'C\z=\measuredangle AB'C'$.
 Conclude that $(BB')$ is bisecting $\angle A'B'C'$.
 
 If $\triangle ABC$ is obtuse, then orthocenter coincides with one of the \index{excenter}\emph{excenters} of $\triangle ABC$;
@@ -879,6 +882,37 @@ the points $L$, $M$ and $N$ lie on the circle $\Gamma$ with diameter~$[OX]$.
 It remains to apply Theorem \ref{thm:inscribed-angle} for the circle $\Gamma$ 
 and two inscribed angles with vertex at~$O$.
 
+\begin{wrapfigure}[7]{o}{30mm}
+\begin{lpic}[t(-4mm),b(-0mm),r(-1mm),l(0mm)]{pics/simson(1)}
+\lbl[br]{5,22;$A$}
+\lbl[b]{24,24.5;$B$}
+\lbl[br]{3,12;$C$}
+\lbl[br]{8.5,15;$X$}
+\lbl[r]{1,4;$Y$}
+\lbl[br]{14.5,23;$Z$}
+\lbl[t]{17,0;$P$}
+\end{lpic}
+\end{wrapfigure}
+
+\parbf{Advanced exercise~\ref{ex:simson}.}
+Denote by $X$, $Y$ and $Z$ the foot points of $P$ on $(BC)$, $(CA)$ and $(AB)$ correspondingly.
+
+Notice that $\square AZPY$, $\square BXPZ$, $\square CYPX$ and $\square ABCP$ are inscribed.
+Therefore
+\begin{align*}
+2\cdot \measuredangle CXY&\equiv  2\cdot \measuredangle CPY,
+&
+2\cdot \measuredangle BXZ&\equiv  2\cdot \measuredangle BPZ,
+\\
+2\cdot \measuredangle YAZ&\equiv  2\cdot \measuredangle YPZ,
+&
+2\cdot \measuredangle CAB&\equiv  2\cdot \measuredangle CPB.
+\end{align*}
+Conclude that 
+$2\cdot \measuredangle CXY\equiv  2\cdot \measuredangle BXZ$
+and hence $X$, $Y$ and $Z$ lie on one line.
+
+
 \parbf{Exercise~\ref{ex:arc-tan-straight}.}
 By Theorem~\ref{thm:3sum},
 $$\measuredangle ABC+\measuredangle BCA+\measuredangle CAB\equiv \pi.$$
@@ -894,7 +928,7 @@ Let $\ell$ be the line thru $A$ perpendicular to $(AX)$
 and $m$ be the perpendicular bisector of~$[AC]$.
 
 \begin{wrapfigure}{r}{35mm}
-\begin{lpic}[t(-5mm),b(0mm),r(0mm),l(0mm)]{pics/3x120(1)}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/3x120(1)}
 \end{lpic}
 \end{wrapfigure}
 
@@ -973,14 +1007,16 @@ Guess the construction from the diagram (the two nonintersecting lines on the di
 \parbf{Exercise~\ref{ex:inv-center not=center-inv}.}
 Show first that for any $r>0$ and 
 any real numbers $x,y$ distinct from $0$,
-we have
-$$\frac{r}{(x+y)/2}
-\ne
-\left(\frac rx+\frac ry\right)/2.$$
+$$\frac{r^2}{(x+y)/2}
+=
+\left(\frac {r^2}x+\frac {r^2}y\right)/2$$
+if and only if $x=y$.
 
 Denote by $\ell$ the line passing thru $Q$, $Q'$ and the center of the inversion $O$.
 Choose an isometry $\ell\to\mathbb{R}$ which sends $O$ to $0$;
-assume $x$ and $y$ denote the values for the two points of intersection $\ell\cap\Gamma$.
+assume $x,y\in \mathbb{R}$ are the values of $\ell$ for the two points of intersection $\ell\cap\Gamma$;
+note that $x\ne y$.
+Assume $r$ is the radius of the circle of inversion.
 Then the left hand side above is the coordinate of $Q'$ 
 and the right hand side is the coordinate of the center of $\Gamma'$.
 
@@ -992,7 +1028,7 @@ Apply an inversion in a circle with the center at the only point of intersection
 then use Theorem~\ref{thm:inverse}.
 
 \begin{wrapfigure}[6]{o}{48mm}
-\begin{lpic}[t(-1mm),b(-1mm),r(0mm),l(0mm)]{pics/ex-inverse(1)}
+\begin{lpic}[t(-6mm),b(-1mm),r(0mm),l(0mm)]{pics/ex-inverse(1)}
 \lbl[bl]{28,9;$B'$}
 \lbl[br]{19,9;$A$}
 \end{lpic}
@@ -1166,12 +1202,12 @@ OX_h&=\ln \tfrac{1+a}{1-a},
 &
 XY_h&=\ln \tfrac{(1+2\cdot a)\cdot(1-a)}{(1-2\cdot a)\cdot(1+a)}.
 \end{align*}
-It remains to check that inequality 
+It remains to check that the inequalities 
 \[1<
 \tfrac{1+a}{1-a}
 <
 \tfrac{(1+2\cdot a)\cdot(1-a)}{(1-2\cdot a)\cdot(1+a)}\]
-holds if $0<a<\tfrac12$.
+hold if $0<a<\tfrac12$.
 
 \parbf{Exercise~\ref{ex:h-perp-unique}.} 
 Spell the meaning of terms ``perpendicular'' and ``h-line'' and then apply Exercise~\ref{ex:cline-perp-to-two}.
@@ -1230,7 +1266,7 @@ Therefore, $\ln\left(1+\sqrt{2}\right)$ is the optimal upper bound.
 {
 
 \begin{wrapfigure}[11]{r}{44mm}
-\begin{lpic}[t(-0mm),b(-1mm),r(0mm),l(-0mm)]{pics/h-circle-5(1)}
+\begin{lpic}[t(-4mm),b(-1mm),r(0mm),l(-0mm)]{pics/h-circle-5(1)}
 \lbl[tr]{22,20;$Q$}
 \lbl[t]{37,20;$P$}
 \lbl[br]{21,37;$R$}
@@ -1298,7 +1334,7 @@ that is, $\ell$ and $m$ are intersecting.
 Hence the result follows.
 
 \begin{wrapfigure}{r}{20mm}
-\begin{lpic}[t(-6mm),b(-3mm),r(0mm),l(-0mm)]{pics/bisection-affine(1)}
+\begin{lpic}[t(-0mm),b(-3mm),r(0mm),l(-0mm)]{pics/bisection-affine(1)}
 \lbl[t]{2,7;$A$}
 \lbl[t]{17,10;$B$}
 \lbl[br]{8.5,11;$M$}
@@ -1614,12 +1650,6 @@ Let us denote by $\hat\ell$ and $\hat m$ the h-lines in the conformal model
 which correspond to $\ell$ and $m$.
 We need to show that $\hat\ell\perp\hat m$ as arcs in the Euclidean plane.
 
-The point $Z$ where $s$ and $t$ meet is the center of the circle $\Gamma$ containing~$\hat\ell$.
-
-If $\bar m$ passing thru $Z$, then the inversion in $\Gamma$ exchanges the ideal points of~$\hat\ell$.
-In particular, $\hat\ell$ maps to itself. 
-Hence the result follows.
-
 {
 
 \begin{wrapfigure}{o}{44mm}
@@ -1630,12 +1660,18 @@ Hence the result follows.
 \end{lpic}
 \end{wrapfigure}
 
+The point $Z$ where $s$ and $t$ meet is the center of the circle $\Gamma$ containing~$\hat\ell$.
+
+If $\bar m$ passing thru $Z$, then the inversion in $\Gamma$ exchanges the ideal points of~$\hat\ell$.
+In particular, $\hat\ell$ maps to itself. 
+Hence the result follows.
+
 \parbf{Exercise~\ref{ex:klein-for-angle-parallelism}.}
 We can assume that $P$ is the center of the absolute.
 Then 
 \[PQ=\cos\phi.\]
 
-
+}
 
 Therefore
 \[PQ_h=\tfrac12\cdot\ln\frac{1+\cos\phi}{1-\cos\phi}.\]
@@ -1645,7 +1681,7 @@ Therefore
 \parbf{Exercise~\ref{ex:klein-inradius}.} 
 Apply Exercise~\ref{ex:klein-for-angle-parallelism} for $\phi=\tfrac\pi3$.
 
-}
+
 
 \parbf{Exercise~\ref{ex:Boyai-in-Euclid}.}
 In the Euclidean plane, the circle $\Gamma_2$ is tangent to $k$; 
