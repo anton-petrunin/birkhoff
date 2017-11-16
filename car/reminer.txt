@@ -1,0 +1,15 @@
+For exercises in hyperbolic geometry:
+
+1. Help>Load Example>Poincare Geometry.zir
+
+2. Special>Define construction set the last object to be displayed and the assignment targets.
+
+3. Save the construction.
+
+4. Delete unnecesary macros.
+
+5. Save as html; enable the icon which look like this:
+
+.....
+.....
+.....

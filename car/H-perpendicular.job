@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CaR version="12.0">
+<Macro Name="Poincare Geometry/01: Point (13)">
+<Parameter name="k">=k</Parameter>
+<Parameter name="P2">P2</Parameter>
+<Comment>
+<P>Create a point on k.</P>
+</Comment>
+<Objects>
+<Point name="P1" n="0" hidden="true" parameter="true" x="0.0" y="0.0">Точка на 0.0, 0.0</Point>
+<Circle name="k" n="1" mainparameter="true" midpoint="P1">???</Circle>
+<PointOn name="P2" n="2" mainparameter="true" on="k" inside="true" x="1.2166064617758128" y="3.4297394493749858" shape="circle">Точка на k</PointOn>
+</Objects>
+</Macro>
+<Macro Name="Poincare Geometry/03: Limited Line (27)">
+<Parameter name="k" fixed="k">k</Parameter>
+<Parameter name="P2">A</Parameter>
+<Parameter name="P3">B</Parameter>
+<Comment>
+<P>Line through A and B. Only the part of the line in the
+basic circle is shown.</P>
+</Comment>
+<Objects>
+<Point name="P1" n="0" hidden="true" parameter="true" x="0.0" y="0.0">Точка на 0.0, 0.0</Point>
+<Circle name="k" n="1" mainparameter="true" midpoint="P1">???</Circle>
+<Point name="P2" n="2" mainparameter="true" x="-4.307444354036484" y="-0.30075007284748445">Точка на -4.30744, -0.30075</Point>
+<Point name="P3" n="3" mainparameter="true" x="3.0368" y="4.18466">Точка на 3.0368, 4.18466</Point>
+<Line name="g1" n="4" hidden="super" from="P1" to="P2">Gerade durch P1 und P2</Line>
+<Midpoint name="M1" n="5" hidden="super" first="P1" second="P2">Mitte zwischen P1 und P2</Midpoint>
+<Plumb name="l1" n="6" hidden="super" point="M1" line="g1" valid="true">Lot durch M1 zu g1</Plumb>
+<Intersection name="S1" n="7" hidden="super" first="l1" second="k" which="second">Schnitt zwischen l1 und k</Intersection>
+<Line name="g2" n="8" hidden="super" from="P1" to="S1">Gerade durch P1 und S1</Line>
+<Midpoint name="M2" n="9" hidden="super" first="P1" second="S1">Mitte zwischen P1 und S1</Midpoint>
+<Plumb name="l2" n="10" hidden="super" point="M2" line="g2" valid="true">Lot durch M2 zu g2</Plumb>
+<Intersection name="S2" n="11" hidden="super" first="g1" second="l2">Schnitt zwischen g1 und l2</Intersection>
+<Line name="g3" n="12" hidden="super" from="P2" to="P3">Gerade durch P2 und P3</Line>
+<Midpoint name="M3" n="13" hidden="super" first="P2" second="P3">Mitte zwischen P2 und P3</Midpoint>
+<Plumb name="l3" n="14" hidden="super" point="M3" line="g3" valid="true">Lot durch M3 zu g3</Plumb>
+<Line name="g4" n="15" hidden="super" from="P2" to="S2">Gerade durch P2 und S2</Line>
+<Midpoint name="M4" n="16" hidden="super" first="P2" second="S2">Mitte zwischen P2 und S2</Midpoint>
+<Plumb name="l4" n="17" hidden="super" point="M4" line="g4" valid="true">Lot durch M4 zu g4</Plumb>
+<Intersection name="S3" n="18" hidden="super" first="l3" second="l4">Schnitt zwischen l3 und l4</Intersection>
+<Circle name="k2" n="19" target="true" through="P2" midpoint="S3" start="S4" end="S5" acute="true">Kreis um S3 durch P2</Circle>
+<Intersection name="S4" n="20" hidden="true" target="true" first="k" second="k2" which="second">Schnitt zwischen k und k2</Intersection>
+<Intersection name="S5" n="21" hidden="true" target="true" first="k2" second="k" which="second">Schnitt zwischen k2 und k</Intersection>
+</Objects>
+</Macro>
+<Macro Name="Poincare Geometry/05: Circle (19)">
+<Parameter name="k" fixed="k">k</Parameter>
+<Parameter name="P16">M</Parameter>
+<Parameter name="P17">A</Parameter>
+<Comment>
+<P>Circle around M through A.</P>
+</Comment>
+<Objects>
+<Point name="P1" n="0" hidden="true" parameter="true" x="0.0" y="0.0">Точка на 0.0, 0.0</Point>
+<Circle name="k" n="1" mainparameter="true" midpoint="P1">???</Circle>
+<Point name="P16" n="2" mainparameter="true" x="1.2081475452336594" y="1.7053522738256321">Точка на 1.20815, 1.70535</Point>
+<Point name="P17" n="3" mainparameter="true" x="2.855222426515075" y="3.6112532078798423">Точка на 2.85522, 3.61125</Point>
+<Line name="g1" n="4" hidden="super" from="P1" to="P16">Gerade durch P1 und P16</Line>
+<Midpoint name="M1" n="5" hidden="super" first="P1" second="P16">Mitte zwischen P1 und P16</Midpoint>
+<Plumb name="l1" n="6" hidden="super" point="M1" line="g1" valid="true">Lot durch M1 zu g1</Plumb>
+<Intersection name="S1" n="7" hidden="super" first="l1" second="k" which="second">Schnitt zwischen l1 und k</Intersection>
+<Line name="g2" n="8" hidden="super" from="P1" to="S1">Gerade durch P1 und S1</Line>
+<Midpoint name="M2" n="9" hidden="super" first="P1" second="S1">Mitte zwischen P1 und S1</Midpoint>
+<Plumb name="l2" n="10" hidden="super" point="M2" line="g2" valid="true">Lot durch M2 zu g2</Plumb>
+<Intersection name="S2" n="11" hidden="super" first="g1" second="l2">Schnitt zwischen g1 und l2</Intersection>
+<Line name="g3" n="12" hidden="super" from="P16" to="P17">Gerade durch P16 und P17</Line>
+<Midpoint name="M3" n="13" hidden="super" first="P16" second="P17">Mitte zwischen P16 und P17</Midpoint>
+<Plumb name="l3" n="14" hidden="super" point="M3" line="g3" valid="true">Lot durch M3 zu g3</Plumb>
+<Line name="g4" n="15" hidden="super" from="P16" to="S2">Gerade durch P16 und S2</Line>
+<Midpoint name="M4" n="16" hidden="super" first="P16" second="S2">Mitte zwischen P16 und S2</Midpoint>
+<Plumb name="l4" n="17" hidden="super" point="M4" line="g4" valid="true">Lot durch M4 zu g4</Plumb>
+<Intersection name="S3" n="18" hidden="super" first="l3" second="l4">Schnitt zwischen l3 und l4</Intersection>
+<Line name="g5" n="19" hidden="super" from="S3" to="P17">Gerade durch S3 und P17</Line>
+<Plumb name="l5" n="20" hidden="super" point="P17" line="g5" valid="true">Lot durch P17 zu g5</Plumb>
+<Line name="g6" n="21" hidden="super" from="P1" to="P16">Gerade durch P1 und P16</Line>
+<Intersection name="S4" n="22" hidden="super" first="l5" second="g6">Schnitt zwischen l5 und g6</Intersection>
+<Circle name="k2" n="23" target="true" through="P17" midpoint="S4" acute="true">Kreis um S4 durch P17</Circle>
+</Objects>
+</Macro>
+<Construction job="true" last="P4" target1="c6">
+<Window x="0.35844919012283327" y="-0.05720338860737417" w="7.204412273296672"/>
+<Comment>
+<P>Poincare (hyperbolic) geometry realized with macros. </P>
+<P></P>
+<P>This geometry can be realized on the southern hemisphere of
+a ball. You are viewing at it from the north pole. The
+green circle is the projection of the southern hemisphere,
+the boundary is the equator. This projection is called
+stereographical projection. It preserves angles. </P>
+<P></P>
+<P>Lines are circles on the ball, rectangular to the equator.
+These circles project to circles perpendicular to the
+boundary of the green circle. Circles are just circles on
+the ball. They project to circles, but with different
+midpoint. </P>
+<P></P>
+<P>Take care to use the macro for intersections. It will
+intersect two lines (circles in the projection), but choose
+the intersection in the green circle.</P>
+</Comment>
+<Assignment>
+<P>Drop h-perpendicular from the given point.</P>
+</Assignment>
+<Objects>
+<Point name="Mc" n="0" hidden="true" x="0" actx="0.0" y="0" acty="0.0" fixed="true">Точка на &quot;0&quot;, &quot;0&quot;</Point>
+<Circle name="k" n="1" color="1" type="thin" background="true" fixed="1+5" midpoint="Mc" filled="true">Kreis um Mc mit Radius 1+5</Circle>
+<Point name="P2" n="1" hidden="true" x="-3.506506100022205" y="-1.790500223771103" shape="circle">Точка на -3.50651, -1.7905</Point>
+<Point name="P3" n="2" hidden="true" x="0.08722425748107643" y="-1.8922095735117619" shape="circle">Точка на 0.08722, -1.89221</Point>
+<Line name="l1" n="3" hidden="super" from="Mc" to="P2">Прямая через Mc и P2</Line>
+<Midpoint name="M1" n="4" hidden="super" first="Mc" second="P2">Середина между Mc и P2</Midpoint>
+<Plumb name="pl1" n="5" hidden="super" point="M1" line="l1" valid="true">Перпендикуляр из M1 к l1</Plumb>
+<Intersection name="I1" n="6" hidden="super" first="pl1" second="k" which="second">Пересечение между pl1 с k</Intersection>
+<Line name="l2" n="7" hidden="super" from="Mc" to="I1">Прямая через Mc и I1</Line>
+<Midpoint name="M2" n="8" hidden="super" first="Mc" second="I1">Середина между Mc и I1</Midpoint>
+<Plumb name="pl2" n="9" hidden="super" point="M2" line="l2" valid="true">Перпендикуляр из M2 к l2</Plumb>
+<Intersection name="I2" n="10" hidden="super" first="l1" second="pl2">Пересечение между l1 с pl2</Intersection>
+<Line name="l3" n="11" hidden="super" from="P2" to="P3">Прямая через P2 и P3</Line>
+<Midpoint name="M3" n="12" hidden="super" first="P2" second="P3">Середина между P2 и P3</Midpoint>
+<Plumb name="pl3" n="13" hidden="super" point="M3" line="l3" valid="true">Перпендикуляр из M3 к l3</Plumb>
+<Line name="l4" n="14" hidden="super" from="P2" to="I2">Прямая через P2 и I2</Line>
+<Midpoint name="M4" n="15" hidden="super" first="P2" second="I2">Середина между P2 и I2</Midpoint>
+<Plumb name="pl4" n="16" hidden="super" point="M4" line="l4" valid="true">Перпендикуляр из M4 к l4</Plumb>
+<Intersection name="I3" n="17" hidden="super" first="pl3" second="pl4">Пересечение между pl3 с pl4</Intersection>
+<Circle name="c2" n="18" through="P2" midpoint="I3" start="I4" end="I5" acute="true">Окружность вокруг I3  через P2</Circle>
+<Intersection name="I4" n="19" hidden="true" first="k" second="c2" shape="circle" which="second">Пересечение между k с c2</Intersection>
+<Intersection name="I5" n="20" hidden="true" first="c2" second="k" shape="circle" which="second">Пересечение между c2 с k</Intersection>
+<PointOn name="P4" n="21" on="k" inside="true" x="-2.328372798859573" y="0.7268061823102054" shape="circle">Точка на k</PointOn>
+<Line name="l5" n="129" hidden="super" from="Mc" to="I3">Прямая через Mc и I3</Line>
+<Intersection name="I6" n="130" hidden="super" first="l5" second="c2" closeto="Mc" which="second">Пересечение между l5 с c2</Intersection>
+<Line name="l6" n="131" hidden="super" from="Mc" to="P4">Прямая через Mc и P4</Line>
+<Midpoint name="M5" n="132" hidden="super" first="Mc" second="P4">Середина между Mc и P4</Midpoint>
+<Plumb name="pl5" n="133" hidden="super" point="M5" line="l6" valid="true">Перпендикуляр из M5 к l6</Plumb>
+<Intersection name="I7" n="134" hidden="super" first="pl5" second="k" which="second">Пересечение между pl5 с k</Intersection>
+<Line name="l7" n="135" hidden="super" from="Mc" to="I7">Прямая через Mc и I7</Line>
+<Midpoint name="M6" n="136" hidden="super" first="Mc" second="I7">Середина между Mc и I7</Midpoint>
+<Plumb name="pl6" n="137" hidden="super" point="M6" line="l7" valid="true">Перпендикуляр из M6 к l7</Plumb>
+<Intersection name="I8" n="138" hidden="super" first="l6" second="pl6">Пересечение между l6 с pl6</Intersection>
+<Line name="l8" n="139" hidden="super" from="P4" to="I6">Прямая через P4 и I6</Line>
+<Midpoint name="M7" n="140" hidden="super" first="P4" second="I6">Середина между P4 и I6</Midpoint>
+<Plumb name="pl7" n="141" hidden="super" point="M7" line="l8" valid="true">Перпендикуляр из M7 к l8</Plumb>
+<Line name="l9" n="142" hidden="super" from="P4" to="I8">Прямая через P4 и I8</Line>
+<Midpoint name="M8" n="143" hidden="super" first="P4" second="I8">Середина между P4 и I8</Midpoint>
+<Plumb name="pl8" n="144" hidden="super" point="M8" line="l9" valid="true">Перпендикуляр из M8 к l9</Plumb>
+<Intersection name="I9" n="145" hidden="super" first="pl7" second="pl8">Пересечение между pl7 с pl8</Intersection>
+<Line name="l10" n="146" hidden="super" from="I9" to="I6">Прямая через I9 и I6</Line>
+<Plumb name="pl9" n="147" hidden="super" point="I6" line="l10" valid="true">Перпендикуляр из I6 к l10</Plumb>
+<Line name="l11" n="148" hidden="super" from="Mc" to="P4">Прямая через Mc и P4</Line>
+<Intersection name="I10" n="149" hidden="super" first="pl9" second="l11">Пересечение между pl9 с l11</Intersection>
+<Circle name="c3" n="150" hidden="super" through="I6" midpoint="I10" acute="true">Окружность вокруг I10  через I6</Circle>
+<Intersection name="I11" n="151" hidden="super" first="c2" second="c3" valid="true" which="first">Пересечение между c2 с c3</Intersection>
+<Intersection name="I12" n="152" hidden="super" first="c2" second="c3" valid="true" which="second">Пересечение между c2 с c3</Intersection>
+<Line name="l12" n="153" hidden="super" from="Mc" to="I12">Прямая через Mc и I12</Line>
+<Midpoint name="M9" n="154" hidden="super" first="Mc" second="I12">Середина между Mc и I12</Midpoint>
+<Plumb name="pl10" n="155" hidden="super" point="M9" line="l12" valid="true">Перпендикуляр из M9 к l12</Plumb>
+<Intersection name="I13" n="156" hidden="super" first="pl10" second="k" which="second">Пересечение между pl10 с k</Intersection>
+<Line name="l13" n="157" hidden="super" from="Mc" to="I13">Прямая через Mc и I13</Line>
+<Midpoint name="M10" n="158" hidden="super" first="Mc" second="I13">Середина между Mc и I13</Midpoint>
+<Plumb name="pl11" n="159" hidden="super" point="M10" line="l13" valid="true">Перпендикуляр из M10 к l13</Plumb>
+<Intersection name="I14" n="160" hidden="super" first="l12" second="pl11">Пересечение между l12 с pl11</Intersection>
+<Line name="l14" n="161" hidden="super" from="I12" to="I11">Прямая через I12 и I11</Line>
+<Midpoint name="M11" n="162" hidden="super" first="I12" second="I11">Середина между I12 и I11</Midpoint>
+<Plumb name="pl12" n="163" hidden="super" point="M11" line="l14" valid="true">Перпендикуляр из M11 к l14</Plumb>
+<Line name="l15" n="164" hidden="super" from="I12" to="I14">Прямая через I12 и I14</Line>
+<Midpoint name="M12" n="165" hidden="super" first="I12" second="I14">Середина между I12 и I14</Midpoint>
+<Plumb name="pl13" n="166" hidden="super" point="M12" line="l15" valid="true">Перпендикуляр из M12 к l15</Plumb>
+<Intersection name="I15" n="167" hidden="super" first="pl12" second="pl13">Пересечение между pl12 с pl13</Intersection>
+<Line name="l16" n="168" hidden="super" from="I15" to="I11">Прямая через I15 и I11</Line>
+<Plumb name="pl14" n="169" hidden="super" point="I11" line="l16" valid="true">Перпендикуляр из I11 к l16</Plumb>
+<Line name="l17" n="170" hidden="super" from="Mc" to="I12">Прямая через Mc и I12</Line>
+<Intersection name="I16" n="171" hidden="super" first="pl14" second="l17">Пересечение между pl14 с l17</Intersection>
+<Circle name="c4" n="172" hidden="super" through="I11" midpoint="I16" acute="true">Окружность вокруг I16  через I11</Circle>
+<Line name="l18" n="173" hidden="super" from="Mc" to="I11">Прямая через Mc и I11</Line>
+<Midpoint name="M13" n="174" hidden="super" first="Mc" second="I11">Середина между Mc и I11</Midpoint>
+<Plumb name="pl15" n="175" hidden="super" point="M13" line="l18" valid="true">Перпендикуляр из M13 к l18</Plumb>
+<Intersection name="I17" n="176" hidden="super" first="pl15" second="k" which="second">Пересечение между pl15 с k</Intersection>
+<Line name="l19" n="177" hidden="super" from="Mc" to="I17">Прямая через Mc и I17</Line>
+<Midpoint name="M14" n="178" hidden="super" first="Mc" second="I17">Середина между Mc и I17</Midpoint>
+<Plumb name="pl16" n="179" hidden="super" point="M14" line="l19" valid="true">Перпендикуляр из M14 к l19</Plumb>
+<Intersection name="I18" n="180" hidden="super" first="l18" second="pl16">Пересечение между l18 с pl16</Intersection>
+<Line name="l20" n="181" hidden="super" from="I11" to="I12">Прямая через I11 и I12</Line>
+<Midpoint name="M15" n="182" hidden="super" first="I11" second="I12">Середина между I11 и I12</Midpoint>
+<Plumb name="pl17" n="183" hidden="super" point="M15" line="l20" valid="true">Перпендикуляр из M15 к l20</Plumb>
+<Line name="l21" n="184" hidden="super" from="I11" to="I18">Прямая через I11 и I18</Line>
+<Midpoint name="M16" n="185" hidden="super" first="I11" second="I18">Середина между I11 и I18</Midpoint>
+<Plumb name="pl18" n="186" hidden="super" point="M16" line="l21" valid="true">Перпендикуляр из M16 к l21</Plumb>
+<Intersection name="I19" n="187" hidden="super" first="pl17" second="pl18">Пересечение между pl17 с pl18</Intersection>
+<Line name="l22" n="188" hidden="super" from="I19" to="I12">Прямая через I19 и I12</Line>
+<Plumb name="pl19" n="189" hidden="super" point="I12" line="l22" valid="true">Перпендикуляр из I12 к l22</Plumb>
+<Line name="l23" n="190" hidden="super" from="Mc" to="I11">Прямая через Mc и I11</Line>
+<Intersection name="I20" n="191" hidden="super" first="pl19" second="l23">Пересечение между pl19 с l23</Intersection>
+<Circle name="c5" n="192" hidden="super" through="I12" midpoint="I20" acute="true">Окружность вокруг I20  через I12</Circle>
+<Intersection name="I21" n="193" hidden="super" first="c4" second="c5" which="first">Пересечение между c4 с c5</Intersection>
+<Intersection name="I22" n="194" hidden="super" first="c4" second="c5" which="second">Пересечение между c4 с c5</Intersection>
+<Line name="l24" n="195" hidden="super" from="Mc" to="I22">Прямая через Mc и I22</Line>
+<Midpoint name="M17" n="196" hidden="super" first="Mc" second="I22">Середина между Mc и I22</Midpoint>
+<Plumb name="pl20" n="197" hidden="super" point="M17" line="l24" valid="true">Перпендикуляр из M17 к l24</Plumb>
+<Intersection name="I23" n="198" hidden="super" first="pl20" second="k" which="second">Пересечение между pl20 с k</Intersection>
+<Line name="l25" n="199" hidden="super" from="Mc" to="I23">Прямая через Mc и I23</Line>
+<Midpoint name="M18" n="200" hidden="super" first="Mc" second="I23">Середина между Mc и I23</Midpoint>
+<Plumb name="pl21" n="201" hidden="super" point="M18" line="l25" valid="true">Перпендикуляр из M18 к l25</Plumb>
+<Intersection name="I24" n="202" hidden="super" first="l24" second="pl21">Пересечение между l24 с pl21</Intersection>
+<Line name="l26" n="203" hidden="super" from="I22" to="I21">Прямая через I22 и I21</Line>
+<Midpoint name="M19" n="204" hidden="super" first="I22" second="I21">Середина между I22 и I21</Midpoint>
+<Plumb name="pl22" n="205" hidden="super" point="M19" line="l26" valid="true">Перпендикуляр из M19 к l26</Plumb>
+<Line name="l27" n="206" hidden="super" from="I22" to="I24">Прямая через I22 и I24</Line>
+<Midpoint name="M20" n="207" hidden="super" first="I22" second="I24">Середина между I22 и I24</Midpoint>
+<Plumb name="pl23" n="208" hidden="super" point="M20" line="l27" valid="true">Перпендикуляр из M20 к l27</Plumb>
+<Intersection name="I25" n="209" hidden="super" first="pl22" second="pl23">Пересечение между pl22 с pl23</Intersection>
+<Circle name="c6" n="22" through="I22" midpoint="I25" start="I26" end="I27" acute="true">Окружность вокруг I25  через I22</Circle>
+<Intersection name="I26" n="211" hidden="true" first="c6" second="k" shape="circle" which="first">Пересечение между c6 с k</Intersection>
+<Intersection name="I27" n="212" hidden="true" first="k" second="c6" shape="circle" which="first">Пересечение между k с c6</Intersection>
+</Objects>
+</Construction>
+</CaR>
