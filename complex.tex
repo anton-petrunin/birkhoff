@@ -18,7 +18,7 @@ are real numbers and $i^2=-1$.
 The set of complex numbers 
 will be further denoted by~$\mathbb{C}$.
 If $x$, $y$ and $z$ are as in \ref{eq:z=x+iy}, 
-then $x$ is called the real part and $y$ the imaginary part of the complex number~$z$.
+then $x$ is called the \index{real part}\emph{real part} and $y$ the \index{imaginary part}\emph{imaginary part} of the complex number~$z$.
 Briefly it is written as 
 \[x=\Re z
 \quad
@@ -30,14 +30,17 @@ On the more formal level, a complex number is a pair of real numbers $(x,y)$ wit
 The formula $x + i\cdot y$ 
 is only a convenient way 
 to write the pair $(x,y)$.
-\begin{align*}
+\[
+\begin{aligned}
 (x_1+i\cdot y_1) + (x_2+i\cdot y_2) 
 &\df (x_1+x_2) + i\cdot(y_1+y_2);
 \\
 (x_1+i\cdot y_1)\cdot(x_2+i\cdot y_2) 
 &\df 
 (x_1\cdot x_2-y_1\cdot y_2) + i\cdot(x_1\cdot y_2+y_1\cdot x_2).
-\end{align*}
+\end{aligned}
+\eqlbl{eq:comlex+x}
+\]
 
 \section*{Complex coordinates}
 \addtocontents{toc}{Complex coordinates.}
@@ -67,9 +70,9 @@ Denote by $Z$ the point in the plane with the complex coordinate~$z$.
 
 If $y=0$, we say that the complex number $z$ is \index{real complex number}\emph{real} and if $x=0$ we say that $z$ is \index{imaginary complex number}\emph{imaginary}.
 The set of points 
-with real and imaginary complex coordinates form lines in the plane,
-which are called \index{real line}\emph{real} and \index{imaginary line}\emph{imaginary} lines; 
-they will be denoted as $\mathbb{R}$ and~$i\cdot\mathbb{R}$.
+with real (imaginary) complex coordinates is a line in the plane,
+which is called \index{real line}\emph{real} (correspondingly \index{imaginary line}\emph{imaginary}) line. 
+The real line will be denoted as $\mathbb{R}$.
 
 \medskip
 
@@ -130,8 +133,8 @@ In particular, $e^{i\cdot\pi}=-1$ and $e^{i\cdot\frac\pi2}=i$.
 
 {
 
-\begin{wrapfigure}[11]{o}{34mm}
-\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/expix(1)}
+\begin{wrapfigure}[7]{o}{34mm}
+\begin{lpic}[t(-12mm),b(0mm),r(0mm),l(0mm)]{pics/expix(1)}
 \lbl[tr]{13.5,12;$0$}
 \lbl[tl]{25,12;$1$}
 \lbl[bl]{15.5,25;$i$}
@@ -144,7 +147,8 @@ Geometrically, Euler's formula means the following:
 Assume that
 $O$ and $E$ 
 are the points with complex coordinates $0$ and $1$ correspondingly.
-Assume $OZ=1$ and $\measuredangle EOZ\z\equiv \alpha$,
+Assume 
+\[OZ=1\quad \text{and}\quad \measuredangle EOZ\z\equiv \alpha,\]
 then $e^{i\cdot\alpha}$ is the complex coordinate of $Z$.
 In particular, the complex coordinate of any point on the unit circle centered at~$O$
 can be uniquely expressed as $e^{i\cdot\alpha}$ for some $\alpha\in(-\pi,\pi]$.
@@ -153,7 +157,7 @@ can be uniquely expressed as $e^{i\cdot\alpha}$ for some $\alpha\in(-\pi,\pi]$.
 
 \parbf{Why should you think that \ref{eq:euler} is true?}
 The proof of Euler's identity depends on the way you define the exponential function.
-If you never had to take the exponential function of an imaginary number,
+If you never had to apply the exponential function to an imaginary number,
 you may take the right hand side in \ref{eq:euler} 
 as the definition of the $e^{i\cdot\alpha}$.
 
@@ -161,12 +165,12 @@ In this case, formally nothing has to be proved,
 but it is better to check that $e^{i\cdot\alpha}$ satisfies familiar identities.
 Mainly,
 $$e^{i\cdot \alpha}\cdot e^{i\cdot \beta}= e^{i\cdot(\alpha+\beta)}.$$
-The latter can be proved using the following trigonometric formulas,
+The latter can be proved using \ref{eq:comlex+x} and the following trigonometric formulas,
 which we assume to be known:
 \begin{align*}
-\cos(\alpha+\beta)&=\cos\alpha\cdot\cos\beta-\sin\alpha\cdot\sin\beta
+\cos(\alpha+\beta)&=\cos\alpha\cdot\cos\beta-\sin\alpha\cdot\sin\beta,
 \\
-\sin(\alpha+\beta)&=\sin\alpha\cdot\cos\beta+\cos\alpha\cdot\sin\beta
+\sin(\alpha+\beta)&=\sin\alpha\cdot\cos\beta+\cos\alpha\cdot\sin\beta.
 \end{align*}
 
 If you know the power series for the sine, cosine and exponential function, the following might convince that the identity \ref{eq:euler} holds:
@@ -345,6 +349,7 @@ that is, if the points $Z$ and $Z'$ have complex coordinates $z$ and $1/\bar z$,
 then $Z'\in[OZ)$.
 Clearly, $OZ=|z|$ and $OZ'=|1/\bar z|=\tfrac{1}{|z|}$.
 Therefore, $Z'$ is the inverse of $Z$ in the unit circle centered at~$O$.
+
 Finally, the reflection of $Z'$ in $\mathbb{R}$, 
 has complex coordinate $\tfrac1z=\overline{(1/\bar z)}$.
 
@@ -434,7 +439,13 @@ Show that the inverse of a M\"obius transformation is a M\"obius transformation.
 
 \begin{thm}{Exercise}\label{ex:3-point-Mob}
 Given distinct values $z_0,z_1,z_\infty\in \hat{\mathbb{C}}$,
-construct a M\"obius transformation $f$ such that $f(z_0)=0$, $f(z_1)=1$ and $f(z_\infty)\z=\infty$.
+construct a M\"obius transformation $f$ such that 
+\[f(z_0)=0,
+\quad 
+f(z_1)=1
+\quad\text{and}\quad 
+f(z_\infty)\z=\infty.\]
+
 Show that such a transformation is unique.
 \end{thm}
 

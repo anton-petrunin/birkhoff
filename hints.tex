@@ -263,7 +263,7 @@ Hence the result follows.
 
 
 \parbf{Exercise~\ref{ex:PP(PN)}.}
-Set $\alpha=\measuredangle BOC$, $\beta=\measuredangle COA$ and $\gamma=\measuredangle AOB$.
+Set $\alpha=\measuredangle AOB$, $\beta=\measuredangle BOC$ and $\gamma=\measuredangle COA$.
 By Axiom~\ref{def:birkhoff-axioms:2b} and Proposition~\ref{lem:AOA=0}
 $$\alpha+\beta+\gamma\equiv 0
 \eqlbl{alph+bet+gam}$$
@@ -1278,6 +1278,14 @@ It remains to show that all this implies $0<\hat p <p$.
 \section*{Chapter~\ref{chap:h-plane}}
 \setcounter{eqtn}{0}
 
+\parbf{Exercise~\ref{ex:small-angle}.}
+Let $\phi$ be the angle of parallelism of $B$ to~$(AC)_h$.
+Note that 
+\[|\measuredangle_hABC|<2\cdot \phi.\]
+By triangle inequality, the h-distance from $B$ to $(AC)_h$ is at least 50.
+By Proposition~\ref{prop:angle-parallelism},
+\[50\le \tfrac12\cdot\ln\tfrac{1+\cos\phi}{1-\cos\phi}.\]
+Rough estimates, like $\cos\phi\z\le 1-\tfrac1{10}\cdot\phi^2$ for $|\phi|<\tfrac\pi2$ and $e^3>10$ should help to finish the proof.
 
 \parbf{Exercise~\ref{ex:side-sup}.}
 Note that the angle of parallelism of $B$ to $(CD)_h$ is bigger than $\tfrac\pi4$,
@@ -1293,7 +1301,7 @@ Therefore, $\ln\left(1+\sqrt{2}\right)$ is the optimal upper bound.
 {
 
 \begin{wrapfigure}[11]{r}{44mm}
-\begin{lpic}[t(-4mm),b(-1mm),r(0mm),l(-0mm)]{pics/h-circle-5(1)}
+\begin{lpic}[t(-0mm),b(-1mm),r(0mm),l(-0mm)]{pics/h-circle-5(1)}
 \lbl[tr]{22,20;$Q$}
 \lbl[t]{37,20;$P$}
 \lbl[br]{21,37;$R$}
@@ -1467,7 +1475,7 @@ and (2) the ideal point given by the pencil of the lines $ax-by=c$ for different
 
 
 \begin{wrapfigure}{r}{24mm}
-\begin{lpic}[t(-0mm),b(-5mm),r(0mm),l(-0mm)]{pics/dual-desargues(1)}
+\begin{lpic}[t(-8mm),b(-5mm),r(0mm),l(-0mm)]{pics/dual-desargues(1)}
 \lbl[l]{7.5,28;$P$}
 \lbl[r]{8.5,12.6;$P'$}
 \lbl[tw]{6,6;$Q$}
@@ -1557,7 +1565,7 @@ $$
 Therefore, $AB_s=\tfrac\pi3$.
 
 \begin{wrapfigure}{r}{30mm}
-\begin{lpic}[t(-0mm),b(-3mm),r(-2mm),l(0mm)]{pics/tessellation(1)}
+\begin{lpic}[t(-8mm),b(-3mm),r(-2mm),l(0mm)]{pics/tessellation(1)}
 \lbl[br]{8,27;$A$}
 \lbl[bl]{22,27;$B$}
 \lbl[t]{15,23;$C$}
@@ -1889,8 +1897,10 @@ Since $V\in p$, by Claim~\ref{clm:polar}, we get $P\in v$;
 that is, $(PV)=v$.
 Hence the statement follows.
 
+{
+
 \begin{wrapfigure}{r}{35mm}
-\begin{lpic}[t(1mm),b(0mm),r(0mm),l(0mm)]{pics/polar-polar(1)}
+\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/polar-polar(1)}
 \lbl[b]{32,21;$P$}
 \lbl[l]{23,8;$X'$}
 \lbl[l]{23,31.5;$X$}
@@ -1910,6 +1920,8 @@ Set  $Z=(XY)\cap (X'Y')$.
 Note that the line $(PZ)$ passes thru the common center.
 
 The center can be found as the intersection of the constructed line and another line constructed the same way.
+
+}
 
 \section*{Chapter~\ref{chap:area}}
 \setcounter{eqtn}{0} 
