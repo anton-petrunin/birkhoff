@@ -277,6 +277,38 @@ Give a proof of Proposition~\ref{prop:angle-parallelism} using projective model.
 Use projective model to find the inradius of the ideal triangle.
 \end{thm}
 
+The projective model of h-plane can be used to give an other proof of the hyperbolic Pythagorean theorem (\ref{thm:pyth-h-poincare}).
+
+\begin{wrapfigure}{o}{24mm}
+\begin{lpic}[t(-3mm),b(-0mm),r(0mm),l(0mm)]{pics/h-pyth-klein(1)}
+\lbl[br]{3,23;$A$}
+\lbl[lb]{15,28.5;$B$}
+\lbl[tl]{15,21;$C$}
+\lbl[l]{15,25;$s$}
+\lbl[t]{8,20;$t$}
+\lbl[b]{8,26,37;$u$}
+\lbl[bl]{15,39;$X$}
+\lbl[tl]{15,4;$Y$}
+\end{lpic}
+\end{wrapfigure}
+
+First let us recall its statement:
+\[\cosh c=\cosh a\cdot\cosh b,\eqlbl{eq:hyp-pyth-proj}\]
+where $a\z=BC_h$, $b=CA_h$ and $c=AB_h$ and
+$\triangle_hACB$ is a triangle in h-plane with right angle at~$C$.
+
+Note that we can assume that $A$ is the center of the absolute.
+Set 
+$s=BC$, $t =CA$, $u= AB$.
+According to the Euclidean Pythagorean theorem (\ref{thm:pyth}), we have
+$$u^2=s^2+t^2.\eqlbl{eq:hyp-proj}$$
+It remains to express $a$, $b$ and $c$ using $s$, $u$ and $t$ and show that \ref{eq:hyp-proj} implies \ref{eq:hyp-pyth-proj}.
+
+\begin{thm}{Advanced exercise}\label{ex:pyth-h-proj}
+Finish the proof of hyperbolic Pythagorean theorem (\ref{thm:pyth-h-poincare}) indicated above.
+\end{thm}
+
+
 \section*{Bolyai's construction}
 \addtocontents{toc}{Bolyai's construction.}
 

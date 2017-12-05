@@ -927,8 +927,10 @@ Assume $C\notin (AX)$.
 Let $\ell$ be the line thru $A$ perpendicular to $(AX)$
 and $m$ be the perpendicular bisector of~$[AC]$.
 
+{
+
 \begin{wrapfigure}{r}{35mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/3x120(1)}
+\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/3x120(1)}
 \end{lpic}
 \end{wrapfigure}
 
@@ -947,6 +949,8 @@ Apply Proposition~\ref{prop:arc(angle=tan)} twice.
 \parbf{Exercise~\ref{ex:3x120}.} Guess the construction from the diagram.
 To show that it produce needed point, apply theorem on inscribed angle (\ref{thm:inscribed-angle}).
 
+
+}
 
 \section*{Chapter~\ref{chap:inversion}}
 \setcounter{eqtn}{0}
@@ -997,7 +1001,7 @@ and
 $(C'I)\perp (B'A')$.
 
 \begin{wrapfigure}[9]{o}{54mm}
-\begin{lpic}[t(-3mm),b(0mm),r(0mm),l(0mm)]{pics/inv-constr(1)}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/inv-constr(1)}
 \end{lpic}
 \end{wrapfigure}
 
@@ -1054,8 +1058,8 @@ in particular they lie on one circle.
 These points are images of $A$, $B$, $X$ and $Y$ under the inversion.
 By Theorem~\ref{thm:inverse-cline}, the points $A$, $B$, $X$ and $Y$ also lie on one circline.
 
-\begin{wrapfigure}[6]{o}{48mm}
-\begin{lpic}[t(-6mm),b(-1mm),r(0mm),l(0mm)]{pics/ex-inverse(1)}
+\begin{wrapfigure}[7]{o}{48mm}
+\begin{lpic}[t(-0mm),b(-1mm),r(0mm),l(0mm)]{pics/ex-inverse(1)}
 \lbl[bl]{28,9;$B'$}
 \lbl[br]{19,9;$A$}
 \end{lpic}
@@ -1504,7 +1508,7 @@ and (2) the ideal point given by the pencil of the lines $a\cdot x-b\cdot y=c$ f
 
 
 \begin{wrapfigure}{r}{24mm}
-\begin{lpic}[t(-8mm),b(-5mm),r(0mm),l(-0mm)]{pics/dual-desargues(1)}
+\begin{lpic}[t(-0mm),b(-5mm),r(0mm),l(-0mm)]{pics/dual-desargues(1)}
 \lbl[l]{7.5,28;$P$}
 \lbl[r]{8.5,12.6;$P'$}
 \lbl[tw]{6,6;$Q$}
@@ -1594,7 +1598,7 @@ $$
 Therefore, $AB_s=\tfrac\pi3$.
 
 \begin{wrapfigure}{r}{30mm}
-\begin{lpic}[t(-8mm),b(-3mm),r(-2mm),l(0mm)]{pics/tessellation(1)}
+\begin{lpic}[t(-0mm),b(-3mm),r(-2mm),l(0mm)]{pics/tessellation(1)}
 \lbl[br]{8,27;$A$}
 \lbl[bl]{22,27;$B$}
 \lbl[t]{15,23;$C$}
@@ -1675,8 +1679,8 @@ Note that $\hat P\in [A_iB_i]$ if and only if $P\in\Gamma_i$.
 
 {
 
-\begin{wrapfigure}{o}{42mm}
-\begin{lpic}[t(-6mm),b(-3mm),r(0mm),l(-0mm)]{pics/h-medians(1)}
+\begin{wrapfigure}{r}{42mm}
+\begin{lpic}[t(-0mm),b(-3mm),r(0mm),l(-0mm)]{pics/h-medians(1)}
 \end{lpic}
 \end{wrapfigure}
 
@@ -1732,6 +1736,51 @@ Therefore
 Apply Exercise~\ref{ex:klein-for-angle-parallelism} for $\phi=\tfrac\pi3$.
 
 }
+
+\parbf{Exercise~\ref{ex:pyth-h-proj}.}
+Note that
+\[
+b=\tfrac12\cdot\ln\frac{1+t}{1-t};\]
+therefore
+\[
+\begin{aligned}
+\cosh b&=
+\frac{\left(\frac{1+t}{1-t}\right)^{\frac12}+\left(\frac{1-t}{1+t}\right)^{\frac12}}2=
+\\
+&=\frac1{\sqrt{1-t^2}}.
+\end{aligned}
+\eqlbl{cosh(b)}
+\]
+The same way we get
+\[\begin{aligned}\cosh c&=\frac1{\sqrt{1-u^2}}.
+\end{aligned}
+\eqlbl{cosh(c)}\]
+
+Let $X$ and $Y$ are the ideal points of~$(BC)_h$.
+Applying the Pythagorean theorem (\ref{thm:pyth}) again,
+we get 
+$$CX=CY=\sqrt{1-t^2}.$$
+Therefore, 
+\[
+a
+=
+\tfrac12\cdot\ln\frac{\sqrt{1-t^2}+s}{\sqrt{1-t^2}-s},\]
+and
+\[
+\begin{aligned}
+\cosh a&=\frac
+{\left(\frac{\sqrt{1-t^2}+s}{\sqrt{1-t^2}-s}\right)^{\frac12}
++
+\left(\frac{\sqrt{1-t^2}-s}{\sqrt{1-t^2}+s}\right)^{\frac12}}2=
+\\
+&=\frac{\sqrt{1-t^2}}{\sqrt{1-t^2-s^2}}=
+\\
+&=\frac{\sqrt{1-t^2}}{\sqrt{1-u^2}}.
+\end{aligned}
+\eqlbl{cosh(a)}
+\]
+
+Finally, note that \ref{cosh(b)}, \ref{cosh(c)} and \ref{cosh(a)} imply the hyperbolic Pythagorean theorem.
 
 \parbf{Exercise~\ref{ex:Boyai-in-Euclid}.}
 In the Euclidean plane, the circle $\Gamma_2$ is tangent to $k$; 
@@ -2211,8 +2260,16 @@ From Exercise~\ref{ex:area-medians} we have
 \area (\solidtriangle ABM)
 &=\area (\solidtriangle CBM).
 \end{align*}
+Therefore, 
+\[\area (\solidtriangle BCM)
+=\area (\solidtriangle ACM).\]
+
+According to Exercise~\ref{ex:area-medians},
+$M$ lies on the median~$[CC']$.
+That is, medians $[AA']$, $[BB']$ and $[CC']$ intersect at one point~$M$.
 
 {
+
 \begin{wrapfigure}[8]{r}{34mm}
 \begin{lpic}[t(1mm),b(0mm),r(0mm),l(0mm)]{pics/area-median-sol2(1)}
 \lbl[trw]{13,10;$M$}
@@ -2224,14 +2281,6 @@ From Exercise~\ref{ex:area-medians} we have
 \lbl[br]{7,16;$B'$}
 \end{lpic}
 \end{wrapfigure}
-
-
-\noindent Therefore, 
-\[\area (\solidtriangle BCM)
-=\area (\solidtriangle ACM).\]
-According to Exercise~\ref{ex:area-medians},
-$M$ lies on the median~$[CC']$.
-That is, medians $[AA']$, $[BB']$ and $[CC']$ intersect at one point~$M$.
 
 By Theorem~\ref{thm:area-of-triangle},
 we get
