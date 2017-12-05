@@ -1,3 +1,146 @@
+\section*{Hyperbolic Pythagorean theorem}
+\addtocontents{toc}{Hyperbolic Pythagorean theorem.}
+
+In this section we will give an other proof of Hyperbolic Pythagorean theorem (\ref{thm:pyth-h-poincare}) using the projective model. 
+
+First let us recall the statement.
+Assume that $\triangle_hACB$ is a triangle in h-plane with right angle at~$C$.
+Set $a=BC_h$, $b=CA_h$ and $c=AB_h$.
+Then
+$$\cosh c=\cosh a\cdot\cosh b,
+\eqlbl{eq:pyth-h}$$
+where $\cosh$ denotes \index{ch@$\cosh$}\index{hyperbolic cosine}\emph{hyperbolic cosine};
+that is, the function defined by
+$$\cosh x\df \tfrac{e^x+e^{-x}}2.$$ 
+
+\begin{wrapfigure}[10]{o}{24mm}
+\begin{lpic}[t(-3mm),b(-0mm),r(0mm),l(0mm)]{pics/h-pyth-klein(1)}
+\lbl[br]{3,23;$A$}
+\lbl[lb]{15,28.5;$B$}
+\lbl[tl]{15,21;$C$}
+\lbl[l]{15,25;$s$}
+\lbl[t]{8,20;$t$}
+\lbl[b]{8,26,37;$u$}
+\lbl[bl]{15,39;$X$}
+\lbl[tl]{15,4;$Y$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Proof.}
+We will use projective model of the h-plane with a unit circle as the absolute.
+
+We can assume that $A$ is the center of the absolute.
+Therefore, both $\angle_h ACB$ and $\angle ACB$ are right.
+
+Set 
+$s=BC$, $t =CA$, $u= AB$.
+According to the Euclidean Pythagorean theorem (\ref{thm:pyth}),
+$$u^2=s^2+t^2.$$
+Note that
+
+\[
+b=\tfrac12\cdot\ln\frac{1+t}{1-t};\]
+therefore
+\[
+\begin{aligned}
+\cosh b&=
+\frac{\left(\frac{1+t}{1-t}\right)^{\frac12}+\left(\frac{1-t}{1+t}\right)^{\frac12}}2=
+\\
+&=\frac1{\sqrt{1-t^2}}.
+\end{aligned}
+\eqlbl{cosh(b)}
+\]
+The same way we get
+\[
+c=\tfrac12\cdot\ln\frac{1+u}{1-u}
+\]
+and
+\[\begin{aligned}\cosh c&=\frac{\left(\frac{1+u}{1-u}\right)^{\frac12}+\left(\frac{1-u}{1+u}\right)^{\frac12}}2=
+\\
+&=\frac1{\sqrt{1-u^2}}.
+\end{aligned}
+\eqlbl{cosh(c)}\]
+
+Let $X$ and $Y$ are the ideal points of~$(BC)_h$.
+Applying the Pythagorean theorem (\ref{thm:pyth}) again,
+we get 
+$$CX=CY=\sqrt{1-t^2}.$$
+Therefore, 
+\[
+a
+=
+\tfrac12\cdot\ln\frac{\sqrt{1-t^2}+s}{\sqrt{1-t^2}-s},\]
+and
+\[
+\begin{aligned}
+\cosh a&=\frac
+{\left(\frac{\sqrt{1-t^2}+s}{\sqrt{1-t^2}-s}\right)^{\frac12}
++
+\left(\frac{\sqrt{1-t^2}-s}{\sqrt{1-t^2}+s}\right)^{\frac12}}2=
+\\
+&=\frac{\sqrt{1-t^2}}{\sqrt{1-t^2-s^2}}=
+\\
+&=\frac{\sqrt{1-t^2}}{\sqrt{1-u^2}}.
+\end{aligned}
+\eqlbl{cosh(a)}
+\]
+
+Finally, note that \ref{cosh(b)}+\ref{cosh(c)}+\ref{cosh(a)} imply \ref{eq:pyth-h}.
+\qedsf
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{thm}{Exercise}\label{ex:right-h-triangle}
+Let $ABC$ be a right h-triangle with the right angle at $C$.
+Show that the h-distance from $C$ to $(AB)_h$ is smaller than $1$.
+Conclude that $AB_h+2>AC_h+BC_h$.
+\end{thm}
+
+
+\parbf{Exercise~\ref{ex:right-h-triangle}.}
+Let $\phi$ be the angle of parallelism of $C$ to~$(AB)_h$.
+Notice that $\phi>\tfrac\pi2$.
+Denote by $D$ the h-foot point of $C$ on $(AB)_h$.
+Show $CD_h<1$ using Proposition~\ref{prop:angle-parallelism}.
+To prove the last part, apply the triangle inequalities
+\[AC_h\le AD_h+DC_h\quad\text{and}\quad BC_h\le BD_h+DC_h.\]
+
+\parit{Comment.}
+The optimal bound is $AB_h+\ln 2>AC_h+BC_h$;
+it can be deduced from the Hyperbolic Pythagorean theorem \ref{thm:pyth-h}.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
 
 \begin{wrapfigure}{r}{27mm}

@@ -861,20 +861,16 @@ Apply Theorem~\ref{thm:inscribed-quadrilateral} twice for $\square ABYX$ and $\s
 
 
 \parbf{Exercise~\ref{ex:inaccuracy}.}
-In the proof we assume that the lines $(A'B')$ and $(XP)$ are not parallel, otherwise the first line in the proof does not make sense.
-
-
+One needs to show that the lines $(A'B')$ and $(XP)$ are not parallel, otherwise the first line in the proof does not make sense.
 
 In addition, we use without mentioning the following three identities:
 \begin{align*}
 2\cdot \measuredangle AXP&\equiv2\cdot \measuredangle AXY,
-\\
+&
 2\cdot \measuredangle ABP&\equiv2\cdot \measuredangle ABB',
-\\
+&
 2\cdot \measuredangle AA'B'&\equiv2\cdot \measuredangle AA'Y.
 \end{align*}
-
-
 
 \parbf{Exercise~\ref{ex:equilateral-2}.}
 By Corollary~\ref{cor:right-angle-diameter},
@@ -1242,39 +1238,67 @@ Spell the meaning of terms ``perpendicular'' and ``h-line'' and then apply Exerc
 \parbf{Exercise~\ref{ex:h-reflection}.}
 Apply the main observation (\ref{thm:main-observ}\textit{\ref{h-reflect}}).
 
-\parbf{Exercise~\ref{ex:def-delta}.}
-By Corollary \ref{cor:invese-comp} and Theorem~\ref{lem:inverse-4-angle},
-the quantity $\theta$ survives under an inversion in a circle perpendicular to the absolute.
-Therefore, by the main observation (\ref{thm:main-observ})
-we can assume that the midpoint of $[PQ]_h$ is the center of the absolute.
-
-Set $a=OP=OQ$, then 
-\begin{align*}
-\theta(P,Q)&=\frac{8}{(\tfrac1a-a)^2},
-&
-\delta(P,Q)&=\frac{(1+a)^2}{(1-a)^2}.
-\end{align*}
-Hence the identity follows.
-
 \parbf{Exercise~\ref{ex:h-circle=circle}.}
 Denote by $X$ and $Y$ the points of intersections of $(OP)$ and~$\Delta_\rho'$.
 Consider an isometry $(OP)\to\mathbb{R}$ so that $O$ corresponds to $0$,
 denote by $x$, $y$, $p$ and $\hat p$ the real numbers corresponding to $X$, $Y$, $P$ and~$\hat P$.
-
-{
-\begin{wrapfigure}{r}{44mm}
-\begin{lpic}[t(-3mm),b(0mm),r(0mm),l(0mm)]{pics/absolute-triangle-4(1)}
-\end{lpic}
-\end{wrapfigure}
 
 We can assume that $p>0$ and $x\z<y$.
 Note that $\hat p=\tfrac{x+y}2$ and
 \[\frac{(1+x)\cdot(1-p)}{(1-x)\cdot(1+p)}=\frac{(1+p)\cdot(1-y)}{(1-p)\cdot(1+y)}.\]
 It remains to show that all this implies $0<\hat p <p$.
 
+\parbf{Advanced exercise~\ref{ex:cosh}.}
+By Corollary \ref{cor:invese-comp} and Theorem~\ref{lem:inverse-4-angle},
+the quantity 
+\[\frac{PQ\cdot  P'Q'+PQ'\cdot  P'Q}{PP'\cdot QQ'}\]
+survives under an inversion in a circle perpendicular to the absolute.
+By the main observation (\ref{thm:main-observ})
+we can assume that the h-midpoint of $[PQ]_h$ is the center of the absolute which will be denoted by $O$.
+
+Without loss of generality we can assume that the absolute is a unit circle.
+Set $a=OP=OQ$, then 
+\begin{align*}PQ&=2\cdot a,
+&
+PP'=QQ'&=\tfrac1a-a,
+\\
+P'Q'&=2\cdot \tfrac1a,
+&
+PQ'=QP'&=\tfrac1a+a.
+\end{align*}
+Therefore
+\begin{align*}\frac{PQ\cdot  P'Q'+PQ'\cdot  P'Q}{PP'\cdot QQ'}
+&=\frac{4+(\tfrac1a+a)^2}{(\tfrac1a-a)^2}=
+\\
+&=\frac{1+ 6\cdot a^2+a^4}{(1-a^2)^2}.
+\end{align*}
+
+
+
+On the other hand,
+\[PQ_h=\ln \frac{(1+a)^2}{(1-a)^2}.\]
+
+{
+\begin{wrapfigure}{r}{44mm}
+\begin{lpic}[t(6mm),b(0mm),r(0mm),l(0mm)]{pics/absolute-triangle-4(1)}
+\end{lpic}
+\end{wrapfigure}
+
+Therefore 
+\begin{align*}\cosh PQ_h &=\tfrac12\cdot\left(e^{PQ_h}+e^{-PQ_h}\right)=
+\\
+&=\tfrac12\cdot\left(\frac{(1+a)^2}{(1-a)^2}+\frac{(1-a)^2}{(1+a)^2}\right)=
+\\
+&=\tfrac12\cdot\frac{(1+a)^4+(1-a)^4}{(1-a^2)^2}=
+\\
+&=\frac{1+6\cdot a^2 +a^4}{(1-a^2)^2}.
+\end{align*}
+Hence the result.
+
 \parbf{Exercise~\ref{ex:3-h-lines}.} Look at the diagram and think.
 
 }
+
 \section*{Chapter~\ref{chap:h-plane}}
 \setcounter{eqtn}{0}
 
@@ -1301,7 +1325,7 @@ Therefore, $\ln\left(1+\sqrt{2}\right)$ is the optimal upper bound.
 {
 
 \begin{wrapfigure}[11]{r}{44mm}
-\begin{lpic}[t(-0mm),b(-1mm),r(0mm),l(-0mm)]{pics/h-circle-5(1)}
+\begin{lpic}[t(-8mm),b(-1mm),r(0mm),l(-0mm)]{pics/h-circle-5(1)}
 \lbl[tr]{22,20;$Q$}
 \lbl[t]{37,20;$P$}
 \lbl[br]{21,37;$R$}
@@ -1311,22 +1335,19 @@ Therefore, $\ln\left(1+\sqrt{2}\right)$ is the optimal upper bound.
 \end{wrapfigure}
 
 \parbf{Exercise~\ref{ex:right-trig-horocycle}.}
+As usual, we assume that the absolute is a unit circle.
+
 Consider hyperbolic triangle $PQR$
 with right angle at $Q$, such that $PQ_h=QR_h$
 and the vertices $P$, $Q$ and $R$ 
 lie on a horocycle.
 
-
 Without loss of generality, we may assume that $Q$ is the center of the absolute.
-In this case $\measuredangle_hPQR=\measuredangle PQR=\pm\tfrac\pi2$ and $PQ=QR$
+In this case $\measuredangle_hPQR=\measuredangle PQR=\pm\tfrac\pi2$ and $PQ=QR$.
 
-
-
-The rest of proof should be easy to guess from the picture.
-The answer is 
-$2\cdot \ln(1+\sqrt{2})$.
-
-
+Note that Euclidean circle passing thru $P$, $Q$ and $R$ is tangent to the absolute.
+Conclude that $PQ=\tfrac1{\sqrt2}$. 
+Apply \ref{lem:O-h-dist} to find $PQ_h$.
 
 \parbf{Exercise~\ref{ex:angle-preserving-hyp}.}
 In hyperbolic plane, the AAA-congruence condition (\ref{thm:AAA}) implies that any nondegenerate triangle is mapped to a congruent triangle.
@@ -1341,6 +1362,9 @@ Let us apply Proposition~\ref{prop:circum}.
 \\
 &>\pi\cdot e\cdot(e^{r}-e^{-r})=e\cdot\circum_h(r)\ge 2\cdot\circum_h(r).
 \end{align*}
+
+\parbf{Exercise~\ref{ex:c+1>a+b}.}
+Apply Hyperbolic Pythagorean theorem and the definition of hyperbolic cosine.
 
 
 \section*{Chapter~\ref{chap:trans}}
@@ -1469,8 +1493,9 @@ The latter is equivalent to $m\ni S$
 where $m$ is the line  given by the equation 
 $a\cdot x+b\cdot y=1$ and $S=(p,q)$.
 
-To extend this bijection to whole projective plane assume that (1) the ideal line  corresponds to the origin 
-and (2) the ideal point given by the pencil of the lines $ax-by=c$ for different values of $c$ corresponds to the line given by the equation $ax+by=0$.
+To extend this bijection to whole projective plane assume that 
+(1) the ideal line  corresponds to the origin 
+and (2) the ideal point given by the pencil of the lines $a\cdot x-b\cdot y=c$ for different values of $c$ corresponds to the line given by the equation $a\cdot x+b\cdot y=0$.
 
 
 
@@ -1658,13 +1683,6 @@ and
 $2\cdot NO\z=NS$.
 It remains to do algebraic manipulations.
 
-{
-
-\begin{wrapfigure}[10]{o}{42mm}
-\begin{lpic}[t(-6mm),b(-3mm),r(0mm),l(-0mm)]{pics/h-medians(1)}
-\end{lpic}
-\end{wrapfigure}
-
 \parbf{Exercise~\ref{ex:hex}.} Consider the bijection $P\mapsto \hat P$ of the h-plane with absolute~$\Omega$.
 Note that $\hat P\in [A_iB_i]$ if and only if $P\in\Gamma_i$.
 
@@ -1673,17 +1691,34 @@ The observation follows since the reflection in the perpendicular bisector of $[
 is a motion of the Euclidean plane, 
 and a motion of the h-plane as well.
 
+{
+
+\begin{wrapfigure}[10]{o}{42mm}
+\begin{lpic}[t(-2mm),b(-3mm),r(0mm),l(-0mm)]{pics/h-medians(1)}
+\end{lpic}
+\end{wrapfigure}
+
 Without loss of generality, we may assume that 
 the center of circumcircle coincides with the center of the absolute.
 In this case the h-median of the triangle coincide with the Euclidean medians.
 It remains to apply Theorem~\ref{thm:centroid}
 
-}
+
 
 \parbf{Exercise~\ref{ex:klein-perp}.} 
 Let us denote by $\hat\ell$ and $\hat m$ the h-lines in the conformal model
 which correspond to $\ell$ and $m$.
 We need to show that $\hat\ell\perp\hat m$ as arcs in the Euclidean plane.
+
+
+The point $Z$ where $s$ and $t$ meet is the center of the circle $\Gamma$ containing~$\hat\ell$.
+
+}
+
+
+If $\bar m$ passing thru $Z$, then the inversion in $\Gamma$ exchanges the ideal points of~$\hat\ell$.
+In particular, $\hat\ell$ maps to itself. 
+Hence the result follows.
 
 {
 
@@ -1695,23 +1730,17 @@ We need to show that $\hat\ell\perp\hat m$ as arcs in the Euclidean plane.
 \end{lpic}
 \end{wrapfigure}
 
-The point $Z$ where $s$ and $t$ meet is the center of the circle $\Gamma$ containing~$\hat\ell$.
-
-If $\bar m$ passing thru $Z$, then the inversion in $\Gamma$ exchanges the ideal points of~$\hat\ell$.
-In particular, $\hat\ell$ maps to itself. 
-Hence the result follows.
-
 \parbf{Exercise~\ref{ex:klein-for-angle-parallelism}.}
 We can assume that $P$ is the center of the absolute.
 Then 
 \[PQ=\cos\phi.\]
 
-}
+
 
 Therefore
 \[PQ_h=\tfrac12\cdot\ln\frac{1+\cos\phi}{1-\cos\phi}.\]
 
-
+}
 
 \parbf{Exercise~\ref{ex:klein-inradius}.} 
 Apply Exercise~\ref{ex:klein-for-angle-parallelism} for $\phi=\tfrac\pi3$.
@@ -1777,14 +1806,34 @@ Note that
 &\equiv
 \arg\frac{v-u}{z-u}
 +
-\arg\frac{z-w}{v-w}\equiv
+\arg\frac{z-w}{v-w}=
 \\
-&\equiv \measuredangle ZUV+\measuredangle VWZ.
+&= \measuredangle ZUV+\measuredangle VWZ.
 \end{align*}
 
 The statement follows since value $\tfrac{(v-u)\cdot(z-w)}{(v-w)\cdot(z-u)}$ is real if and only if 
 \[2\cdot\arg\frac{(v-u)\cdot(z-w)}{(v-w)\cdot(z-u)}\equiv0.\]
 
+\parbf{Exercise~\ref{ex:6-circles}.}
+Check the following identity:
+\begin{align*}
+\frac{(v-u)\cdot(z-w)}{(v-w)\cdot(z-u)}
+\cdot
+\frac{(v'-u')\cdot(z'-w')}{(v'-w')\cdot(z'-u')} 
+=&
+\frac{(v-u)\cdot(u'-v')}{(v-v')\cdot(u'-u)}
+\cdot
+\frac{(z-w)\cdot(w'-z')}{(z-z')\cdot(w'-w)}
+\cdot
+\\
+\cdot
+&
+\frac{(v-v')\cdot(w'-w)}{(v-w)\cdot(w'-v')}
+\cdot
+\frac{(z-z')\cdot(u'-u)}{(z-u)\cdot(u'-z')}.
+\end{align*}
+By Theorem~\ref{thm:inscribed-quadrilateral-C}, five from six cross ratios in the this identity are real. 
+Therefore so is the sixth cross ratio; it remains to apply the theorem again.
 
 \parbf{Exercise~\ref{ex:inverse-Mob}.}
 Show that the inverse of each elementary transformation is elementary
@@ -1955,16 +2004,8 @@ Note $\mathcal{Q}$ contains infinite number of mutually nonparallel segments.
 Therefore, we can choose a segment $[PQ]$ in $\mathcal{Q}$ 
 which is not parallel to any of the segments $[A_1B_1],\dots,[A_nB_n]$.
 
-It follows that $[PQ]$ has at most one common point with each the sets  $[A_iB_i]$ and~$\{C_i\}$.
-We arrive to a contradiction since $[PQ]$ contains infinite number of points.
-
-
-\parbf{Exercise~\ref{ex:poly-circ}.} 
-Note first that among elementary sets
-only one-point set are subsets of the a circle.
-
 \begin{wrapfigure}[9]{r}{26mm}
-\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/two-parallelograms-sol(1)}
+\begin{lpic}[t(4mm),b(0mm),r(0mm),l(0mm)]{pics/two-parallelograms-sol(1)}
 \lbl[tr]{1,7;$A$}
 \lbl[t]{12,0;$B$}
 \lbl[l]{21,20;$C$}
@@ -1975,6 +2016,13 @@ only one-point set are subsets of the a circle.
 \lbl[b]{23,29;$E$}
 \end{lpic}
 \end{wrapfigure}
+
+It follows that $[PQ]$ has at most one common point with each the sets  $[A_iB_i]$ and~$\{C_i\}$.
+We arrive to a contradiction since $[PQ]$ contains infinite number of points.
+
+\parbf{Exercise~\ref{ex:poly-circ}.} 
+Note first that among elementary sets
+only one-point set are subsets of the a circle.
 
 It remains to note that any circle contains infinite number of points.
 

@@ -104,8 +104,9 @@ PQ_h&=QX_h=
 \end{align*}
 \qedsf
 
+
 \begin{thm}{Exercise}\label{ex:small-angle}
-Let $ABC$ be an equilateral h-triangle with side 100.
+Let $ABC$ be an equilateral h-triangle with side $100$.
 Show that $|\measuredangle_h ABC|<10^{-10}$.
 \end{thm}
 
@@ -556,6 +557,139 @@ $$\circum_h(r+1)>2\cdot \circum_h(r)$$
 for all $r>0$.
 \end{thm}
 
+\section*{Hyperbolic Pythagorean theorem}
+\addtocontents{toc}{Hyperbolic Pythagorean theorem.}
 
+Recall that $\cosh$ denotes \index{ch@$\cosh$}\index{hyperbolic cosine}\emph{hyperbolic cosine};
+that is, the function defined by
+$$\cosh x\df \tfrac{e^x+e^{-x}}2.$$
+
+\begin{thm}{Hyperbolic Pythagorean theorem}\label{thm:pyth-h-poincare}
+Assume that $ACB$ is an h-triangle with right angle at~$C$.
+Set $a=BC_h$, $b=CA_h$ and $c=AB_h$.
+Then
+\[\cosh c=\cosh a\cdot\cosh b.
+\eqlbl{eq:thm:pyth-h-poincare}\]
+
+\end{thm}
+
+The formula \ref{eq:thm:pyth-h-poincare} is proved by means of direct calculations.
+Let us discuss the limit cases of this formula before going into the proof.
+
+Note that $\cosh x$ can be written using the Taylor expansion
+\[\cosh x=1+\tfrac1{2}\cdot x^2+\tfrac1{24}\cdot x^4+\dots.\]
+
+It follows that if $a$ and $b$ are small and $c^2=a^2+b^2$ then
+\begin{align*}
+\cosh c &\approx 1+\tfrac1{2}\cdot c^2\approx
+\\
+&\approx(1+\tfrac1{2}\cdot a^2)\cdot (1+\tfrac1{2}\cdot b^2)
+\approx 
+\\
+&\approx
+\cosh a\cdot\cosh b.
+\end{align*}
+These approximations show that the original Pythagorean theorem (\ref{thm:pyth}) is a limit case of Hyperbolic Pythagorean theorem for small triangles.
+
+For large $a$ and $b$ the values $e^{-a}$ and $e^{-b}$ are neglectable.
+In this case we have the following approximations:
+\begin{align*}
+\cosh a\cdot\cosh b&\approx \tfrac{e^a}2\cdot\tfrac{e^b}2=
+\\
+&=\tfrac{e^{a+b-\ln 2}}{2}\approx
+\\
+&\approx \cosh(a+b-\ln 2).
+\end{align*}
+Therefore $c\approx a+b-\ln 2$. 
+
+\begin{thm}{Exercise}\label{ex:c+1>a+b}
+Assume that $ACB$ is an h-triangle with right angle at~$C$.
+Set $a=BC_h$, $b=CA_h$ and $c=AB_h$.
+Show that
+\[c+\ln 2>a+b.\]
+
+\end{thm}
+
+In the proof of Hyperbolic Pythagorean theorem we use the following formula from Exercise~\ref{ex:cosh}:
+\[\cosh PQ_h=\frac{PQ\cdot  P'Q'+PQ'\cdot  P'Q}{PP'\cdot QQ'},\]
+Here $P$, $Q$ are h-points distinct from the absolute and $P'$, $Q'$ are their inversions in the absolute.
+A complete proof of this formula is given in the hints.
+
+\begin{wrapfigure}{o}{32mm}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/pyth-h-poincare(1)}
+\lbl[r]{9.5,18;$A$}
+\lbl[r]{10.3,27;$A'$}
+\lbl[t]{16,9.7;$B$}
+\lbl[t]{30,9.9;$B'$}
+\lbl[tr]{10.2,10.2;$C$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Proof.}
+We assume that absolute is a unit circle.
+By the main observation (\ref{thm:main-observ}) we can assume that $C$ is the center of absolute.
+Denote by $A'$ and $B'$ the inversions of $A$ and $B$ in the absolute.
+
+Set $x=BC$, $y=AC$.
+By Lemma~\ref{lem:O-h-dist}
+\begin{align*}
+a&=\ln \tfrac{1+x}{1-x} 
+&
+b&=\ln \tfrac{1+y}{1-y}.
+\end{align*}
+Therefore
+\[\begin{aligned}
+\cosh a&=\tfrac12\cdot (\tfrac{1+x}{1-x}+\tfrac{1-x}{1+x})=
+&&&&&
+\cosh b&=\tfrac12\cdot (\tfrac{1+y}{1-y}+\tfrac{1-y}{1+y})=
+\\
+&=\tfrac{1+x^2}{1-x^2},
+&&&&&
+&=\tfrac{1+y^2}{1-y^2}.
+\end{aligned}
+\eqlbl{cosha+coshb}
+\]
+
+Note that 
+\begin{align*}
+B'C&=\tfrac1x
+&
+A'C&=\tfrac1y
+\intertext{Therefore}
+BB'&=\tfrac1x-x,
+&
+AA'&=\tfrac1y-y,
+\intertext{Since the triangles $ABC$, $A'BC$, $AB'C$, $A'B'C$ are right, by original Pythagorean theorem (\ref{thm:pyth}) implies}
+AB&=\sqrt{x^2+y^2},
+&
+AB'&=\sqrt{\tfrac1{x^2}+y^2},
+\\
+A'B&=\sqrt{x^2+\tfrac1{y^2}},
+&
+A'B'&=\sqrt{\tfrac1{x^2}+\tfrac1{y^2}}.
+\end{align*}
+
+According to Exercise~\ref{ex:cosh},
+\[
+\begin{aligned}
+\cosh c&= \frac{AB\cdot A'B'+AB'\cdot A'B}{AA'\cdot BB'}=
+\\
+&=
+\frac{\sqrt{x^2+y^2}\cdot \sqrt{\tfrac1{x^2}
++\tfrac1{y^2}}+\sqrt{\tfrac1{x^2}+y^2}\cdot \sqrt{x^2+\tfrac1{y^2}}}
+{(\tfrac1y-y)\cdot (\tfrac1x-x)}=
+\\
+&=\frac{x^2+y^2+1+x^2\cdot y^2}
+{(1-y^2)\cdot (1-x^2)}
+\\
+&=\tfrac{1+x^2}
+{1-x^2}\cdot
+\tfrac{1+y^2}
+{1-y^2}
+\end{aligned}
+\eqlbl{coshc}
+\]
+Finally note that \ref{cosha+coshb} and \ref{coshc} imply \ref{eq:thm:pyth-h-poincare}.
+\qeds
 
 \addtocontents{toc}{\protect\end{quote}}
