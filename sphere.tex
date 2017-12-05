@@ -49,7 +49,7 @@ In particular, the sphere does not satisfy the axioms of the neutral plane.
 \section*{Pythagorean theorem}
 \addtocontents{toc}{Pythagorean theorem.}
 
-Here is an analog of the Pythagorean theorems (\ref{thm:pyth} and \ref{thm:pyth-h}) in spherical geometry.
+Here is an analog of the Pythagorean theorems (\ref{thm:pyth} and \ref{thm:pyth-h-poincare}) in spherical geometry.
 
 \begin{thm}{Theorem}\label{thm:s-pyth}
 Let $\triangle_sABC$ be a spherical triangle with a right angle at~$C$.
@@ -320,42 +320,6 @@ the hemisphere~$\Sigma^+$.
 Note that the central projection sends the intersections of the great circles with $\Sigma^+$ to the lines in~$\Pi^+$.
 The latter follows since the great circles are intersections of $\Sigma$ with planes passing thru the origin
 as well as the lines in $\Pi^+$ are the intersection of $\Pi^+$ with these planes.
-
-\begin{thm}{Exercise}\label{ex:pyth-s}
-Assume that $N$ is the north pole, $\triangle_s NBC$ has right angle at $C$ and  lies completely in the north hemisphere.
-Let $\triangle NB'C'$ be the image of $\triangle_s NBC$ under the central projection.
-
-\begin{center}
-\begin{lpic}[t(-3mm),b(-0mm),r(0mm),l(0mm)]{pics/centrl-proj(1)}
-\lbl[rt]{34.5,46;$N$}
-\lbl[r]{41,29;$B$}
-\lbl[rt]{54,32;$C$}
-\lbl[bw]{46,37;$B'$}
-\lbl[lbw]{56.5,39.5;$C'$}
-\lbl[rt]{34.5,12.5;$O$}
-\end{lpic}
-\end{center}
-
-
-Observe that $\triangle NB'C'$ has a right angle at~$C'$.
-Set 
-\begin{align*}
- a&=BC_s, &b&=CN_s, &c&=NB_s,\\
- s&=B'C',&t&=C'N,&u&=NB'.
-\intertext{Show that}
-s&=\tfrac{\tan a}{\cos b},
-&
-t&=\tan b,
-&
-u&=\tan c.
-\end{align*}
-
-Use these identities together with the Euclidean Pythagorean theorem
-$u^2=s^2+t^2$
-for $\triangle NB'C'$ to prove the spherical Pythagorean theorem 
-\[\cos c=\cos a\cdot\cos b\]
-for $\triangle_s NBC$.
-\end{thm}
 
 The following exercise 
 is analogous to Exercise~\ref{ex:h-median}
