@@ -1,4 +1,101 @@
 
+Similarly,
+\begin{align*}
+\tanh PQ_h &=\frac{e^{2\cdot PQ_h}-1}{e^{2\cdot PQ_h}+1}=
+\\
+&=\frac{\frac{(1+a)^2}{(1-a)^2}-\frac{(1-a)^2}{(1+a)^2}}{\frac{(1+a)^2}{(1-a)^2}+\frac{(1-a)^2}{(1+a)^2}}=
+\\
+&=\frac{2\cdot a}{1+a^2}
+\end{align*}
+
+
+
+On the other hand
+\begin{align*}
+\sqrt{\frac{PQ\cdot  P'Q'}{PQ'\cdot P'Q}}
+&=\sqrt{\frac{2\cdot a\cdot \frac 2a}{(\tfrac1a-a)^2}}=
+\\
+&=\frac{2\cdot a}{1+a^2}
+\end{align*}
+
+
+
+
+
+
+Fix an h-triangle $XYZ$.
+Denote by $A$, $B$ and $C$ the ideal points of the h-half-lines
+$[XY)_h$, $[YZ)_h$ and~$[ZX)_h$.
+
+\begin{wrapfigure}[11]{o}{43mm}
+\begin{lpic}[t(-3mm),b(4mm),r(0mm),l(0mm)]{pics/h-triangle-absolute(1)}
+\lbl[tl]{25,23;{\small $X$}}
+\lbl[r]{21,19;{\small $Y$}}
+\lbl[b]{20,25;{\small $Z$}}
+\lbl[tr]{17,0;$A$}
+\lbl[br]{8,38;$B$}
+\lbl[bl]{41,29;$C$}
+\end{lpic}
+\end{wrapfigure}
+
+Consider the \index{triangle!ideal triangle}\emph{ideal triangle} $ABC$;
+its \emph{sides} are the three pairwise asymptotically parallel lines with ideal points $A$, $B$ and $C$.
+
+It should be clear that the inradius of the ideal triangle $ABC$
+is bigger than the inradius of $\triangle_hXYZ$.
+
+
+Applying an inversion if necessary,
+we can assume that the h-incenter ($O$)
+of the ideal triangle is the center of the absolute (see \ref{thm:main-observ}). 
+Therefore, without loss of generality, we may assume 
+$$\measuredangle AOB=\measuredangle BOC=\measuredangle COA=\tfrac23\cdot\pi.$$
+
+It remains to find the inradius.
+Denote by $Q$ the foot point of $O$ on~$(AB)_h$.
+Then $OQ_h$ is the inradius.
+Note that the angle of parallelism of $(AB)_h$ at $O$ is equal to $\tfrac\pi3$.
+
+{
+
+\begin{wrapfigure}[7]{o}{44mm}
+\begin{lpic}[t(-5mm),b(-5mm),r(0mm),l(0mm)]{pics/absolute-triangle(1)}
+\lbl[tl]{32,3;$A$}
+\lbl[bl]{32,40;$B$}
+\lbl[r]{0,20;$C$}
+\lbl[r]{20.5,21;{\small $O$}}
+\lbl[l]{29,20;$Q$}
+\end{lpic}
+\end{wrapfigure}
+
+By Proposition~\ref{prop:angle-parallelism},
+\begin{align*}
+OQ_h&=\tfrac12\cdot\ln\frac{1+\cos\frac{\pi}{3}}{1-\cos\frac{\pi}{3}}=
+\\
+&=\tfrac12\cdot\ln\frac{1+\tfrac12}{1-\tfrac12}=
+\\
+&=\tfrac12\cdot\ln 3.
+\end{align*}
+\qedsf
+
+%\begin{thm}{Exercise}\label{ex:right-h-triangle} Find the optimal upper for the inradius of right h-triangles. \end{thm}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \begin{thm}{Exercise}\label{ex:C-cross-ratio}
 Show that 
 \[\tanh[d_h(z,w)]=\left|\frac{z-w}{1-z\cdot \bar w}\right|,\]

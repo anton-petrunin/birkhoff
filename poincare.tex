@@ -343,17 +343,26 @@ Assume $P$, $\hat P$ and $O$ are as in the Lemma~\ref{lem:h-circle=circle} and $
 Show that  $\hat P\in [OP]$.
 \end{thm}
 
-The following exercise will be used in the proof of the hyperbolic Pythagorean theorem (\ref{thm:pyth-h-poincare}).
-Recall that $\cosh$ denotes \index{ch@$\cosh$}\index{hyperbolic cosine}\emph{hyperbolic cosine};
-that is, the function defined by
-$$\cosh x\df \tfrac{e^x+e^{-x}}2.$$
+Recall that $\cosh$, $\sinh$ and $\tanh$ denote \index{ch@$\cosh$}\index{hyperbolic cosine}\emph{hyperbolic cosine}, \index{sh@$\sinh$}\index{hyperbolic sine}\emph{hyperbolic sine} and \index{th@$\tanh$}\index{hyperbolic tangent}\emph{hyperbolic tangent};
+that is, the functions defined by
+\[\cosh x\df \tfrac{e^x+e^{-x}}2,
+ \quad
+ \sinh x\df \tfrac{e^x-e^{-x}}2,
+\]
+\[\tanh x\df \tfrac{\sinh x}{\cosh x}=\tfrac{e^{2\cdot x}-1}{e^{2\cdot x}+1}.
+\]
 
+The formula with hyperbolic cosine in following exercise will be used in the proof of the hyperbolic Pythagorean theorem (\ref{thm:pyth-h-poincare}).
 
 \begin{thm}{Advanced exercise}\label{ex:cosh}
 Let $P$ and $Q$ be two h-poins distinct from the center of absolute.
 Denote by $P'$ and $Q'$ the inversions of $P$ and $Q$ in the absolute.
 Show that 
-\[\cosh PQ_h=\frac{PQ\cdot  P'Q'+PQ'\cdot  P'Q}{PP'\cdot QQ'}.\]
+\begin{enumerate}[(a)]
+\item\label{ex:coshcosh} \[\cosh PQ_h=\frac{PQ\cdot  P'Q'+PQ'\cdot  P'Q}{PP'\cdot QQ'};\]
+\item\label{ex:coshtanh} \[\tanh[\tfrac12\cdot PQ_h]=\sqrt{\frac{PQ\cdot  P'Q'}{PQ'\cdot P'Q}}.\]
+\end{enumerate}
+
 \end{thm}
 
 

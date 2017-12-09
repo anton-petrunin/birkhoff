@@ -104,6 +104,23 @@ PQ_h&=QX_h=
 \end{align*}
 \qedsf
 
+\begin{thm}{Corollary}\label{cor:angle-parallelism}
+Let $ABC$ be an h-triangle and $\beta\z=|\measuredangle_h ABC|$.
+Then the h-distance from $B$ to $(AC)_h$ is less than
+\[\tfrac12\cdot\ln \frac{1+\cos\tfrac\beta2}{1-\cos\tfrac\beta2}.\]
+
+\end{thm}
+
+\parit{Proof.}
+Denote by $\phi$ the angle of parallelism of $B$ to~$(AC)_h$.
+Note that $\phi>\tfrac\beta2$; therefore 
+\[
+\tfrac12\cdot\ln \frac{1+\cos\phi}{1-\cos\phi}
+<
+\tfrac12\cdot\ln \frac{1+\cos\frac\beta2}{1-\cos\frac\beta2}.\]
+It remains to apply Proposition~\ref{prop:angle-parallelism}.
+\qeds
+
 
 \begin{thm}{Exercise}\label{ex:small-angle}
 Let $ABC$ be an equilateral h-triangle with side $100$.
@@ -118,55 +135,44 @@ The inradius of any h-triangle
 is less than $\tfrac12\cdot\ln3$.
 \end{thm}
 
+%???+PIC
+
+
+\begin{wrapfigure}{o}{34mm}
+\begin{lpic}[t(-4mm),b(0mm),r(-1mm),l(0mm)]{pics/h-inradius(1)}
+\lbl[t]{1.5,4;$X$}
+\lbl[t]{30.5,1;$Y$}
+\lbl[b]{15,28;$Z$}
+\lbl[lb]{16,13;$I$}
+%\lbl[bl]{21.5,15;$X'$}
+%\lbl[br]{9,16;$Y'$}
+%\lbl[t]{14,4.5;$Z'$}
+\end{lpic}
+\end{wrapfigure}
+
 \parit{Proof.}
-Fix an h-triangle $XYZ$.
-Denote by $A$, $B$ and $C$ the ideal points of the h-half-lines
-$[XY)_h$, $[YZ)_h$ and~$[ZX)_h$.
+Let $I$ be the h-incenter of $\triangle_hXYZ$;
+denote by $r$ the h-inradius of $\triangle_hXYZ$.
 
-\begin{wrapfigure}[11]{o}{43mm}
-\begin{lpic}[t(-3mm),b(4mm),r(0mm),l(0mm)]{pics/h-triangle-absolute(1)}
-\lbl[tl]{25,23;{\small $X$}}
-\lbl[r]{21,19;{\small $Y$}}
-\lbl[b]{20,25;{\small $Z$}}
-\lbl[tr]{17,0;$A$}
-\lbl[br]{8,38;$B$}
-\lbl[bl]{41,29;$C$}
-\end{lpic}
-\end{wrapfigure}
+Note that the angles 
+$\angle_hXIY$, 
+$\angle_hYIZ$ and 
+$\angle_hZIX$
+have the same sign.
+Without loss of generality, we can assume that all of them are positive
+and therefore
+\[\measuredangle_hXIY+ 
+\measuredangle_hYIZ+ 
+\measuredangle_hZIX=2\cdot\pi
+\]
 
-Consider the \index{triangle!ideal triangle}\emph{ideal triangle} $ABC$;
-its \emph{sides} are the three pairwise asymptotically parallel lines with ideal points $A$, $B$ and $C$.
+We can assume that
+$\measuredangle_hXIY\ge\tfrac23\cdot\pi$;
+if not relabel $X$, $Y$ and $Z$. 
 
-It should be clear that the inradius of the ideal triangle $ABC$
-is bigger than the inradius of $\triangle_hXYZ$.
-
-
-Applying an inversion if necessary,
-we can assume that the h-incenter ($O$)
-of the ideal triangle is the center of the absolute (see \ref{thm:main-observ}). 
-Therefore, without loss of generality, we may assume 
-$$\measuredangle AOB=\measuredangle BOC=\measuredangle COA=\tfrac23\cdot\pi.$$
-
-It remains to find the inradius.
-Denote by $Q$ the foot point of $O$ on~$(AB)_h$.
-Then $OQ_h$ is the inradius.
-Note that the angle of parallelism of $(AB)_h$ at $O$ is equal to $\tfrac\pi3$.
-
-{
-
-\begin{wrapfigure}[7]{o}{44mm}
-\begin{lpic}[t(-5mm),b(-5mm),r(0mm),l(0mm)]{pics/absolute-triangle(1)}
-\lbl[tl]{32,3;$A$}
-\lbl[bl]{32,40;$B$}
-\lbl[r]{0,20;$C$}
-\lbl[r]{20.5,21;{\small $O$}}
-\lbl[l]{29,20;$Q$}
-\end{lpic}
-\end{wrapfigure}
-
-By Proposition~\ref{prop:angle-parallelism},
-\begin{align*}
-OQ_h&=\tfrac12\cdot\ln\frac{1+\cos\frac{\pi}{3}}{1-\cos\frac{\pi}{3}}=
+Since $r$ is the h-distance from $I$ to $(XY)_h$,
+Corollary \ref{cor:angle-parallelism} implies that
+\begin{align*}r&<\tfrac12\cdot\ln \tfrac{1+\cos\frac\pi3}{1-\cos\frac\pi3}=
 \\
 &=\tfrac12\cdot\ln\frac{1+\tfrac12}{1-\tfrac12}=
 \\
@@ -174,15 +180,11 @@ OQ_h&=\tfrac12\cdot\ln\frac{1+\cos\frac{\pi}{3}}{1-\cos\frac{\pi}{3}}=
 \end{align*}
 \qedsf
 
-%\begin{thm}{Exercise}\label{ex:right-h-triangle} Find the optimal upper for the inradius of right h-triangles. \end{thm}
-
 \begin{thm}{Exercise}\label{ex:side-sup}
 Let $\square_h ABCD$ be a quadrilateral in the h-plane 
 such that the h-angles at $A$, $B$ and $C$ are right and $AB_h=BC_h$.
 Find the optimal upper bound for~$AB_h$.
 \end{thm}
-
-}
 
 
 \section*{Circles, horocycles and equidistants}
@@ -258,19 +260,20 @@ Such a curve $g$ is called
 In Euclidean geometry, the equidistant from a line is a line;
 apparently in hyperbolic geometry the picture is different.
 
-
-
 \parbf{Horocycles.}
 If the circle $\Gamma$ touches the absolute from inside at one point $A$, then the complement $h=\Gamma\backslash\{A\}$ lies in the h-plane.
 This set is called a \index{horocycle}\emph{horocycle}.
 It also has a perfectly round shape in the sense described above.
 
-\begin{wrapfigure}[10]{o}{43mm}
-\begin{lpic}[t(-0mm),b(-3mm),r(0mm),l(0mm)]{pics/oricircle(1)}
+{
+
+\begin{wrapfigure}{r}{43mm}
+\begin{lpic}[t(-0mm),b(-4mm),r(0mm),l(0mm)]{pics/oricircle(1)}
 \lbl[rb]{16,15;$\Gamma$}
 \lbl[rb]{2,30;$A$}
 \end{lpic}
 \end{wrapfigure}
+
 
 Horocycles are the border case between circles and equidistants  to h-lines.
 A horocycle might be considered as a limit of circles 
@@ -283,6 +286,7 @@ Find the leg of an isosceles right h-triangle inscribed in a horocycle.
 \end{thm}
 
 
+}
 
 \section*{Hyperbolic triangles}
 \addtocontents{toc}{Hyperbolic triangles.}
@@ -610,12 +614,14 @@ Show that
 
 \end{thm}
 
+
 In the proof of the hyperbolic Pythagorean theorem we use the following formula from Exercise~\ref{ex:cosh}:
 \[\cosh PQ_h=\frac{PQ\cdot  P'Q'+PQ'\cdot  P'Q}{PP'\cdot QQ'},\]
+
 Here $P$, $Q$ are h-points distinct from the absolute and $P'$, $Q'$ are their inversions in the absolute.
 A complete proof of this formula is given in the hints.
 
-\begin{wrapfigure}{o}{32mm}
+\begin{wrapfigure}{r}{32mm}
 \begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/pyth-h-poincare(1)}
 \lbl[r]{9.5,18;$A$}
 \lbl[r]{10.3,27;$A'$}
