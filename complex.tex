@@ -50,7 +50,7 @@ as the set of all pairs of real numbers $(x,y)$ equipped with the metric
 $$AB=\sqrt{(x_A-x_B)^2+(y_A-y_B)^2},$$
 where $A=(x_A,y_A)$ and $B=(x_B,y_B)$.
 
-One can pack the coordinates $(x,y)$ of a point in the Euclidean plane
+One can pack the coordinates $(x,y)$ of a point
 in one complex number $z=x+i\cdot y$.
 This way we get a one-to-one correspondence between points of the Euclidean plane and~$\mathbb{C}$.
 Given a point $Z=(x,y)$, 
@@ -65,9 +65,7 @@ if not, one has to change the direction of the $y$-coordinate.
 \section*{Conjugation and absolute value}
 \addtocontents{toc}{Conjugation and absolute value.}
 
-Let $z=x+i\cdot y$ and both $x$ and $y$ be real.
-Denote by $Z$ the point in the plane with the complex coordinate~$z$.
-
+Let $z$ be a complex number with real part $x$ and imaginary part $y$.
 If $y=0$, we say that the complex number $z$ is \index{real complex number}\emph{real} and if $x=0$ we say that $z$ is \index{imaginary complex number}\emph{imaginary}.
 The set of points 
 with real (imaginary) complex coordinates is a line in the plane,
@@ -78,8 +76,8 @@ The real line will be denoted as $\mathbb{R}$.
 
 The complex number $\bar z=x-iy$ is called the \index{complex conjugate}\emph{complex conjugate} of~$z$.
 
-Note that the point $\bar Z$ with the complex coordinate $\bar z$ 
-is the reflection of $Z$ in the real line.
+Let $Z$ and $\bar Z$ be the points in the plane with the complex coordinates $z$ and $\bar z$ correspondingly.
+Note that the point $\bar Z$ is the reflection of $Z$ in the real line.
 
 It is straightforward to check that
 $$\begin{aligned}
@@ -243,7 +241,7 @@ Show that
 \end{thm}
 
 \begin{wrapfigure}{o}{36mm}
-\begin{lpic}[t(-7mm),b(0mm),r(0mm),l(0mm)]{pics/3-squares(1)}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/3-squares(1)}
 \lbl[bw]{12.5,14.7;$A$}
 \lbl[bw]{22.5,14.7;$B$}
 \lbl[bw]{32.5,14.7;$C$}
@@ -315,11 +313,11 @@ are inscribed.
 
 
 
-\section*{M\"obius transformations}
-\addtocontents{toc}{M\"obius transformations.}
+\section*{Fractional linear transformations}
+\addtocontents{toc}{Fractional linear transformations.}
 
 \begin{thm}{Exercise}\label{ex:movie}
-Watch video ``M\"obius Transformations Revealed'' by Douglas Arnold and Jonathan Rogness.
+Watch video ``M\"obius transformations tevealed'' by Douglas Arnold and Jonathan Rogness.
 (It is 3 minutes long and available on \href{http://youtu.be/0z1fIsUNhO4}{YouTube}.)
 \end{thm}
 
@@ -328,11 +326,11 @@ The complex plane $\mathbb{C}$ extended by one ideal number $\infty$
 is called the \index{extended complex plane}\emph{extended complex plane}.
 It is denoted by $\hat{\mathbb{C}}$, so $\hat{\mathbb{C}}=\mathbb{C}\cup\{\infty\}$
 
-A \index{M\"obius transformation}\emph{M\"obius transformation} of  $\hat{\mathbb{C}}$ is a function of one complex variable $z$
+A \index{fractional linear transformation}\emph{fractional linear transformation} or \index{M\"obius transformation}\emph{M\"obius transformation} of  $\hat{\mathbb{C}}$ is a function of one complex variable $z$
 which can be written as
 $$f(z) = \frac{a\cdot z + b}{c\cdot z + d},$$
 where the coefficients $a$, $b$, $c$, $d$ are complex numbers satisfying $a\cdot d \z- b\cdot c \not= 0$.
-(If $a\cdot d - b\cdot c = 0$ the function defined above is a constant and is not considered to be a M\"obius transformation.) 
+(If $a\cdot d - b\cdot c = 0$ the function defined above is a constant and is not considered to be a fractional linear transformation.) 
 
 In case $c\not=0$, we assume that
 $$f(-d/c) = \infty
@@ -350,7 +348,7 @@ $$f(\infty) = \infty.$$
 \section*{Elementary transformations}
 \addtocontents{toc}{Elementary transformations.}
 
-The following three types of M\"obius transformations are called \index{elementary transformation}\emph{elementary}.
+The following three types of fractional linear transformations are called \index{elementary transformation}\emph{elementary}.
 
 \begin{enumerate}
 \item $z\mapsto z+w,$
@@ -383,11 +381,11 @@ Finally, the reflection of $Z'$ in $\mathbb{R}$,
 has complex coordinate $\tfrac1z=\overline{(1/\bar z)}$.
 
 \begin{thm}{Proposition}\label{prop:mob-comp}
-The map $f\:\hat{\mathbb{C}}\to\hat{\mathbb{C}}$ is a M\"obius transformation if and only if it can be expressed as a composition of elementary   M\"obius transformations. 
+The map $f\:\hat{\mathbb{C}}\to\hat{\mathbb{C}}$ is a fractional linear transformation if and only if it can be expressed as a composition of elementary transformations. 
 \end{thm}
 
 \parit{Proof; the ``only if'' part.}
-Fix a M\"obius transformation
+Fix a fractional linear transformation
 \begin{align*}
 f(z) &= \frac{a\cdot z + b}{c\cdot z + d}.
 \intertext{Assume $c\ne 0$. Then}
@@ -422,10 +420,10 @@ where
 
 \parit{``If'' part.}
 We need to show that by composing elementary transformations,
-we can only get M\"obius transformations.
-Note that it is sufficient to check that the composition of a M\"obius transformations
+we can only get fractional linear transformations.
+Note that it is sufficient to check that the composition of a fractional linear transformations
 $$f(z) = \frac{a\cdot z + b}{c\cdot z + d}.$$
-with any elementary transformation $z\mapsto z+w$, $z\mapsto w\cdot z$ and $z\mapsto \tfrac1z$ is a M\"obius transformations.
+with any elementary transformation $z\mapsto z+w$, $z\mapsto w\cdot z$ and $z\mapsto \tfrac1z$ is a fractional linear transformations.
 
 The latter is done by means of direct calculations.
 \begin{align*}
@@ -445,7 +443,7 @@ The latter is done by means of direct calculations.
 
 
 \begin{thm}{Corollary}\label{cor:cline-Moeb}
-The image of a circline under a M\"obius transformation 
+The image of a circline under a fractional linear transformation 
 is a circline.
 \end{thm}
 
@@ -462,13 +460,13 @@ Hence the result.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:inverse-Mob}
-Show that the inverse of a M\"obius transformation is a M\"obius transformation.
+Show that the inverse of a fractional linear transformation is a fractional linear transformation.
 \end{thm}
 
 
 \begin{thm}{Exercise}\label{ex:3-point-Mob}
 Given distinct values $z_0,z_1,z_\infty\in \hat{\mathbb{C}}$,
-construct a M\"obius transformation $f$ such that 
+construct a fractional linear transformation $f$ such that 
 \[f(z_0)=0,
 \quad 
 f(z_1)=1
@@ -479,7 +477,7 @@ Show that such a transformation is unique.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:invesion-Mob}
-Show that any inversion is a composition of the complex conjugation and a M\"obius transformation.  
+Show that any inversion is a composition of the complex conjugation and a fractional linear transformation.  
 \end{thm}
 
 
@@ -515,7 +513,7 @@ the following way.
 
 \begin{thm}{Theorem}\label{lem:inverse-4-angle-C}
 Let $UWVZ$ and $U'W'V'Z'$  be two quadrilaterals 
-such that the points $U'$, $W'$, $V'$ and $Z'$ are inversions of $U$, $W$, $V$, and $Z$ correspondingly.
+such that the points $U'$, $W'$, $V'$ and $Z'$ are inverses of $U$, $W$, $V$, and $Z$ correspondingly.
 Assume $u$, $w$, $v$, $z$, $u'$, $w'$, $v'$ and $z'$ are the complex coordinates of $U$, $W$, $V$, $Z$, $U'$, $W'$, $V'$ and $Z'$ correspondingly.
 
 Then 
@@ -528,9 +526,9 @@ It admits a short and simple solution which uses Proposition~\ref{prop:mob-comp}
 
 \begin{thm}{Exercise}\label{ex:C-cross-ratio}
 Show that 
-complex cross-ratios are \emph{invariant} under M\"obius transformations. 
+complex cross-ratios are \emph{invariant} under fractional linear transformations. 
 
-That is, if a M\"obius transformation maps four distinct complex numbers $u, v, w, z$ to complex numbers $u', v', w', z'$ respectively, then
+That is, if a fractional linear transformation maps four distinct complex numbers $u, v, w, z$ to complex numbers $u', v', w', z'$ respectively, then
 $$
 (u',v';w',z')
 =
@@ -545,7 +543,7 @@ The following theorem shows
 that the metric in the conformal disc model naturally appears in other branches of mathematics.
 We do not give a proof, but it can be found in any textbook on geometric complex analysis.
 
-Let us denote by $\mathbb{D}$
+Denote by $\mathbb{D}$
 the unit disc in the complex plane centered at~$0$;
 that is, a complex number $z$
 belongs to $\mathbb{D}$ if and only if $|z|<1$.
@@ -567,8 +565,15 @@ Then
 for any $z,w\in \mathbb{D}$.
 
 If the equality holds for one pair of distinct numbers $z,w\in \mathbb{D}$, then it holds for any pair. 
-Moreover, $f\: \mathbb{D}\to \mathbb{D}$ is a motion of the h-plane.
+In this case $f$ is a fractional linear transformation as well as a motion of the h-plane.
 \end{thm}
+
+\begin{thm}{Exercise}\label{ex:schwarz-moebius}
+Show that any fractional linear transformation which appears in the equality case of Schwarz--Pick theorem can be written as 
+\[f(z)=\frac{v\cdot z+\bar w}{w\cdot z+\bar v}.\]
+where $|w|<|v|$.
+\end{thm}
+
 
 \begin{thm}{Exercise}\label{ex:schwarz-tanh}
 Show that 

@@ -343,29 +343,6 @@ Assume $P$, $\hat P$ and $O$ are as in the Lemma~\ref{lem:h-circle=circle} and $
 Show that  $\hat P\in [OP]$.
 \end{thm}
 
-Recall that $\cosh$, $\sinh$ and $\tanh$ denote \index{ch@$\cosh$}\index{hyperbolic cosine}\emph{hyperbolic cosine}, \index{sh@$\sinh$}\index{hyperbolic sine}\emph{hyperbolic sine} and \index{th@$\tanh$}\index{hyperbolic tangent}\emph{hyperbolic tangent};
-that is, the functions defined by
-\[\cosh x\df \tfrac{e^x+e^{-x}}2,
- \quad
- \sinh x\df \tfrac{e^x-e^{-x}}2,
-\]
-\[\tanh x\df \tfrac{\sinh x}{\cosh x}=\tfrac{e^{2\cdot x}-1}{e^{2\cdot x}+1}.
-\]
-
-The formula with hyperbolic cosine in following exercise will be used in the proof of the hyperbolic Pythagorean theorem (\ref{thm:pyth-h-poincare}).
-
-\begin{thm}{Advanced exercise}\label{ex:cosh}
-Let $P$ and $Q$ be two h-poins distinct from the center of absolute.
-Denote by $P'$ and $Q'$ the inversions of $P$ and $Q$ in the absolute.
-Show that 
-\begin{enumerate}[(a)]
-\item\label{ex:coshcosh} \[\cosh PQ_h=\frac{PQ\cdot  P'Q'+PQ'\cdot  P'Q}{PP'\cdot QQ'};\]
-\item\label{ex:coshtanh} \[\tanh[\tfrac12\cdot PQ_h]=\sqrt{\frac{PQ\cdot  P'Q'}{PQ'\cdot P'Q}}.\]
-\end{enumerate}
-
-\end{thm}
-
-
 \section*{Axiom \ref{def:birkhoff-axioms:0}}
 \addtocontents{toc}{Axioms: \ref{def:birkhoff-axioms:0},}
 
@@ -639,6 +616,8 @@ For any h-line $\ell$ and any h-point $P\notin\ell$ there are at least two h-lin
 and have no points of intersection with~$\ell$.
 \end{thm}
 
+{
+
 \begin{wrapfigure}{o}{44mm}
 \begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/absolute-triangle-3(1)}
 \lbl[tl]{32,3;$A$}
@@ -661,7 +640,80 @@ Show that in the h-plane
 there are 3 mutually parallel h-lines 
 such that any pair of these three lines lies on one side from the remaining h-line.
 \end{thm}
- 
 
+}
+ 
+\section*{Hyperbolic trigonometry}
+\addtocontents{toc}{Hyperbolic trigonometry}
+
+In this section we give formulas for h-distance using \index{hyperbolic functions}\emph{hyperbolic functions}.
+One of these formulas will be used in the proof of the hyperbolic Pythagorean theorem (\ref{thm:pyth-h-poincare}).
+
+Recall that $\cosh$, $\sinh$ and $\tanh$ denote \index{ch@$\cosh$}\index{hyperbolic cosine}\emph{hyperbolic cosine}, \index{sh@$\sinh$}\index{hyperbolic sine}\emph{hyperbolic sine} and \index{th@$\tanh$}\index{hyperbolic tangent}\emph{hyperbolic tangent};
+that is, the functions defined by
+\[\cosh x\df \tfrac{e^x+e^{-x}}2,
+ \quad
+ \sinh x\df \tfrac{e^x-e^{-x}}2,
+\]
+\[\tanh x\df \tfrac{\sinh x}{\cosh x}.
+\]
+
+The following identities on hyperbolic functions are analogous to classical trigonometric identities for sine and cosine. 
+They might help to solve the following exercise. 
+
+\begin{thm}{Double-argument identities}\label{double-argument}
+The identities
+\begin{align*}
+\cosh (2\cdot x)&=(\cosh x)^2+(\sinh x)^2 
+&&\text{and}&
+\sinh (2\cdot x)&=2\cdot\sinh x\cdot \cosh x
+\end{align*}
+hold for any real value $x$.
+\end{thm}
+\qedsf
+
+\parit{Proof.}
+\begin{align*}
+\cosh (2\cdot x)
+&=\tfrac{e^{2\cdot x}+e^{-2\cdot x}}2=
+\\
+&=\left(\tfrac{e^x-e^{-x}}2\right)^2+\left(\tfrac{e^x+e^{-x}}2\right)^2=
+\\
+&=(\sinh x)^2+(\cosh x)^2;
+\\
+\sinh (2\cdot x)
+&=\tfrac{e^{2\cdot x}-e^{-2\cdot x}}2=
+\\
+&=2\cdot\left(\tfrac{e^x-e^{-x}}2\right)\cdot\left(\tfrac{e^x+e^{-x}}2\right)=
+\\
+&=2\cdot\sinh x\cdot \cosh x.
+\end{align*}
+
+\begin{thm}{Advanced exercise}\label{ex:cosh}
+Let $P$ and $Q$ be two h-poins distinct from the center of absolute.
+Denote by $P'$ and $Q'$ the inverses of $P$ and $Q$ in the absolute.
+
+\begin{wrapfigure}[20]{o}{38mm}
+\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/PQPQ(1)}
+\lbl[t]{10,25;$P$}
+\lbl[t]{25,23;$Q$}
+\lbl[b]{3,36;$P'$}
+\lbl[b]{36,37;$Q'$}
+\end{lpic}
+\end{wrapfigure}
+
+Show that 
+\begin{enumerate}[(a)]
+\item\label{ex:cosh/2} 
+\[\cosh[\tfrac12\cdot PQ_h]=\sqrt{\frac{PQ'\cdot  P'Q}{PP'\cdot QQ'}};\]
+\item\label{ex:coshsinh} 
+\[\sinh[\tfrac12\cdot PQ_h]=\sqrt{\frac{PQ\cdot  P'Q'}{PP'\cdot QQ'}};\]
+\item\label{ex:coshtanh} 
+\[\tanh[\tfrac12\cdot PQ_h]=\sqrt{\frac{PQ\cdot  P'Q'}{PQ'\cdot P'Q}};\]
+\item\label{ex:coshcosh} 
+\[\cosh PQ_h=\frac{PQ\cdot  P'Q'+PQ'\cdot  P'Q}{PP'\cdot QQ'}.\]
+\end{enumerate}
+
+\end{thm}
 
 \addtocontents{toc}{\protect\end{quote}}

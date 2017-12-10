@@ -425,7 +425,8 @@ Let us give another interpretation of the h-distance.
 \begin{thm}{Lemma}\label{lem:conformal}
 Consider the h-plane with the unit circle centered at~$O$ as the absolute.
 Fix a point $P$ and let $Q$ be another point in the h-plane.
-Set $x=PQ$ and $y=PQ_h$, then
+Set $x=PQ$ and $y=PQ_h$.
+Then
 $$\lim_{x\to 0}\frac{y}{x}=\frac{2}{1-OP^2}.$$
 
 \end{thm}
@@ -577,8 +578,8 @@ Then
 
 \end{thm}
 
-The formula \ref{eq:thm:pyth-h-poincare} is proved by means of direct calculations.
-Let us discuss the limit cases of this formula before going into the proof.
+The formula \ref{eq:thm:pyth-h-poincare} will be proved in the next section by means of direct calculations.
+Let us discuss the limit cases of this formula.
 
 Note that $\cosh x$ can be written using the Taylor expansion
 \[\cosh x=1+\tfrac1{2}\cdot x^2+\tfrac1{24}\cdot x^4+\dots.\]
@@ -614,6 +615,7 @@ Show that
 
 \end{thm}
 
+\section*{Proof}
 
 In the proof of the hyperbolic Pythagorean theorem we use the following formula from Exercise~\ref{ex:cosh}:
 \[\cosh PQ_h=\frac{PQ\cdot  P'Q'+PQ'\cdot  P'Q}{PP'\cdot QQ'},\]
@@ -622,7 +624,7 @@ Here $P$, $Q$ are h-points distinct from the absolute and $P'$, $Q'$ are their i
 A complete proof of this formula is given in the hints.
 
 \begin{wrapfigure}{r}{32mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/pyth-h-poincare(1)}
+\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/pyth-h-poincare(1)}
 \lbl[r]{9.5,18;$A$}
 \lbl[r]{10.3,27;$A'$}
 \lbl[t]{16,9.7;$B$}
@@ -631,15 +633,15 @@ A complete proof of this formula is given in the hints.
 \end{lpic}
 \end{wrapfigure}
 
-\parit{Proof.}
+\parit{Proof of the hyperbolic Pythagorean theorem.}
 We assume that absolute is a unit circle.
 By the main observation (\ref{thm:main-observ}) we can assume that $C$ is the center of absolute.
-Denote by $A'$ and $B'$ the inversions of $A$ and $B$ in the absolute.
+Denote by $A'$ and $B'$ the inverses of $A$ and $B$ in the absolute.
 
 Set $x=BC$, $y=AC$.
 By Lemma~\ref{lem:O-h-dist}
 \begin{align*}
-a&=\ln \tfrac{1+x}{1-x} 
+a&=\ln \tfrac{1+x}{1-x},
 &
 b&=\ln \tfrac{1+y}{1-y}.
 \end{align*}
@@ -658,14 +660,14 @@ Therefore
 
 Note that 
 \begin{align*}
-B'C&=\tfrac1x
+B'C&=\tfrac1x,
 &
-A'C&=\tfrac1y
+A'C&=\tfrac1y.
 \intertext{Therefore}
 BB'&=\tfrac1x-x,
 &
 AA'&=\tfrac1y-y,
-\intertext{Since the triangles $ABC$, $A'BC$, $AB'C$, $A'B'C$ are right, by the original Pythagorean theorem (\ref{thm:pyth}) implies}
+\intertext{Since the triangles $ABC$, $A'BC$, $AB'C$, $A'B'C$ are right, the original Pythagorean theorem (\ref{thm:pyth}) implies}
 AB&=\sqrt{x^2+y^2},
 &
 AB'&=\sqrt{\tfrac1{x^2}+y^2},
@@ -691,7 +693,7 @@ According to Exercise~\ref{ex:cosh},
 &=\tfrac{1+x^2}
 {1-x^2}\cdot
 \tfrac{1+y^2}
-{1-y^2}
+{1-y^2}.
 \end{aligned}
 \eqlbl{coshc}
 \]
