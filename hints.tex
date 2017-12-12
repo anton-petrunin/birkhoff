@@ -866,7 +866,7 @@ Apply Theorem~\ref{thm:inscribed-quadrilateral} twice for $\square ABYX$ and $\s
 \parbf{Exercise~\ref{ex:inaccuracy}.}
 One needs to show that the lines $(A'B')$ and $(XP)$ are not parallel, otherwise the first line in the proof does not make sense.
 
-In addition, we use without mentioning the following three identities:
+In addition, the following identities:
 \begin{align*}
 2\cdot \measuredangle AXP&\equiv2\cdot \measuredangle AXY,
 &
@@ -923,8 +923,12 @@ Proposition~\ref{prop:arc(angle=tan)} twice.
 If $C\in (AX)$, then the arc is the line segment $[AC]$ or the union of two half-lines in $(AX)$ with vertices at $A$ and~$C$.
 
 Assume $C\notin (AX)$.
-Let $\ell$ be the line thru $A$ perpendicular to $(AX)$
+Let $\ell$ be the perpendicular line dropped from $A$ to $(AX)$
 and $m$ be the perpendicular bisector of~$[AC]$.
+
+Note that $\ell\nparallel m$;
+set $O=\ell\cap m$.
+Note that the circle with center $O$ passing thru $A$ is also passing thru $C$ and tangent to~$(AX)$.
 
 {
 
@@ -932,10 +936,6 @@ and $m$ be the perpendicular bisector of~$[AC]$.
 \begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/3x120(1)}
 \end{lpic}
 \end{wrapfigure}
-
-Note that $\ell\nparallel m$;
-set $O=\ell\cap m$.
-Note that the circle with center $O$ passing thru $A$ is also passing thru $C$ and tangent to~$(AX)$.
 
 Note that one the two arcs with endpoints $A$ and $C$ is tangent to~$[AX)$.
 
@@ -946,7 +946,7 @@ and \ref{prop:arc(angle=tan)}.
 Apply Proposition~\ref{prop:arc(angle=tan)} twice.
 
 \parbf{Exercise~\ref{ex:3x120}.} Guess the construction from the diagram.
-To show that it produce needed point, apply theorem on inscribed angle (\ref{thm:inscribed-angle}).
+To show that it produces the needed point, apply Theorem \ref{thm:inscribed-angle}.
 
 
 }
@@ -967,7 +967,7 @@ Denote by $O$ the center of $\Gamma$.
 Suppose $X,Y\in \Gamma$;
 in particular, $OX=OY$.
 
-Note that the invesion sends $X$ and $Y$ to itself.
+Note that the inversion sends $X$ and $Y$ to themselves.
 By Lemma~\ref{lem:inversion-sim},
 $$\triangle OPX\z\sim \triangle OXP'
 \quad
@@ -1008,8 +1008,7 @@ $(C'I)\perp (B'A')$.
 Guess the construction from the diagram (the two nonintersecting lines on the diagram are parallel).
 
 \parbf{Exercise~\ref{ex:inv-center not=center-inv}.}
-First show that for any $r>0$ and 
-any real numbers $x,y$ distinct from $0$,
+First show that for any $r>0$ and for any real numbers $x,y$ distinct from $0$,
 $$\frac{r^2}{(x+y)/2}
 =
 \left(\frac {r^2}x+\frac {r^2}y\right)/2$$
@@ -1062,7 +1061,7 @@ Apply the inversion in a circle with center~$A$.
 The point $A$ will go to infinity, the two circles tangent at $A$ will become parallel lines
 and the two parallel lines will become circles tangent at~$A$; see the diagram.
 
-\begin{wrapfigure}[7]{o}{48mm}
+\begin{wrapfigure}[7]{i}{48mm}
 \begin{lpic}[t(-0mm),b(-1mm),r(0mm),l(0mm)]{pics/ex-inverse(1)}
 \lbl[bl]{28,9;$B'$}
 \lbl[br]{19,9;$A$}
@@ -1718,11 +1717,7 @@ Hence the result.
 \parbf{Exercise~\ref{ex:klein-for-angle-parallelism}.}
 Let $Q$ be the foot point of $P$ on the line and $\phi$ be the angle of parallelism. 
 We can assume that $P$ is the center of the absolute.
-Then 
-\[PQ=\cos\phi.\]
-
-
-Therefore
+Therefore $PQ=\cos\phi$ and
 \[PQ_h=\tfrac12\cdot\ln\frac{1+\cos\phi}{1-\cos\phi}.\]
 
 
@@ -1742,7 +1737,7 @@ therefore
 \\
 &=\frac1{\sqrt{1-t^2}}.
 \end{aligned}
-\eqlbl{cosh(b)}
+\eqlbl{coshb}
 \]
 The same way we get that
 \[\begin{aligned}\cosh c&=\frac1{\sqrt{1-u^2}}.
@@ -1773,7 +1768,7 @@ and
 \eqlbl{cosh(a)}
 \]
 
-Finally, note that \ref{cosh(b)}, \ref{cosh(c)} and \ref{cosh(a)} imply the theorem.
+Finally, note that \ref{coshb}, \ref{cosh(c)} and \ref{cosh(a)} imply the theorem.
 
 \parbf{Exercise~\ref{ex:Boyai-in-Euclid}.}
 In the Euclidean plane, the circle $\Gamma_2$ is tangent to $k$; 
@@ -1884,7 +1879,7 @@ Therefore, $h$ is the \index{identity map}\emph{identity};
 that is, $h(z)=z$ for any~$z$.
 It follows that $g=f$.
 
-\parbf{Exercise~\ref{ex:invesion-Mob}.}
+\parbf{Exercise~\ref{ex:inversion-Mob}.}
 Let $Z'$ be the inverse of the point $Z$.
 Assume that the circle of the inversion has center $W$ and radius~$r$.
 Denote by $z$, $z'$ and $w$ the complex coordinate of the points $Z$, $Z'$ and $W$ correspondingly.
