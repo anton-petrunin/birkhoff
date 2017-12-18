@@ -131,7 +131,7 @@ In particular, $e^{i\cdot\pi}=-1$ and $e^{i\cdot\frac\pi2}=i$.
 
 {
 
-\begin{wrapfigure}[7]{o}{34mm}
+\begin{wrapfigure}[7]{r}{34mm}
 \begin{lpic}[t(-12mm),b(0mm),r(0mm),l(0mm)]{pics/expix(1)}
 \lbl[tr]{13.5,12;$0$}
 \lbl[tl]{25,12;$1$}
@@ -357,7 +357,7 @@ The following three types of fractional linear transformations are called \index
 \end{enumerate}
  
 \parbf{The geometric interpretations.}
-As before we will denote by $O$ the point with the complex coordinate~$0$.
+Let $O$ denotes the point with the complex coordinate~$0$.
 
 The first map $z\mapsto z+w,$ corresponds to the so called 
 \index{parallel translation}\emph{parallel translation} 
@@ -389,9 +389,7 @@ Fix a fractional linear transformation
 \begin{align*}
 f(z) &= \frac{a\cdot z + b}{c\cdot z + d}.
 \intertext{Assume $c\ne 0$. Then}
-f(z) &= \frac{a\cdot z + b}{c\cdot z + d}=
-\\
-&= \frac ac-\frac{a\cdot d-b\cdot c}{c\cdot(c\cdot z + d)} =
+f(z) &= \frac ac-\frac{a\cdot d-b\cdot c}{c\cdot(c\cdot z + d)} =
 \\
 &= \frac ac-\frac{a\cdot d-b\cdot c}{c^2}\cdot \frac1{z + \frac dc}.
 \end{align*}
@@ -477,7 +475,9 @@ Show that such a transformation is unique.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:inversion-Mob}
-Show that any inversion is a composition of the complex conjugation and a fractional linear transformation.  
+Show that any inversion is a composition of the complex conjugation and a fractional linear transformation.
+
+Use Theorem~\ref{thm:inversions-inversive} to conclude that any inversive transformation is either fractional linear or complex conjugate of a  fractional linear transformation.
 \end{thm}
 
 
@@ -569,7 +569,7 @@ In this case $f$ is a fractional linear transformation as well as a motion of th
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:schwarz-moebius}
-Show that any fractional linear transformation which appears in the equality case of Schwarz--Pick theorem can be written as 
+Show that if a fractional linear transformation $f$ appears in the equality case of Schwarz--Pick theorem, then it can be written as 
 \[f(z)=\frac{v\cdot z+\bar w}{w\cdot z+\bar v}.\]
 where $|w|<|v|$.
 \end{thm}
