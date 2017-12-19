@@ -51,9 +51,9 @@ the  dashed h-line is ultra parallel to~$\ell$.
 
 \begin{thm}{Proposition}\label{prop:angle-parallelism}
 Let $Q$ be the foot point of $P$ on h-line~$\ell$.
-Denote by $\phi$ the angle of parallelism of $P$ to~$\ell$.
 Then
-$$PQ_h=\tfrac12\cdot\ln \tfrac{1+\cos\phi}{1-\cos\phi}.$$
+$$PQ_h=\tfrac12\cdot\ln \tfrac{1+\cos\phi}{1-\cos\phi},$$
+where $\phi$ is the angle of parallelism of $P$ to~$\ell$.
 
 \end{thm}
 
@@ -112,7 +112,7 @@ Then the h-distance from $B$ to $(AC)_h$ is less than
 \end{thm}
 
 \parit{Proof.}
-Denote by $\phi$ the angle of parallelism of $B$ to~$(AC)_h$.
+Let $\phi$ denotes the angle of parallelism of $B$ to~$(AC)_h$.
 Note that $\phi>\tfrac\beta2$; therefore 
 \[
 \tfrac12\cdot\ln \frac{1+\cos\phi}{1-\cos\phi}
@@ -234,7 +234,8 @@ If you turn the wheel further a bit, you start to run along a path which stays a
 \parbf{Equidistants of h-lines.}
 Consider the h-plane with the absolute~$\Omega$.
 Assume a circle $\Gamma$ intersects $\Omega$ in two distinct points, $A$ and~$B$. 
-Denote by $g$ the intersection of $\Gamma$ with the h-plane.
+Let $g$ denotes the intersection of $\Gamma$ with the h-plane.
+
 Let us draw an  h-line $m$ with the ideal points $A$ and~$B$.
 According to Exercise~\ref{ex:ideal-line-unique}, $m$ is uniquely defined.
 
@@ -373,9 +374,8 @@ Choose an h-half-line $[B''X)$ so that
 \[\measuredangle_h A'B''X=\measuredangle_h A'B'C'.\]
 According to Exercise~\ref{ex:parallel-abs}, $(B''X)_h\parallel(B'C')_h$.
 
-By Pasch's theorem (\ref{thm:pasch}),
-$(B''X)_h$ intersects~$[A'C']_h$.
-Denote by $C''$ the point of intersection.
+By Pasch's theorem (\ref{thm:pasch}), $(B''X)_h$ intersects~$[A'C']_h$.
+Let $C''$ denotes the point of intersection.
 
 According to ASA, $\triangle_h ABC\cong\triangle_h A'B''C''$;
 in particular, 
@@ -455,7 +455,7 @@ $$\frac{y}{x}=\frac{\ln \tfrac{1+x}{1-x}}{x}\to 2\eqlbl{eq:O=P}$$
 as $x\to0$.
 
 If $P\ne O$, let $P'$ denotes the inverse of $P$ in the absolute.
-Denote by $\Gamma$ the circle with the center $P'$ 
+Let $\Gamma$ denotes the circle with the center $P'$ 
 perpendicular to the absolute.
 
 According to the main observation (\ref{thm:main-observ}) and Lemma~\ref{lem:P-->O}, 
@@ -528,7 +528,7 @@ By Lemma~\ref{lem:O-h-dist},
 the h-circle with the h-radius $r$ is the Euclidean circle with the center $O$ and the radius 
 $$a=\frac{e^r-1}{e^r+1}.$$
 
-Denote by $x_n$ and $y_n$ the side lengths of the regular $n$-gons inscribed in the circle in the Euclidean and hyperbolic plane correspondingly.
+Let $x_n$ and $y_n$ denote the side lengths of the regular $n$-gons inscribed in the circle in the Euclidean and hyperbolic plane correspondingly.
 
 Note that $x_n\to0$ as $n\to\infty$.
 By Lemma~\ref{lem:conformal},
@@ -554,7 +554,7 @@ we get that the circumference of the h-circle can be found the following way:
 \qedsf
 
 \begin{thm}{Exercise}\label{ex:circum}
-Denote by $\circum_h(r)$ the circumference of the h-circle of the radius~$r$.
+Let $\circum_h(r)$ denotes the circumference of the h-circle of the h-radius~$r$.
 Show that 
 $$\circum_h(r+1)>2\cdot \circum_h(r)$$
 for all $r>0$.
@@ -618,10 +618,7 @@ Show that
 In the proof of the hyperbolic Pythagorean theorem we use the following formula from Exercise~\ref{ex:cosh}:
 \[\cosh PQ_h=\frac{PQ\cdot  P'Q'+PQ'\cdot  P'Q}{PP'\cdot QQ'},\]
 
-Here $P$, $Q$ are h-points distinct from the absolute and $P'$, $Q'$ are their inversions in the absolute.
-A complete proof of this formula is given in the hints.
-
-\begin{wrapfigure}{r}{32mm}
+\begin{wrapfigure}[7]{r}{32mm}
 \begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/pyth-h-poincare(1)}
 \lbl[r]{9.5,18;$A$}
 \lbl[r]{10.3,27;$A'$}
@@ -631,10 +628,13 @@ A complete proof of this formula is given in the hints.
 \end{lpic}
 \end{wrapfigure}
 
+Here $P$, $Q$ are h-points distinct from the absolute and $P'$, $Q'$ are their inversions in the absolute.
+A complete proof of this formula is given in the hints.
+
 \parit{Proof of the hyperbolic Pythagorean theorem.}
 We assume that absolute is a unit circle.
 By the main observation (\ref{thm:main-observ}) we can assume that $C$ is the center of absolute.
-Denote by $A'$ and $B'$ the inverses of $A$ and $B$ in the absolute.
+Let $A'$ and $B'$ denote the inverses of $A$ and $B$ in the absolute.
 
 Set $x=BC$, $y=AC$.
 By Lemma~\ref{lem:O-h-dist}
