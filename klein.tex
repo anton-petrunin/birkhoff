@@ -25,6 +25,8 @@ so the circle $\Omega$ is described by the equation $x^2+y^2=1$.
 \lbl[br]{23,4;$S$}
 \lbl[lb]{37.5,39;$P'$}
 \lbl[t]{36.5,21;$\hat P$}
+\lbl[br]{8,37;$\Sigma$}
+\lbl[t]{10,22;$\Pi$}
 \end{lpic}
 \caption*{The plane thru $P$, $O$ and $S$.}
 \end{wrapfigure}
@@ -43,7 +45,7 @@ that is, to the set of points $(x,y,z)$ in $\Sigma$ described by the inequality 
 
 For a point $P'\in \Sigma$ consider its foot point $\hat P$
 on $\Pi$;
-this is the closest point on $\Pi$ from~$P'$.
+this is the closest point to~$P'$.
 
 The composition $P\z\leftrightarrow P'\z\leftrightarrow\hat P$ of these two maps
 is a bijection of the h-plane to itself.
@@ -78,8 +80,8 @@ Consider the stereographic projection $\Pi\to \Sigma$ from the south pole $S$.
 Let $P'$ and $Q'$ denotes the images of $P$ and~$Q$.
 
 
-\begin{wrapfigure}[10]{o}{35mm}
-\begin{lpic}[t(-3mm),b(-4mm),r(0mm),l(2mm)]{pics/lambda-plane(1)}
+\begin{wrapfigure}[11]{o}{35mm}
+\begin{lpic}[t(-0mm),b(-4mm),r(0mm),l(2mm)]{pics/lambda-plane(1)}
 \lbl[rt]{0,15;$A$}
 \lbl[lt]{32,15;$B$}
 \lbl[t]{8,14;$\hat P$}
@@ -94,11 +96,10 @@ $$\frac{AQ\cdot BP}{QB\cdot PA}=\frac{AQ'\cdot BP'}{Q'B\cdot P'A}.\eqlbl{eq:(AB;
 By Theorem~\ref{thm:inverion-3d}\textit{\ref{thm:inverion-3d:angle}}, 
 each circline in $\Pi$ which is perpendicular to $\Omega$ 
 is mapped to a circle in $\Sigma$ which is still perpendicular to~$\Omega$.
-It follows that the stereographic projection sends $(PQ)_h$ to the intersection of the north hemisphere of $\Sigma$ with a plane, say $\Lambda$, perpendicular to~$\Pi$.
+It follows that the stereographic projection sends $(PQ)_h$ to the intersection of the north hemisphere of $\Sigma$ with a plane perpendicular to~$\Pi$.
 
-
-Consider the plane~$\Lambda$.
-It contains points $A$, $B$, $P'$, $\hat P$  and the circle $\Gamma=\Sigma\cap\Lambda$.
+Let $\Lambda$ denotes the plane;
+it contains the points $A$, $B$, $P'$, $\hat P$  and the circle $\Gamma=\Sigma\cap\Lambda$.
 (It also contains $Q'$ and $\hat Q$ but we will not use these points for a while.)
 
 
@@ -138,6 +139,8 @@ PQ_h&\df\ln\frac{A Q\cdot B P}{QB\cdot PA}=
 \end{align*}
 \qedsf
 
+{
+
 \begin{wrapfigure}[10]{o}{51mm}
 \begin{lpic}[t(-5mm),b(-0mm),r(0mm),l(0mm)]{pics/ex-hex(1)}
 \lbl[t]{26,8;$A_1$}
@@ -161,7 +164,7 @@ the common chords of $\Omega$ and $\Gamma_1$, $\Gamma_2$, $\Gamma_3$ correspondi
 Show that the chords $[A_1B_1]$, $[A_2B_2]$ and $[A_3B_3]$ intersect at one point inside $\Omega$ if and only if $\Gamma_1$, $\Gamma_2$ and $\Gamma_3$ intersect at two points.
 \end{thm}
 
-
+}
 
 
 \section*{Projective model}
@@ -185,7 +188,7 @@ other things become more complicated.
 
 \parbf{Lines.}
 The h-lines in the projective model are chords of the absolute;
-more precisely, chords with the endpoints removed.
+more precisely, chords without its endpoints.
 
 \parbf{Circles and equidistants.}
 The h-circles and equidistants in the projective model are certain type of ellipses and their open arcs.
@@ -193,14 +196,27 @@ The h-circles and equidistants in the projective model are certain type of ellip
 It follows since the stereographic projection sends circles on the plane to circles on the unit sphere and the foot point projection of circle back to the plane is an ellipse.
 (One may define ellipse as a foot point projection of a circle.)
 
-\parbf{Distance.}
-To find the h-distance between the points $P$ and $Q$ in the projective model,
- you have to find the points of intersection, say $A$ and $B$, 
- of the Euclidean line $(PQ)$ with the absolute;
-then, by Lemma~\ref{lem:P-hat-chord},
-$$PQ_h=\tfrac12\cdot\ln\frac{AQ\cdot BP}{QB\cdot PA},$$
-assuming the points $A, P, Q, R$ appear on the line in the same order.
+{
 
+\begin{wrapfigure}{r}{43mm}
+\begin{lpic}[t(-0mm),b(-2mm),r(1mm),l(0mm)]{pics/h-klein-perp(1)}
+\lbl[rb]{5,32;$A$}
+\lbl[lb]{36,32;$B$}
+\lbl[lt]{13,29;$P$}
+\lbl[rt]{28,29;$Q$}
+\end{lpic}
+\end{wrapfigure}
+
+\parbf{Distance.}
+Consider a pair of h-points $P$ and $Q$.
+Let $A$ and $B$ be the ideal point of the h-line in projective model;
+that is, $A$ and $B$ are the intersections of the Euclidean line $(PQ)$ with the absolute.
+
+Then by Lemma~\ref{lem:P-hat-chord},
+$$PQ_h=\tfrac12\cdot\ln\frac{AQ\cdot BP}{QB\cdot PA},$$
+assuming the points $A, P, Q, B$ appear on the line in the same order.
+
+}
 
 \parbf{Angles.}
 The angle measures in the projective model are very different from the Euclidean angles and it is hard to figure out by looking on the picture.\label{klein-angles}
@@ -215,15 +231,6 @@ and
 $\measuredangle OAB\z=\pm\tfrac\pi2$, then 
 $$\measuredangle_h OAB=\measuredangle OAB=\pm\tfrac\pi2.$$
 \end{itemize}
-
-\begin{wrapfigure}[11]{o}{43mm}
-\begin{lpic}[t(-5mm),b(-0mm),r(1mm),l(0mm)]{pics/h-klein-perp(1)}
-\lbl[rb]{5,32;$A$}
-\lbl[lb]{36,32;$B$}
-\lbl[lt]{13,29;$P$}
-\lbl[rt]{28,29;$Q$}
-\end{lpic}
-\end{wrapfigure}
 
 To find the angle measure in the projective model,
 you may apply a motion of the h-plane which moves 
@@ -312,10 +319,11 @@ Finish the proof of hyperbolic Pythagorean theorem (\ref{thm:pyth-h-poincare}) i
 \section*{Bolyai's construction}
 \addtocontents{toc}{Bolyai's construction.}
 
-Assume we need to construct a line thru $P$ asymptotically parallel to the given line $\ell=(AB)$ in the h-plane.
+Assume we need to construct a line thru $P$ asymptotically parallel to the given line $\ell$ in the h-plane.
 
-Note that ideal points do not lie in the h-plane,
-so there is no way to use them in the construction.
+If $A$ and $B$ are ideal points of $\ell$ in the projective model, 
+then we could simply draw the Euclidean line $(PA)$.
+However the ideal points do not lie in the h-plane, therefore there is no way to use them in the construction.
 
 In the following construction we assume that you know a compass-and-ruler construction of the perpendicular line; see Exercise~\ref{ex:construction-perpendicular}.
 
@@ -364,6 +372,8 @@ Let $A$ be the common ideal point of $(QR)_h$ and $(PT)_h$.
 Let $B$ and $C$ denote the remaining ideal points of $(QR)_h$ and $(PT)_h$
 correspondingly.
 
+Note that the Euclidean lines $(PQ)$, $(TR)$ and $(CB)$ are parallel.
+
 \begin{wrapfigure}{o}{44mm}
 \begin{lpic}[t(-3mm),b(6mm),r(0mm),l(0mm)]{pics/boyai-constr(1)}
 \lbl[bl]{21.5,21.5;$P$}
@@ -380,8 +390,6 @@ correspondingly.
 \lbl[b]{9,33,90;$k$}
 \end{lpic}
 \end{wrapfigure}
-
-Note that the Euclidean lines $(PQ)$, $(TR)$ and $(CB)$ are parallel.
 
 Therefore, 
 \[\triangle AQP\sim \triangle ART \sim\triangle ABC.\]

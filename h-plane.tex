@@ -21,8 +21,8 @@ Further, $\phi(s)\to \pi/2$ as  $s\to 0$,
 and $\phi(s)\to0$ as $s\to\infty$.
 (In the Euclidean geometry, the angle of parallelism is identically equal to~$\pi/2$.)
 
-\begin{wrapfigure}[11]{o}{44mm}
-\begin{lpic}[t(-5mm),b(-0mm),r(0mm),l(0mm)]{pics/ultra-parallel(1)}
+\begin{wrapfigure}[12]{o}{44mm}
+\begin{lpic}[t(-0mm),b(-0mm),r(0mm),l(0mm)]{pics/ultra-parallel(1)}
 \lbl[bl]{13.6,25.5;$P$}
 \lbl[lb]{26,25;$Q$}
 \lbl[br]{20,34;$Z$}
@@ -135,21 +135,6 @@ The inradius of any h-triangle
 is less than $\tfrac12\cdot\ln3$.
 \end{thm}
 
-%???+PIC
-
-
-\begin{wrapfigure}{o}{34mm}
-\begin{lpic}[t(-4mm),b(0mm),r(-1mm),l(0mm)]{pics/h-inradius(1)}
-\lbl[t]{1.5,4;$X$}
-\lbl[t]{30.5,1;$Y$}
-\lbl[b]{15,28;$Z$}
-\lbl[lb]{16,13;$I$}
-%\lbl[bl]{21.5,15;$X'$}
-%\lbl[br]{9,16;$Y'$}
-%\lbl[t]{14,4.5;$Z'$}
-\end{lpic}
-\end{wrapfigure}
-
 \parit{Proof.}
 Let $I$ and $r$ be the h-incenter and h-inradius of $\triangle_hXYZ$.
 
@@ -169,6 +154,20 @@ We can assume that
 $\measuredangle_hXIY\ge\tfrac23\cdot\pi$;
 if not relabel $X$, $Y$ and $Z$. 
 
+{
+
+\begin{wrapfigure}{o}{34mm}
+\begin{lpic}[t(-2mm),b(0mm),r(-1mm),l(0mm)]{pics/h-inradius(1)}
+\lbl[t]{1.5,4;$X$}
+\lbl[t]{30.5,1;$Y$}
+\lbl[b]{15,28;$Z$}
+\lbl[lb]{16,13;$I$}
+%\lbl[bl]{21.5,15;$X'$}
+%\lbl[br]{9,16;$Y'$}
+%\lbl[t]{14,4.5;$Z'$}
+\end{lpic}
+\end{wrapfigure}
+
 Since $r$ is the h-distance from $I$ to $(XY)_h$,
 Corollary \ref{cor:angle-parallelism} implies that
 \begin{align*}r&<\tfrac12\cdot\ln \tfrac{1+\cos\frac\pi3}{1-\cos\frac\pi3}=
@@ -178,6 +177,8 @@ Corollary \ref{cor:angle-parallelism} implies that
 &=\tfrac12\cdot\ln 3.
 \end{align*}
 \qedsf
+
+}
 
 \begin{thm}{Exercise}\label{ex:side-sup}
 Let $\square_h ABCD$ be a quadrilateral in the h-plane 
@@ -219,7 +220,7 @@ If you turn it less, at a certain position of the wheel,  you will never come ba
 If you turn the wheel further a bit, you start to run along a path which stays at some fixed distance from an h-line.
 
 \begin{wrapfigure}{o}{46mm}
-\begin{lpic}[t(-3mm),b(-3mm),r(0mm),l(0mm)]{pics/equidistant(1)}
+\begin{lpic}[t(-4mm),b(-3mm),r(0mm),l(0mm)]{pics/equidistant(1)}
 \lbl[b]{14,23,60;$m$}
 \lbl[lt]{25,17;$g$}
 \lbl[b]{15,40;$A$}
@@ -344,9 +345,9 @@ The following theorem states, in particular, that nondegenerate hyperbolic trian
 In particular, in hyperbolic geometry, similar triangles have to be congruent.
 
 \begin{thm}{AAA congruence condition}\label{thm:AAA}
-Two nondegenerate triangles
- $\triangle_hABC$ and $\triangle_hA'B'C'$
-in the h-plane are congruent if
+Two nondegenerate h-triangles
+ $ABC$ and $A'B'C'$
+ are congruent if
 $\measuredangle_hABC\z=\pm\measuredangle_hA'B'C'$,
 $\measuredangle_hBCA\z=\pm\measuredangle_hB'C'A'$
 and  
@@ -560,6 +561,8 @@ $$\circum_h(r+1)>2\cdot \circum_h(r)$$
 for all $r>0$.
 \end{thm}
 
+%(???
+
 \section*{Hyperbolic Pythagorean theorem}
 \addtocontents{toc}{Hyperbolic Pythagorean theorem.}
 
@@ -569,7 +572,12 @@ $$\cosh x\df \tfrac{e^x+e^{-x}}2.$$
 
 \begin{thm}{Hyperbolic Pythagorean theorem}\label{thm:pyth-h-poincare}
 Assume that $ACB$ is an h-triangle with right angle at~$C$.
-Set $a=BC_h$, $b=CA_h$ and $c=AB_h$.
+Set 
+\[a=BC_h,
+\quad 
+b=CA_h
+\quad\text{and}\quad
+c=AB_h.\]
 Then
 \[\cosh c=\cosh a\cdot\cosh b.
 \eqlbl{eq:thm:pyth-h-poincare}\]
@@ -697,5 +705,7 @@ According to Exercise~\ref{ex:cosh},
 \]
 Finally note that \ref{cosha+coshb} and \ref{coshc} imply \ref{eq:thm:pyth-h-poincare}.
 \qeds
+
+%)???
 
 \addtocontents{toc}{\protect\end{quote}}

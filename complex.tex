@@ -74,7 +74,7 @@ The real line will be denoted as $\mathbb{R}$.
 
 \medskip
 
-The complex number $\bar z=x-iy$ is called the \index{complex conjugate}\emph{complex conjugate} of~$z$.
+The complex number $\bar z\df x-i\cdot y$ is called the \index{complex conjugate}\emph{complex conjugate} of~$z$.
 
 Let $Z$ and $\bar Z$ be the points in the plane with the complex coordinates $z$ and $\bar z$ correspondingly.
 Note that the point $\bar Z$ is the reflection of $Z$ in the real line.
@@ -108,9 +108,9 @@ all the arithmetic operations.
 
 The value 
 \begin{align*}
-|z|&=\sqrt{x^2+y^2}=
-\\
-&=\sqrt{z\cdot\bar z}
+|z|&\df\sqrt{x^2+y^2}=\sqrt{(x+i\cdot y)\cdot(x-i\cdot y)}
+=
+\sqrt{z\cdot\bar z}
 \end{align*}
 is called the
 \index{absolute value}\emph{absolute value} of $z$.
@@ -119,6 +119,11 @@ If $|z|=1$, then $z$ is called a \index{unit complex number}\emph{unit complex n
 Note that 
 if $Z$ and $W$ are points in the Euclidean plane, $z$ and $w$ are their complex coordinates, then
 $$ZW=|z-w|.$$
+
+\begin{thm}{Exercise}\label{ex:|zw|}
+Show that $|v\cdot w|=|v|\cdot |w|$ for any $v,w\in\mathbb{C}$.
+\end{thm}
+
 
 \section*{Euler's formula}
 \addtocontents{toc}{Euler's formula.}
@@ -204,7 +209,7 @@ The pair $(\rho,\theta)$ is called the \index{polar coordinates}\emph{polar coor
 \end{wrapfigure}
 
 If $z$ is the complex coordinate of $Z$, then $\rho=|z|$. 
-The value $\theta$ is called the argument of $z$
+The value $\theta$ is called the \index{argument}\emph{argument} of $z$
 (briefly, $\theta=\arg z$).
 In this case, 
 $$z=\rho\cdot e^{i\cdot\theta}=\rho\cdot(\cos\theta+i\cdot\sin\theta).$$
@@ -318,7 +323,7 @@ are inscribed.
 
 \begin{thm}{Exercise}\label{ex:movie}
 Watch video ``M\"obius transformations tevealed'' by Douglas Arnold and Jonathan Rogness.
-(It is 3 minutes long and available on \href{http://youtu.be/0z1fIsUNhO4}{YouTube}.)
+(It is available on \href{http://youtu.be/JX3VmDgiFnY}{YouTube}.)
 \end{thm}
 
 
@@ -410,11 +415,7 @@ If $c=0$, then
 \[f(z) = \frac{a\cdot z + b}{ d}.\]
 In this case
 \[f(z)=f_2\circ f_1 (z),\]
-where
-\begin{itemize}
-\item $f_1(z)= \tfrac ad\cdot z$,
-\item $f_2(z)= z+\tfrac bd$.
-\end{itemize}
+where $f_1(z)= \tfrac ad\cdot z$ and $f_2(z)= z+\tfrac bd$.
 
 \parit{``If'' part.}
 We need to show that by composing elementary transformations,
@@ -477,7 +478,7 @@ Show that such a transformation is unique.
 \begin{thm}{Exercise}\label{ex:inversion-Mob}
 Show that any inversion is a composition of the complex conjugation and a fractional linear transformation.
 
-Use Theorem~\ref{thm:inversions-inversive} to conclude that any inversive transformation is either fractional linear or complex conjugate of a  fractional linear transformation.
+Use Theorem~\ref{thm:inversions-inversive} to conclude that any inversive transformation is either fractional linear transformation or a complex conjugate to a fractional linear transformation.
 \end{thm}
 
 

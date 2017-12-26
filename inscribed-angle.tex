@@ -62,17 +62,9 @@ $$2\cdot\measuredangle QXY
 $$
 \qedsf
 
-\pagebreak
 \section*{Inscribed angle}\label{sec:inscribed}
 \addtocontents{toc}{Inscribed angle.}
-\begin{wrapfigure}[11]{o}{45mm}
-\begin{lpic}[t(-8mm),b(0mm),r(0mm),l(0mm)]{pics/inscribed-angle-5(1)}
-\lbl[rb]{12,42;$P$}
-\lbl[l]{43,23;$X$}
-\lbl[rt]{11,5;$Y$}
-\lbl[rb]{21,24;$O$}
-\end{lpic}
-\end{wrapfigure}
+
 
 We say that a triangle is \index{inscribed triangle}\emph{inscribed} in the circle $\Gamma$ if all its vertices lie on~$\Gamma$.
 
@@ -88,87 +80,89 @@ $$\measuredangle XPY\equiv\tfrac12\cdot\measuredangle X O Y
 \quad
 \text{or}
 \quad
-\measuredangle XPY\equiv\tfrac12\cdot\measuredangle X O Y+\pi.$$
+\measuredangle XPY\equiv\pi+\tfrac12\cdot\measuredangle X O Y.$$
 
 \end{thm}
 
+\begin{wrapfigure}{o}{22mm}
+\begin{lpic}[t(-8mm),b(0mm),r(0mm),l(0mm)]{pics/inscribed-angle-5(1)}
+\lbl[rb]{5,19;$P$}
+\lbl[lt]{14,22;$Q$}
+\lbl[l]{20,11;$X$}
+\lbl[rt]{5,1;$Y$}
+\lbl[rb]{9.5,11;$O$}
+\end{lpic}
+\end{wrapfigure}
+
 
 \parit{Proof; the ``only if'' part.}
-Choose a point $Q$ such that $(PQ)\perp(OP)$.
-By Lemma~\ref{lem:tangent}, $(PQ)$ is tangent to~$\Gamma$.
-
-According to Theorem~\ref{thm:tangent-angle},
+Let $(PQ)$ be the tangent line to $\Gamma$ at~$P$.
+By Theorem~\ref{thm:tangent-angle},
 \begin{align*}
 2\cdot\measuredangle QPX&\equiv\measuredangle POX,
-\\
+&
 2\cdot\measuredangle QPY&\equiv\measuredangle POY.
 \end{align*}
 Subtracting one identity from the other, we get \ref{eq:inscribed-angle}.
 
-\begin{wrapfigure}[11]{o}{40mm}
-\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/inscribed-angle-new(1)}
-\lbl[l]{39,20;$X$}
-\lbl[rt]{15,1;$Y$}
-\lbl[bl]{17,25;$O$}
-\lbl[r]{21,16;$O'$}
-\lbl[r]{8.5,27;$P$}
-\lbl[w]{22,33;$\Gamma'$}
-\lbl[w]{34,36;$\Gamma$}
-\end{lpic}
-\end{wrapfigure}
-
+%%%%%%%%%%%%%%%%%%%%%%
 \parit{``If'' part.}
 Assume that \ref{eq:inscribed-angle} holds for some $P\notin \Gamma$.
 Note that $\measuredangle X O Y\ne 0$. 
 Therefore, $\measuredangle X P Y\ne 0$ nor $\pi$;
 that is, $\triangle PXY$ is nondegenerate.
 
-Let $\Gamma'$ be the circumcircle of $\triangle PXY$
-and $O'$ be its circumcenter;
-they exist by Exercise~\ref{ex:unique-cline}.
+The line $(PX)$ might be tangent to $\Gamma$ at the point $X$ or intersect $\Gamma$ at another point;
+it the latter case, let $P'$ denotes this point of intersection. 
 
+\begin{center}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/inscribed-angle-two-cases(1)}
+\lbl[tr]{7.5,14.5;$X$}
+\lbl[t]{22.5,7.5;$Y$}
+\lbl[bl]{19,20;$O$}
+\lbl[r]{4,25;$P$}
+%%%%%
+\lbl[tr]{43,14;$X$}
+\lbl[tl]{60,9;$Y$}
+\lbl[tr]{53.5,17.5;$O$}
+\lbl[rb]{57,25;$P$}
+\lbl[bl]{62,28;$P'$}
+\end{lpic}
+\end{center}
 
-Note that $O'\ne O$.
-From above, we have 
-$$\measuredangle X O Y\equiv 2\cdot\measuredangle X P Y\equiv \measuredangle X O' Y.$$
-
-Note that $OX=OY$ and $O'X=O'Y$.
-By Theorem~\ref{thm:perp-bisect},
-$(OO')$ is the perpendicular bisector to $[XY]$;
-equivalently $X$ is the reflection of $Y$ in $(OO')$.
-Applying Proposition~\ref{prop:reflection}, we get that
+In the first case, by Theorem~\ref{thm:tangent-angle}, we have
 \begin{align*}
-\measuredangle X O O'&\equiv -\measuredangle Y O O',
-&
-\measuredangle X O' O&\equiv -\measuredangle Y O' O.
+2\cdot \measuredangle PXY&\equiv \measuredangle XOY\equiv 
+ 2\cdot\measuredangle  XPY.
 \end{align*}
+Applying the transversal property (\ref{thm:parallel-2}), we get that
+$(XY)\parallel (PY)$, which is impossible since $\triangle PXY$ is nondegenerate.
 
-Therefore, 
+In the second case, 
+applying the ``if'' part and that  $P$, $X$ and $P'$ lie on one line (see Exercise~\ref{ex:ABCO-line}) we get that 
 \begin{align*}
-2\cdot \measuredangle X O O'
-&\equiv\measuredangle X O O'+\measuredangle O' O Y
-\equiv
-\\
-&\equiv \measuredangle X O Y\equiv \measuredangle X O' Y\equiv
-\\
-&\equiv\measuredangle X O' O+\measuredangle O O' Y
-\\
-&\equiv 2\cdot \measuredangle X O' O.
+2\cdot \measuredangle XPP'&\equiv
+2\cdot \measuredangle XPY\equiv 
+ \measuredangle  XOY\equiv
+ 2\cdot\measuredangle  XP'Y\equiv
+ 2\cdot\measuredangle  XP'P.
 \end{align*}
-By the transversal property \ref{thm:parallel-2},
-$(X O)\parallel (XO')$ --- a contradiction.
+Again, by transversal property,
+$(PY)\parallel (P'Y)$, which is impossible since $\triangle PXY$ is nondegenerate.
 \qeds
+
+%%%%%%%%%%%%%%%%%%%%%%
 
 {
 
 \begin{wrapfigure}{r}{44mm}
-\begin{lpic}[t(-2mm),b(0mm),r(0mm),l(2mm)]{pics/inscribed-angle-3(1)}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(2mm)]{pics/inscribed-angle-3(1)}
 \lbl[r]{1,22;$Y'$}
 \lbl[tl]{39,9;$Y$}
 \lbl[rt]{13.5,16.5;$P$}
 \lbl[t]{21,0;$X$}
-\lbl[r]{7,36;$X'$}
-\lbl[lb]{22.5,22.5;$O$}
+\lbl[r]{6.5,36;$X'$}
+\lbl[lb]{23,23;$O$}
 \end{lpic}
 \end{wrapfigure}
 
@@ -197,8 +191,8 @@ $$XY'\cdot ZX'\cdot YZ'=X'Y\cdot Z'X\cdot Y'Z.$$
 \end{thm}
 }
 {
-\begin{wrapfigure}{o}{32mm}
-\begin{lpic}[t(-2mm),b(0mm),r(0mm),l(0mm)]{pics/altitudes-circumcircle(1)}
+\begin{wrapfigure}{r}{32mm}
+\begin{lpic}[t(-10mm),b(-4mm),r(0mm),l(0mm)]{pics/altitudes-circumcircle(1)}
 \lbl[b]{14,30.5;$C$}
 \lbl[br]{1.5,9;$A$}
 \lbl[b]{27,26.5;$A'$}
@@ -280,12 +274,12 @@ $$\measuredangle ABC+\measuredangle CDA
 
 \end{thm}
 
-\begin{wrapfigure}[13]{o}{47mm}
-\begin{lpic}[t(-3mm),b(6mm),r(0mm),l(0mm)]{pics/inscribed-angle-4(1)}
-\lbl[r]{1,21;$A$}
-\lbl[rb]{5,35;$B$}
-\lbl[lb]{40,32;$C$}
-\lbl[tl]{30,1;$D$}
+\begin{wrapfigure}{o}{21mm}
+\begin{lpic}[t(-5mm),b(0mm),r(0mm),l(0mm)]{pics/inscribed-angle-4(1)}
+\lbl[r]{0.5,9;$A$}
+\lbl[b]{7,19;$B$}
+\lbl[l]{20.5,9;$C$}
+\lbl[t]{11,0;$D$}
 \end{lpic}
 \end{wrapfigure}
 
@@ -318,17 +312,22 @@ Adding \ref{eq:2<ABC=<AOB} and \ref{eq:2<CDE=<BOA},
 we get the result.
 \qeds
 
+\begin{thm}{Exercise}\label{ex:two-chords}
+Let $[XY]$ and $[X'Y']$
+ be two parallel chords of a circle.
+Show that $XX'=YY'$.
+\end{thm}
+
 {
-\begin{wrapfigure}{o}{43mm}
-\begin{lpic}[t(-0mm),b(-0mm),r(0mm),l(-1mm)]{pics/AB2XY(.9)}
-\lbl[t]{20,4;$A$}
-\lbl[rb]{12,24;$B$}
-\lbl[l]{4.5,11;$Y$}
-\lbl[b]{13.3,4.5;$X$}
-\lbl[r]{43,21;$X'$}
-\lbl[t]{24.5,35;$Y'$}
-\lbl[blw]{20,17.5;$\Gamma$}
-\lbl[blw]{40,33;$\Gamma'$}
+
+\begin{wrapfigure}{r}{33mm}
+\begin{lpic}[t(-8mm),b(-0mm),r(0mm),l(0mm)]{pics/AB2XY(1)}
+\lbl[t]{13,2;$A$}
+\lbl[rb]{8,16;$B$}
+\lbl[r]{1,7;$Y$}
+\lbl[t]{7,0;$X$}
+\lbl[tl]{30,8;$X'$}
+\lbl[b]{14.5,24;$Y'$}
 \end{lpic}
 \end{wrapfigure}
 
@@ -341,13 +340,10 @@ such that $A$ lies between $X$ and $X'$ and $B$ lies between $Y$ and~$Y'$.
 Show that $(XY)\parallel (X'Y')$.
 \end{thm}
 
-\begin{thm}{Exercise}\label{ex:two-chords}
-Let $[XY]$ and $[X'Y']$
- be two parallel chords of a circle.
-Show that $XX'=YY'$.
-\end{thm}
-
 }
+
+
+
 
 \section*{Method of additional circle}
 \addtocontents{toc}{Method of additional circle.}
@@ -359,7 +355,7 @@ Show that $(XP)\perp(A'B')$.
 \end{thm}
 
 \begin{wrapfigure}{o}{39mm}
-\begin{lpic}[t(-2mm),b(4mm),r(0mm),l(0mm)]{pics/add-a-circle(1)}
+\begin{lpic}[t(-2mm),b(6mm),r(0mm),l(0mm)]{pics/add-a-circle(1)}
 \lbl[t]{30,9;$A$}
 \lbl[r]{4,23;$B$}
 \lbl[l]{25,43;$A'$}
@@ -404,20 +400,19 @@ so is $\angle XYA'$.
 That is $(XP)\perp(A'B')$.
 \qeds
 
+\begin{thm}{Exercise}\label{ex:inaccuracy}
+Find an inaccuracy in the solution of the problem \ref{prob:add-circ} and try to fix it.
+\end{thm}
+
 The method used in the solution 
 is called \emph{method of additional circle},
 since the circumcircles of the $\square XAPB$ and $\square XAPB$ 
- above can be considered as \emph{additional constructions}.
- 
-\begin{thm}{Exercise}\label{ex:inaccuracy}
-Find an inaccuracy in the solution of the problem \ref{prob:add-circ} and try to fix it.
-\end{thm} 
- 
-Here is another problem of that type.
+ above can be considered as \emph{additional constructions}. 
 
 {
+
 \begin{wrapfigure}{r}{26mm}
-\begin{lpic}[t(-7mm),b(0mm),r(0mm),l(0mm)]{pics/equileteral(1)}
+\begin{lpic}[t(-6mm),b(0mm),r(0mm),l(0mm)]{pics/equileteral(1)}
 \lbl[tr]{19,0;$L$}
 \lbl[rb]{16,18;$M$}
 \lbl[r]{3,7.5;$N$}
@@ -451,7 +446,7 @@ let $\Gamma$ be a circle and $A$, $B$, $C$ be distinct points on~$\Gamma$.
 The subset  which includes the points $A$, $C$
 as well as all the points on $\Gamma$ which lie with $B$ on the same side from $(AC)$ is called \index{circle arc}\emph{circle arc}~$ABC$.
 
-\begin{wrapfigure}{o}{40mm}
+\begin{wrapfigure}[8]{o}{40mm}
 \begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/tangent-half-line(1)}
 \lbl[lb]{16,25;$A$}
 \lbl[l]{24,13;$B$}
@@ -465,7 +460,7 @@ as well as all the points on $\Gamma$ which lie with $B$ on the same side from $
 For the circle arc $ABC$, 
 the points $A$ and $C$ are called 
 \index{endpoint of arc}\emph{endpoints}. 
-Note that there are two circle arcs of $\Gamma$ with the given endpoints.
+There are two circle arcs of $\Gamma$ with the given endpoints.
 
 A half-line $[AX)$ is called 
 \index{tangent!half-line}\emph{tangent} 
@@ -480,14 +475,13 @@ In this case the half-line $[AC)$ is tangent to the arc $ABC$ at~$A$.
 \item If $B\in(AC)\backslash [AC]$, then we define the arc $ABC$ as the line $(AC)$ without all the points between $A$ and~$C$.
 If we choose points $X$ and $Y\in (AC)$ such that the points $X$, $A$, $C$ and $Y$ appear in the same order on the line, 
 then the arc $ABC$ is the union of two half-lines in $[AX)$ and~$[CY)$.
-The half-line $[AX)$ is tangent to the arc $ABC$ at~$A$.
-\item In addition, any half-line $[AB)$ will be regarded as an arc.
-This degenerate arc has only one end point $A$
-and it assumed to be tangent to itself at~$A$.
+In this case, the half-line $[AX)$ is tangent to the arc $ABC$ at~$A$.
 \end{itemize}
 
+In addition, any half-line $[AB)$ will be regarded as an arc.
+This degenerate arc has only one end point $A$
+and it assumed to be tangent to itself at~$A$.
 The circle arcs together with the degenerate arcs will be called \index{arc}\emph{arcs}.
-
 
 \begin{thm}{Proposition}\label{prop:arc(angle=angle)}
 A point $D$ lies on the arc $ABC$ if and only if 
@@ -495,19 +489,18 @@ $$\measuredangle ADC= \measuredangle ABC$$
 or $D$ coincides with $A$ or~$C$.
 \end{thm}
 
+\parit{Proof.}
+If $A$, $B$ and $C$ lie on one line, 
+then the statement is evident.
 
 \begin{wrapfigure}{o}{23mm}
-\begin{lpic}[t(-6mm),b(0mm),r(0mm),l(0mm)]{pics/tangent-half-line-3(1)}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/tangent-half-line-3(1)}
 \lbl[rb]{8,23;$A$}
 \lbl[l]{21,17;$B$}
 \lbl[tr]{1,3;$C$}
 \lbl[tl]{18,3;$D$}
 \end{lpic}
 \end{wrapfigure}
-
-\parit{Proof.}
-Note that if $A$, $B$ and $C$ lie on one line, 
-then the statement is evident.
 
 Assume $\Gamma$ be the circle passing thru $A$, $B$ and~$C$.
 
@@ -593,7 +586,7 @@ which is tangent at $A$ to the given half line~$[AX)$.
 \end{thm}
 
 \begin{wrapfigure}{r}{28mm}
-\begin{lpic}[t(-4mm),b(-0mm),r(0mm),l(0mm)]{pics/two-arcs(1)}
+\begin{lpic}[t(-0mm),b(-0mm),r(0mm),l(0mm)]{pics/two-arcs(1)}
 \lbl[l]{11,16;$A$}
 \lbl[bl]{22,24;$B_1$}
 \lbl[tr]{5,5;$B_2$}

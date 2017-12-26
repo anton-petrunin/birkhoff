@@ -623,7 +623,7 @@ Therefore,
 $$\pm\measuredangle DCA= \measuredangle BCA=\measuredangle CAB.$$
 
 Since $D\ne C$, we get ``$-$'' in the last formula.
-Use the transversal property (\ref{thm:parallel-2}) to show that $(AB)\parallel (CD)$. Repeat the argument to show that $(AD)\parallel(BC)$ 
+Use the transversal property (\ref{thm:parallel-2}) to show that $(AB)\parallel (CD)$. Repeat the argument to show that $(AD)\z\parallel(BC)$ 
 
 \parbf{Exercise~\ref{ex:diad-par}.}
 Apply Lemma~\ref{lem:parallelogram} together with
@@ -839,7 +839,7 @@ to $\square AA'BB'$.
 {
 
 \begin{wrapfigure}{o}{34mm}
-\begin{lpic}[t(-3mm),b(-0mm),r(-1mm),l(0mm)]{pics/perp=constr(1)}
+\begin{lpic}[t(-5mm),b(-0mm),r(-1mm),l(0mm)]{pics/perp=constr(1)}
 \end{lpic}
 \end{wrapfigure}
 
@@ -854,12 +854,13 @@ To prove it,
 apply Theorem~\ref{thm:orthocenter} and Corollary~\ref{cor:right-angle-diameter}.
 
 
-\parbf{Exercise~\ref{ex:secant-circles}.}
-Apply Theorem~\ref{thm:inscribed-quadrilateral} twice for $\square ABYX$ and $\square ABY'X'$ and use the transversal property (\ref{thm:parallel-2}).
+\parbf{Exercise~\ref{ex:two-chords}.} Apply the transversal property (\ref{thm:parallel-2}) and the theorem on inscribed angles (\ref{thm:inscribed-angle}).
 
 }
 
-\parbf{Exercise~\ref{ex:two-chords}.} Apply the transversal property (\ref{thm:parallel-2}) and the theorem on inscribed angles (\ref{thm:inscribed-angle}).
+\parbf{Exercise~\ref{ex:secant-circles}.}
+Apply Theorem~\ref{thm:inscribed-quadrilateral} twice for $\square ABYX$ and $\square ABY'X'$ and use the transversal property (\ref{thm:parallel-2}).
+
 
 
 \parbf{Exercise~\ref{ex:inaccuracy}.}
@@ -1325,8 +1326,8 @@ Therefore, $\ln\left(1+\sqrt{2}\right)$ is the optimal upper bound.
 
 {
 
-\begin{wrapfigure}[11]{r}{44mm}
-\begin{lpic}[t(-10mm),b(-1mm),r(0mm),l(-0mm)]{pics/h-circle-5(1)}
+\begin{wrapfigure}{r}{44mm}
+\begin{lpic}[t(-4mm),b(-0mm),r(0mm),l(-0mm)]{pics/h-circle-5(1)}
 \lbl[tr]{22,20;$Q$}
 \lbl[t]{37,20;$P$}
 \lbl[br]{21,37;$R$}
@@ -1338,33 +1339,33 @@ Therefore, $\ln\left(1+\sqrt{2}\right)$ is the optimal upper bound.
 \parbf{Exercise~\ref{ex:right-trig-horocycle}.}
 As usual, we assume that the absolute is a unit circle.
 
-Consider hyperbolic triangle $PQR$
-with right angle at $Q$, such that $PQ_h\z=QR_h$
+Let $PQR$ be a hyperbolic triangle
+with a right angle at $Q$, such that $PQ_h\z=QR_h$
 and the vertices $P$, $Q$ and $R$ 
 lie on a horocycle.
 
 Without loss of generality, we may assume that $Q$ is the center of the absolute.
 In this case $\measuredangle_hPQR=\measuredangle PQR=\pm\tfrac\pi2$ and $PQ=QR$.
 
-}
-
 Note that Euclidean circle passing thru $P$, $Q$ and $R$ is tangent to the absolute.
 Conclude that $PQ=\tfrac1{\sqrt2}$. 
 Apply \ref{lem:O-h-dist} to find $PQ_h$.
 
+}
+
 \parbf{Exercise~\ref{ex:angle-preserving-hyp}.}
-In hyperbolic plane, the AAA-congruence condition (\ref{thm:AAA}) implies that any nondegenerate triangle is mapped to a congruent triangle.
-Hence the statement follows.
+Apply AAA-congruence condition (\ref{thm:AAA}).
 
 
 
 \parbf{Exercise~\ref{ex:circum}.}
-Let us apply Proposition~\ref{prop:circum}.
-\begin{align*}
-\circum_h(r+1)&=\pi\cdot(e^{r+1}-e^{-r-1})=\pi\cdot e\cdot(e^{r}-e^{-r-2})>
-\\
-&>\pi\cdot e\cdot(e^{r}-e^{-r})=e\cdot\circum_h(r)\ge 2\cdot\circum_h(r).
-\end{align*}
+Apply Proposition~\ref{prop:circum}.
+Use that $e>2$ and in particular the function $r\mapsto e^{-r}$ is decreasing.
+%\begin{align*}
+%\circum_h(r+1)&=\pi\cdot(e^{r+1}-e^{-r-1})=\pi\cdot e\cdot(e^{r}-e^{-r-2})>
+%\\
+%&>\pi\cdot e\cdot(e^{r}-e^{-r})=e\cdot\circum_h(r)\ge 2\cdot\circum_h(r).
+%\end{align*}
 
 \parbf{Exercise~\ref{ex:c+1>a+b}.}
 Apply the hyperbolic Pythagorean theorem and the definition of hyperbolic cosine.
@@ -1375,23 +1376,23 @@ Apply the hyperbolic Pythagorean theorem and the definition of hyperbolic cosine
 
 
 \parbf{Exercise~\ref{ex:collinear=affine}.}
-Assume that triple of noncollinear points $P$, $Q$ and $R$ mapped to one line~$\ell$.
+Assume that a triple of noncollinear points $P$, $Q$ and $R$ are mapped to one line~$\ell$.
 Note that all three lines $(PQ)$, $(QR)$ and $(RP)$ are mapped to~$\ell$.
 Therefore, any line which connects two points on these three lines is mapped to~$\ell$.
 
 Note that any point in the plane lies on a line passing thru two distinct points on these three lines.
-Therefore, whole plane is mapped to $\ell$.
+Therefore, the whole plane is mapped to $\ell$.
 The latter contradicts that the map is a bijection.
 
 
 \parbf{Exercise~\ref{ex:affine-par}.}
 Assume the two distinct lines $\ell$ and $m$ 
-are mapped to intersecting lines $\ell'$ and~$m'$.
+are mapped to the intersecting lines $\ell'$ and~$m'$.
 Let $P'$ denotes their point of intersection.
 
 
 Let $P$ be the inverse image of~$P'$.
-By the definition of affine map it has to lie on both $\ell$ and $m$;
+By the definition of affine map, it has to lie on both $\ell$ and $m$;
 that is, $\ell$ and $m$ are intersecting.
 Hence the result.
 
@@ -1406,9 +1407,9 @@ Hence the result.
 \parbf{Exercise~\ref{ex:midpoint-affine}.}
 According to the remark before the exercise,
 it is sufficient to construct the midpoint of $[AB]$
-with ruler and parallel tool.
+with a ruler and a parallel tool.
 
-Guess the construction from the diagram.
+Guess a construction from the diagram.
 
 \parbf{Exercise~\ref{ex:R-hom}.}
 Let $O$, $E$, $A$ and $B$ denote the points with the coordinates $(0,0)$, $(1,0)$, $(a,0)$ and $(b,0)$ correspondingly.
@@ -1417,24 +1418,24 @@ To construct a point $W$ with the coordinates $(0,a+b)$, try to construct two pa
 
 To construct $Z$ with coordinates $(0,a\cdot b)$
 choose a line $(OE')\ne (OE)$
-and try construct the points $A'\in (OE')$
+and try to construct the points $A'\in (OE')$
 and $Z \in(OE)$
 so that 
 $\triangle OEE'\z\sim \triangle OAA'$ and $\triangle OE'B\sim \triangle OA'Z$.
 
 \parbf{Exercise~\ref{ex:center-circ-affine}.}
 Draw two parallel chords $[XX']$ and~$[YY']$.
-Set $Z\z=(XY)\cap (X'Y')$ and $Z'= (XY')\cap (X'Y)$.
+Set $Z\z=(XY)\z\cap (X'Y')$ and $Z'= (XY')\cap (X'Y)$.
 Note that $(ZZ')$ passes thru the center.
 
 Repeat the same construction for another pair of parallel chords.
 The center lies in the intersection of the obtained lines.
 
 \parbf{Exercise~\ref{ex:affine-perp}.}
-Assume a construction produce  two perpendicular lines.
+Assume a construction produces  two perpendicular lines.
 Apply a shear mapping which changes the angle between the lines.
 
-Note that it transforms the construction to the same construction for another free choices points.
+Note that it transforms the construction to the same construction for other free choices points.
 Therefore, this construction does not produce perpendicular lines in general
  (it might be the center only by coincidence).
  
@@ -1442,7 +1443,7 @@ Therefore, this construction does not produce perpendicular lines in general
  
 \parbf{Exercise~\ref{ex:reflection/inversive}.}
 Fix a line $\ell$.
-Choose a circle $\Gamma$ with center not on~$\ell$.
+Choose a circle $\Gamma$ with its center not on~$\ell$.
 Let $\Omega$ be the inverse of $\ell$ in $\Gamma$;
 note that $\Omega$ is a circle.
 
@@ -1456,8 +1457,7 @@ is the reflection in~$\ell$.
 \setcounter{eqtn}{0}
 
 \parbf{Exercise~\ref{ex:persect}.}
-Since $O$, $P$ and $P'$ lie on one line we have
-that coordinates of $P'$ are proportional to the coordinates of~$P$.
+Since $O$, $P$ and $P'$ lie on one line we have that the coordinates of $P'$ are proportional to the coordinates of~$P$.
 The $y$ coordinate of $P'$ has to be equal to~$1$.
 Therefore, $P'$ has coordinates 
 $(\tfrac1y,1,\tfrac zy)$.
@@ -1467,15 +1467,14 @@ $(\tfrac1y,1,\tfrac zy)$.
 Assume that the lines $(AB)$ and $(A'B')$ intersect at~$O$.
 Since $(AB')\parallel (BA')$, we get that $\triangle OAB'\sim\triangle OBA'$
 and
-\[\frac{OA}{OB}=\frac{OB'}{OA'}\]
+\[\frac{OA}{OB}=\frac{OB'}{OA'}.\]
 
-Similarly since $(AC')\parallel (CA')$, 
-we get that
+Similarly, since $(AC')\parallel (CA')$, we get that
 \[\frac{OA}{OC}=\frac{OC'}{OA'}.\]
 
 Therefore
 \[\frac{OB}{OC}=\frac{OC'}{OB'}.\]
-Applying the SAS similarity condition we get that
+Applying the SAS similarity condition, we get that
 $\triangle OBC'\sim\triangle OCB'$.
 Therefore, $(BC')\parallel (CB')$.
 
@@ -1485,7 +1484,7 @@ The case $(AB)\parallel(A'B')$ is similar.
 Assume the contrary.
 Choose two parallel lines $\ell$ and~$m$.
 Let $L$ and $M$ be their dual points.
-Set $s=(ML)$, then its dual point $S$ have to lie on both $\ell$ and $m$ ---
+Set $s=(ML)$, then its dual point $S$ has to lie on both $\ell$ and $m$ ---
 a contradiction.
 
 \parbf{Exercise~\ref{ex:dula-coordinates}.}
@@ -1497,9 +1496,9 @@ The latter is equivalent to $m\ni S$
 where $m$ is the line  given by the equation 
 $a\cdot x+b\cdot y=1$ and $S=(p,q)$.
 
-To extend this bijection to whole projective plane assume that 
+To extend this bijection to the whole projective plane, assume that 
 (1) the ideal line  corresponds to the origin 
-and (2) the ideal point given by the pencil of the lines $a\cdot x-b\cdot y=c$ for different values of $c$ corresponds to the line given by the equation $a\cdot x+b\cdot y=0$.
+and (2) the ideal point given by the pencil of the lines $b\cdot x-a\cdot y=c$ for different values of $c$ corresponds to the line given by the equation $a\cdot x+b\cdot y=0$.
 
 
 
@@ -1523,23 +1522,23 @@ P&=b\cap c',
 &
 Q&=c\cap a',
 &
-R&=a\cap b'\\
+R&=a\cap b',\\
 P'&=b'\cap c,
 &
 Q'&=c'\cap a,
 &
-R'&=a'\cap b
+R'&=a'\cap b.
 \end{align*}
 Then the lines $(PP')$, $(QQ')$ and $(RR')$ are concurrent.
 
 \parbf{Exercise~\ref{ex:dual-desargues-construction}.} To solve \textit{(\ref{ex:dual-desargues-construction:a})},
 assume $(AA')$ and $(BB')$ are the given lines and $C$ is the given point.
 Apply the dual Desargues' theorem (\ref{thm:dual-desargues}) to construct $C'$ so that $(AA')$, $(BB')$ and $(CC')$ are concurrent. 
-Since $(AA')\parallel (BB')$ 
+Since $(AA')\parallel (BB')$, 
 we get that 
 $(AA')\parallel (BB')\parallel (CC')$.
 
-A similar solution can be build on the dual Pappus's theorem, 
+A similar solution can be build on the dual Pappus' theorem, 
 see Exercise~\ref{ex:dual-pappus}.
 
 For part \textit{(\ref{ex:dual-desargues-construction:b})}, apply one of the discussed theorems to construct a line parallel to the given one and then apply part \emph{(\ref{ex:dual-desargues-construction:a})}.
@@ -1547,11 +1546,11 @@ For part \textit{(\ref{ex:dual-desargues-construction:b})}, apply one of the dis
 \parbf{Exercise~\ref{ex:finite-pp}.}
 Let $A$, $B$, $C$ and $D$ 
 be the point provided by Axiom~p-\ref{def:proj-axioms:3}.
-Given a line $\ell$ we can assume that $A\notin \ell$, 
+Given a line $\ell$, we can assume that $A\notin \ell$, 
 otherwise permute the labels of the points.
 Then by axioms p-\ref{def:proj-axioms:1} and p-\ref{def:proj-axioms:2},
 the three lines $(AB)$, $(AC)$ and $(AD)$ intersect $\ell$ at distinct points.
-In particular, $\ell$ contains 3 points. 
+In particular, $\ell$ contains at least three points. 
 
 \parbf{Exercise~\ref{ex:3=3'}.}
 Let $A$, $B$, $C$ and $D$ 
@@ -1614,7 +1613,7 @@ are mapped outside of $\Omega$ and the other way around.
 
 Further, note that this map sends circles to circles;
 moreover, the perpendicular circles are mapped to perpendicular circles.
-In particular, the circle perpendicular to $\Omega$ are mapped to itself.
+In particular, the circles perpendicular to $\Omega$ are mapped to themselves.
 
 Consider arbitrary point $P\notin\Omega$.
 Let $P'$ denotes the inverse of $P$ in~$\Omega$.
@@ -1637,21 +1636,20 @@ Note that $\tfrac yz\to 1$ as $x\to 0$.
 It remains to show that 
 $$\lim_{x\to 0} \frac{z}{x}=\frac{2}{1+OP^2}.$$
 
-Let $O$ denotes the center of the unit sphere~$\Sigma$.
-Recall that stereographic projection is the inversion in the sphere $\Upsilon$ restricted to the plane.
-Note that there is plane $\Pi$ passing thru $O$, $P$, $Q$, $P'$ and~$Q'$.
-In the plane $\Pi$ the map $Q\mapsto Q'$ is an inversion in a circle $\Sigma\cap \Pi$.
+Recall that the stereographic projection is the inversion in the sphere $\Upsilon$ with the center at the south pole $S$ restricted to the plane $\Pi$.
+Show that there is a plane $\Lambda$ passing thru $S$, $P$, $Q$, $P'$ and~$Q'$.
+In the plane $\Lambda$, the map $Q\mapsto Q'$ is an inversion in the circle $\Upsilon\cap \Lambda$.
 
-This reduce the problem to Euclidean plane geometry.
-The remaining calculations in $\Pi$ are similar to those in the proof of  Lemma~\ref{lem:conformal}.
+This reduces the problem to Euclidean plane geometry.
+The remaining calculations in $\Lambda$ are similar to those in the proof of  Lemma~\ref{lem:conformal}.
 
 \parbf{Exercise~\ref{ex:s-medians}.}
 \textit{(\ref{ex:s-medians:a})}.
 Observe and use that 
 $OA'=OB'=OC'$.
 
-\parit{(\ref{ex:s-medians:b}).} Mote that medians of spherical triangle $ABC$ 
-map to the medians of Euclidean triangle $A'B'C'$.
+\parit{(\ref{ex:s-medians:b}).} Note that the medians of spherical triangle $ABC$ 
+map to the medians of Euclidean a triangle $A'B'C'$.
 It remains to apply Theorem~\ref{thm:centroid} for $\triangle A'B'C'$.
 
 
@@ -1669,7 +1667,7 @@ Notice that
 $\triangle NOP\sim \triangle NP'S\sim \triangle P'\hat PP$
 and
 $2\cdot NO\z=NS$.
-It remains to do algebraic manipulations.
+It remains to do some algebraic manipulations.
 
 {
 
@@ -1678,7 +1676,7 @@ It remains to do algebraic manipulations.
 \end{lpic}
 \end{wrapfigure}
 
-\parbf{Exercise~\ref{ex:hex}.} Consider the bijection $P\leftrightarrow \hat P$ of the h-plane with absolute~$\Omega$.
+\parbf{Exercise~\ref{ex:hex}.} Consider the bijection $P\z\leftrightarrow \hat P$ of the h-plane with absolute~$\Omega$.
 Note that $\hat P\in [A_iB_i]$ if and only if $P\in\Gamma_i$.
 
 
@@ -1686,9 +1684,9 @@ Note that $\hat P\in [A_iB_i]$ if and only if $P\in\Gamma_i$.
 The observation follows since the reflection in the perpendicular bisector of $[PQ]$ is a motion of the Euclidean plane, and a motion of the h-plane as well.
 
 Without loss of generality, we may assume that 
-the center of circumcircle coincides with the center of the absolute.
-In this case the h-median of the triangle coincide with the Euclidean medians.
-It remains to apply Theorem~\ref{thm:centroid}
+the center of the circumcircle coincides with the center of the absolute.
+In this case the h-medians of the triangle coincide with the Euclidean medians.
+It remains to apply Theorem~\ref{thm:centroid}.
 
 }
 
@@ -1698,29 +1696,32 @@ We need to show that $\hat\ell\perp\hat m$ as arcs in the Euclidean plane.
 
 The point $Z$ where $s$ and $t$ meet is the center of the circle $\Gamma$ containing~$\hat\ell$.
 
-If $\bar m$ passing thru $Z$, then the inversion in $\Gamma$ exchanges the ideal points of~$\hat\ell$.
+If $\bar m$ is passing thru $Z$, then the inversion in $\Gamma$ exchanges the ideal points of~$\hat\ell$.
 In particular, $\hat\ell$ maps to itself. 
 Hence the result.
 
+\parbf{Exercise~\ref{ex:klein-for-angle-parallelism}.}
+Let $Q$ be the foot point of $P$ on the line and $\phi$ be the angle of parallelism. 
+We can assume that $P$ is the center of the absolute.
+Therefore $PQ=\cos\phi$ and
+
+{
 
 \begin{wrapfigure}{r}{22mm}
-\begin{lpic}[t(-0mm),b(-2mm),r(0mm),l(0mm)]{pics/absolute-triangle-2-k(1)}
+\begin{lpic}[t(-8mm),b(-2mm),r(0mm),l(0mm)]{pics/absolute-triangle-2-k(1)}
 \lbl[tr]{10.5,9;$P$}
 \lbl[tl]{16.5,9;$Q$}
 \lbl[lb]{13,11;{\small $\phi$}}
 \end{lpic}
 \end{wrapfigure}
 
-\parbf{Exercise~\ref{ex:klein-for-angle-parallelism}.}
-Let $Q$ be the foot point of $P$ on the line and $\phi$ be the angle of parallelism. 
-We can assume that $P$ is the center of the absolute.
-Therefore $PQ=\cos\phi$ and
 \[PQ_h=\tfrac12\cdot\ln\frac{1+\cos\phi}{1-\cos\phi}.\]
 
 
 \parbf{Exercise~\ref{ex:klein-inradius}.} 
 Apply Exercise~\ref{ex:klein-for-angle-parallelism} for $\phi=\tfrac\pi3$.
 
+}
 
 \parbf{Exercise~\ref{ex:pyth-h-proj}.}
 Note that
@@ -1733,12 +1734,13 @@ therefore
 \tfrac12\cdot\left(\sqrt{\tfrac{1+t}{1-t}}+\sqrt{\tfrac{1-t}{1+t}}\right)
 =
 \frac1{\sqrt{1-t^2}}.
-\eqlbl{coshb}
+\eqlbl{cosh-b}
 \]
 The same way we get that
 \[\begin{aligned}\cosh c&=\frac1{\sqrt{1-u^2}}.
 \end{aligned}
-\eqlbl{cosh(c)}\]
+\eqlbl{cosh-c}
+\]
 
 Let $X$ and $Y$ are the ideal points of~$(BC)_h$.
 Applying the Pythagorean theorem (\ref{thm:pyth}) again,
@@ -1761,10 +1763,10 @@ and
 \\
 &=\frac{\sqrt{1-t^2}}{\sqrt{1-u^2}}.
 \end{aligned}
-\eqlbl{cosh(a)}
+\eqlbl{cosh-a}
 \]
 
-Finally, note that \ref{coshb}, \ref{cosh(c)} and \ref{cosh(a)} imply the theorem.
+Finally, note that \ref{cosh-b}, \ref{cosh-c} and \ref{cosh-a} imply the theorem.
 
 \parbf{Exercise~\ref{ex:Boyai-in-Euclid}.}
 In the Euclidean plane, the circle $\Gamma_2$ is tangent to $k$; 
@@ -1775,6 +1777,8 @@ It defines a unique line $(PT)$  parallel to~$\ell$.
 
 \section*{Chapter~\ref{chap:complex}}
 \setcounter{eqtn}{0}
+
+\parbf{Exercise~\ref{ex:|zw|}.} Use that $|z|^2=z\cdot \bar z$ for $z=v$, $w$ and $v\cdot w$.
 
 \parbf{Exercise~\ref{ex:3-sum-C}.} 
 Let $z$, $v$ and $w$ denote the complex coordinates of $Z$, $V$ and $W$ correspondingly.
@@ -1916,10 +1920,18 @@ Apply Schwarz--Pick theorem for a function $f$ such that $f(0)\z=0$ and then app
 
 
 
+{
+
+\begin{wrapfigure}{r}{30mm}
+\begin{lpic}[t(-6mm),b(-0mm),r(0mm),l(0mm)]{pics/appol(1)}
+\lbl[br]{6,5;$O$}
+\lbl[tl]{25,21;$P$}
+\lbl[b]{21,15;$X$}
+\end{lpic}
+\end{wrapfigure}
 
 \section*{Chapter~\ref{chap:car}}
 \setcounter{eqtn}{0}
-
 
 
 \parbf{Exercise~\ref{ex:simple-apollonius}.}
@@ -1928,15 +1940,7 @@ Draw a line $\ell$ thru the given point $P$ and $O$.
 Construct a circle $\Gamma$ tangent to both lines which crosses~$\ell$. 
 Let $X$ denotes one of the points of intersections.
 
-{
-
-\begin{wrapfigure}{r}{30mm}
-\begin{lpic}[t(-0mm),b(-0mm),r(0mm),l(0mm)]{pics/appol(1)}
-\lbl[br]{6,5;$O$}
-\lbl[tl]{25,21;$P$}
-\lbl[b]{21,15;$X$}
-\end{lpic}
-\end{wrapfigure}
+}
 
 Consider the homothety with the center at $O$ 
 which sends $X$ to~$P$.
@@ -1948,18 +1952,16 @@ The image of $\Gamma$ is the needed circle.
 Note that with set square we can construct a line parallel to given line thru the given point.
 It remains to modify the construction in Exercise~\ref{ex:midpoint-affine}.
 
-}
-
-\begin{wrapfigure}{o}{25mm}
-\begin{lpic}[t(-2mm),b(-6mm),r(0mm),l(0mm)]{pics/equleteral-verify(1)}
-\end{lpic}
-\end{wrapfigure}
-
 \parbf{Exercise~\ref{ex:equilateral triangle}.}
 Assume that two vertices have rational coordinates, say $(a_1,b_1)$ and $(a_2,b_2)$.
 Find the coordinates of the third vertex.
 Use that the number $\sqrt{3}$ is irrational
 to show that the third vertex is an irrational point.
+
+\begin{wrapfigure}{o}{25mm}
+\begin{lpic}[t(-0mm),b(-3mm),r(0mm),l(0mm)]{pics/equleteral-verify(1)}
+\end{lpic}
+\end{wrapfigure}
 
 \parbf{Exercise~\ref{ex:equilateral triangle-verify}.}
 Guess the construction from the diagram.

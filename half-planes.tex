@@ -195,8 +195,8 @@ then the angles $PQX$ and $PQY$
 have the same sign.
 \end{thm}
 
-\begin{wrapfigure}{r}{34mm}
-\begin{lpic}[t(-5mm),b(3mm),r(0mm),l(0mm)]{pics/PQY(1)}
+\begin{wrapfigure}[6]{r}{34mm}
+\begin{lpic}[t(-6mm),b(0mm),r(0mm),l(0mm)]{pics/PQY(1)}
 \lbl[t]{30,1;$P$}
 \lbl[t]{1,1;$Q$}
 \lbl[r]{11,27;$X$}
@@ -410,14 +410,6 @@ Then there is a triangle $ABC$
 such that $a=BC$, $b=CA$ and $c=AB$.
 \end{thm}
 
-The proof requires some preparation;
-it is given in the end of section.
-
-Assume $r>0$ and $\pi>\beta>0$.
-Consider the triangle $ABC$ such that 
-$AB=BC=r$ and $\measuredangle ABC=\beta$.
-The existence of such a triangle follows from Axiom~\ref{def:birkhoff-axioms:2a} and Proposition~\ref{prop:point-on-half-line}.
-
 \begin{wrapfigure}{o}{25mm}
 \begin{lpic}[t(2mm),b(4mm),r(0mm),l(0mm)]{pics/sbr(1)}
 \lbl[t]{2,0;$A$}
@@ -429,6 +421,13 @@ The existence of such a triangle follows from Axiom~\ref{def:birkhoff-axioms:2a}
 \lbl[t]{12.5,20;$\beta$}
 \end{lpic}
 \end{wrapfigure}
+
+The proof is given at the end of the section.
+
+Assume $r>0$ and $\pi>\beta>0$.
+Consider the triangle $ABC$ such that 
+$AB=BC=r$ and $\measuredangle ABC=\beta$.
+The existence of such a triangle follows from Axiom~\ref{def:birkhoff-axioms:2a} and Proposition~\ref{prop:point-on-half-line}.
 
 Note that according to Axiom~\ref{def:birkhoff-axioms:3}, 
 the values
@@ -444,6 +443,8 @@ if $0<\beta<\delta$, then
 
 \end{thm}
 
+\parit{Proof.}
+Fix two points $A$ and $B$ such that $AB\z=r$.
 
 {
 
@@ -461,16 +462,13 @@ if $0<\beta<\delta$, then
 \end{lpic}
 \end{wrapfigure}
 
-\parit{Proof.}
-Fix two points $A$ and $B$ such that $AB=r$.
-
 Choose a point $X$ such that $\measuredangle ABX$ is positive.
 Let $Y\in [AX)$ be the point such that $AY=\tfrac\epsilon8$;
 it exists by Proposition~\ref{prop:point-on-half-line}.
 
 Note that $X$ and $Y$ lie on the same side from $(AB)$;
 therefore, $\angle ABY$ is positive. 
-Set $\delta=\measuredangle ABY$.
+Set $\delta\z=\measuredangle ABY$.
 
 Assume $0<\beta<\delta$,
 $\measuredangle ABC=\beta$
