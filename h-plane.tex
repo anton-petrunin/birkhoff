@@ -591,19 +591,19 @@ Let us discuss the limit cases of this formula.
 Note that $\cosh x$ can be written using the Taylor expansion
 \[\cosh x=1+\tfrac1{2}\cdot x^2+\tfrac1{24}\cdot x^4+\dots.\]
 
-It follows that if $a$ and $b$ are small and $c^2=a^2+b^2$ then
+It follows that if $a$, $b$ and $c$ are small, then
 \begin{align*}
-\cosh c &\approx 1+\tfrac1{2}\cdot c^2\approx
+1+\tfrac1{2}\cdot c^2&\approx \cosh c=\cosh a\cdot\cosh b\approx
 \\
 &\approx(1+\tfrac1{2}\cdot a^2)\cdot (1+\tfrac1{2}\cdot b^2)
 \approx 
 \\
 &\approx
-\cosh a\cdot\cosh b.
+1+\tfrac1{2}\cdot (a^2+b^2).
 \end{align*}
-These approximations show that the original Pythagorean theorem (\ref{thm:pyth}) is a limit case of the hyperbolic Pythagorean theorem for small triangles.
+In other words, the original Pythagorean theorem (\ref{thm:pyth}) is a limit case of the hyperbolic Pythagorean theorem for small triangles.
 
-For large $a$ and $b$ the values $e^{-a}$ and $e^{-b}$ are neglectable.
+For large $a$ and $b$ the terms $e^{-a}$ and $e^{-b}$ are neglectable.
 In this case we have the following approximations:
 \begin{align*}
 \cosh a\cdot\cosh b&\approx \tfrac{e^a}2\cdot\tfrac{e^b}2=
