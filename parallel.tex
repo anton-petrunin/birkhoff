@@ -253,44 +253,7 @@ for any triangle $ABC$ and its image $\triangle A'B'C'$.
 Show that any angle-preserving transformation of the plane multiplies all the distance by a fixed constant.
 \end{thm}
 
-\section*{Method of similar triangles}
-\addtocontents{toc}{Method of similar triangles.}
 
-%(???
-
-{
-
-\begin{wrapfigure}{r}{25mm}
-\begin{lpic}[t(-12mm),b(0mm),r(0mm),l(-0mm)]{pics/two-pairs-sim(1)}
-\lbl[b]{2,31;$A$}
-\lbl[b]{23,29.5;$B$}
-\lbl[bl]{8,24.5;$Z$}
-\lbl[lt]{6,4;$C$}
-\lbl[rb]{2,21;$X$}
-\lbl[l]{15,15;$Y$}
-\end{lpic}
-\end{wrapfigure}
-
-The similarity of triangles provides a method for solving geometrical problems.
-To apply this method, one has to search for pairs of similar triangles and then use the proportionality of corresponding sides and/or equalities of corresponding angles.
-
-Finding such pairs might be tricky at first. 
-
-}
-
-\begin{thm}{Exercise}\label{ex:two-pairs-sim}
-Let $ABC$ be a nondegenerate triangle,
-$X$ lies between $A$ and $C$, 
-$Y$ lies between $B$ and $C$.
-Assume $Z=[AX]\cap [BY]$ and $\measuredangle CAY\z\equiv\measuredangle XBC$.
-Find three pairs of similar triangles with these six points as the vertexes
-and prove their similarity.
-\end{thm}
-
-
-
-
-%???)
 
 \section*{Pythagorean theorem}
 \addtocontents{toc}{Pythagorean theorem.}
@@ -310,8 +273,8 @@ $$AC^2+BC^2=AB^2.$$
 \parit{Proof.}
 Let $D$ be the foot point of $C$ on~$(AB)$.
 
-\begin{wrapfigure}[4]{o}{44mm}
-\begin{lpic}[t(-0mm),b(-1mm),r(0mm),l(2mm)]{pics/pyth(1)}
+\begin{wrapfigure}[4]{r}{44mm}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(2mm)]{pics/pyth(1)}
 \lbl[rt]{1,0;$A$}
 \lbl[lt]{40,0;$B$}
 \lbl[b]{9,19;$C$}
@@ -372,6 +335,112 @@ $$AC^2+BC^2=AB^2.$$
 Prove that the angle at $C$ is right.
 \end{thm}
 
+
+\section*{Method of similar triangles}
+\addtocontents{toc}{Method of similar triangles.}
+
+%(???
+
+{
+
+\begin{wrapfigure}{r}{25mm}
+\begin{lpic}[t(-12mm),b(0mm),r(0mm),l(-0mm)]{pics/two-pairs-sim(1)}
+\lbl[b]{2,31;$A$}
+\lbl[b]{23,29.5;$B$}
+\lbl[bl]{8,24.5;$Z$}
+\lbl[lt]{6,4;$C$}
+\lbl[rb]{2,21;$X$}
+\lbl[l]{15,15;$Y$}
+\end{lpic}
+\end{wrapfigure}
+
+The proof of the Pythagorean theorem above is a good example using the method of similar triangles.
+To apply this method, one has to search for pairs of similar triangles and then use the proportionality of corresponding sides and/or equalities of corresponding angles.
+
+Finding such pairs might be tricky at first. 
+
+}
+
+\begin{thm}{Exercise}\label{ex:two-pairs-sim}
+Let $ABC$ be a nondegenerate triangle,
+$X$ lies between $A$ and $C$, 
+$Y$ lies between $B$ and $C$.
+Assume $Z=[AX]\cap [BY]$ and $\measuredangle CAY\z\equiv\measuredangle XBC$.
+Find three pairs of similar triangles with these six points as the vertexes
+and prove their similarity.
+\end{thm}
+
+A \index{quadrilateral}\emph{quadrilateral} is an ordered quadruple of distinct points in the plane.
+The quadrilateral $ABCD$ will be also denoted by \index{25@$\square$}$\square ABCD$.
+
+Given a quadrilateral $ABCD$,
+the four segments $[AB]$, $[BC]$, $[CD]$ and $[DA]$ are called \index{side!side of quadrilateral}\emph{sides of $\square ABCD$};
+the remaining two segments $[AC]$ and $[BD]$ are called \index{diagonals of quadrilateral}\emph{diagonals of $\square ABCD$}.
+
+\begin{thm}{Ptolemy's inequality}\label{ptolemy-inq}
+In any quadrilateral, the product of diagonals can not exceed the sum of the product of its opposite sides.
+That~is, 
+$$AC\cdot BD\le AB\cdot CD+ BC\cdot DA.$$
+for any quadrilateral $ABCD$.
+\end{thm}
+
+We will present a classical proof of this inequality using the method of method of similar triangles with an additional construction.
+This proof is given as an illustration --- it will not be used further in the sequel.
+
+\begin{wrapfigure}{r}{33mm}
+\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(-0mm)]{pics/ptolemy-inq(1)}
+\lbl[b]{2,27.5;$A$}
+\lbl[t]{2,0;$B$}
+\lbl[t]{30,7;$C$}
+\lbl[b]{28.5,30.5;$D$}
+\lbl[l]{14,9;$X$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Proof.}
+Consider the half-line $[AX)$ such that $\measuredangle BAX=\measuredangle CAD$;
+we can choose $X$ so that 
+\[AX=\frac{AB}{AC}\cdot AD\]
+or, equivalently
+\[\frac{AX}{AD}=\frac{AB}{AC}\qquad\text{and}\qquad\frac{AX}{BA}=\frac{AD}{AC}.\]
+Since $\measuredangle BAX=\measuredangle CAD$, we also have $\measuredangle XAD=\measuredangle BAC$.
+Indeed,
+\[
+\measuredangle XAD=\measuredangle BAD-\measuredangle BAX
+=\measuredangle BAD-\measuredangle CAD=
+\measuredangle BAC.
+\]
+Applying SAS similarity condition, we get 
+\begin{align*}
+\triangle BAX&\sim \triangle CAD,
+&
+\triangle XAD&\sim\triangle BAC.
+\intertext{Therefore}
+\frac{BX}{CD}&=\frac{AB}{AC},
+&
+\frac{XD}{BC}&=\frac{AD}{AC},
+\intertext{or, equivalently}
+AC\cdot BX&=AB\cdot CD,
+&
+AC\cdot XD&=BC\cdot AD.
+\end{align*}
+Adding these two equalities we get 
+\[AC\cdot(BX+XD)=AB\cdot CD+BC\cdot AD.\]
+It remains to apply the triangle inequality, $BD\le BX+XD$.
+\qeds
+
+Using the proof above together with Theorem~\ref{thm:inscribed-quadrilateral}, one can show that the equality holds only if the vertexes $A$, $B$, $C$ and $D$ appear on a line or a circle in the same cyclic order;
+see also \ref{ptolemy-id} for an other proof of the equality case.
+
+
+%???)
+
+%???maybe divide into two chapters here???
+
+\addtocontents{toc}{\protect\end{quote}}
+
+\chapter[Sums of angles and transversal property]{Sums of angles and transversal property}\label{chap:parallel}
+\addtocontents{toc}{\protect\begin{quote}}
 
 \section*{Angles of triangles}
 \addtocontents{toc}{Angles of triangle.}
@@ -468,8 +537,8 @@ that is, $\triangle A B C$ is degenerate --- a contradiction.
 
 {
 
-\begin{wrapfigure}[8]{i}{43mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/bisector-BA=AD=DC(1)}
+\begin{wrapfigure}{o}{43mm}
+\begin{lpic}[t(-3mm),b(0mm),r(0mm),l(0mm)]{pics/bisector-BA=AD=DC(1)}
 \lbl[b]{9,26;$A$}
 \lbl[t]{2,1;$B$}
 \lbl[t]{38,1;$C$}
@@ -524,6 +593,12 @@ Show that $\measuredangle CAX=\pm\tfrac\pi4$.
 
 }
 
+\begin{thm}{Exercise}\label{ex:quadrilateral}
+Show that for any quadrilateral $ABCD$, we have
+$$\measuredangle ABC+\measuredangle BCD+\measuredangle CDA+\measuredangle DAB\equiv 0.$$
+
+\end{thm}
+
 \section*{Transversal property}
 \addtocontents{toc}{Transversal property.}
 
@@ -551,8 +626,8 @@ in the second case
 $A$ and $D$ lie on the same sides of~$(BC)$.
 \end{thm}
 
-\begin{wrapfigure}[6]{o}{30mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/parallel-2(1)}
+\begin{wrapfigure}[6]{r}{30mm}
+\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/parallel-2(1)}
 \lbl[b]{14.5,18.5;$A$}
 \lbl[b]{3,15;$B$}
 \lbl[b]{18,7.5;$C$}
@@ -605,20 +680,6 @@ Trisect a given segment with a ruler and a compass.
 
 \section*{Parallelograms}
 \addtocontents{toc}{Parallelograms.}
-
-A \index{quadrilateral}\emph{quadrilateral} is an ordered quadruple of distinct points in the plane.
-The quadrilateral $ABCD$ will be also denoted by \index{25@$\square$}$\square ABCD$.
-
-Given a quadrilateral $ABCD$,
-the four segments $[AB]$, $[BC]$, $[CD]$ and $[DA]$ are called \index{side!side of quadrilateral}\emph{sides of $\square ABCD$};
-the remaining two segments $[AC]$ and $[BD]$ are called \index{diagonals of quadrilateral}\emph{diagonals of $\square ABCD$}.
-
-
-\begin{thm}{Exercise}\label{ex:quadrilateral}
-Show that for any quadrilateral $ABCD$, we have
-$$\measuredangle ABC+\measuredangle BCD+\measuredangle CDA+\measuredangle DAB\equiv 0.$$
-
-\end{thm}
 
 A quadrilateral $ABCD$ in the Euclidean plane is called \index{quadrilateral!degenerate quadrilateral}\index{degenerate!quadrilateral}\emph{nondegenerate} if any three points from $A,B,C,D$ do not lie on one line.
 
