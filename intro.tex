@@ -63,25 +63,26 @@ Here is a dependency graph of the chapters.
 \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,scale=1.4,
   thick,main node/.style={circle,draw,font=\sffamily\bfseries,minimum size=8mm}]
 
-  \node[main node] (1) at (0,15/6) {1};
-  \node[main node] (2) at (1,15/6){2};
-  \node[main node] (3) at (2,15/6) {3};
-  \node[main node] (4) at (3,15/6) {4};
-  \node[main node] (5) at (3.5,10/6) {5};
-  \node[main node] (6) at (4,5/6) {6};
-  \node[main node] (7) at (5,5/6) {7};
-  \node[main node] (8) at (3,5/6){8};
-  \node[main node] (9) at (2,5/6) {9};
-  \node[main node] (10) at (2.5,10/6) {10};
-  \node[main node] (11) at (1.5,10/6){11};
-  \node[main node] (12) at (.5,10/6) {12};
-  \node[main node] (13) at (1.5,0) {13};
-  \node[main node] (14) at (0.5,0) {14};
-  \node[main node] (15) at (1,5/6) {15};
-  \node[main node] (16) at (0,5/6) {16};
-  \node[main node] (17) at (2.5,0) {17};
-  \node[main node] (18) at (3.5,0) {18};
-  \node[main node] (19) at (4.5,0) {19};
+  \node[main node] (1) at (0,15/6) {\ref{chap:metr}};
+  \node[main node] (2) at (1,15/6){\ref{chap:axioms}};
+  \node[main node] (3) at (2,15/6) {\ref{chap:half-planes}};
+  \node[main node] (4) at (3,15/6) {\ref{chap:cong}};
+  \node[main node] (5) at (3.5,10/6) {\ref{chap:perp}};
+  \node[main node] (6) at (4.5,10/6) {\ref{chap:parallel}};
+  \node[main node] (61) at (4,5/6) {\ref{chap:angle-sum}};
+  \node[main node] (7) at (5,5/6) {\ref{chap:triangle}};
+  \node[main node] (8) at (3,5/6){\ref{chap:inscribed-angle}};
+  \node[main node] (9) at (2,5/6) {\ref{chap:inversion}};
+  \node[main node] (10) at (2.5,10/6) {\ref{chap:non-euclid}};
+  \node[main node] (11) at (1.5,10/6){\ref{chap:poincare}};
+  \node[main node] (12) at (.5,10/6) {\ref{chap:h-plane}};
+  \node[main node] (13) at (1.5,0) {\ref{chap:trans}};
+  \node[main node] (14) at (0.5,0) {\ref{chap:proj}};
+  \node[main node] (15) at (1,5/6) {\ref{chap:sphere}};
+  \node[main node] (16) at (0,5/6) {\ref{chap:klein}};
+  \node[main node] (17) at (2.5,0) {\ref{chap:complex}};
+  \node[main node] (18) at (3.5,0) {\ref{chap:car}};
+  \node[main node] (19) at (4.5,0) {\ref{chap:area}};
 
   \path[every node/.style={font=\sffamily\small}]
    (1) edge node[right]{}(2)
@@ -89,12 +90,13 @@ Here is a dependency graph of the chapters.
    (3) edge node[right]{}(4)
    (4) edge node[right]{}(5)
    (5) edge node[right]{}(6)
-   (6) edge node[right]{}(7)
-   (6) edge node[right]{}(19)
+   (6) edge node[right]{}(61)
+   (61) edge node[right]{}(8)
+   (61) edge node[right]{}(7)
+   (61) edge node[right]{}(19)
    (9) edge node[right]{}(13)
    (13) edge node[right]{}(14)
-   (6) edge node[right]{}(8)
-   (6) edge node[right]{}(18)
+   (61) edge node[right]{}(18)
    (8) edge node[right]{}(9)
    (9) edge node[right]{}(11)
    (9) edge node[right]{}(15)
@@ -110,7 +112,7 @@ Here is a dependency graph of the chapters.
 
 \smallskip
 
-In (1) we give all the definitions necessary to formulate the axioms;
+In (\ref{chap:metr}) we give all the definitions necessary to formulate the axioms;
 it includes metric space, 
 lines, 
 angle measure, 
@@ -119,24 +121,25 @@ continuous maps and congruent triangles.
 %???extra chapter???
 
 Further we do Euclidean geometry:
-(\ref{chap:axioms}) Axioms and immediate corollaries,
-(\ref{chap:half-planes}) Half-planes and continuity,
-(\ref{chap:cong}) Congruent triangles,
-(\ref{chap:perp}) Circles, motions, perpendicular lines,
+(\ref{chap:axioms}) Axioms and immediate corollaries;
+(\ref{chap:half-planes}) Half-planes and continuity;
+(\ref{chap:cong}) Congruent triangles;
+(\ref{chap:perp}) Circles, motions, perpendicular lines;
 (\ref{chap:parallel}) Parallel lines and similar triangles
---- this is the first chapter where we use Axiom \ref{def:birkhoff-axioms:4}, an equivalent of Euclid's parallel postulate.
+--- this is the first chapter where we use Axiom \ref{def:birkhoff-axioms:4}, an equivalent of Euclid's parallel postulate;
+(\ref{chap:angle-sum}) Angle sums and transversal property.
 In (\ref{chap:triangle}) we give the most classical theorem of triangle geometry;
 this chapter is included mainly as an illustration.
 
 
 In the following two chapters we discuss geometry of circles on the Euclidean plane:
-(\ref{chap:inscribed-angle}) Inscribed angles, (\ref{chap:inversion}) Inversion.
+(\ref{chap:inscribed-angle}) Inscribed angles; (\ref{chap:inversion}) Inversion.
 It  will be used to construct the model of the hyperbolic plane.
 
 Further 
 we discuss non-Euclidean geometry:
 (\ref{chap:non-euclid})
-Neutral geometry --- geometry without the parallel postulate,
+Neutral geometry --- geometry without the parallel postulate;
 (\ref{chap:poincare})
 Conformal disc model ---
 this is a construction of the hyperbolic plane,
@@ -144,12 +147,12 @@ an example of a neutral plane which is not Euclidean.
 In (\ref{chap:h-plane}) we discuss geometry of the constructed hyperbolic plane --- this is the highest point in the book.
 
 In the reamining chapters we discuss some additional topics:
-(\ref{chap:trans}) Affine geometry,
-(\ref{chap:proj}) Projective geometry,
-(\ref{chap:sphere}) Spherical geometry, 
-(\ref{chap:klein}) Projective model of the hyperbolic plane,
-(\ref{chap:complex}) Complex coordinates,
-(\ref{chap:car}) Geometric constructions,
+(\ref{chap:trans}) Affine geometry;
+(\ref{chap:proj}) Projective geometry;
+(\ref{chap:sphere}) Spherical geometry;
+(\ref{chap:klein}) Projective model of the hyperbolic plane;
+(\ref{chap:complex}) Complex coordinates;
+(\ref{chap:car}) Geometric constructions;
 (\ref{chap:area}) Area.
 The proofs in these chapters are not completely rigorous.
 

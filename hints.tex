@@ -4,7 +4,7 @@
 \addtocontents{toc}{\protect\end{center}}
 \chapter{Hints}
 %\addcontentsline{toc}{chapter}{Hints}
-\section*{Chapter~\ref{chap:metr}}
+%\subsection*{Chapter~\ref{chap:metr}}
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
 
@@ -194,7 +194,7 @@ $$d_{\mathcal{Z}}(h(A'),h(A))<\epsilon
 d_{\mathcal{X}}(A',A)<\delta_2.$$ 
 Hence the result.
 
-\section*{Chapter~\ref{chap:axioms}}
+%\subsection*{Chapter~\ref{chap:axioms}}
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
 
@@ -246,7 +246,7 @@ Applying Proposition~\ref{prop:vert}, we get that
 $\measuredangle AOC= \measuredangle BOD$.
 It remains to apply Axiom~\ref{def:birkhoff-axioms:3}.
 
-\section*{Chapter~\ref{chap:half-planes}}
+%\subsection*{Chapter~\ref{chap:half-planes}}
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
 
@@ -299,7 +299,7 @@ Show that $Z$ and $X$ lie on one side from~$(PQ)$.
 Repeat the argument to show that $Z$ and $Y$ lie on one side from~$(PQ)$.
 It follows that $X$ and $Y$ lie on the same side from $(PQ)$ --- a contradiction.
 
-\section*{Chapter~\ref{chap:cong}}
+%\subsection*{Chapter~\ref{chap:cong}}
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
 
@@ -338,7 +338,7 @@ $$\measuredangle ABC\equiv -\measuredangle ABC.$$
 Conclude that $\measuredangle ABC=0$ or $\pi$.
 That is, $\triangle ABC$ is degenerate --- a contradiction. 
 
-\section*{Chapter~\ref{chap:perp}}
+%\subsection*{Chapter~\ref{chap:perp}}
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
 
@@ -417,7 +417,7 @@ Therefore,
 {
 
 \begin{wrapfigure}{r}{21mm}
-\begin{lpic}[t(-2mm),b(0mm),r(0mm),l(0mm)]{pics/ex-obtuce(1)}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/ex-obtuce(1)}
 \lbl[t]{20,8;$A$}
 \lbl[tr]{5.5,8;$B$}
 \lbl[br]{2,21;$C$}
@@ -474,25 +474,34 @@ Note that $P'$ lies on both circles and $P'\ne P$ if and only if $P\notin(OO')$.
 Let $A$ and $B$ be the points of intersection.
 Note that the centers lie on the perpendicular bisector of the segment~$[AB]$.
 
-\begin{center}
+\begin{minipage}{.48\textwidth}
+\centering
 \begin{lpic}[t(7mm),b(0mm),r(0mm),l(0mm)]{pics/perp-constr(1)}
 \lbl[b]{20.5,50;{\bf Exercise~\ref{ex:construction-perpendicular}.}}
 \end{lpic}
-\begin{lpic}[t(7mm),b(0mm),r(0mm),l(5mm)]{pics/center(1)}
+\end{minipage}
+\hfill
+\begin{minipage}{.48\textwidth}
+ \begin{lpic}[t(7mm),b(0mm),r(0mm),l(5mm)]{pics/center(1)}
 \lbl[b]{20.5,50;{\bf Exercise~\ref{ex:center}.}}
 \end{lpic}
-\end{center}
-
-\begin{center}
+\end{minipage}
+\medskip
+\begin{minipage}{.48\textwidth}
+\centering
 \begin{lpic}[t(7mm),b(0mm),r(0mm),l(0mm)]{pics/tangent-constr(1)}
 \lbl[b]{20.5,50;{\bf Exercise~\ref{ex:tangent}.}}
 \end{lpic}
+\end{minipage}
+\hfill
+\begin{minipage}{.48\textwidth}
+\centering
 \begin{lpic}[t(7mm),b(0mm),r(0mm),l(5mm)]{pics/tangent-circ-constr(1)}
 \lbl[b]{20.5,50;{\bf Exercise~\ref{ex:tangent-circle}.}}
 \end{lpic}
-\end{center}
-
-\section*{Chapter~\ref{chap:parallel}}
+\end{minipage}
+\medskip
+%\subsection*{Chapter~\ref{chap:parallel}}
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
 
@@ -510,6 +519,9 @@ By the AA similarity condition, the transformation multiplies the sides of any n
 Note that for any two nondegenerate triangles which share one side this number is the same.
 Applying this observation to a chain of triangles leads to a solution.
 
+\parbf{Exercise~\ref{ex:pyth}.}
+Apply that $\triangle ADC\sim \triangle CDB$.
+
 %(???
 
 \parbf{Exercise~\ref{ex:two-pairs-sim}.}
@@ -523,11 +535,12 @@ Use AA and equality of vertical angles to prove that $\triangle AZX\sim \triangl
 
 %???)
 
-\parbf{Exercise~\ref{ex:pyth}.}
-Apply that $\triangle ADC\sim \triangle CDB$.
-
 \parbf{Exercise~\ref{ex:pyth-conv}.}
 Apply the Pythagorean theorem (\ref{thm:pyth}) and the SSS congruence condition.
+
+%\subsection*{Chapter~\ref{chap:angle-sum}}
+\refstepcounter{chapter}
+\setcounter{eqtn}{0}
 
 \parbf{Exercise~\ref{ex:pent}.}
 Apply twice Theorem~\ref{thm:isos} and twice Theorem~\ref{thm:3sum}.
@@ -576,14 +589,17 @@ Applying \ref{thm:3sum} and \ref{thm:isos} and simplifying, you should get
 
 Show that $\angle CAX$ has to be acute.
 It follows then that 
-$\measuredangle CAX=\pm\tfrac\pi4$.
+$\measuredangle CAX\z=\pm\tfrac\pi4$.
+
+\parbf{Exercise~\ref{ex:quadrilateral}.}
+Apply Theorem~\ref{thm:3sum} to $\triangle ABC$ and $\triangle BDA$.
 
 \parbf{Exercise~\ref{ex:smililar+parallel}.}
 By the transversal property~\ref{thm:parallel-2},
 \[\measuredangle B'BC \equiv \pi -\measuredangle C'B'B.\]
 
 Since $B'$ lies between $A$ and $B$, we get that 
-$\measuredangle ABC=\measuredangle B'BC$ and $\measuredangle AB'C'+\measuredangle C'B'B\equiv \pi$.
+$\measuredangle ABC=\measuredangle B'BC$ and $\measuredangle AB'C'+\measuredangle C'B'B\z\equiv \pi$.
 Hence $\measuredangle ABC= \measuredangle AB'C'$.
 
 The same way we can prove that 
@@ -598,8 +614,6 @@ Draw the line $(BC_3)$
 and draw parallel lines thru $C_1$ and~$C_2$.
 The points of intersections of these two lines with $(AB)$ trisect the segment $[AB]$.
 
-\parbf{Exercise~\ref{ex:quadrilateral}.}
-Apply Theorem~\ref{thm:3sum} to $\triangle ABC$ and $\triangle BDA$.
 
 \parbf{Exercise~\ref{ex:romb}.}
 Since $\triangle ABC$ is isosceles, $\measuredangle CAB=\measuredangle BCA$.
@@ -690,7 +704,7 @@ $(x,y)\mapsto \tfrac{AB}{|x_A-x_B|}\cdot x$ is an isometry;
 that is, $\ell$ is a line.
 It remains to apply Axiom~\ref{def:birkhoff-axioms:1}.
 
-\section*{Chapter~\ref{chap:triangle}}
+%\subsection*{Chapter~\ref{chap:triangle}}
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
 
@@ -754,7 +768,7 @@ the point of intersection of two external and one internal bisectors of $\triang
 \parbf{Exercise~\ref{ex:bisector-parallel}.} Apply \ref{thm:isos}, \ref{thm:parallel-2} 
 and \ref{lem:parallelogram}.
 
-\section*{Chapter~\ref{chap:inscribed-angle}}
+%\subsection*{Chapter~\ref{chap:inscribed-angle}}
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
 
@@ -911,7 +925,7 @@ Note that one the two arcs with endpoints $A$ and $C$ is tangent to~$[AX)$.
 The uniqueness follow from the propositions \ref{prop:arc(angle=angle)}
 and \ref{prop:arc(angle=tan)}.
 
-\parbf{Exercise~\ref{ex:tangent}.} Use \ref{prop:arc(angle=tan)} and \ref{thm:3sum} to show that 
+\parbf{Exercise~\ref{ex:tangent-lim}.} Use \ref{prop:arc(angle=tan)} and \ref{thm:3sum} to show that 
 \[\measuredangle XAY=\measuredangle ACY.\]
 By Axiom \ref{def:birkhoff-axioms:2c}, $\measuredangle ACY\to 0$ as $AY\to 0$;
 hence the result.
@@ -924,7 +938,7 @@ To show that it produces the needed point, apply Theorem \ref{thm:inscribed-angl
 
 }
 
-\section*{Chapter~\ref{chap:inversion}}
+%\subsection*{Chapter~\ref{chap:inversion}}
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
 
@@ -1036,7 +1050,7 @@ The point $A$ will go to infinity, the two circles tangent at $A$ will become pa
 and the two parallel lines will become circles tangent at~$A$; see the diagram.
 
 \begin{wrapfigure}[7]{i}{48mm}
-\begin{lpic}[t(-0mm),b(-1mm),r(0mm),l(0mm)]{pics/ex-inverse(1)}
+\begin{lpic}[t(-2mm),b(-1mm),r(0mm),l(0mm)]{pics/ex-inverse(1)}
 \lbl[bl]{28,9;$B'$}
 \lbl[br]{19,9;$A$}
 \end{lpic}
@@ -1086,7 +1100,7 @@ $\Omega_3\perp \Gamma$.
 \parbf{Exercise~\ref{ex:construction-perp-clines}.}
 Follow the solution of Exercise~\ref{ex:cline-perp-to-two}.
 
-\section*{Chapter~\ref{chap:non-euclid}}
+%\subsection*{Chapter~\ref{chap:non-euclid}}
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
 
@@ -1158,7 +1172,7 @@ Note that
 $|\measuredangle ADC|+|\measuredangle CDB|=\pi$.
 Then apply the definition of the defect.
 
-\section*{Chapter~\ref{chap:poincare}}
+%\subsection*{Chapter~\ref{chap:poincare}}
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
 
@@ -1222,7 +1236,7 @@ Note that $\hat p=\tfrac{x+y}2$ and
 \[\frac{(1+x)\cdot(1-p)}{(1-x)\cdot(1+p)}=\frac{(1+p)\cdot(1-y)}{(1-p)\cdot(1+y)}.\]
 It remains to show that all this implies $0<\hat p <p$.
 
-\begin{wrapfigure}[7]{r}{44mm}
+\begin{wrapfigure}{r}{44mm}
 \begin{lpic}[t(-10mm),b(-6mm),r(0mm),l(0mm)]{pics/absolute-triangle-4(1)}
 \end{lpic}
 \end{wrapfigure}
@@ -1279,7 +1293,7 @@ Hence the part \textit{(\ref{ex:coshsinh})} follows.
 
 The parts \textit{(\ref{ex:coshtanh})} and \textit{(\ref{ex:coshcosh})} follow from \textit{(\ref{ex:cosh/2})}, \textit{(\ref{ex:coshsinh})}, the definition of hyperbolic tangent and the double-argument identity for hyperbolic cosine, see \ref{double-argument}.
 
-\section*{Chapter~\ref{chap:h-plane}}
+%\subsection*{Chapter~\ref{chap:h-plane}}
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
 
@@ -1313,7 +1327,7 @@ Without loss of generality, we may assume that $Q$ is the center of the absolute
 In this case $\measuredangle_hPQR=\measuredangle PQR=\pm\tfrac\pi2$ and $PQ=QR$.
 
 \begin{wrapfigure}{r}{44mm}
-\begin{lpic}[t(-4mm),b(-0mm),r(0mm),l(-0mm)]{pics/h-circle-5(1)}
+\begin{lpic}[t(-7mm),b(-0mm),r(0mm),l(-0mm)]{pics/h-circle-5(1)}
 \lbl[tr]{22,20;$Q$}
 \lbl[t]{37,20;$P$}
 \lbl[br]{21,37;$R$}
@@ -1343,7 +1357,7 @@ Apply the hyperbolic Pythagorean theorem and the definition of hyperbolic cosine
 
 }
 
-\section*{Chapter~\ref{chap:trans}}
+%\subsection*{Chapter~\ref{chap:trans}}
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
 
@@ -1422,7 +1436,7 @@ Apply \ref{cor:invese-comp} to show that the composition
 $\iota_\Gamma\circ\iota_\Omega\circ\iota_\Gamma$
 is the reflection in~$\ell$.
 
-\section*{Chapter~\ref{chap:proj}}
+%\subsection*{Chapter~\ref{chap:proj}}
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
 
@@ -1465,8 +1479,12 @@ The latter is equivalent to $m\ni S$
 where $m$ is the line given by the equation 
 $a\cdot x+b\cdot y=1$ and $S=(p,q)$.
 
+To extend this bijection to the whole projective plane, assume that 
+(1) the ideal line corresponds to the origin 
+and (2) the ideal point given by the pencil of the lines $b\cdot x-a\cdot y=c$ for different values of $c$ corresponds to the line given by the equation $a\cdot x+b\cdot y=0$.
+
 \begin{wrapfigure}{r}{24mm}
-\begin{lpic}[t(4mm),b(-5mm),r(0mm),l(-0mm)]{pics/dual-desargues(1)}
+\begin{lpic}[t(0mm),b(-5mm),r(0mm),l(-0mm)]{pics/dual-desargues(1)}
 \lbl[l]{7.5,28;$P$}
 \lbl[r]{8.5,12.6;$P'$}
 \lbl[tw]{6,6;$Q$}
@@ -1475,10 +1493,6 @@ $a\cdot x+b\cdot y=1$ and $S=(p,q)$.
 \lbl[br]{3,10;$R'$}
 \end{lpic}
 \end{wrapfigure}
-
-To extend this bijection to the whole projective plane, assume that 
-(1) the ideal line corresponds to the origin 
-and (2) the ideal point given by the pencil of the lines $b\cdot x-a\cdot y=c$ for different values of $c$ corresponds to the line given by the equation $a\cdot x+b\cdot y=0$.
 
 \parbf{Exercise~\ref{ex:dual-pappus}.}
 Assume one set of concurrent lines $a$, $b$, $c$, 
@@ -1501,7 +1515,7 @@ Then the lines $(PP')$, $(QQ')$ and $(RR')$ are concurrent.
 \parbf{Exercise~\ref{ex:dual-desargues-construction}.} To solve \textit{(\ref{ex:dual-desargues-construction:a})},
 assume $(AA')$ and $(BB')$ are the given lines and $C$ is the given point.
 Apply the dual Desargues' theorem (\ref{thm:dual-desargues}) to construct $C'$ so that $(AA')$, $(BB')$ and $(CC')$ are concurrent. 
-Since $(AA')\parallel (BB')$, 
+Since $(AA')\z\parallel (BB')$, 
 we get that 
 $(AA')\parallel (BB')\parallel (CC')$.
 
@@ -1549,7 +1563,7 @@ does not admit an integer solution and then apply part~\textit{(\ref{ex:oder:b})
 To solve \textit{(\ref{ex:oder:d})}, count the number of lines crossing a given line using the 
 part \textit{(\ref{ex:oder:a})} and apply~\textit{(\ref{ex:oder:b})}.
 
-\section*{Chapter~\ref{chap:sphere}}
+%\subsection*{Chapter~\ref{chap:sphere}}
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
 
@@ -1619,7 +1633,7 @@ $OA'=OB'=OC'$.
 map to the medians of Euclidean a triangle $A'B'C'$.
 It remains to apply Theorem~\ref{thm:centroid} for $\triangle A'B'C'$.
 
-\section*{Chapter~\ref{chap:klein}}
+%\subsection*{Chapter~\ref{chap:klein}}
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
 
@@ -1736,11 +1750,18 @@ In the Euclidean plane, the circle $\Gamma_2$ is tangent to $k$;
 that is, the point $T$ of intersection of $\Gamma_2$ and $k$ is unique.
 It defines a unique line $(PT)$ parallel to~$\ell$.
 
-\section*{Chapter~\ref{chap:complex}}
+%\subsection*{Chapter~\ref{chap:complex}}
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
 
 \parbf{Exercise~\ref{ex:|zw|}.} Use that $|z|^2=z\cdot \bar z$ for $z=v$, $w$ and $v\cdot w$.
+
+%(???
+
+\parbf{Exercise~\ref{ex:ptolemy}.} Given a quadrilateral $ABCD$, we can choose the complex coordinates so that $A$ has complex coordinate $0$. 
+Rewrite the terms in the Ptolemy's inequality in terms of the complex coordinates $u$, $v$ and $w$ of $B$, $C$ and $D$; apply the identity and the triangle inequality.
+
+%???)
 
 \parbf{Exercise~\ref{ex:3-sum-C}.} 
 Let $z$, $v$ and $w$ denote the complex coordinates of $Z$, $V$ and $W$ correspondingly.
@@ -1883,14 +1904,14 @@ Apply Schwarz--Pick theorem for a function $f$ such that $f(0)\z=0$ and then app
 {
 
 \begin{wrapfigure}{r}{30mm}
-\begin{lpic}[t(-6mm),b(-0mm),r(0mm),l(0mm)]{pics/appol(1)}
+\begin{lpic}[t(-8mm),b(-0mm),r(0mm),l(0mm)]{pics/appol(1)}
 \lbl[br]{6,5;$O$}
 \lbl[tl]{25,21;$P$}
 \lbl[b]{21,15;$X$}
 \end{lpic}
 \end{wrapfigure}
 
-\section*{Chapter~\ref{chap:car}}
+%\subsection*{Chapter~\ref{chap:car}}
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
 
@@ -1965,15 +1986,17 @@ Note that the line $(PZ)$ passes thru the common center.
 
 The center is the intersection of $(PZ)$ and another line constructed the same way.
 
-}
 
-\section*{Chapter~\ref{chap:area}}
+
+%\subsection*{Chapter~\ref{chap:area}}
 \refstepcounter{chapter}
 \setcounter{eqtn}{0} 
 
 \parbf{Exercise~\ref{ex:triangle-convex}.}
 Assume the contrary; 
 that is, there is a point $W\in [XY]$ such that $W\notin\solidtriangle ABC$.
+
+}
 
 Without loss of generality, we may assume that $W$ and $A$ lie on opposite sides from the line~$(BC)$.
 
@@ -2001,11 +2024,6 @@ which is not parallel to any of the segments $[A_1B_1],\dots,[A_nB_n]$.
 It follows that $[PQ]$ has at most one common point with each of the sets $[A_iB_i]$ and~$\{C_i\}$.
 Since $[PQ]$ contains infinite number of points, we arrive to a contradiction.
 
-\parbf{Exercise~\ref{ex:poly-circ}.} 
-First note that among elementary sets
-only one-point sets can be subsets of the a circle.
-It remains to note that any circle contains an infinite number of points.
-
 \begin{wrapfigure}[9]{r}{26mm}
 \begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/two-parallelograms-sol(1)}
 \lbl[tr]{1,7;$A$}
@@ -2018,6 +2036,12 @@ It remains to note that any circle contains an infinite number of points.
 \lbl[b]{23,29;$E$}
 \end{lpic}
 \end{wrapfigure}
+
+\parbf{Exercise~\ref{ex:poly-circ}.} 
+First note that among elementary sets
+only one-point sets can be subsets of the a circle.
+It remains to note that any circle contains an infinite number of points.
+
 
 \parbf{Exercise~\ref{ex:two-parallelograms}.}
 Let $E$ denotes the point of intersection of the lines $(BC)$ and~$(C'D')$.

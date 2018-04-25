@@ -116,14 +116,28 @@ is called the
 \index{absolute value}\emph{absolute value} of $z$.
 If $|z|=1$, then $z$ is called a \index{unit complex number}\emph{unit complex number}.
 
-Note that 
-if $Z$ and $W$ are points in the Euclidean plane, $z$ and $w$ are their complex coordinates, then
-$$ZW=|z-w|.$$
-
 \begin{thm}{Exercise}\label{ex:|zw|}
 Show that $|v\cdot w|=|v|\cdot |w|$ for any $v,w\in\mathbb{C}$.
 \end{thm}
 
+%(???
+
+Note that 
+if $Z$ and $W$ are points in the Euclidean plane, $z$ and $w$ are their complex coordinates, then
+$$ZW=|z-w|.$$
+The triangle inequality for the points with complex coordinates $0$, $v$ and $v+w$ implies that
+\[|v+w|\le |v|+|w|\]
+for any $v,w\in\mathbb{C}$;
+this inequality is also called \index{triangle inequality}\emph{triangle inequality}.
+
+\begin{thm}{Exercise}\label{ex:ptolemy}
+Use the identity 
+\[u\cdot (v-w)+v\cdot (w-z)+w\cdot(u-v)=0\]
+for $u, v,w\in\mathbb{C}$ and the triangle inequality
+to prove the Ptolemy's inequality (\ref{ptolemy-inq}).
+\end{thm}
+
+%???)
 
 \section*{Euler's formula}
 \addtocontents{toc}{Euler's formula.}
