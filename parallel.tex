@@ -38,7 +38,7 @@ Then there is a point, say $Z$, of intersection of $\ell$ and~$n$.
 Then by Theorem~\ref{perp:ex+un},
 $\ell=n$.
 
-Since any line is parallel to itself, we have $\ell\parallel n$ --- a contradiction.
+Since any line is parallel to itself, we have $\ell\parallel n$, a contradiction.
 \qeds
 
 \begin{thm}{Theorem}\label{thm:parallel}
@@ -167,7 +167,9 @@ $A$ and $D$ lie on the same sides of~$(BC)$.
 
 In the proof of the transversal property we will use the following lemma.
 
-\begin{thm}{Lemma}\label{lem:2angles1}
+%(???
+
+\begin{thm}[\abs]{Lemma}\label{lem:2angles1}
 Let $ABC$ be a nondegenerate triangle.
 Then
 \[2\cdot(\measuredangle CAB+\measuredangle ABC)\not\equiv 0.\eqlbl{eq:nepi}\]
@@ -194,14 +196,11 @@ in particular,
 $$\measuredangle CMB=\measuredangle DMA.\eqlbl{eq:CMB=DMA}$$
 By construction, $AM\z=BM$ and $CM\z=DM$.
 Therefore, 
-$$\triangle CMB\cong \triangle DMA;$$ 
-in particular, 
-$$\measuredangle ABC\equiv\pm\measuredangle BAD.\eqlbl{eq:ABC=BAD}$$
+$$\triangle CMB\cong \triangle DMA$$ 
+and
+$$\measuredangle ABC\equiv\measuredangle BAD.$$
+(From \ref{eq:CMB=DMA}, we can not have a minus sign in the last equality.)
 
-According to \ref{thm:signs-of-triug}, 
-the angles $MBC$ and $MAD$ have the same signs as $\angle CMB$ and $\angle DMA$.
-Therefore,  \ref{eq:CMB=DMA} and \ref{eq:ABC=BAD} imply
-$$\measuredangle ABC=\measuredangle BAD.$$
 In particular,
 \begin{align*}
 \measuredangle CAD&\equiv \measuredangle CAB+\measuredangle BAD\equiv
@@ -260,6 +259,7 @@ Therefore it must be the line $(CD)$ such that \ref{A B C + B C D} hold.
 Hence the ``if'' part follows.
 \qeds
 
+%???)
 
 \begin{thm}{Exercise}\label{ex:smililar+parallel}
 Let $\triangle ABC$ be a nondegenerate triangle.
@@ -282,12 +282,14 @@ $$\measuredangle A B C+ \measuredangle B C A + \measuredangle C A B \equiv \pi.$
 
 The proof uses the same construction as in Lemma~\ref{lem:2angles1}.
 
+%(???
+
 \parit{Proof.} 
 First note that 
 if $\triangle A B C$ is degenerate, then the equality follows from Theorem~\ref{thm:straight-angle}.
 Further we assume that $\triangle A B C$ is nondegenerate.
 
-\begin{wrapfigure}{r}{23mm}
+\begin{wrapfigure}{o}{23mm}
 \begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/2sum1(1)}
 \lbl[l]{16,2;$A$}
 \lbl[b]{6,23;$B$}
@@ -301,21 +303,23 @@ Let $M$ be the midpoint of $[AB]$.
 Choose $D\z\in (CM)$ distinct from $C$ so that $DM=CM$.
 
 The same argument as in Lemma~\ref{lem:2angles1} shows that 
-\[\measuredangle ABC=\measuredangle BAD\eqlbl{eq:ABC=BAD}\]
+\[\measuredangle ABC=\measuredangle BAD\eqlbl{eq:ABC=BAD2}\]
 and therefore 
 \[\measuredangle CAD=\measuredangle CAB+\measuredangle ABC.\eqlbl{eq:ABC+CAB}\]
 
 Let us apply the transversal property (\ref{thm:parallel-2}) for the lines $(BC)$ and $(AD)$ with transversal $(BA)$.
-From \ref{eq:ABC=BAD} we get that $(CB)\parallel(AD)$.
+From \ref{eq:ABC=BAD2} we get that $(CB)\parallel(AD)$.
 
 Note that $B$ lies on the same side from $(CA)$ with $M$ and $D$.
 Therefore, applying the transversal property again, we get that 
 \[\measuredangle BCA+\measuredangle CAD\equiv \pi.\]
 The latter identity and \ref{eq:ABC+CAB} imply the theorem.\qeds
 
+%???)
+
 {
 
-\begin{wrapfigure}{o}{43mm}
+\begin{wrapfigure}{r}{43mm}
 \begin{lpic}[t(-3mm),b(0mm),r(0mm),l(0mm)]{pics/bisector-BA=AD=DC(1)}
 \lbl[b]{9,26;$A$}
 \lbl[t]{2,1;$B$}
@@ -346,8 +350,8 @@ for any $\triangle ABC$.
 
 {
 
-\begin{wrapfigure}[5]{o}{30mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/right-isos(1)}
+\begin{wrapfigure}[4]{r}{30mm}
+\begin{lpic}[t(-8mm),b(0mm),r(0mm),l(0mm)]{pics/right-isos(1)}
 \lbl[t]{3,0;$A$}
 \lbl[br]{15,10;$B$}
 \lbl[t]{28,0;$C$}
@@ -366,7 +370,7 @@ Show that $\angle ACD$ is right.
 Let $\triangle ABC$ be an isosceles nondegenerate triangle with base~$[AC]$. 
 Assume that a circle is passing thru $A$,
 centered at a point on $[AB]$ and tangent to $(BC)$ at the point~$X$.
-Show that $\measuredangle CAX=\pm\tfrac\pi4$.
+Show that $\measuredangle CAX\z=\pm\tfrac\pi4$.
 \end{thm}
 
 }
@@ -536,13 +540,6 @@ That is, prove that given the real numbers $a$, $b$ and $c$ such that
 there is a triangle $ABC$
 such that $a=BC$, $b=CA$ and $c=AB$.
 \end{thm} 
-
-\begin{thm}{Exercise}\label{ex:line-coord}
-Let $(x_A,y_A)$ and $(x_B,y_B)$ be the coordinates of distinct points $A$ and $B$ in the Euclidean plane.
-Show that the line $(AB)$ is the set of points with coordinates $(x,y)$ such that
-\[(x-x_A)\cdot (y_B-y_A)=(y-y_A)\cdot (x_B-x_A).\]
-
-\end{thm}
 
 %(???
 

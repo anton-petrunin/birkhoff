@@ -299,6 +299,10 @@ Show that $Z$ and $X$ lie on one side from~$(PQ)$.
 Repeat the argument to show that $Z$ and $Y$ lie on one side from~$(PQ)$.
 It follows that $X$ and $Y$ lie on the same side from $(PQ)$ --- a contradiction.
 
+\parbf{Exercise~\ref{ex:intersecting-circles-3}.} The ``only-if'' part follows from the triangle inequality.
+To prove ``if'' part apply Theorem \ref{thm:abc} for the values $r_1$, $r_2$ and $d$.
+
+
 %\subsection*{Chapter~\ref{chap:cong}}
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
@@ -465,10 +469,7 @@ that is, $P$ lies outside~$\Gamma$.
 Let $P'$ be the reflection of $P$ in~$(OO')$.
 Note that $P'$ lies on both circles and $P'\ne P$ if and only if $P\notin(OO')$.
 
-\parbf{Exercise~\ref{ex:tangent-circles-2}.} 
-\textit{(a)} Apply Exercise~\ref{ex:tangent-circles}.
-
-\parit{(b)} Apply Theorem~\ref{thm:abc}.
+\parbf{Exercise~\ref{ex:tangent-circles-2}.}  Apply Exercise~\ref{ex:tangent-circles}.
 
 \parbf{Exercise~\ref{ex:tangent-circles-3}.}
 Let $A$ and $B$ be the points of intersection.
@@ -693,18 +694,7 @@ a^2&=(c-x)^2+y^2
 $$
 if $0<a\le b\le c\le a+c$.
 
-\parbf{Exercise~\ref{ex:line-coord}.}
-Without loss of generality, we can assume that $x_A\z\ne x_B$;
-otherwise switch $x$ and~$y$.
 
-Let $\ell$ denotes the set of points with coordinates $(x,y)$ satisfying
-\[(x-x_A)\cdot (y_B-y_A)=(y-y_A)\cdot (x_B-x_A).\]
-Note that $A, B\in \ell$
-
-Show that the map $\ell\to \mathbb{R}$ defined as
-$(x,y)\mapsto \tfrac{AB}{|x_A-x_B|}\cdot x$ is an isometry;
-that is, $\ell$ is a line.
-It remains to apply Axiom~\ref{def:birkhoff-axioms:1}.
 
 %???(
 
@@ -837,17 +827,17 @@ on the diameters $[AB]$ and $[A'B']$ correspondingly.
 By Corollary~\ref{cor:right-angle-diameter},
 any point $Z$ in the intersection $\Gamma\cap \Gamma'$ will do.
 
+{
+
+\begin{wrapfigure}[11]{r}{34mm}
+\begin{lpic}[t(-5mm),b(-0mm),r(-1mm),l(0mm)]{pics/perp=constr(1)}
+\end{lpic}
+\end{wrapfigure}
+
 \parbf{Exercise~\ref{ex:VVAA}.} 
 Note that $\measuredangle AA'B=\pm\tfrac\pi2$ and $\measuredangle AB'B=\pm\tfrac\pi2$.
 Then apply Theorem~\ref{thm:inscribed-quadrilateral}
 to $\square AA'BB'$.
-
-{
-
-\begin{wrapfigure}{o}{34mm}
-\begin{lpic}[t(-5mm),b(-0mm),r(-1mm),l(0mm)]{pics/perp=constr(1)}
-\end{lpic}
-\end{wrapfigure}
 
 If $O$ is the center of the circle, then 
 $$\measuredangle AOB\equiv 2\cdot \measuredangle AA'B\equiv\pi.$$
@@ -997,16 +987,16 @@ By Lemma~\ref{lem:inversion-sim},
 \measuredangle IA'C'&\equiv -\measuredangle ICA.
 \end{align*}
 
-\begin{wrapfigure}[10]{o}{54mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/inv-constr(1)}
-\end{lpic}
-\end{wrapfigure}
-
 It remains to apply the theorem on the sum of angles of triangle (\ref{thm:3sum})
 to show that $(A'I)\z\perp (B'C')$, 
 $(B'I)\z\perp (C'A')$
 and
 $(C'I)\z\perp (B'A')$.
+
+\begin{wrapfigure}[10]{r}{54mm}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/inv-constr(1)}
+\end{lpic}
+\end{wrapfigure}
 
 \parbf{Exercise~\ref{ex:consturuction-of-inversion}.}
 Guess the construction from the diagram (the two nonintersecting lines on the diagram are parallel).
@@ -1026,15 +1016,9 @@ Assume $r$ is the radius of the circle of inversion.
 Then the left hand side above is the coordinate of $Q'$ 
 and the right hand side is the coordinate of the center of $\Gamma'$.
 
-\parbf{Exercise~\ref{ex:circumtool}.}
-A solution is given on page \pageref{page:solution-for-ex:circumtool}.
 
-\parbf{Exercise~\ref{ex:tangent-circ->parallels}.}
-Apply an inversion in a circle with the center at the only point of intersection of the circles;
-then use Theorem~\ref{thm:inverse}.
-
-\begin{center}
-\begin{lpic}[t(2mm),b(0mm),r(0mm),l(0mm)]{pics/4-circles-sol(1)}
+\begin{wrapfigure}[11]{r}{65mm}
+\begin{lpic}[t(-5mm),b(0mm),r(0mm),l(0mm)]{pics/4-circles-sol(1)}
 \lbl[r]{0,16;$P$}
 \lbl[t]{24,17;$Q$}
 \lbl[t]{49,19;$Q'$}
@@ -1047,7 +1031,14 @@ then use Theorem~\ref{thm:inverse}.
 \lbl[r]{18.5,14;$Y$}
 \lbl[tl]{60,10;$Y'$}
 \end{lpic}
-\end{center}
+\end{wrapfigure}
+
+\parbf{Exercise~\ref{ex:circumtool}.}
+A solution is given on page \pageref{page:solution-for-ex:circumtool}.
+
+\parbf{Exercise~\ref{ex:tangent-circ->parallels}.}
+Apply an inversion in a circle with the center at the only point of intersection of the circles;
+then use Theorem~\ref{thm:inverse}.
 
 \parbf{Exercise~\ref{ex:4-circles}.}
 Label the points of tangency by $X$, $Y$, $A$, $B$, $P$ and $Q$ as on the diagram above.
@@ -1253,7 +1244,7 @@ Note that $\hat p=\tfrac{x+y}2$ and
 It remains to show that all this implies $0<\hat p <p$.
 
 \begin{wrapfigure}{r}{44mm}
-\begin{lpic}[t(-10mm),b(-6mm),r(0mm),l(0mm)]{pics/absolute-triangle-4(1)}
+\begin{lpic}[t(-0mm),b(-6mm),r(0mm),l(0mm)]{pics/absolute-triangle-4(1)}
 \end{lpic}
 \end{wrapfigure}
 
@@ -1981,7 +1972,7 @@ Hence the statement follows.
 {
 
 \begin{wrapfigure}{r}{35mm}
-\begin{lpic}[t(-6mm),b(0mm),r(0mm),l(0mm)]{pics/polar-polar(1)}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/polar-polar(1)}
 \lbl[b]{32,21;$P$}
 \lbl[l]{23,8;$X'$}
 \lbl[l]{23,31.5;$X$}
