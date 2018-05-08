@@ -1,0 +1,310 @@
+\chapter[Similar triangles]{Similar triangles}\label{chap:parallel}
+\addtocontents{toc}{\protect\begin{quote}}
+
+
+
+\section*{Similar triangles}
+\addtocontents{toc}{Similar triangles.}
+
+Two triangles $A' B' C'$ and $A B C$ are called
+\index{triangle!similar triangles}\index{similar triangles}\emph{similar} (briefly \index{30@$\sim$}$\triangle A' B' C'\z\sim\triangle A B C$) if their sides are proportional; 
+that is, 
+$$A' B'
+=
+k\cdot A B,
+\quad
+B' C'=k\cdot B C
+\quad
+\text{and}
+\quad
+C' A'
+=
+k\cdot C A
+\eqlbl{dist}
+$$
+for some $k>0$, and the corresponding angles are equal up to sign:
+$$
+\begin{aligned}
+\measuredangle A' B' C'&=\pm\measuredangle A B C,
+\\
+\measuredangle B' C' A'&=\pm\measuredangle B C A,
+\\ 
+\measuredangle C' A' B'&=\pm\measuredangle CAB.
+\end{aligned}
+\eqlbl{angles}
+$$
+
+\parbf{Remarks.}
+\begin{itemize}
+\item According to \ref{thm:signs-of-triug}, in the above three equalities, the signs can be assumed to be the same.
+
+\item If $\triangle A' B' C'\sim\triangle A B C$ with $k=1$ in \ref{dist}, 
+ then $\triangle A' B' C'\z\cong\triangle A B C$.
+
+\item Note that ``$\sim$'' is an 
+\index{equivalence relation}\emph{equivalence relation}.
+That is, 
+\begin{enumerate}[(i)]
+\item $\triangle A B C\sim\triangle A B C$
+for any $\triangle A B C$.
+\item If $\triangle A' B' C'\sim\triangle A B C$, then
+$$\triangle A B C\sim\triangle A' B' C'.$$
+\item If $\triangle A'' B'' C''\sim\triangle A' B' C'$ and $\triangle A' B' C'\z\sim\triangle A B C$, then 
+$$\triangle A'' B'' C''\sim\triangle A B C.$$
+\end{enumerate}
+\end{itemize}
+
+Using the new notation ``$\sim$'', Axiom~\ref{def:birkhoff-axioms:4} can be formulated the following way.
+
+\begin{thm}{Reformulation of Axiom~\ref{def:birkhoff-axioms:4}}
+If for the two triangles 
+$\triangle ABC$, 
+$\triangle AB'C'$,
+and $k>0$ we have
+$B'\in [AB)$,
+$C'\in [AC)$,
+$AB'=k\cdot AB$ and
+$AC'=k\cdot AC$,
+then $\triangle ABC\sim\triangle AB'C'$.
+\end{thm}
+
+In other words, the Axiom~\ref{def:birkhoff-axioms:4} provides 
+a condition which guarantees that two triangles are similar.
+Let us formulate three more such {}\emph{similarity conditions}.
+
+\begin{thm}{Similarity conditions}\label{prop:sim}
+Two triangles 
+$\triangle ABC$ and $\triangle A'B'C'$
+are similar if one of the following conditions hold.
+
+(SAS)\index{SAS similarity condition} For some constant $k>0$ we have
+$$A B=k\cdot A' B',
+\quad 
+A C=k\cdot A' C'$$
+$$
+\text{and}
+\quad 
+\measuredangle B A C=\pm\measuredangle B' A' C'.$$
+
+(AA)\index{AA similarity condition} The triangle $A' B' C'$ is nondegenerate
+and 
+$$\measuredangle A B C
+=
+\pm\measuredangle A' B' C',
+\quad 
+\measuredangle B A C
+=
+\pm\measuredangle B' A' C'.$$
+
+(SSS)\index{SSS similarity condition} For some constant $k>0$ we have
+$$A B=k\cdot A' B',
+\quad
+A C=k\cdot A' C',
+\quad
+CB=k\cdot C'B'.$$
+
+\end{thm}
+
+Each of these conditions is proved by applying Axiom~\ref{def:birkhoff-axioms:4} with the SAS, ASA and SSS congruence conditions correspondingly
+(see Axiom~\ref{def:birkhoff-axioms:3} and the conditions \ref{thm:ASA}, \ref{thm:SSS}).
+
+
+\parit{Proof.}
+Set $k=\tfrac{AB}{A'B'}$.
+Choose points $B''\in [A'B')$ and $C''\in [A'C')$,
+so that $A'B''=k\cdot A'B'$ and $A'C''=k\cdot A'C'$.
+By Axiom~\ref{def:birkhoff-axioms:4},
+$\triangle A'B'C'\z\sim \triangle A'B''C''$.
+
+Applying the SAS, ASA or SSS congruence condition, depending on the case, 
+we get that $\triangle A'B''C''\cong \triangle ABC$.
+Hence the result.
+\qeds
+
+
+
+A bijection $X\leftrightarrow X'$ from a plane to itself is called \index{angle preserving transformation}\emph{angle preserving transformation} if 
+\[\measuredangle ABC= \measuredangle A'B'C'\]
+for any triangle $ABC$ and its image $\triangle A'B'C'$.
+
+
+\begin{thm}{Exercise}\label{ex:angle-preserving-euclid}
+Show that any angle-preserving transformation of the plane multiplies all the distance by a fixed constant.
+\end{thm}
+
+
+
+\section*{Pythagorean theorem}
+\addtocontents{toc}{Pythagorean theorem.}
+
+A triangle is called \index{triangle!right triangle}\emph{right} if one of its angles is right.
+The side opposite the right angle is called the \index{hypotenuse}\emph{hypotenuse}. 
+The sides adjacent to the right angle are called \index{leg}\emph{legs}. 
+
+
+\begin{thm}{Theorem}\label{thm:pyth}
+Assume $\triangle ABC$ is a right triangle with the right angle at~$C$.
+Then
+$$AC^2+BC^2=AB^2.$$ 
+
+\end{thm}
+
+\parit{Proof.}
+Let $D$ be the foot point of $C$ on~$(AB)$.
+
+\begin{wrapfigure}[4]{r}{44mm}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(2mm)]{pics/pyth(1)}
+\lbl[rt]{1,0;$A$}
+\lbl[lt]{40,0;$B$}
+\lbl[b]{9,19;$C$}
+\lbl[t]{9,0;$D$}
+\end{lpic}
+\end{wrapfigure}
+
+According to Lemma~\ref{lem:perp<oblique},
+\begin{align*}
+AD&<AC<AB
+\intertext{and}
+BD&<BC<AB.
+\end{align*}
+Therefore, $D$ lies between $A$ and $B$;
+in particular, 
+$$AD+BD=AB.\eqlbl{AD+BD=AB}$$
+
+Note that by the AA similarity condition, we have
+$$\triangle ADC\sim\triangle ACB\sim \triangle CDB.$$
+In particular,
+$$
+\frac{A D}{A C}=\frac{A C}{A B}
+\quad
+\text{and}
+\quad
+\frac{B D}{B C}=\frac{B C}{B A}.
+\eqlbl{BCD}$$
+
+Let us rewrite the two identities in \ref{BCD}:
+\begin{align*}
+AC^2=AB\cdot AD
+\quad
+\text{and}
+\quad
+BC^2=AB\cdot B D.
+\end{align*}
+Summing up these two identities and applying \ref{AD+BD=AB}, we get that
+$$AC^2 +BC^2=AB\cdot (AD+ B D)=AB^2.$$
+\qedsf
+
+The idea in the proof above appears in the Elements, see \cite[X.33]{euclid},
+but the proof given there \cite[I.47]{euclid} is different; 
+it uses area method discussed in Chapter \ref{chap:area}.
+
+
+\begin{thm}{Exercise}\label{ex:pyth}
+Assume $A$, $B$, $C$ and $D$ are as in the proof above.
+Show that 
+$$CD^2=AD\cdot BD.$$
+
+\end{thm}
+
+The following exercise is the converse to the Pythagorean theorem.
+
+\begin{thm}{Exercise}\label{ex:pyth-conv}
+Assume that $ABC$ is a triangle such that
+$$AC^2+BC^2=AB^2.$$ 
+Prove that the angle at $C$ is right.
+\end{thm}
+
+
+\section*{Method of similar triangles}
+\addtocontents{toc}{Method of similar triangles.}
+
+%(???
+
+\begin{wrapfigure}[7]{r}{25mm}
+\begin{lpic}[t(-10mm),b(0mm),r(0mm),l(-0mm)]{pics/two-pairs-sim(1)}
+\lbl[b]{2,31;$A$}
+\lbl[b]{23,29.5;$B$}
+\lbl[bl]{8,24.5;$Z$}
+\lbl[lt]{6,4;$C$}
+\lbl[rb]{2,21;$X$}
+\lbl[l]{15,15;$Y$}
+\end{lpic}
+\end{wrapfigure}
+
+The proof of the Pythagorean theorem given above is a good example using the \emph{method of similar triangles}.
+To apply this method, one has to search for pairs of similar triangles and then use the proportionality of corresponding sides and/or equalities of corresponding angles.
+Finding such pairs might be tricky at first. 
+
+
+\begin{thm}{Exercise}\label{ex:two-pairs-sim}
+Let $ABC$ be a nondegenerate triangle and the points $X$,  $Y$ and $Z$ as on the diagram.
+Assume $\measuredangle CAY\z\equiv\measuredangle XBC$.
+Find three pairs of similar triangles with these six points as the vertexes
+and prove their similarity.
+\end{thm}
+
+\section{Ptolemy's inequality}
+\addtocontents{toc}{Ptolemy's inequality.}
+
+A \index{quadrilateral}\emph{quadrilateral} is defined as an ordered quadruple of distinct points in the plane.
+The quadrilateral $ABCD$ will be also denoted by \index{25@$\square$}$\square ABCD$.
+
+Given a quadrilateral $ABCD$,
+the four segments $[AB]$, $[BC]$, $[CD]$ and $[DA]$ are called \index{side!side of quadrilateral}\emph{sides of $\square ABCD$};
+the remaining two segments $[AC]$ and $[BD]$ are called \index{diagonals of quadrilateral}\emph{diagonals of $\square ABCD$}.
+
+\begin{thm}{Ptolemy's inequality}\label{ptolemy-inq}
+In any quadrilateral, the product of diagonals can not exceed the sum of the product of its opposite sides.
+That~is, 
+$AC\cdot BD\le AB\cdot CD+ BC\cdot DA$
+for any $\square ABCD$.
+\end{thm}
+
+We will present a classical proof of this inequality using the method of similar triangles with an additional construction.
+This proof is given as an illustration --- it will not be used further in the sequel.
+
+\begin{wrapfigure}{r}{33mm}
+\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(-0mm)]{pics/ptolemy-inq(1)}
+\lbl[b]{2,27.5;$A$}
+\lbl[t]{2,0;$B$}
+\lbl[t]{30,7;$C$}
+\lbl[b]{28.5,30.5;$D$}
+\lbl[l]{14,9;$X$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Proof.}
+Consider the half-line $[AX)$ such that $\measuredangle BAX=\measuredangle CAD$.
+In this case $\measuredangle XAD\z=\measuredangle BAC$ since adding $\measuredangle BAX$ or $\measuredangle CAD$ to the corresponding sides produces $\measuredangle BAD$.
+Note that we can choose $X$ so that 
+\[AX=\frac{AB}{AC}\cdot AD.\]
+In this case we have
+\begin{align*}\frac{AX}{AD}&=\frac{AB}{AC},
+&
+\frac{AX}{BA}&=\frac{AD}{AC}.
+\intertext{Hence}
+\triangle BAX&\sim \triangle CAD,
+&
+\triangle XAD&\sim\triangle BAC.
+\intertext{Therefore}
+\frac{BX}{CD}&=\frac{AB}{AC},
+&
+\frac{XD}{BC}&=\frac{AD}{AC},
+\intertext{or, equivalently}
+AC\cdot BX&=AB\cdot CD,
+&
+AC\cdot XD&=BC\cdot AD.
+\end{align*}
+Adding these two equalities we get 
+\[AC\cdot(BX+XD)=AB\cdot CD+BC\cdot AD.\]
+It remains to apply the triangle inequality, $BD\le BX+XD$.
+\qeds
+
+Using the proof above together with Theorem~\ref{thm:inscribed-quadrilateral}, one can show that the equality holds only if the vertexes $A$, $B$, $C$ and $D$ appear on a line or a circle in the same cyclic order;
+see also \ref{ptolemy-id} for an other proof of the equality case.
+{Exercise}\label{ex:ptolemy} suggests an other proof of Ptolemy's inequality using complex coordinates.
+
+
+%???)
+
+\addtocontents{toc}{\protect\end{quote}}

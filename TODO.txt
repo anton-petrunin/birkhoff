@@ -1,0 +1,1 @@
+Separate similarity and parallel lines.

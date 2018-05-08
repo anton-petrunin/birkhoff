@@ -1,4 +1,4 @@
-\chapter[Parallel lines and similar triangles]{Parallel lines and\\ similar triangles}\label{chap:parallel}
+\chapter[Parallel lines]{Parallel lines}\label{chap:angle-sum}
 \addtocontents{toc}{\protect\begin{quote}}
 
 \section*{Parallel lines}
@@ -22,7 +22,7 @@ in addition, a line is always regarded as parallel to itself.
 
 }
 
-To emphasize that two non-intersecting line on a diagram are parallel we will mark them arrows of the same type.
+To emphasize that two non-intersecting line are parallel we will mark them with arrows of the same type as on the diagram.
 
 
 
@@ -48,7 +48,7 @@ which passes thru $P$ and is parallel to~$\ell$.
 \end{thm}
 
 The above theorem has two parts, existence and uniqueness.
-In the proof of uniqueness we will use Axiom~\ref{def:birkhoff-axioms:4} for the first time in this book.
+In the proof of uniqueness we will use the method of similar triangles.
 
 \parit{Proof; existence.} 
 Apply Theorem~\ref{perp:ex+un} two times,
@@ -87,9 +87,10 @@ In particular, $R\in [P D)$.
 
 Choose $Z\in [P Q)$ such that 
 $$\frac{PZ}{PQ}=\frac{PD}{PR}.$$
-Then
-by Axiom~\ref{def:birkhoff-axioms:4}, $(Z D)\perp(P D)$; 
-that is, $Z\in \ell\cap s$ --- a contradiction.\qeds
+By SAS similarity condition (or equivalently by Axiom~\ref{def:birkhoff-axioms:4})
+we have $\triangle RPQ\sim \triangle DPZ$;
+therefore $(Z D)\perp(P D)$.
+It follows that $Z\in \ell\cap s$ --- a contradiction.\qeds
 
 \begin{thm}{Corollary}\label{cor:parallel-1}
 Assume $\ell$, $m$ and $n$ are lines
@@ -124,321 +125,151 @@ Show that $k\nparallel n$.
 Make a ruler-and-compass construction of a line thru a given point which is parallel to a given line.
 \end{thm}
 
-\section*{Similar triangles}
-\addtocontents{toc}{Similar triangles.}
+{
 
-Two triangles $A' B' C'$ and $A B C$ are called
-\index{triangle!similar triangles}\index{similar triangles}\emph{similar} (briefly \index{30@$\sim$}$\triangle A' B' C'\z\sim\triangle A B C$) if their sides are proportional; 
-that is, 
-$$A' B'
-=
-k\cdot A B,
+\begin{wrapfigure}[6]{r}{30mm}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/parallel-2(1)}
+\lbl[b]{14.5,18.5;$A$}
+\lbl[b]{3,15;$B$}
+\lbl[b]{18,7.5;$C$}
+\lbl[b]{3,3;$D$}
+\end{lpic}
+\end{wrapfigure}
+
+\section*{Transversal property}
+\addtocontents{toc}{Transversal property.}
+
+If the line $t$ intersects each line $\ell$ and $m$ at one point, then we say that $t$ is a \index{transversal}\emph{transversal} to $\ell$ and~$m$.
+For example, on the diagram, line $(CB)$ is a transversal 
+to $(AB)$ and~$(CD)$.
+
+}
+
+\begin{thm}{Transversal property}\label{thm:parallel-2} 
+$(AB)\parallel(C D)$ if and only if 
+$$2\cdot(\measuredangle A B C+\measuredangle B C D)\equiv 0.
+\eqlbl{A B C + B C D}$$ 
+Equivalently 
+$$\measuredangle A B C+\measuredangle B C D
+\equiv 
+0
 \quad
-B' C'=k\cdot B C
+\text{or}
 \quad
-\text{and}
-\quad
-C' A'
-=
-k\cdot C A
-\eqlbl{dist}
-$$
-for some $k>0$, and 
-$$
-\begin{aligned}
-\measuredangle A' B' C'&=\pm\measuredangle A B C,
-\\
-\measuredangle B' C' A'&=\pm\measuredangle B C A,
-\\ 
-\measuredangle C' A' B'&=\pm\measuredangle CAB.
-\end{aligned}
-\eqlbl{angles}
-$$
-
-\parbf{Remarks.}
-\begin{itemize}
-\item According to \ref{thm:signs-of-triug}, in the above three equalities, the signs can be assumed to be the same.
-
-\item If $\triangle A' B' C'\sim\triangle A B C$ with $k=1$ in \ref{dist}, 
- then $\triangle A' B' C'\z\cong\triangle A B C$.
-
-\item Note that ``$\sim$'' is an 
-\index{equivalence relation}\emph{equivalence relation}.
-That is, 
-\begin{enumerate}[(i)]
-\item $\triangle A B C\sim\triangle A B C$
-for any $\triangle A B C$.
-\item If $\triangle A' B' C'\sim\triangle A B C$, then
-$$\triangle A B C\sim\triangle A' B' C'.$$
-\item If $\triangle A'' B'' C''\sim\triangle A' B' C'$ and $\triangle A' B' C'\z\sim\triangle A B C$, then 
-$$\triangle A'' B'' C''\sim\triangle A B C.$$
-\end{enumerate}
-\end{itemize}
-
-Using the notation ``$\sim$'', Axiom~\ref{def:birkhoff-axioms:4} can be formulated the following way.
-
-\begin{thm}{Reformulation of Axiom~\ref{def:birkhoff-axioms:4}}
-If for the two triangles 
-$\triangle ABC$, 
-$\triangle AB'C'$,
-and $k>0$ we have
-$B'\in [AB)$,
-$C'\in [AC)$,
-$AB'=k\cdot AB$ and
-$AC'=k\cdot AC$,
-then $\triangle ABC\sim\triangle AB'C'$.
+\measuredangle A B C+\measuredangle B C D
+\equiv
+\pi.$$ 
+Moreover, if $(AB)\ne(C D)$, then in the first case 
+$A$ and $D$ lie on opposite sides of $(BC)$,
+in the second case 
+$A$ and $D$ lie on the same sides of~$(BC)$.
 \end{thm}
 
-In other words, the Axiom~\ref{def:birkhoff-axioms:4} provides 
-a condition which guarantees that two triangles are similar.
-Let us formulate three more such {}\emph{similarity conditions}.
+In the proof of the transversal property we will use the following lemma.
 
-\begin{thm}{Similarity conditions}\label{prop:sim}
-Two triangles 
-$\triangle ABC$ and $\triangle A'B'C'$
-are similar if one of the following conditions hold.
-
-(SAS)\index{SAS similarity condition} For some constant $k>0$ we have
-$$A B=k\cdot A' B',
-\quad 
-A C=k\cdot A' C'$$
-$$
-\text{and}
-\quad 
-\measuredangle B A C=\pm\measuredangle B' A' C'.$$
-
-(AA)\index{AA similarity condition} The triangle $A' B' C'$ is nondegenerate
-and 
-$$\measuredangle A B C
-=
-\pm\measuredangle A' B' C',
-\quad 
-\measuredangle B A C
-=
-\pm\measuredangle B' A' C'.$$
-
-(SSS)\index{SSS similarity condition} For some constant $k>0$ we have
-$$A B=k\cdot A' B',
-\quad
-A C=k\cdot A' C',
-\quad
-CB=k\cdot C'B'.$$
-
-\end{thm}
-
-Each of these conditions is proved by applying Axiom~\ref{def:birkhoff-axioms:4} with the SAS, ASA and SSS congruence conditions correspondingly
-(see Axiom~\ref{def:birkhoff-axioms:3} and the conditions \ref{thm:ASA}, \ref{thm:SSS}).
-
-
-\parit{Proof.}
-Set $k=\tfrac{AB}{A'B'}$.
-Choose points $B''\in [A'B')$ and $C''\in [A'C')$,
-so that $A'B''=k\cdot A'B'$ and $A'C''=k\cdot A'C'$.
-By Axiom~\ref{def:birkhoff-axioms:4},
-$\triangle A'B'C'\z\sim \triangle A'B''C''$.
-
-Applying the SAS, ASA or SSS congruence condition, depending on the case, 
-we get that $\triangle A'B''C''\cong \triangle ABC$.
-Hence the result.
-\qeds
-
-
-
-A bijection $X\leftrightarrow X'$ from a plane to itself is called \index{angle preserving transformation}\emph{angle preserving transformation} if 
-\[\measuredangle ABC= \measuredangle A'B'C'\]
-for any triangle $ABC$ and its image $\triangle A'B'C'$.
-
-
-\begin{thm}{Exercise}\label{ex:angle-preserving-euclid}
-Show that any angle-preserving transformation of the plane multiplies all the distance by a fixed constant.
-\end{thm}
-
-
-
-\section*{Pythagorean theorem}
-\addtocontents{toc}{Pythagorean theorem.}
-
-A triangle is called \index{triangle!right triangle}\emph{right} if one of its angles is right.
-The side opposite the right angle is called the \index{hypotenuse}\emph{hypotenuse}. 
-The sides adjacent to the right angle are called \index{leg}\emph{legs}. 
-
-
-\begin{thm}{Theorem}\label{thm:pyth}
-Assume $\triangle ABC$ is a right triangle with the right angle at~$C$.
+\begin{thm}{Lemma}\label{lem:2angles1}
+Let $ABC$ be a nondegenerate triangle.
 Then
-$$AC^2+BC^2=AB^2.$$ 
-
+\[2\cdot(\measuredangle CAB+\measuredangle ABC)\not\equiv 0.\eqlbl{eq:nepi}\]
 \end{thm}
 
-\parit{Proof.}
-Let $D$ be the foot point of $C$ on~$(AB)$.
-
-\begin{wrapfigure}[4]{r}{44mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(2mm)]{pics/pyth(1)}
-\lbl[rt]{1,0;$A$}
-\lbl[lt]{40,0;$B$}
-\lbl[b]{9,19;$C$}
-\lbl[t]{9,0;$D$}
+\begin{wrapfigure}{r}{23mm}
+\begin{lpic}[t(-6mm),b(0mm),r(0mm),l(0mm)]{pics/2sum1(1)}
+\lbl[l]{16,2;$A$}
+\lbl[b]{6,23;$B$}
+\lbl[r]{0,2;$C$}
+\lbl[b]{20,23;$D$}
+\lbl[l]{11.5,12;$M$}
 \end{lpic}
 \end{wrapfigure}
 
-According to Lemma~\ref{lem:perp<oblique},
-\begin{align*}
-AD&<AC<AB
-\intertext{and}
-BD&<BC<AB.
-\end{align*}
-Therefore, $D$ lies between $A$ and $B$;
+\parit{Proof.} 
+Let $M$ be the midpoint of $[AB]$.
+Choose $D\z\in (CM)$ distinct from $C$ so that $DM=CM$.
+
+
+Note that the angles $CMB$ and $DMA$
+are vertical;
 in particular, 
-$$AD+BD=AB.\eqlbl{AD+BD=AB}$$
+$$\measuredangle CMB=\measuredangle DMA.\eqlbl{eq:CMB=DMA}$$
+By construction, $AM\z=BM$ and $CM\z=DM$.
+Therefore, 
+$$\triangle CMB\cong \triangle DMA;$$ 
+in particular, 
+$$\measuredangle ABC\equiv\pm\measuredangle BAD.\eqlbl{eq:ABC=BAD}$$
 
-Note that by the AA similarity condition, we have
-$$\triangle ADC\sim\triangle ACB\sim \triangle CDB.$$
+According to \ref{thm:signs-of-triug}, 
+the angles $MBC$ and $MAD$ have the same signs as $\angle CMB$ and $\angle DMA$.
+Therefore,  \ref{eq:CMB=DMA} and \ref{eq:ABC=BAD} imply
+$$\measuredangle ABC=\measuredangle BAD.$$
 In particular,
-$$
-\frac{A D}{A C}=\frac{A C}{A B}
-\quad
-\text{and}
-\quad
-\frac{B D}{B C}=\frac{B C}{B A}.
-\eqlbl{BCD}$$
-
-Let us rewrite the two identities in \ref{BCD}:
 \begin{align*}
-AC^2=AB\cdot AD
-\quad
-\text{and}
-\quad
-BC^2=AB\cdot B D.
+\measuredangle CAD&\equiv \measuredangle CAB+\measuredangle BAD\equiv
+\\
+&\equiv \measuredangle CAB+\measuredangle ABC.
 \end{align*}
-Summing up these two identities and applying \ref{AD+BD=AB}, we get that
-$$AC^2 +BC^2=AB\cdot (AD+ B D)=AB^2.$$
-\qedsf
 
-The idea in the proof above appears in the Elements, see \cite[X.33]{euclid},
-but the proof given there \cite[I.47]{euclid} is different; 
-it uses area method discussed in Chapter \ref{chap:area}.
-
-
-\begin{thm}{Exercise}\label{ex:pyth}
-Assume $A$, $B$, $C$ and $D$ are as in the proof above.
-Show that 
-$$CD^2=AD\cdot BD.$$
-
-\end{thm}
-
-The following exercise is the converse to the Pythagorean theorem.
-
-\begin{thm}{Exercise}\label{ex:pyth-conv}
-Assume that $ABC$ is a triangle such that
-$$AC^2+BC^2=AB^2.$$ 
-Prove that the angle at $C$ is right.
-\end{thm}
-
-
-\section*{Method of similar triangles}
-\addtocontents{toc}{Method of similar triangles.}
-
-%(???
-
-
-
-The proof of the Pythagorean theorem above is a good example using the method of similar triangles.
-To apply this method, one has to search for pairs of similar triangles and then use the proportionality of corresponding sides and/or equalities of corresponding angles.
-Finding such pairs might be tricky at first. 
-
-
-\begin{thm}{Exercise}\label{ex:two-pairs-sim}
-Let $ABC$ be a nondegenerate triangle,
-$X$ lies between $A$ and $C$, 
-$Y$ lies between $B$ and $C$.
-Assume $Z=[AX]\cap [BY]$ and $\measuredangle CAY\z\equiv\measuredangle XBC$.
-Find three pairs of similar triangles with these six points as the vertexes
-and prove their similarity.
-\end{thm}
-
-
-
-\begin{wrapfigure}{r}{25mm}
-\begin{lpic}[t(0mm),b(0mm),r(0mm),l(-0mm)]{pics/two-pairs-sim(1)}
-\lbl[b]{2,31;$A$}
-\lbl[b]{23,29.5;$B$}
-\lbl[bl]{8,24.5;$Z$}
-\lbl[lt]{6,4;$C$}
-\lbl[rb]{2,21;$X$}
-\lbl[l]{15,15;$Y$}
-\end{lpic}
-\end{wrapfigure}
-
-A \index{quadrilateral}\emph{quadrilateral} is an ordered quadruple of distinct points in the plane.
-The quadrilateral $ABCD$ will be also denoted by \index{25@$\square$}$\square ABCD$.
-
-Given a quadrilateral $ABCD$,
-the four segments $[AB]$, $[BC]$, $[CD]$ and $[DA]$ are called \index{side!side of quadrilateral}\emph{sides of $\square ABCD$};
-the remaining two segments $[AC]$ and $[BD]$ are called \index{diagonals of quadrilateral}\emph{diagonals of $\square ABCD$}.
-
-\begin{thm}{Ptolemy's inequality}\label{ptolemy-inq}
-In any quadrilateral, the product of diagonals can not exceed the sum of the product of its opposite sides.
-That~is, 
-$$AC\cdot BD\le AB\cdot CD+ BC\cdot DA.$$
-for any quadrilateral $ABCD$.
-\end{thm}
-
-We will present a classical proof of this inequality using the method of method of similar triangles with an additional construction.
-This proof is given as an illustration --- it will not be used further in the sequel.
-
-\begin{wrapfigure}{r}{33mm}
-\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(-0mm)]{pics/ptolemy-inq(1)}
-\lbl[b]{2,27.5;$A$}
-\lbl[t]{2,0;$B$}
-\lbl[t]{30,7;$C$}
-\lbl[b]{28.5,30.5;$D$}
-\lbl[l]{14,9;$X$}
-\end{lpic}
-\end{wrapfigure}
-
-\parit{Proof.}
-Consider the half-line $[AX)$ such that $\measuredangle BAX=\measuredangle CAD$;
-we can choose $X$ so that 
-\[AX=\frac{AB}{AC}\cdot AD\]
-or, equivalently
-\[\frac{AX}{AD}=\frac{AB}{AC}\qquad\text{and}\qquad\frac{AX}{BA}=\frac{AD}{AC}.\]
-Since $\measuredangle BAX=\measuredangle CAD$, we also have $\measuredangle XAD=\measuredangle BAC$.
-Indeed,
-\[
-\measuredangle XAD=\measuredangle BAD-\measuredangle BAX
-=\measuredangle BAD-\measuredangle CAD=
-\measuredangle BAC.
-\]
-Applying SAS similarity condition, we get 
-\begin{align*}
-\triangle BAX&\sim \triangle CAD,
-&
-\triangle XAD&\sim\triangle BAC.
-\intertext{Therefore}
-\frac{BX}{CD}&=\frac{AB}{AC},
-&
-\frac{XD}{BC}&=\frac{AD}{AC},
-\intertext{or, equivalently}
-AC\cdot BX&=AB\cdot CD,
-&
-AC\cdot XD&=BC\cdot AD.
-\end{align*}
-Adding these two equalities we get 
-\[AC\cdot(BX+XD)=AB\cdot CD+BC\cdot AD.\]
-It remains to apply the triangle inequality, $BD\le BX+XD$.
+Finally, note that $D$ does not lie on $(AC)$ (it follows from \ref{lem:line-line}).
+Therefore, $2\cdot \measuredangle CAD \not\equiv 0$ and \ref{eq:nepi} follows.
 \qeds
 
-Using the proof above together with Theorem~\ref{thm:inscribed-quadrilateral}, one can show that the equality holds only if the vertexes $A$, $B$, $C$ and $D$ appear on a line or a circle in the same cyclic order;
-see also \ref{ptolemy-id} for an other proof of the equality case.
+
+\parit{Proof of transversal property; ``only-if'' part.} 
+We need to show that 
+if $(AB)\z\nparallel(C D)$,
+then \ref{A B C + B C D} does not hold.
+
+\begin{wrapfigure}{r}{43mm}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/onlyif-transversal(1)}
+\lbl[b]{3,12;$A$}
+\lbl[br]{12,12;$B$}
+\lbl[tl]{11,1;$C$}
+\lbl[t]{23,4;$D$}
+\lbl[t]{38,9;$Z$}
+\end{lpic}
+\end{wrapfigure}
 
 
-%???)
 
-\addtocontents{toc}{\protect\end{quote}}
+Since $(AB)\nparallel(C D)$, there is a unique point $Z\z\in (AB)\z\cap(C D)$.
+Since $Z$ lies on $AB$, we have
+\[2\cdot \measuredangle ABC\equiv 2\cdot \measuredangle ZBC.\]
+Analogously,  since $Z$ lies on $CD$, we have
+\[2\cdot \measuredangle BCD\equiv 2\cdot \measuredangle BCZ.\]
+Therefore 
+\[2\cdot(\measuredangle A B C+\measuredangle B C D)\equiv 2\cdot(\measuredangle Z B C+\measuredangle B C Z).\]
 
-\chapter[Angle sums, transversal property]{Angle sums and transversal property}\label{chap:angle-sum}
-\addtocontents{toc}{\protect\begin{quote}}
+Note that triangle $ZBC$ is nondegenerate.
+By Lemma \ref{lem:2angles1}, 
+\[2\cdot \measuredangle ZBC+2\cdot \measuredangle BCZ\not\equiv0.\]
+Hence the ``only-if'' part follows.
+
+
+\parit{``If''-part.}
+Given points $A$, $B$ and $C$ there is unique line $(CD)$ such that \ref{A B C + B C D} holds.
+Indeed if 
+$$2\cdot(\measuredangle A B C+\measuredangle B C D)\equiv 2\cdot(\measuredangle A B C+\measuredangle B C D')\equiv0.
+$$ 
+then 
+$$2\cdot\measuredangle B C D\equiv 2\cdot\measuredangle B C D'.$$
+Therefore $2\cdot\measuredangle D C D'\equiv0$; that is $D'\in (CD)$, or equivalently the line $(CD)$ coinsides with the line $(CD')$.
+
+From the ``only-if'' part we know that if \ref{A B C + B C D} holds then $(CD)\parallel(AB)$.
+By Theorem \ref{thm:parallel} there is unique line thru $C$ that is parallel to $(AB)$.
+Therefore it must be the line $(CD)$ such that \ref{A B C + B C D} hold.
+Hence the ``if'' part follows.
+\qeds
+
+
+\begin{thm}{Exercise}\label{ex:smililar+parallel}
+Let $\triangle ABC$ be a nondegenerate triangle.
+Assume $B'$ and $C'$ are points on sides $[AB]$ and $[AC]$ such that $(B'C')\parallel(BC)$.
+Show that $\triangle ABC\sim\triangle AB'C'$.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:trisection}
+Trisect a given segment with a ruler and a compass.
+\end{thm}
 
 \section*{Angles of triangles}
 \addtocontents{toc}{Angles of triangle.}
@@ -449,89 +280,38 @@ $$\measuredangle A B C+ \measuredangle B C A + \measuredangle C A B \equiv \pi.$
 
 \end{thm}
 
+The proof uses the same construction as in Lemma~\ref{lem:2angles1}.
+
 \parit{Proof.} 
 First note that 
 if $\triangle A B C$ is degenerate, then the equality follows from Theorem~\ref{thm:straight-angle}.
 Further we assume that $\triangle A B C$ is nondegenerate.
 
-\begin{wrapfigure}{o}{43mm}
-\begin{lpic}[t(3mm),b(0mm),r(0mm),l(0mm)]{pics/3-sum(1)}
-\lbl[tr]{1,1;$A$}
-\lbl[lt]{40,1;$B$}
-\lbl[b]{23,25;$C$}
-\lbl[lb]{7,3;{\small $\alpha$}}
-\lbl[lb]{25.8,3;{\small $\alpha$}}
-\lbl[rb]{34.5,2.5;{\small $\beta$}}
-\lbl[t]{22.5,17;{\small $\gamma$}}
-\lbl[rb]{15.5,2.5;{\small $\beta$}}
-\lbl[b]{21,7;{\small $\pm\gamma$}}
-\lbl[t]{20,0;$M$}
-\lbl[lb]{32,13;$K$}
-\lbl[rb]{11,13;$L$}
+\begin{wrapfigure}{r}{23mm}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/2sum1(1)}
+\lbl[l]{16,2;$A$}
+\lbl[b]{6,23;$B$}
+\lbl[r]{0,2;$C$}
+\lbl[b]{20,23;$D$}
+\lbl[l]{11.5,12;$M$}
 \end{lpic}
 \end{wrapfigure}
 
-Set 
-\begin{align*}
-\alpha&=\measuredangle C A B,
-\\
-\beta&=\measuredangle A B C,
-\\
-\gamma&=\measuredangle B C A.
-\end{align*}
-We need to prove that 
-$$\alpha+\beta+\gamma\equiv\pi.
-\eqlbl{eq:a+b+c}$$
+Let $M$ be the midpoint of $[AB]$.
+Choose $D\z\in (CM)$ distinct from $C$ so that $DM=CM$.
 
-Let $K$, $L$, $M$ be the midpoints of the sides $[B C]$, $[C A]$, $[A B]$ respectively.
-By
-Axiom~\ref{def:birkhoff-axioms:4},
-\begin{align*}
-\triangle A M L&\sim \triangle A B C,
-&
-\triangle M B K&\sim \triangle A B C,
-&
-\triangle L K C &\sim \triangle A B C
-\intertext{and}
-L M &=\tfrac12\cdot B C,
-&
-M K &=\tfrac12\cdot  C A,
-&
- K L &= \tfrac12\cdot A B.
-\end{align*}
-According to the SSS condition (\ref{prop:sim}),
-$\triangle K L M\sim \triangle ABC$. 
-Thus,
-$$\measuredangle M K L=\pm \alpha,
-\quad 
-\measuredangle K L M=\pm\beta,
-\quad 
-\measuredangle L M K=\pm\gamma.
-\eqlbl{eq:pm-a-b-c}$$
-According to \ref{thm:signs-of-triug}, the ``$+$'' or ``$-$'' sign is to be
-the same in \ref{eq:pm-a-b-c}.
+The same argument as in Lemma~\ref{lem:2angles1} shows that 
+\[\measuredangle ABC=\measuredangle BAD\eqlbl{eq:ABC=BAD}\]
+and therefore 
+\[\measuredangle CAD=\measuredangle CAB+\measuredangle ABC.\eqlbl{eq:ABC+CAB}\]
 
-If in \ref{eq:pm-a-b-c} we have ``$+$'', then \ref{eq:a+b+c} follows since
-$$\beta+\gamma+\alpha
-\equiv
-\measuredangle A M L + \measuredangle L M K + \measuredangle K M B
-\equiv
-\measuredangle A M B 
-\equiv
-\pi
-$$
+Let us apply the transversal property (\ref{thm:parallel-2}) for the lines $(BC)$ and $(AD)$ with transversal $(BA)$.
+From \ref{eq:ABC=BAD} we get that $(CB)\parallel(AD)$.
 
-It remains to show that we cannot have ``$-$'' in \ref{eq:pm-a-b-c}.
-If this is the case, then the same argument as above gives
-$$\alpha+\beta-\gamma\equiv\pi.$$
-The same way we get that
-$$\alpha-\beta+\gamma\equiv\pi.$$
-Adding the last two identities, we get that
-$$2\cdot\alpha\equiv0.$$
-Equivalently 
-$\alpha\equiv\pi$ or $0$;
-that is, $\triangle A B C$ is degenerate --- a contradiction.
-\qeds
+Note that $B$ lies on the same side from $(CA)$ with $M$ and $D$.
+Therefore, applying the transversal property again, we get that 
+\[\measuredangle BCA+\measuredangle CAD\equiv \pi.\]
+The latter identity and \ref{eq:ABC+CAB} imply the theorem.\qeds
 
 {
 
@@ -567,7 +347,7 @@ for any $\triangle ABC$.
 {
 
 \begin{wrapfigure}[5]{o}{30mm}
-\begin{lpic}[t(-6mm),b(0mm),r(0mm),l(0mm)]{pics/right-isos(1)}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/right-isos(1)}
 \lbl[t]{3,0;$A$}
 \lbl[br]{15,10;$B$}
 \lbl[t]{28,0;$C$}
@@ -597,80 +377,7 @@ $$\measuredangle ABC+\measuredangle BCD+\measuredangle CDA+\measuredangle DAB\eq
 
 \end{thm}
 
-\section*{Transversal property}
-\addtocontents{toc}{Transversal property.}
 
-If the line $t$ intersects each line $\ell$ and $m$ at one point, then we say that $t$ is a \index{transversal}\emph{transversal} to $\ell$ and~$m$.
-On the diagram below, line $(CB)$ is a transversal 
-to $(AB)$ and~$(CD)$.
-
-\begin{thm}{Transversal property}\label{thm:parallel-2} 
-$(AB)\parallel(C D)$ if and only if 
-$$2\cdot(\measuredangle A B C+\measuredangle B C D)\equiv 0.
-\eqlbl{A B C + B C D}$$ 
-Equivalently 
-$$\measuredangle A B C+\measuredangle B C D
-\equiv 
-0
-\quad
-\text{or}
-\quad
-\measuredangle A B C+\measuredangle B C D
-\equiv
-\pi.$$ 
-Moreover, if $(AB)\ne(C D)$, then in the first case 
-$A$ and $D$ lie on opposite sides of $(BC)$,
-in the second case 
-$A$ and $D$ lie on the same sides of~$(BC)$.
-\end{thm}
-
-\begin{wrapfigure}[6]{r}{30mm}
-\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/parallel-2(1)}
-\lbl[b]{14.5,18.5;$A$}
-\lbl[b]{3,15;$B$}
-\lbl[b]{18,7.5;$C$}
-\lbl[b]{3,3;$D$}
-\end{lpic}
-\end{wrapfigure}
-
-\parit{Proof.} 
-If $(AB)\nparallel(C D)$,
-then there is $Z\in (AB)\z\cap(C D)$ 
-and $\triangle BCZ$ is nondegenerate.
-
-According to Theorem~\ref{thm:3sum}, 
-\begin{align*}
-\measuredangle ZBC+\measuredangle BCZ&\equiv \pi-\measuredangle CZB\not\equiv 
-\\&\not\equiv 0
-\quad
-\text{nor}
-\quad
-\pi.
-\end{align*}
-Note that $2\cdot\measuredangle Z B C\equiv 2\cdot\measuredangle A B C$ and $2\cdot\measuredangle B C Z\equiv2\cdot\measuredangle B C D$.
-Therefore, 
-$$2\cdot(\measuredangle A B C+\measuredangle B C D)\equiv 2\cdot\measuredangle Z B C +2\cdot\measuredangle B C Z\not\equiv 0;$$
-that is, \ref{A B C + B C D} does not hold.
-
-Note that if the points $A$, $B$ and $C$ are fixed,
-the identity \ref{A B C + B C D} uniquely defines the line~$(C D)$.
-By Theorem~\ref{thm:parallel}, there is unique line thru $C$ which is parallel to $(AB)$;
-it follows that
-if $(AB)\z\parallel(C D)$, then the equality \ref{A B C + B C D} holds.
-
-The last part follows from Corollary~\ref{cor:half-plane}.
-\qeds
-
-
-\begin{thm}{Exercise}\label{ex:smililar+parallel}
-Let $\triangle ABC$ be a nondegenerate triangle.
-Assume $B'$ and $C'$ are points on sides $[AB]$ and $[AC]$ such that $(B'C')\parallel(BC)$.
-Show that $\triangle ABC\sim\triangle AB'C'$.
-\end{thm}
-
-\begin{thm}{Exercise}\label{ex:trisection}
-Trisect a given segment with a ruler and a compass.
-\end{thm}
 
 
 
@@ -836,6 +543,23 @@ Show that the line $(AB)$ is the set of points with coordinates $(x,y)$ such tha
 \[(x-x_A)\cdot (y_B-y_A)=(y-y_A)\cdot (x_B-x_A).\]
 
 \end{thm}
+
+%(???
+
+\begin{thm}{Exercise}\label{ex:circle-coord}
+Show that for fixed real values $a$, $b$ and $c$ the equation 
+\[x^2+y^2+a\cdot x+b\cdot y+c=0\]
+describes a circle, one-point set or empty set.
+
+Show that if it is a circle then it has center $(-\tfrac a2,-\tfrac b2)$ and the radius $r=\tfrac12\cdot \sqrt{a^2+b^2-4\cdot c}$
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:apolonnius}
+Use the previous exercise to show that given two distinct point $A$ and $B$ 
+the locus of points $X$ such that $AX=2\cdot BX$ is a circle. (This is the so called \index{Apollonian circle}\emph{Apollonian circle}.)
+\end{thm}
+
+%???)
 
 
 

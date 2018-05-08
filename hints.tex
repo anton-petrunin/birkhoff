@@ -505,14 +505,6 @@ Note that the centers lie on the perpendicular bisector of the segment~$[AB]$.
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
 
-\parbf{Exercise~\ref{ex:perp-perp}.}
-Apply Proposition~\ref{prop:perp-perp} to show that $k\parallel m$.
-By Corollary~\ref{cor:parallel-1}, $k\parallel n\z\Rightarrow m\parallel n$.
-The latter contradicts that $m\perp n$.
-
-\parbf{Exercise~\ref{ex:construction-parallel}.}
-Repeat the construction in Exercise~\ref{ex:construction-perpendicular} twice.
-
 \parbf{Exercise~\ref{ex:angle-preserving-euclid}.}
 By the AA similarity condition, the transformation multiplies the sides of any nondegenerate triangle by some number which may depend on the triangle. 
 
@@ -521,6 +513,9 @@ Applying this observation to a chain of triangles leads to a solution.
 
 \parbf{Exercise~\ref{ex:pyth}.}
 Apply that $\triangle ADC\sim \triangle CDB$.
+
+\parbf{Exercise~\ref{ex:pyth-conv}.}
+Apply the Pythagorean theorem (\ref{thm:pyth}) and the SSS congruence condition.
 
 %(???
 
@@ -535,15 +530,42 @@ Use AA and equality of vertical angles to prove that $\triangle AZX\sim \triangl
 
 %???)
 
-\parbf{Exercise~\ref{ex:pyth-conv}.}
-Apply the Pythagorean theorem (\ref{thm:pyth}) and the SSS congruence condition.
-
 %\subsection*{Chapter~\ref{chap:angle-sum}}
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
 
+
+\parbf{Exercise~\ref{ex:perp-perp}.}
+Apply Proposition~\ref{prop:perp-perp} to show that $k\parallel m$.
+By Corollary~\ref{cor:parallel-1}, $k\parallel n\z\Rightarrow m\parallel n$.
+The latter contradicts that $m\perp n$.
+
+\parbf{Exercise~\ref{ex:construction-parallel}.}
+Repeat the construction in Exercise~\ref{ex:construction-perpendicular} twice.
+
+\parbf{Exercise~\ref{ex:smililar+parallel}.}
+By the transversal property~\ref{thm:parallel-2},
+\[\measuredangle B'BC \equiv \pi -\measuredangle C'B'B.\]
+
+Since $B'$ lies between $A$ and $B$, we get that 
+$\measuredangle ABC=\measuredangle B'BC$ and $\measuredangle AB'C'+\measuredangle C'B'B\z\equiv \pi$.
+Hence $\measuredangle ABC= \measuredangle AB'C'$.
+
+The same way we can prove that 
+$\measuredangle BCA= \measuredangle B'C'A$.
+It remains to apply the AA similarity condition.
+
+\parbf{Exercise~\ref{ex:trisection}.}
+Assume we need to trisect segment $[AB]$.
+Construct a line $\ell\ne (AB)$ with four points $A,C_1,C_2, C_3$
+such that $C_1$ and $C_2$ trisect $[AC_3]$.
+Draw the line $(BC_3)$
+and draw parallel lines thru $C_1$ and~$C_2$.
+The points of intersections of these two lines with $(AB)$ trisect the segment $[AB]$.
+
 \parbf{Exercise~\ref{ex:pent}.}
 Apply twice Theorem~\ref{thm:isos} and twice Theorem~\ref{thm:3sum}.
+
 
 \parbf{Exercise~\ref{ex:|3sum|}.}
 If $\triangle ABC$ is degenerate, then one of the angle measures is $\pi$ and the other two are~$0$.
@@ -593,26 +615,6 @@ $\measuredangle CAX\z=\pm\tfrac\pi4$.
 
 \parbf{Exercise~\ref{ex:quadrilateral}.}
 Apply Theorem~\ref{thm:3sum} to $\triangle ABC$ and $\triangle BDA$.
-
-\parbf{Exercise~\ref{ex:smililar+parallel}.}
-By the transversal property~\ref{thm:parallel-2},
-\[\measuredangle B'BC \equiv \pi -\measuredangle C'B'B.\]
-
-Since $B'$ lies between $A$ and $B$, we get that 
-$\measuredangle ABC=\measuredangle B'BC$ and $\measuredangle AB'C'+\measuredangle C'B'B\z\equiv \pi$.
-Hence $\measuredangle ABC= \measuredangle AB'C'$.
-
-The same way we can prove that 
-$\measuredangle BCA= \measuredangle B'C'A$.
-It remains to apply the AA similarity condition.
-
-\parbf{Exercise~\ref{ex:trisection}.}
-Assume we need to trisect segment $[AB]$.
-Construct a line $\ell\ne (AB)$ with four points $A,C_1,C_2, C_3$
-such that $C_1$ and $C_2$ trisect $[AC_3]$.
-Draw the line $(BC_3)$
-and draw parallel lines thru $C_1$ and~$C_2$.
-The points of intersections of these two lines with $(AB)$ trisect the segment $[AB]$.
 
 
 \parbf{Exercise~\ref{ex:romb}.}
@@ -703,6 +705,20 @@ Show that the map $\ell\to \mathbb{R}$ defined as
 $(x,y)\mapsto \tfrac{AB}{|x_A-x_B|}\cdot x$ is an isometry;
 that is, $\ell$ is a line.
 It remains to apply Axiom~\ref{def:birkhoff-axioms:1}.
+
+%???(
+
+\parbf{Exercise~\ref{ex:circle-coord}.} Rewrite the equation as 
+\[(x+\tfrac a2)^2+(y+\tfrac b2)^2=(\tfrac a2)^2+(\tfrac b2)^2-c\]
+and think.
+
+\parbf{Exercise~\ref{ex:apolonnius}.}
+We can choose the coordinates so that $B=(0,0)$ and $A=(a,0)$ for some $a>0$.
+If $X=(x,y)$, then the equation $AX=2\cdot BX$ can be written in coordinates as 
+\[4\cdot(x^2+y^2)=(x-a)^2+y^2.\]
+It remains to rewrite this equation as in Exercise~\ref{ex:circle-coord}.
+
+%???)
 
 %\subsection*{Chapter~\ref{chap:triangle}}
 \refstepcounter{chapter}

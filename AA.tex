@@ -1,3 +1,101 @@
+First note that 
+if $\triangle A B C$ is degenerate, then the equality follows from Theorem~\ref{thm:straight-angle}.
+Further we assume that $\triangle A B C$ is nondegenerate.
+
+\begin{wrapfigure}{o}{43mm}
+\begin{lpic}[t(3mm),b(0mm),r(0mm),l(0mm)]{pics/3-sum(1)}
+\lbl[tr]{1,1;$A$}
+\lbl[lt]{40,1;$B$}
+\lbl[b]{23,25;$C$}
+\lbl[lb]{7,3;{\small $\alpha$}}
+\lbl[lb]{25.8,3;{\small $\alpha$}}
+\lbl[rb]{34.5,2.5;{\small $\beta$}}
+\lbl[t]{22.5,17;{\small $\gamma$}}
+\lbl[rb]{15.5,2.5;{\small $\beta$}}
+\lbl[b]{21,7;{\small $\pm\gamma$}}
+\lbl[t]{20,0;$M$}
+\lbl[lb]{32,13;$K$}
+\lbl[rb]{11,13;$L$}
+\end{lpic}
+\end{wrapfigure}
+
+Set 
+\begin{align*}
+\alpha&=\measuredangle C A B,
+\\
+\beta&=\measuredangle A B C,
+\\
+\gamma&=\measuredangle B C A.
+\end{align*}
+We need to prove that 
+$$\alpha+\beta+\gamma\equiv\pi.
+\eqlbl{eq:a+b+c}$$
+
+Let $K$, $L$, $M$ be the midpoints of the sides $[B C]$, $[C A]$, $[A B]$ respectively.
+By
+Axiom~\ref{def:birkhoff-axioms:4},
+\begin{align*}
+\triangle A M L&\sim \triangle A B C,
+&
+\triangle M B K&\sim \triangle A B C,
+&
+\triangle L K C &\sim \triangle A B C
+\intertext{and}
+L M &=\tfrac12\cdot B C,
+&
+M K &=\tfrac12\cdot  C A,
+&
+ K L &= \tfrac12\cdot A B.
+\end{align*}
+According to the SSS condition (\ref{prop:sim}),
+$\triangle K L M\sim \triangle ABC$. 
+Thus,
+$$\measuredangle M K L=\pm \alpha,
+\quad 
+\measuredangle K L M=\pm\beta,
+\quad 
+\measuredangle L M K=\pm\gamma.
+\eqlbl{eq:pm-a-b-c}$$
+According to \ref{thm:signs-of-triug}, the ``$+$'' or ``$-$'' sign is to be
+the same in \ref{eq:pm-a-b-c}.
+
+If in \ref{eq:pm-a-b-c} we have ``$+$'', then \ref{eq:a+b+c} follows since
+$$\beta+\gamma+\alpha
+\equiv
+\measuredangle A M L + \measuredangle L M K + \measuredangle K M B
+\equiv
+\measuredangle A M B 
+\equiv
+\pi
+$$
+
+It remains to show that we cannot have ``$-$'' in \ref{eq:pm-a-b-c}.
+If this is the case, then the same argument as above gives
+$$\alpha+\beta-\gamma\equiv\pi.$$
+The same way we get that
+$$\alpha-\beta+\gamma\equiv\pi.$$
+Adding the last two identities, we get that
+$$2\cdot\alpha\equiv0.$$
+Equivalently 
+$\alpha\equiv\pi$ or $0$;
+that is, $\triangle A B C$ is degenerate --- a contradiction.
+\qeds
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \begin{thm}{Exercise}\label{ex:median-equidistant}
 Prove that the line containing the median at one vertex in a triangle is equidistant from the remaining two vertexes. 
 \end{thm}
