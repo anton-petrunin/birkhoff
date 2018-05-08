@@ -22,7 +22,7 @@ in addition, a line is always regarded as parallel to itself.
 
 }
 
-To emphasize that two non-intersecting line are parallel we will mark them with arrows of the same type as on the diagram.
+To emphasize that two lines on a diagram are parallel we will mark them with arrows of the same type.
 
 
 
@@ -68,7 +68,7 @@ Let $R$ be the foot point of $Q$ on~$n$.
 
 Let $D$ be the point of intersection of $n$ and~$\ell$.
 According to Proposition~\ref{prop:perp-perp} $(QR)\parallel m$. 
-Therefore, $Q$, $R$ and $\ell$ lie on the same side from~$m$. 
+Therefore, $Q$, $R$ and $\ell$ lie on the same side of~$m$. 
 In particular, $R\in [P D)$.
 
 \begin{center}
@@ -90,7 +90,7 @@ $$\frac{PZ}{PQ}=\frac{PD}{PR}.$$
 By SAS similarity condition (or equivalently by Axiom~\ref{def:birkhoff-axioms:4})
 we have $\triangle RPQ\sim \triangle DPZ$;
 therefore $(Z D)\perp(P D)$.
-It follows that $Z\in \ell\cap s$ --- a contradiction.\qeds
+It follows that $Z$ lies on $\ell$ and $s$ --- a contradiction.\qeds
 
 \begin{thm}{Corollary}\label{cor:parallel-1}
 Assume $\ell$, $m$ and $n$ are lines
@@ -160,7 +160,7 @@ $$\measuredangle A B C+\measuredangle B C D
 \equiv
 \pi.$$ 
 Moreover, if $(AB)\ne(C D)$, then in the first case 
-$A$ and $D$ lie on opposite sides of $(BC)$,
+$A$ and $D$ lie on the opposite sides of $(BC)$,
 in the second case 
 $A$ and $D$ lie on the same sides of~$(BC)$.
 \end{thm}
@@ -171,8 +171,8 @@ In the proof of the transversal property we will use the following lemma.
 
 \begin{thm}[\abs]{Lemma}\label{lem:2angles1}
 Let $ABC$ be a nondegenerate triangle.
-Then
-\[2\cdot(\measuredangle CAB+\measuredangle ABC)\not\equiv 0.\eqlbl{eq:nepi}\]
+Then there is a point $X$ that lies with $B$ on the same side of $(AC)$ such that 
+\[\measuredangle BAX=\measuredangle ABC.\]
 \end{thm}
 
 \begin{wrapfigure}{r}{23mm}
@@ -180,36 +180,29 @@ Then
 \lbl[l]{16,2;$A$}
 \lbl[b]{6,23;$B$}
 \lbl[r]{0,2;$C$}
-\lbl[b]{20,23;$D$}
+\lbl[b]{20,23;$X$}
 \lbl[l]{11.5,12;$M$}
 \end{lpic}
 \end{wrapfigure}
 
 \parit{Proof.} 
 Let $M$ be the midpoint of $[AB]$.
-Choose $D\z\in (CM)$ distinct from $C$ so that $DM=CM$.
+Choose $X\z\in (CM)$ distinct from $C$ so that $XM=CM$.
 
 
-Note that the angles $CMB$ and $DMA$
+Note that the angles $CMB$ and $XMA$
 are vertical;
 in particular, 
-$$\measuredangle CMB=\measuredangle DMA.\eqlbl{eq:CMB=DMA}$$
-By construction, $AM\z=BM$ and $CM\z=DM$.
+$$\measuredangle CMB=\measuredangle XMA.\eqlbl{eq:CMB=XMA}$$
+By construction, $AM\z=BM$ and $CM\z=XM$.
 Therefore, 
-$$\triangle CMB\cong \triangle DMA$$ 
-and
-$$\measuredangle ABC\equiv\measuredangle BAD.$$
-(From \ref{eq:CMB=DMA}, we can not have a minus sign in the last equality.)
+$$\triangle CMB\cong \triangle XMA;$$ 
+in particular $\measuredangle ABC\equiv\pm \measuredangle BAX$.
+From \ref{eq:CMB=XMA} and \ref{thm:signs-of-triug}, we can not have a minus sign in the last equality; therefore
+$$\measuredangle ABC\equiv\measuredangle BAX.$$
 
-In particular,
-\begin{align*}
-\measuredangle CAD&\equiv \measuredangle CAB+\measuredangle BAD\equiv
-\\
-&\equiv \measuredangle CAB+\measuredangle ABC.
-\end{align*}
-
-Finally, note that $D$ does not lie on $(AC)$ (it follows from \ref{lem:line-line}).
-Therefore, $2\cdot \measuredangle CAD \not\equiv 0$ and \ref{eq:nepi} follows.
+By construction, the line segments $[BM]$ and $[MX]$ do not cross the line $(AC)$.
+Therefore the points $X$ and $B$ lie on the same side of $(AC)$ (see \ref{cor:half-plane}).
 \qeds
 
 
@@ -218,29 +211,36 @@ We need to show that
 if $(AB)\z\nparallel(C D)$,
 then \ref{A B C + B C D} does not hold.
 
-\begin{wrapfigure}{r}{43mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/onlyif-transversal(1)}
-\lbl[b]{3,12;$A$}
-\lbl[br]{12,12;$B$}
-\lbl[tl]{11,1;$C$}
-\lbl[t]{23,4;$D$}
-\lbl[t]{38,9;$Z$}
-\end{lpic}
-\end{wrapfigure}
-
-
-
 Since $(AB)\nparallel(C D)$, there is a unique point $Z\z\in (AB)\z\cap(C D)$.
-Since $Z$ lies on $AB$, we have
-\[2\cdot \measuredangle ABC\equiv 2\cdot \measuredangle ZBC.\]
-Analogously,  since $Z$ lies on $CD$, we have
-\[2\cdot \measuredangle BCD\equiv 2\cdot \measuredangle BCZ.\]
+Since $Z$ lies on $(AB)$ and on $(CD)$, we have
+\begin{align*}
+2\cdot \measuredangle ABC&\equiv 2\cdot \measuredangle ZB,
+&
+2\cdot \measuredangle BCD&\equiv 2\cdot \measuredangle BCZ.
+\end{align*}
 Therefore 
 \[2\cdot(\measuredangle A B C+\measuredangle B C D)\equiv 2\cdot(\measuredangle Z B C+\measuredangle B C Z).\]
 
-Note that triangle $ZBC$ is nondegenerate.
+Note that the triangle $ZBC$ is nondegenerate.
 By Lemma \ref{lem:2angles1}, 
-\[2\cdot \measuredangle ZBC+2\cdot \measuredangle BCZ\not\equiv0.\]
+there is a point $X$ that lies with $C$ on the same side of $(ZB)$ such that 
+$\measuredangle CBX=\measuredangle BCZ$.
+In particular 
+\[2\cdot \measuredangle ZBX\equiv 2\cdot (\measuredangle ZBC+\measuredangle BCZ).\]
+
+\begin{wrapfigure}{r}{43mm}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/onlyif-transversal(1)}
+\lbl[b]{25,20;$A$}
+\lbl[bl]{13,20;$B$}
+\lbl[br]{16,6;$C$}
+\lbl[br]{9,2;$D$}
+\lbl[t]{4,11;$X$}
+\lbl[b]{38,20;$Z$}
+\end{lpic}
+\end{wrapfigure}
+
+Since $X$ does not lie on $(ZB)$ we have
+\[2\cdot \measuredangle ZBX\not\equiv 0.\]
 Hence the ``only-if'' part follows.
 
 
@@ -255,8 +255,7 @@ Therefore $2\cdot\measuredangle D C D'\equiv0$; that is $D'\in (CD)$, or equival
 
 From the ``only-if'' part we know that if \ref{A B C + B C D} holds then $(CD)\parallel(AB)$.
 By Theorem \ref{thm:parallel} there is unique line thru $C$ that is parallel to $(AB)$.
-Therefore it must be the line $(CD)$ such that \ref{A B C + B C D} hold.
-Hence the ``if'' part follows.
+Therefore it must be the same line $(CD)$ such that \ref{A B C + B C D} hold.
 \qeds
 
 %???)
@@ -280,8 +279,6 @@ $$\measuredangle A B C+ \measuredangle B C A + \measuredangle C A B \equiv \pi.$
 
 \end{thm}
 
-The proof uses the same construction as in Lemma~\ref{lem:2angles1}.
-
 %(???
 
 \parit{Proof.} 
@@ -290,29 +287,27 @@ if $\triangle A B C$ is degenerate, then the equality follows from Theorem~\ref{
 Further we assume that $\triangle A B C$ is nondegenerate.
 
 \begin{wrapfigure}{o}{23mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/2sum1(1)}
-\lbl[l]{16,2;$A$}
-\lbl[b]{6,23;$B$}
-\lbl[r]{0,2;$C$}
-\lbl[b]{20,23;$D$}
-\lbl[l]{11.5,12;$M$}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/2sum2(1)}
+\lbl[t]{14,.5;$A$}
+\lbl[r]{4,22;$B$}
+\lbl[t]{2,.5;$C$}
+\lbl[r]{18,22;$X$}
 \end{lpic}
 \end{wrapfigure}
 
-Let $M$ be the midpoint of $[AB]$.
-Choose $D\z\in (CM)$ distinct from $C$ so that $DM=CM$.
+By Lemma~\ref{lem:2angles1} there is a point $X$ that lies with $B$ on the same side of $(AC)$ such that 
+$\measuredangle BAX\z=\measuredangle ABC$.
+In particular 
+\[2\cdot (\measuredangle XAB+\measuredangle ABC)\equiv 0.\]
+By transversal property, we get that $(AX)\parallel (CB)$.
 
-The same argument as in Lemma~\ref{lem:2angles1} shows that 
-\[\measuredangle ABC=\measuredangle BAD\eqlbl{eq:ABC=BAD2}\]
-and therefore 
-\[\measuredangle CAD=\measuredangle CAB+\measuredangle ABC.\eqlbl{eq:ABC+CAB}\]
+Now, let us apply the transversal property (\ref{thm:parallel-2}) to the parallel lines $(BC)$ and $(AX)$ and their transversal $(CA)$.
+Since $B$ and $X$ lie on the same side of $(CA)$, we have 
+\[\measuredangle BCA+\measuredangle CAX\equiv \pi.\eqlbl{eq:ABC+CAB}\]
 
-Let us apply the transversal property (\ref{thm:parallel-2}) for the lines $(BC)$ and $(AD)$ with transversal $(BA)$.
-From \ref{eq:ABC=BAD2} we get that $(CB)\parallel(AD)$.
-
-Note that $B$ lies on the same side from $(CA)$ with $M$ and $D$.
-Therefore, applying the transversal property again, we get that 
-\[\measuredangle BCA+\measuredangle CAD\equiv \pi.\]
+Since $\measuredangle BAX=\measuredangle ABC$,
+we have 
+\[\measuredangle CAX\equiv\measuredangle CAB+\measuredangle ABC\]
 The latter identity and \ref{eq:ABC+CAB} imply the theorem.\qeds
 
 %???)
@@ -350,8 +345,8 @@ for any $\triangle ABC$.
 
 {
 
-\begin{wrapfigure}[4]{r}{30mm}
-\begin{lpic}[t(-8mm),b(0mm),r(0mm),l(0mm)]{pics/right-isos(1)}
+\begin{wrapfigure}[5]{r}{30mm}
+\begin{lpic}[t(2mm),b(0mm),r(0mm),l(0mm)]{pics/right-isos(1)}
 \lbl[t]{3,0;$A$}
 \lbl[br]{15,10;$B$}
 \lbl[t]{28,0;$C$}
@@ -417,7 +412,7 @@ If $\square A B C D$ is a parallelogram, then
 
 \parit{Proof.}
 Since $(AB)\parallel (CD)$,
-the points $C$ and $D$ lie on the same side from~$(AB)$.
+the points $C$ and $D$ lie on the same side of~$(AB)$.
 Hence $\angle ABD$ and $\angle ABC$ have the same sign.
 
 Analogously, 
@@ -553,8 +548,10 @@ Show that if it is a circle then it has center $(-\tfrac a2,-\tfrac b2)$ and the
 
 \begin{thm}{Exercise}\label{ex:apolonnius}
 Use the previous exercise to show that given two distinct point $A$ and $B$ 
-the locus of points $X$ such that $AX=2\cdot BX$ is a circle. (This is the so called \index{Apollonian circle}\emph{Apollonian circle}.)
+the locus of points $X$ such that $AX=2\cdot BX$ is a circle. 
 \end{thm}
+
+The circle in the exercise above is an example of the so called \index{Apollonian circle}\emph{Apollonian circle}.
 
 %???)
 

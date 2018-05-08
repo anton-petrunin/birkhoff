@@ -108,54 +108,30 @@ $$|\measuredangle CAB|+|\measuredangle ABC|< \pi.$$
 Note that according to \ref{thm:signs-of-triug}, the angles $ABC$, $BCA$ and $CAB$
 have the same sign.
 Therefore, in the Euclidean plane the theorem follows immediately from Theorem~\ref{thm:3sum}.
-In neutral geometry, we need to work more.
 
-\parit{Proof.}
-By \ref{thm:signs-of-triug}, 
-we may assume that $\angle CAB$
-and $\angle ABC$ are positive.
-
-Let $M$ be the midpoint of $[AB]$.
-Choose $C'\in (CM)$ distinct from $C$ so that $C'M=CM$.
-
-
-Note that the angles $AMC$ and $BMC'$
-are vertical;
-in particular, 
-$$\measuredangle AMC=\measuredangle BMC'.$$
-
-By construction, $AM\z=BM$ and $CM\z=C'M$.
-Therefore, 
-$$\triangle AMC\cong \triangle BMC';$$ 
-in particular, 
-$$\measuredangle CAB=\pm\measuredangle C'BA.$$
-
-\begin{wrapfigure}[10]{o}{37mm}
-\begin{lpic}[t(4mm),b(0mm),r(0mm),l(2mm)]{pics/2sum(1)}
-\lbl[lt]{22.5,1;$B$}
-\lbl[br]{10.5,22;$A$}
-\lbl[tr]{0,1;$C$}
-\lbl[lb]{33,22;$C'$}
-\lbl[b]{18,14;$M$}
+\begin{wrapfigure}{o}{23mm}
+\begin{lpic}[t(-2mm),b(0mm),r(0mm),l(0mm)]{pics/2sum2(1)}
+\lbl[t]{14,.5;$A$}
+\lbl[r]{4,22;$B$}
+\lbl[t]{2,.5;$C$}
+\lbl[r]{18,22;$X$}
 \end{lpic}
 \end{wrapfigure}
 
-According to \ref{thm:signs-of-triug}, 
-the angles $CAB$ and $C'BA$ have the same sign as $\angle AMC$ and $\angle BMC'$.
-Therefore
-$$\measuredangle CAB=\measuredangle C'BA.$$
+In neutral geometry, we need to apply Lemma~\ref{lem:2angles1} directly.
 
+\parit{Proof.}
+By Lemma~\ref{lem:2angles1} there is a point $X$ that lies with $B$ on the same side of $(AC)$ such that 
+$\measuredangle BAX\z=\measuredangle ABC$.
 In particular,
-\begin{align*}
-\measuredangle C'BC&\equiv \measuredangle C'BA+\measuredangle ABC\equiv
-\\
-&\equiv \measuredangle CAB+\measuredangle ABC.
-\end{align*}
+\[\measuredangle CAX \equiv\measuredangle CAB+\measuredangle ABC.\eqlbl{eq:CAX=CAB+ABC}\]
 
-Finally, note that $C'$ and $A$ lie on the same side from $(CB)$.
-Therefore, the angles $CAB$, $ABC$ and $C'BC$ are positive.
-By Exercise~\ref{ex:PP(PN)}, the result follows.
-\qeds
+By \ref{thm:signs-of-triug}, the angles $CAB$, $ABC$ have the same signs and
+since $X$ and $B$ lie on the same side of $(AC)$, we also have that the angles $CAB$ and $ABX$ have the same signs.
+Note that $\measuredangle CAX\not\equiv \pi$, otherwise $X$ would lie on $(AC)$.
+Therefore the identity \ref{eq:CAX=CAB+ABC} implies
+\[|\measuredangle CAB|+|\measuredangle ABC|=|\measuredangle CAX|<\pi.\]
+\qedsf
 
 \begin{thm}{Exercise}\label{ex:parallel-abs}
 Assume $A$, $B$, $C$ and $D$ are points in a neutral plane
@@ -164,7 +140,7 @@ $$2\cdot \measuredangle ABC+2\cdot\measuredangle BCD\equiv 0.$$
 Show that $(AB)\parallel (CD)$.
 \end{thm}
 
-Note that one cannot extract the solution of the above exercise from the proof of the transversal property (\ref{thm:parallel-2})
+Note that one cannot apply the transversal property (\ref{thm:parallel-2}).
 
 
 \begin{thm}{Exercise}\label{ex:SAA}
@@ -216,7 +192,7 @@ $$AB\z<A'B'
 \end{thm}
 
 \begin{wrapfigure}[10]{o}{41mm}
-\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/ABBCX(1)}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/ABBCX(1)}
 \lbl[l]{37,1;$A$}
 \lbl[r]{4,1;$C$}
 \lbl[lb]{17,20;$B$}
@@ -240,9 +216,9 @@ Note that
 \begin{itemize}
 \item $(CX)$ bisects $\angle BCB'$.
 \item $(CX)$ is the perpendicular bisector of $[BB']$.
-\item $A$ and $B$ lie on the same side from $(CX)$ if and only if $$\measuredangle ACB<\measuredangle ACB'.$$
+\item $A$ and $B$ lie on the same side of $(CX)$ if and only if $$\measuredangle ACB<\measuredangle ACB'.$$
 \end{itemize}
-From Exercise~\ref{ex:pbisec-side}, $A$ and $B$ lie on the same side from $(CX)$ if and only if $AB<AB'$.
+From Exercise~\ref{ex:pbisec-side}, $A$ and $B$ lie on the same side of $(CX)$ if and only if $AB<AB'$.
 Hence the result.
 \qeds
 
@@ -378,6 +354,8 @@ Note that Theorem~\ref{thm:3sum-a} sates that, the defect of any triangle in a n
 According to Theorem~\ref{thm:3sum}, any triangle in
 the Euclidean plane has zero defect.
 
+{
+
 \begin{wrapfigure}{o}{19mm}
 \begin{lpic}[t(-0mm),b(0mm),r(0mm),l(2mm)]{pics/defect(1)}
 \lbl[tr]{1,1;$A$}
@@ -395,7 +373,7 @@ $$\defect(\triangle ABC)=\defect(\triangle ADC)+\defect(\triangle DBC).$$
 
 \end{thm}
 
-
+}
 
 \section*{How to prove that something\\ 
 cannot be proved}

@@ -1,5 +1,72 @@
 
 
+
+
+
+
+\parit{Proof.}
+By \ref{thm:signs-of-triug}, 
+we may assume that $\angle CAB$
+and $\angle ABC$ are positive.
+
+Let $M$ be the midpoint of $[AB]$.
+Choose $C'\in (CM)$ distinct from $C$ so that $C'M=CM$.
+
+
+Note that the angles $AMC$ and $BMC'$
+are vertical;
+in particular, 
+$$\measuredangle AMC=\measuredangle BMC'.$$
+
+By construction, $AM\z=BM$ and $CM\z=C'M$.
+Therefore, 
+$$\triangle AMC\cong \triangle BMC';$$ 
+in particular, 
+$$\measuredangle CAB=\pm\measuredangle C'BA.$$
+
+\begin{wrapfigure}[10]{o}{37mm}
+\begin{lpic}[t(4mm),b(0mm),r(0mm),l(2mm)]{pics/2sum(1)}
+\lbl[lt]{22.5,1;$B$}
+\lbl[br]{10.5,22;$A$}
+\lbl[tr]{0,1;$C$}
+\lbl[lb]{33,22;$C'$}
+\lbl[b]{18,14;$M$}
+\end{lpic}
+\end{wrapfigure}
+
+According to \ref{thm:signs-of-triug}, 
+the angles $CAB$ and $C'BA$ have the same sign as $\angle AMC$ and $\angle BMC'$.
+Therefore
+$$\measuredangle CAB=\measuredangle C'BA.$$
+
+In particular,
+\begin{align*}
+\measuredangle C'BC&\equiv \measuredangle C'BA+\measuredangle ABC\equiv
+\\
+&\equiv \measuredangle CAB+\measuredangle ABC.
+\end{align*}
+
+Finally, note that $C'$ and $A$ lie on the same side from $(CB)$.
+Therefore, the angles $CAB$, $ABC$ and $C'BC$ are positive.
+By Exercise~\ref{ex:PP(PN)}, the result follows.
+\qeds
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \begin{thm}{Exercise}\label{ex:line-coord}
 Let $(x_A,y_A)$ and $(x_B,y_B)$ be the coordinates of distinct points $A$ and $B$ in the Euclidean plane.
 Show that the line $(AB)$ is the set of points with coordinates $(x,y)$ such that
