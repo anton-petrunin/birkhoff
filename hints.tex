@@ -704,8 +704,8 @@ and think.
 
 \parbf{Exercise~\ref{ex:apolonnius}.}
 We can choose the coordinates so that $B=(0,0)$ and $A=(a,0)$ for some $a>0$.
-If $X=(x,y)$, then the equation $AX=2\cdot BX$ can be written in coordinates as 
-\[4\cdot(x^2+y^2)=(x-a)^2+y^2.\]
+If $X=(x,y)$, then the equation $AX=k\cdot BX$ can be written in coordinates as 
+\[k^2\cdot(x^2+y^2)=(x-a)^2+y^2.\]
 It remains to rewrite this equation as in Exercise~\ref{ex:circle-coord}.
 
 %???)
@@ -1564,7 +1564,7 @@ From part \textit{(\ref{ex:oder:a})}, each such line contains $X$ and yet $n$ po
 Hence \textit{(\ref{ex:oder:b})} follows.
 
 To solve \textit{(\ref{ex:oder:c})}, show that the equation
-$n^2+n+1=10$ %???LINE
+$n^2+n+1=10$ 
 does not admit an integer solution and then apply part~\textit{(\ref{ex:oder:b})}.
 
 To solve \textit{(\ref{ex:oder:d})}, count the number of lines crossing a given line using the 
@@ -1910,11 +1910,19 @@ Apply Schwarz--Pick theorem for a function $f$ such that $f(0)\z=0$ and then app
 
 {
 
-\begin{wrapfigure}{r}{30mm}
+\begin{wrapfigure}{r}{32mm}
+\centering
 \begin{lpic}[t(-8mm),b(-0mm),r(0mm),l(0mm)]{pics/appol(1)}
 \lbl[br]{6,5;$O$}
 \lbl[tl]{25,21;$P$}
 \lbl[b]{21,15;$X$}
+\end{lpic}
+
+\begin{lpic}[t(2mm),b(-0mm),r(0mm),l(0mm)]{pics/5-gon(1)}
+\lbl[r]{1,17;$A$}
+\lbl[b]{14.5,28;$B$}
+\lbl[l]{28.5,17;$C$}
+\lbl[tl]{12,16;$X$}
 \end{lpic}
 \end{wrapfigure}
 
@@ -1932,7 +1940,16 @@ Consider the homothety with the center at $O$
 which sends $X$ to~$P$.
 The image of $\Gamma$ is the needed circle.
 
-}
+
+
+\parbf{Exercise~\ref{ex:5-gon},} \textit{(\ref{ex:5-gon:a})}. Show that the angles marked the same way on the on the diagram of regular pentagon are equal to each other.
+Conclude that $XC=BC$ and $\triangle ABC\sim \triangle AXB$.
+Therefore 
+\[\frac{AB}{AC}=\frac{AX}{AB}=\frac{AC-AB}{AB}=\frac{AC}{AB}-1.\]
+It remains to solve for $\frac{AC}{AB}$.
+
+\parit{(\ref{ex:5-gon:b}).} Choose two points $P$ and $Q$ and use the compass-and-ruler calculator to construct two points $V$ and $W$ such that $VW\z=\tfrac{1+\sqrt5}2\cdot PQ$.
+Then construct a pentagon with the sides $PQ$ and diagonals $VW$.
 
 \parbf{Exercise~\ref{ex:trisect-set-square}.} 
 Note that with a set square we can construct a line parallel to given line thru the given point.
@@ -1943,6 +1960,8 @@ Assume that two vertices have rational coordinates, say $(a_1,b_1)$ and $(a_2,b_
 Find the coordinates of the third vertex.
 Use that the number $\sqrt{3}$ is irrational
 to show that the third vertex is an irrational point.
+
+}
 
 \begin{wrapfigure}{o}{25mm}
 \begin{lpic}[t(-0mm),b(-3mm),r(0mm),l(0mm)]{pics/equleteral-verify(1)}
@@ -2162,7 +2181,7 @@ Therefore
 \eqlbl{eq:pyth-2}\]
 
 According to Theorem~\ref{thm:area-of-triangle},
-$\area\mathcal{T}=\tfrac12\cdot a\cdot b$. %???LINE
+$\area\mathcal{T}=\tfrac12\cdot a\cdot b$. 
 Therefore, the identity \ref{eq:pyth-2} can be written as 
 \[c^2=(a-b)^2+2\cdot a\cdot b.\]
 Simplifying, we get the Pythagorean theorem.

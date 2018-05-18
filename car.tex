@@ -10,6 +10,8 @@ everywhere starting from Chapter~\ref{chap:perp}.
 
 In this chapter we briefly discuss the classical results in geometric constructions.
 
+%\input{brahmagupta.tex}
+
 \section*{Classical problems}
 \addtocontents{toc}{Classical problems.}
 
@@ -69,7 +71,14 @@ If $r$ is the radius of the given circle, we need to construct a segment of leng
 
 In fact, there is no compass-and-ruler construction which trisects angle with measure~$\tfrac\pi3$. 
 Existence of such a construction would imply constructability of a regular 9-gon which is prohibited by the following famous result.
-%???unefined n-gon
+
+A \index{regular $n$-gon}\emph{regular $n$-gon} inscribed in a circle with center $O$ is a sequence of points $A_1\dots A_n$ on the circle such that 
+\[\measuredangle A_nOA_1=\measuredangle A_1OA_2=\dots=\measuredangle A_{n-1}OA_n=\pm\tfrac2n\cdot \pi.\]
+The points $A_1,\dots, A_n$ are \index{vertex!vertex of a regular $n$-gon}\emph{vertexes},
+the segments $[A_1A_2], \z\dots, [A_nA_1]$ are \index{side!side of a regular $n$-gon}\emph{sides} 
+and the remaining segments $[A_iA_j]$ are \index{diagonal!diagonal of a regular $n$-gon}\emph{diagonals} of the $n$-gon.
+
+A construction of a regular $n$-gon, therefore, is reduced to the construction of an angle with size $\tfrac2n\cdot \pi$.
 
 \begin{thm}{Gauss--Wantzel theorem}
 A regular $n$-gon can be constructed with a ruler and a compass 
@@ -103,7 +112,11 @@ each line is defined by two points on it and each circle is described by its cen
 
 The same way the result of construction can be described by a finite collection of points.
 
-Choose a  coordinate system, such that one of the initial points is the origin $(0,0)$ and yet another initial point has the coordinates~$(1,0)$.
+We may always assume that the initial configuration has at least two point;
+if not add one or two points to the configuration.
+Moreover, applying a rescaling to whole plane, we can assume that the first two points in the initial configuration lie on distance 1 from each other.
+
+In this case we can choose a  coordinate system, such that one of the initial points is the origin $(0,0)$ and yet another initial point has the coordinates~$(1,0)$.
 In this coordinate system,
 the initial configuration of $n$ points is described by 
 $2\cdot n-4$ numbers --- their coordinates $x_3,y_3,\z\dots,x_n,y_n$.
@@ -140,15 +153,6 @@ the square root ``$\sqrt{\phantom{a}}$'' is not needed.
 
 On the other hand, it is easy to produce  compass-and-ruler constructions which produce segments of the lengths $a+b$ and $a-b$ from two given segments of lengths $a>b$.
 
-\begin{wrapfigure}[11]{r}{47mm}
-\begin{lpic}[t(-5mm),b(0mm),r(0mm),l(3mm)]{pics/geom-calc(1)}
-\lbl[r]{0,22;$A$}
-\lbl[l]{42,22;$B$}
-\lbl[t]{9,20;$D$}
-\lbl[rb]{9,38;$C$}
-\end{lpic}
-\end{wrapfigure}
-
 To perform ``$\cdot$'', ``$/$''
 and ``$\sqrt{\phantom{a}}$'' consider the following diagram:
 let $[AB]$ be a diameter of a circle; 
@@ -156,6 +160,15 @@ fix a point $C$ on the circle and let $D$ be the foot point of $C$ on~$[AB]$.
 Note that 
 $$\triangle ABC\sim\triangle ACD\sim \triangle BDC.$$
 It follows that $AD\cdot DC=BD^2$.  
+
+\begin{wrapfigure}[11]{r}{47mm}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(3mm)]{pics/geom-calc(1)}
+\lbl[r]{0,22;$A$}
+\lbl[l]{42,22;$B$}
+\lbl[t]{9,20;$D$}
+\lbl[rb]{9,38;$C$}
+\end{lpic}
+\end{wrapfigure}
 
 Using this diagram, one should guess the compass-and-ruler constructions 
 which produce segments of lengths
@@ -173,7 +186,7 @@ $\sqrt a$, $a^2$, $\tfrac1b$.
 Combining these constructions we can produce
 $a\cdot b=(\sqrt{a\cdot b})^2$,
 $\tfrac ab=a\cdot\tfrac 1b$.
-In other words we produced a {}\emph{compass-and-ruler calculator},
+In other words we produced a \index{compass-and-ruler calculator}\emph{compass-and-ruler calculator},
 which can do ``$+$'', ``$-$'', ``$\cdot$'', ``$/$'' and ``$\sqrt{\phantom{a}}$''.
 
 The discussion above gives a sketch of the proof of the following theorem:
@@ -206,12 +219,21 @@ which is out of the scope of this book.
 
 In the next section, we discuss similar but simpler examples of impossible constructions with an unusual tool.
 
+\begin{thm}{Exercise}\label{ex:5-gon}
+\begin{enumerate}[(a)]
+ \item\label{ex:5-gon:a} Show that diagonal or regular pentagon is $\tfrac{1+\sqrt5}2$ times larger than its side.
+ \item\label{ex:5-gon:b} Use (\ref{ex:5-gon:a}) to make a compass-and-ruler construction of a regular pentagon.
+\end{enumerate}
+\end{thm}
+
+%\clearpage%???
+
 \section*{Constructions with a set square}
 \addtocontents{toc}{Constructions with a set square.}
 
 {
-\begin{wrapfigure}[6]{r}{26mm}
-\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/ugolnik(1)}
+\begin{wrapfigure}[5]{r}{26mm}
+\begin{lpic}[t(-8mm),b(0mm),r(0mm),l(0mm)]{pics/ugolnik(1)}
 \end{lpic}
 \end{wrapfigure}
 

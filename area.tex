@@ -61,7 +61,7 @@ Indeed, any point which belong to the set $\solidtriangle ABC$
 also belongs to the set $\solidtriangle BAC$
 and the other way around.
 On the other hand,
-$\triangle ABC\ne\triangle BAC$ simply because the sequence of points $(A,B,C)$ is distinct from the sequence $(B,A,C)$.
+$\triangle ABC\ne\triangle BAC$ simply because the ordered triple of points $(A,B,C)$ is distinct from the ordered triple $(B,A,C)$.
 
 In general  $\triangle ABC\ncong\triangle BAC$, but $\solidtriangle ABC\cong\solidtriangle BAC$, where congruence of the sets $\solidtriangle ABC$ and $\solidtriangle BAC$ 
 is understood the following way.
@@ -79,7 +79,11 @@ and \[\solidtriangle ABC\cong \solidtriangle A'B'C',\]
 then after relabeling the vertices of $\triangle ABC$ 
 we will have 
 \[\triangle ABC\cong \triangle A'B'C'.\]
-The existence of such relabeling follow from the exercise.
+
+Indeed it is sufficient to show that 
+if $f$ is a motion which maps $\solidtriangle ABC$ to $\solidtriangle A'B'C'$,
+then $f$ maps each vertex of $\triangle ABC$ to a vertex $\triangle A'B'C'$.
+The latter follows from the characterization of vertexes of solid triangles given in the following exercise.
 
 \begin{thm}{Exercise}\label{ex:vertex}
 Let $\triangle ABC$ be nondegenerate and $X\z\in \solidtriangle ABC$.
@@ -106,7 +110,7 @@ is a set of one of the following three types:
 
 A set in the plane is called \index{polygonal set}\emph{polygonal} if it can be presented as a union of finite collection of elementary sets.
 
-According to this definition, empty set $\emptyset$
+Note that according to this definition, the empty set $\emptyset$
 is a polygonal set.
 Indeed, $\emptyset$ is a union of an empty collection of elementary sets.
 
@@ -176,9 +180,7 @@ Therefore, $\mathcal{P}\cup\mathcal{Q}$ is polygonal.
 
 
 
-Note that the union of all sets $\mathcal{P}_i\cap \mathcal{Q}_j$ 
-is $\mathcal{P}\cap \mathcal{Q}$.
-
+Note that $\mathcal{P}\cap \mathcal{Q}$ is the union of sets $\mathcal{P}_i\cap \mathcal{Q}_j$ for all $i$ and $j$.
 Therefore, in order to show that $\mathcal{P}\cap \mathcal{Q}$ is polygonal,
 it is sufficient to show that each $\mathcal{P}_i\cap \mathcal{Q}_j$ is polygonal for any pair $i$,~$j$.
 
@@ -327,9 +329,9 @@ we get that
 \end{align*}
 By Proposition~\ref{prop:area-segment}, the right hand side vanish.
 
-On the other hand, by Proposition~\ref{prop:area-positive},
-$\area\mathcal{P}\ge 0$;
-hence the statement follows.
+On the other hand, 
+$\area\mathcal{P}\ge 0$ (see \ref{prop:area-positive}),
+hence the result.
 \qeds
 
 \begin{wrapfigure}[5]{o}{24 mm}
@@ -726,7 +728,7 @@ a&b\\ c&d
 \addtocontents{toc}{Area method.}
 
 In this section we will give examples of
-slim proofs using area.
+slim proofs using the properties of area.
 Note that these proofs are not truly elementary since the price one pays to introduce the area function is high.
 
 We start with the proof of the Pythagorean theorem.
@@ -926,7 +928,7 @@ In particular, it follows that any ideal triangle in h-plane has area~$\pi$.
 Similarly in the unit sphere the area of equilateral triangle with right angles has area $\tfrac\pi2$;
 since whole sphere can be subdivided in eight such triangles, we get that the area of unit sphere is $4\cdot\pi$.
 
-The identity \ref{eq:curv-defect} suggest a simpler way to introduce area function which works on spheres and all neutral planes, but does not work for the Euclidean plane.
+The identity \ref{eq:curv-defect} can be used as an alternative way to introduce area function; it works on spheres and all neutral planes, except for the Euclidean plane.
 
 \section*{Quadrable sets}
 \addtocontents{toc}{Quadrable  sets.}
