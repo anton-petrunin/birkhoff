@@ -14,7 +14,7 @@ The following command will create a local copy of the source code for you.
 
 `git clone https://github.com/anton-petrunin/birkhoff.git`
 
-Go to the crated folder, and rung 'pdflatex' and 'makeindex' few times:
+Go to the crated folder, and run `pdflatex` and `makeindex` few times:
 
 `cd birkhoff/`<br/>
 `pdflatex all-lectures.tex`<br/>
