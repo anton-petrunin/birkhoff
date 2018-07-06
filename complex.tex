@@ -259,23 +259,7 @@ Show that
 
 \end{thm}
 
-\begin{wrapfigure}{o}{36mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/3-squares(1)}
-\lbl[bw]{12.5,14.7;$A$}
-\lbl[bw]{22.5,14.7;$B$}
-\lbl[bw]{32.5,14.7;$C$}
-\lbl[tw]{12,.5;$E$}
-\lbl[tw]{2,.5;$O$}
-\end{lpic}
-\end{wrapfigure}
 
-\begin{thm}{Exercise}\label{ex:3-squares}
-Let $O$, $E$, $A$, $B$ and $C$ be the points on the plane with the complex coordinates
-$0$, $1$, $1+i$, $2+i$ and $3+i$ correspondingly.
-Use \ref{eq:angle-arg} to show that 
-\[\measuredangle EOA+\measuredangle EOB+\measuredangle EOC=\tfrac\pi2.\]
-
-\end{thm}
 
 The following theorem is a reformulation of Theorem~\ref{thm:inscribed-quadrilateral} which uses complex coordinates.
 
@@ -329,8 +313,78 @@ are inscribed.
 
 \end{thm}
 
+%(???
+\section*{Method of complex coordinates}
+\addtocontents{toc}{Method of complex coordinates.}
+
+The following problem illustrates the method of complex coordinates.
 
 
+\begin{thm}{Problem}\label{prob:2right-tringles}
+Let $\triangle OPV$ and $\triangle OQW$ be isosceles right triangles such that 
+\[\measuredangle VPO=\measuredangle OQW=\tfrac\pi2\] 
+and $M$ be the midpoint of $[VW]$.
+Assume $P$, $Q$ and $M$ are distinct points.
+Show that  $\triangle PMQ$ is an isosceles right triangle.
+\end{thm}
+
+\parit{Solution.}
+Choose the complex coordinates so that $O$ is the origin;
+denote by $v, w, p, q, m$ the complex coordinates of the corresponding points.
+
+Note that 
+\begin{align*}
+v&=(1+i)\cdot p,
+&
+w&=(1-i)\cdot q.
+\end{align*}
+
+\begin{wrapfigure}{r}{37mm}
+ \begin{lpic}[t(-2mm),b(1mm),r(2mm),l(2mm)]{pics/3right-isos(1)}
+\lbl[b]{12,24;$O$}
+\lbl[t]{28,0;$W$}
+\lbl[t]{10,0;$V$}
+\lbl[r]{0,13;$P$}
+\lbl[l]{31.5,19.5;$Q$}
+\lbl[t]{19,0;$M$}
+\end{lpic}
+\end{wrapfigure}
+
+Therefore
+\begin{align*}
+m&=\tfrac12\cdot(v+w)=
+\\
+&=\tfrac{1+i}2\cdot p+\tfrac{1-i}2\cdot q.
+\end{align*}
+
+By a straightforward computations, we get
+\[p-m=i\cdot (q-m).\]
+In particular, $|p-m|=|q-m|$ and  $\arg\frac{p-m}{q-m}=\tfrac\pi2$;
+that is $PM=QM$ and $\measuredangle QMP =\tfrac\pi2$.  
+\qeds
+
+{
+
+\begin{wrapfigure}{r}{36mm}
+\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/3-squares(1)}
+\lbl[bw]{12.5,14.7;$A$}
+\lbl[bw]{22.5,14.7;$B$}
+\lbl[bw]{32.5,14.7;$C$}
+\lbl[tw]{12,.5;$E$}
+\lbl[tw]{2,.5;$O$}
+\end{lpic}
+\end{wrapfigure}
+
+\begin{thm}{Exercise}\label{ex:3-squares}
+Consider three squares with common sides as on the diagram.
+Use the method of complex coordinates to show that 
+\[\measuredangle EOA+\measuredangle EOB+\measuredangle EOC=\pm\tfrac\pi2.\]
+
+\end{thm}
+
+}
+
+%???)
 
 \section*{Fractional linear transformations}
 \addtocontents{toc}{Fractional linear transformations.}
