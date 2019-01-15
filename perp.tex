@@ -100,7 +100,7 @@ is any point on the perpendicular bisector to $[A B]$ and $P\ne M$.
 Then $\measuredangle A M P=\pm \tfrac\pi2$, 
 $\measuredangle B M P=\pm \tfrac\pi2$ and
 $A M\z=B M$.
-Therefore, $\triangle A M P\cong \triangle B M P$;
+By SAS, $\triangle A M P\cong \triangle B M P$;
 in particular, $A P\z= B P$.\qeds
 
 
@@ -125,18 +125,6 @@ Show that $AC>BC$ if and only if $|\measuredangle ABC|>|\measuredangle CAB|$.
 There is one and only one line which passes thru a given point $P$ and is perpendicular to a given line~$\ell$.
 \end{thm}
 
-According to the above theorem, 
-there is a unique point $Q\in\ell$ such that $(QP)\perp\ell$.
-This point $Q$ is called the \index{foot point}\emph{foot point} of $P$ on~$\ell$. 
-
-\parit{Proof.} 
-If $P\in\ell$, then both, existence and uniqueness, follow from Axiom~\ref{def:birkhoff-axioms:2}.
-
-\parit{Existence for $P\not\in\ell$.} 
-Let $A$ and $B$ be two distinct points of~$\ell$. 
-Choose $P'$ so that $AP'\z=AP$ and $\measuredangle P' A B\equiv -\measuredangle P A B$.
-According to Axiom~\ref{def:birkhoff-axioms:3}, $\triangle A P' B\z\cong\triangle A P B$.
-Therefore, $A P= A P'$ and $B P= B P'$.
 
 {
 
@@ -149,6 +137,19 @@ Therefore, $A P= A P'$ and $B P= B P'$.
 \lbl[lt]{23,2;$P'$}
 \end{lpic}
 \end{wrapfigure}
+
+According to the above theorem, 
+there is a unique point $Q\in\ell$ such that $(QP)\perp\ell$.
+This point $Q$ is called the \index{foot point}\emph{foot point} of $P$ on~$\ell$. 
+
+\parit{Proof.} 
+If $P\in\ell$, then both, existence and uniqueness, follow from Axiom~\ref{def:birkhoff-axioms:2}.
+
+\parit{Existence for $P\not\in\ell$.} 
+Let $A$ and $B$ be two distinct points of~$\ell$. 
+Choose $P'$ so that $AP'\z=AP$ and $\measuredangle P' A B\equiv -\measuredangle P A B$.
+According to Axiom~\ref{def:birkhoff-axioms:3}, $\triangle A P' B\z\cong\triangle A P B$.
+Therefore, $A P= A P'$ and $B P= B P'$.
 
 
 According to Theorem~\ref{thm:perp-bisect}, $A$ and $B$ lie on the perpendicular bisector to~$[P P']$.
@@ -165,7 +166,7 @@ in particular, $P Q= P Q'$.
 
 {
 
-\begin{wrapfigure}{i}{36mm}
+\begin{wrapfigure}{o}{36mm}
 \begin{lpic}[t(-2mm),b(-0mm),r(0mm),l(0mm)]{pics/perp-unique(1)}
 \lbl[rb]{2,16;$Q$}
 \lbl[lb]{33,16;$Q'$}
@@ -210,7 +211,7 @@ $\measuredangle BAP'\equiv -\measuredangle BAP$.
 \parit{Proof.} 
 Note that if $P\in (AB)$, 
 then $P\z=P'$. 
-By Corollary~\ref{cor:degenerate=pi}, $\measuredangle BAP=0$ or~$\pi$.
+By Corollary~\ref{cor:degenerate=pi}, $\measuredangle BAP\z=0$ or~$\pi$.
 Hence the statement follows.
 
 {
@@ -355,9 +356,9 @@ $$PX=P'X
 PQ=P'Q=\tfrac12\cdot PP'$$
 
 Note that $\ell$ meets $[PP']$ only at the point $Q$.
-Therefore, by the triangle inequality and Exercise~\ref{ex:degenerate-trig},
+Therefore, $X\notin [PP']$; by the triangle inequality and Exercise~\ref{ex:degenerate-trig},
 $$PX+P'X>PP'$$
-and hence the result.
+and hence the result: $PX>PQ$.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:obtuce}
@@ -508,7 +509,7 @@ In addition, Chapter~\ref{chap:car} is devoted completely to the subject.
 The idealized ruler can be used only to draw a line thru the given two points.
 The idealized compass can be used only to draw a circle with a given center and radius.
 That is, given three points $A$, $B$ and $O$ 
-we can draw the set of all points on distant $AB$ from~$O$.
+we can draw the set of all points on distance $AB$ from~$O$.
 We may also mark new points in the plane
 as well as on the constructed lines, circles 
 and their intersections (assuming that such points exist).

@@ -5,8 +5,9 @@
 \addtocontents{toc}{Side-angle-side condition.}
 
 Our next goal is to give conditions which guarantee congruence of two triangles.
-One of such conditions is Axiom~\ref{def:birkhoff-axioms:3};
-it is also called {}\emph{side-angle-side congruence condition}, or briefly, \index{SAS congruence condition}\emph{SAS congruence condition}.
+
+One of such conditions is given in Axiom~\ref{def:birkhoff-axioms:3}; it states that if two pairs of sides of two triangles are equal, and the included angles are equal up to sign, then the triangles are congruent.
+This axiom is also called {}\emph{side-angle-side congruence condition}, or briefly, \index{SAS congruence condition}\emph{SAS congruence condition}.
 
 \section*{Angle-side-angle condition}
 \addtocontents{toc}{Angle-side-angle condition.}
@@ -26,18 +27,18 @@ $$\triangle A B C\cong\triangle A' B' C'.$$
 
 \end{thm}
 
-Note that for degenerate triangles the statement does not hold.
-For example, consider one triangle with sides $1$, $4$, $5$ 
-and the other with sides $2$, $3$,~$5$.
-
 \begin{wrapfigure}[7]{o}{26mm}
-\begin{lpic}[t(-0mm),b(3mm),r(0mm),l(0mm)]{pics/AA(1)}
+\begin{lpic}[t(-4mm),b(3mm),r(0mm),l(0mm)]{pics/AA(1)}
 \lbl[t]{1,.5;$A'$}
 \lbl[b]{10.5,29;$B'$}
 \lbl[t]{16,.5;$C'$}
 \lbl[lt]{21,.5;$C''$}
 \end{lpic}
 \end{wrapfigure}
+
+Note that for degenerate triangles the statement does not hold.
+For example, consider one triangle with sides $1$, $4$, $5$ 
+and the other with sides $2$, $3$,~$5$.
 
 \parit{Proof.} 
 According to Theorem~\ref{thm:signs-of-triug},
@@ -110,8 +111,8 @@ Therefore, by Axiom~\ref{def:birkhoff-axioms:3},
 $$\triangle C A B\cong\triangle C B A.$$
 Applying the theorem on the signs of angles of triangles (\ref{thm:signs-of-triug}) and Axiom~\ref{def:birkhoff-axioms:3} again,
 we get that 
-$$\measuredangle C A B
-\equiv -\measuredangle C B A.$$
+$$\measuredangle B A C
+\equiv -\measuredangle A B C.$$
 
 To prove the converse, we assume that
 $\measuredangle C A B \z\equiv - \measuredangle C B A$.
@@ -143,6 +144,8 @@ B' C'=B C
 C' A'=C A.$$
 
 \end{thm}
+
+Note that this condition is valid for degenerate triangles as well.
 
 \parit{Proof.} 
 Choose $C''$ so that $A' C''= A' C'$ and $\measuredangle B' A' C''= \measuredangle B A C$.
@@ -244,9 +247,9 @@ that is, $f(X)=X$ for any point $X$ on the plane.
 \addtocontents{toc}{On angle-side-side and side-angle-angle.}
 
 In each of the conditions SAS, ASA, and SSS we specify three corresponding parts of the triangles.
-Let us discuss other two triples of corresponding parts.
+Let us discuss other triples of corresponding parts.
 
-One triple is called {}\emph{angle-side-side}, or briefly ASS;
+The fist triple is called {}\emph{side-side-angle}, or briefly SSA;
 it specifies two sides and a non-included angle.
 This condition is not sufficient for congruence;
 that is, there are two nondegenerate triangles $ABC$ and $A'B'C'$ such that
@@ -267,7 +270,7 @@ but $\triangle ABC\not\cong\triangle A'B'C'$ and moreover $AC\ne A'C'$.
 We will not use this negative statement in the sequel and therefore there is no need to prove it formally.
 An example can be guessed from the diagram.
 
-An other triple is {}\emph{side-angle-angle}, or briefly SAA;
+The second triple is {}\emph{side-angle-angle}, or briefly SAA;
 it specifies one side and two angles one of which is opposite to the side.
 This provides a congruence condition; 
 that is, if one of the triangles $ABC$ and $A'B'C'$ is nondegenerate then
@@ -278,6 +281,8 @@ The SAA condition will not be used directly in the sequel.
 One proof of this condition can be obtained from ASA and the theorem on sum of angles of triangle proved below (see~\ref{thm:3sum}). 
 For a more direct proof, see Exercise~\ref{ex:SAA}.
 
+Another triple is called {}\emph{angle-angle-angle}, or briefly AAA;
+by Axiom~\ref{def:birkhoff-axioms:4}, it is not sufficient for congruence. However AAA turns out to be a congruence condition in the hyperbolic plane; see \ref{thm:AAA}.
 
 %)???
 

@@ -199,9 +199,10 @@ Hence the result.
 \setcounter{eqtn}{0}
 
 \parbf{Exercise~\ref{ex:infinite}.} By Axiom~\ref{def:birkhoff-axioms:0}, there are at least two points in the plane.
-Therefore, by Axioms~\ref{def:birkhoff-axioms:1}, 
+Therefore, by Axiom~\ref{def:birkhoff-axioms:1}, 
 the plane contains a line. 
-It remains to note that line is an infinite set of points.
+To prove \textit{(a)}, it remains to note that line is an infinite set of points.
+To prove \textit{(b)} apply in addition Axiom~\ref{def:birkhoff-axioms:2}.
 
 \parbf{Exercise~\ref{ex:[OA)=[OA')}.}
 By Axiom~\ref{def:birkhoff-axioms:1},
@@ -698,6 +699,11 @@ if $0<a\le b\le c\le a+c$.
 
 %???(
 
+\parbf{Exercise~\ref{ex:line-coord}.} Let $M=(x,y)$. Note that $MA=MB$ if and only if
+\[(x-x_A)^2+(y-y_A)^2=(x-x_B)^2+(y-y_B)^2.\]
+To prove the first part it remains to simplify this equation.
+For the second part use that any line is a perpendicular bisector to some line segment.
+
 \parbf{Exercise~\ref{ex:circle-coord}.} Rewrite the equation as 
 \[(x+\tfrac a2)^2+(y+\tfrac b2)^2=(\tfrac a2)^2+(\tfrac b2)^2-c\]
 and think.
@@ -827,12 +833,6 @@ on the diameters $[AB]$ and $[A'B']$ correspondingly.
 By Corollary~\ref{cor:right-angle-diameter},
 any point $Z$ in the intersection $\Gamma\cap \Gamma'$ will do.
 
-{
-
-\begin{wrapfigure}[11]{r}{34mm}
-\begin{lpic}[t(-5mm),b(-0mm),r(-1mm),l(0mm)]{pics/perp=constr(1)}
-\end{lpic}
-\end{wrapfigure}
 
 \parbf{Exercise~\ref{ex:VVAA}.} 
 Note that $\measuredangle AA'B=\pm\tfrac\pi2$ and $\measuredangle AB'B=\pm\tfrac\pi2$.
@@ -842,6 +842,13 @@ to $\square AA'BB'$.
 If $O$ is the center of the circle, then 
 $$\measuredangle AOB\equiv 2\cdot \measuredangle AA'B\equiv\pi.$$
 That is, $O$ is the midpoint of~$[AB]$.
+
+{
+
+\begin{wrapfigure}[11]{r}{34mm}
+\begin{lpic}[t(-0mm),b(-0mm),r(-1mm),l(0mm)]{pics/perp=constr(1)}
+\end{lpic}
+\end{wrapfigure}
 
 \parbf{Exercise~\ref{ex:perpendicular-ruler}.}
 Guess the construction from the diagram.
@@ -853,10 +860,12 @@ apply Theorem~\ref{thm:orthocenter} and Corollary~\ref{cor:right-angle-diameter}
 \parbf{Exercise~\ref{ex:secant-circles}.}
 Apply Theorem~\ref{thm:inscribed-quadrilateral} twice for $\square ABYX$ and $\square ABY'X'$ and use the transversal property (\ref{thm:parallel-2}).
 
-}
+
 
 \parbf{Exercise~\ref{ex:inaccuracy}.}
 One needs to show that the lines $(A'B')$ and $(XP)$ are not parallel, otherwise the first line in the proof does not make sense.
+
+}
 
 In addition, the following identities:
 \begin{align*}
@@ -919,12 +928,6 @@ Note that $\ell\nparallel m$;
 set $O=\ell\cap m$.
 Note that the circle with center $O$ passing thru $A$ is also passing thru $C$ and tangent to~$(AX)$.
 
-{
-
-\begin{wrapfigure}{r}{35mm}
-\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/3x120(1)}
-\end{lpic}
-\end{wrapfigure}
 
 Note that one the two arcs with endpoints $A$ and $C$ is tangent to~$[AX)$.
 
@@ -939,10 +942,15 @@ hence the result.
 \parbf{Exercise~\ref{ex:two-arcs}.} 
 Apply Proposition~\ref{prop:arc(angle=tan)} twice.
 
+\begin{wrapfigure}{r}{35mm}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/3x120(1)}
+\end{lpic}
+\end{wrapfigure}
+
 \parbf{Exercise~\ref{ex:3x120}.} Guess the construction from the diagram.
 To show that it produces the needed point, apply Theorem \ref{thm:inscribed-angle}.
 
-}
+
 
 %\subsection*{Chapter~\ref{chap:inversion}}
 \refstepcounter{chapter}
@@ -957,7 +965,7 @@ and hence the result.
 
 \parbf{Exercise~\ref{ex:appolo-circ}.}
 Let $O$ denotes the center of $\Gamma$.
-Suppose $X,Y\in \Gamma$;
+Suppose $X,Y\z\in \Gamma$;
 in particular, $OX\z=OY$.
 
 Note that the inversion sends $X$ and $Y$ to themselves.
@@ -987,16 +995,16 @@ By Lemma~\ref{lem:inversion-sim},
 \measuredangle IA'C'&\equiv -\measuredangle ICA.
 \end{align*}
 
+\begin{wrapfigure}[10]{r}{54mm}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/inv-constr(1)}
+\end{lpic}
+\end{wrapfigure}
+
 It remains to apply the theorem on the sum of angles of triangle (\ref{thm:3sum})
 to show that $(A'I)\z\perp (B'C')$, 
 $(B'I)\z\perp (C'A')$
 and
 $(C'I)\z\perp (B'A')$.
-
-\begin{wrapfigure}[10]{r}{54mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/inv-constr(1)}
-\end{lpic}
-\end{wrapfigure}
 
 \parbf{Exercise~\ref{ex:consturuction-of-inversion}.}
 Guess the construction from the diagram (the two nonintersecting lines on the diagram are parallel).
@@ -1016,9 +1024,11 @@ Assume $r$ is the radius of the circle of inversion.
 Then the left hand side above is the coordinate of $Q'$ 
 and the right hand side is the coordinate of the center of $\Gamma'$.
 
+\parbf{Exercise~\ref{ex:circumtool}.}
+A solution is given on page \pageref{page:solution-for-ex:circumtool}.
 
-\begin{wrapfigure}[11]{r}{65mm}
-\begin{lpic}[t(-5mm),b(0mm),r(0mm),l(0mm)]{pics/4-circles-sol(1)}
+\begin{wrapfigure}[11]{O}{65mm}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(2mm)]{pics/4-circles-sol(1)}
 \lbl[r]{0,16;$P$}
 \lbl[t]{24,17;$Q$}
 \lbl[t]{49,19;$Q'$}
@@ -1032,9 +1042,6 @@ and the right hand side is the coordinate of the center of $\Gamma'$.
 \lbl[tl]{60,10;$Y'$}
 \end{lpic}
 \end{wrapfigure}
-
-\parbf{Exercise~\ref{ex:circumtool}.}
-A solution is given on page \pageref{page:solution-for-ex:circumtool}.
 
 \parbf{Exercise~\ref{ex:tangent-circ->parallels}.}
 Apply an inversion in a circle with the center at the only point of intersection of the circles;
@@ -1582,7 +1589,7 @@ $$
 Therefore, $AB_s=\tfrac\pi3$.
 
 \begin{wrapfigure}{r}{30mm}
-\begin{lpic}[t(-8mm),b(-3mm),r(-2mm),l(0mm)]{pics/tessellation(1)}
+\begin{lpic}[t(-0mm),b(-3mm),r(-2mm),l(0mm)]{pics/tessellation(1)}
 \lbl[br]{8,27;$A$}
 \lbl[bl]{22,27;$B$}
 \lbl[t]{15,23;$C$}
@@ -1915,7 +1922,7 @@ Apply Schwarz--Pick theorem for a function $f$ such that $f(0)\z=0$ and then app
 
 \begin{wrapfigure}{r}{32mm}
 \centering
-\begin{lpic}[t(-8mm),b(-0mm),r(0mm),l(0mm)]{pics/appol(1)}
+\begin{lpic}[t(-0mm),b(-0mm),r(0mm),l(0mm)]{pics/appol(1)}
 \lbl[br]{6,5;$O$}
 \lbl[tl]{25,21;$P$}
 \lbl[b]{21,15;$X$}

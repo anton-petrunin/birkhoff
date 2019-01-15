@@ -76,17 +76,18 @@ Consider two planes $\Pi$ and $\Pi'$
 in the Euclidean space. 
 Let $O$ be a point which does not belong neither to $\Pi$ nor~$\Pi'$.
 
-Let us define the \index{perspective projection}\emph{perspective projection from $\Pi$ to $\Pi'$ with center at $O$}.
-The projection of a point $P\in \Pi$
-is defined as the intersection point $P'=\Pi'\cap (OP)$.
-
-\begin{center}
+\begin{figure}[h!]
+\centering
 \begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/perspective(1)}
 \lbl{35,35;$\Pi$}
 \lbl{10,40;$\Pi'$}
 \lbl[bl]{65,11;$O$}
 \end{lpic} 
-\end{center}
+\end{figure}
+
+Let us define the \index{perspective projection}\emph{perspective projection from $\Pi$ to $\Pi'$ with center at $O$}.
+The projection of a point $P\in \Pi$
+is defined as the intersection point $P'=\Pi'\cap (OP)$.
 
 Note that the perspective projection sends collinear points to collinear.
 Indeed, assume three points $P$, $Q$, $R$ lie on one line $\ell$ in $\Pi$
@@ -190,6 +191,7 @@ In other words, we can choose preferred affine plane by removing one line from t
 This construction provides a method for solving problems in projective geometry 
 which will be illustrated by the following classical example.
 
+
 \begin{thm}{Desargues' theorem}\label{thm:desargues}
 Consider three concurrent lines $(AA')$, $(BB')$ and $(CC')$ in the real projective plane.
 Set
@@ -203,7 +205,7 @@ Then the points $X$, $Y$ and $Z$ are collinear.
 
 }
 
-\begin{wrapfigure}{r}{44mm}
+\begin{wrapfigure}{O}{44mm}
 \begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/desargues(0.9)}
 \lbl[r]{15,32;$A$}
 \lbl[lw]{35,42;$A'$}
@@ -285,7 +287,8 @@ Then the points $X$, $Y$, $Z$ are collinear.
 \end{thm}
 
 
-\begin{center}
+\begin{figure}[h!]
+\centering
 \begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/pappus(1)}
 \lbl[lb]{3,23;$A$}
 \lbl[tw]{3,2;$A'$}
@@ -304,7 +307,7 @@ Then the points $X$, $Y$, $Z$ are collinear.
 \lbl[bw]{11,16;$Y$}
 \lbl[rw]{5.5,14;$Z$}
 \end{lpic}
-\end{center}
+\end{figure}
 
 Pappus' theorem can be proved the same way as Desargues' theorem.
 
@@ -341,7 +344,8 @@ if
 p\ni S.\]
 for any point $P$ and line~$s$.
 
-\begin{center}
+\begin{figure}[h!]
+\centering
 \begin{lpic}[t(0mm),b(5mm),r(0mm),l(0mm)]{pics/dual(1)}
 \lbl[tr]{2,17.5;$p$}
 \lbl[tr]{11,25;$q$}
@@ -367,7 +371,7 @@ for any point $P$ and line~$s$.
 \lbl[b]{45,7;$f$}
 \lbl[t]{38,-2;Dual configurations.}
 \end{lpic}
-\end{center}
+\end{figure}
 
 Existence of duality in a plane 
 says that the lines and the points in this plane have the same rights in terms of incidence.

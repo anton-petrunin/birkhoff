@@ -1,11 +1,11 @@
 \chapter{Hyperbolic plane}\label{chap:poincare}
 \addtocontents{toc}{\protect\begin{quote}}
 
-\begin{center}
+\begin{figure}[h!]
+\centering
 \begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/H2checkers_334(0.25)}
 \end{lpic}     
-\end{center}
-
+\end{figure}
 
 In this chapter, we use inversive geometry 
 to construct the model of hyperbolic plane --- a neutral plane which is not Euclidean.
@@ -87,11 +87,11 @@ let $A$ and $B$ denote the ideal points of $(PQ)_h$.
 Without loss of generality, we may assume that on the Euclidean circle containing the h-line $(PQ)_h$, the points $A,P,Q,B$ appear in the same order.
 
 Consider the function 
-$$\delta(P,Q)\df\frac{AQ\cdot BP}{QB\cdot PA}.$$
-Note that the right hand side is the cross-ratio, 
-which appeared in Theorem~\ref{lem:inverse-4-angle}.
+$$\delta(P,Q)\df\frac{AQ\cdot PB}{AP\cdot QB}.$$
+Note that the right hand side is a cross-ratio;
+by Theorem~\ref{lem:inverse-4-angle} it is invariant under inversion.
 Set $\delta(P,P)=1$ for any h-point~$P$.
-Set 
+Let us define h-distance as the logarithm of $\delta$; that is,
 $$PQ_h\df\ln[\delta(P,Q)].$$
 
 The proof that $PQ_h$ is a metric on the h-plane will be given below.

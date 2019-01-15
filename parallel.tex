@@ -198,7 +198,8 @@ By construction, $AM\z=BM$ and $CM\z=XM$.
 Therefore, 
 $$\triangle CMB\cong \triangle XMA;$$ 
 in particular $\measuredangle ABC\equiv\pm \measuredangle BAX$.
-From \ref{eq:CMB=XMA} and \ref{thm:signs-of-triug}, we can not have a minus sign in the last equality; therefore
+Since angles of $\triangle A M X$ have the same sign (\ref{thm:signs-of-triug}),
+by \ref{eq:CMB=XMA} we can not have a minus sign in the last equality; therefore
 $$\measuredangle ABC\equiv\measuredangle BAX.$$
 
 By construction, the line segments $[BM]$ and $[MX]$ do not cross the line $(AC)$.
@@ -214,7 +215,7 @@ then \ref{A B C + B C D} does not hold.
 Since $(AB)\nparallel(C D)$, there is a unique point $Z\z\in (AB)\z\cap(C D)$.
 Since $Z$ lies on $(AB)$ and on $(CD)$, we have
 \begin{align*}
-2\cdot \measuredangle ABC&\equiv 2\cdot \measuredangle ZB,
+2\cdot \measuredangle ABC&\equiv 2\cdot \measuredangle ZBC,
 &
 2\cdot \measuredangle BCD&\equiv 2\cdot \measuredangle BCZ.
 \end{align*}
@@ -246,12 +247,12 @@ Hence the ``only-if'' part follows.
 
 \parit{``If''-part.}
 Given points $A$, $B$ and $C$ there is unique line $(CD)$ such that \ref{A B C + B C D} holds.
-Indeed if 
+Indeed, suppose there are two such lines $(CD)$ and $(CD')$, then
 $$2\cdot(\measuredangle A B C+\measuredangle B C D)\equiv 2\cdot(\measuredangle A B C+\measuredangle B C D')\equiv0.
 $$ 
-then 
+Therefore 
 $$2\cdot\measuredangle B C D\equiv 2\cdot\measuredangle B C D'.$$
-Therefore $2\cdot\measuredangle D C D'\equiv0$; that is, $D'\in (CD)$, or equivalently the line $(CD)$ coinsides with the line $(CD')$.
+It follows that $2\cdot\measuredangle D C D'\equiv0$; that is, $D'\in (CD)$, or equivalently the line $(CD)$ coinsides with the line $(CD')$.
 
 From the ``only-if'' part we know that if \ref{A B C + B C D} holds then $(CD)\parallel(AB)$.
 By Theorem \ref{thm:parallel} there is unique line thru $C$ that is parallel to $(AB)$.
@@ -283,7 +284,7 @@ $$\measuredangle A B C+ \measuredangle B C A + \measuredangle C A B \equiv \pi.$
 
 \parit{Proof.} 
 First note that 
-if $\triangle A B C$ is degenerate, then the equality follows from Theorem~\ref{thm:straight-angle}.
+if $\triangle A B C$ is degenerate, then the equality follows from Corollary~\ref{cor:degenerate=pi}.
 Further we assume that $\triangle A B C$ is nondegenerate.
 
 \begin{wrapfigure}{o}{23mm}
@@ -531,12 +532,23 @@ Use the Exercise~\ref{ex:coordinates}
 to give an alternative proof of Theorem~\ref{thm:abc} in the Euclidean plane.
 
 That is, prove that given the real numbers $a$, $b$ and $c$ such that 
- $$0<a\le b\le c\le a+c,$$
+ $$0<a\le b\le c\le a+b,$$
 there is a triangle $ABC$
 such that $a=BC$, $b=CA$ and $c=AB$.
 \end{thm} 
 
 %(???
+
+\begin{thm}{Exercise}\label{ex:line-coord}
+Consider two distinct points $A=(x_A,y_A)$ and $B=(x_B,y_B)$ on the coordinate plane.
+Show that the perpendicular bisector to $[AB]$ is described by the equation
+\[2\cdot (x_B-x_A)\cdot x+2\cdot (y_B-y_A)\cdot y=x_B^2+y_B^2-x_A^2-x_B^2.\]
+
+Conclude that any line is described by an equation
+\[a\cdot x+b\cdot y=c\]
+for some constants $a$, $b$ and $c$ such that $a\ne 0$ or $b\ne0$.
+\end{thm}
+
 
 \begin{thm}{Exercise}\label{ex:circle-coord}
 Show that for fixed real values $a$, $b$ and $c$ the equation 
