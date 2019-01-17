@@ -70,7 +70,7 @@ If $r$ is the radius of the given circle, we need to construct a segment of leng
 \medskip
 
 In fact, there is no compass-and-ruler construction which trisects angle with measure~$\tfrac\pi3$. 
-Existence of such a construction would imply constructability of a regular 9-gon which is prohibited by the following famous result.
+Existence of such a construction would imply constructability of a regular 9-gon which is prohibited by the following famous result:
 
 A \index{regular $n$-gon}\emph{regular $n$-gon} inscribed in a circle with center $O$ is a sequence of points $A_1\dots A_n$ on the circle such that 
 \[\measuredangle A_nOA_1=\measuredangle A_1OA_2=\dots=\measuredangle A_{n-1}OA_n=\pm\tfrac2n\cdot \pi.\]
@@ -173,7 +173,9 @@ It follows that $AD\cdot DC=BD^2$.
 Using this diagram, one should guess the compass-and-ruler constructions 
 which produce segments of lengths
 $\sqrt{a\cdot b}$ and $\tfrac {a^2}b$.
-To construct  $\sqrt{a\cdot b}$, do the following:
+
+
+For example, to construct  $\sqrt{a\cdot b}$, do the following:
 (1) construct points $A$, $B$ and $D\in [AB]$
 such that $AD=a$ and $BD=b$;
 (2) construct the circle $\Gamma$ on the diameter $[AB]$;
@@ -233,7 +235,8 @@ In the next section, we discuss similar but simpler examples of impossible const
 
 {
 \begin{wrapfigure}[5]{r}{26mm}
-\begin{lpic}[t(-8mm),b(0mm),r(0mm),l(0mm)]{pics/ugolnik(1)}
+%\begin{lpic}[t(-8mm),b(0mm),r(0mm),l(0mm)]{pics/ugolnik(1)}
+\begin{lpic}[t(-8mm),b(0mm),r(0mm),l(0mm)]{mppics/pic-1}
 \end{lpic}
 \end{wrapfigure}
 
@@ -249,9 +252,8 @@ Trisect a given segment with a ruler and a set square.
 
 
 Let us consider ruler-and-set-square constructions.
-Using the same idea as in the previous section,
-we can define {}\emph{ruler-and-set-square constructible numbers}
-and prove the following analog of  Theorem~\ref{thm:constructible-numbers}.
+Following the same lines as in the previous section, we can define {}\emph{ruler-and-set-square constructible numbers}
+and prove the following analog of Theorem~\ref{thm:constructible-numbers}:
 
 }
 
@@ -260,9 +262,8 @@ Assume that the initial configuration of a geometric construction is given by th
 Then a point $X=(x,y)$ can be constructed using a ruler-and-set-square construction
 if and only if both coordinates $x$ and $y$ can be expressed from the integer numbers and $x_3$, $y_3$, $x_4$, $y_4,\z\dots,x_n$, $y_n$ using the arithmetic operations ``$+$'', ``$-$'', ``$\cdot$'', ``$/$''. 
 \end{thm}
-
-We omit the proof of this theorem, but it can be build on the ideas described in the previous section. 
-Let us show how to use this theorem to show the impossibility of some constructions with a ruler and set a square.
+ 
+Let us show use this theorem to show the impossibility of some constructions with a ruler and set a square.
 
 Note that if all the coordinates $x_3,y_3,\dots,x_n,y_n$ are rational numbers, then the theorem above implies that with a ruler and a set square, one can only construct the points with rational coordinates.
 A point with both rational coordinates is called \index{rational point}\emph{rational},
@@ -361,6 +362,7 @@ It follows that the perspective projection $\Pi\to \Pi'$ with center at $O$ send
 
 \section*{Construction of a polar}
 
+In this section we describe a powerful trick that can be used in the constructions only with ruler.
 
 Assume $\Gamma$ is a circle in the plane and $P\notin \Gamma$.
 Draw two lines $x$ and $y$ thru $P$ which intersect $\Gamma$ at two pairs of points $X$, $X'$ and $Y$, $Y'$.
@@ -384,7 +386,7 @@ Consider the line $p=(ZZ')$.
 \end{lpic}
 \end{figure}
 
-The following claim will be used in the constructions without a proof.
+The following claim will be used in the constructions without a proof:
 
 \begin{thm}{Claim}\label{clm:polar}
 The constructed line $p=(ZZ')$ does not depend on the choice of the lines $x$ and $y$.

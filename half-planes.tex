@@ -9,8 +9,7 @@ It is okay to skip it, but make sure you know definitions of positive/negative a
 \section*{Sign of an angle}
 \addtocontents{toc}{Sign of an angle.}
 
-The positive and negative angles can be visualized as {}\emph{counterclockwise} and  {}\emph{clockwise} directions; formally, they are defined the following way.
-
+The positive and negative angles can be visualized as {}\emph{counterclockwise} and  {}\emph{clockwise} directions; formally, they are defined the following way:
 \begin{itemize}
 \item The angle $A O B$ is called \index{angle!positive and negative angles}\emph{positive} 
 if $0<\measuredangle A O B<\pi$;
@@ -86,7 +85,7 @@ then $f(t_0)=0$ for some $t_0\in[a,b]$.
 
 The intermediate value theorem is assumed to be known;
 it should be covered in any calculus course.
-We will use the following corollary.
+We will use only the following corollary:
 
 \begin{thm}[\abs]{Corollary}\label{cor:intermidiate}
 Assume that for any $t\z\in [0,1]$ we have three points in the plane  $O_t$, $A_t$ and $B_t$, such that 
@@ -296,7 +295,7 @@ Consider the triangle $ABC$.
 The segments $[AB]$, $[BC]$ and $[CA]$ are called 
 \index{side!side of the triangle}\emph{sides of the triangle}.
 
-The following theorem follows from Corollary~\ref{cor:half-plane}.
+The following theorem follows from Corollary~\ref{cor:half-plane}:
 
 {
 
@@ -366,13 +365,13 @@ Show that the half-line $[PX)$ does not intersect~$[QY)$.
 
 \begin{thm}{Advanced exercise}\label{ex:angle-measures}
 Note that the following quantity 
-$$\tilde\measuredangle ABC=\left[
-\begin{aligned}
-&\pi&&\text{if}&\measuredangle ABC&=\pi
+$$\tilde\measuredangle ABC=
+\begin{cases}
+\pi&\text{if}\ \measuredangle ABC=\pi
 \\
--&\measuredangle ABC&&\text{if}&\measuredangle ABC&<\pi
-\end{aligned}
-\right.$$
+-\measuredangle ABC&\text{if}\ \measuredangle ABC<\pi
+\end{cases}
+$$
 can serve as the angle measure; 
 that is, the axioms hold if one exchanges $\measuredangle$ to $\tilde\measuredangle$ everywhere.
 
