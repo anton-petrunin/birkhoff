@@ -14,9 +14,11 @@ The following command will create a local copy of the source code for you.
 
 `git clone https://github.com/anton-petrunin/birkhoff.git`
 
-Go to the crated folder, and run `pdflatex` and `makeindex` few times; it worked with full instalation of TeX Live on Kubuntu 16.04.
+Go to the crated folder, and run `mpost`, `pdflatex` and `makeindex` few times; it worked with full installation of TeX Live on Kubuntu 16.04.
 
-`cd birkhoff/`<br/>
+`cd birkhoff/mpics/`<br/>
+`mpost pic.mp`<br/>
+`cd ..`<br/>
 `pdflatex all-lectures.tex`<br/>
 `makeindex all-lectures`<br/>
 `pdflatex all-lectures.tex`<br/>

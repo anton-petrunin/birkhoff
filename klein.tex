@@ -6,8 +6,8 @@ The projective and conformal models are saying exactly the same thing but in two
 Some problems in hyperbolic geometry admit simpler proof using the projective model and others have simpler proof in the conformal model.
 Therefore, it worth to know both. 
 
-\section*{Special bijection of the h-plane to itself}
-\addtocontents{toc}{Special bijection of the h-plane to itself.}
+\section*{Special bijection on the h-plane}
+\addtocontents{toc}{Special bijection on the h-plane.}
 
 Consider the conformal disc model with the absolute at the unit circle $\Omega$ centered at~$O$.
 Choose a coordinate system $(x,y)$ on the plane with the origin at $O$, 
@@ -36,7 +36,7 @@ Set $S=(0,0,-1)$ and $N=(0,0,1)$;
 these are the south and north poles of~$\Sigma$.
 
 Consider stereographic projection $\Pi\to\Sigma$ from $S$;
-given point $P\in\Pi$ denote its image in $\Sigma$ by~$P'$.
+given point $P\in\Pi$ denote its image in $\Sigma$.
 Note that the  h-plane is mapped to the {}\emph{north hemisphere};
 that is, to the set of points $(x,y,z)$ in $\Sigma$ described by the inequality $z>0$.
 
@@ -44,10 +44,9 @@ For a point $P'\in \Sigma$ consider its foot point $\hat P$
 on $\Pi$;
 this is the closest point to~$P'$.
 
-The composition $P\z\leftrightarrow P'\z\leftrightarrow\hat P$ of these two maps
-is a bijection of the h-plane to itself.
-
-Note that $P=\hat P$
+Note that the composition $P\z\leftrightarrow P'\z\leftrightarrow\hat P$ of these two maps
+gives a bijection from the h-plane to itself.
+Further note that $P=\hat P$
  if and only if  $P\in \Omega$ or $P=O$.
 
 \begin{thm}{Exercise}\label{ex:P-->hat-P}
@@ -68,13 +67,15 @@ $$\frac{A\hat Q\cdot B\hat P}{\hat QB\cdot \hat PA}
 =
 \left(\frac{AQ\cdot BP}{QB\cdot PA}\right)^2.
 \eqlbl{eq:lem:P-hat-chord}$$
-In particular, if $A,P,Q,B$ appear on the line in the same order, then
+In particular, if $A,P,Q,B$ appear in the same order, then
 $$PQ_h=\tfrac12\cdot\ln\frac{A\hat Q\cdot B\hat P}{\hat QB\cdot \hat PA}.$$
 \end{thm}
 
 \parit{Proof.}
 Consider the stereographic projection $\Pi\to \Sigma$ from the south pole $S$.
-Let $P'$ and $Q'$ denotes the images of $P$ and~$Q$.
+Note that it fixes $A$ and $B$;
+denote by $P'$ and $Q'$ the images of $P$ and~$Q$;
+
 
 
 \begin{wrapfigure}[11]{o}{35mm}
@@ -138,7 +139,7 @@ PQ_h&\df\ln\frac{A Q\cdot B P}{QB\cdot PA}=
 
 {
 
-\begin{wrapfigure}[10]{o}{51mm}
+\begin{wrapfigure}[10]{r}{51mm}
 \begin{lpic}[t(-5mm),b(-0mm),r(0mm),l(0mm)]{pics/ex-hex(1)}
 \lbl[t]{26,8;$A_1$}
 \lbl[b]{26,31.5;$B_1$}
@@ -167,11 +168,7 @@ Show that the chords $[A_1B_1]$, $[A_2B_2]$ and $[A_3B_3]$ intersect at one poin
 \section*{Projective model}
 \addtocontents{toc}{Projective  model.}
 
-The following picture illustrates the map $P\mapsto \hat P$ described in the previous section --- if you take the picture on the left and apply the map $P\mapsto \hat P$,
-you get the picture on the right.
-The pictures are {}\emph{conformal} and \index{projective model}\emph{projective model} of the hyperbolic plane correspondingly.
-The map $P\mapsto \hat P$ is a ``translation'' from one to another.
-
+The following picture illustrates the map $P\mapsto \hat P$ described in the previous section --- 
 \begin{figure}[h!]
 \centering
 \begin{lpic}[t(0mm),b(3mm),r(0mm),l(0mm)]{pics/poincare-klein(1)}
@@ -179,6 +176,10 @@ The map $P\mapsto \hat P$ is a ``translation'' from one to another.
 \lbl[t]{72,0;Projective model}
 \end{lpic}
 \end{figure}
+if you take the picture on the left and apply the map $P\mapsto \hat P$,
+you get the picture on the right.
+The pictures are {}\emph{conformal} and \index{projective model}\emph{projective model} of the hyperbolic plane correspondingly.
+The map $P\mapsto \hat P$ is a ``translation'' from one to another.
 
 In the projective model things look different;
 some become simpler,
@@ -192,7 +193,7 @@ more precisely, chords without its endpoints.
 The h-circles and equidistants in the projective model are certain type of ellipses and their open arcs.
 
 It follows since the stereographic projection sends circles on the plane to circles on the unit sphere and the foot point projection of circle back to the plane is an ellipse.
-(One may define ellipse as a foot point projection of a circle.)
+(One may define \index{ellipse}\emph{ellipse} as a foot point projection of a circle.)
 
 {
 
@@ -218,7 +219,8 @@ assuming the points $A, P, Q, B$ appear on the line in the same order.
 
 \parbf{Angles.}
 The angle measures in the projective model are very different from the Euclidean angles and it is hard to figure out by looking on the picture.\label{klein-angles}
-For example all the intersecting h-lines on the picture are perpendicular.
+For example all the intersecting h-lines on the picture above %???
+are perpendicular.
 There are two useful exceptions:
 
 \begin{itemize}
@@ -239,8 +241,8 @@ once it is done the hyperbolic and Euclidean angles have the same measure.
 The motions of the h-plane in the conformal and projective models are relevant to inversive transformations and projective transformation in the same way.
 Namely: 
 \begin{itemize}
-\item Inversive transformations which preserve the h-plane describe motions of the h-plane in the conformal model.
-\item Projective transformations which preserve h-plane describe motions of the h-plane in the projective model.
+\item Inversive transformations that preserve the h-plane describe motions of the h-plane in the conformal model.
+\item Projective transformations that preserve h-plane describe motions of the h-plane in the projective model.
 \end{itemize}
 
 The following exercise is a hyperbolic analog of Exercise~\ref{ex:s-medians}. 
@@ -300,14 +302,14 @@ The projective model of h-plane can be used to give another proof of the hyperbo
 First let us recall its statement:
 \[\cosh c=\cosh a\cdot\cosh b,\eqlbl{eq:hyp-pyth-proj}\]
 where $a\z=BC_h$, $b=CA_h$ and $c=AB_h$ and
-$\triangle_hACB$ is a triangle in h-plane with right angle at~$C$.
+$\triangle_hACB$ is an h-triangle with right angle at~$C$.
 
 Note that we can assume that $A$ is the center of the absolute.
 Set 
 $s=BC$, $t =CA$, $u= AB$.
 According to the Euclidean Pythagorean theorem (\ref{thm:pyth}), we have
 $$u^2=s^2+t^2.\eqlbl{eq:hyp-proj}$$
-It remains to express $a$, $b$ and $c$ using $s$, $u$ and $t$ and show that \ref{eq:hyp-proj} implies \ref{eq:hyp-pyth-proj}.
+It remains to express $a$, $b$ and $c$ using $s$, $u$ and $t$ and show that \ref{eq:hyp-proj} implies~\ref{eq:hyp-pyth-proj}.
 
 \begin{thm}{Advanced exercise}\label{ex:pyth-h-proj}
 Finish the proof of hyperbolic Pythagorean theorem (\ref{thm:pyth-h-poincare}) indicated above.
@@ -329,11 +331,11 @@ In the following construction we assume that you know a compass-and-ruler constr
 \begin{enumerate}
 \item Drop a perpendicular from $P$ to~$\ell$; denote it by~$m$.
 Let $Q$ be the foot point of $P$ on~$\ell$.
-\item Drop a perpendicular from $P$ to~$m$; denote it by~$n$.
+\item Erect a perpendicular from $P$ to~$m$; denote it by~$n$.
 \item Mark by $R$ a point on $\ell$ distinct from $Q$.
 \item Drop a perpendicular from $R$ to~$n$; denote it by~$k$. 
-\item Draw the circle $\Gamma_2$ with center $P$ and the radius $QR$. 
-Mark by $T$ a point of intersection of $\Gamma_2$ with~$k$.
+\item Draw the circle $\Gamma$ with center $P$ and the radius $QR$. 
+Mark by $T$ a point of intersection of $\Gamma$ with~$k$.
 \item The line $(PT)_h$ is asymptotically parallel to~$\ell$.
 \end{enumerate}
 \end{thm}
