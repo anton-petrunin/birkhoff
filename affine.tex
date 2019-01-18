@@ -1,6 +1,6 @@
 %\part*{Additional topics}
 \addtocontents{toc}{\protect\begin{center}}
-\addtocontents{toc}{\large{\bf Additional topics}}
+\addtocontents{toc}{\large{\bf Additional topics}} %???pagebrake in toc
 \addtocontents{toc}{\protect\end{center}}
 
 \chapter{Affine geometry}\label{chap:trans}
@@ -20,7 +20,7 @@ A bijection of Euclidean plane to itself
 is called \index{affine transformation}\emph{affine transformation}
 if it maps any line to a line.
 
-We say that three points are \index{collinear}\emph{collinear} if they lie on one line. 
+Recall that three points are \index{collinear}\emph{collinear} if they lie on one line. 
 Note that affine transformation sends collinear points to collinear; the following exercise gives a converse.
 
 \begin{thm}{Exercise}\label{ex:collinear=affine}
@@ -41,7 +41,7 @@ the latter makes possible to draw a line thru a given point parallel to a given 
 By Exercisers~\ref{ex:affine-par}, any construction with these two tools are invariant with respect to affine transformation.
 For example, 
 to solve the following exercise,
-it is sufficient to prove that midpoint of given segment can be constructed with a ruler and a parallel tool.
+it is sufficient to prove that midpoint of a given segment can be constructed with a ruler and a parallel tool.
 
 \begin{thm}{Exercise}\label{ex:midpoint-affine}
 Let $M$ be the midpoint of segment $[AB]$ in the Euclidean plane.
@@ -67,7 +67,7 @@ Use ruler and parallel tool to construct the center of the given circle.
 Since the lines are defined in terms of metric;
 any motion of Euclidean plane is also an affine transformation.
 
-We will show that there are affine transformations of Euclidean plane which are not motions.
+Let us describe an example of an affine transformation which is not a motion.
 
 Fix a coordinate system on the Euclidean plane.
 Let us use the column notation for the coordinates;
@@ -194,7 +194,8 @@ Applying \ref{eq:f-x},
 we also get 
 \[a\le 0\quad \Longrightarrow\quad f(a)\le 0.\eqlbl{a<0=>b<0}\]
 
-Finally, assume $f(a)\ne a$ for some $a\in\mathbb{R}$.
+Now we are ready to the final step in the proof.
+Assume $f(a)\ne a$ for some $a\in\mathbb{R}$.
 Then there is a rational number $\tfrac{m}{n}$ which lies between $a$ and $f(a)$;
 that is, 
 the numbers 
@@ -210,10 +211,9 @@ y+\tfrac{m}{n}&=f(a)=
 &=f(x)+f(\tfrac{m}{n})=
 \\
 &=f(x)+\tfrac{m}{n};
-\intertext{that is,}
-f(x)&=y
 \end{align*}
-By \ref{a>0=>b>0} and \ref{a<0=>b<0} the values $x$ and $y$ can not have opposite signs, a contradiction.
+that is, $f(x)=y$.
+By \ref{a>0=>b>0} and \ref{a<0=>b<0} the values $x$ and $y$ can not have opposite signs --- a contradiction.
 \qeds
 
 \begin{thm}{Lemma}\label{lem:3-fix}
@@ -264,7 +264,7 @@ are identity functions
 and so is~$\gamma$.
 \qeds
 
-\parit{Proof of Theorem~\ref{thm:affine=linear}.}
+\parit{Proof of Theorem~\ref{thm:affine=linear}; ``if'' part.}
 Recall that matrix 
 $\left(\begin{smallmatrix}
 a&b\\ c&d
@@ -305,18 +305,18 @@ In particular, $\beta$ is a bijection.
 
 Any line in the plane is given by equation
 \[p\cdot x+q\cdot y+r=0,\eqlbl{ax+by+c=0}\]
-where $p\ne 0$ or $q\ne 0$.
-Find $\left(\begin{smallmatrix}
+where $p\ne 0$ or $q\ne 0$ (see Exercise~\ref{ex:line-coord}).
+Let us find $\left(\begin{smallmatrix}
 x\\ y
 \end{smallmatrix} \right)$ from its $\beta$-image by formula \ref{eq:beta-inv} and substitute the result in \ref{ax+by+c=0}.
-You will get the equation of the image of the line.
+We will get the equation of the image of the line.
 The equation has the same type as \ref{ax+by+c=0}, with different constants; 
 in particular, it describes a line.
 
 Therefore we proved that $\beta$ is an affine transformation.
 
-To prove the ``only if'' part,
-fix an affine transformation~$\alpha$.
+\parit{``Only if'' part.}
+Fix an affine transformation~$\alpha$.
 Set 
 \begin{align*}
 \left(\begin{smallmatrix}
@@ -397,8 +397,7 @@ we have
 \end{align*}
 
 
-It remains to show that $\alpha=\beta$ or equivalently the composition $\gamma\z=\alpha\circ \beta^{-1}$ is the identity map.
-
+Consider the composition $\gamma\z=\alpha\circ \beta^{-1}$ is the identity map.
 Note that $\gamma$ is an affine transformation which fix points $\left(\begin{smallmatrix}
 0\\ 0
 \end{smallmatrix} \right)$, 
@@ -408,7 +407,7 @@ $\left(\begin{smallmatrix}
 and $\left(\begin{smallmatrix}
 0\\ 1
 \end{smallmatrix} \right)$.
-It remains to apply Lemma~\ref{lem:3-fix}.
+By Lemma~\ref{lem:3-fix}, $\gamma$ is the identity map or equivalently $\alpha=\beta$.
 \qeds
 
 \section*{On inversive transformations}
@@ -417,9 +416,9 @@ It remains to apply Lemma~\ref{lem:3-fix}.
 
 Recall that inversive plane is Euclidean plane with added a point at infinity, denoted by~$\infty$.
 We assume that every line passes thru~$\infty$.
-Recall that the term {}\emph{circline} stays for {}\emph{circle or line};
+Recall that the term {}\emph{circline} stands for {}\emph{circle or line}.
 
-An \index{inversive transformation}\emph{inversive transformation} is a bijection from inversive plane to itself which sends circlines to circlines.
+An \index{inversive transformation}\emph{inversive transformation} is a bijection from inversive plane to itself that sends circlines to circlines.
 \emph{Inversive geometry} studies the {}\emph{circline incidence structure} of inversive plane;
 it says which points lie on which circlines.
 
@@ -431,7 +430,7 @@ if and only if it can be presented as a composition of inversions and reflection
 Exercise \ref{ex:inversion-Mob} gives another description of inversive transformations which use complex coordinates.
 
 \parit{Proof.}
-According to Theorem~\ref{thm:inverse-cline} any inversion is a inversive transformation.
+According to Theorem~\ref{thm:inverse-cline} any inversion is an inversive transformation.
 Therefore, the same holds for composition of inversions and reflection.
 
 To prove the converse, 
@@ -499,7 +498,7 @@ x
 y
 \end{smallmatrix} \right);
 \]
-that is, either $\alpha'''$ is the identity map or reflection in the $x$-axis.
+that is, either $\alpha'''$ is the identity map or the reflection in the $x$-axis.
 
 Note that the homothety $\chi$ is a composition of two inversions in concentric circles.
 Therefore, $\alpha$ is a composition of inversions and reflections if and only are so is $\alpha'$, $\alpha''$ and $\alpha'''$.
@@ -528,8 +527,8 @@ Then
 Show that any reflection can be presented as a composition of three inversions. 
 \end{thm}
 
-Note that exercise above together with Theorem~\ref{thm:inversions-inversive},
-implies that any inversive map is a composition of inversions,
-no reflections are needed.
+The exercise above together with Theorem~\ref{thm:inversions-inversive},
+implies that any inversive map is a composition of inversions ---
+no reflections needed.
 
 \addtocontents{toc}{\protect\end{quote}}
