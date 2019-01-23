@@ -24,3 +24,7 @@ Go to the crated folder, and run `mpost`, `pdflatex` and `makeindex` few times; 
 `pdflatex all-lectures.tex`<br/>
 `makeindex all-lectures`<br/>
 `pdflatex all-lectures.tex`<br/>
+
+the following command will extract all needed files in arXiv.tar:
+
+`tar -cvf arXiv.tar --files-from list-of-files.txt`

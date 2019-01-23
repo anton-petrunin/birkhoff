@@ -81,6 +81,7 @@ where
 \end{align*}
 
 \begin{wrapfigure}[8]{o}{33mm}
+\centering
 \begin{lpic}[t(-5mm),b(-0mm),r(0mm),l(0mm)]{pics/s-right-trig-new(1)}
 \lbl[t]{15,13;$O$}
 \lbl[rbw]{14,28;$C$}
@@ -191,16 +192,35 @@ The following observation helps to reduce part~\textit{(\ref{thm:inverion-3d:b})
 Any circle in the space is an intersection of two spheres.
 \end{thm}
 
+{
+
+\begin{wrapfigure}{o}{17mm}
+\centering
+\begin{lpic}[t(-3mm),b(0mm),r(0mm),l(0mm)]{pics/cone(1)}
+\end{lpic}
+\end{wrapfigure}
+
+Let us define a \index{circular cone}\emph{circular cone} as a set formed by line segments from a fixed point, called the \index{tip of cone}\emph{tip} of the cone, to all the points on a fixed circle, called the \index{base of cone}\emph{base} of the cone;
+we always assume that the base does not lie in the same plane as the tip.
+We say that the cone is \index{right circular cone}\emph{right} 
+if the center of the base circle is the foot point of the tip on the base plane;
+otherwise we call it \index{oblique circular cone}\emph{oblique}.
+
+}
+
+\begin{thm}{Exercise}\label{ex:cone}
+Let $K$ be an oblique circular cone. Show that there is a plane $\Pi$ that is not parallel to the base plane of $K$ such that the intersection $\Pi\cap K$ is a circle.
+\end{thm}
+
 
 \section*{Stereographic projection}
 \addtocontents{toc}{Stereographic projection.}
 
-Consider the unit sphere $\Sigma$ 
-centered at the origin $(0,0,0)$.
-This sphere can be described by the equation $x^2+y^2+z^2=1$. 
+{
 
 \begin{wrapfigure}{o}{48mm}
-\begin{lpic}[t(-3mm),b(0mm),r(0mm),l(0mm)]{pics/stereographic_projection(1)}
+\centering
+\begin{lpic}[t(-12mm),b(0mm),r(0mm),l(0mm)]{pics/stereographic_projection(1)}
 \lbl[rb]{23,23;$O$}
 \lbl[l]{38,38;$P$}
 \lbl[tl]{24.5,1;$S$}
@@ -212,6 +232,10 @@ This sphere can be described by the equation $x^2+y^2+z^2=1$.
 \caption*{The plane thru\\ $P$, $O$ and~$S$.}
 \end{wrapfigure}
 
+Consider the unit sphere $\Sigma$ 
+centered at the origin $(0,0,0)$.
+This sphere can be described by the equation $x^2+y^2+z^2\z=1$. 
+
 Let $\Pi$ denotes the $xy$-plane;
 it is defined by the equation $z = 0$.
 Clearly, $\Pi$
@@ -222,11 +246,12 @@ these are the points on the sphere which have extremal distances to~$\Pi$.
 Let $\Omega$ denotes the ``equator'' of $\Sigma$;
 it is the intersection $\Sigma\cap\Pi$.
 
+}
+
 For any point $P\ne S$ on $\Sigma$,
 consider the line $(SP)$ in the space. 
 This line intersects $\Pi$ in exactly one point, denoted by~$P'$. 
 Set $S'=\infty$.
-
 
 The map $\xi_s\: P\mapsto P'$ is called the \index{stereographic projection}\emph{stereographic projection from $\Sigma$ to $\Pi$ with respect to the south pole}.
 The inverse of this map $\xi^{-1}_s\: P'\z\mapsto P$ is called the {}\emph{stereographic projection from $\Pi$ to $\Sigma$ with respect to the south pole}.
@@ -291,8 +316,9 @@ the north pole $N\z=(0,0,1)$ of~$\Sigma$.
 
 {
 
-\begin{wrapfigure}[6]{r}{34mm}
-\begin{lpic}[t(-2mm),b(-0mm),r(0mm),l(0mm)]{pics/centrl-proj-2d(1)}
+\begin{wrapfigure}{r}{34mm}
+\centering
+\begin{lpic}[t(2mm),b(-0mm),r(0mm),l(0mm)]{pics/centrl-proj-2d(1)}
 \lbl[rt]{17,0;$O$}
 \lbl[t]{24.5,9;$P$}
 \lbl[rb]{29,16;$P'$}
