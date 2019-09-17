@@ -134,13 +134,17 @@ Each can be solved by taking the square of the left and the right hand sides.
 The numbers of solutions are 1 and 2 correspondingly.
 
 \parbf{Exercise~\ref{ex:trig==}.}
-Fix an isometry $f\:(P Q)\to \mathbb{R}$ such that $f(P)=0$ and $f(Q)=q>0$.
+Fix an isometry $f\:(P Q)\to \mathbb{R}$ such that $f(P)=0$ and $f(Q)\z=q>0$.
 
 Assume that $f(X)=x$.
 By the definition of the half-line $X\in[PQ)$ if and only if $x\ge 0$.
 Show that the latter holds if and only if 
 \[|x-q|=\bigl||x|-|q|\bigr|.\]
-Hence the result will follow.
+Hence \textit{(a)} follows.
+
+To prove\textit{(b)}, observe that $X\in [PQ]$ if and only if $0\le x\le q$.
+Show that the latter holds if and only if 
+\[|x-q|+|x|=|q|.\]
 
 \parbf{Exercise~\ref{ex:2a=0}.}
 The equation
@@ -209,9 +213,9 @@ To prove \textit{(b)} apply in addition Axiom~\ref{def:birkhoff-axioms:2}.
 \parbf{Exercise~\ref{ex:[OA)=[OA')}.}
 By Axiom~\ref{def:birkhoff-axioms:1},
 $(OA)=(OA')$.
-Therefore, the statement boils down two the following:
+Therefore, the statement boils down to the following:
 
-\textit{Assume $f\:\mathbb{R}\to \mathbb{R}$ is a motion of the line which sends $0\to 0$ and one positive number to a positive number, then $f$ is an identity map.}
+\textit{Assume $f\:\mathbb{R}\to \mathbb{R}$ is a motion of the line which sends $0\mapsto 0$ and one positive number to a positive number, then $f$ is an identity map.}
 
 The latter follows from Exercise~\ref{ex:motion-of-R}.
 
@@ -303,7 +307,10 @@ Repeat the argument to show that $Z$ and $Y$ lie on one side of~$(PQ)$.
 It follows that $X$ and $Y$ lie on the same side of $(PQ)$ --- a contradiction.
 
 \parbf{Exercise~\ref{ex:intersecting-circles-3}.} The ``only-if'' part follows from the triangle inequality.
-To prove ``if'' part apply Theorem \ref{thm:abc} for the values $r_1$, $r_2$, and $d$.
+To prove ``if'' part,  
+observe that Theorem \ref{thm:abc} implies existence of triangle with sides $r_1$, $r_2$, and $d$.
+Use this triangle to show that there is a point $X$ such that $O_1X=r_1$ and $O_2X=r_2$, where $O_1$ and $O_2$ are the centers of the corresponding circles.
+
 
 
 %\subsection*{Chapter~\ref{chap:cong}}
@@ -315,10 +322,10 @@ Apply Theorem~\ref{thm:isos} twice.
 
 \parbf{Exercise~\ref{ex:SMS}.} 
 Consider the points $D$ and $D'$, such that 
-$M$ is the midpoint of $[AD]$
+$M$ is the midpoint o~$[CD]$
 and 
-$M'$ is the midpoint of~$[A'D']$.
-Show that $\triangle ABD\z\cong \triangle A'B'D'$ and use it to prove that $\triangle A' B' C'\z\cong\triangle A B C$.
+$M'$ is the midpoint of~$[C'D']$.
+Show that $\triangle BCD\z\cong \triangle B'C'D'$ and use it to prove that $\triangle A' B' C'\z\cong\triangle A B C$.
 
 \parbf{Exercise~\ref{ex:isos-sides}.} \textit{(a)} Apply SAS.
 

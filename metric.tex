@@ -175,7 +175,7 @@ $f(g(B))\z=B$ for any $B\in\mathcal{Y}$.
 
 \begin{thm}{Definition}\label{def:isom}
 Let $\mathcal X$ and $\mathcal Y$ be two metric spaces and $d_{\mathcal X}$, $d_{\mathcal Y}$ be their metrics. 
-The map 
+A map 
 $$f\:\mathcal X \z\to \mathcal Y$$ 
 is
 called \index{distance-preserving map}\emph{distance-preserving} if 
@@ -267,13 +267,19 @@ Let $[P Q)$ denotes the \index{half-line}\emph{half-line}
 which starts at $P$ and contains~$Q$. 
 Formally speaking, $[P Q)$ is a subset of $(P Q)$ which corresponds to $[0,\infty)$ under an isometry $f\:(P Q)\to \mathbb{R}$ such that $f(P)=0$ and $f(Q)>0$.
 
-\begin{thm}{Exercise}\label{ex:trig==}
-Show that if $X\in [PQ)$, then 
-$QX=|PX-PQ|$.
-\end{thm}
-
 The subset of line $(P Q)$ between $P$ and $Q$ is called the \index{segment}\emph{segment} between $P$ and $Q$ and denoted by~$[P Q]$.
 Formally, the segment can be defined as the intersection of two half-lines: $[P Q]=[P Q)\cap[Q P)$.
+
+\begin{thm}{Exercise}\label{ex:trig==}
+Show that 
+\begin{enumerate}[(a)]
+\item if $X\in [PQ)$, then 
+$QX=|PX-PQ|$;
+\item if $X\in [PQ]$, then 
+$QX+XQ=PQ$.
+\end{enumerate}
+
+\end{thm}
 
 
 \section*{Angles}
