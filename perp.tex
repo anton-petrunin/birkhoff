@@ -262,6 +262,20 @@ the composition of two reflections in the same line
 is the identity map.
 In particular, any reflection is a bijection.
 
+\begin{wrapfigure}{o}{33mm}
+\centering
+\begin{lpic}[t(-2mm),b(2mm),r(0mm),l(0mm)]{pics/ABPQR(1)}
+\lbl[rb]{11,22;$A$}
+\lbl[b]{27,22.5;$B$}
+\lbl[b]{16,33.5;$P$}
+\lbl[t]{16,8;$P'$}
+\lbl[b]{30,35;$Q$}
+\lbl[t]{30,7;$Q'$}
+\lbl[bl]{2,40;$R$}
+\lbl[tl]{2,2;$R'$}
+\end{lpic}
+\end{wrapfigure}
+
 Fix a line $(AB)$ and two points $P$ and $Q$;
 denote their reflections in $(AB)$ by $P'$ and $Q'$.
 To show that reflection is distance-preserving,
@@ -280,11 +294,13 @@ AP'&=AP,
 AQ'&=AQ.
 \end{align*}
 It follows that
-$\measuredangle P'AQ'\equiv -\measuredangle PAQ$.
+\[\measuredangle P'AQ'\equiv -\measuredangle PAQ.\eqlbl{eq:P'AQ'=PAQ}\]
 By SAS, 
 $\triangle P'AQ'\cong\triangle PAQ$
 and \ref{eq:P'Q'=PQ} follows.
 Moreover, we also get that 
+\[\measuredangle AP'Q'\equiv\pm\measuredangle APQ.\]
+From \ref{eq:P'AQ'=PAQ} and the theorem on the signs of angles of triangles (\ref{thm:signs-of-triug}) we get
 \[\measuredangle AP'Q'\equiv-\measuredangle APQ.\eqlbl{eq:AP'Q'=APQ}\]
 
 Repeating the same argument for a pair of points $P$ and $R$,
