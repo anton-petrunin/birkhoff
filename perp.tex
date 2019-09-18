@@ -257,25 +257,19 @@ $$\measuredangle Q'P'R'\equiv -\measuredangle QPR.$$
 
 
 \parit{Proof.}
-From the construction, it follows that 
+Note that 
 the composition of two reflections in the same line
 is the identity map.
 In particular, any reflection is a bijection.
 
-Assume
-$P'$, $Q'$, and $R'$
-denote the reflections of the points
-$P$, $Q$, and $R$ in~$(AB)$. 
-Let us show that
-$$P'Q'=PQ
-\quad
-\text{and}
-\quad
-\measuredangle AP'Q'\equiv-\measuredangle APQ.
-\eqlbl{eq:P'Q'=PQ}$$
+Fix a line $(AB)$ and two points $P$ and $Q$;
+denote their reflections in $(AB)$ by $P'$ and $Q'$.
+To show that reflection is distance-preserving,
+we need to show that
+$$P'Q'=PQ.\eqlbl{eq:P'Q'=PQ}$$
 
 Without loss of generality, we may assume that the points $P$ and $Q$ are distinct from $A$ and~$B$.
-By Proposition~\ref{prop:reflection},
+By Proposition~\ref{prop:reflection}, we get that
 \begin{align*}
 \measuredangle BAP'&\equiv -\measuredangle BAP,
 &
@@ -287,14 +281,16 @@ AQ'&=AQ.
 \end{align*}
 It follows that
 $\measuredangle P'AQ'\equiv -\measuredangle PAQ$.
-Therefore
+By SAS, 
 $\triangle P'AQ'\cong\triangle PAQ$
 and \ref{eq:P'Q'=PQ} follows.
+Moreover, we also get that 
+\[\measuredangle AP'Q'\equiv-\measuredangle APQ.\eqlbl{eq:AP'Q'=APQ}\]
 
-Repeating the same argument for $P$ and $R$,
+Repeating the same argument for a pair of points $P$ and $R$,
 we get that
-$$\measuredangle AP'R'\equiv-\measuredangle APR.$$
-Subtracting the second identity in \ref{eq:P'Q'=PQ},
+$$\measuredangle AP'R'\equiv-\measuredangle APR.\eqlbl{eq:AP'R'=APR}$$
+Subtracting \ref{eq:AP'R'=APR} from \ref{eq:AP'Q'=APQ},
 we get that
 $$\measuredangle Q'P'R'\equiv-\measuredangle QPR.$$
 \qedsf
