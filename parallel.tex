@@ -218,7 +218,7 @@ We need to show that
 if $(AB)\z\nparallel(C D)$,
 then \ref{A B C + B C D} does not hold.
 
-Since $(AB)\nparallel(C D)$, there is a unique point $Z\z\in (AB)\z\cap(C D)$.
+Assume $(AB)\nparallel(C D)$, then there is a unique point $Z\z\in (AB)\z\cap(C D)$.
 Since $Z$ lies on $(AB)$ and on $(CD)$, Exercise~\ref{ex:ABCO-line} implies that
 \begin{align*}
 2\cdot \measuredangle ABC&\equiv 2\cdot \measuredangle ZBC,
@@ -230,13 +230,10 @@ Note that the triangle $ZBC$ is nondegenerate.
 By Lemma \ref{lem:2angles1}, 
 there is a point $X\notin(ZB)$ such that 
 $\measuredangle CBX=\measuredangle BCZ$.
-Applying Exercise~\ref{ex:lineAOB} and the equalities above, we get that
 
-{
-
-\begin{wrapfigure}{r}{43mm}
+\begin{wrapfigure}[4]{r}{43mm}
 \centering
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/onlyif-transversal(1)}
+\begin{lpic}[t(-0mm),b(-0mm),r(0mm),l(0mm)]{pics/onlyif-transversal(1)}
 \lbl[b]{25,20;$A$}
 \lbl[bl]{13,20;$B$}
 \lbl[br]{16,6;$C$}
@@ -246,19 +243,19 @@ Applying Exercise~\ref{ex:lineAOB} and the equalities above, we get that
 \end{lpic}
 \end{wrapfigure}
 
-\vskip-4mm
+If \ref{A B C + B C D} holds, then 
 \begin{align*}
-0&\not\equiv2\cdot \measuredangle ZBX\equiv 
+2\cdot \measuredangle CBX&\equiv 2\cdot \measuredangle BCZ\equiv
 \\
-&\equiv2\cdot (\measuredangle ZBC+\measuredangle CBX)
+&\equiv 2\cdot \measuredangle BCD\equiv
 \\
-&\equiv2\cdot (\measuredangle ZBC+\measuredangle BCZ)
+&\equiv -2\cdot \measuredangle ABC\equiv
 \\
-&\equiv2\cdot(\measuredangle A B C+\measuredangle B C D);
+&\equiv -2\cdot \measuredangle ZBC\equiv
+\\
+&\equiv 2\cdot \measuredangle CBZ.
 \end{align*}
-that is,  \ref{A B C + B C D} does not hold.
-
-}
+By Exercise~\ref{ex:ABCO-line}, $X\in(ZB)$ --- a contradiction.
 
 \parit{``If''-part.}
 Given points $A$, $B$, and $C$ there is unique line $(CD)$ such that \ref{A B C + B C D} holds.
@@ -266,8 +263,8 @@ Indeed, suppose there are two such lines $(CD)$ and $(CD')$, then
 $$2\cdot(\measuredangle A B C+\measuredangle B C D)\equiv 2\cdot(\measuredangle A B C+\measuredangle B C D')\equiv0.
 $$ 
 Therefore 
-$$2\cdot\measuredangle B C D\equiv 2\cdot\measuredangle B C D'.$$
-It follows that $2\cdot\measuredangle D C D'\equiv0$; that is, $D'\in (CD)$, or equivalently the line $(CD)$ coinsides with the line $(CD')$.
+$2\cdot\measuredangle B C D\equiv 2\cdot\measuredangle B C D'$
+and by Exercise~\ref{ex:ABCO-line},  $D'\in (CD)$, or equivalently the line $(CD)$ coincides with the line $(CD')$.
 
 From the ``only-if'' part we know that if \ref{A B C + B C D} holds then $(CD)\parallel(AB)$.
 By Theorem \ref{thm:parallel} there is unique line thru $C$ that is parallel to $(AB)$.
@@ -365,11 +362,18 @@ for any $\triangle ABC$.
 
 \begin{wrapfigure}{r}{30mm}
 \centering
-\begin{lpic}[t(-8mm),b(0mm),r(0mm),l(0mm)]{pics/right-isos(1)}
+\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/right-isos(1)}
 \lbl[t]{3,0;$A$}
 \lbl[br]{15,10;$B$}
 \lbl[t]{28,0;$C$}
 \lbl[br]{28,19;$D$}
+\end{lpic}
+\vskip4mm
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/ABCX(1)}
+\lbl[tr]{6,1;$A$}
+\lbl[b]{17,24;$B$}
+\lbl[tl]{28,1;$C$}
+\lbl[bl]{21,17;$X$}
 \end{lpic}
 \end{wrapfigure}
 
@@ -380,12 +384,13 @@ Consider the point $D$ on the extension of the side $[AB]$
 Show that $\angle ACD$ is right.
 \end{thm}
 
-}
+
 
 \begin{thm}{Exercise}\label{ex:pi/4-isos}
 Let $\triangle ABC$ be an isosceles nondegenerate triangle with base~$[AC]$. 
 Assume that a circle is passing thru $A$,
-centered at a point on $[AB]$ and tangent to $(BC)$ at the point~$X$.
+centered at a point on $[AB]$,
+and tangent to $(BC)$ at the point~$X$.
 Show that $\measuredangle CAX\z=\pm\tfrac\pi4$.
 \end{thm}
 
@@ -395,7 +400,7 @@ $$\measuredangle ABC+\measuredangle BCD+\measuredangle CDA+\measuredangle DAB\eq
 
 \end{thm}
 
-
+}
 
 
 
