@@ -38,7 +38,6 @@ that is, $\ell\nparallel n$.
 Then there is a point, say $Z$, of intersection of $\ell$ and~$n$.
 Then by Theorem~\ref{perp:ex+un},
 $\ell=n$.
-
 Since any line is parallel to itself, we have that $\ell\parallel n$ --- a contradiction.
 \qeds
 
@@ -127,6 +126,14 @@ Show that $k\nparallel n$.
 Make a ruler-and-compass construction of a line thru a given point which is parallel to a given line.
 \end{thm}
 
+Recall that central symmetry is defined at the end of Chapter \ref{chap:axioms}.
+
+\begin{thm}{Exercise}\label{ex:parallel-central-symmetry}%???sol
+Suppose that a line $\ell'$ is centrally symmetric to the a line $\ell$ with respect to a point $O$.
+Show that $\ell'\parallel \ell$.
+\end{thm}
+
+
 {
 
 \begin{wrapfigure}[6]{r}{30mm}
@@ -214,22 +221,14 @@ in particular, $X\notin (AC)$.
 
 
 \parit{Proof of transversal property; ``only-if'' part.} 
-We need to show that 
-if $(AB)\z\nparallel(C D)$,
-then \ref{A B C + B C D} does not hold.
+Assume contrary; that is, equality \ref{A B C + B C D} holds, but $(AB)\z\nparallel(C D)$.
+Then there is a unique point $Z\z\in (AB)\z\cap(C D)$.
 
-Assume $(AB)\nparallel(C D)$, then there is a unique point $Z\z\in (AB)\z\cap(C D)$.
-Since $Z$ lies on $(AB)$ and on $(CD)$, Exercise~\ref{ex:ABCO-line} implies that
-\begin{align*}
-2\cdot \measuredangle ABC&\equiv 2\cdot \measuredangle ZBC,
-&
-2\cdot \measuredangle BCD&\equiv 2\cdot \measuredangle BCZ.
-\end{align*}
+Note that the triangle $ZBC$ is nondegenerate. %???problem
 
-Note that the triangle $ZBC$ is nondegenerate.
 By Lemma \ref{lem:2angles1}, 
 there is a point $X\notin(ZB)$ such that 
-$\measuredangle CBX=\measuredangle BCZ$.
+\[\measuredangle CBX=\measuredangle BCZ.\eqlbl{C B X = B C Z}\]
 
 \begin{wrapfigure}[4]{r}{43mm}
 \centering
@@ -243,7 +242,7 @@ $\measuredangle CBX=\measuredangle BCZ$.
 \end{lpic}
 \end{wrapfigure}
 
-If \ref{A B C + B C D} holds, then 
+Applying \ref{C B X = B C Z}, \ref{A B C + B C D}, and Exercise~\ref{ex:ABCO-line}, we get that 
 \begin{align*}
 2\cdot \measuredangle CBX&\equiv 2\cdot \measuredangle BCZ\equiv
 \\
@@ -255,7 +254,7 @@ If \ref{A B C + B C D} holds, then
 \\
 &\equiv 2\cdot \measuredangle CBZ.
 \end{align*}
-By Exercise~\ref{ex:ABCO-line}, $X\in(ZB)$ --- a contradiction.
+Applying Exercise~\ref{ex:ABCO-line} again, we get that $X\in(ZB)$ --- a contradiction.
 
 \parit{``If''-part.}
 Given points $A$, $B$, and $C$ there is unique line $(CD)$ such that \ref{A B C + B C D} holds.
@@ -269,6 +268,19 @@ and by Exercise~\ref{ex:ABCO-line},  $D'\in (CD)$, or equivalently the line $(CD
 From the ``only-if'' part we know that if \ref{A B C + B C D} holds then $(CD)\parallel(AB)$.
 By Theorem \ref{thm:parallel} there is unique line thru $C$ that is parallel to $(AB)$.
 Therefore it must be the same line $(CD)$ such that \ref{A B C + B C D} hold.
+
+\medskip
+
+Finally, if $(AB)\ne(C D)$ and $A$ and $D$ lie on the opposite sides of $(BC)$, then $\angle ABC$ and $\angle BCD$ have opposite signs.
+Therefore
+\[-\pi\z<\measuredangle A B C+\measuredangle B C D<\pi.\]
+Applying \ref{A B C + B C D}, we get $\measuredangle A B C+\measuredangle B C D=0$.
+
+Similarly if $A$ and $D$ lie on the same side of $(BC)$,
+then $\angle ABC$ and $\angle BCD$ the same sign.
+Therefore
+\[0<|\measuredangle A B C+\measuredangle B C D|<2\cdot\pi\]
+and \ref{A B C + B C D} implies that $\measuredangle A B C+\measuredangle B C D\z\equiv\pi$.
 \qeds
 
 %???)
@@ -301,7 +313,7 @@ Further we assume that $\triangle A B C$ is nondegenerate.
 
 \begin{wrapfigure}{o}{23mm}
 \centering
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/2sum2(1)}
+\begin{lpic}[t(-0mm),b(2mm),r(0mm),l(0mm)]{pics/2sum2(1)}
 \lbl[t]{14,.5;$A$}
 \lbl[r]{4,22;$B$}
 \lbl[t]{2,.5;$C$}
