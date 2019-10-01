@@ -169,10 +169,10 @@ To check that the reflection is distance preserving, we need to show that $X'Y'=
 We may assume that $X$, $Y$ and $O$ are distinct; otherwise the statement is trivial.
 By definition of reflection across $O$, we have that $OX=OX'$, $OY=OY'$, and the angles $XOY$ and $X'OY'$ are vertical;
 in particular $\measuredangle XOY\z=\measuredangle X'OY'$.
-By SAS, $\triangle XOY\cong\triangle X'OY'$.
-In particular $X'Y'=XY$.
+By SAS, $\triangle XOY\cong\triangle X'OY'$;
+therefore $X'Y'=XY$.
 
-Finally, the reflection across $O$ can not be indirect since $\measuredangle XOY\z=\measuredangle X'OY'$;
+Finally, the reflection across $O$ cannot be indirect since $\measuredangle XOY\z=\measuredangle X'OY'$;
 therefore it is a direct motion.
 \qeds
 
@@ -303,12 +303,12 @@ Let $A'$ be the reflection of $A$ across $O$.
 Then $A'\in (CD)$ and by Proposition~\ref{prop:point-reflection} we have that
 \[\measuredangle ABO=\measuredangle A'CO.\eqlbl{A B O = A' C O}\]
 Note that 
-\[\measuredangle ABO=\measuredangle ABC,
+\[\measuredangle ABO\equiv\measuredangle ABC,
 \qquad
-\measuredangle A'BO=-\measuredangle BCA'.\eqlbl{eq:A B O= A B C}
+\measuredangle A'CO\equiv-\measuredangle BCA'.\eqlbl{eq:A B O= A B C}
 \]
 Since $A'$, $C$ and $D$ lie on one line, Exercise~\ref{ex:ABCO-line} implis that 
-\[2\cdot BCD\equiv 2\cdot BCA'.\eqlbl{eq:2BCD= 2BCA'}\]
+\[2\cdot \measuredangle BCD\equiv 2\cdot \measuredangle BCA'.\eqlbl{eq:2BCD= 2BCA'}\]
 Finally note that \ref{A B O = A' C O}, \ref{eq:A B O= A B C}, and \ref{eq:2BCD= 2BCA'} imply \ref{A B C + B C D}.
 \qeds
 
@@ -385,11 +385,11 @@ By Proposition~\ref{prop:point-reflection}
 $\measuredangle BAX\z=\measuredangle ABC$.
 In particular 
 \[2\cdot (\measuredangle XAB+\measuredangle ABC)\equiv 0.\]
-By transversal property (\ref{thm:parallel-2}), we get that $(AX)\parallel (CB)$.
+Therefore the transversal property (\ref{thm:parallel-2}) implies that $(AX)\parallel (CB)$.
 
 Since $[BM]$ and $[MX]$ do not intersect $(CA)$,
 the points $B$, $M$, and $X$ lie on the same side of $(CA)$.
-Therefore, applying the transversal property  for transversal $(CA)$, we get that 
+Applying the transversal property for the transversal $(CA)$ to $(AX)$ and $(CB)$, we get that 
 \[\measuredangle BCA+\measuredangle CAX\equiv \pi.\eqlbl{eq:ABC+CAB}\]
 
 Since $\measuredangle BAX=\measuredangle ABC$,
@@ -489,7 +489,7 @@ if its opposite sides are parallel.
 
 {
 
-\begin{wrapfigure}{o}{32mm}
+\begin{wrapfigure}{r}{32mm}
 \centering
 \begin{lpic}[t(-0mm),b(0mm),r(1mm),l(1mm)]{pics/parallelogram(1)}
 \lbl[bl]{29,27.5;$A$}
