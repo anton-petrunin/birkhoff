@@ -193,11 +193,11 @@ By Axiom~\ref{def:birkhoff-axioms:1}, $m=(P P')$.
 
 }
 
-\section*{Reflection}
-\addtocontents{toc}{Reflection.}
+\section*{Reflection across a line}
+\addtocontents{toc}{Reflection across  a line.}
 
 Assume the point $P$ and the line $(AB)$ are given.
-To find the \index{reflection}\emph{reflection} $P'$ of $P$ in $(AB)$,
+To find the \index{reflection!across a line}\emph{reflection} $P'$ of $P$ across $(AB)$,
 one drops a perpendicular from $P$ onto $(AB)$, 
 and continues it to the same distance on the other side.
 
@@ -206,7 +206,7 @@ According to Theorem~\ref{perp:ex+un}, $P'$ is uniquely determined by~$P$.
 Note that $P=P'$ if and only if $P\in(AB)$.
 
 \begin{thm}[\abs]{Proposition}\label{prop:reflection}
-Assume $P'$ is a reflection of the point $P$ in the line~$(AB)$.
+Assume $P'$ is a reflection of the point $P$ across $(AB)$.
 Then $AP'=AP$ 
 and if $A\ne P$, 
 then
@@ -245,10 +245,10 @@ $$\measuredangle BAP'=-\measuredangle BAP.$$
 \qedsf
 
 }
-\newpage %???fix
+
 
 \begin{thm}[\abs]{Corollary}\label{cor:reflection+angle}
-The reflection in a line is a motion of the plane. 
+The reflection across a line is a motion of the plane. 
 Moreover, if $\triangle P'Q'R'$ is the reflection of $\triangle PQR$,
 then 
 $$\measuredangle Q'P'R'\equiv -\measuredangle QPR.$$
@@ -258,7 +258,7 @@ $$\measuredangle Q'P'R'\equiv -\measuredangle QPR.$$
 
 \parit{Proof.}
 Note that 
-the composition of two reflections in the same line
+the composition of two reflections across the same line
 is the identity map.
 In particular, any reflection is a bijection.
 
@@ -277,7 +277,7 @@ In particular, any reflection is a bijection.
 \end{wrapfigure}
 
 Fix a line $(AB)$ and two points $P$ and $Q$;
-denote their reflections in $(AB)$ by $P'$ and $Q'$.
+denote their reflections across $(AB)$ by $P'$ and $Q'$.
 To show that reflection is distance-preserving,
 we need to show that
 $$P'Q'=PQ.\eqlbl{eq:P'Q'=PQ}$$
@@ -313,7 +313,7 @@ $$\measuredangle Q'P'R'\equiv-\measuredangle QPR.$$
 
 \begin{thm}{Exercise}\label{ex:3-reflections}
 Show that any motion of the plane can be presented as a 
-composition of at most three reflections.
+composition of at most three reflections across lines.
 \end{thm}
 
 Applying the exercise above 
@@ -321,7 +321,7 @@ and Corollary~\ref{cor:reflection+angle},
 we can divide the motions of the plane in two types, 
 \index{direct motion}\emph{direct} 
 and 
-\index{indirect motion}\emph{indirect motions}.
+\index{indirect motion}\emph{indirect motions}.\label{direct motion}
 The motion $f$ is direct if 
 $$\measuredangle Q'P'R'= \measuredangle QPR$$ 
 for any $\triangle PQR$ and $P'=f(P)$, $Q'=f(Q)$ and $R'=f(R)$;
@@ -330,7 +330,7 @@ $$\measuredangle Q'P'R'\equiv -\measuredangle QPR$$
 for any $\triangle PQR$, then the motion $f$ is called indirect.
 
 \begin{thm}{Exercise}\label{ex:2-reflections}
-Let $X$ and $Y$ be the reflections of $P$ in the lines $(AB)$ and $(BC)$ correspondingly.
+Let $X$ and $Y$ be the reflections of $P$ across the lines $(AB)$ and $(BC)$ correspondingly.
 Show that 
 $$\measuredangle XBY\equiv 2\cdot \measuredangle ABC.$$
 
@@ -365,7 +365,7 @@ If $P\in \ell$,
 then the result follows since $PQ=0$.
 Further we assume that $P\notin \ell$.
 
-Let $P'$ be the reflection of $P$ in the line~$\ell$.
+Let $P'$ be the reflection of $P$ across the line~$\ell$.
 Note that $Q$ is the midpoint of $[PP']$
 and $\ell$ is the perpendicular bisector of $[PP']$.
 Therefore
@@ -473,7 +473,7 @@ Then $\ell$ is tangent to $\Gamma$ at $P$ if and only if $(PO)\perp \ell$.
 Let $Q$ be the foot point of $O$ on~$\ell$.
 
 Assume~$P\ne Q$.
-Let $P'$ denotes the reflection of $P$ in~$(OQ)$.
+Let $P'$ denotes the reflection of $P$ across~$(OQ)$.
 
 Note that $P'\in\ell$ and $(OQ)$ is the perpendicular bisector of~$[PP']$.
 Therefore, $OP=OP'$.

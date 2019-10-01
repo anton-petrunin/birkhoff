@@ -59,8 +59,8 @@ Therefore this proof does not work in a neutral plane.
 \end{wrapfigure}
 
 \parit{Neutral proof.}
-Let $D$ denotes the reflection of $A$ in $(BC)$
-and $D'$ denotes the reflection of $A'$ in $(B'C')$.
+Let $D$ denotes the reflection of $A$ across $(BC)$
+and $D'$ denotes the reflection of $A'$ across $(B'C')$.
 Note that 
 $$
 AD=2\cdot AC=2\cdot A'C'=A'D',
@@ -114,24 +114,29 @@ Therefore, in the Euclidean plane the theorem follows immediately from Theorem~\
 \centering
 \begin{lpic}[t(-2mm),b(0mm),r(0mm),l(0mm)]{pics/2sum2(1)}
 \lbl[t]{14,.5;$A$}
-\lbl[r]{4,22;$B$}
+\lbl[b]{6,24;$B$}
 \lbl[t]{2,.5;$C$}
-\lbl[r]{18,22;$X$}
+\lbl[b]{20,24;$X$}
+\lbl[l]{12,13;$M$}
 \end{lpic}
 \end{wrapfigure}
 
-In neutral geometry, we need to apply Lemma~\ref{lem:2angles1} directly.
 
 \parit{Proof.}
-By Lemma~\ref{lem:2angles1} there is a point $X$ that lies with $B$ on the same side of $(AC)$ such that 
-$\measuredangle BAX\z=\measuredangle ABC$.
-In particular,
+Let $X$ be reflection of $C$ across the midpoint $M$ of $[AB]$.
+By Proposition~\ref{prop:point-reflection}
+$\measuredangle BAX\z=\measuredangle ABC$
+and therefore
 \[\measuredangle CAX \equiv\measuredangle CAB+\measuredangle ABC.\eqlbl{eq:CAX=CAB+ABC}\]
 
-By \ref{thm:signs-of-triug}, the angles $CAB$, $ABC$ have the same sign and
-since $X$ and $B$ lie on the same side of $(AC)$, we also have that the angles $CAB$ and $ABX$ have the same sign.
-Note that $\measuredangle CAX\not\equiv \pi$, otherwise $X$ would lie on $(AC)$.
-Therefore the identity \ref{eq:CAX=CAB+ABC} implies
+Since $[BM]$ and $[MX]$ do not intersect $(CA)$,
+the points $B$, $M$, and $X$ lie on the same side of $(CA)$.
+Therefore the angles $CAB$ and $CAX$ have the same sign.
+By \ref{thm:signs-of-triug}, the angles $CAB$, $ABC$ have the same sign;
+that is all angles in \ref{eq:CAX=CAB+ABC} have the same sign.
+
+Note that $\measuredangle CAX\z{\not\equiv} \pi$, otherwise $X$ would lie on $(AC)$.
+Therefore the identity \ref{eq:CAX=CAB+ABC} implies that
 \[|\measuredangle CAB|+|\measuredangle ABC|=|\measuredangle CAX|<\pi.\]
 \qedsf
 

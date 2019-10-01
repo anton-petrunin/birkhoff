@@ -1,3 +1,60 @@
+The following lemma will be used several times in the sequel.
+
+
+
+\begin{thm}[\abs]{Lemma}\label{lem:2angles1}
+Let $ABC$ be a nondegenerate triangle.
+Suppose that $M$ is the midpoint of $[AB]$ and $X$ is the reflection of $B$ across $M$.
+Then 
+\[\measuredangle BAX=\measuredangle ABC\]
+and, moreover, $X$ lies with $B$ on the same side of $(AC)$.
+In particular $X\notin (AC)$.
+\end{thm}
+
+\begin{wrapfigure}{r}{23mm}
+\centering
+\begin{lpic}[t(-6mm),b(0mm),r(0mm),l(0mm)]{pics/2sum1(1)}
+\lbl[l]{16,2;$A$}
+\lbl[b]{6,23;$B$}
+\lbl[r]{0,2;$C$}
+\lbl[b]{20,23;$X$}
+\lbl[l]{11.5,12;$M$}
+\end{lpic}
+\end{wrapfigure} %???remove single arc at A
+
+\parit{Proof.} 
+Let $M$ be the midpoint of $[AB]$.
+Choose $X\z\in (CM)$ distinct from $C$ so that $XM=CM$.
+
+
+Note that the angles $CMB$ and $XMA$
+are vertical;
+in particular, 
+$$\measuredangle CMB=\measuredangle XMA.\eqlbl{eq:CMB=XMA}$$
+By construction, $AM\z=BM$ and $CM\z=XM$.
+Therefore, 
+$$\triangle CMB\cong \triangle XMA;$$ 
+in particular $\measuredangle ABC\equiv\pm \measuredangle BAX$.
+Since angles of $\triangle A M X$ have the same sign (\ref{thm:signs-of-triug}),
+by \ref{eq:CMB=XMA} we can not have a minus sign in the last equality; therefore
+$$\measuredangle ABC\equiv\measuredangle BAX.$$
+
+By construction, the line segments $[BM]$ and $[MX]$ do not cross the line $(AC)$.
+Therefore the points $X$ and $B$ lie on the same side of $(AC)$ (see \ref{cor:half-plane});
+in particular, $X\notin (AC)$.
+\qeds
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -126,12 +126,115 @@ Show that $k\nparallel n$.
 Make a ruler-and-compass construction of a line thru a given point which is parallel to a given line.
 \end{thm}
 
-Recall that central symmetry is defined at the end of Chapter \ref{chap:axioms}.
+\section*{Reflection across a point}
+\addtocontents{toc}{Reflection across a point.}
 
-\begin{thm}{Exercise}\label{ex:parallel-central-symmetry}%???sol
-Suppose that a line $\ell'$ is centrally symmetric to the a line $\ell$ with respect to a point $O$.
-Show that $\ell'\parallel \ell$.
+Fix a point $O$.
+If $O$ is the midpoint of a line segment $[XX']$, then we say that $X'$ is a reflection of $X$ across the point $O$.
+
+Note that the map $X\mapsto X'$ is uniquely defined; it is called a \index{reflection!across a point}\emph{reflection} across $O$.
+In this case $O$ is called the \index{center!of reflection}\emph{center of reflection}. 
+We assume that $O'=O$; that is, $O$ is a reflection of itself across itself.
+
+Recall that any motion is either direct or indirect;
+that is, it either preserves or reverts signs angles (see page \pageref{direct motion}). 
+
+\begin{thm}[\abs]{Proposition}\label{prop:point-reflection}
+Any reflection across a point is a direct motion.
 \end{thm}
+
+%???+PIC
+
+\parit{Proof.}
+Observe that if $X'$ is a reflection of $X$ across $O$, 
+then $X$ is a reflection of $X'$.
+In other words, the composition of the reflection with itself is the identity map.
+In particular any reflection across a point is a bijection.
+
+\begin{wrapfigure}{o}{23mm}
+\centering
+\begin{lpic}[t(-0mm),b(3mm),r(0mm),l(0mm)]{pics/OXYXY(1)}
+\lbl[b]{17,24;$X$}
+\lbl[t]{5,1;$X'$}
+\lbl[t]{20,0;$Y$}
+\lbl[b]{2,25;$Y'$}
+\lbl[t]{11,10;$O$}
+\end{lpic}
+\end{wrapfigure}
+
+Fix two points $X$ and $Y$;
+let $X'$ and $Y'$ be their reflections across $O$.
+To check that the reflection is distance preserving, we need to show that $X'Y'=XY$.
+
+We may assume that $X$, $Y$ and $O$ are distinct; otherwise the statement is trivial.
+By definition of reflection across $O$, we have that $OX=OX'$, $OY=OY'$, and the angles $XOY$ and $X'OY'$ are vertical;
+in particular $\measuredangle XOY\z=\measuredangle X'OY'$.
+By SAS, $\triangle XOY\cong\triangle X'OY'$.
+In particular $X'Y'=XY$.
+
+Finally, the reflection across $O$ can not be indirect since $\measuredangle XOY\z=\measuredangle X'OY'$;
+therefore it is a direct motion.
+\qeds
+
+\begin{thm}{Exercise}
+Suppose $\angle AOB$ is right.
+Show that the composition of reflections across the lines $(OA)$ and $(OB)$ is a reflection across $O$.
+
+Use this statement and Corollary~\ref{cor:reflection+angle} to build another proof of Proposition~\ref{prop:point-reflection}.
+\end{thm}
+
+{
+
+\begin{wrapfigure}{r}{23mm}
+\centering
+\begin{lpic}[t(-6mm),b(0mm),r(0mm),l(0mm)]{pics/lmPQ(1)}
+\lbl[b]{6,15.5;$P$}
+\lbl[t]{12,-.5;$Q$}
+\lbl[b]{18,2;$\ell$}
+\lbl[b]{18,15;$m$}
+\lbl[l]{10,9;$O$}
+\end{lpic}
+\end{wrapfigure}
+
+
+\begin{thm}{Theorem}\label{thm:parallel-point-reflection}
+Let $\ell$ be a line, $Q\in \ell$ and $P$ is arbitrany point.
+Suppose $O$ is the midpoint of $[PQ]$.
+Then a line $m$ passing thru $P$ is parallel to $\ell$ if and only if $m$ is a reflection of $\ell$ across $O$.
+\end{thm}
+
+}
+
+\parit{Proof; ``if'' part.}
+Assume $m$ is a reflection of $\ell$ across across $O$.
+Suppose $\ell\nparallel m$; that is $\ell$ and $m$ intersect at a single point $Z$.
+Denote by $Z'$ be the reflection of $Z$ across $O$.
+
+\begin{figure}[h!]
+ \centering
+ \begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/PQZZ(1)}
+\lbl[b]{38,12;$P$}
+\lbl[t]{48,0;$Q$}
+\lbl[bl]{43.5,7;$O$}
+\lbl[b]{84,8;$Z$}
+\lbl[b]{3,8;$Z'$}
+\lbl[t]{65,2,7;$\ell$}
+\lbl[b]{65,10,-7;$m$}
+
+\end{lpic}
+\end{figure}
+
+Note that $Z'$ lies on both lines $\ell$ and $m$.
+It follows that $Z'=Z$ or equivalently $Z=O$.
+In this case $O\in \ell$ and therefore the reflection of $\ell$ across $O$ is $\ell$ itself;
+that is, $\ell=m$ and in particular $\ell\parallel m$ --- a contradiction. 
+
+\parit{``Only-if'' part.}
+Let $\ell'$ be the reflection of $\ell$ across $O$.
+According to the ``if'' part of the theorem, $\ell'\parallel \ell$.
+Note that both lines $\ell'$ and $m$ pass thru $P$.
+By uniqueness of parallel line (\ref{thm:parallel}), if $m\parallel \ell$, then $\ell'=m$; whence the statement follows.
+\qeds
 
 
 {
@@ -175,86 +278,39 @@ in the second case
 $A$ and $D$ lie on the same sides of~$(BC)$.
 \end{thm}
 
-The following lemma will be used several times in the sequel.
 
-%(???
 
-\begin{thm}[\abs]{Lemma}\label{lem:2angles1}
-Let $ABC$ be a nondegenerate triangle.
-Then there is a point $X\notin(AC)$ such that 
-\[\measuredangle BAX=\measuredangle ABC\]
-and, moreover, $X$ lies with $B$ on the same side of $(AC)$.
-\end{thm}
+\parit{Proof; ``only-if'' part.}
+Denote by $O$ the midpoint of $[BC]$. %???+PIC
 
-\begin{wrapfigure}{r}{23mm}
+Assume $(AB)\parallel(C D)$.
+According to Theorem~\ref{thm:parallel-point-reflection},
+$(CD)$ is a reflection of $(AB)$ across $O$.
+
+\begin{wrapfigure}{o}{30mm}
 \centering
-\begin{lpic}[t(-6mm),b(0mm),r(0mm),l(0mm)]{pics/2sum1(1)}
-\lbl[l]{16,2;$A$}
-\lbl[b]{6,23;$B$}
-\lbl[r]{0,2;$C$}
-\lbl[b]{20,23;$X$}
-\lbl[l]{11.5,12;$M$}
+\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/ABCDA(1)}
+\lbl[b]{22,16;$A$}
+\lbl[b]{9,16;$B$}
+\lbl[t]{16,0;$C$}
+\lbl[t]{26,0;$D$}
+\lbl[t]{3,0.2;$A'$}
+\lbl[l]{14,8;$O$}
 \end{lpic}
 \end{wrapfigure}
 
-\parit{Proof.} 
-Let $M$ be the midpoint of $[AB]$.
-Choose $X\z\in (CM)$ distinct from $C$ so that $XM=CM$.
-
-
-Note that the angles $CMB$ and $XMA$
-are vertical;
-in particular, 
-$$\measuredangle CMB=\measuredangle XMA.\eqlbl{eq:CMB=XMA}$$
-By construction, $AM\z=BM$ and $CM\z=XM$.
-Therefore, 
-$$\triangle CMB\cong \triangle XMA;$$ 
-in particular $\measuredangle ABC\equiv\pm \measuredangle BAX$.
-Since angles of $\triangle A M X$ have the same sign (\ref{thm:signs-of-triug}),
-by \ref{eq:CMB=XMA} we can not have a minus sign in the last equality; therefore
-$$\measuredangle ABC\equiv\measuredangle BAX.$$
-
-By construction, the line segments $[BM]$ and $[MX]$ do not cross the line $(AC)$.
-Therefore the points $X$ and $B$ lie on the same side of $(AC)$ (see \ref{cor:half-plane});
-in particular, $X\notin (AC)$.
+Let $A'$ be the reflection of $A$ across $O$.
+Then $A'\in (CD)$ and by Proposition~\ref{prop:point-reflection} we have that
+\[\measuredangle ABO=\measuredangle A'CO.\eqlbl{A B O = A' C O}\]
+Note that 
+\[\measuredangle ABO=\measuredangle ABC,
+\qquad
+\measuredangle A'BO=-\measuredangle BCA'.\eqlbl{eq:A B O= A B C}
+\]
+Since $A'$, $C$ and $D$ lie on one line, Exercise~\ref{ex:ABCO-line} implis that 
+\[2\cdot BCD\equiv 2\cdot BCA'.\eqlbl{eq:2BCD= 2BCA'}\]
+Finally note that \ref{A B O = A' C O}, \ref{eq:A B O= A B C}, and \ref{eq:2BCD= 2BCA'} imply \ref{A B C + B C D}.
 \qeds
-
-
-\parit{Proof of transversal property; ``only-if'' part.} 
-Assume contrary; that is, equality \ref{A B C + B C D} holds, but $(AB)\z\nparallel(C D)$.
-Then there is a unique point $Z\z\in (AB)\z\cap(C D)$.
-
-Note that the triangle $ZBC$ is nondegenerate. %???problem
-
-By Lemma \ref{lem:2angles1}, 
-there is a point $X\notin(ZB)$ such that 
-\[\measuredangle CBX=\measuredangle BCZ.\eqlbl{C B X = B C Z}\]
-
-\begin{wrapfigure}[4]{r}{43mm}
-\centering
-\begin{lpic}[t(-0mm),b(-0mm),r(0mm),l(0mm)]{pics/onlyif-transversal(1)}
-\lbl[b]{25,20;$A$}
-\lbl[bl]{13,20;$B$}
-\lbl[br]{16,6;$C$}
-\lbl[br]{9,2;$D$}
-\lbl[t]{4,11;$X$}
-\lbl[b]{38,20;$Z$}
-\end{lpic}
-\end{wrapfigure}
-
-Applying \ref{C B X = B C Z}, \ref{A B C + B C D}, and Exercise~\ref{ex:ABCO-line}, we get that 
-\begin{align*}
-2\cdot \measuredangle CBX&\equiv 2\cdot \measuredangle BCZ\equiv
-\\
-&\equiv 2\cdot \measuredangle BCD\equiv
-\\
-&\equiv -2\cdot \measuredangle ABC\equiv
-\\
-&\equiv -2\cdot \measuredangle ZBC\equiv
-\\
-&\equiv 2\cdot \measuredangle CBZ.
-\end{align*}
-Applying Exercise~\ref{ex:ABCO-line} again, we get that $X\in(ZB)$ --- a contradiction.
 
 \parit{``If''-part.}
 Given points $A$, $B$, and $C$ there is unique line $(CD)$ such that \ref{A B C + B C D} holds.
@@ -298,6 +354,8 @@ Trisect a given segment with a ruler and a compass.
 \section*{Angles of triangles}
 \addtocontents{toc}{Angles of triangle.}
 
+
+
 \begin{thm}{Theorem}\label{thm:3sum}
 In any $\triangle A B C$, we have
 $$\measuredangle A B C+ \measuredangle B C A + \measuredangle C A B \equiv \pi.$$
@@ -313,22 +371,25 @@ Further we assume that $\triangle A B C$ is nondegenerate.
 
 \begin{wrapfigure}{o}{23mm}
 \centering
-\begin{lpic}[t(-0mm),b(2mm),r(0mm),l(0mm)]{pics/2sum2(1)}
+\begin{lpic}[t(2mm),b(4mm),r(0mm),l(0mm)]{pics/2sum2(1)}
 \lbl[t]{14,.5;$A$}
-\lbl[r]{4,22;$B$}
+\lbl[b]{6,24;$B$}
 \lbl[t]{2,.5;$C$}
-\lbl[r]{18,22;$X$}
+\lbl[b]{20,24;$X$}
+\lbl[l]{12,13;$M$}
 \end{lpic}
-\end{wrapfigure}
+\end{wrapfigure} 
 
-By Lemma~\ref{lem:2angles1} there is a point $X$ that lies with $B$ on the same side of $(AC)$ such that 
+Let $X$ be the reflection of $C$ across the midpoint $M$ of $[AB]$.
+By Proposition~\ref{prop:point-reflection}
 $\measuredangle BAX\z=\measuredangle ABC$.
 In particular 
 \[2\cdot (\measuredangle XAB+\measuredangle ABC)\equiv 0.\]
-By transversal property, we get that $(AX)\parallel (CB)$.
+By transversal property (\ref{thm:parallel-2}), we get that $(AX)\parallel (CB)$.
 
-Now, let us apply the transversal property (\ref{thm:parallel-2}) to the parallel lines $(BC)$ and $(AX)$ and their transversal $(CA)$.
-Since $B$ and $X$ lie on the same side of $(CA)$, we have 
+Since $[BM]$ and $[MX]$ do not intersect $(CA)$,
+the points $B$, $M$, and $X$ lie on the same side of $(CA)$.
+Therefore, applying the transversal property  for transversal $(CA)$, we get that 
 \[\measuredangle BCA+\measuredangle CAX\equiv \pi.\eqlbl{eq:ABC+CAB}\]
 
 Since $\measuredangle BAX=\measuredangle ABC$,
@@ -342,7 +403,7 @@ The latter identity and \ref{eq:ABC+CAB} imply the theorem.\qeds
 
 \begin{wrapfigure}{r}{43mm}
 \centering
-\begin{lpic}[t(-3mm),b(0mm),r(0mm),l(0mm)]{pics/bisector-BA=AD=DC(1)}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/bisector-BA=AD=DC(1)}
 \lbl[b]{9,26;$A$}
 \lbl[t]{2,1;$B$}
 \lbl[t]{38,1;$C$}
