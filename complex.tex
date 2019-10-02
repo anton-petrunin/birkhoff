@@ -275,8 +275,9 @@ is real.
 \end{thm}
 
 The value $\frac{(v-u)\cdot(w-z)}{(v-w)\cdot(z-u)}$ is called the 
-\index{cross-ratio!complex cross-ratio}\emph{complex cross-ratio}; 
-it will be discussed in more details below.
+\index{cross-ratio!complex cross-ratio}\emph{complex cross-ratio} of $u$, $w$, $v$, and $z$; 
+it will be denoted by \index{64@$(u,v;w,z)$}$(u,w;v,z)$.
+
 
 
 \begin{thm}{Exercise}\label{ex:real-cross-ratio}
@@ -285,35 +286,6 @@ in other words, $2\cdot\arg z\equiv 0$.
 
 Use this observation to show that Theorem~\ref{thm:inscribed-quadrilateral-C}
 is indeed a reformulation of  Theorem~\ref{thm:inscribed-quadrilateral}.
-\end{thm}
-
-\begin{wrapfigure}{o}{42mm}
-\centering
-\begin{lpic}[t(-7mm),b(0mm),r(0mm),l(0mm)]{pics/6-circles(1)}
-\lbl[rtw]{7,7;$U$}
-\lbl[ltw]{37.5,9;$V$}
-\lbl[blw]{37,30;$W$}
-\lbl[rbw]{5,29;$Z$}
-\lbl[r]{13,14.5;$U'$}
-\lbl[l]{30,16;$V'$}
-\lbl[l]{30.5,24.5;$W'$}
-\lbl[rt]{11.5,24.5;$Z'$}
-\end{lpic}
-\end{wrapfigure}
-
-
-
-\begin{thm}{Exercise}\label{ex:6-circles}
-Let $U$, $V$, $W$, $Z$, $U'$, $V'$, $W'$, and $Z'$ be points on the plane with complex coordinates $u$, $v$, $w$, $z$, $u'$, $v'$, $w'$, and $z'$ correspondingly.
-
-Assume that
-$\square UVWZ$, $\square UVV'U'$, $\square VWW'V'$, $\square WZZ'W'$, and $\square ZUU'Z'$
-are inscribed.
-\begin{enumerate}[a)]
-\item\label{ex:6-circles:a} Express it using Theorem~\ref{thm:inscribed-quadrilateral-C}.
-\item Use (\ref{ex:6-circles:a}) to show that $\square U'V'W'Z'$ is inscribed.
-\end{enumerate}
-
 \end{thm}
 
 %(???
@@ -344,7 +316,7 @@ w&=(1-i)\cdot q.
 
 \begin{wrapfigure}{r}{37mm}
 \centering
-\begin{lpic}[t(-2mm),b(1mm),r(2mm),l(2mm)]{pics/3right-isos(1)}
+\begin{lpic}[t(0mm),b(1mm),r(2mm),l(2mm)]{pics/3right-isos(1)}
 \lbl[b]{12,24;$O$}
 \lbl[t]{28,0;$W$}
 \lbl[t]{10,0;$V$}
@@ -388,6 +360,55 @@ Use the method of complex coordinates to show that
 \end{thm}
 
 }
+
+\begin{thm}{Exercise}\label{ex:6-circles}
+Check the following identity with six complex cross ratios:
+\[(u,w;v,z)\cdot(u',w';v',z')=\frac{(v,w';v',w)\cdot(z,u';z',u)}{(u,v';u',v)\cdot(w,z';w',z)}.\]
+
+Use it together with Theorem~\ref{thm:inscribed-quadrilateral-C} to prove that if
+$\square UVWZ$, $\square UVV'U'$, $\square VWW'V'$, $\square WZZ'W'$, and $\square ZUU'Z'$
+are inscribed, then  $\square U'V'W'Z'$ is inscribed as well.
+
+\end{thm}
+
+\begin{minipage}{.48\textwidth}
+\centering
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/6-circles(1)}
+\lbl[rtw]{7,7;$U$}
+\lbl[ltw]{37.5,9;$V$}
+\lbl[blw]{37,30;$W$}
+\lbl[rbw]{5,29;$Z$}
+\lbl[r]{13,14.5;$U'$}
+\lbl[l]{30,16;$V'$}
+\lbl[l]{30.5,24.5;$W'$}
+\lbl[rt]{11.5,24.5;$Z'$}
+\end{lpic}
+\end{minipage}
+\hfill
+\begin{minipage}{.48\textwidth}
+\centering
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/ABUVW(1)}
+\lbl[b]{2.5,38;$U$}
+\lbl[r]{19.5,9.5;$V$}
+\lbl[l]{42,17;$W$}
+\lbl[rt]{12,2;$A$}
+\lbl[lt]{37,2;$B$}
+\end{lpic}
+\end{minipage}
+
+
+\begin{thm}{Exercise}\label{ex:4-sim}
+Suppose that points $U$, $V$ and $W$ lie on one side of line $(AB)$ and 
+$\triangle UAB\sim \triangle BVA \sim \triangle ABW$.
+Denote by $a$, $b$, $u$, $v$, and $w$ the complex coordinates of $A$, $B$, $U$, $V$, and $W$ correspondingly.
+\begin{enumerate}[(a)]
+ \item Show that $\tfrac{u-a}{b-a}=\tfrac{b-v}{a-v}=\tfrac{a-b}{w-b}=\tfrac{u-v}{w-v}$.
+ \item Conclude that $\triangle UAB\sim \triangle BVA \sim \triangle ABW\sim \triangle UVW$.
+\end{enumerate}
+ 
+\end{thm} %???+PIC
+
+
 
 %???)
 
@@ -558,12 +579,13 @@ Use Theorem~\ref{thm:inversions-inversive} to conclude that any inversive transf
 \section*{Complex cross-ratio}
 \addtocontents{toc}{Complex cross-ratio.}
 
-Given four distinct complex numbers $u$, $v$, $w$, and $z$,
+Let $u$, $v$, $w$, and $z$ be four distinct complex numbers.
+Recall that 
 the complex number
 $$
 \frac{(u-w)\cdot(v-z)}{(v-w)\cdot(u-z)}$$
-is called the \index{cross-ratio!complex cross-ratio}\emph{complex cross-ratio}; 
-it will be denoted by \index{64@$(u,v;w,z)$}$(u,v;w,z)$.
+is called the \index{cross-ratio!complex cross-ratio}\emph{complex cross-ratio} of $u$, $v$, $w$, and $z$; 
+it is denoted by $(u,v;w,z)$.
 
 If one of the numbers $u$, $v$, $w$, $z$ is $\infty$, 
 then the complex cross-ratio has to be defined by taking the appropriate limit; in other words, we assume that $\frac\infty\infty=1$.

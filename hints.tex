@@ -1846,27 +1846,6 @@ Note that
 The statement follows since the value $\tfrac{(v-u)\cdot(z-w)}{(v-w)\cdot(z-u)}$ is real if and only if 
 \[2\cdot\arg\frac{(v-u)\cdot(z-w)}{(v-w)\cdot(z-u)}\equiv0.\]
 
-\parbf{Exercise~\ref{ex:6-circles}.}
-Check the following identity:
-\begin{align*}
-\frac{(v-u)\cdot(z-w)}{(v-w)\cdot(z-u)}
-\cdot
-\frac{(v'-u')\cdot(z'-w')}{(v'-w')\cdot(z'-u')} 
-=&
-\frac{(v-u)\cdot(u'-v')}{(v-v')\cdot(u'-u)}
-\cdot
-\frac{(z-w)\cdot(w'-z')}{(z-z')\cdot(w'-w)}
-\cdot
-\\
-\cdot
-&
-\frac{(v-v')\cdot(w'-w)}{(v-w)\cdot(w'-v')}
-\cdot
-\frac{(z-z')\cdot(u'-u)}{(z-u)\cdot(u'-z')}.
-\end{align*}
-By Theorem~\ref{thm:inscribed-quadrilateral-C}, five from six cross ratios in the this identity are real. 
-Therefore so is the sixth cross ratio; it remains to apply the theorem again.
-
 \parbf{Exercise~\ref{ex:3-squares}.}
 We can choose the complex coordinates so that the points $O$, $E$, $A$, $B$, and $C$ have coordinates
 $0$, $1$, $1+i$, $2+i$, and $3+i$ correspondingly.
@@ -1884,6 +1863,28 @@ Note that
 &\equiv\tfrac\pi2.
 \end{align*}
 Note that these three angles are acute and conclude that $\alpha+\beta+\gamma=\tfrac\pi2$.
+
+\parbf{Exercise~\ref{ex:6-circles}.}
+The identity can be checked by straightforward computations.
+
+By Theorem~\ref{thm:inscribed-quadrilateral-C}, five from six cross ratios in the this identity are real. 
+Therefore so is the sixth cross ratio; it remains to apply the theorem again.
+
+\parbf{Exercise~\ref{ex:4-sim}.} Use \ref{thm:signs-of-triug} and \ref{cor:half-plane} to show that $\angle UAB$, $\angle BVA$, and $\angle ABW$ have the same sign.
+Note thet by SAS we have that 
+\[\frac{AU}{AB}=\frac{VB}{VA}=\frac{BA}{BW}
+\quad\text{and}\quad
+\measuredangle UAB=\measuredangle BVA=\measuredangle ABW.\]
+The later means that 
+\[|\tfrac{u-a}{b-a}|=|\tfrac{b-v}{a-v}|=|\tfrac{a-b}{w-b}|,
+\quad\text{and}\quad \arg\tfrac{u-a}{b-a}=\arg\tfrac{b-v}{a-v}=\arg\tfrac{a-b}{w-b}.
+\]
+It implies the first two equalities in 
+\[\frac{u-a}{b-a}=\frac{b-v}{a-v}=\frac{a-b}{w-b}=\frac{u-v}{w-v};\eqlbl{eq:4fractions}\]
+the last equality holds since 
+\[\frac{(u-a)+(b-v)+(a-b)}{(b-a)+(a-v)+(w-b)}=\frac{u-v}{w-v}.\]
+
+To prove \textit{(b)}, one needs rewirite \ref{eq:4fractions} using angles and distances between the points and apply SAS.
 
 \parbf{Exercise~\ref{ex:inverse-Mob}.}
 Show that the inverse of each elementary transformation is elementary
