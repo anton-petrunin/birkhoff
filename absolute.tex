@@ -5,19 +5,18 @@
 \chapter{Neutral plane}\label{chap:non-euclid}
 \addtocontents{toc}{\protect\begin{quote}}
 
-Let us remove Axiom \ref{def:birkhoff-axioms:4} from our axiomatic system, see page \pageref{def:birkhoff-axioms:0}.
+Let us remove Axiom~\ref{def:birkhoff-axioms:4} from our axiomatic system (see page \pageref{def:birkhoff-axioms:0}).
 This way we define a new object called 
 \index{plane!neutral plane}\index{neutral plane}\emph{neutral plane} or \index{plane!absolute plane}\index{absolute plane}\emph{absolute plane}.
-(In a neutral plane, the Axiom \ref{def:birkhoff-axioms:4} may or may not hold.)
+(In a neutral plane, the Axiom~\ref{def:birkhoff-axioms:4} may or may not hold.)
 
 Clearly, any theorem in neutral geometry holds in Euclidean geometry.
 In other words, the Euclidean plane is an example of a neutral plane. 
 In the next chapter we will construct an example of a neutral plane that is not Euclidean.
 
 In this book, 
-the Axiom \ref{def:birkhoff-axioms:4} was used
-for the first time in the proof of uniqueness of parallel lines in Theorem~\ref{thm:parallel}.
-Therefore, all the statements before Theorem~\ref{thm:parallel} also hold in neutral geometry.
+the Axiom~\ref{def:birkhoff-axioms:4} was used starting from Chapter~\ref{chap:parallel}.
+Therefore all the statements before hold in neutral geometry.
 
 It makes all the discussed results
 about
@@ -45,18 +44,9 @@ By the Pythagorean theorem $BC=B'C'$.
 Then the statement follows from the SSS congruence condition.
 \qeds
 
+
 Note that the proof of the Pythagorean theorem used properties of similar triangles, which in turn used Axiom~\ref{def:birkhoff-axioms:4}. 
 Therefore this proof does not work in a neutral plane.
-
-\begin{wrapfigure}[10]{o}{28mm}
-\centering
-\begin{lpic}[t(2mm),b(8mm),r(0mm),l(3mm)]{pics/ABC-D(1)}
-\lbl[l]{23,2;$A$}
-\lbl[b]{12,24.5;$B$}
-\lbl[t]{12,1;$C$}
-\lbl[r]{0.5,2;$D$}
-\end{lpic}
-\end{wrapfigure}
 
 \parit{Neutral proof.}
 Let $D$ denotes the reflection of $A$ across $(BC)$
@@ -69,10 +59,22 @@ $$
 BD=BA=B'A'=B'D'.
 $$
 
-By SSS congruence condition \ref{thm:SSS}, 
+{
+
+\begin{wrapfigure}{r}{28mm}
+\centering
+\begin{lpic}[t(-2mm),b(8mm),r(0mm),l(3mm)]{pics/ABC-D(1)}
+\lbl[l]{23,2;$A$}
+\lbl[b]{12,24.5;$B$}
+\lbl[t]{12,1;$C$}
+\lbl[r]{0.5,2;$D$}
+\end{lpic}
+\end{wrapfigure}
+
+By SSS congruence condition (\ref{thm:SSS}), 
 we get that $\triangle ABD\cong \triangle A'B'D'$.
 
-The theorem follows, since $C$ is the midpoint of $[AD]$
+The statement follows, since $C$ is the midpoint of $[AD]$
 and $C'$ is the midpoint of $[A'D']$.  
 \qeds
 
@@ -81,6 +83,8 @@ Give a proof of Exercise~\ref{ex:bisect=median}
 which works in the neutral plane. 
 \end{thm}
 
+}
+
 \begin{thm}{Exercise}\label{ex:abs-inscibed}
 Let $ABCD$ be an inscribed quadrilateral in the neutral plane.
 Show that
@@ -88,7 +92,7 @@ $$\measuredangle ABC+\measuredangle CDA\equiv \measuredangle BCD+\measuredangle 
 
 \end{thm}
 
-One cannot use the Theorem~\ref{thm:inscribed-quadrilateral} to solve the exercise above,
+Note that one cannot use the Theorem~\ref{thm:inscribed-quadrilateral} to solve the exercise above,
 since it uses Theorems~\ref{thm:tangent-angle} and \ref{thm:inscribed-angle},
 which in turn uses Theorem~\ref{thm:3sum}.
 
@@ -242,7 +246,6 @@ earlier proofs were due to Saccheri \cite{saccheri}
 and Lambert \cite{lambert}.
 
 \parit{Proof.} 
-Let $\triangle ABC$ be the given triangle.
 Set 
 \begin{align*}
 a&=BC,
@@ -390,7 +393,7 @@ cannot be proved}
 \addtocontents{toc}{How to prove that something cannot be proved.}
 
 Many attempts were made to prove that any theorem in Euclidean geometry holds in neutral geometry.
-The latter is equivalent to the statement that Axiom \ref{def:birkhoff-axioms:4} is a {}\emph{theorem} in neutral geometry.
+The latter is equivalent to the statement that Axiom~\ref{def:birkhoff-axioms:4} is a {}\emph{theorem} in neutral geometry.
 
 Some of these attempts were accepted as proofs for long periods of time, until a mistake was found.
 
@@ -426,7 +429,7 @@ That is partly the reason for the large number of false proofs;
 each used one of such statements by accident.
 
 Let us formulate the negation of \textit{(\ref{thm:=IV:main})} above as a new axiom;
-we label it h-$\!$\ref{def:birkhoff-axioms:4} as a {}\emph{hyperbolic version} of Axiom \ref{def:birkhoff-axioms:4} on page \pageref{def:birkhoff-axioms:4}.
+we label it h-$\!$\ref{def:birkhoff-axioms:4} as a {}\emph{hyperbolic version} of Axiom~\ref{def:birkhoff-axioms:4} on page \pageref{def:birkhoff-axioms:4}.
 
 
 \begin{framed}
