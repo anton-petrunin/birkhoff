@@ -1,3 +1,7 @@
+To start C.a.R do
+
+java -jar zirkel.jar
+
 For exercises in hyperbolic geometry:
 
 1. Help>Load Example>Poincare Geometry.zir

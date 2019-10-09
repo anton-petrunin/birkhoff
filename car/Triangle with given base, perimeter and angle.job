@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CaR version="12.0">
+<Construction job="true" last="a1" target1="I9">
+<Window x="0.0" y="0.0" w="19.643748671606986"/>
+<Assignment>
+<P>Construct a point X such that ∡AXB = ∡CAB and AX + XB = AC.</P>
+</Assignment>
+<Objects>
+<Point name="P1" alias="A" n="0" showname="true" x="-5.840033388856131" y="2.610317954109938" shape="circle">Point at -5.84003, 2.61032</Point>
+<Point name="P2" alias="B" n="1" showname="true" x="8.229137957024548" y="2.6988033084865446" shape="circle">Point at 8.22914, 2.6988</Point>
+<Segment name="s1" n="2" from="P1" to="P2">Line segment from P1 to P2</Segment>
+<Point name="P3" alias="C" n="3" showname="true" x="14.069171345880676" y="-9.158234177978931" shape="circle">Point at 14.06917, -9.15823</Point>
+<Segment name="s2" n="5" from="P1" to="P3">Line segment from P1 to P3</Segment>
+<Circle name="c1" n="6" hidden="true" through="P3" midpoint="P1" acute="true">Circle around P1 through P3</Circle>
+<Ray name="r1" n="7" hidden="super" from="P1" to="P2">Ray from P1 pointing to P2</Ray>
+<Circle name="c2" n="8" hidden="super" through="P3" midpoint="P1" acute="true">Circle around P1 through P3</Circle>
+<Intersection name="I1" n="9" hidden="super" first="r1" second="c2" which="first">Intersection between r1 and c2</Intersection>
+<Midpoint name="M1" n="10" hidden="super" first="I1" second="P3">Midpoint between I1 and P3</Midpoint>
+<Ray name="r2" n="11" hidden="true" from="P1" to="M1">Ray from P1 pointing to M1</Ray>
+<Plumb name="p1" n="12" hidden="true" point="P1" line="r2" valid="true">Perpendicular line through P1 to r2</Plumb>
+<Circle name="c3" n="13" hidden="super" through="P2" midpoint="P1" acute="true">Circle around P1 through P2</Circle>
+<Circle name="c4" n="14" hidden="super" through="P1" midpoint="P2" acute="true">Circle around P2 through P1</Circle>
+<Intersection name="I2" n="15" hidden="super" first="c3" second="c4" which="second">Intersection between c3 and c4</Intersection>
+<Intersection name="I3" n="16" hidden="super" first="c4" second="c3" which="second">Intersection between c4 and c3</Intersection>
+<Line name="l1" n="17" hidden="true" from="I2" to="I3">Line through I2 and I3</Line>
+<Intersection name="I4" n="18" hidden="true" first="p1" second="l1" shape="circle">Intersection between p1 and l1</Intersection>
+<Circle name="c5" n="19" hidden="true" through="P1" midpoint="I4" acute="true">Circle around I4 through P1</Circle>
+<Intersection name="I6" n="20" hidden="true" first="c1" second="c5" shape="circle" which="second">Intersection between c1 and c5</Intersection>
+<Line name="l2" n="21" hidden="true" from="P1" to="I6">Line through P1 and I6</Line>
+<Circle name="c6" n="22" hidden="super" through="P2" midpoint="I6" acute="true">Circle around I6 through P2</Circle>
+<Circle name="c7" n="23" hidden="super" through="I6" midpoint="P2" acute="true">Circle around P2 through I6</Circle>
+<Intersection name="I7" n="24" hidden="super" first="c6" second="c7" which="second">Intersection between c6 and c7</Intersection>
+<Intersection name="I8" n="25" hidden="super" first="c7" second="c6" which="second">Intersection between c7 and c6</Intersection>
+<Line name="l3" n="26" hidden="true" from="I7" to="I8">Line through I7 and I8</Line>
+<Intersection name="I9" alias="X" n="4" showname="true" first="l3" second="l2" shape="circle">Intersection between l3 and l2</Intersection>
+<Angle name="a1" n="27" unit="°" first="P2" root="P1" second="P3" acute="true">Angle P2 - P1 - P3</Angle>
+</Objects>
+</Construction>
+</CaR>

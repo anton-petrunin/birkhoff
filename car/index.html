@@ -8,7 +8,7 @@ using <A href="http://car.rene-grothmann.de/doc_en/index.html"> C.a.R.</A>; some
 </p>
 <p>
 Since in all major browsers the support for Java plugins has ended,
-we recommend to install <A href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">Java Developers Kit (JDK)</A> and open the exercises using the command <A href="https://docs.oracle.com/javase/8/docs/technotes/tools/unix/appletviewer.html"><code>appletviewer url...</code></A>.
+we recommend to install <A href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">Java Developers Kit (JDK)</A> (or <A href="https://openjdk.java.net">OpenJDK</A>) and open the exercises using the command <A href="https://docs.oracle.com/javase/8/docs/technotes/tools/unix/appletviewer.html"><code>appletviewer url...</code></A>.
 for example, to open the first exercise you use the following command:<br>
 </p>
 <p>
@@ -17,7 +17,11 @@ for example, to open the first exercise you use the following command:<br>
 <p>
 On windows, before executing the command, you may need to navigate to the folder with <code>appletviewer</code>, it should be something like
 <code>C:\Program Files\Java\jdk1.8.0\bin</code>
-
+</p>
+<p>
+If your computer has a more recent JDK, you might need to force it to use the older JDK by entering
+<code>export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)</code> (or something like that)
+before executing <code>appletviewer</code>.
 </p>
 <ul>
 <li>Perpendicular lines
@@ -48,6 +52,7 @@ On windows, before executing the command, you may need to navigate to the folder
 <li>9.7. <A href="Right angles.html">Right angles</A></li>
 <li>9.9. <A href="Perpendicular with ruler.html">Perpendicular with ruler</A></li>
 <li>9.21. <A href="Equal angles.html">Equal angles</A></li>
+<li><A href="Triangle with given base, perimeter and angle.html">Triangle with given base, perimeter and angle</A></li>
 </ul>
 </li>
 <li>Inversion
