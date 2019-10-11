@@ -135,6 +135,7 @@ If $O$ is the midpoint of a line segment $[XX']$, then we say that $X'$ is a ref
 Note that the map $X\mapsto X'$ is uniquely defined; it is called a \index{reflection!across a point}\emph{reflection} across $O$.
 In this case $O$ is called the \index{center!of reflection}\emph{center of reflection}. 
 We assume that $O'=O$; that is, $O$ is a reflection of itself across itself.
+If the reflection across $O$ moves a set $S$ to itself, then we say that $S$ is \index{central symmetry}\emph{centrally symmetric} with respect to $O$. 
 
 Recall that any motion is either direct or indirect;
 that is, it either preserves or reverts signs angles (see page \pageref{direct motion}). 
@@ -383,9 +384,8 @@ Further we assume that $\triangle A B C$ is nondegenerate.
 Let $X$ be the reflection of $C$ across the midpoint $M$ of $[AB]$.
 By Proposition~\ref{prop:point-reflection}
 $\measuredangle BAX\z=\measuredangle ABC$.
-In particular 
-\[2\cdot (\measuredangle XAB+\measuredangle ABC)\equiv 0.\]
-Therefore the transversal property (\ref{thm:parallel-2}) implies that $(AX)\parallel (CB)$.
+Note that $(AX)$ is a reflection of $(CB)$ across $M$;
+therefore by Theorem~\ref{thm:parallel-point-reflection}, $(AX)\parallel (CB)$.
 
 Since $[BM]$ and $[MX]$ do not intersect $(CA)$,
 the points $B$, $M$, and $X$ lie on the same side of $(CA)$.
@@ -481,10 +481,23 @@ $$\measuredangle ABC+\measuredangle BCD+\measuredangle CDA+\measuredangle DAB\eq
 \section*{Parallelograms}
 \addtocontents{toc}{Parallelograms.}
 
-A quadrilateral $ABCD$ in the Euclidean plane is called \index{quadrilateral!degenerate quadrilateral}\index{degenerate!quadrilateral}\emph{nondegenerate} if any three points from $A,B,C,D$ do not lie on one line.
+A quadrilateral $ABCD$ in the Euclidean plane is called \index{quadrilateral!degenerate quadrilateral}\index{degenerate!quadrilateral}\emph{nondegenerate} if no three points from $A,B,C,D$ lie on one line.
 
 A nondegenerate quadrilateral  is called a \index{parallelogram}\emph{parallelogram}
 if its opposite sides are parallel.
+
+
+
+\begin{thm}{Lemma}\label{lem:parallelogram}
+Any parallelogram is centrally symmetric with respect to a midpoint of one of its diagolals.
+
+In particular, if $\square A B C D$ is a parallelogram, then
+\begin{enumerate}[(a)]
+\item its diagonals $[AC]$ and $[BD]$ intersect each other at their midpoints;
+\item $\measuredangle D A B= \measuredangle B C D$;
+\item $AB=CD$.
+\end{enumerate}
+\end{thm}
 
 {
 
@@ -496,47 +509,19 @@ if its opposite sides are parallel.
 \lbl[t]{-.5,.5;$C$}
 \lbl[t]{22.5,.5;$D$}
 \end{lpic}
-\end{wrapfigure}
+\end{wrapfigure}%???redo
 
-\begin{thm}{Lemma}\label{lem:parallelogram}
-If $\square A B C D$ is a parallelogram, then
-\begin{enumerate}[(a)]
-\item $\measuredangle D A B= \measuredangle B C D$;
-\item $AB=CD$.
-\end{enumerate}
-\end{thm}
+\parit{Proof.} Let $\square A B C D$ be a parallelogram.
+Denote by $M$ the midpoint of $[AC]$.
 
+Since $(AB)\parallel (CD)$, Theorem~\ref{thm:parallel-point-reflection} implies that $(CD)$ is a reflection of $(AB)$ across $M$.
+The same way $(BC)$ is a reflection of $(DA)$ across $M$.
+Since $\square A B C D$ is nondegenerate, it follows that $D$ is a reflection of $B$ across $M$; in other words, $M$ is the midpoint of $[BD]$.
 
-\parit{Proof.}
-Since $(AB)\parallel (CD)$,
-the points $C$ and $D$ lie on the same side of~$(AB)$.
-Hence $\angle ABD$ and $\angle ABC$ have the same sign.
-The same way we get that 
-$\angle CBD$ and $\angle CBA$ have the same sign.
-
-Therefore the angles $DBA$ and $DBC$ have opposite signs; 
-that is, $A$ and $C$ lie on opposite sides of~$(BD)$.
-
-}
-
-
-
-According to the transversal property (\ref{thm:parallel-2}), 
-$$\measuredangle B D C
-\equiv 
--\measuredangle DBA
-\quad
-\text{and}
-\quad 
-\measuredangle DBC
-\equiv 
--\measuredangle BDA.$$
-By the ASA condition
-$\triangle A B D\cong \triangle C D B$.
-The latter implies both statements in the lemma.
+The reaming statements follow since reflection across $M$ is a direct motion of the plane (see \ref{prop:point-reflection}).
 \qeds
 
-
+}
 
 \begin{thm}{Exercise}\label{ex:romb}
 Assume $ABCD$ is a quadrilateral such that
@@ -545,10 +530,6 @@ Show that $ABCD$ is a parallelogram.
 \end{thm}
 
 A quadrilateral as in the exercise above is called a \index{rhombus}\emph{rhombus}.
-
-\begin{thm}{Exercise}\label{ex:diad-par}
-Show that diagonals of a parallelogram intersect each other at their midpoints.
-\end{thm}
 
 A quadraliteral $ABCD$ is called a \index{rectangle}\emph{rectangle} if the angles $ABC$, $BCD$, $CDA$, and $DAB$ are right.
 Note that according to the transversal property (\ref{thm:parallel-2}),
