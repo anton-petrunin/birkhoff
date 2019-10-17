@@ -266,17 +266,12 @@ Otherwise $\alpha=-\beta$.
 Hence the result.
 
 \parbf{Exercise~\ref{ex:PP(PN)}.}
-Set $\alpha=\measuredangle AOB$, $\beta=\measuredangle BOC$, and $\gamma=\measuredangle COA$.
-By Axiom~\ref{def:birkhoff-axioms:2b} and Proposition~\ref{lem:AOA=0}, we have
-$$\alpha+\beta+\gamma\equiv 0.
-\eqlbl{alph+bet+gam}$$
+Set $\alpha=\measuredangle ABC$, $\beta=\measuredangle A'B'C'$.
+Since $2\cdot\alpha\equiv 2\cdot \beta$, Exercise~\ref{ex:2a=0} implies that
+ $\alpha\equiv \beta$ or $\alpha\equiv \beta+\pi$.
+In the later case the angles have opposite signs which is impossible.
 
-Note that $0<\alpha+\beta<2\cdot\pi$ and $|\gamma|\le \pi$.
-If $\gamma> 0$, then \ref{alph+bet+gam} implies
-$$\alpha+\beta+\gamma=2\cdot\pi$$
-and 
-if $\gamma<0$, then \ref{alph+bet+gam} implies
-$$\alpha+\beta+\gamma=0.$$
+Since $\alpha,\beta\in(-\pi,\pi]$, equality $\alpha\equiv \beta$ implies $\alpha= \beta$.
 
 \parbf{Exercise~\ref{ex:vert-intersect}.}
 Note that $O$ and $A'$
@@ -290,11 +285,15 @@ Apply Theorem~\ref{thm:signs-of-triug} for $\triangle PQX$ and $\triangle PQY$ a
 apply Corollary~\ref{cor:half-plane}\textit{\ref{cor:half-plane:angle}}.
 
 \parbf{Exercise~\ref{ex:chevinas}.} 
-Note that it is sufficient to consider the cases when $A'\z\ne B,C$ and $B'\ne A, C$.
+We can assume that $A'\z\ne B,C$ and $B'\ne A, C$;
+otherwise the statement trivially holds.
 
-Apply Pasch's theorem (\ref{thm:pasch}) twice:
-(1) for $\triangle AA'C$ and $(BB')$, and 
-(2) for $\triangle BB'C$ and~$(AA')$.
+Note that $(BB')$ does not intersect $[A'C]$.
+Applying Pasch's theorem (\ref{thm:pasch}) for $\triangle AA'C$ and $(BB')$, we get that 
+$(BB')$ intersects $[AA']$; denote the point of intersection by $M$.
+
+The same way we get that $(AA')$ intersects $[BB']$;
+that is $M$ lies on $[AA']$ and $[BB']$.
 
 \parbf{Exercise~\ref{ex:Z}.}
 Assume that $Z$ is the point of intersection.
@@ -559,16 +558,17 @@ Repeat the construction in Exercise~\ref{ex:construction-perpendicular} twice.
 %\parbf{Exercise~\ref{ex:parallel-central-symmetry}.}???
 
 \parbf{Exercise~\ref{ex:smililar+parallel}.}
-By the transversal property~\ref{thm:parallel-2},
-\[\measuredangle B'BC \equiv \pi -\measuredangle C'B'B.\]
+Since  $\ell\parallel (AB)$, it cannot cross $[AB]$.
+By Pasch's theorem (\ref{thm:pasch}), $\ell$ has to cross another side of $\triangle ABC$.
+Therefore $\ell$ crosses $[BC]$; denote the point of intersection by $Q$.
 
-Since $B'$ lies between $A$ and $B$, we get that 
-$\measuredangle ABC=\measuredangle B'BC$ and $\measuredangle AB'C'+\measuredangle C'B'B\z\equiv \pi$.
-Hence $\measuredangle ABC= \measuredangle AB'C'$.
+By the transversal property (\ref{thm:parallel-2}), $\measuredangle BAP \equiv \pi -\measuredangle APQ$.
+Since $P$ lies between $A$ and $C$, we get that 
+$\measuredangle BAC=\measuredangle BAP$ and $\measuredangle APQ+\measuredangle QPC\z\equiv \pi$.
+Hence $\measuredangle BAC= \measuredangle QPC$.
 
-The same way we can prove that 
-$\measuredangle BCA= \measuredangle B'C'A$.
-It remains to apply the AA similarity condition.
+The same way we can prove that $\measuredangle ABC= \measuredangle PQC$.
+By AA similarity condition, $\triangle ABC\z\sim\triangle PQC$, and therefore $\frac{PC}{AC}=\frac{QC}{BC}$.%???PIC
 
 \parbf{Exercise~\ref{ex:trisection}.}
 Assume we need to trisect segment $[AB]$.

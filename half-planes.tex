@@ -48,21 +48,14 @@ Hence the statement follows.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:PP(PN)}
-Assume that the angles $AOB$ and $BOC$ are positive. 
-Show that
-$$\measuredangle AOB+\measuredangle BOC+\measuredangle COA=2\cdot\pi.$$
-if $\angle COA$ is positive,
-and
-$$\measuredangle AOB+\measuredangle BOC+\measuredangle COA=0.$$
-if $\angle COA$ is negative.
+Assume that the angles $ABC$ and $A'B'C'$ are have the same sign
+and 
+\[2\cdot \measuredangle ABC\equiv 2\cdot \measuredangle A'B'C'.\]
+Show that $\measuredangle ABC= \measuredangle A'B'C'$.
 \end{thm}
-
-
-
 
 \section*{Intermediate value theorem}
 \addtocontents{toc}{Intermediate value theorem.}
-
 
 \begin{thm}{Intermediate value theorem}\label{thm:intermidiate}
 Let $f\:[a,b]\to \mathbb{R}$ be a continuous function.
@@ -71,18 +64,11 @@ $f(a)$ and $f(b)$ have opposite signs,
 then $f(t_0)=0$ for some $t_0\in[a,b]$.
 \end{thm}
 
-\begin{wrapfigure}{o}{38mm}
+\begin{wrapfigure}{r}{38mm}
+\vskip-6mm
 \centering
-\begin{lpic}[t(-6mm),b(0mm),r(0mm),l(5mm)]{pics/ivt(1)}
-\lbl[r]{2,20;$f(b)$}
-\lbl[r]{2,1;$f(a)$}
-\lbl[tl]{11,8;$t_0$}
-\lbl[t]{27.5,8;$b$}
-\lbl[b]{7.5,10.5;$a$}
-\end{lpic}
+\includegraphics{mppics/pic-14}
 \end{wrapfigure}
-
-
 
 The intermediate value theorem is assumed to be known;
 it should be covered in any calculus course.
@@ -91,7 +77,7 @@ We will use only the following corollary:
 \begin{thm}[\abs]{Corollary}\label{cor:intermidiate}
 Assume that for any $t\z\in [0,1]$ we have three points in the plane  $O_t$, $A_t$, and $B_t$, such that 
 \begin{enumerate}[(a)]
-\item Each function $t\mapsto O_t$, $t\mapsto A_t$, and $t\mapsto B_t$ is continuous.
+\item Each function $t\mapsto O_t$, $t\mapsto A_t$, and $t\z\mapsto B_t$ is continuous.
 \end{enumerate}
 
 \begin{enumerate}[(a)]\addtocounter{enumi}{1}
@@ -124,12 +110,7 @@ Then for any $X\z\notin (PQ)$ the angles $PQX$ and $PQ'X$ have the same sign.
 
 \begin{wrapfigure}{o}{33mm}
 \centering
-\begin{lpic}[t(-0mm),b(1mm),r(0mm),l(0mm)]{pics/PQX(1)}
-\lbl[t]{30,1;$P$}
-\lbl[t]{18,1;$Q'$}
-\lbl[t]{1,1;$Q$}
-\lbl[r]{11,27;$X$}
-\end{lpic}
+\includegraphics{mppics/pic-16}
 \end{wrapfigure}
 
 \parit{Proof.}
@@ -160,13 +141,9 @@ the angles $ABC$, $BCA$, and $CAB$ have the same sign.
 {
 
 \begin{wrapfigure}{o}{33mm}
+\vskip-4mm
 \centering
-\begin{lpic}[t(-3mm),b(1mm),r(0mm),l(0mm)]{pics/PQX-2(1)}
-\lbl[t]{30,1;$Z$}
-\lbl[t]{18,1;$A$}
-\lbl[t]{2,1;$B$}
-\lbl[b]{12.5,28.5;$C$}
-\end{lpic}
+\includegraphics{mppics/pic-18}
 \end{wrapfigure}
 
 \parit{Proof.}
@@ -195,14 +172,10 @@ then the angles $PQX$ and $PQY$
 have the same sign.
 \end{thm}
 
-\begin{wrapfigure}{r}{34mm}
+\begin{wrapfigure}{o}{26mm}
+\vskip-4mm
 \centering
-\begin{lpic}[t(-6mm),b(0mm),r(0mm),l(0mm)]{pics/PQY(1)}
-\lbl[t]{30,1;$P$}
-\lbl[t]{1,1;$Q$}
-\lbl[r]{11,27;$X$}
-\lbl[l]{24,13;$Y$}
-\end{lpic}
+\includegraphics{mppics/pic-20}
 \end{wrapfigure}
 
 The proof is nearly identical to the one above.
@@ -233,14 +206,8 @@ Then the angles $PQX$ and $PQY$ have the same sign if and only if $[XY]$ does no
 \end{thm}
 
 \begin{wrapfigure}{o}{30mm}
+\includegraphics{mppics/pic-22}
 \centering
-\begin{lpic}[t(-4mm),b(-0mm),r(0mm),l(0mm)]{pics/PQXYZ(1)}
-\lbl[b]{11,14;$Q$}
-\lbl[b]{3,13.3;$P$}
-\lbl[l]{28,24;$X$}
-\lbl[l]{27,1;$Y$}
-\lbl[lt]{27,11;$Z$}
-\end{lpic}
 \end{wrapfigure}
 
 \parit{Proof.} The if-part follows from Lemma~\ref{lem:signsXY}. 
@@ -250,7 +217,7 @@ let $Z$ denotes the point of intersection.
 Without loss of generality, we can assume $Z\ne P$.
 
 Note that $Z$ lies between $X$ and $Y$.
-By Lemma~\ref{lem:straight-sign}, $\angle PZX$ and $\angle PZY$ have opposite signs.
+By Lemma \ref{lem:straight-sign}, $\angle PZX$ and $\angle PZY$ have opposite signs.
 This proves the statement if $Z=Q$.
 
 If $Z\ne Q$, then $\angle ZQX$ and $\angle QZX$ have opposite signs by \ref{thm:signs-of-triug}.
@@ -277,15 +244,12 @@ such that
 
 \end{thm}
 
-\begin{wrapfigure}[6]{o}{25mm}
+{
+
+\begin{wrapfigure}{r}{26mm}
+\vskip-4mm
 \centering
-\begin{lpic}[t(-3mm),b(-5mm),r(0mm),l(0mm)]{pics/vert-intersect(1)}
-\lbl[l]{10.5,13.5;$O$}
-\lbl[tr]{20,3;$A$}
-\lbl[t]{7.5,8.5;$B$}
-\lbl[b]{6,17.5;$A'$}
-\lbl[tl]{19,24;$B'$}
-\end{lpic}
+\includegraphics{mppics/pic-24}
 \end{wrapfigure}
 
 We say that $X$ and $Y$ lie on  {}\emph{one side of} $(PQ)$ if they lie in one of the half-planes of $(PQ)$ and we say that  $P$ and $Q$ lie on the {}\emph{opposite sides of} $\ell$ if they lie in the different half-planes of~$\ell$.
@@ -296,65 +260,51 @@ Assume that the angles $AOB$ and $A'OB'$ are vertical.
 Show that the line $(AB)$ does not intersect the segment~$[A'B']$.
 \end{thm}
 
+}
 
 Consider the triangle $ABC$.
 The segments $[AB]$, $[BC]$, and $[CA]$ are called 
 \index{side!side of the triangle}\emph{sides of the triangle}.
 
-The following theorem follows from Corollary~\ref{cor:half-plane}:
-
 {
 
-\begin{wrapfigure}{o}{21mm}
+\begin{wrapfigure}{r}{26mm}
+\vskip-4mm
 \centering
-\begin{lpic}[t(-0mm),b(-5mm),r(0mm),l(0mm)]{pics/pasch(1)}
-\lbl[tr]{1,1;$A$}
-\lbl[b]{7,18.5;$B$}
-\lbl[tl]{19,4;$C$}
-\lbl[b]{18,12;$\ell$}
-\end{lpic}
+\includegraphics{mppics/pic-26}
 \end{wrapfigure}
 
 \begin{thm}[\abs]{Pasch's theorem}\label{thm:pasch}
-Assume line $\ell$ does not pass thru any vertex a triangle.
+Assume line $\ell$ does not pass thru any vertex of a triangle.
 Then it intersects either two or zero sides of the triangle.
 \end{thm}
 
 \parit{Proof.}
 Assume that line $\ell$ intersects side $[AB]$ of the triangle $ABC$ and does not pass thru $A$, $B$, and $C$.
 
-}
-
 By Corollary~\ref{cor:half-plane}, the vertexes $A$ and $B$ lie on opposite sides of~$\ell$.
+
+}
 
 The vertex $C$ may lie on the same side with $A$ and on opposite side with $B$ or the other way around.
 By Corollary~\ref{cor:half-plane}, in the first case, $\ell$ intersects side $[BC]$ and does not intersect $[AC]$; in the second case, $\ell$ intersects side $[AC]$ and does not intersect $[BC]$.
 Hence the statement follows.
 \qeds
 
+{
+
+\begin{wrapfigure}[5]{r}{29mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-28}
+\bigskip
+\includegraphics{mppics/pic-30}
+\end{wrapfigure}
+
 \begin{thm}{Exercise}\label{ex:signs-PXQ-PYQ}
-Show that two points $X,Y\notin(PQ)$ lie on the same side of $(PQ)$
+Show that two points $X,Y\z\notin(PQ)$ lie on the same side of $(PQ)$
 if and only if the angles $PXQ$ and $PYQ$ have the same sign.
 \end{thm}
-
-\begin{multicols}{2}
-\centering
-\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/PQY-1(1)}
-\lbl[t]{30,1;$P$}
-\lbl[t]{1,1;$Q$}
-\lbl[b]{12,28.5;$X$}
-\lbl[rb]{17,12;$Y$}
-\end{lpic}
-\columnbreak
-\centering
-\begin{lpic}[t(-.2mm),b(0mm),r(0mm),l(0mm)]{pics/PQY-2(1)}
-\lbl[t]{30,1;$B$}
-\lbl[t]{1,1;$A$}
-\lbl[lb]{23,15;$A'$}
-\lbl[rb]{8,19;$B'$}
-\lbl[b]{12,28.5;$C$}
-\end{lpic} 
-\end{multicols}
 
 \begin{thm}{Exercise}\label{ex:chevinas}
 Let $\triangle ABC$ be a nondegenerate triangle,
@@ -367,6 +317,8 @@ Show that the segments $[AA']$ and $[BB']$ intersect.
 Assume that the points $X$ and $Y$ lie on opposite sides of the line~$(PQ)$.
 Show that the half-line $[PX)$ does not intersect~$[QY)$. 
 \end{thm}
+
+}
 
 \begin{thm}{Advanced exercise}\label{ex:angle-measures}
 Note that the following quantity 
@@ -384,8 +336,6 @@ Show that $\measuredangle$ and $\tilde\measuredangle$ are the only possible angl
 
 Show that without Axiom~\ref{def:birkhoff-axioms:2c}, this is no longer true.
 \end{thm}
- 
-
 
 \section*{Triangle with the given sides}
 \addtocontents{toc}{Triangle with the given sides.}
@@ -414,16 +364,9 @@ such that $a=BC$, $b=CA$, and $c=AB$.
 \end{thm}
 
 \begin{wrapfigure}{o}{25mm}
+\vskip2mm
 \centering
-\begin{lpic}[t(2mm),b(4mm),r(0mm),l(0mm)]{pics/sbr(1)}
-\lbl[t]{2,0;$A$}
-\lbl[t]{22,0;$C$}
-\lbl[b]{12.5,29;$B$}
-\lbl[w]{12.5,2.5;$\,s(\beta,r)\,$}
-\lbl[W]{7.5,13;$r$}
-\lbl[W]{19,13;$r$}
-\lbl[t]{12.5,20;$\beta$}
-\end{lpic}
+\includegraphics{mppics/pic-32}
 \end{wrapfigure}
 
 The proof is given at the end of the section.
@@ -435,15 +378,14 @@ The existence of such a triangle follows from Axiom~\ref{def:birkhoff-axioms:2a}
 
 Note that according to Axiom~\ref{def:birkhoff-axioms:3}, 
 the values
-$\beta$ and $r$ define the triangle $ABC$ up to the congruence.
+$\beta$ and~$r$ define the triangle $ABC$ up to the congruence.
 In particular, the distance $AC$ depends only on $\beta$ and~$r$.
 Set 
 $$s(\beta,r)\df AC.$$
 
 \begin{thm}[\abs]{Proposition}\label{prop:f(r,a)}
 Given $r>0$ and $\epsilon>0$, there is $\delta>0$ such that
-if $0<\beta<\delta$, then 
-\[s(r,\beta)<\epsilon.\]
+\[0<\beta<\delta\quad\Longrightarrow\quad s(r,\beta)<\epsilon.\]
 
 \end{thm}
 
@@ -452,63 +394,45 @@ Fix two points $A$ and $B$ such that $AB\z=r$.
 
 {
 
-\begin{wrapfigure}{o}{33mm}
+\begin{wrapfigure}{o}{36mm}
 \centering
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/fra(1)}
-\lbl[t]{22.5,0;$A$}
-\lbl[t]{2.5,0;$B$}
-\lbl[b]{20,14;$C$}
-\lbl[tl]{25,7;$D$}
-\lbl[tl]{30,8;$Z$}
-\lbl[r]{28,20;$Y$}
-\lbl[rb]{30,27;$X$}
-\lbl[w]{15,2;$\,r\,$}
-\lbl[w]{13,8,30;$\,r\,$}
-\end{lpic}
+\includegraphics{mppics/pic-34}
 \end{wrapfigure}
 
 Choose a point $X$ such that $\measuredangle ABX$ is positive.
-Let $Y\in [AX)$ be the point such that $AY=\tfrac\epsilon8$;
+Let $Y\in [AX)$ be the point such that $AY=\tfrac\epsilon2$;
 it exists by Proposition~\ref{prop:point-on-half-line}.
 
 Note that $X$ and $Y$ lie on the same side of $(AB)$;
 therefore, $\angle ABY$ is positive. 
 Set $\delta\z=\measuredangle ABY$.
 
-Assume $0<\beta<\delta$,
-$\measuredangle ABC=\beta$
-and $BC\z=r$.
+Suppose $0<\beta<\delta$;
+by Axiom~\ref{def:birkhoff-axioms:2a}, we can choose $B$ so that $\measuredangle ABC=\beta$ and $BC\z=r$.
+Further we can choose a half-line $[BZ)$ such that $\measuredangle ABZ\z=\tfrac12\cdot \beta$.
 
+Note that $A$ and $Y$ lie on opposite sides of~$(BZ)$ and moreover $\measuredangle ABZ\z\equiv -\measuredangle CBZ$.
+In particular, $(BZ)$ intersects $[AY]$;
+denote by $D$ the point of intersection.
 
+Since $D$ lies between $A$ and $Y$, we have that $AD<AY$.
 
-
-Applying Axiom~\ref{def:birkhoff-axioms:2a},
-we can choose a half-line $[BZ)$ such that $\measuredangle ABZ=\tfrac12\cdot \beta$.
-Note that $A$ and $Y$ lie on opposite sides of~$(BZ)$.
-Therefore, $(BZ)$ intersects $[AY]$;
-let $D$ denotes the point of intersection.
-
-Since $D\in (BZ)$, we get that $\measuredangle ABD=\tfrac \beta2$ or $\tfrac\beta2-\pi$.
-The latter is impossible since $D$ and $Y$ lie on the same side of~$(AB)$.
-Therefore, 
-$$\measuredangle ABD=\measuredangle DBC=\tfrac \beta2.$$
-
-
-
+Since $D$ lies on $(BZ)$ we have that $\measuredangle ABD\z\equiv -\measuredangle CBD$.
 By Axiom~\ref{def:birkhoff-axioms:3},
 $\triangle ABD\cong \triangle CBD$.
-In particular,
+It follows that
 \begin{align*}
-AC&\le AD+DC=
+s(r,\beta)&=AC\le
 \\
-&=2\cdot AD\le 
+&\le AD+DC=
 \\
-&\le 2\cdot AY=
+&=2\cdot AD< 
 \\
-&=\tfrac\epsilon4
+&< 2\cdot AY=
+\\
+&=\epsilon
 \end{align*}
-and hence the result.
-\qeds
+\qedsf
 
 }
 
@@ -519,7 +443,7 @@ Then for
 any real number $\beta\in [0,\pi]$,
 there is a unique point $C_\beta$ such that $BC_\beta=r$
 and $\measuredangle ABC_\beta=\beta$.
-Moreover, the map $\beta\mapsto C_\beta$ 
+Moreover, $\beta\mapsto C_\beta$ 
 is a continuous map from $[0,\pi]$ to the plane.
 \end{thm}
 
@@ -529,7 +453,7 @@ The existence and uniqueness of $C_\beta$ follows from Axiom~\ref{def:birkhoff-a
 Note that if $\beta_1\ne\beta_2$, then
 $$C_{\beta_1}C_{\beta_2}=s(r,|\beta_1-\beta_2|).$$
 
-Therefore, Proposition~\ref{prop:f(r,a)} implies that  the map $\beta\mapsto C_\beta$ is continuous.
+By Proposition~\ref{prop:f(r,a)}, the map $\beta\mapsto C_\beta$ is continuous.
 \qeds
 
 
@@ -551,8 +475,8 @@ Note that $b(0)=c-a$ and $b(\pi)=c+a$.
 Since $c-a\le b\le c+a$,
 by the intermediate value theorem (\ref{thm:intermidiate})
 there is $\beta_0\in[0,\pi]$ such that
-$b(\beta_0)=b$.
-Hence the result. 
+$b(\beta_0)=b$,
+hence the result. 
 \qeds
 
 %(???

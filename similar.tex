@@ -152,14 +152,10 @@ $$AC^2+BC^2=AB^2.$$
 \parit{Proof.}
 Let $D$ be the foot point of $C$ on~$(AB)$.
 
-\begin{wrapfigure}[4]{r}{44mm}
+\begin{wrapfigure}[4]{r}{40mm}
+\vskip-4mm
 \centering
-\begin{lpic}[t(-2mm),b(0mm),r(0mm),l(2mm)]{pics/pyth(1)}
-\lbl[rt]{1,0;$A$}
-\lbl[lt]{40,0;$B$}
-\lbl[b]{9,19;$C$}
-\lbl[t]{9,0;$D$}
-\end{lpic}
+\includegraphics{mppics/pic-66}
 \end{wrapfigure}
 
 According to Lemma~\ref{lem:perp<oblique},
@@ -221,21 +217,17 @@ Prove that the angle at $C$ is right.
 
 %(???
 
-\begin{wrapfigure}[7]{r}{25mm}
-\centering
-\begin{lpic}[t(-10mm),b(0mm),r(0mm),l(-0mm)]{pics/two-pairs-sim(1)}
-\lbl[b]{2,31;$A$}
-\lbl[b]{23,29.5;$B$}
-\lbl[bl]{8,24.5;$Z$}
-\lbl[lt]{6,4;$C$}
-\lbl[rb]{2,21;$X$}
-\lbl[l]{15,15;$Y$}
-\end{lpic}
-\end{wrapfigure}
-
 The proof of the Pythagorean theorem given above is a good example using the \emph{method of similar triangles}.
 To apply this method, one has to search for pairs of similar triangles and then use the proportionality of corresponding sides and/or equalities of corresponding angles.
 Finding such pairs might be tricky at first. 
+
+{
+
+\begin{wrapfigure}{r}{25mm}
+\vskip-6mm
+\centering
+\includegraphics{mppics/pic-68}
+\end{wrapfigure}
 
 
 \begin{thm}{Exercise}\label{ex:two-pairs-sim}
@@ -244,6 +236,8 @@ Assume $\measuredangle CAY\z\equiv\measuredangle XBC$.
 Find four pairs of similar triangles with these six points as the vertexes
 and prove their similarity.
 \end{thm}
+
+}
 
 \section*{Ptolemy's inequality}
 \addtocontents{toc}{Ptolemy's inequality.}
@@ -268,19 +262,13 @@ This proof is given as an illustration --- it will not be used further in the se
 
 \begin{wrapfigure}{r}{33mm}
 \centering
-\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(-0mm)]{pics/ptolemy-inq(1)}
-\lbl[b]{2,27.5;$A$}
-\lbl[t]{2,0;$B$}
-\lbl[t]{30,7;$C$}
-\lbl[b]{28.5,30.5;$D$}
-\lbl[l]{14,9;$X$}
-\end{lpic}
+\includegraphics{mppics/pic-70}
 \end{wrapfigure}
 
 \parit{Proof.}
 Consider the half-line $[AX)$ such that $\measuredangle BAX=\measuredangle CAD$.
 In this case $\measuredangle XAD\z=\measuredangle BAC$ since adding $\measuredangle BAX$ or $\measuredangle CAD$ to the corresponding sides produces $\measuredangle BAD$.
-Note that we can choose $X$ so that 
+We can assume that
 \[AX=\frac{AB}{AC}\cdot AD.\]
 In this case we have
 \begin{align*}\frac{AX}{AD}&=\frac{AB}{AC},

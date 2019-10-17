@@ -27,16 +27,6 @@ $$\triangle A B C\cong\triangle A' B' C'.$$
 
 \end{thm}
 
-\begin{wrapfigure}[7]{o}{26mm}
-\centering
-\begin{lpic}[t(-4mm),b(3mm),r(0mm),l(0mm)]{pics/AA(1)}
-\lbl[t]{1,.5;$A'$}
-\lbl[b]{10.5,29;$B'$}
-\lbl[t]{16,.5;$C'$}
-\lbl[lt]{21,.5;$C''$}
-\end{lpic}
-\end{wrapfigure}
-
 Note that for degenerate triangles the statement does not hold.
 For example, consider one triangle with sides $1$, $4$, $5$ 
 and the other with sides $2$, $3$,~$5$.
@@ -58,7 +48,11 @@ $$\begin{aligned}
 Further we assume that \ref{eq:+angles} holds; 
 the case \ref{eq:-angles} is analogous.
 
-
+\begin{wrapfigure}{o}{26mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-36}
+\end{wrapfigure}
 
 Let $C''$ be the point on the half-line $[A' C')$ such that $A' C''\z=A C$. 
 
@@ -92,16 +86,13 @@ $$\measuredangle A B C\equiv -\measuredangle B A C.$$
 Moreover, the converse holds if $\triangle A B C$ is nondegenerate.
 \end{thm}
 
-\begin{wrapfigure}{o}{29mm}
-\centering
-\begin{lpic}[t(0mm),b(0mm),r(0mm),l(2mm)]{pics/isos(1)}
-\lbl[rt]{0,1;$A$}
-\lbl[lt]{23,1;$B$}
-\lbl[b]{11.5,27;$C$}
-\end{lpic}
-\end{wrapfigure}
-
 The following proof is due to Pappus of Alexandria.
+
+\begin{wrapfigure}[10]{o}{25mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-38}
+\end{wrapfigure}
 
 \parit{Proof.}
 Note that
@@ -110,7 +101,7 @@ $$C A = C B,
 C B=C A,
 \quad
 \measuredangle A C B \equiv -\measuredangle B C A.$$
-Therefore, by Axiom~\ref{def:birkhoff-axioms:3},
+By Axiom~\ref{def:birkhoff-axioms:3},
 $$\triangle C A B\cong\triangle C B A.$$
 Applying the theorem on the signs of angles of triangles (\ref{thm:signs-of-triug}) and Axiom~\ref{def:birkhoff-axioms:3} again,
 we get that 
@@ -161,14 +152,9 @@ $$\triangle A' B' C'\cong\triangle A' B' C''.\eqlbl{eq:A'B'C'simA'B'C''}$$
 The condition \ref{eq:A'B'C'simA'B'C''} trivially holds if $C''\z=C'$.
 Thus, it remains to consider the case $C''\z\ne C'$.
 
-\begin{wrapfigure}{o}{40mm}
+\begin{wrapfigure}{o}{27mm}
 \centering
-\begin{lpic}[t(0mm),b(0mm),r(0mm),l(2mm)]{pics/SSS(1)}
-\lbl[r]{1.5,20.5;$A'$}
-\lbl[l]{35.5,20.5;$B'$}
-\lbl[b]{24,40.5;$C'$}
-\lbl[t]{24,1;$C''$}
-\end{lpic}
+\includegraphics{mppics/pic-40}
 \end{wrapfigure}
 
 Clearly, the corresponding sides of $\triangle A' B' C'$ and $\triangle A' B' C''$ are equal.
@@ -189,25 +175,21 @@ we get \ref{eq:A'B'C'simA'B'C''}.
 
 {
 
-\begin{wrapfigure}{o}{34mm}
-\centering
-\begin{lpic}[t(-4mm),b(-0mm),r(0mm),l(1mm)]{pics/isos-2(1)}
-\lbl[t]{30,1;$B$}
-\lbl[t]{1,1;$A$}
-\lbl[lb]{26,13;$A'$}
-\lbl[rb]{7,13;$B'$}
-\lbl[b]{16,28.5;$C$}
-\end{lpic}
-\end{wrapfigure}
-
 \begin{thm}{Advanced exercise}\label{ex:SMS}
 Let $M$ be the midpoint of the side $[A B]$ of $\triangle A B C$ and
 $M'$ be the midpoint of the side $[A' B']$ of $\triangle A' B' C'$.
 Assume $C' A'=C A$, $C' B'= C B$, and $C' M'\z= C M$.
-Prove that 
+Prove that
+
 \[\triangle A' B' C'\z\cong\triangle A B C.\]
 
 \end{thm}
+
+\begin{wrapfigure}[4]{r}{26mm}
+\vskip-8mm
+\centering
+\includegraphics{mppics/pic-42}
+\end{wrapfigure}
 
 \begin{thm}{Exercise}\label{ex:isos-sides}
 Let $\triangle A B C$ be an isosceles triangle with the base $[A B]$.
@@ -260,16 +242,10 @@ that is, there are two nondegenerate triangles $ABC$ and $A'B'C'$ such that
 \[AB=A'B',\quad BC=B'C',\quad \measuredangle BAC\equiv\pm \measuredangle B'A'C',\]
 but $\triangle ABC\not\cong\triangle A'B'C'$ and moreover $AC\ne A'C'$.
 
-\begin{wrapfigure}{r}{55mm}
+\begin{wrapfigure}{r}{35mm}
+\vskip-6mm
 \centering
-\begin{lpic}[t(-4mm),b(-0mm),r(0mm),l(1mm)]{pics/ASS(1)}
-\lbl[t]{2,0;$A$}
-\lbl[lb]{22.5,16;$B$}
-\lbl[t]{17,0;$C$}
-\lbl[t]{27,0;$A'$}
-\lbl[lb]{48.5,16;$B'$}
-\lbl[t]{52,0;$C'$}
-\end{lpic}
+\includegraphics{mppics/pic-44}
 \end{wrapfigure}
 
 We will not use this negative statement in the sequel and therefore there is no need to prove it formally.

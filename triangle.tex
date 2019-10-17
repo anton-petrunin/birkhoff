@@ -18,16 +18,9 @@ It is the center of the \index{circumcircle}\emph{circumcircle} of the triangle;
 that is, the circle which passes thru all three vertices of the triangle.
 The circumcenter of the triangle is usually denoted by~$O$.
 
-\begin{wrapfigure}{o}{25mm}
+\begin{wrapfigure}{o}{28mm}
 \centering
-\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/circum(1)}
-\lbl[tr]{0.5,0;$B$}
-\lbl[b]{14,33;$A$}
-\lbl[tl]{23,0;$C$}
-\lbl[t]{11.5,12;$O$}
-\lbl[b]{3,19,-30;$\ell$}
-\lbl[b]{22,18,17;$m$}
-\end{lpic}
+\includegraphics{mppics/pic-102}
 \end{wrapfigure}
 
 
@@ -72,27 +65,16 @@ The three altitudes of any nondegenerate triangle intersect in a single point.
 The point of intersection of altitudes is called \index{orthocenter}\emph{orthocenter}; 
 it is usually denoted by~$H$.
 
-
-\parit{Proof.}
-Let $\triangle A B C$ be nondegenerate.
-
 {
 
 \begin{wrapfigure}{o}{34mm}
+\vskip-4mm
 \centering
-\begin{lpic}[t(-2mm),b(0mm),r(-0mm),l(0mm)]{pics/median-triangle(1)}
-\lbl[tr]{3,24;$B'$}
-\lbl[tr]{6.5,14;$A$}
-\lbl[tl]{27,24;$A'$}
-\lbl[tl]{20.5,14;$B$}
-\lbl[b]{15.5,27.5;$C$}
-\lbl[r]{11,4;$C'$}
-\lbl[b]{2.5,30.5,-60;$\ell$}
-\lbl[b]{30,31,50;$m$}
-\lbl[b]{32,26.4;$n$}
-\end{lpic}
+\includegraphics{mppics/pic-104}
 \end{wrapfigure}
 
+\parit{Proof.}
+Fix a nondegenerate triangle $A B C$.
 Consider three lines $\ell$, $m$, and $n$
 such that 
 \begin{align*}
@@ -154,55 +136,38 @@ Moreover, the point of intersection divides each median in the ratio 2:1.
 
 The point of intersection of medians is called the \index{centroid}\emph{centroid} of the triangle; 
 it is usually denoted by~$M$.
+In the proof we will apply exercises \ref{ex:chevinas} and \ref{ex:smililar+parallel}; their complete solution are given in the hits.
 
 \parit{Proof.}
 Consider a nondegenerate triangle $A B C$.
 Let $[A A']$ and $[B B']$ be its medians.
-
 According to Exercise~\ref{ex:chevinas}, 
-$[A A']$ and $[B B']$ are intersecting. 
-Let us denote the point of intersection by $M$.
+$[A A']$ and $[B B']$ have a point of intersection;
+denote it by $M$.
 
-By SAS, $\triangle B' A' C\z\sim \triangle A B C$ and $A' B'=\tfrac12\cdot A B$.
-In particular, 
-$\measuredangle A B C= \measuredangle B' A' C$.
-
-\begin{wrapfigure}{o}{28mm}
+\begin{wrapfigure}{o}{34mm}
+\vskip-4mm
 \centering
-\begin{lpic}[t(2mm),b(2mm),r(0mm),l(1mm)]{pics/medians(1)}
-\lbl[tr]{1,1;$A$}
-\lbl[l]{15,23;$A'$}
-\lbl[t]{24,1;$B$}
-\lbl[r]{3,23;$B'$}
-\lbl[b]{6,45;$C$}
-\lbl[t]{10,13;$M$}
-\end{lpic}
+\includegraphics{mppics/pic-106}
 \end{wrapfigure}
 
-Note that $(A B)\z\parallel (A' B')$.
-Indeed, since $A'$ lies between $B$ and $C$,
-we have that $\measuredangle BA'B'+\measuredangle B'A'C\z=\pi$.
-Therefore, 
-$$\measuredangle B'A'B+\measuredangle A'BA=\pi;$$
-it remains to apply the transversal property (\ref{thm:parallel-2}).
+Draw a line $\ell$ thru $A'$ parallel to $(BB')$.
+Applying Exercise~\ref{ex:smililar+parallel} for $\triangle BB'C$ and $\ell$, we get that $\ell$ cross $[B'C]$ at some point $X$ and
+\[\frac{CX}{CB'}=\frac{CA'}{CB}=\frac12;\]
+that is, $X$ is the midpoint of $[CB']$.
 
-Note that $A'$ and $A$ lie on opposite sides from~$(BB')$.
-Therefore, by the transversal property (\ref{thm:parallel-2}),
-we get that
-$$\measuredangle B'A'M=\measuredangle BAM.$$
-The same way we get that
-$$\measuredangle A'B'M=\measuredangle ABM.$$
-By AA condition,
-$\triangle A B M\sim\triangle A' B' M$.
-Since $A' B'=\tfrac12\cdot A B$, 
-we have
-$$\frac{A' M}{A M}=\frac{B' M}{B M}=\frac12;$$
-that is, $M$ divides medians $[A A']$ and $[B B']$ in ratio 2:1.
+Since $B'$ is the midpoint of $[AC]$ and $X$ is the midpoint of $[B'C]$, we get that 
+\[\frac{AB'}{AX}=\frac23.\]
 
-Note that $M$ is a unique point on $[B B']$ 
-such that $$\frac{B' M}{B M}=\frac12.$$
-Repeating the same argument for vertices $B$ and $C$ we get that all medians
-$[C C']$ and $[B B']$ intersect at~$M$.\qeds
+Applying Exercise~\ref{ex:smililar+parallel} for $\triangle XA'A$ and the line $(BB')$, we get that 
+\[\frac{AM}{AA'}=\frac{AB'}{AX}=\frac23;\eqlbl{eq:2/3}\]
+that is, $M$ divides $[AA']$ in the ratio 2:1.
+
+Note that \ref{eq:2/3} uniquely defines $M$ on $[AA']$.
+Repeating the same argument for medians $[AA']$ and $[CC']$, we get that they intersect at~$M$ as well,
+hence the result.
+\qeds
+
 
 \begin{thm}{Exercise}\label{ex:midle}
 Let $\square ABCD$ be a nondegenerate quadrilateral
@@ -222,16 +187,9 @@ or line $(BX)$ is the \index{bisector!angle bisector}\emph{bisector} of $\angle 
 If $\measuredangle A B X\equiv\pi-\measuredangle C B X$, then the line $(BX)$ is called the \index{bisector!external bisector}\emph{external bisector} of $\angle ABC$.
 
 
-\begin{wrapfigure}[9]{o}{39mm}
+\begin{wrapfigure}{o}{39mm}
 \centering
-\begin{lpic}[t(-2mm),b(0mm),r(0mm),l(1mm)]{pics/bisectors(1)}
-\lbl[tr]{30,5;$A$}
-\lbl[rb]{9,10;$B$}
-\lbl[br]{31,29;$C$}
-\lbl[b]{30,16.7,17.5;bisector}
-\lbl[b]{6.3,26.5,-72.5;external} 
-\lbl[t]{4.7,26,-72.5;bisector}
-\end{lpic}
+\includegraphics{mppics/pic-108}
 \end{wrapfigure}
 
 If $\measuredangle ABA'=\pi$;

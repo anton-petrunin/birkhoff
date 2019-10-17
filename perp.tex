@@ -12,10 +12,10 @@
 \item If $|\measuredangle A O B|>\tfrac\pi2$, we say that $\angle A O B$ is \index{angle!acute and obtuse angles}\index{obtuse angle}\emph{obtuse}.
 \end{itemize}
 
-\begin{wrapfigure}[2]{o}{30mm}
+\begin{wrapfigure}[2]{r}{25mm}
+\vskip-25mm
 \centering
-\begin{lpic}[t(-30mm),b(0mm),r(0mm),l(2mm)]{pics/perp-notation(1)}
-\end{lpic}
+\includegraphics{mppics/pic-46}
 \end{wrapfigure}
 
 On the diagrams,
@@ -58,14 +58,9 @@ all points equidistant from $A$ and $B$ and no
 others lie on the perpendicular bisector to~$[A B]$.
 \end{thm}
 
-\begin{wrapfigure}{o}{40mm}
+\begin{wrapfigure}{o}{34mm}
 \centering
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/perp-bisect(1)}
-\lbl[t]{2,7;$A$}
-\lbl[t]{38,7;$B$}
-\lbl[tl]{20.5,7;$M$}
-\lbl[lb]{20.5,36;$P$}
-\end{lpic}
+\includegraphics{mppics/pic-48}
 \end{wrapfigure}
 
 \parit{Proof.} Let $M$ be the midpoint of~$[A B]$.
@@ -128,36 +123,39 @@ Show that
 There is one and only one line which passes thru a given point $P$ and is perpendicular to a given line~$\ell$.
 \end{thm}
 
-
-{
-
-\begin{wrapfigure}{o}{36mm}
-\centering
-\begin{lpic}[t(-0mm),b(-3mm),r(0mm),l(0mm)]{pics/perp(1)}
-\lbl[rb]{1.5,18;$A$}
-\lbl[lb]{33,18;$B$}
-\lbl[t]{15,16;$\ell$}
-\lbl[lb]{23,33;$P$}
-\lbl[lt]{23,2;$P'$}
-\end{lpic}
-\end{wrapfigure}
-
 According to the above theorem, 
 there is a unique point $Q\in\ell$ such that $(QP)\perp\ell$.
 This point $Q$ is called the \index{foot point}\emph{foot point} of $P$ on~$\ell$. 
+
+
+{
+
+\begin{wrapfigure}{o}{30mm}
+\vskip-6mm
+\centering
+\includegraphics{mppics/pic-50}
+\end{wrapfigure}
 
 \parit{Proof.} 
 If $P\in\ell$, then both, existence and uniqueness, follow from Axiom~\ref{def:birkhoff-axioms:2}.
 
 \parit{Existence for $P\not\in\ell$.} 
 Let $A$ and $B$ be two distinct points of~$\ell$. 
-Choose $P'$ so that $AP'\z=AP$ and $\measuredangle P' A B\equiv -\measuredangle P A B$.
+Choose $P'$ so that $AP'\z=AP$ and $\measuredangle  BAP' \equiv -\measuredangle   BAP$.
 According to Axiom~\ref{def:birkhoff-axioms:3}, $\triangle A P' B\z\cong\triangle A P B$.
-Therefore, $A P= A P'$ and $B P= B P'$.
+In particular, $A P= A P'$ and $B P= B P'$.
 
+}
 
 According to Theorem~\ref{thm:perp-bisect}, $A$ and $B$ lie on the perpendicular bisector to~$[P P']$.
 In particular, $(P P')\perp (A B)=\ell$.
+
+{
+
+\begin{wrapfigure}{r}{44mm}
+\centering
+\includegraphics{mppics/pic-52}
+\end{wrapfigure}
 
 \parit{Uniqueness for $P\not\in\ell$.} 
 From above we can choose a point $P'$ in such a way that $\ell$ forms the perpendicular bisector to~$[PP']$.
@@ -165,22 +163,6 @@ From above we can choose a point $P'$ in such a way that $\ell$ forms the perpen
 Assume $m\perp \ell$ and $m\ni P$.
 Then $m$ is a perpendicular bisector to some segment $[Q Q']$ of $\ell$;
 in particular, $P Q= P Q'$.
-
-}
-
-{
-
-\begin{wrapfigure}{o}{36mm}
-\centering
-\begin{lpic}[t(-2mm),b(-0mm),r(0mm),l(0mm)]{pics/perp-unique(1)}
-\lbl[rb]{2,16;$Q$}
-\lbl[lb]{33,16;$Q'$}
-\lbl[lb]{18.5,28;$P$}
-\lbl[lt]{18.5,2;$P'$}
-\lbl[t]{14,14;$\ell$}
-\lbl[b]{17,20,90;$m$}
-\end{lpic}
-\end{wrapfigure}
 
 Since $\ell$ is the perpendicular bisector to $[P P']$,
 we get that $PQ= P'Q$ and $PQ' \z= P'Q'$.
@@ -220,14 +202,11 @@ By Corollary~\ref{cor:degenerate=pi}, $\measuredangle BAP\z=0$ or~$\pi$.
 Hence the statement follows.
 
 {
-\begin{wrapfigure}{o}{43mm}
+
+\begin{wrapfigure}{o}{37mm}
+\vskip-2mm
 \centering
-\begin{lpic}[t(-4mm),b(8mm),r(0mm),l(0mm)]{pics/reflection(1)}
-\lbl[rb]{2,24;$A$}
-\lbl[lb]{39,24;$B$}
-\lbl[lb]{24.5,43.5;$P$}
-\lbl[lt]{24.5,2.5;$P'$}
-\end{lpic}
+\includegraphics{mppics/pic-54}
 \end{wrapfigure}
 
 If $P\notin (AB)$, then~$P'\ne P$.
@@ -264,23 +243,14 @@ In particular, any reflection is a bijection.
 
 \begin{wrapfigure}{o}{33mm}
 \centering
-\begin{lpic}[t(-2mm),b(2mm),r(0mm),l(0mm)]{pics/ABPQR(1)}
-\lbl[rb]{11,22;$A$}
-\lbl[b]{27,22.5;$B$}
-\lbl[b]{16,33.5;$P$}
-\lbl[t]{16,8;$P'$}
-\lbl[b]{30,35;$Q$}
-\lbl[t]{30,7;$Q'$}
-\lbl[bl]{2,40;$R$}
-\lbl[tl]{2,2;$R'$}
-\end{lpic}
+\includegraphics{mppics/pic-56}
 \end{wrapfigure}
 
 Fix a line $(AB)$ and two points $P$ and $Q$;
 denote their reflections across $(AB)$ by $P'$ and $Q'$.
-To show that reflection is distance-preserving,
-we need to show that
-$$P'Q'=PQ.\eqlbl{eq:P'Q'=PQ}$$
+Let us show that
+$$P'Q'=PQ;\eqlbl{eq:P'Q'=PQ}$$
+that is, the reflection is distance-preserving,
 
 Without loss of generality, we may assume that the points $P$ and $Q$ are distinct from $A$ and~$B$.
 By Proposition~\ref{prop:reflection}, we get that
@@ -314,20 +284,23 @@ $$\measuredangle Q'P'R'\equiv-\measuredangle QPR.$$
 \begin{thm}{Exercise}\label{ex:3-reflections}
 Show that any motion of the plane can be presented as a 
 composition of at most three reflections across lines.
-\end{thm}
+\end{thm} %???change to a proposition
 
-Applying the exercise above 
-and Corollary~\ref{cor:reflection+angle},
-we can divide the motions of the plane in two types, 
+The motions of the plane can be divided into two types, 
 \index{direct motion}\emph{direct} 
 and 
-\index{indirect motion}\emph{indirect motions}.\label{direct motion}
+\index{indirect motion}\emph{indirect}.\label{direct motion}
 The motion $f$ is direct if 
 $$\measuredangle Q'P'R'= \measuredangle QPR$$ 
 for any $\triangle PQR$ and $P'=f(P)$, $Q'=f(Q)$ and $R'=f(R)$;
 if instead we have 
 $$\measuredangle Q'P'R'\equiv -\measuredangle QPR$$ 
 for any $\triangle PQR$, then the motion $f$ is called indirect.
+
+Indeed, by Corollary~\ref{cor:reflection+angle}, any reflection is an indirect motion.
+Applying the exercise above, any motion is a composition of reflections.
+If the number of reflections is odd then the composition indirect;
+if the number is even, then the motion is direct.
 
 \begin{thm}{Exercise}\label{ex:2-reflections}
 Let $X$ and $Y$ be the reflections of $P$ across the lines $(AB)$ and $(BC)$ correspondingly.
@@ -347,23 +320,17 @@ holds for any point $X$ on $\ell$ distinct from~$Q$.
 \end{thm}
 
 If $P$, $Q$, and $\ell$ are as above, 
-then $PQ$ is called the \label{distance!from a point to a line}\index{distance!from a point to a line}\emph{distance from $P$ to $\ell$}. 
-
-\begin{wrapfigure}[14]{o}{20mm}
-\centering
-\begin{lpic}[t(-2mm),b(0mm),r(0mm),l(0mm)]{pics/oblique(1)}
-\lbl[tl]{17,21;$X$}
-\lbl[t]{1,21;$\ell$}
-\lbl[lb]{7.5,43;$P$}
-\lbl[tl]{7,21;$Q$}
-\lbl[lt]{7.5,2;$P'$}
-\end{lpic}
-\end{wrapfigure}
+then $PQ$ is called the \label{distance!from a point to a line}\index{distance!from a point to a line}\emph{distance from $P$ to~$\ell$}. 
 
 \parit{Proof.}
 If $P\in \ell$, 
 then the result follows since $PQ=0$.
 Further we assume that $P\notin \ell$.
+
+\begin{wrapfigure}{o}{20mm}
+\centering
+\includegraphics{mppics/pic-58}
+\end{wrapfigure}
 
 Let $P'$ be the reflection of $P$ across the line~$\ell$.
 Note that $Q$ is the midpoint of $[PP']$
@@ -384,7 +351,7 @@ and hence the result: $PX>PQ$.
 \begin{thm}{Exercise}\label{ex:obtuce}
 Assume $\angle ABC$ is right or obtuse.
 Show that 
-$$AC>AB.$$
+\[AC>AB.\]
 
 \end{thm}
 
@@ -428,21 +395,15 @@ Show that the line between centers of $\Gamma$ and $\Gamma'$ forms a perpendicul
 A line and a circle can have at most two points of intersection.
 \end{thm}
 
-\parit{Proof.} Assume $A$, $B$, and $C$ are distinct points which lie on a line $\ell$ and a circle $\Gamma$ with the center~$O$.
+\begin{wrapfigure}{o}{54mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-60}
+\end{wrapfigure}
 
+\parit{Proof.} Assume $A$, $B$, and $C$ are distinct points which lie on a line $\ell$ and a circle $\Gamma$ with the center~$O$.
 Then $OA=OB=OC$; in particular, $O$ lies on the perpendicular bisectors 
 $m$ and $n$ to $[A B]$ and $[B C]$ correspondingly.
-\begin{figure}[h!]
-\centering
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/line-circ(1)}
-\lbl[t]{2,3.5;$A$}
-\lbl[t]{23,3.5;$B$}
-\lbl[t]{63,3.5;$C$}
-\lbl[b]{29,6.5;$\ell$}
-\lbl[b]{12,17,90;$m$}
-\lbl[b]{42,17,90;$n$}
-\end{lpic}
-\end{figure}
 Note that the midpoints of $[AB]$ and $[BC]$ are distinct.
 Therefore, $m$ and $n$ are distinct.
 The latter contradicts the uniqueness of the perpendicular (Theorem~\ref{perp:ex+un}).
@@ -506,14 +467,14 @@ OO'=|r-r'|.$$
 {
 
 \begin{wrapfigure}{r}{20mm}
+\vskip-8mm
 \centering
-\begin{lpic}[t(-10mm),b(0mm),r(0mm),l(1mm)]{pics/3-circ-2-point(1)}
-\end{lpic}
+\includegraphics{mppics/pic-62}
 \end{wrapfigure}
 
 \begin{thm}{Exercise}\label{ex:tangent-circles-3}
-Assume three circles intersect at two points as shown on the diagram.
-Prove that the centers of these circles lie on one line.
+Assume three circles have two points in common.
+Prove that their centers lie on one line.
 \end{thm}
 
 }
@@ -546,31 +507,23 @@ As an example, let us consider the following problem:
 Construct the midpoint of the given segment~$[AB]$.
 \end{thm}
 
-\begin{wrapfigure}{o}{31mm}
-\centering
-\begin{lpic}[t(-10mm),b(0mm),r(0mm),l(1mm)]{pics/constr-perp-bisect(1)}
-\lbl[b]{4.3,28.5;$A$}
-\lbl[t]{26,12;$B$}
-\lbl[t]{26,35;$P$}
-\lbl[b]{4.5,5;$Q$}
-\lbl[b]{14.5,22.5;$M$}
-\end{lpic}
-\end{wrapfigure}
-
 \parit{Construction.}
 \begin{enumerate}[1.]
 \item Construct the circle 
 with center at $A$ 
 which is passing thru~$B$.
-\item Construct the circle 
+ Construct the circle 
 with center at $B$ 
 which is passing thru~$A$.
-\item Mark both points of intersection of these circles, label them with $P$ and~$Q$.
+ Mark both points of intersection of these circles, label them with $P$ and~$Q$.
 \item Draw the line~$(PQ)$.
-\item Mark the point of intersection of $(PQ)$ and $[AB]$; this is the midpoint.
+Mark the point $M$ of intersection of $(PQ)$ and $[AB]$; this is the midpoint.
 \end{enumerate}
 
-\medskip
+\begin{figure}[h!]
+\centering
+\includegraphics{mppics/pic-64}
+\end{figure}
 
 Typically, you need to prove that the construction produces what was expected. Here is a proof for the example above.
 
