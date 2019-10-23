@@ -362,15 +362,6 @@ Since $|\measuredangle XOA|,|\measuredangle XOB|\le \pi$, we get that
 \[|\measuredangle XOA|+|\measuredangle XOB|=\pi.\]
 Hence the statement follows. 
 
-\parbf{Exercise~\ref{ex:pbisec-side}.}
-Assume $X$ and $A$ lie on the same side of~$\ell$.
-
-Note that $A$ and $B$ lie on opposite sides of~$\ell$.
-Therefore, by Corollary~\ref{cor:half-plane}, 
-$[AX]$ does not intersect $\ell$ 
-and $[BX]$ intersects $\ell$;
-let $Y$ denotes the intersection point.
-
 \begin{wrapfigure}[7]{r}{25mm}
 \centering
 \begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/pbisec-side(1)}
@@ -382,13 +373,22 @@ let $Y$ denotes the intersection point.
 \end{lpic}
 \end{wrapfigure}
 
-Note that $Y\notin [AX]$.
-By Exercise~\ref{ex:degenerate-trig},
-$$BX=AY+YX>AX.$$
+\parbf{Exercise~\ref{ex:pbisec-side}.}
+Assume $X$ and $A$ lie on the same side of~$\ell$.
+
+Note that $A$ and $B$ lie on opposite sides of~$\ell$.
+Therefore, by Corollary~\ref{cor:half-plane}, 
+$[AX]$ does not intersect $\ell$ 
+and $[BX]$ intersects $\ell$;
+let $Y$ denotes the intersection point.
+
+Note that $BX=AY+YX\ge AX$.
+Since $X\notin\ell$, by Theorem~\ref{thm:perp-bisect} we have $BX\ne BA$.
+Therefore $BX> AX$.
 
 This way we proved the ``if'' part.
-To prove the ``only if'' part, it remains to switch $A$ and $B$,
-repeat the above argument and apply Theorem~\ref{thm:perp-bisect}.
+To prove the ``only if'' part, it remains to switch $A$ and $B$ and
+repeat the above argument.
 
 \parbf{Exercise~\ref{ex:side-angle}.}
 Apply Exercise~\ref{ex:pbisec-side}, Theorem~\ref{thm:ASA}, and Exercise~\ref{ex:PP(PN)}.
@@ -845,7 +845,7 @@ any point $Z$ in the intersection $\Gamma\cap \Gamma'$ will do.
 
 \parbf{Exercise~\ref{ex:VVAA}.} 
 Note that $\measuredangle AA'B=\pm\tfrac\pi2$ and $\measuredangle AB'B=\pm\tfrac\pi2$.
-Then apply Theorem~\ref{thm:inscribed-quadrilateral}
+Then apply Corollary~\ref{cor:inscribed-quadrilateral}
 to $\square AA'BB'$.
 
 If $O$ is the center of the circle, then 
@@ -865,11 +865,23 @@ Guess the construction from the diagram.
 To prove it,
 apply Theorem~\ref{thm:orthocenter} and Corollary~\ref{cor:right-angle-diameter}.
 
+\parbf{Exercise~\ref{ex:tnagents+midpoint}.}
+Denote by $O$ the center of $\Gamma$.
+Use Corollary~\ref{cor:right-angle-diameter} to show that the points lie on the circle with diameter $[PO]$.
+
 \parbf{Exercise~\ref{ex:two-chords}.} Apply the transversal property (\ref{thm:parallel-2}) and the theorem on inscribed angles (\ref{thm:inscribed-angle}).
 
 \parbf{Exercise~\ref{ex:secant-circles}.}
-Apply Theorem~\ref{thm:inscribed-quadrilateral} twice for $\square ABYX$ and $\square ABY'X'$ and use the transversal property (\ref{thm:parallel-2}).
+Apply Corollary~\ref{cor:inscribed-quadrilateral} twice for $\square ABYX$ and $\square ABY'X'$ and use the transversal property (\ref{thm:parallel-2}).
 
+\parbf{Exercise~\ref{ex:a+b=c}.}
+Show that $P$ lies on the arc opposite from $ACB$;
+conclude that
+\[\measuredangle APC\z=\measuredangle CPB\z=\pm\tfrac\pi3.\]
+
+Choose a point $A'\in [PC]$ such that $PA'=PA$.
+Note that $\triangle APA'$ is equilateral.
+Prove and use that $\triangle AA'C\cong \triangle APB$. %???+PIC
 
 
 \parbf{Exercise~\ref{ex:inaccuracy}.}
@@ -923,11 +935,11 @@ Conclude that
 $2\cdot \measuredangle CXY\equiv 2\cdot \measuredangle BXZ$
 and hence $X$, $Y$, and $Z$ lie on one line.
 
-\parbf{Exercise~\ref{ex:arc-tan-straight}.}
-By Theorem~\ref{thm:3sum},
-$$\measuredangle ABC+\measuredangle BCA+\measuredangle CAB\equiv \pi.$$
-It remains to apply
-Proposition~\ref{prop:arc(angle=tan)} twice.
+%\parbf{Exercise~\ref{ex:arc-tan-straight}.}
+%By Theorem~\ref{thm:3sum},
+%$$\measuredangle ABC+\measuredangle BCA+\measuredangle CAB\equiv \pi.$$
+%It remains to apply
+%Proposition~\ref{prop:arc(angle=tan)} twice.
 
 \parbf{Exercise~\ref{ex:tangent-arc}.}
 If $C\in (AX)$, then the arc is the line segment $[AC]$ or the union of two half-lines in $(AX)$ with vertices at $A$ and~$C$.
@@ -942,29 +954,28 @@ Note that the circle with center $O$ passing thru $A$ is also passing thru $C$ a
 
 Note that one the two arcs with endpoints $A$ and $C$ is tangent to~$[AX)$.
 
-The uniqueness follow from the propositions \ref{prop:arc(angle=angle)}
-and \ref{prop:arc(angle=tan)}.
+The uniqueness follow from \ref{prop:arc(angle=tan)}.
 
 \parbf{Exercise~\ref{ex:tangent-lim}.} Use \ref{prop:arc(angle=tan)} and \ref{thm:3sum} to show that 
 \[\measuredangle XAY=\measuredangle ACY.\]
 By Axiom~\ref{def:birkhoff-axioms:2c}, $\measuredangle ACY\to 0$ as $AY\to 0$;
 hence the result.
 
-\begin{wrapfigure}{r}{35mm}
-\centering
-\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/3x120(1)}
-\end{lpic}
-\end{wrapfigure}
-
 \parbf{Exercise~\ref{ex:two-arcs}.} 
 Apply Proposition~\ref{prop:arc(angle=tan)} twice.
 
 (Alternatively, apply Corollary~\ref{cor:reflection+angle} for the reflection across the perpendicular bisector of $[AC]$.)
 
+\begin{wrapfigure}{r}{35mm}
+\centering
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/3x120(1)}
+\end{lpic}
+\end{wrapfigure}
+
+
+
 \parbf{Exercise~\ref{ex:3x120}.} Guess the construction from the diagram.
 To show that it produces the needed point, apply Theorem~\ref{thm:inscribed-angle}.
-
-
 
 %\subsection*{Chapter~\ref{chap:inversion}}
 \refstepcounter{chapter}
@@ -1154,7 +1165,7 @@ $BOC$,
 $COD$, 
 $DOA$. 
 
-\textit{(Note that in the Euclidean plane the statement follows from Theorem~\ref{thm:inscribed-quadrilateral} and Exercise~\ref{ex:quadrilateral},
+\textit{(Note that in the Euclidean plane the statement follows from Corollary~\ref{cor:inscribed-quadrilateral} and Exercise~\ref{ex:quadrilateral},
 but one cannot use these statements in the neutral plane.)}
 
 \parbf{Exercise~\ref{ex:parallel-abs}.}

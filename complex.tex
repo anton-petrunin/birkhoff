@@ -124,7 +124,7 @@ Show that $|v\cdot w|=|v|\cdot |w|$ for any $v,w\in\mathbb{C}$.
 
 Note that 
 if $Z$ and $W$ are points in the Euclidean plane, $z$ and $w$ are their complex coordinates, then
-$$ZW=|z-w|.$$
+$$ZW=|z-w|.\eqlbl{eq:C-dist}$$
 The triangle inequality for the points with complex coordinates $0$, $v$, and $v+w$ implies that
 \[|v+w|\le |v|+|w|\]
 for any $v,w\in\mathbb{C}$;
@@ -263,7 +263,7 @@ Show that
 
 
 
-The following theorem is a reformulation of Theorem~\ref{thm:inscribed-quadrilateral} which uses complex coordinates.
+The following theorem is a reformulation of Corollary~\ref{cor:inscribed-quadrilateral} which uses complex coordinates.
 
 
 \begin{thm}{Theorem}\label{thm:inscribed-quadrilateral-C}
@@ -285,7 +285,7 @@ Observe that the complex number $z\ne 0$ is real if and only if $\arg z=0$ or $\
 in other words, $2\cdot\arg z\equiv 0$.
 
 Use this observation to show that Theorem~\ref{thm:inscribed-quadrilateral-C}
-is indeed a reformulation of  Theorem~\ref{thm:inscribed-quadrilateral}.
+is indeed a reformulation of Corollary~\ref{cor:inscribed-quadrilateral}.
 \end{thm}
 
 %(???
@@ -307,11 +307,12 @@ Show that  $\triangle PMQ$ is an isosceles right triangle.
 Choose the complex coordinates so that $O$ is the origin;
 denote by $v, w, p, q, m$ the complex coordinates of the corresponding points.
 
-Note that 
+Since $\triangle OPV$ and $\triangle OQW$ are isosceles and $\measuredangle VPO=\measuredangle OQW=\tfrac\pi2$,
+\ref{eq:C-dist} and \ref{eq:angle-arg} imply that
 \begin{align*}
-v&=(1+i)\cdot p,
+v-p&=i\cdot p,
 &
-w&=(1-i)\cdot q.
+q-w&=i\cdot q.
 \end{align*}
 
 \begin{wrapfigure}{r}{37mm}
@@ -602,7 +603,7 @@ Note that
 \\
 &\equiv \arg(u,v;w,z).
 \end{align*}
-It makes it possible to reformulate Theorem~\ref{lem:inverse-4-angle} using the complex coordinates
+These equations make it possible to reformulate Theorem~\ref{lem:inverse-4-angle} using the complex coordinates
 the following way:
 
 \begin{thm}{Theorem}\label{lem:inverse-4-angle-C}
@@ -616,7 +617,7 @@ $$(u',v';w',z')=\overline{(u,v;w,z)}.$$
 \end{thm}
 
 The following exercise is a generalization of the theorem above.
-It admits a short and simple solution which uses Proposition~\ref{prop:mob-comp}.
+It has a short solution using Proposition~\ref{prop:mob-comp}.
 
 \begin{thm}{Exercise}\label{ex:C-cross-ratio}
 Show that 
@@ -635,7 +636,7 @@ $$
 \addtocontents{toc}{Schwarz--Pick theorem.}
 The following theorem shows 
 that the metric in the conformal disc model naturally appears in other branches of mathematics.
-We do not give a proof, but it can be found in any textbook on geometric complex analysis.
+We do not give its proof, but it can be found in any textbook on geometric complex analysis.
 
 Let $\mathbb{D}$ denotes the unit disc in the complex plane centered at~$0$;
 that is, a complex number $z$
@@ -664,7 +665,7 @@ In this case $f$ is a fractional linear transformation as well as a motion of th
 \begin{thm}{Exercise}\label{ex:schwarz-moebius}
 Show that if a fractional linear transformation $f$ appears in the equality case of Schwarz--Pick theorem, then it can be written as 
 \[f(z)=\frac{v\cdot z+\bar w}{w\cdot z+\bar v}.\]
-where $|w|<|v|$.
+where $v$ and $w$ are complex constants such that $|v|>|w|$.
 \end{thm}
 
 

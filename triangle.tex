@@ -216,15 +216,9 @@ $$\frac{AB}{AC}=\frac{DB}{DC}.
 \end{thm}
 
 \begin{wrapfigure}{o}{28mm}
+\vskip-6mm
 \centering
-\begin{lpic}[t(-6mm),b(0mm),r(0mm),l(1mm)]{pics/angle-bisect-ratio-new(1)}
-\lbl[br]{14,36;$A$}
-\lbl[lt]{24.5,22;$B$}
-\lbl[rt]{0.5,22;$C$}
-\lbl[tl]{14,21.5;$D$}
-\lbl[r]{10,7;$E$}
-\lbl[l]{16,3;$\ell$}
-\end{lpic}
+\includegraphics{mppics/pic-110}
 \end{wrapfigure}
 
 \parit{Proof.}
@@ -237,7 +231,7 @@ Also note that $B$ and $C$ lie on opposite sides of~$(AD)$.
 Therefore, by the transversal property (\ref{thm:parallel-2}),
 $$\measuredangle BAD=\measuredangle CED.\eqlbl{eq:<BAD=<CED}$$
 
-Further, note that the angles $ADB$ and $EDC$ are vertical; in particular, by \ref{prop:vert} 
+Further, the angles $ADB$ and $EDC$ are vertical; in particular, by \ref{prop:vert} 
 $$\measuredangle ADB=\measuredangle EDC.$$
 
 By the AA similarity condition, 
@@ -273,36 +267,26 @@ Then a point $X$ lies on the bisector or external bisector of $\angle ABC$
 if and only if $X$ is equidistant from the lines $(AB)$ and $(BC)$.
 \end{thm}
 
+
 \parit{Proof.}
 We can assume that $X$ does not lie on the union of $(AB)$ and $(BC)$.
 Otherwise the distance to one of the lines vanish;
 in this case $X=B$ is the only point equidistant from the two lines.
-
-{
-
-\begin{wrapfigure}{o}{26mm}
-\centering
-\begin{lpic}[t(-3mm),b(0mm),r(0mm),l(1mm)]{pics/angle-bisect-lemma(1)}
-\lbl[bl]{23,11;$A$}
-\lbl[br]{1,18;$B$}
-\lbl[rb]{21,36;$C$}
-%\lbl[t]{13.5,26;$Z$}
-\lbl[l]{21,22;$X$}
-%\lbl[br]{16,13;$Y$}
-\lbl[t]{14,0;$Y$}
-\lbl[rb]{8,35.5;$Z$}
-\end{lpic}
-\end{wrapfigure}
 
 Let $Y$ and $Z$ be the reflections of $X$ across $(AB)$ and $(BC)$ correspondingly.
 Note that 
 \[Y\ne Z.\]
 Otherwise both lines $(AB)$ and $(BC)$ are perpendicular bisectors of $[XY]$, that is, $(AB)=(BC)$ which is impossible since $\triangle ABC$ is not degenerate.
 
+{
+
+\begin{wrapfigure}{o}{22mm}
+\centering
+\includegraphics{mppics/pic-112}
+\end{wrapfigure}
+
 By Proposition~\ref{prop:reflection},
 \[XB=YB=ZB.\]
-
-
 
 Note that $X$ is equidistant from $(AB)$ and $(BC)$ if and only if $XY\z=XZ$.
 Applying SSS and then SAS, we get that
@@ -315,7 +299,7 @@ XY&=XZ.
 \\
 &\hskip0.4mm\Updownarrow
 \\
-\measuredangle XBY&= \pm \measuredangle BXZ.
+\measuredangle XBY&\equiv \pm \measuredangle BXZ.
 \end{aligned}
 $$
 
@@ -365,19 +349,10 @@ the \index{incircle}\emph{incircle} and its radius is called
 the \index{inradius}\emph{inradius} of the triangle.
 
 
-\begin{wrapfigure}{o}{34mm}
+\begin{wrapfigure}{o}{28mm}
+\vskip-6mm
 \centering
-\begin{lpic}[t(-0mm),b(2mm),r(0mm),l(0mm)]{pics/triangle-bisector(0.9)}
-\lbl[rt]{2,0;$A$}
-\lbl[lt]{34,0;$B$}
-\lbl[b]{24.5,56.5;$C$}
-\lbl[lb]{21,16;$I$}
-\lbl[t]{19.5,0;$Z$}
-\lbl[lb]{32.5,21;$A'$}
-\lbl[l]{33,16;$X$}
-\lbl[r]{8,18;$Y$}
-\lbl[rb]{11,23;$B'$}
-\end{lpic}
+\includegraphics{mppics/pic-114}
 \end{wrapfigure}
 
 \parit{Proof.} 
@@ -419,16 +394,11 @@ Assume that at one vertex of a nondegenerate triangle the bisector coincides wit
 Show that  the triangle is isosceles.
 \end{thm}
 
-\begin{wrapfigure}[5]{r}{26mm}
+{
+
+\begin{wrapfigure}{r}{30mm}
 \centering
-\begin{lpic}[t(-8mm),b(0mm),r(0mm),l(0mm)]{pics/incircle(1)}
-\lbl[rt]{1,1;$A$}
-\lbl[tl]{22,1;$B$}
-\lbl[b]{17,25;$C$}
-\lbl[l]{21,11;$X$}
-\lbl[rb]{8,13;$Y$}
-\lbl[t]{13.5,1;$Z$}
-\end{lpic}
+\includegraphics{mppics/pic-116}
 \end{wrapfigure}
 
 \begin{thm}{Exercise}\label{ex:2x=b+c-a}
@@ -440,6 +410,8 @@ $$AY=AZ= \tfrac12\cdot(A B+ A C- B C).$$
 
 By the definition, the vertexes of \index{triangle!orthic triangle}\index{orthic triangle}\emph{orthic triangle} are the base points of the altitudes of the given triangle.
 
+}
+
 \begin{thm}{Exercise}\label{ex:orthic-triangle}
 Prove that the orthocenter of an acute triangle coincides with the incenter of its orthic triangle.
 
@@ -448,16 +420,10 @@ What should be an analog of this statement for an obtuse triangle?
 
 
 
-\begin{wrapfigure}{r}{30mm}
+\begin{wrapfigure}{r}{38mm}
+\vskip-4mm
 \centering
-\begin{lpic}[t(-2mm),b(0mm),r(0mm),l(0mm)]{pics/bisector-parallel(1)}
-\lbl[b]{22,13;$A$}
-\lbl[t]{27,-1;$B$}
-\lbl[t]{1,-1;$C$}
-\lbl[t]{18,-1;$D$}
-\lbl[lb]{26.5,5;$E$}
-\lbl[rb]{8,5;$F$}
-\end{lpic}
+\includegraphics{mppics/pic-118}
 \end{wrapfigure}
 
 \begin{thm}{Exercise}\label{ex:bisector-parallel} 

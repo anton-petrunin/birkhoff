@@ -1,24 +1,12 @@
 \chapter{Inversion}\label{chap:inversion}
 \addtocontents{toc}{\protect\begin{quote}}
 
-
 Let $\Omega$ be the circle with center $O$ and radius~$r$.
 The \index{inversion}\emph{inversion} of a point $P$ in $\Omega$ is the point $P'\in[OP)$ such that
 $$OP\cdot OP'=r^2.$$
 In this case the circle $\Omega$  will be called the 
 \index{inversion!circle of inversion}\emph{circle of inversion} 
 and its center $O$ is called the \index{inversion!center of inversion}\emph{center of inversion}.
-
-\begin{wrapfigure}{o}{35mm}
-\centering
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/PO-Gamma-2(1)}
-\lbl[b]{3,2;$\Omega$}
-\lbl[t]{3,18;$O$}
-\lbl[tl]{14.5,18;$P$}
-\lbl[lb]{32,21;$P'$}
-\lbl[lb]{14.5,35.5;$T$}
-\end{lpic}
-\end{wrapfigure}
 
 The inverse of $O$ is undefined.
 
@@ -28,19 +16,25 @@ then $P'$ is outside
 and the other way around. 
 Further, $P=P'$ if and only if $P\in \Omega$.
 
+{
+
+\begin{wrapfigure}{r}{37mm}
+\vskip-6mm
+\centering
+\includegraphics{mppics/pic-158}
+\end{wrapfigure}
+
 Note that the inversion maps $P'$ back to~$P$.
 
 \begin{thm}{Exercise}\label{ex:constr-inversion}
-Let $P$ be a point inside of the circle $\Omega$ centered at~$O$.
-Let $T$ be a point where the perpendicular to $(OP)$ from $P$ intersects~$\Omega$.
-Let $P'$ be the point where the tangent line to $\Omega$ at $T$ intersects~$(OP)$.
+Let $\Omega$ be a circle centered at~$O$.
+Suppose that a line $(PT)$ is tangent to $\Omega$ at~$T$.
+Let $P'$ be the foot point of $T$ on $(OP)$.
 
-Show that $P'$ is the inverse of $P$ in the circle~$\Omega$.
+Show that $P'$ is the inverse of $P$ in $\Omega$.
 \end{thm}
 
-
-
-
+}
 
 \begin{thm}{Lemma}\label{lem:inversion-sim}
 Let $\Gamma$ be a circle with the center $O$.
@@ -63,17 +57,10 @@ Let $r$ be the radius of the circle of the inversion.
 
 \begin{wrapfigure}[14]{o}{32mm}
 \centering
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/inverse(1)}
-\lbl[l]{28.5,5;$A$}
-\lbl[rt]{19,7;$A'$}
-\lbl[l]{28.5,40;$B$}
-\lbl[rb]{12,19.5;$B'$}
-\lbl[rt]{7,10;$O$}
-\end{lpic}
+\includegraphics{mppics/pic-160}
 \end{wrapfigure}
 
-
-From the definition of inversion, we get that
+By the definition of inversion, 
 \begin{align*}
 OA\cdot OA'=OB\cdot OB'=r^2.
 \end{align*}
@@ -102,7 +89,6 @@ and two distinct points $P$ and $P'$
 the locus of points $X$ such that $\frac{PX}{P'X}=k$ forms a circle which is called the \index{Apollonian circle}\emph{Apollonian circle}.
 In this case $P'$ is inverse of $P$ in the Apollonian circle.
 
-
 \begin{thm}{Exercise}%
 \label{ex:incenter+inversion=orthocenter}
 Let $A'$, $B'$, and $C'$ be the images of $A$, $B$, and $C$ 
@@ -114,9 +100,6 @@ is the orthocenter of $\triangle A' B' C'$.
 \begin{thm}{Exercise}\label{ex:consturuction-of-inversion} 
 Make a ruler-and-compass construction of the inverse of a given point in a given circle.
 \end{thm}
-
-
-
 
 \section*{Cross-ratio}\index{cross-ratio}
 \addtocontents{toc}{Cross-ratio.}
@@ -196,7 +179,7 @@ summing the four identities in \ref{eq:angle=-angle}, we get that
 Hence \textit{(\ref{lem:inverse-4-angle:angle})} follows.
 
 \parit{(\ref{lem:inverse-4-angle:inscribed}).}
-Follows from \textit{(\ref{lem:inverse-4-angle:angle})} and Theorem~\ref{thm:inscribed-quadrilateral}.
+Follows from \textit{(\ref{lem:inverse-4-angle:angle})} and Corollary~\ref{cor:inscribed-quadrilateral}.
 \qeds
 
 \section*{Inversive plane and circlines}
@@ -215,17 +198,15 @@ The Euclidean plane with an added point at infinity is called the \index{plane!i
 
 We will always assume that any line and half-line contains~$\infty$. 
 
-It will be convenient to use the notion of 
+Recall that
 \index{circline}\emph{circline},
-which means {}\emph{circle or line};
-for instance we may say 
+means {}\emph{circle or line}.
+Therefore we may say 
 {}\emph{``if a circline contains $\infty$, then it is a line''} or {}\emph{``a circline which does not contain $\infty$  is a circle''}.
 
 Note that according to Theorem~\ref{thm:circumcenter}, 
 for any $\triangle ABC$ there is a unique circline which passes thru $A$, $B$, and~$C$
 (if $\triangle ABC$ is degenerate, then this is a line and if not it is a circle).
-
-
 
 \begin{thm}{Theorem}\label{thm:inverse-cline}
 In the inversive plane, inverse of a circline is a circline.
@@ -271,13 +252,11 @@ It follows that $O\in \Gamma'$.
 \qeds
 
 
-{
-\begin{wrapfigure}[4]{o}{22mm}
+
+\begin{wrapfigure}[7]{R}{37mm}
+\vskip-0mm
 \centering
-\begin{lpic}[t(-6mm),b(0mm),r(0mm),l(0mm)]{pics/Gamma-Omega(1)}
-\lbl[tl]{5,6;$Q'$}
-\lbl[t]{15.5,7.7;$Q$}
-\end{lpic}
+\includegraphics{mppics/pic-162}
 \end{wrapfigure}
 
 \begin{thm}{Exercise}\label{ex:inv-center not=center-inv}
@@ -286,12 +265,10 @@ Let $Q$ denotes the center of $\Gamma$ and $Q'$ denotes the inverse of~$Q$.
 Show that $Q'$ is not the center of~$\Gamma'$.
 \end{thm}
 
-}
+
 
 Assume that a {}\emph{circumtool} is a geometric construction tool 
 which produces a circline passing thru any three given points.
-
-
 
 \begin{thm}{Exercise}\label{ex:circumtool}
 Show that with only a circumtool,
@@ -358,17 +335,9 @@ $$ AB\cdot CD+ BC\cdot DA=AC\cdot BD.$$
 \parit{Proof.}
 Assume the points $A,B,C,D$ lie on one line in this order.
 
-\begin{wrapfigure}{o}{38mm}
+\begin{wrapfigure}{o}{39mm}
 \centering
-\begin{lpic}[t(-0mm),b(-0mm),r(0mm),l(0mm)]{pics/ptolemy-line(1)}
-\lbl[b]{4,5;$A$}
-\lbl[b]{13,5;$B$}
-\lbl[b]{24,5;$C$}
-\lbl[b]{34.5,5;$D$}
-\lbl[wt]{8,4;$x$}
-\lbl[wt]{18,4;$y$}
-\lbl[wt]{29,4;$z$}
-\end{lpic}
+\includegraphics{mppics/pic-164}
 \end{wrapfigure}
 
 Set $x\z=AB$, $y=BC$, $z\z=CD$.
@@ -377,22 +346,9 @@ $$x\cdot z+y\cdot (x+y+z)=(x+y)\cdot(y+z).$$
 Since $AC\z=x+y$, $BD=y+z$, and $DA\z=x+y+z$,
 it proves the identity.
 
-
-\begin{wrapfigure}{o}{36mm}
+\begin{wrapfigure}{o}{39mm}
 \centering
-\begin{lpic}[t(3mm),b(0mm),r(0mm),l(0mm)]{pics/ABCD-circ(1)}
-\lbl[r]{7,21;$A$}
-\lbl[brw]{13.5,25;$B$}
-\lbl[blw]{23,25;$C$}
-\lbl[l]{28,22;$D$}
-\lbl[bw]{1.5,35;$A'$}
-\lbl[bw]{13.5,35;$B'$}
-\lbl[bw]{23.5,35;$C'$}
-\lbl[bw]{34,35;$D'$}
-%\lbl[tw]{8,32;$x$}
-%\lbl[tw]{18,32;$y$}
-%\lbl[tw]{27,32;$z$}
-\end{lpic}
+\includegraphics{mppics/pic-166}
 \end{wrapfigure}
 
 It remains to consider the case when the quadrilateral $ABCD$ is inscribed in a circle, say~$\Gamma$. 
@@ -402,7 +358,7 @@ $$\frac{AB\cdot DC}{ BD\cdot CA}+ \frac{BC\cdot AD}{CA\cdot DB}=1.$$
 On the left hand side we have two cross-ratios.
 According to Theorem~\ref{lem:inverse-4-angle}\textit{\ref{lem:inverse-4-angle:cross-ratio}}, the left hand side does not change if we apply an inversion to each point.
 
-Consider an inversion in a circle centered at a point $O$ which lies on $\Gamma$ between $A$ and~$D$.
+Consider an inversion in a circle centered at a point $O$ that lies on $\Gamma$ between $A$ and~$D$.
 By 
 Theorem~\ref{thm:inverse},
 this inversion maps $\Gamma$ to a line.
@@ -411,38 +367,32 @@ This reduces the problem to the case when $A$, $B$, $C$, and $D$ lie on one line
 
 {
 
-\begin{wrapfigure}[8]{o}{34mm}
+\begin{wrapfigure}{r}{27mm}
+\vskip-4mm
 \centering
-\begin{lpic}[t(-8mm),b(0mm),r(0mm),l(0mm)]{pics/4-circles(1)}
-\end{lpic}
+\includegraphics{mppics/pic-168}
+\vskip4mm
+\includegraphics{mppics/pic-170}
 \end{wrapfigure}
+
 
 In the proof above, we rewrite Ptolemy's identity in a form which is invariant with respect to inversion 
 and then apply an inversion which makes the statement evident.
 The solution of the following exercise is based on the same idea;
 one has to apply an inversion with center at~$A$.
 
-}
+
 
 \begin{thm}{Exercise}\label{ex:4-circles}
 Assume that four circles are mutually tangent to each other.
-Show that there is four (among six) of their points of tangency lie on one circline.
+Show that four (among six) of their points of tangency lie on one circline.
 \end{thm}
 
-{
-
-\begin{wrapfigure}[8]{r}{37mm}
-\centering
-\begin{lpic}[t(-10mm),b(0mm),r(0mm),l(0mm)]{pics/akopyan(1)}
-\lbl[l]{15.5,16;$A$}
-\lbl[tl]{12.5,2;$B$}
-\end{lpic}
-\end{wrapfigure}
 
 \begin{thm}{Advanced exercise}\label{ex:inverse}
 Assume that three circles tangent to each other and to two parallel lines as shown on the picture.
 
-Show that the line passing thru $A$ and $B$ is also tangent to the two circles at~$A$.
+Show that the line passing thru $A$ and $B$ is also tangent to two circles at~$A$.
 \end{thm}
 
 }
@@ -475,14 +425,10 @@ Assume $\Gamma$ and $\Omega$ are distinct circles.
 Then $\Omega\perp\Gamma$ if and only if the circle $\Gamma$ coincides with its inversion in~$\Omega$.
 \end{thm}
 
-\begin{wrapfigure}{o}{29mm}
+\begin{wrapfigure}[7]{o}{29mm}
+\vskip-4mm
 \centering
-\begin{lpic}[t(-5mm),b(-3mm),r(0mm),l(0mm)]{pics/perp-circles(1)}
-\lbl[tl]{20,8.5;$X$}
-\lbl[br]{12.5,20.5;$Y$}
-\lbl[lb]{20.5,18;$Q$}
-\lbl[tr]{9.5,9;$O$}
-\end{lpic}
+\includegraphics{mppics/pic-172}
 \end{wrapfigure}
 
 \parit{Proof.} 
@@ -531,7 +477,6 @@ It is convenient to define the
 as the reflection across $\ell$.
 This way we can talk about \index{inversion!inversion in the circline}\emph{inversion in an arbitrary circline}.
 
-
 \begin{thm}{Corollary}\label{cor:perp-inverse-clines}
 Let $\Omega$  and $\Gamma$ be distinct circlines in the inversive plane.
 Then
@@ -548,7 +493,6 @@ If $\Gamma$ is a line,
 then the statement follows from Theorem~\ref{thm:inverse}.
 \qeds
 
-
 \begin{thm}{Corollary}\label{cor:perp-inverse}
 Let $P$ and $P'$ be two distinct points
 such that $P'$ is the inverse of $P$ in the circle~$\Omega$.
@@ -560,7 +504,6 @@ Then $\Gamma\perp\Omega$.
 Without loss of generality, we may assume that $P$ is inside and $P'$ is outside~$\Omega$.
 By Theorem~\ref{thm:abc}, $\Gamma$ intersects $\Omega$.
 Let $A$ denotes a point of intersection.
-
 
 Let $\Gamma'$ denotes the inverse of~$\Gamma$.
 Since $A$ is a self-inverse, the points $A$, $P$, and $P'$ lie on~$\Gamma'$.
@@ -636,7 +579,7 @@ In the inversive plane, the inverse of an arc is an arc.
 Consider four distinct points $A$, $B$, $C$, and $D$; 
 let $A'$, $B'$, $C'$, and $D'$  be their inverses.
 We need to show that $D$ lies on the arc $ABC$ if and only if $D'$ lies on the arc $A'B'C'$.
-According to Proposition~\ref{prop:arc(angle=angle)},
+According to Proposition~\ref{prop:arcs},
 the latter is equivalent to the following:
 $$\measuredangle ADC= \measuredangle ABC
 \quad
@@ -648,26 +591,13 @@ The latter follows from Theorem~\ref{lem:inverse-4-angle}\textit{\ref{lem:invers
 
 The following theorem states that the angle between arcs changes only its sign after the inversion.
 
-\begin{figure}[h!]
-\centering
-\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/angle-inversion(1)}
-\lbl[rb]{48,32;$A$}
-\lbl[lt]{40,29;$A'$}
-\lbl[tl]{58,9;$B_1$}
-\lbl[lt]{35,21;$B_1'$}
-\lbl[r]{37,1;$C_1$}
-\lbl[rt]{31.5,11;$C_1'$}
-\lbl[b]{67,27;$X_1$}
-\lbl[br]{23,13;$Y_1$}
+{
 
-\lbl[lb]{49,42;$B_2$}
-\lbl[b]{42,42;$C_2$}
-\lbl[r]{35.5,34;$B_2'$}
-\lbl[rb]{38,38;$C_2'$}
-\lbl[tl]{66,41;$X_2$}
-\lbl[t]{9,33;$Y_2$}
-\end{lpic}
-\end{figure}
+\begin{wrapfigure}{r}{55mm}
+\vskip-6mm
+\centering
+\includegraphics{mppics/pic-174}
+\end{wrapfigure}
 
 \begin{thm}{Theorem}\label{thm:angle-inversion}
 Let $AB_1C_1$, $AB_2C_2$ be two arcs in the inversive plane,
@@ -680,24 +610,25 @@ $$\measuredangle X_1AX_2\equiv-\measuredangle Y_1A'Y_2.$$
 
 \end{thm}
 
-%(???
+}
+
+{
+
+\begin{wrapfigure}[6]{o}{20mm}
+\vskip-6mm
+\centering
+\includegraphics{mppics/pic-176}
+\end{wrapfigure}
 
 The \index{angle between arcs}\emph{angle between arcs} can be defined as the angle between its tangent half-lines at the common endpoint.
 Therefore under inversion, the angles between arcs are preserved up to sign.
 
-\begin{wrapfigure}{o}{25mm}
-\centering
-\begin{lpic}[t(-5mm),b(0mm),r(0mm),l(3mm)]{pics/PAP(1)}
-\lbl[tr]{1.5,7;$P_1$}
-\lbl[t]{7,-0.5;$A$}
-\lbl[tl]{16.5,3;$P_2$}
-\end{lpic}
-\end{wrapfigure}
 
 From Exercise~\ref{ex:tangent}, it follows that the angle between arcs with common endpoint $A$ is the limit of $\measuredangle P_1AP_2$ where $P_1$ and $P_2$ are points approaching $A$ along the corresponding arcs. 
 This observation can be used to define angle between a pair of curves emerging from one point.
 It turns out that under inversion, angles between curves are also preserved up to sign.
-%???)
+
+}
 
 \parit{Proof.}
 Applying to Proposition~\ref{prop:arc(angle=tan)},
@@ -737,24 +668,17 @@ Then $P'$ is the inverse  of $Q'$ in~$\Gamma'$.
 
 %???)
 
-\begin{wrapfigure}{r}{48mm}
+\begin{wrapfigure}{r}{45mm}
+\vskip-4mm
 \centering
-\begin{lpic}[t(-5mm),b(-0mm),r(0mm),l(0mm)]{pics/inversion-of-inversion(1)}
-\lbl[lb]{20.5,28.5;$P$}
-\lbl[t]{17,17;$Q$}
-\lbl[rb]{37.5,26;$P'$}
-\lbl[t]{38,16;$Q'$}
-\lbl[lb]{4,7;$\Gamma$}
-\lbl[rb]{46,7;$\Gamma'$}
-\lbl[bl]{29,0;$\Omega$}
-\end{lpic}
+\includegraphics{mppics/pic-178}
 \end{wrapfigure}
 
 \parit{Proof.}
 If $P=Q$, then $P'=Q'\z\in\Gamma'$. 
 Therefore, $P'$ is the inverse of $Q'$ in~$\Gamma'$.
 
-It remains to consider the case $P\ne Q$. 
+It remains to consider the case $P\z\ne Q$. 
 Let $\Delta_1$ and $\Delta_2$ be two distinct circles that intersect at $P$ and~$Q$.
 According to Corollary~\ref{cor:perp-inverse}, 
 $\Delta_1\perp\Gamma$ and $\Delta_2\perp\Gamma$.
@@ -762,9 +686,7 @@ $\Delta_1\perp\Gamma$ and $\Delta_2\perp\Gamma$.
 Let $\Delta_1'$ and $\Delta_2'$ denote the inverses of $\Delta_1$ and $\Delta_2$ in~$\Omega$.
 Clearly, $\Delta_1'$ meets $\Delta_2'$ at $P'$ and~$Q'$.
 
-From Theorem~\ref{thm:angle-inversion}, 
-the latter is equivalent 
-to $\Delta_1'\perp\Gamma'$ and $\Delta_2'\z\perp\Gamma'$.
+By Theorem~\ref{thm:angle-inversion},  $\Delta_1'\perp\Gamma'$ and $\Delta_2'\z\perp\Gamma'$.
 By Corollary~\ref{cor:perp-inverse-clines}, $P'$ is the inverse of $Q'$ in~$\Gamma'$.
 \qeds
 
