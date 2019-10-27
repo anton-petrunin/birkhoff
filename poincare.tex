@@ -37,16 +37,9 @@ Often we will assume that the absolute is a unit circle.
 \parbf{Hyperbolic lines.}
 The intersections of the h-plane with circlines perpendicular to the absolute are called {}\emph{hyperbolic lines} or \index{h-line}\emph{h-lines}.
 
-\begin{wrapfigure}{o}{59mm}
+\begin{wrapfigure}{o}{48mm}
 \centering
-\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(-2mm)]{pics/APQB(1)}
-\lbl[rt]{34,16;$P$}
-\lbl[r]{32,29;$Q$}
-\lbl[t]{39,10;$A$}
-\lbl[b]{38.5,36.5;$B$}
-\lbl[rb]{55,13;$\Gamma$}
-\lbl[b]{20,15;h-plane}
-\end{lpic}
+\includegraphics{mppics/pic-190}
 \end{wrapfigure}
 
 By Corollary~\ref{cor:h-line}, there is a unique h-line which passes thru the given two distinct h-points $P$ and~$Q$.
@@ -153,16 +146,10 @@ is perpendicular to the absolute.
 Moreover, $O$ is the inverse of $P$ in~$\Gamma$. 
 \end{thm}
 
-\begin{wrapfigure}[8]{o}{43mm}
+\begin{wrapfigure}[8]{o}{45mm}
+\vskip-4mm
 \centering
-\begin{lpic}[t(-8mm),b(0mm),r(0mm),l(0mm)]{pics/PO-Gamma(1)}
-%\lbl[br]{6,31.5;$\Omega$}
-\lbl[b]{40,31.5;$\Gamma$}
-\lbl[t]{18,16;$O$}
-\lbl[b]{33,14;$P$}
-\lbl[b]{40,14;$P'$}
-\lbl[b]{33,30;$T$}
-\end{lpic}
+\includegraphics{mppics/pic-192}
 \end{wrapfigure}
 
 \parit{Proof.} 
@@ -225,14 +212,10 @@ x&=\frac{e^y-1}{e^y+1}.
  
 \end{thm}
 
-\begin{wrapfigure}[8]{o}{41mm}
+\begin{wrapfigure}[6]{o}{38mm}
+\vskip-4mm
 \centering
-\begin{lpic}[t(-5mm),b(0mm),r(0mm),l(-4mm)]{pics/AOPB(1)}
-\lbl[tr]{2,20;$A$}
-\lbl[t]{22,20;$O$}
-\lbl[t]{30,20;$P$}
-\lbl[tl]{42,20;$B$}
-\end{lpic}
+\includegraphics{mppics/pic-194}
 \end{wrapfigure}
 
 \parit{Proof.}
@@ -305,29 +288,23 @@ Moreover, if $O$ is the center of the absolute, then
 
 \end{thm}
 
-\begin{wrapfigure}{o}{44mm}
-\centering
-\begin{lpic}[t(-8mm),b(-3mm),r(0mm),l(-0mm)]{pics/h-circle-3(1)}
-\lbl[t]{22,20;$O$}
-\lbl[tr]{28,15;$Q$}
-\lbl[t]{37,20;$P$}
-\lbl[b]{33,23.5;$\hat P$}
-\lbl[br]{31,29;$\Delta'_\rho$}
-\end{lpic}
-\end{wrapfigure}
-
 \parit{Proof.}
 According to Lemma~\ref{lem:O-h-dist}, 
 $OQ_h\z= \rho$ if and only if $$OQ= \hat\rho=\frac{e^\rho-1}{e^\rho+1}.$$
 Therefore, the locus of h-points $Q$ such that $OQ_h= \rho$ is a Euclidean circle, 
 denote it by $\Delta_\rho$.
 
-If $P\ne O$, applying Lemma~\ref{lem:P-->O} and the main observation (\ref{thm:main-observ})
-we get
-a circle $\Gamma$ perpendicular to the absolute such that $P$ is the inverse of $O$ in~$\Gamma$.
+\begin{wrapfigure}{o}{33mm}
+\vskip-3mm
+\centering
+\includegraphics{mppics/pic-196}
+\end{wrapfigure}
 
-Let $\Delta_\rho'$ be the inverse of $\Delta_\rho$ in~$\Gamma$.
-Since the inversion in $\Gamma$ preserves the h-distance,
+If $P\ne O$, by Lemma~\ref{lem:P-->O} and the main observation (\ref{thm:main-observ})
+ there is an inversion that maps h-plane to itself and $O\mapsto P$.
+
+Let $\Delta_\rho'$ be the inverse of $\Delta_\rho$.
+Since the inversion preserves the h-distance,
 $PQ_h=\rho$ if and only if $Q\z\in\Delta_\rho'$.
 
 According to Theorem~\ref{thm:inverse-cline}, $\Delta_\rho'$ is a Euclidean circle.
@@ -384,14 +361,12 @@ $PQ_h=QP_h$.
 Let $A$ and $B$ be ideal points of $(PQ)_h$ and
 $A,P,Q,B$ appear on the circline containing $(PQ)_h$ in the same order.
 
-\begin{wrapfigure}[8]{o}{26mm}
+{
+
+\begin{wrapfigure}{o}{33mm}
+\vskip-5mm
 \centering
-\begin{lpic}[t(-3mm),b(-2mm),r(0mm),l(0mm)]{pics/APQB-1(1)}
-\lbl[rt]{15,16;$P$}
-\lbl[rb]{14,28;$Q$}
-\lbl[tl]{21,11;$A$}
-\lbl[bl]{21,35.5;$B$}
-\end{lpic}
+\includegraphics{mppics/pic-198}
 \end{wrapfigure}
 
 Then
@@ -405,6 +380,8 @@ PQ_h
 &=QP_h.
 \end{align*}
 \qedsf
+
+}
 
 The following claim shows, in particular, that
 the triangle inequality 
@@ -433,17 +410,12 @@ According to Lemma~\ref{lem:h-circle=circle}, $\Delta$ is a Euclidean circle;
 let $\hat Q$ denotes its Euclidean center.
 Note that $\hat Q$ is the Euclidean midpoint of~$[ST]$.
 
-\begin{wrapfigure}[8]{o}{30mm}
+{
+
+\begin{wrapfigure}{o}{35mm}
+\vskip-0mm
 \centering
-\begin{lpic}[t(-4mm),b(-3mm),r(0mm),l(0mm)]{pics/h-circle-4(1)}
-\lbl[tr]{6.5,19;$P$}
-\lbl[t]{21,19;$Q$}
-\lbl[b]{18,22.5;$\hat Q$}
-\lbl[b]{17,29;$\Delta$}
-\lbl[br]{10.5,22.5;$S$}
-\lbl[bl]{26,22.5;$T$}
-\lbl[tr]{12.5,14;$R$}
-\end{lpic}
+\includegraphics{mppics/pic-200}
 \end{wrapfigure}
 
 By the Euclidean triangle inequality 
@@ -463,6 +435,8 @@ Since the function $f(x)=\ln\frac{1+x}{1-x}$ is increasing for $x\in[0,1)$,
 inequality \ref{RT>RQ} implies
 $$PT_h\ge PR_h$$
 and the equality holds if and only if $T=R$.
+
+}
 
 Finally, applying Lemma~\ref{lem:h-tiangle=} again, 
 we get that
@@ -523,8 +497,8 @@ $$\measuredangle_h P O Q+\measuredangle_h Q O R
 \parit{Proof of \ref{clm:h2a} and \ref{clm:h2b}.}
 Applying the main observation, 
 we may assume that $O$ is the center of the absolute.
-In this case, for any h-point $P\ne O$,
-$[OP)_h$ is the intersection of $[OP)$ with h-plane.
+In this case, for any h-point $P\z\ne O$, the h-half-line
+$[OP)_h$ is the intersection of the Euclidean half-line $[OP)$ with h-plane.
 Hence the claims \ref{clm:h2a} and \ref{clm:h2b} 
 follow from the corresponding axioms of the Euclidean plane.
 \qeds
@@ -609,24 +583,18 @@ $\triangle_h P Q R$ and $\triangle_h P' Q R'$ are h-congruent.
 Finally, we need to check that the Axiom~h-$\!$\ref{def:birkhoff-axioms:4} on page \pageref{def:hyperbolic-4a} holds;
 that is, we need to prove the following claim.
 
+{
+
+\begin{wrapfigure}{o}{30mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-202}
+\end{wrapfigure}
+
 \begin{thm}{Claim}
 For any h-line $\ell$ and any h-point $P\notin\ell$ there are at least two h-lines which pass thru $P$ 
 and have no points of intersection with~$\ell$.
 \end{thm}
-
-{
-
-\begin{wrapfigure}{o}{44mm}
-\centering
-\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/absolute-triangle-3(1)}
-\lbl[tl]{32,3;$A$}
-\lbl[bl]{32,39.5;$B$}
-\lbl[r]{20.5,21;$P$}
-\lbl[b]{15,10,60;$m$}
-\lbl[b]{15,34,-60;$n$}
-\lbl[l]{28,21;$\ell$}
-\end{lpic}
-\end{wrapfigure}
 
 \parit{Instead of proof.}
 Applying the main observation we can assume that $P$ is the center of the absolute.
@@ -634,13 +602,13 @@ Applying the main observation we can assume that $P$ is the center of the absolu
 The remaining part of the proof can be guessed from the picture
 \qeds
 
+}
+
 \begin{thm}{Exercise}\label{ex:3-h-lines}
 Show that in the h-plane 
 there are 3 mutually parallel h-lines 
 such that any pair of these three lines lies on one side of the remaining h-line.
 \end{thm}
-
-}
  
 \section*{Hyperbolic trigonometry}
 \addtocontents{toc}{Hyperbolic trigonometry}
@@ -696,26 +664,25 @@ hold for any real value $x$.
 Let $P$ and $Q$ be two h-poins distinct from the center of absolute.
 Denote by $P'$ and $Q'$ the inverses of $P$ and $Q$ in the absolute.
 
-\begin{wrapfigure}[20]{r}{38mm}
+\begin{wrapfigure}[20]{r}{40mm}
 \centering
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/PQPQ(1)}
-\lbl[t]{10,25;$P$}
-\lbl[t]{25,23;$Q$}
-\lbl[b]{3,36;$P'$}
-\lbl[b]{36,37;$Q'$}
-\end{lpic}
+\includegraphics{mppics/pic-204}
 \end{wrapfigure}
 
 Show that 
+\medskip
 \begin{enumerate}[(a)]
 \item\label{ex:cosh/2} 
-\[\cosh[\tfrac12\cdot PQ_h]=\sqrt{\frac{PQ'\cdot P'Q}{PP'\cdot QQ'}};\]
+$\displaystyle{\cosh[\tfrac12\cdot PQ_h]=\sqrt{\frac{PQ'\cdot P'Q}{PP'\cdot QQ'}};}$
+\medskip
 \item\label{ex:coshsinh} 
-\[\sinh[\tfrac12\cdot PQ_h]=\sqrt{\frac{PQ\cdot P'Q'}{PP'\cdot QQ'}};\]
+$\displaystyle{\sinh[\tfrac12\cdot PQ_h]=\sqrt{\frac{PQ\cdot P'Q'}{PP'\cdot QQ'}};}$
+\medskip
 \item\label{ex:coshtanh} 
-\[\tanh[\tfrac12\cdot PQ_h]=\sqrt{\frac{PQ\cdot P'Q'}{PQ'\cdot P'Q}};\]
+$\displaystyle{\tanh[\tfrac12\cdot PQ_h]=\sqrt{\frac{PQ\cdot P'Q'}{PQ'\cdot P'Q}};}$
+\medskip
 \item\label{ex:coshcosh} 
-\[\cosh PQ_h=\frac{PQ\cdot P'Q'+PQ'\cdot P'Q}{PP'\cdot QQ'}.\]
+$\displaystyle{\cosh PQ_h=\frac{PQ\cdot P'Q'+PQ'\cdot P'Q}{PP'\cdot QQ'}.}$
 \end{enumerate}
 
 \end{thm}

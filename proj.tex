@@ -10,11 +10,9 @@ Our aim is to extend Euclidean plane by ideal points so that any two distinct li
 
 \begin{wrapfigure}{o}{31mm}
 \centering
-\begin{lpic}[t(-3mm),b(0mm),r(0mm),l(0mm)]{pics/pensil-tip(1)}
-\end{lpic}
-\centering
-\begin{lpic}[t(5mm),b(-5mm),r(0mm),l(0mm)]{pics/pensil-par(1)}
-\end{lpic}
+\includegraphics{mppics/pic-226}
+\vskip4mm
+\includegraphics{mppics/pic-228}
 \end{wrapfigure}
 
 A collection of lines in the Euclidean plane is called \index{concurrent}\emph{concurrent} if they all intersect at a single point or all of them pairwise parallel.
@@ -27,8 +25,8 @@ and
 Each point in the Euclidean plane uniquely defines a central pencil with the center in it.
 Note that any two lines completely determine the pencil containing both.
 
-Let us add one \index{ideal point}\emph{ideal point} for each parallel pencil,
-and assume that all these ideal points lie on one \index{ideal line}\emph{ideal line}.
+Let us add one \index{point!ideal point}\index{ideal point}\emph{ideal point} for each parallel pencil,
+and assume that all these ideal points lie on one \index{line!ideal line}\index{ideal line}\emph{ideal line}.
 We also assume that the ideal line belongs to each parallel pencil.
 
 We obtain the so called \index{real projective plane}\emph{real projective plane}.
@@ -78,14 +76,10 @@ Consider two planes $\Pi$ and $\Pi'$
 in the Euclidean space. 
 Let $O$ be a point which does not belong neither to $\Pi$ nor~$\Pi'$.
 
-\begin{figure}[h!]
+\begin{wrapfigure}{o}{45mm}
 \centering
-\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/perspective(1)}
-\lbl{35,35;$\Pi$}
-\lbl{10,40;$\Pi'$}
-\lbl[bl]{65,11;$O$}
-\end{lpic} 
-\end{figure}
+\includegraphics{mppics/pic-230}
+\end{wrapfigure}
 
 Let us define the \index{perspective projection}\emph{perspective projection from $\Pi$ to $\Pi'$ with center at $O$}.
 The projection of a point $P\in \Pi$
@@ -97,6 +91,11 @@ and $P'$, $Q'$, $R'$ are their images in~$\Pi'$.
 Let $\Theta$ be the plane containing $O$ and $\ell$.
 Then all the points $P$, $Q$, $R$, $P'$, $Q'$, $R'$ lie on $\Theta$.
 Therefore, the points $P',Q',R'$ lie on the  intersection line $\ell'=\Theta\cap \Pi'$.
+
+\begin{wrapfigure}{o}{52mm}
+\centering
+\includegraphics{mppics/pic-232}
+\end{wrapfigure}
 
 The perspective projection is not a bijection between the planes.
 Indeed, if the line $(OP)$ is parallel to $\Pi'$ 
@@ -182,10 +181,16 @@ The composition $\beta\circ\alpha$ sends the ideal line to itself.
 That is, $\beta\circ\alpha$ is affine, hence the result.
 \qeds
 
+{
+
+\begin{wrapfigure}{r}{40mm}
+\vskip6mm
+\centering
+\includegraphics{mppics/pic-234}
+\end{wrapfigure}
+
 \section*{Moving points to infinity}
 \addtocontents{toc}{Moving points to infinity.}
-
-{
 
 
 Theorem~\ref{thm:moving} makes possible to take any line in the projective plane and declare it to be ideal.
@@ -198,8 +203,8 @@ which will be illustrated by the following classical example:
 Consider three concurrent lines $(AA')$, $(BB')$, and $(CC')$ in the real projective plane.
 Set
 \begin{align*}
-X&=(BC)\cap (B'C'),&
-Y&=(CA)\cap (C'A'),&
+X&=(BC)\cap (B'C'),\\
+Y&=(CA)\cap (C'A'),\\
 Z&=(AB)\cap (A'B').
 \end{align*}
 Then the points $X$, $Y$, and $Z$ are collinear.
@@ -207,24 +212,15 @@ Then the points $X$, $Y$, and $Z$ are collinear.
 
 }
 
-\begin{wrapfigure}{O}{44mm}
-\centering
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/desargues(0.9)}
-\lbl[r]{15,32;$A$}
-\lbl[lw]{35,42;$A'$}
-\lbl[rw]{13,24;$B$}
-\lbl[bl]{44,28.5;$B'$}
-\lbl[rw]{18,19;$C$}
-\lbl[ltw]{29,20;$C'$}
-\lbl[rw]{22,55;$Z$}
-\lbl[rtw]{22.5,18;$X$}
-\lbl[r]{23,4;$Y$}
-\end{lpic}
-\end{wrapfigure}
-
 \parit{Proof.}
 Without loss of generality, we may assume that the line $(XY)$ is ideal.
 If not, apply a perspective projection which sends the line $(XY)$ to the ideal line.
+
+\begin{wrapfigure}{o}{40mm}
+\vskip-8mm
+\centering
+\includegraphics{mppics/pic-236}
+\end{wrapfigure}
 
 That is, we can assume that 
 \[(BC)\z\parallel (B'C')\quad\text{and}\quad(CA)\z\parallel (C'A')\]
@@ -232,24 +228,11 @@ and we need to show that
 \[(AB)\z\parallel(A'B').\]
 
 Assume that the lines $(AA')$, $(BB')$, and $(CC')$ intersect at point~$O$.
-Since $(BC)\parallel (B'C')$, 
+Since $(BC)\z\parallel (B'C')$, 
 the transversal property (\ref{thm:parallel-2}) implies that $\measuredangle OBC\z= \measuredangle OB'C'$ and $\measuredangle OCB\z= \measuredangle OC'B'$.
 By the AA similarity condition, $\triangle OBC\z\sim\triangle OB'C'$.
 In particular,
 \[\frac{OB}{OB'}=\frac{OC}{OC'}.\]
-
-\begin{wrapfigure}{i}{48mm}
-\centering
-\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/desargues-par(1)}
-\lbl[r]{15,32;$A$}
-\lbl[lw]{35,42;$A'$}
-\lbl[rw]{13,23;$B$}
-\lbl[rbw]{29,27;$B'$}
-\lbl[rw]{18,19;$C$}
-\lbl[lw]{43,18;$C'$}
-\lbl[t]{3.5,22.5;$O$}
-\end{lpic}
-\end{wrapfigure}
 
 The same way we get that $\triangle OAC\z\sim\triangle OA'C'$ and
 \[\frac{OA}{OA'}=\frac{OC}{OC'}.\]
@@ -290,29 +273,6 @@ Z&=(AB')\cap(A'B).
 Then the points $X$, $Y$, $Z$ are collinear.
 \end{thm}
 
-
-\begin{figure}[h!]
-\centering
-\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/pappus(1)}
-\lbl[lb]{3,23;$A$}
-\lbl[tw]{3,2;$A'$}
-\lbl[bw]{12,25;$B$}
-\lbl[tw]{12,2;$B'$}
-\lbl[bw]{21,28;$C$}
-\lbl[tw]{23,2;$C'$}
-
-\lbl[bw]{69,14.5;$A$}
-\lbl[tw]{95,1;$A'$}
-\lbl[bw]{77,21;$B$}
-\lbl[tw]{78,1;$B'$}
-\lbl[bw]{84,27;$C$}
-\lbl[tw]{71,1;$C'$}
-\lbl[lw]{18,16;$X$}
-\lbl[bw]{11,16;$Y$}
-\lbl[rw]{5.5,14;$Z$}
-\end{lpic}
-\end{figure}
-
 Pappus' theorem can be proved the same way as Desargues' theorem.
 
 \parit{Idea of the proof.}
@@ -320,6 +280,13 @@ Applying a perspective projection, we can assume that $X$ and $Y$ lie on the ide
 It remains to show that $Z$ lies on the ideal line.
 
 In other words, assuming that $(AB')\parallel (A'B)$ and $(AC')\parallel (A'C)$, we need to show that $(BC')\parallel(B'C)$.
+
+\begin{figure}[h!]
+\centering
+\includegraphics{mppics/pic-238}
+\hskip15mm
+\includegraphics{mppics/pic-240}
+\end{figure}
 
 
 \begin{thm}{Exercise}\label{ex:pappus}
@@ -350,31 +317,10 @@ for any point $P$ and line~$s$.
 
 \begin{figure}[h!]
 \centering
-\begin{lpic}[t(0mm),b(5mm),r(0mm),l(0mm)]{pics/dual(1)}
-\lbl[tr]{2,17.5;$p$}
-\lbl[tr]{11,25;$q$}
-\lbl[lt]{20,25;$r$}
-\lbl[tlw]{24,13;$s$}
-\lbl[tr]{21,5;$A$}
-\lbl[r]{13.5,19;$D$}
-\lbl[t]{14,8.5;$C$}
-\lbl[rw]{9,12;$B$}
-\lbl[b]{19.5,13;$E$}
-\lbl[tl]{6.5,6;$F$}
-
-
-\lbl[bl]{53,18;$P$}
-\lbl[tlw]{63.5,19;$Q$}
-\lbl[tr]{62.5,3.5;$R$}
-\lbl[br]{51.5,8.5;$S$}
-\lbl[t]{45,18;$a$}
-\lbl[lb]{48,22;$b$}
-\lbl[rt]{52,1;$c$}
-\lbl[l]{63.4,10;$d$}
-\lbl[tr]{47,3;$e$}
-\lbl[b]{45,7;$f$}
-\lbl[t]{38,-2;Dual configurations.}
-\end{lpic}
+\includegraphics{mppics/pic-242}
+\hskip15mm
+\includegraphics{mppics/pic-244}
+\caption*{Dual configurations.}
 \end{figure}
 
 Existence of duality in a plane 
@@ -497,10 +443,12 @@ Note that the real projective plane described above satisfies the following set 
 Let us take these three axioms as a definition of the \index{projective plane}\emph{projective plane};
 so the real projective plane discussed above becomes a particular example of projective plane.
 
-\begin{wrapfigure}{o}{20mm}
+{
+
+\begin{wrapfigure}{o}{26mm}
+\vskip-4mm
 \centering
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/fano(1)}
-\end{lpic}
+\includegraphics{mppics/pic-246}
 \end{wrapfigure}
 
 There is an example of projective plane which contains exactly 3 points on each line.
@@ -508,6 +456,8 @@ This is the so called \index{Fano plane}\emph{Fano plane} which you can see on t
 it contains $7$ points and $7$ lines.
 This is an example of \index{finite projective plane}\emph{finite projective plane};
 that is, projective plane with finitely many points.
+
+}
 
 \begin{thm}{Exercise}\label{ex:finite-pp}
 Show that any line in projective plane contains at least three points.
@@ -542,8 +492,7 @@ and the same happens with the pair p-\ref{def:proj-axioms:3} and p-\ref{def:proj
 Assume that one of the lines in a finite projective plane contains exactly $n+1$ points.
 \begin{enumerate}[(a)]
 \item\label{ex:oder:a} Show that each line contains exactly $n+1$ points.
-\item\label{ex:oder:b} Show that the number of the points in the plane has to be 
-\[n^2+n+1.\]
+\item\label{ex:oder:b} Show that the plane contains  exactly $n^2+n+1$ points.
 \item\label{ex:oder:c} Show that there is no projective plane with exactly 10 points.
 \item\label{ex:oder:d} Show that in any finite projective plane the number of points coincides with the number of lines.
 \end{enumerate}

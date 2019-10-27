@@ -21,15 +21,10 @@ Further, $\phi(s)\to \pi/2$ as $s\to 0$,
 and $\phi(s)\to0$ as $s\to\infty$.
 (In the Euclidean geometry, the angle of parallelism is identically equal to~$\pi/2$.)
 
-\begin{wrapfigure}[12]{o}{44mm}
+\begin{wrapfigure}{o}{34mm}
+\vskip-6mm
 \centering
-\begin{lpic}[t(-0mm),b(-0mm),r(0mm),l(0mm)]{pics/ultra-parallel(1)}
-\lbl[bl]{13.6,25.5;$P$}
-\lbl[lb]{26,25;$Q$}
-\lbl[br]{20,34;$Z$}
-\lbl[lb]{29,18;$\ell$}
-\lbl[]{18.5,25;{\small $\phi$}}
-\end{lpic}
+\includegraphics{mppics/pic-206}
 \end{wrapfigure}
 
 If $\ell$, $P$, and $Z$ are as above, then the h-line $m=(PZ)_h$ is called \index{asymptotically parallel lines}\emph{asymptotically parallel} to~$\ell$.
@@ -58,17 +53,10 @@ where $\phi$ is the angle of parallelism of $P$ to~$\ell$.
 
 \end{thm}
 
-\begin{wrapfigure}{o}{63mm}
+\begin{wrapfigure}{o}{50mm}
+\vskip-6mm
 \centering
-\begin{lpic}[t(-5mm),b(0mm),r(-1mm),l(0mm)]{pics/absolute-triangle-2(1)}
-\lbl[t]{30,2.5;$A$}
-\lbl[b]{30,40;$B$}
-\lbl[tr]{20,20.5;$P$}
-\lbl[tl]{32,20.5;$X$}
-\lbl[t]{60,19.5;$Z$}
-\lbl[tl]{27,20.5;$Q$}
-\lbl[tl]{33,34;$\phi$}
-\end{lpic}
+\includegraphics{mppics/pic-208}
 \end{wrapfigure}
 
 
@@ -126,7 +114,8 @@ It remains to apply Proposition~\ref{prop:angle-parallelism}.
 
 \begin{thm}{Exercise}\label{ex:small-angle}
 Let $ABC$ be an equilateral h-triangle with side $100$.
-Show that $|\measuredangle_h ABC|<10^{-10}$.
+Show that 
+\[|\measuredangle_h ABC|<\frac1{10\,000\,000\,000}.\]
 \end{thm}
 
 \section*{Inradius of h-triangle}
@@ -152,24 +141,16 @@ and therefore
 \measuredangle_hZIX=2\cdot\pi
 \]
 
+{
+
+\begin{wrapfigure}{o}{44mm}
+\centering
+\includegraphics{mppics/pic-210}
+\end{wrapfigure}
+
 We can assume that
 $\measuredangle_hXIY\ge\tfrac23\cdot\pi$;
 if not relabel $X$, $Y$, and $Z$. 
-
-{
-
-\begin{wrapfigure}{o}{34mm}
-\centering
-\begin{lpic}[t(-2mm),b(0mm),r(-1mm),l(0mm)]{pics/h-inradius(1)}
-\lbl[t]{1.5,4;$X$}
-\lbl[t]{30.5,1;$Y$}
-\lbl[b]{15,28;$Z$}
-\lbl[lb]{16,13;$I$}
-%\lbl[bl]{21.5,15;$X'$}
-%\lbl[br]{9,16;$Y'$}
-%\lbl[t]{14,4.5;$Z'$}
-\end{lpic}
-\end{wrapfigure}
 
 Since $r$ is the h-distance from $I$ to $(XY)_h$,
 Corollary~\ref{cor:angle-parallelism} implies that
@@ -222,24 +203,16 @@ If you turn the steering wheel to the far right, you will run along a circle.
 If you turn it less, at a certain position of the wheel, you will never come back to the same point, but the path will be different from the line.
 If you turn the wheel further a bit, you start to run along a path which stays at some fixed distance from an h-line.
 
-\begin{wrapfigure}{o}{46mm}
-\centering
-\begin{lpic}[t(-4mm),b(-3mm),r(0mm),l(0mm)]{pics/equidistant(1)}
-\lbl[b]{14,23,60;$m$}
-\lbl[lt]{25,17;$g$}
-\lbl[b]{15,40;$A$}
-\lbl[rt]{3,15;$B$}
-\lbl[lb]{23.5,35;$P$}
-\lbl[t]{16,10.5;$P'$}
-\lbl[br]{7,37;$\Gamma$}
-\lbl[tl]{38,23;$\Delta$}
-\end{lpic}
-\end{wrapfigure}
-
 \parbf{Equidistants of h-lines.}
 Consider the h-plane with the absolute~$\Omega$.
 Assume a circle $\Gamma$ intersects $\Omega$ in two distinct points, $A$ and~$B$. 
 Let $g$ denotes the intersection of $\Gamma$ with the h-plane.
+
+\begin{wrapfigure}{o}{46mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-212}
+\end{wrapfigure}
 
 Let us draw an h-line $m$ with the ideal points $A$ and~$B$.
 According to Exercise~\ref{ex:ideal-line-unique}, $m$ is uniquely defined.
@@ -260,26 +233,24 @@ By the main observation (\ref{thm:main-observ}) the inversion in $\Delta$ is a m
 
 In other words, $g$ is the set of points which lie on a fixed h-distance and on the same side of~$m$.
 
-{
-
-\begin{wrapfigure}{r}{43mm}
-\centering
-\begin{lpic}[t(-4mm),b(-4mm),r(0mm),l(0mm)]{pics/oricircle(1)}
-\lbl[rb]{16,15;$\Gamma$}
-\lbl[rb]{2,30;$A$}
-\end{lpic}
-\end{wrapfigure}
 
 Such a curve $g$ is called 
 \index{equidistant}\emph{equidistant} to h-line~$m$.
 In Euclidean geometry, the equidistant from a line is a line;
 apparently in hyperbolic geometry the picture is different.
 
+{
+
+\begin{wrapfigure}{r}{33mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-214}
+\end{wrapfigure}
+
 \parbf{Horocycles.}
 If the circle $\Gamma$ touches the absolute from inside at one point $A$, then the complement $h=\Gamma\backslash\{A\}$ lies in the h-plane.
 This set is called a \index{horocycle}\emph{horocycle}.
 It also has a perfectly round shape in the sense described above.
-
 
 
 Horocycles are the border case between circles and equidistants to h-lines.
@@ -305,12 +276,7 @@ Any nondegenerate hyperbolic triangle has a positive defect.
 
 \begin{wrapfigure}{o}{35mm}
 \centering
-\begin{lpic}[t(-5mm),b(-0mm),r(0mm),l(-0mm)]{pics/h-triangle(1)}
-\lbl[tr]{11.5,5;$A$}
-\lbl[tr]{33,9;$C$}
-\lbl[r]{7,20;$B$}
-\lbl[t]{15,11.5;$D$}
-\end{lpic}
+\includegraphics{mppics/pic-216}
 \end{wrapfigure}
 
 \parit{Proof.}
@@ -341,7 +307,7 @@ $$\measuredangle ABC-\measuredangle_h ABC \equiv
 
 From Exercise~\ref{ex:|3sum|}, we get that
 $$\defect(\triangle_hABC)=2\cdot(\pi-\measuredangle CDB).$$
-Therefore, if equality holds in \ref{eq:defect<0}, then $\measuredangle CDB=\pi$.
+Therefore, if we have equality in \ref{eq:defect<0}, then $\measuredangle CDB=\pi$.
 In particular, the h-segment $[BC]_h$ coincides with the Euclidean segment~$[BC]$.
 By Exercise~\ref{ex:line/h-line},
 the latter can happen only if the h-line $(BC)_h$ passes thru the center of the absolute ($A$);
@@ -369,13 +335,7 @@ Note that if $AB_h=A'B'_h$, then the theorem follows from ASA.
 
 \begin{wrapfigure}{o}{32mm}
 \centering
-\begin{lpic}[t(-3mm),b(-0mm),r(2mm),l(3mm)]{pics/AAA(1)}
-\lbl[r]{3,33;$A'$}
-\lbl[lb]{26,9;$B'$}
-\lbl[rb]{0.5,1;$C'$}
-\lbl[lb]{20,15;$B''$}
-\lbl[rb]{3,9.5;$C''$}
-\end{lpic}
+\includegraphics{mppics/pic-218}
 \end{wrapfigure}
 
 Assume the contrary. 
@@ -450,16 +410,9 @@ The value $\tfrac1{\lambda(P)}=\tfrac12\cdot(1-OP^2)$
 can be interpreted as the {}\emph{speed limit} at the given point~$P$. 
 In this case the h-distance is the minimal time needed to travel from one point of the h-plane to another point.
 
-\begin{wrapfigure}{o}{44mm}
+\begin{wrapfigure}{o}{40mm}
 \centering
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/POQ-Gamma(1)}
-\lbl[b]{40,35;$\Gamma$}
-\lbl[br]{19,20;$O$}
-\lbl[bl]{31,20;$P$}
-\lbl[t]{31,14;$Q$}
-\lbl[t]{23,12;$Q'$}
-\lbl[b]{42,20;$P'$}
-\end{lpic}
+\includegraphics{mppics/pic-220}
 \end{wrapfigure}
 
 \parit{Proof.}
@@ -516,17 +469,9 @@ Set $x_n=AB$.
 Note that $x_n$ is the side of a regular $n$-gon inscribed in the circle of radius $r$. 
 Therefore, the perimeter of the $n$-gon is $n\cdot x_n$.
 
-\begin{wrapfigure}[11]{o}{43mm}
+\begin{wrapfigure}{o}{47mm}
 \centering
-\begin{lpic}[t(-2mm),b(-0mm),r(0mm),l(-0mm)]{pics/7-gon(1)}
-\lbl[l]{42,21;$A$}
-\lbl[bl]{34,38;$B$}
-\lbl[r]{19,21;$O$}
-\lbl[]{30,26,25.7;$\tfrac{2\cdot\pi}{n}$}
-\lbl[w]{33,21.5;$\,r\,$}
-\lbl[w]{29,31.5,51.4;$\,r\,$}
-\lbl[tw]{38,29.5,-65;$\,x_n\,$}
-\end{lpic}
+\includegraphics{mppics/pic-222}
 \end{wrapfigure}
 
 The circumference of the circle with the radius $r$ 
@@ -635,21 +580,16 @@ Show that
 
 \end{thm}
 
-In the proof of the hyperbolic Pythagorean theorem we use the following formula from Exercise~\ref{ex:cosh}:
-\[\cosh PQ_h=\frac{PQ\cdot P'Q'+PQ'\cdot P'Q}{PP'\cdot QQ'},\]
-here $P$, $Q$ are h-points distinct from the absolute and $P'$, $Q'$ are their inversions in the absolute.
-A complete proof of this formula is given in the hints.
-
-\begin{wrapfigure}{r}{32mm}
+\begin{wrapfigure}{o}{43mm}
 \centering
-\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/pyth-h-poincare(1)}
-\lbl[r]{9.5,18;$A$}
-\lbl[r]{10.3,27;$A'$}
-\lbl[t]{16,9.7;$B$}
-\lbl[t]{30,9.9;$B'$}
-\lbl[tr]{10.2,10.2;$C$}
-\end{lpic}
+\includegraphics{mppics/pic-224}
 \end{wrapfigure}
+
+In the proof of the hyperbolic Pythagorean theorem we use the following formula from Exercise~\ref{ex:cosh}:
+\[\cosh AB_h=\frac{AB\cdot A'B'+AB'\cdot A'B}{AA'\cdot BB'},\]
+here $A$, $B$ are h-points distinct from the absolute and $A'$, $B'$ are their inversions in the absolute.
+This formula is derived in the hints.
+
 
 \parit{Proof of the hyperbolic Pythagorean theorem.}
 We assume that absolute is a unit circle.
@@ -706,7 +646,7 @@ According to Exercise~\ref{ex:cosh},
 {(\tfrac1y-y)\cdot (\tfrac1x-x)}=
 \\
 &=\frac{x^2+y^2+1+x^2\cdot y^2}
-{(1-y^2)\cdot (1-x^2)}
+{(1-y^2)\cdot (1-x^2)}=
 \\
 &=\frac{1+x^2}
 {1-x^2}\cdot
