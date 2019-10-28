@@ -3879,5 +3879,176 @@ draw circle(z.O,z.A);
 dOt z.A,z.B,z.C,z.AA,z.BB,z.CC,z.O;
 endfig;
 
+beginfig(248)
+save u,a,b;
+u:=1cm;
+a:=35;
+b:=-40;
+
+z.O=origin;
+x.R=1.5*u;
+
+z.P=(1,0) rotated a;
+z.Q=(1,0) rotated b;
+
+z.Z=(0,x.P);
+z.Y=z.Q yscaled (y.P);
+z.X= z.Q rotated -90 yscaled (y.P);
+
+z.C=x.R*z.Z;
+
+transform TX,TY,TZ;
+
+origin=origin transformed TX=origin transformed TY=origin transformed TZ;
+z.X=(1,0) transformed TZ=(1,0) transformed TY;
+z.Y=(0,1) transformed TZ=(1,0) transformed TX;
+z.Z=(0,1) transformed TY=(0,1) transformed TX;
+
+
+
+
+
+path p[];
+p0= circle(z.O,x.R) rotated 1;
+
+p1=p0 transformed TX cutafter (subpath (1,2) of p0 scaled .999);
+p2=p0 transformed TX cutbefore (subpath (3,4) of p0 scaled .999);
+p3=p0 transformed TY cutafter (subpath (0,1) of p0 scaled .999);
+p4=p0 transformed TY cutbefore (subpath (2,3) of p0 scaled .999);
+p5=p0 transformed TZ cutafter (subpath (3,4) of p0 scaled .999);
+p6=p0 transformed TZ cutbefore (subpath (1,2) of p0 scaled .999);
+
+p7=p0 yscaled .3 rotated 35 cutbefore p1 cutafter p3;
+
+z.A=point 0 of p7;
+z.B=point 2 of p7;
+
+markdashed_rt_angle_withsize(z.X,z.O,z.Y,6);
+markdashed_rt_angle_withsize(z.X,z.O,z.Z,6);
+markdashed_rt_angle_withsize(z.Z,z.O,z.Y,6);
+
+
+draw (6*z.X--6*z.X+6*z.Y--6*z.Y) shifted z.C cutafter p1 cutbefore p3;
+
+draw p0;
+draw p1;
+draw p2;
+draw p3;
+draw p4;
+draw p5;
+draw p6;
+draw p7;
+
+draw z.O--(x.R*z.X) dashed evenly;
+draw z.O--(x.R*z.Y) dashed evenly;
+draw z.O--(x.R*z.Z) dashed evenly;
+
+drawarrow ddline(z.O,x.R*z.X)(-1,.6);
+drawarrow ddline(z.O,x.R*z.Y)(-1,.6);
+drawarrow ddline(z.O,x.R*z.Z)(-1,.6);
+
+dOt z.A,z.B,z.C;
+
+label.urt (btex $A$ etex, z.A);
+label.lft (btex $B$ etex, z.B);
+whitelabel.ulft (btex $C$ etex, z.C);
+
+label.bot (btex $x$ etex, 1.6*x.R*z.X);
+label.bot (btex $y$ etex, 1.6*x.R*z.Y);
+label.urt (btex $z$ etex, 1.6*x.R*z.Z);
+
+endfig;
+
+beginfig(250)
+save u;
+u:=1cm;
+
+z.F1=(-1,0)*u;
+z.F2=(1,0)*u;
+z.A=(-1,.2)*u;
+
+path p;
+p= ellipseFFP(z.F1, z.F2, z.A);
+
+z.B=point .1 of p;
+
+z.AA=exbisector(z.F1, z.A, z.F2);
+z.BB=exbisector(z.F1, z.B, z.F2);
+
+z.T=whatever[z.A,z.AA]=whatever[z.B,z.BB];
+z.TT=bisector(z.F1, z.T, z.F2);
+
+draw p cutbefore z.A cutafter z.B;
+draw p  cutafter z.B;
+draw p cutafter z.A cutbefore z.B dashed evenly;
+
+%draw p reflectedabout (z.T,z.TT) shifted -z.T scaled .5 shifted z.T;
+
+draw (p cutbefore z.A cutafter z.B) reflectedabout (z.T,z.TT) shifted -z.T scaled .5 shifted z.T;
+draw (p  cutafter z.B) reflectedabout (z.T,z.TT) shifted -z.T scaled .5 shifted z.T;
+draw (p cutafter z.A cutbefore z.B) reflectedabout (z.T,z.TT) shifted -z.T scaled .5 shifted z.T dashed evenly ;
+
+draw z.A--z.T--z.B;
+
+endfig;
+
+beginfig(252)
+save u;
+u:=1.6cm;
+
+z.O=origin;
+z.N=(0,1)*u;
+z.S=-z.N;
+z.E=z.N rotated -90;
+z.P=z.N rotated -40;
+z.PP=whatever[z.S,z.P]=whatever[z.O,z.E];
+
+draw circle(z.O,z.N);
+draw subpath (.3,1.7) of circle(z.S,z.E-z.S) dashed linedot;
+drawarrow ddline(z.S,z.N)(.2,.3);
+draw ddline(-z.E,z.E)(.2,.2);
+draw ddline(z.S,z.P)(0,.3);
+
+dOt z.S,z.N,z.P,z.PP,z.O;
+
+label.ulft (btex $N$ etex, z.N);
+label.llft (btex $O$ etex, z.O);
+label.rt (btex $P$ etex, z.P+(0,1));
+label.lrt (btex $P'$ etex, z.PP);
+label.llft (btex $S$ etex, z.S);
+
+label.llft (btex $\Sigma$ etex, z.N rotated 135);
+label.ulft (btex $\Upsilon$ etex, z.E rotatedaround(z.S,55));
+endfig;
+
+beginfig(254)
+save u;
+u:=1.4cm;
+
+z.O=origin;
+z.E=(1,0)*u;
+z.N=z.E rotated 90;
+z.P=z.E rotated 50;
+z.PP=whatever*z.P=z.N+whatever*z.E;
+
+draw z.N-1.2*z.E--z.N+1.2*z.E;
+draw z.O--z.PP;
+draw -z.E--z.E dashed evenly;
+draw subpath (0,2) of circle(z.O,z.E);
+
+dOt z.P,z.PP,z.N,z.O;
+
+label.top (btex $N$ etex, z.N);
+label.bot (btex $O$ etex, z.O);
+label.bot (btex $P$ etex, z.P+(0,-1));
+label.top (btex $P'$ etex, z.PP);
+
+label.lft (btex $\Sigma^+$ etex, z.N rotated 70);
+label.top (btex $\Pi^+$ etex, z.N-z.E);
+
+endfig;
+
+
+
 end
 
