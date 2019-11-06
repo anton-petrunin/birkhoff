@@ -1,4 +1,4 @@
-%\RequirePackage{snapshot}
+\RequirePackage{snapshot}
 \documentclass[twoside]{book}
 \usepackage{geometry}
 \usepackage{lectures}
@@ -48,5 +48,10 @@ a minimalist introduction.}}
 {\scriptsize
 \input{all-lectures.ind}
 }
-\input{bibl.tex}
+%\input{bibl.tex}
+\renewcommand{\bibname}{Used resources}
+{\small
+\printbibliography[heading=bibintoc]
+\fussy
+}
 \end{document}

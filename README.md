@@ -18,10 +18,12 @@ Go to the crated folder, and run `mpost`, `pdflatex` and `makeindex` few times; 
 
 `cd birkhoff/mpics/`<br/>
 `mpost pic.mp`<br/>
+`mpost pic-hints.mp`<br/>
 `cd ..`<br/>
 `pdflatex all-lectures.tex`<br/>
 `makeindex all-lectures`<br/>
 `pdflatex all-lectures.tex`<br/>
+`biber all-lectures`<br/>
 `makeindex all-lectures`<br/>
 `pdflatex all-lectures.tex`<br/>
 

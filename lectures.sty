@@ -13,9 +13,40 @@ pdfauthor={Anton Petrunin},
 urlcolor=black%
 ]{hyperref}
 \usepackage{caption}
-\usepackage[russian,english]{babel}
+
+\usepackage[russian,german,english]{babel}
+\usepackage[T1,T2A]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{multibib}
+\DeclareUnicodeCharacter{2010}{-}% support older LaTeX versions
+
+
+\usepackage[
+sorting=none,
+bibencoding=auto,
+backend=biber,
+maxnames=10,
+%babel=other,
+autolang=other,
+doi=false,
+%url=false,
+style=numeric-comp,
+isbn=false]{biblatex}
+\usepackage{csquotes}
+\AtEveryBibitem{\clearlist{language}}
+\AtEveryBibitem{\clearlist{note}}
+\renewbibmacro{in:}{}
+\renewcommand*{\bibfont}{\scriptsize}
+\addbibresource{library.bib}
+
+\DeclareFieldFormat{mynote}{{#1}}
+\AtEveryBibitem{%
+    \csappto{blx@bbx@\thefield{entrytype}}{% put at end of entry
+        \space\printfield{mynote}
+    }
+}
+
+
+%\usepackage{multibib}
 \usepackage{epigraph}
 \usepackage{framed}
 
