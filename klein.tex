@@ -13,19 +13,12 @@ Consider the conformal disc model with the absolute at the unit circle $\Omega$ 
 Choose a coordinate system $(x,y)$ on the plane with the origin at $O$, 
 so the circle $\Omega$ is described by the equation $x^2+y^2=1$.
 
+{
+
 \label{pic:stereographic_projection-klein}
-\begin{wrapfigure}{o}{48mm}
+\begin{wrapfigure}[17]{o}{48mm}
 \centering
-\begin{lpic}[t(-4mm),b(-0mm),r(0mm),l(0mm)]{pics/stereographic_projection-klein(1)}
-\lbl[rb]{23,24;$O$}
-\lbl[br]{31,24;$P$}
-\lbl[tr]{23,41.5;$N$}
-\lbl[br]{23,4;$S$}
-\lbl[lb]{37.5,39;$P'$}
-\lbl[t]{36.5,21;$\hat P$}
-\lbl[br]{8,37;$\Sigma$}
-\lbl[t]{10,22;$\Pi$}
-\end{lpic}
+\includegraphics{mppics/pic-256}
 \caption*{The plane thru $P$, $O$, and $S$.}
 \end{wrapfigure}
 
@@ -39,7 +32,9 @@ these are the south and north poles of~$\Sigma$.
 Consider stereographic projection $\Pi\to\Sigma$ from $S$;
 given point $P\in\Pi$ denote its image in $\Sigma$.
 Note that the  h-plane is mapped to the {}\emph{north hemisphere};
-that is, to the set of points $(x,y,z)$ in $\Sigma$ described by the inequality $z>0$.
+that is, to the set of points $(x,y,z)$ in $\Sigma$ described by the inequality~$z>0$.
+
+}
 
 For a point $P'\in \Sigma$ consider its foot point $\hat P$
 on $\Pi$;
@@ -51,12 +46,9 @@ Further note that $P=\hat P$
  if and only if  $P\in \Omega$ or $P=O$.
 
 \begin{thm}{Exercise}\label{ex:P-->hat-P}
-Show that the bijection $P\leftrightarrow \hat P$ described above can be 
-described the following way: 
-set $\hat O=O$ and for any other point $P$ take $\hat P\in [OP)$
-such that 
-$$O\hat P=\frac{2\cdot x}{1+x^2},$$
-where $x=OP$. 
+Suppose that $P\leftrightarrow \hat P$ is the bijection described above.
+Assume that $P$ is a point of h-plane distinct from the center of absolute and $Q$ is its inverse in the absolute.
+Show that the midpoint of $[PQ]$ is the inversion of $\hat P$ in in the absolute. 
 \end{thm}
 
 \begin{thm}{Lemma}\label{lem:P-hat-chord}
@@ -73,28 +65,22 @@ $$PQ_h=\tfrac12\cdot\ln\frac{A\hat Q\cdot B\hat P}{\hat QB\cdot \hat PA}.$$
 \end{thm}
 
 \parit{Proof.}
-Consider the stereographic projection $\Pi\to \Sigma$ from the south pole $S$.
+Consider the stereographic projection $\Pi\to \Sigma$ from the south pole~$S$.
 Note that it fixes $A$ and $B$;
 denote by $P'$ and $Q'$ the images of $P$ and~$Q$;
 
 
 
-\begin{wrapfigure}[11]{o}{35mm}
+\begin{wrapfigure}{o}{30mm}
 \centering
-\begin{lpic}[t(-0mm),b(-4mm),r(0mm),l(2mm)]{pics/lambda-plane(1)}
-\lbl[rt]{0,15;$A$}
-\lbl[lt]{32,15;$B$}
-\lbl[t]{8,14;$\hat P$}
-\lbl[br]{8,29;$P'$}
-\lbl[bl]{26,28;$\Gamma$}
-\end{lpic}
+\includegraphics{mppics/pic-258}
 \caption*{The plane~$\Lambda$.}
 \end{wrapfigure}
 
-According to Theorem~\ref{thm:inverion-3d}\textit{\ref{thm:inverion-3d:cross-ratio}},
+According to Theorem~\ref{thm:inversion-3d}\textit{\ref{thm:inversion-3d:cross-ratio}},
 $$\frac{AQ\cdot BP}{QB\cdot PA}=\frac{AQ'\cdot BP'}{Q'B\cdot P'A}.\eqlbl{eq:(AB;PQ)=(AB;P'Q')}$$
 
-By Theorem~\ref{thm:inverion-3d}\textit{\ref{thm:inverion-3d:angle}}, 
+By Theorem~\ref{thm:inversion-3d}\textit{\ref{thm:inversion-3d:angle}}, 
 each circline in $\Pi$ which is perpendicular to $\Omega$ 
 is mapped to a circle in $\Sigma$ which is still perpendicular to~$\Omega$.
 It follows that the stereographic projection sends $(PQ)_h$ to the intersection of the north hemisphere of $\Sigma$ with a plane perpendicular to~$\Pi$.
@@ -142,20 +128,10 @@ PQ_h&\df\ln\frac{A Q\cdot B P}{QB\cdot PA}=
 
 {
 
-\begin{wrapfigure}[10]{r}{51mm}
+\begin{wrapfigure}{r}{36mm}
 \centering
-\begin{lpic}[t(-5mm),b(-0mm),r(0mm),l(0mm)]{pics/ex-hex(1)}
-\lbl[t]{26,8;$A_1$}
-\lbl[b]{26,31.5;$B_1$}
-\lbl[tl]{31,19;$A_2$}
-\lbl[br]{15,35;$B_2$}
-\lbl[tr]{15,5;$A_3$}
-\lbl[lw]{29,28;$B_3$}
-\lbl[lt]{46,10;$\Gamma_1$}
-\lbl[r]{42,38;$\Gamma_2$}
-\lbl[b]{49,31;$\Gamma_3$}
-\lbl[lb]{3,15;$\Omega$}
-\end{lpic}
+\vskip-8mm
+\includegraphics{mppics/pic-260}
 \end{wrapfigure}
 
 \begin{thm}{Exercise}\label{ex:hex}
@@ -175,10 +151,7 @@ Show that the chords $[A_1B_1]$, $[A_2B_2]$, and $[A_3B_3]$ intersect at one poi
 The following picture illustrates the map $P\mapsto \hat P$ described in the previous section --- 
 \begin{figure}[h!]
 \centering
-\begin{lpic}[t(0mm),b(3mm),r(0mm),l(0mm)]{pics/poincare-klein(1)}
-\lbl[t]{23,0;Conformal model}
-\lbl[t]{72,0;Projective model}
-\end{lpic}
+\includegraphics{mppics/pic-262}
 \end{figure}
 if you take the picture on the left and apply the map $P\mapsto \hat P$,
 you get the picture on the right.
@@ -201,14 +174,9 @@ It follows since the stereographic projection sends circles on the plane to circ
 
 {
 
-\begin{wrapfigure}{r}{43mm}
+\begin{wrapfigure}{r}{36mm}
 \centering
-\begin{lpic}[t(-0mm),b(-2mm),r(1mm),l(0mm)]{pics/h-klein-perp(1)}
-\lbl[rb]{5,32;$A$}
-\lbl[lb]{36,32;$B$}
-\lbl[lt]{13,29;$P$}
-\lbl[rt]{28,29;$Q$}
-\end{lpic}
+\includegraphics{mppics/pic-264}
 \end{wrapfigure}
 
 \parbf{Distance.}
@@ -263,15 +231,12 @@ Recall that an h-triangle might be also inscribed in a horocycle or an equidista
 Think how to prove the statement in this case.
 \end{thm}
 
-\begin{wrapfigure}[4]{r}{31mm}
+{
+
+\begin{wrapfigure}{r}{34mm}
+\vskip-6mm
 \centering
-\begin{lpic}[t(-9mm),b(-0mm),r(0mm),l(0mm)]{pics/perp-klein(1)}
-\lbl[t]{8,12.6,-10;$m$}
-\lbl[l]{14.2,8;$\ell$}
-\lbl[tl]{20,6;$s$}
-\lbl[bl]{20,14;$t$}
-\lbl[t]{26,8;$Z$}
-\end{lpic}
+\includegraphics{mppics/pic-266}
 \end{wrapfigure}
 
 \begin{thm}{Exercise}\label{ex:klein-perp}
@@ -281,6 +246,8 @@ at the ideal points of $\ell$.
 Show that 
 if the lines $s$, $t$ and the extension of $m$ intersect at one point, then $\ell$ and $m$ are perpendicular h-lines. 
 \end{thm}
+
+}
 
 \begin{thm}{Exercise}\label{ex:klein-for-angle-parallelism}
 Use the projective model to derive the formula for angle of parallelism  (Proposition~\ref{prop:angle-parallelism}). 
@@ -292,28 +259,19 @@ Use projective model to find the inradius of the ideal triangle.
 
 The projective model of h-plane can be used to give another proof of the hyperbolic Pythagorean theorem (\ref{thm:pyth-h-poincare}).
 
-\begin{wrapfigure}{o}{24mm}
-\centering
-\begin{lpic}[t(-3mm),b(-0mm),r(0mm),l(0mm)]{pics/h-pyth-klein(1)}
-\lbl[br]{3,23;$A$}
-\lbl[lb]{15,28.5;$B$}
-\lbl[tl]{15,21;$C$}
-\lbl[l]{15,25;$s$}
-\lbl[t]{8,20;$t$}
-\lbl[b]{8,26,37;$u$}
-\lbl[bl]{15,39;$X$}
-\lbl[tl]{15,4;$Y$}
-\end{lpic}
-\end{wrapfigure}
-
 First let us recall its statement:
 \[\cosh c=\cosh a\cdot\cosh b,\eqlbl{eq:hyp-pyth-proj}\]
 where $a\z=BC_h$, $b=CA_h$, and $c=AB_h$ and
 $\triangle_hACB$ is an h-triangle with right angle at~$C$.
 
+\begin{wrapfigure}{o}{34mm}
+\centering
+\includegraphics{mppics/pic-268}
+\end{wrapfigure}
+
 Note that we can assume that $A$ is the center of the absolute.
 Set 
-$s=BC$, $t =CA$, $u= AB$.
+$s=BC$, $t =CA$, $u\z= AB$.
 According to the Euclidean Pythagorean theorem (\ref{thm:pyth}), we have
 $$u^2=s^2+t^2.\eqlbl{eq:hyp-proj}$$
 It remains to express $a$, $b$, and $c$ using $s$, $u$, and $t$ and show that \ref{eq:hyp-proj} implies~\ref{eq:hyp-pyth-proj}.
@@ -381,22 +339,9 @@ correspondingly.
 
 Note that the Euclidean lines $(PQ)$, $(TR)$, and $(CB)$ are parallel.
 
-\begin{wrapfigure}{o}{44mm}
+\begin{wrapfigure}{o}{50mm}
 \centering
-\begin{lpic}[t(-3mm),b(6mm),r(0mm),l(0mm)]{pics/boyai-constr(1)}
-\lbl[bl]{21.5,21.5;$P$}
-\lbl[tl]{21.5,12.5;$Q$}
-\lbl[tr]{8.5,12.5;$R$}
-\lbl[tr]{8.5,20;$S$}
-\lbl[lb]{10.5,26;$T$}
-\lbl[t]{40,12.5;$A$}
-\lbl[tr]{1,12.5;$B$}
-\lbl[br]{1,28;$C$}
-\lbl[t]{31,12.5;$\ell$}
-\lbl[b]{20,33,90;$m$}
-\lbl[b]{31,21.5;$n$}
-\lbl[b]{9,33,90;$k$}
-\end{lpic}
+\includegraphics{mppics/pic-270}
 \end{wrapfigure}
 
 Therefore, 

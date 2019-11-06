@@ -31,26 +31,27 @@ Construct an inscribed quadrilateral with given sides.
 \end{thm}
 
 {
-\begin{wrapfigure}{o}{29mm}
+
+\begin{wrapfigure}{r}{22mm}
+\vskip-10mm
 \centering
-\begin{lpic}[t(-6mm),b(0mm),r(0mm),l(3mm)]{pics/apollonius(1)}
-\end{lpic}
+\includegraphics{mppics/pic-284}
 \end{wrapfigure}
 
+Several solutions of this problem based on different ideas are presented in \cite{hadamard}. 
 The following exercise is a simplified version of the problem of Apollonius, which is still nontrivial.
-
 
 \begin{thm}{Exercise}\label{ex:simple-apollonius}
 Construct a circle which passes thru a given point and is tangent to two intersecting lines.
 \end{thm}
+
 }
-
-
-
 
 
 The following three problems cannot be solved in principle; 
 that is, the needed compass-and-ruler construction does not exist.
+
+
 
 \parbf{Doubling the cube.} {\it Construct the side of a new cube, 
 which has the volume twice as big as the volume of a given cube.} 
@@ -162,32 +163,26 @@ To perform ``$\cdot$'', ``$/$''
 and ``$\sqrt{\phantom{a}}$'' consider the following diagram:
 let $[AB]$ be a diameter of a circle; 
 fix a point $C$ on the circle and let $D$ be the foot point of $C$ on~$[AB]$.
-Note that 
-$$\triangle ABC\sim\triangle ACD\sim \triangle BDC.$$
-It follows that $AD\cdot DC=BD^2$.  
+By Corollary~\ref{cor:right-angle-diameter}, the angle $ACB$ is right.
+Therefore 
+$$\triangle ABC\sim\triangle ACD\sim \triangle CBD.$$
+It follows that $AD\cdot BD=CD^2$. 
 
-\begin{wrapfigure}[11]{r}{47mm}
+{
+
+\begin{wrapfigure}{r}{37mm}
+\vskip-8mm
 \centering
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(3mm)]{pics/geom-calc(1)}
-\lbl[r]{0,22;$A$}
-\lbl[l]{42,22;$B$}
-\lbl[t]{9,20;$D$}
-\lbl[rb]{9,38;$C$}
-\end{lpic}
+\includegraphics{mppics/pic-286}
 \end{wrapfigure}
 
-Using this diagram, one should guess a compass-and-ruler constructions 
-which produce segments of lengths
-$\sqrt{a\cdot b}$ and $\tfrac {a^2}b$.
+Using this diagram, one should guess a solution of the following exercise.
 
+\begin{thm}{Exercise}\label{ex:a2/b}
+Given two line segments with lengths $a$ and $b$, give a ruler-and-compass construction of a segments with lengths $\tfrac {a^2}b$ and $\sqrt{a\cdot b}$.
+\end{thm}
 
-For example, to construct  $\sqrt{a\cdot b}$, do the following:
-(1) construct points $A$, $B$, and $D\in [AB]$
-such that $AD=a$ and $BD=b$;
-(2) construct the circle $\Gamma$ on the diameter $[AB]$;
-(3) draw the line $\ell$ thru $D$ perpendicular to $(AB)$; 
-(4) let $C$ be an intersection of $\Gamma$ and~$\ell$.
-Then $DC= \sqrt{a\cdot b}$.
+}
 
 Taking $1$ for $a$ or $b$ above, we can produce 
 $\sqrt a$, $a^2$, $\tfrac1b$.
@@ -244,10 +239,9 @@ In the next section, we discuss similar but simpler examples of impossible const
 
 {
 \begin{wrapfigure}[5]{r}{26mm}
-%\begin{lpic}[t(-8mm),b(0mm),r(0mm),l(0mm)]{pics/ugolnik(1)}
+\vskip-8mm
 \centering
-\begin{lpic}[t(-8mm),b(0mm),r(0mm),l(0mm)]{mppics/pic-1}
-\end{lpic}
+\includegraphics{mppics/pic-288}
 \end{wrapfigure}
 
 A set square is a construction tool shown on the picture ---
@@ -361,7 +355,7 @@ which sends the given circle $\Gamma$ to a circle $\Gamma'$ such that the center
 
 Let $\Gamma$ be a circle which lies in the plane $\Pi$ in the Euclidean space.
 
-By Theorem~\ref{thm:inverion-3d}, 
+By Theorem~\ref{thm:inversion-3d}, 
 the inverse of a circle in a sphere is a circle or a line.
 Fix a sphere $\Sigma$ with the center $O$ so that the inversion $\Gamma'$ of $\Gamma$
 is a circle and the plane $\Pi'$ containing $\Gamma'$ is not parallel to $\Pi$;
@@ -377,25 +371,14 @@ It follows that the perspective projection $\Pi\to \Pi'$ with center at $O$ send
 In this section we describe a powerful trick that can be used in the constructions only with ruler.
 
 Assume $\Gamma$ is a circle in the plane and $P\notin \Gamma$.
+\begin{figure}[h!]
+\centering
+\includegraphics{mppics/pic-290}
+\end{figure}
 Draw two lines $x$ and $y$ thru $P$ which intersect $\Gamma$ at two pairs of points $X$, $X'$ and $Y$, $Y'$.
 Let $Z=(XY)\cap(X'Y')$ and $Z'=(XY')\cap(X'Y)$.
 Consider the line $p=(ZZ')$.
-\begin{figure}[h!]
-\centering
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/polar(1)}
-\lbl[rb]{10,32;$\Gamma$}
-\lbl[t]{60,12.5;$P$}
-\lbl[r]{29.5,7;$p$}
-\lbl[rt]{14,45;$x$}
-\lbl[t]{20,10.5;$y$}
-\lbl[b]{29,39;$X$}
-\lbl[bl]{37,33;$X'$}
-\lbl[b]{8,13;$Y$}
-\lbl[bl]{42,14;$Y'$}
-\lbl[l]{36.5,44;$Z$}
-\lbl[r]{31.5,28;$Z'$}
-\end{lpic}
-\end{figure}
+
 
 The following claim will be used in the constructions without a proof.
 
@@ -420,6 +403,12 @@ Come up with a ruler-only construction of the tangent lines to the given circle 
 \begin{thm}{Exercise}\label{ex:concentric-circ}
 Assume two concentric circles $\Gamma$ and $\Gamma'$ are given.
 Construct the common center of $\Gamma$ and $\Gamma'$ with a ruler only.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:proj-perp}
+Assume a line $\ell$ and a circle $\Gamma$ with its center $O$ are given.
+Suppose $O\notin \ell$.
+Construct a perpendicular from $O$ on $\ell$ with a ruler only.
 \end{thm}
 
 \addtocontents{toc}{\protect\end{quote}}

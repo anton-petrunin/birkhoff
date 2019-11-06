@@ -529,12 +529,6 @@ there is a unique circline passing thru $P$, $Q$, and~$P'$.
 Hence the result.
 \qeds
 
-\begin{thm}{Exercise}\label{ex:cline-perp-to-two}
-Let $\Omega_1$ and $\Omega_2$ be two distinct circles in the Euclidean plane.
-Assume that the point $P$ does not lie on $\Omega_1$ nor on~$\Omega_2$.
-Show that there is a unique circline passing thru $P$ which is perpendicular to $\Omega_1$ and~$\Omega_2$.
-\end{thm}
-
 \begin{thm}{Exercise}\label{ex:inscribed+inv}
 Let $P$, $Q$, $P'$, and $Q'$ be points in the Euclidean plane.
 Assume $P'$ and $Q'$ are inverses of $P$ and $Q$ correspondingly.
@@ -554,15 +548,21 @@ Assume that a circle $\Gamma$ is perpendicular to $\Omega_1$ and $\Omega_2$.
 Show that $\Gamma\perp\Omega_3$.
 \end{thm}
 
-\begin{thm}{Exercise}\label{ex:construction-perp-clines}
-Assume you have two construction tools:
-the \index{circumtool}\emph{circumtool} which constructs a circline thru three given points, 
-and a tool which constructs an inverse of a given point in a given circle.
+Let us consider two new construction tools:
+the \index{circum-tool}\emph{circum-tool} that constructs a circline thru three given points, 
+and the \index{inversion-tool}\emph{inversion-tool} --- a tool that constructs an inverse of a given point in a given circline.
 
-Assume that a point $P$ does not lie on the two circles $\Omega_1$, $\Omega_2$.
-Using only the two given tools,
-construct a circline $\Gamma$ that passes thru $P$, 
+\begin{thm}{Exercise}\label{ex:construction-perp-clines}
+Given  two circles $\Omega_1$, $\Omega_2$ and a point $P$ that does not lie on the circles,
+use only circum-tool and inversion-tool to construct a circline $\Gamma$ that passes thru $P$, 
 and perpendicular to both $\Omega_1$ and $\Omega_2$.
+\end{thm}
+
+\begin{thm}{Advanced exercise}\label{ex:3-construction-perp-clines}
+Given  three disjoint circles $\Omega_1$, $\Omega_2$ and $\Omega_3$,
+use only circum-tool and inversion-tool to construct a circline $\Gamma$ that perpendicular to each circle $\Omega_1$, $\Omega_2$, and $\Omega_3$.
+
+Think what to do if two of the circles intersect.
 \end{thm}
 
 \section*{Angles after inversion}
@@ -655,8 +655,6 @@ By Theorem~\ref{lem:inverse-4-angle}\textit{\ref{lem:inverse-4-angle:angle}},
 \end{align*}
 and hence the result.\qeds
 
-%(???
-
 \begin{thm}{Corollary}\label{cor:invese-comp}
 Let $P$ be the inverse of point $Q$ in a circle $\Gamma$.
 Assume that $P'$, $Q'$, and $\Gamma'$ 
@@ -664,10 +662,10 @@ are the inverses of  $P$, $Q$, and $\Gamma$ in another circle $\Omega$.
 Then $P'$ is the inverse  of $Q'$ in~$\Gamma'$.
 \end{thm}
 
-%???)
+{
 
 \begin{wrapfigure}{r}{45mm}
-\vskip-4mm
+\vskip-6mm
 \centering
 \includegraphics{mppics/pic-178}
 \end{wrapfigure}
@@ -687,5 +685,8 @@ Clearly, $\Delta_1'$ meets $\Delta_2'$ at $P'$ and~$Q'$.
 By Theorem~\ref{thm:angle-inversion},  $\Delta_1'\perp\Gamma'$ and $\Delta_2'\z\perp\Gamma'$.
 By Corollary~\ref{cor:perp-inverse-clines}, $P'$ is the inverse of $Q'$ in~$\Gamma'$.
 \qeds
+
+}
+
 
 \addtocontents{toc}{\protect\end{quote}}

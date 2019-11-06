@@ -1,3 +1,93 @@
+\begin{thm}{Advanced exercise}\label{ex:area-affine}
+Show that for any affine transformation $\beta$ there is a constant $k>0$
+such that the equality 
+\[\area[\beta(\solidtriangle)]=k\cdot\area\solidtriangle.\]
+holds for any solid triangle~$\solidtriangle$.
+
+Moreover, if $\beta$ has the matrix form $\left(\begin{smallmatrix}
+x\\ y
+\end{smallmatrix} \right)
+  \mapsto
+  \left(\begin{smallmatrix}
+a&b\\ c&d
+\end{smallmatrix} \right)
+  \cdot
+  \left(\begin{smallmatrix}
+x\\ y
+\end{smallmatrix} \right)
+  +
+\left(\begin{smallmatrix}
+v\\ w
+\end{smallmatrix} \right)$,
+then 
+\[k=|\det\left(\begin{smallmatrix}
+a&b\\ c&d
+\end{smallmatrix} \right)|=|a\cdot d-b\cdot c|.\]
+
+\end{thm}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{thm}{Exercise}\label{ex:commuting inversions}
+Show that two distinct inversions commute if and only if their circles are perpendicular.
+That is, if $f$ and $g$ are inversions in distinct circles $\Gamma$ and $\Delta$, then 
+$f\circ g=g\circ f$ implies that $\Gamma\perp\Delta$.
+\end{thm}
+
+
+
+
+
+
+
+
+
+
+
+\begin{thm}{Exercise}\label{ex:cline-perp-to-two}
+Let $\Omega_1$ and $\Omega_2$ be two distinct circles in the Euclidean plane.
+Assume that the point $P$ does not lie on $\Omega_1$ nor on~$\Omega_2$.
+Show that either (1) there is a unique circline passing thru $P$ which is perpendicular to $\Omega_1$ and~$\Omega_2$ or (2) any circline passing thru $P$ and perpendicular to $\Omega_1$ is also perpendicular $\Omega_2$.
+\end{thm}
+
+
+\parbf{Exercise~\ref{ex:cline-perp-to-two}.}
+Let $P_1$ and $P_2$ be the inverses of $P$ 
+in $\Omega_1$ and~$\Omega_2$.
+
+Suppose a circline passes thru $P$.
+Apply Corollary~\ref{cor:perp-inverse} and Theorem~\ref{thm:perp-inverse} to show that
+$\Gamma\perp\Omega_i$ if and only if $\Gamma\ni P_i$.
+Conclude that if $P_1=P_2$, then $\Gamma\perp\Omega_1$ if and only if $\Gamma\perp\Omega_2$.
+
+If $P_1\ne P_2$; then the points $P$, $P_1$, and $P_2$ 
+are mutually distinct.
+Use Theorem~\ref{thm:circumcenter}, to show that there is a unique circline $\Gamma$ which passes
+thru $P$, $P_1$, and~$P_2$.
+Conclude that $\Gamma$ is a unique circline satisfying the assumptions.
+
+
+
+
+
+
+
+
+
 \begin{thm}{Proposition}\label{prop:arc(angle=angle)}
 A point $D$ lies on the arc $ABC$ if and only if 
 $$\measuredangle ADC= \measuredangle ABC$$
@@ -3551,7 +3641,7 @@ Adding these two identities, we get the result.
 
 
 
-\begin{thm}{Exercise}\label{ex:3-inverions}
+\begin{thm}{Exercise}\label{ex:3-inversions}
 Consider the three inversions
 in the circles centered at $O$ and radii $r_1$, $r_2$ and $r_3$.
 Show that the composition of these three inversions is an inversion in a circle centered at $O$.
@@ -3649,7 +3739,7 @@ and  $AZ_2A'$ is tangent to arc $A'B_2'C_2'$ at $A'$.
 From Exercise~\ref{ex:two-arcs}, the result follows.
 
 The remaining special case $A\in\Omega$ is left to the reader;
-see Exercise~\ref{ex:3-inverions} for a hint.
+see Exercise~\ref{ex:3-inversions} for a hint.
 \qeds
 
 
