@@ -49,16 +49,16 @@ The arcs of hyperbolic lines will be called {}\emph{hyperbolic segments} or \ind
 An h-segment with endpoints $P$ and $Q$ will be denoted by~$[PQ]_h$.
 
 The subset of an h-line on one side from a point will be called a {}\emph{hyperbolic half-line} (or \index{h-half-line}\emph{h-half-line}).
-More precisely, an h-half-line is an intersection of the h-plane with arc which perpendicular to the absolute with only one endpoint in the h-plane.
+More precisely, an h-half-line is an intersection of the h-plane with arc perpendicular to the absolute that has exactly one of its endpoints in the h-plane.
 An h-half-line starting at $P$ and passing thru $Q$ will be denoted by~$[PQ)_h$.
 
-If $\Gamma$ is the circle containing the h-line $(PQ)_h$, then the points of intersection of $\Gamma$ with the absolute are called 
+If $\Gamma$ is the circline containing the h-line $(PQ)_h$, then the points of intersection of $\Gamma$ with the absolute are called 
 \index{point!ideal point}\index{ideal point}\emph{ideal points} of~$(PQ)_h$.
 (Note that the ideal points of an h-line do not belong to the h-line.)
 
 An ordered triple of h-points, say $(P,Q,R)$ will be called \emph{h-triangle $PQR$} and denoted by \index{21@$\triangle_h$}$\triangle_h P Q R$.
 
-So far, $(PQ)_h$ is just a subset of the h-plane;
+Let us point out, that so far an h-line $(PQ)_h$ is just a subset of the h-plane;
 below we will introduce h-distance 
 and later we will show that $(PQ)_h$ is a line for the h-distance in the sense of the Definition~\ref{def:line}. 
 
@@ -78,7 +78,7 @@ if and only if the line $(PQ)$ pass thru the center of the absolute.
 \parbf{Hyperbolic distance.}\label{h-dist}
 Let $P$ and $Q$ be distinct h-points;
 let $A$ and $B$ denote the ideal points of $(PQ)_h$.
-Without loss of generality, we may assume that on the Euclidean circle containing the h-line $(PQ)_h$, the points $A,P,Q,B$ appear in the same order.
+Without loss of generality, we may assume that on the Euclidean circline containing the h-line $(PQ)_h$, the points $A,P,Q,B$ appear in the same order.
 
 Consider the function 
 $$\delta(P,Q)\df\frac{AQ\cdot PB}{AP\cdot QB}.$$
@@ -88,7 +88,7 @@ Set $\delta(P,P)=1$ for any h-point~$P$.
 Let us define h-distance as the logarithm of $\delta$; that is,
 $$PQ_h\df\ln[\delta(P,Q)].$$
 
-The proof that $PQ_h$ is a metric on the h-plane will be given below.
+The proof that $PQ_h$ is a metric on the h-plane will be given later.
 For now it is just a function which returns a real value $PQ_h$ for any pair of h-points $P$ and~$Q$.
 
 \begin{thm}{Exercise}\label{ex:h-dist-eq}
@@ -166,7 +166,7 @@ The following observation says that the map $X\mapsto X'$ respects all the notio
 Together with the lemma above, it implies that in any problem which is formulated entirely {}\emph{in h-terms} we can assume that a given h-point lies in the center of the absolute.
 
 \begin{thm}{Main observation}\label{thm:main-observ}
-The map $X\mapsto X'$ described above is a bijection of the h-plane to itself. 
+The map $X\mapsto X'$ described above is a bijection from the h-plane to itself. 
 Moreover, for any h-points $P$, $Q$, $R$ such that $P\ne Q$ and $Q\ne R$, the following conditions hold:
 \begin{enumerate}[(a)]
 \item\label{h-line-to-hline} The h-line $(PQ)_h$, h-half-line $[PQ)_h$, and h-segment $[PQ]_h$ are transformed into $(P'Q')_h$, $[P'Q')_h$, and $[P'Q']_h$ correspondingly.
@@ -181,7 +181,8 @@ It is instructive to compare this observation with Proposition~\ref{prop:reflect
 
 \parit{Proof.}
 According to Theorem~\ref{thm:perp-inverse}, the map sends the absolute to itself. 
-Note that the points on $\Gamma$ do not move, it follows that points inside of the absolute remain inside after the mapping and the other way around. 
+Note that the points on $\Gamma$ do not move, it follows that points inside of the absolute remain inside after the mapping.
+Whence the $X\mapsto X'$ is a bijection from the h-plane to itself.
 
 
 Part~\textit{(\ref{h-line-to-hline})} follows from \ref{thm:inverse-cline} and \ref{thm:angle-inversion}.
@@ -191,12 +192,6 @@ Part~\textit{(\ref{h-reflect})} follows from Theorem~\ref{lem:inverse-4-angle}.
 Part~\textit{(\ref{h-angle-mes})} follows from Theorem~\ref{thm:angle-inversion}.
 \qeds
 
-
-\begin{thm}{Exercise}\label{ex:h-reflection}
-Let $\Gamma$ be a circle which is perpendicular to the absolute and let $Q$ be an h-point lying on~$\Gamma$.
-Assume $P$ is an h-point and $P'$ is its inversion in ~$\Gamma$.
-Show that $PQ_h=P'Q_h$.
-\end{thm}
 
 \begin{thm}{Lemma}\label{lem:O-h-dist}
 Assume that the absolute is a unit circle centered at~$O$.
@@ -211,6 +206,9 @@ x&=\frac{e^y-1}{e^y+1}.
 \end{align*}
  
 \end{thm}
+
+Observe that according to lemma, $OP_h\to \infty$ as $OP\to 1$.
+That is if $P$ approaches absolute in Euclidean sense, it escapes to infinity in the h-sense.
 
 \begin{wrapfigure}[6]{o}{38mm}
 \vskip-4mm
@@ -300,8 +298,8 @@ denote it by $\Delta_\rho$.
 \includegraphics{mppics/pic-196}
 \end{wrapfigure}
 
-If $P\ne O$, by Lemma~\ref{lem:P-->O} and the main observation (\ref{thm:main-observ})
- there is an inversion that maps h-plane to itself and $O\mapsto P$.
+If $P\ne O$, then by Lemma~\ref{lem:P-->O} and the main observation (\ref{thm:main-observ})
+there is inversion that respects all h-notions and sends $O\mapsto P$.
 
 Let $\Delta_\rho'$ be the inverse of $\Delta_\rho$.
 Since the inversion preserves the h-distance,
@@ -500,7 +498,7 @@ we may assume that $O$ is the center of the absolute.
 In this case, for any h-point $P\z\ne O$, the h-half-line
 $[OP)_h$ is the intersection of the Euclidean half-line $[OP)$ with h-plane.
 Hence the claims \ref{clm:h2a} and \ref{clm:h2b} 
-follow from the corresponding axioms of the Euclidean plane.
+follow from the axioms \ref{def:birkhoff-axioms:2a} and \ref{def:birkhoff-axioms:2b} of the Euclidean plane.
 \qeds
 
 The following claim says that
@@ -555,7 +553,7 @@ Q' P'_h&=Q P_h, & Q' R'_h&= Q R_h &&\text{and}
 
 \parit{Proof.}
 Applying the main observation, 
-we can assume that both $Q$ and $Q'$ coincide with the center of the absolute.
+we can assume that $Q$ and $Q'$ coincide with the center of the absolute; in particular $Q=Q'$.
 In this case 
 $$\measuredangle P' Q R'=\measuredangle_h P' Q R'=\pm\measuredangle_h P Q R=\pm\measuredangle P Q R.$$
 Since 

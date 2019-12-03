@@ -64,10 +64,8 @@ Use ruler and parallel tool to construct the center of the given circle.
 \section*{Matrix form}
 \addtocontents{toc}{Matrix form.}
 
-Since the lines are defined in terms of metric;
-any motion of Euclidean plane is also an affine transformation.
-
-Let us describe an example of an affine transformation which is not a motion.
+Since the lines are defined in terms of metric, any motion of Euclidean plane is also an affine transformation.
+the following theorem provides more examples of an affine transformation which is not a motion.
 
 Fix a coordinate system on the Euclidean plane.
 Let us use the column notation for the coordinates;
@@ -75,23 +73,8 @@ that is, we will write $\left(\begin{smallmatrix}
 x\\y
 \end{smallmatrix} \right)$ instead of $(x,y)$.
 
-As it follows from the theorem below,
-the so called {}\emph{shear mapping} $\left(\begin{smallmatrix}
-x\\ y
-\end{smallmatrix} \right)\mapsto \left(\begin{smallmatrix}
-x+k\cdot y\\ y
-\end{smallmatrix} \right)$ is an affine transformation.
-The shear mapping can change the angle between vertical and horizontal lines almost arbitrary.
-The latter can be used to prove impossibility of some constructions with a ruler and a parallel tool;
-here is one example.
-
-\begin{thm}{Exercise}\label{ex:affine-perp}
-Show that with a ruler and a parallel tool one cannot construct a line perpendicular to a given line.
-\end{thm}
-
 \begin{thm}{Theorem}\label{thm:affine=linear}
-A map $\beta$ from the plane to itself
-is an affine transformation if and only if 
+Any map 
 \[\beta\:\left(\begin{smallmatrix}
 x\\ y
 \end{smallmatrix} \right)
@@ -117,13 +100,114 @@ for a fixed invertible matrix $\bigl(\begin{smallmatrix}
 a&b\\ c&d
 \end{smallmatrix} \bigr)$ and a vector $\bigl(\begin{smallmatrix}
 v\\ w
+\end{smallmatrix} \bigr)$ defines an affine transformation of the Euclidean plane.
+\end{thm}
+
+\parit{Proof.}
+Recall that matrix 
+$\left(\begin{smallmatrix}
+a&b\\ c&d
+\end{smallmatrix} \right)$
+is invertible if
+$$\det\left(\begin{smallmatrix}
+a&b\\ c&d
+\end{smallmatrix} \right)
+=a\cdot d-b\cdot c\ne 0;$$
+in this case the matrix 
+\[\tfrac{1}{a\cdot d-b\cdot c}
+  \cdot\left(\begin{smallmatrix}
+d&-b\\ -c&a
+\end{smallmatrix} \right)\] 
+is the inverse of 
+$\left(\begin{smallmatrix}
+a&b\\ c&d
+\end{smallmatrix} \right)$.
+
+Assume that the map $\beta$ is described by \ref{eq:affine=linear}.
+Note that
+\[\left(\begin{smallmatrix}
+x\\ y
+\end{smallmatrix} \right)
+\mapsto
+  \tfrac{1}{a\cdot d-b\cdot c}
+  \cdot\left(\begin{smallmatrix}
+d&-b\\ -c&a
+\end{smallmatrix} \right)
+\cdot
+\left(\begin{smallmatrix}
+x-v\\ y-w
+\end{smallmatrix} \right).
+\eqlbl{eq:beta-inv}
+\] 
+is inverse of~$\beta$.
+In particular, $\beta$ is a bijection.
+
+Any line in the plane is given by equation
+\[p\cdot x+q\cdot y+r=0,\eqlbl{ax+by+c=0}\]
+where $p\ne 0$ or $q\ne 0$ (see Exercise~\ref{ex:line-coord}).
+Let us find $\left(\begin{smallmatrix}
+x\\ y
+\end{smallmatrix} \right)$ from its $\beta$-image by formula \ref{eq:beta-inv} and substitute the result in \ref{ax+by+c=0}.
+We will get an equation of the image of the line.
+The equation has the same type as \ref{ax+by+c=0}, with different constants $p$, $q$, and $r$; 
+in particular, it describes a line.
+
+That is, $\beta$ is a bijection of the plane that maps lines to lines.
+\qeds
+
+The theorem implies 
+the so called {}\emph{shear mapping}
+\[\left(\begin{smallmatrix}
+x\\ y
+\end{smallmatrix} \right)\mapsto \left(\begin{smallmatrix}
+x+k\cdot y\\ y
+\end{smallmatrix} \right)\] is an affine transformation.
+The shear mapping can change the angle between vertical and horizontal lines almost arbitrary.
+The latter can be used to prove impossibility of some constructions with a ruler and a parallel tool;
+here is one example.
+
+\begin{thm}{Exercise}\label{ex:affine-perp}
+Show that with a ruler and a parallel tool one cannot construct a line perpendicular to a given line.
+\end{thm}
+
+\section*{The fundamental theorem of affine geometry}
+\addtocontents{toc}{The fundamental theorem of affine geometry.}
+
+The fundamental theorem of affine geometry is a converse to Theorem~\ref{thm:affine=linear}.
+%proved by Christian von Staudt \cite{staudt}.
+
+\begin{thm}{Theorem}\label{thm:affine=linear2}
+Any affine transformation  $\beta$ of the Euclidean plane can written in a matrix form
+\[\beta\:\left(\begin{smallmatrix}
+x\\ y
+\end{smallmatrix} \right)
+  \mapsto
+  \left(\begin{smallmatrix}
+a&b\\ c&d
+\end{smallmatrix} \right)
+  \cdot
+  \left(\begin{smallmatrix}
+x\\ y
+\end{smallmatrix} \right)
+  +
+\left(\begin{smallmatrix}
+v\\ w
+\end{smallmatrix} \right)
+=\left(\begin{smallmatrix}
+a\cdot x+b\cdot y+v\\ 
+c\cdot x+d\cdot y+w 
+\end{smallmatrix} \right)
+\]
+for a fixed invertible matrix $\bigl(\begin{smallmatrix}
+a&b\\ c&d
+\end{smallmatrix} \bigr)$ and a vector $\bigl(\begin{smallmatrix}
+v\\ w
 \end{smallmatrix} \bigr)$.
 
 In particular, any affine transformation of Euclidean plane is continuous.
 \end{thm}
 
-In the proof of the ``only if'' part,
-we will use the following algebraic lemma:
+In the proof we will use the following algebraic lemma:
 
 \begin{thm}{Algebraic lemma}\label{lem:R-auto}
 Assume $f\:\mathbb{R}\to\mathbb{R}$ is a function such that for any $x,y\in\mathbb{R}$ we have
@@ -264,58 +348,7 @@ are identity functions
 and so is~$\gamma$.
 \qeds
 
-\parit{Proof of Theorem~\ref{thm:affine=linear}; ``if'' part.}
-Recall that matrix 
-$\left(\begin{smallmatrix}
-a&b\\ c&d
-\end{smallmatrix} \right)$
-is invertible if
-$$\det\left(\begin{smallmatrix}
-a&b\\ c&d
-\end{smallmatrix} \right)
-=a\cdot d-b\cdot c\ne 0;$$
-in this case the matrix 
-\[\tfrac{1}{a\cdot d-b\cdot c}
-  \cdot\left(\begin{smallmatrix}
-d&-b\\ -c&a
-\end{smallmatrix} \right)\] 
-is the inverse of 
-$\left(\begin{smallmatrix}
-a&b\\ c&d
-\end{smallmatrix} \right)$.
-
-Assume that the map $\beta$ is described by \ref{eq:affine=linear}.
-Note that
-\[\left(\begin{smallmatrix}
-x\\ y
-\end{smallmatrix} \right)
-\mapsto
-  \tfrac{1}{a\cdot d-b\cdot c}
-  \cdot\left(\begin{smallmatrix}
-d&-b\\ -c&a
-\end{smallmatrix} \right)
-\cdot
-\left(\begin{smallmatrix}
-x-v\\ y-w
-\end{smallmatrix} \right).
-\eqlbl{eq:beta-inv}
-\] 
-is inverse of~$\beta$.
-In particular, $\beta$ is a bijection.
-
-Any line in the plane is given by equation
-\[p\cdot x+q\cdot y+r=0,\eqlbl{ax+by+c=0}\]
-where $p\ne 0$ or $q\ne 0$ (see Exercise~\ref{ex:line-coord}).
-Let us find $\left(\begin{smallmatrix}
-x\\ y
-\end{smallmatrix} \right)$ from its $\beta$-image by formula \ref{eq:beta-inv} and substitute the result in \ref{ax+by+c=0}.
-We will get the equation of the image of the line.
-The equation has the same type as \ref{ax+by+c=0}, with different constants; 
-in particular, it describes a line.
-
-Therefore we proved that $\beta$ is an affine transformation.
-
-\parit{``Only if'' part.}
+\parit{Proof of \ref{thm:affine=linear2}.}
 Fix an affine transformation~$\alpha$.
 Set 
 \begin{align*}
@@ -396,8 +429,7 @@ we have
 \end{smallmatrix} \right).
 \end{align*}
 
-
-Consider the composition $\gamma\z=\alpha\circ \beta^{-1}$ is the identity map.
+Consider the composition $\gamma\z=\alpha\circ \beta^{-1}$.
 Note that $\gamma$ is an affine transformation which fix points $\left(\begin{smallmatrix}
 0\\ 0
 \end{smallmatrix} \right)$, 

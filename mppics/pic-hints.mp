@@ -437,6 +437,66 @@ label.bot (btex $C'$ etex, z.C);
 label.bot (btex $C''$ etex, z.CC+(2,0));
 endfig;
 
+beginfig(349)
+save u,n;
+u:=1cm;
+n:=4;
+
+
+z.l=(.5,.15);
+
+z.A=origin;
+z.B=(1,0)*u;
+z.C=z.B zscaled(1,1.5);
+z.D=z.B zscaled(0,1.2);
+
+z.CD=((z.D-z.C) zscaled z.l) +z.C;
+
+save a,b,c,d;
+path a,b,c,d;
+
+a=z.A--z.B;
+b=z.B--z.C;
+c=z.C..z.CD..z.D;
+d=z.D--z.A;
+
+picture abcd;
+abcd:= image(
+draw a;
+draw b;
+draw c;
+draw d reflectedabout(z.B,z.C);
+draw a reflectedabout(z.B,z.C);
+draw c reflectedabout(z.B,z.C);
+dOt z.A,z.B,z.C,z.D;
+whitelabel (btex $a$ etex, .5[z.A,z.B]);
+whitelabel (btex $a$ etex, .5[z.A,z.B] reflectedabout(z.B,z.C));
+whitelabel (btex $c$ etex, point 1 of c);
+whitelabel (btex $c$ etex, (point 1 of c) reflectedabout(z.B,z.C));
+whitelabel (btex $b$ etex rotated 90, .5[z.D,z.A]+(6,0)+z.B);
+whitelabel (btex $d$ etex rotated 90, .5[z.D,z.A]+(6,0));
+
+);
+
+draw d;
+
+for i=0 upto n: draw (abcd shifted (2*i*(z.B-z.A)));
+endfor
+;
+
+dOt z.A shifted (2*(n+1)*(z.B-z.A)),z.D shifted (2*(n+1)*(z.B-z.A));
+
+whitelabel(btex $d$ etex rotated 90, .5[z.D,z.A]+(6,0)+(2*(n+1)*(z.B-z.A)));
+
+label.bot (btex $A$ etex, z.A);
+label.bot (btex $B$ etex, z.B);
+label.top (btex $C$ etex, z.C);
+label.top (btex $D$ etex, z.D);
+
+mark_rt_angle_withsize(z.A,z.B,z.C,6);
+mark_rt_angle_withsize(z.D,z.A,z.B,6);
+endfig;
+
 
 beginfig(350)
 save u;

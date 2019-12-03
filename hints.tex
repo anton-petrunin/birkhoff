@@ -723,7 +723,7 @@ if $0<a\le b\le c\le a+c$.
 \parbf{Exercise~\ref{ex:line-coord}.} Let $M=(x,y)$. Note that $MA=MB$ if and only if
 \[(x-x_A)^2+(y-y_A)^2=(x-x_B)^2+(y-y_B)^2.\]
 To prove the first, simplify this equation.
-For the second part use that any line is a perpendicular bisector to some line segment.
+For the remaining parts use that any line is a perpendicular bisector to some line segment.
 
 \parbf{Exercise~\ref{ex:circle-coord}.} Rewrite the equation as 
 \[(x+\tfrac a2)^2+(y+\tfrac b2)^2=(\tfrac a2)^2+(\tfrac b2)^2-c\]
@@ -1197,10 +1197,36 @@ Use Exercise~\ref{ex:side-angle} and Proposition~\ref{prop:2sum}.
 
 Alternatively, use the same argument as in the solution of Exercise~\ref{ex:inside-outside}.
 
+\parbf{Exercise~\ref{ex:neutral-quadrilateral}.}
+Set $a=AB$, $b=BC$, $c=CD$ and $d=DA$; we need to show that $c\ge a$.
+
+\begin{figure}[h!]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-349}
+\end{figure}
+
+Mimic the proof of \ref{thm:3sum-a} for the shown fence made from copies of quadrilateral $ABCD$. 
+
 \parbf{Exercise~\ref{ex:defect}.}
 Note that 
 $|\measuredangle ADC|+|\measuredangle CDB|=\pi$.
 Then apply the definition of the defect.
+
+\parbf{Exercise~\ref{ex:defect=}.}
+Show that $\triangle AMX\cong \triangle BMC$. 
+Apply Exercise~\ref{ex:defect} to $\triangle ABC$ and $\triangle AXC$.
+
+
+\parbf{Exercise~\ref{ex:neutral-rectangle}.}
+Show that $B$ and $D$ lie on the opposite sides of $(AC)$.
+Conclude that $\defect(\triangle ABC)+\defect(\triangle CDA)=0$.
+Apply Theorem\ref{thm:3sum-a} to show that 
+\[\defect(\triangle ABC)=\defect(\triangle CDA)=0\]
+Use it to show that $\measuredangle CAB=\measuredangle ACD$ and $\measuredangle ACB=\measuredangle CAD$.
+By ASA, $\triangle ABC\cong\triangle CDA$, and, in particular, $AB=CD$.
+
+(Alternatively, you may apply Exercise~\ref{ex:neutral-quadrilateral}.)
 
 %\subsection*{Chapter~\ref{chap:poincare}}
 \refstepcounter{chapter}
@@ -1252,9 +1278,6 @@ hold if $0<a<\tfrac12$.
 
 \parbf{Exercise~\ref{ex:h-perp-unique}.} 
 Spell the meaning of terms ``perpendicular'' and ``h-line'' and then apply Exercise~\ref{ex:construction-perp-clines}.
-
-\parbf{Exercise~\ref{ex:h-reflection}.}
-Apply the main observation (\ref{thm:main-observ}\textit{\ref{h-reflect}}).
 
 \parbf{Exercise~\ref{ex:h-circle=circle}.}
 Let $X$ and $Y$ denote the points of intersections of $(OP)$ and~$\Delta_\rho'$.
@@ -1350,6 +1373,12 @@ Therefore, $\ln\left(1+\sqrt{2}\right)$ is the optimal upper bound.
 
 {
 
+\begin{wrapfigure}{r}{45mm}
+\vskip-2mm
+\centering
+\includegraphics{mppics/pic-352}
+\end{wrapfigure}
+
 \parbf{Exercise~\ref{ex:right-trig-horocycle}.}
 As usual, we assume that the absolute is a unit circle.
 
@@ -1361,14 +1390,11 @@ lie on a horocycle.
 Without loss of generality, we may assume that $Q$ is the center of the absolute.
 In this case $\measuredangle_hPQR=\measuredangle PQR=\pm\tfrac\pi2$ and $PQ=QR$.
 
-\begin{wrapfigure}{r}{45mm}
-\centering
-\includegraphics{mppics/pic-352}
-\end{wrapfigure}
-
 Note that Euclidean circle passing thru $P$, $Q$, and $R$ is tangent to the absolute.
 Conclude that $PQ=\tfrac1{\sqrt2}$. 
 Apply \ref{lem:O-h-dist} to find $PQ_h$.
+
+}
 
 \parbf{Exercise~\ref{ex:angle-preserving-hyp}.}
 Apply AAA-congruence condition (\ref{thm:AAA}).
@@ -1384,8 +1410,13 @@ Use that $e\z>2$ and in particular the function $r\mapsto e^{-r}$ is decreasing.
 
 \parbf{Exercise~\ref{ex:c+1>a+b}.}
 Apply the hyperbolic Pythagorean theorem and the definition of hyperbolic cosine.
+The following observations should help:
+\begin{itemize}
+ \item The function $x\mapsto e^x$ is increasing and the function $x\mapsto e^{-x}$ is decreasing.
+ \item Without loss of generality, we may assume that $a\le b\le c$; in this case 
+ \[-c\le a-b\le b-a\le c.\]
+\end{itemize}
 
-}
 
 %\subsection*{Chapter~\ref{chap:trans}}
 \refstepcounter{chapter}
@@ -1515,9 +1546,10 @@ To extend this bijection to the whole projective plane, assume that
 and (2) the ideal point given by the pencil of the lines $b\cdot x-a\cdot y=c$ for different values of $c$ corresponds to the line given by the equation $a\cdot x+b\cdot y=0$.
 
 \begin{wrapfigure}{r}{40mm}
-\vskip-0mm
+\vskip-4mm
 \centering
 \includegraphics{mppics/pic-356}
+\vskip-4mm
 \end{wrapfigure}
 
 \parbf{Exercise~\ref{ex:dual-pappus}.}
@@ -1595,11 +1627,6 @@ part \textit{(\ref{ex:oder:a})} and apply~\textit{(\ref{ex:oder:b})}.
 
 {
 
-\begin{wrapfigure}{r}{43mm}
-\vskip-6mm
-\centering
-\includegraphics{mppics/pic-358}
-\end{wrapfigure}
 
 \parbf{Exercise~\ref{ex:2(pi/4)=pi/3}.} 
 Applying the Pythagorean theorem, we get that
@@ -1608,12 +1635,16 @@ $$
 $$
 Therefore, $AB_s=\tfrac\pi3$.
 
+\begin{wrapfigure}{r}{43mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-358}
+\end{wrapfigure}
+
 Alternatively, 
 look at the tessellation of a hemisphere on the picture; 
 it is made from 12 copies of $\triangle_s A B C$ and yet 4 equilateral spherical triangles.
 From the symmetry of this tessellation, it follows that $[AB]_s$ occupies $\tfrac16$ of the equator; that is, $AB_s=\tfrac\pi3$.
-
-}
 
 \parbf{Exercise~\ref{ex:cone}.}
 Consider the inversion of the base in a sphere with the center at the tip of the cone and apply Theorem~\ref{thm:inversion-3d}.
@@ -1622,6 +1653,8 @@ Consider the inversion of the base in a sphere with the center at the tip of the
 Note that points on $\Omega$ do not move.
 Moreover, the points inside $\Omega$ 
 are mapped outside of $\Omega$ and the other way around.
+
+}
 
 Further, note that this map sends circles to circles;
 moreover, the perpendicular circles are mapped to perpendicular circles.
@@ -1937,6 +1970,7 @@ Apply Schwarz--Pick theorem for a function $f$ such that $f(0)\z=0$ and then app
 {
 
 \begin{wrapfigure}{r}{37mm}
+\vskip-4mm
 \centering
 \includegraphics{mppics/pic-364}
 \end{wrapfigure}
@@ -1998,7 +2032,7 @@ to show that the third vertex is an irrational point.
 {
 
 \begin{wrapfigure}{r}{23mm}
-\vskip-4mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-368}
 \end{wrapfigure}
@@ -2033,6 +2067,7 @@ Note that these two lines are parallel.
 \begin{wrapfigure}{r}{45mm}
 \centering
 \includegraphics{mppics/pic-370}
+\vskip-6mm
 \end{wrapfigure} 
 
 Assume that the lines intersect the bigger circle at two pairs of points $X$, $X'$ and $Y$, $Y'$.

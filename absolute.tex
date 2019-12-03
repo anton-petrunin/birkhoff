@@ -52,16 +52,14 @@ Let $D$ denotes the reflection of $A$ across $(BC)$
 and $D'$ denotes the reflection of $A'$ across $(B'C')$.
 Note that 
 $$
-AD=2\cdot AC=2\cdot A'C'=A'D',
-$$
-$$
+AD=2\cdot AC=2\cdot A'C'=A'D',\qquad
 BD=BA=B'A'=B'D'.
 $$
 
 {
 
 \begin{wrapfigure}{r}{28mm}
-\vskip-4mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-180}
 \end{wrapfigure}
@@ -110,6 +108,7 @@ have the same sign.
 Therefore, in the Euclidean plane the theorem follows immediately from Theorem~\ref{thm:3sum}.
 
 \begin{wrapfigure}{o}{23mm}
+\vskip-1mm
 \centering
 \includegraphics{mppics/pic-182}
 \end{wrapfigure}
@@ -147,8 +146,9 @@ Note that one cannot apply the transversal property (\ref{thm:parallel-2}).
 Prove the \index{SAA congruence condition}\emph{side-angle-angle congruence condition} in the neutral geometry.
 
 
-In other words, let $\triangle ABC$ and $\triangle A'B'C'$ be two triangles in a neutral plane.
-Show that $\triangle ABC\cong \triangle A'B'C'$
+In other words, let $ABC$ and $A'B'C'$ be two triangles in a neutral plane;
+suppose that $\triangle A'B'C'$ is nondegenerate.
+Show that $\triangle ABC\z\cong \triangle A'B'C'$
 if 
 $$AB=A'B',
 \quad  
@@ -261,13 +261,9 @@ $\measuredangle A_iA_{i-1}C_i\z=\beta$ and $A_{i-1}C_i=a$ for each~$i$.
 
 By SAS, we have constructed $n$ congruent triangles 
 \begin{align*}
-\triangle ABC&=\triangle A_{1}A_0C_1\cong
-\\
-&\cong\triangle A_2A_{1}C_2\cong
-\\
-&\phantom{\cong\triangle A}\dots
-\\
-&\cong\triangle A_nA_{n-1}C_n.
+\triangle ABC&=\triangle A_{1}A_0C_1\cong\triangle A_2A_{1}C_2\cong
+\dots
+\cong\triangle A_nA_{n-1}C_n.
 \end{align*}
 
 
@@ -297,17 +293,25 @@ n\cdot c&=A_0A_n\le
 \end{align*}
 
 In particular, 
-$$c\le  d+\tfrac1n\cdot (a+b-d).$$
+\[c\le  d+\tfrac1n\cdot (a+b-d).\]
 Since  $n$ is arbitrary positive integer,
 the latter implies
-$$c\le d.$$
-
+$c\le d$.
 By Proposition~\ref{prop:angle-side}, 
-the latter is equivalent to 
-$$\gamma\le \delta.$$ 
+it is equivalent to 
+\[\gamma\le \delta.\] 
 From \ref{eq:gamma'}, 
 the theorem follows.
 \qeds
+
+\begin{thm}{Exercise}\label{ex:neutral-quadrilateral}
+Let $ABCD$ be a quadrilateral in the neutral plane.
+Suppose that the angles $DAB$ amd $ABC$ are right.
+Show that $AB\le CD$.
+\end{thm}
+
+\section*{Defect}
+\addtocontents{toc}{Defect.}
 
 The \index{defect of triangle}\emph{defect of triangle} $\triangle ABC$ is defined as 
 $$\defect(\triangle ABC)
@@ -321,9 +325,11 @@ the Euclidean plane has zero defect.
 {
 
 \begin{wrapfigure}{o}{24mm}
-\vskip-4mm
+\vskip-6mm
 \centering
 \includegraphics{mppics/pic-188}
+\vskip4mm
+\includegraphics{mppics/pic-189}
 \end{wrapfigure}
 
 \begin{thm}{Exercise}\label{ex:defect}
@@ -334,7 +340,27 @@ $$\defect(\triangle ABC)=\defect(\triangle ADC)+\defect(\triangle DBC).$$
 
 \end{thm}
 
+
+\begin{thm}{Exercise}\label{ex:defect=} Let $ABC$ be a nondegenerate triangle in the neutral plane.
+Suppose $X$ is the reflection of $C$ across the midpoint $M$ of $[AB]$.
+Show that 
+$$\defect(\triangle ABC)=\defect(\triangle AXC).$$
+\end{thm}
+
 }
+
+\vskip-2mm
+
+\begin{thm}{Exercise}\label{ex:neutral-rectangle}
+Suppose that $ABCD$ is a rectangle in a neutral plane;
+that is, $ABCD$ is a quadrilateral with all right angles.
+Show that $AB\z=CD$. 
+\end{thm}
+
+\begin{thm}{Advanced exercise}
+Show that if a neutral plane has a rectangle, then all its triangles have zero defect.
+\end{thm}
+
 
 \section*{How to prove that something\\ 
 cannot be proved}
@@ -445,10 +471,10 @@ in \cite[\S34]{lobachevsky-1840} he modeled the Euclidean plane in the hyperboli
 
 The proof of Beltrami is the subject of the next chapter. 
 
-\medskip
+%\medskip
 
 %Arguably, the discovery of hyperbolic geometry was the second main scientific discovery of the 19th century, trailing only the Mendel's laws. %Law of multiple proportions
-The discovery of hyperbolic geometry was one of the main scientific discoveries of the 19th century, on the same level are Mendel's laws and the law of multiple proportions.
+%The discovery of hyperbolic geometry was one of the main scientific discoveries of the 19th century, on the same level are Mendel's laws and the law of multiple proportions.
 
 \section*{Curvature}
 \addtocontents{toc}{Curvature.}

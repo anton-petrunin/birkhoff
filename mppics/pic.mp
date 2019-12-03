@@ -2846,6 +2846,31 @@ label.top (btex $C$ etex, z.C);
 label.bot (btex $D$ etex, z.D);
 endfig;
 
+beginfig(189)%copy of 86
+save u;
+u:=1cm;
+
+z.l=(.5,-.03);
+
+z.O=origin;
+z.X=(.8,.7)*u;
+z.Y=(.5,-.7)*u;
+
+draw -z.X--z.X..z.X+(z.Y-z.X) zscaled z.l..z.Y--(-z.Y)..-z.X+(-z.Y+z.X) zscaled z.l..cycle;
+draw -z.X..z.Y+(-z.Y-z.X) zscaled z.l..z.Y;
+
+rimmark2(z.O--z.X,z.O--(-z.X));
+rimmark(z.O--z.Y,z.O--(-z.Y));
+
+dOt z.X,-z.X,z.Y,-z.Y, z.O;
+
+label.rt (btex $M$ etex, z.O+(1,0));
+label.urt (btex $X$ etex, z.X);
+label.llft (btex $C$ etex, -z.X);
+label.lrt (btex $A$ etex, z.Y);
+label.ulft (btex $B$ etex, -z.Y);
+endfig;
+
 beginfig(190)
 save u;
 u:=1cm;
