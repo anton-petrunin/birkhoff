@@ -65,7 +65,7 @@ Use ruler and parallel tool to construct the center of the given circle.
 \addtocontents{toc}{Matrix form.}
 
 Since the lines are defined in terms of metric, any motion of Euclidean plane is also an affine transformation.
-the following theorem provides more examples of an affine transformation which is not a motion.
+The following theorem provides more examples of an affine transformation which is not a motion.
 
 Fix a coordinate system on the Euclidean plane.
 Let us use the column notation for the coordinates;
@@ -79,9 +79,7 @@ Any map
 x\\ y
 \end{smallmatrix} \right)
   \mapsto
-  \left(\begin{smallmatrix}
-a&b\\ c&d
-\end{smallmatrix} \right)
+  A
   \cdot
   \left(\begin{smallmatrix}
 x\\ y
@@ -94,9 +92,8 @@ v\\ w
 a\cdot x+b\cdot y+v\\ 
 c\cdot x+d\cdot y+w 
 \end{smallmatrix} \right)
-\eqlbl{eq:affine=linear}
 \]
-for a fixed invertible matrix $\bigl(\begin{smallmatrix}
+for a fixed invertible matrix $A=\bigl(\begin{smallmatrix}
 a&b\\ c&d
 \end{smallmatrix} \bigr)$ and a vector $\bigl(\begin{smallmatrix}
 v\\ w
@@ -104,58 +101,66 @@ v\\ w
 \end{thm}
 
 \parit{Proof.}
-Recall that matrix 
-$\left(\begin{smallmatrix}
-a&b\\ c&d
-\end{smallmatrix} \right)$
-is invertible if
-$$\det\left(\begin{smallmatrix}
-a&b\\ c&d
-\end{smallmatrix} \right)
-=a\cdot d-b\cdot c\ne 0;$$
-in this case the matrix 
-\[\tfrac{1}{a\cdot d-b\cdot c}
-  \cdot\left(\begin{smallmatrix}
-d&-b\\ -c&a
-\end{smallmatrix} \right)\] 
-is the inverse of 
-$\left(\begin{smallmatrix}
-a&b\\ c&d
-\end{smallmatrix} \right)$.
-
-Assume that the map $\beta$ is described by \ref{eq:affine=linear}.
+Let $A^{-1}$ be the inverse of the matrix $A$.
 Note that
 \[\left(\begin{smallmatrix}
 x\\ y
 \end{smallmatrix} \right)
 \mapsto
-  \tfrac{1}{a\cdot d-b\cdot c}
-  \cdot\left(\begin{smallmatrix}
-d&-b\\ -c&a
-\end{smallmatrix} \right)
+  A^{-1}
 \cdot
-\left(\begin{smallmatrix}
-x-v\\ y-w
-\end{smallmatrix} \right).
-\eqlbl{eq:beta-inv}
+\left((\begin{smallmatrix}
+x\\ y
+\end{smallmatrix} )
+-
+(\begin{smallmatrix}
+v\\ w
+\end{smallmatrix} )\right).
 \] 
 is inverse of~$\beta$.
 In particular, $\beta$ is a bijection.
 
-Any line in the plane is given by equation
-\[p\cdot x+q\cdot y+r=0,\eqlbl{ax+by+c=0}\]
-where $p\ne 0$ or $q\ne 0$ (see Exercise~\ref{ex:line-coord}).
-Let us find $\left(\begin{smallmatrix}
-x\\ y
-\end{smallmatrix} \right)$ from its $\beta$-image by formula \ref{eq:beta-inv} and substitute the result in \ref{ax+by+c=0}.
-We will get an equation of the image of the line.
-The equation has the same type as \ref{ax+by+c=0}, with different constants $p$, $q$, and $r$; 
-in particular, it describes a line.
+Recall that a line in the coordinate plane can be defined as a set of points 
+\[\left(\begin{smallmatrix}p\\q
+\end{smallmatrix} \right)\cdot t
++
+\left(\begin{smallmatrix}r\\s
+\end{smallmatrix} \right)\]
+for fixed vectors $\left(\begin{smallmatrix}p\\q
+\end{smallmatrix} \right)$. $\left(\begin{smallmatrix}r\\s
+\end{smallmatrix}\right)$ such that $\left(\begin{smallmatrix}p\\q
+\end{smallmatrix} \right)\ne 0$, and all $t\in\mathbb{R}$ (see Exercise~\ref{ex:line-coord}\textit{\ref{ex:line-coord:parameter}}).
 
-That is, $\beta$ is a bijection of the plane that maps lines to lines.
+Note that 
+\[\beta\left((\begin{smallmatrix}p\\q
+\end{smallmatrix} )\cdot t
++
+(\begin{smallmatrix}r\\s
+\end{smallmatrix} )\right)
+=
+(\begin{smallmatrix}p'\\q'
+\end{smallmatrix})\cdot t
++
+(\begin{smallmatrix}r'\\s'
+\end{smallmatrix} ),\]
+where 
+\[(\begin{smallmatrix}p'\\q'
+\end{smallmatrix})=A\cdot(\begin{smallmatrix}p\\q
+\end{smallmatrix})
+\quad\text{and}\quad
+(\begin{smallmatrix}r'\\s'
+\end{smallmatrix})=A\cdot(\begin{smallmatrix}r\\s
+\end{smallmatrix})+
+\left(\begin{smallmatrix}
+v\\ w
+\end{smallmatrix} \right).
+\]
+Since the matrix $A$ is invertible, $(\begin{smallmatrix}p'\\q'
+\end{smallmatrix})\ne 0$; 
+that is, $\beta$ maps lines to lines.
 \qeds
 
-The theorem implies 
+The theorem implies that for any real $k$, 
 the so called {}\emph{shear mapping}
 \[\left(\begin{smallmatrix}
 x\\ y
@@ -182,9 +187,7 @@ Any affine transformation  $\beta$ of the Euclidean plane can written in a matri
 x\\ y
 \end{smallmatrix} \right)
   \mapsto
-  \left(\begin{smallmatrix}
-a&b\\ c&d
-\end{smallmatrix} \right)
+  A
   \cdot
   \left(\begin{smallmatrix}
 x\\ y
@@ -197,8 +200,9 @@ v\\ w
 a\cdot x+b\cdot y+v\\ 
 c\cdot x+d\cdot y+w 
 \end{smallmatrix} \right)
+\eqlbl{eq:affine=linear}
 \]
-for a fixed invertible matrix $\bigl(\begin{smallmatrix}
+for a fixed invertible matrix $A=\bigl(\begin{smallmatrix}
 a&b\\ c&d
 \end{smallmatrix} \bigr)$ and a vector $\bigl(\begin{smallmatrix}
 v\\ w
