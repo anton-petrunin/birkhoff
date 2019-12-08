@@ -69,14 +69,6 @@ Consider the stereographic projection $\Pi\to \Sigma$ from the south pole~$S$.
 Note that it fixes $A$ and $B$;
 denote by $P'$ and $Q'$ the images of $P$ and~$Q$;
 
-
-
-\begin{wrapfigure}{o}{30mm}
-\centering
-\includegraphics{mppics/pic-258}
-\caption*{The plane~$\Lambda$.}
-\end{wrapfigure}
-
 According to Theorem~\ref{thm:inversion-3d}\textit{\ref{thm:inversion-3d:cross-ratio}},
 $$\frac{AQ\cdot BP}{QB\cdot PA}=\frac{AQ'\cdot BP'}{Q'B\cdot P'A}.\eqlbl{eq:(AB;PQ)=(AB;P'Q')}$$
 
@@ -89,7 +81,14 @@ Let $\Lambda$ denotes the plane;
 it contains the points $A$, $B$, $P'$, $\hat P$ and the circle $\Gamma=\Sigma\cap\Lambda$.
 (It also contains $Q'$ and $\hat Q$ but we will not use these points for a while.)
 
+{
 
+\begin{wrapfigure}{r}{30mm}
+\vskip-8mm
+\centering
+\includegraphics{mppics/pic-258}
+\caption*{The plane~$\Lambda$.}
+\end{wrapfigure}
 
 Note that 
 \begin{itemize}
@@ -100,6 +99,8 @@ $A,B,P'\in\Gamma$,
 \item $\hat P\in [AB]$
 \item $(P'\hat P)\perp (AB)$.
 \end{itemize}
+
+}
 
 Since $[AB]$ is the diameter of $\Gamma$, 
 by Corollary~\ref{cor:right-angle-diameter},
@@ -166,18 +167,35 @@ other things become more complicated.
 The h-lines in the projective model are chords of the absolute;
 more precisely, chords without its endpoints.
 
+This observation can be used to transfer statements about lines and points from Euclidean plane to the h-plane.
+As an example let us state a hyperbolic version of Pappus' theorem for h-plane.
+
+\begin{thm}{Hyperbolic Pappus' theorem}\label{thm:pappus-h}
+Assume that two triples of h-points $A$, $B$, $C$,
+and $A'$, $B'$, $C'$ in the h-plane are h-collinear.
+Suppose that the h-points $X$, $Y$, and $Z$ are defined by
+\begin{align*}
+X&=(BC')_h\cap(B'C)_h,
+&
+Y&=(CA')_h\cap(C'A)_h,
+&
+Z&=(AB')_h\cap(A'B)_h.
+\end{align*}
+Then the points $X$, $Y$, $Z$ are h-collinear.
+\end{thm}
+
+In the projective model, this statement follows immediately from the original Pappus' theorem \ref{thm:pappus}.
+The same can be done for Desargues' theorem \ref{thm:desargues}.
+
+On the other hand, note that it is not at all easy to prove this statement using the conformal model.
+
 \parbf{Circles and equidistants.}
 The h-circles and equidistants in the projective model are certain type of ellipses and their open arcs.
 
 It follows since the stereographic projection sends circles on the plane to circles on the unit sphere and the foot point projection of circle back to the plane is an ellipse.
 (One may define \index{ellipse}\emph{ellipse} as a foot point projection of a circle.)
 
-{
 
-\begin{wrapfigure}{r}{36mm}
-\centering
-\includegraphics{mppics/pic-264}
-\end{wrapfigure}
 
 \parbf{Distance.}
 Consider a pair of h-points $P$ and $Q$.
@@ -188,12 +206,21 @@ Then by Lemma~\ref{lem:P-hat-chord},
 $$PQ_h=\tfrac12\cdot\ln\frac{AQ\cdot BP}{QB\cdot PA},\eqlbl{eq:proj-h-dist}$$
 assuming the points $A, P, Q, B$ appear on the line in the same order.
 
-}
+{
+
+\begin{wrapfigure}{r}{36mm}
+\vskip-3mm
+\centering
+\includegraphics{mppics/pic-264}
+\end{wrapfigure}
 
 \parbf{Angles.}
 The angle measures in the projective model are very different from the Euclidean angles and it is hard to figure out by looking on the picture.\label{klein-angles}
-For example all the intersecting h-lines on the picture above %???
+For example all the intersecting h-lines on the picture 
 are perpendicular.
+
+}
+
 There are two useful exceptions:
 
 \begin{itemize}
@@ -234,7 +261,7 @@ Think how to prove the statement in this case.
 {
 
 \begin{wrapfigure}{r}{34mm}
-\vskip-6mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-266}
 \end{wrapfigure}
@@ -288,9 +315,10 @@ Assume we need to construct a line thru $P$ asymptotically parallel to the given
 
 If $A$ and $B$ are ideal points of $\ell$ in the projective model, 
 then we could simply draw the Euclidean line $(PA)$.
-However the ideal points do not lie in the h-plane, therefore there is no way to use them in the construction.
+However the ideal points do not lie in the h-plane; therefore there is no way to use them in the construction.
 
 In the following construction we assume that you know a compass-and-ruler construction of the perpendicular line; see Exercise~\ref{ex:construction-perpendicular}.
+\clearpage
 
 \begin{thm}{Bolyai's construction}
 \begin{enumerate}
@@ -339,9 +367,11 @@ correspondingly.
 
 Note that the Euclidean lines $(PQ)$, $(TR)$, and $(CB)$ are parallel.
 
-\begin{wrapfigure}{o}{50mm}
+\begin{wrapfigure}{o}{55mm}
+\vskip-2mm
 \centering
 \includegraphics{mppics/pic-270}
+\vskip2mm
 \end{wrapfigure}
 
 Therefore, 
@@ -351,9 +381,8 @@ In particular,
 
 It follows that
 \[\frac{AT}{AR}=\frac{AP}{AQ}=\frac{BR}{CT}=\frac{BQ}{CP}.\]
-In particular,
-\[\frac{AT\cdot CP}{TC\cdot PA}=\frac{AR\cdot BQ}{RB\cdot QA}.\]
-Applying the formula for h-distance in the projective model \ref{eq:proj-h-dist}, we get that $QR_h=PT_h$.
+In particular, $\tfrac{AT\cdot CP}{TC\cdot PA}=\tfrac{AR\cdot BQ}{RB\cdot QA}$.
+Applying the formula for h-distance \ref{eq:proj-h-dist}, we get that $QR_h=PT_h$.
 \qeds
  
 

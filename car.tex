@@ -234,8 +234,8 @@ In the next section, we discuss similar but simpler examples of impossible const
 
 %\clearpage%???
 
-\section*{Constructions with a set square}
-\addtocontents{toc}{Constructions with a set square.}
+\section*{Constructions with a set-square}
+\addtocontents{toc}{Constructions with a set-square.}
 
 {
 \begin{wrapfigure}[5]{r}{26mm}
@@ -244,7 +244,7 @@ In the next section, we discuss similar but simpler examples of impossible const
 \includegraphics{mppics/pic-288}
 \end{wrapfigure}
 
-A set square is a construction tool shown on the picture ---
+A set-square is a construction tool shown on the picture ---
 it can produce a line thru a given point
 which makes the angles
 $\tfrac\pi2$ or $\pm\tfrac\pi4$ 
@@ -252,7 +252,7 @@ to a given line and it can be also used as a ruler;
 that is, it can produce a line thru a given pair of points.
 
 \begin{thm}{Exercise}\label{ex:trisect-set-square}
-Trisect a given segment with a set square.
+Trisect a given segment with a set-square.
 \end{thm}
 
 
@@ -268,51 +268,62 @@ Then a point $X=(x,y)$ can be constructed using a set-square construction
 if and only if both coordinates $x$ and $y$ can be expressed from the integer numbers and $x_3$, $y_3$, $x_4$, $y_4,\z\dots,x_n$, $y_n$ using the arithmetic operations ``$+$'', ``$-$'', ``$\cdot$'', and ``$/$'' only. 
 \end{thm}
  
-Let us apply this theorem to show the impossibility of some constructions with a set square.
+Let us apply this theorem to show the impossibility of some constructions with a set-square.
 
-Note that if all the coordinates $x_3,y_3,\dots,x_n,y_n$ are rational numbers, then the theorem above implies that with a set square, one can only construct the points with rational coordinates.
+Note that if all the coordinates $x_3,y_3,\dots,x_n,y_n$ are rational numbers, then the theorem above implies that with a set-square, one can only construct the points with rational coordinates.
 A point with both rational coordinates is called \index{rational point}\emph{rational},
 and if at least one of the coordinates is irrational, then the point is called \index{irrational point}\emph{irrational}.
 
 \begin{thm}{Exercise}\label{ex:equilateral triangle}
 Show that an equilateral triangle in the Euclidean plane has at least one irrational point.
 
-Conclude that with a set square, one cannot construct an equilateral triangle.
+Conclude that with a set-square, one cannot construct an equilateral triangle with a given base.
 \end{thm}
 
+\section*{Verifications}
+\addtocontents{toc}{Verifications.}
+
+Suppose we need to verify that a given configuration is defined by a certain property. 
+Is it possible to do this task by a geometric construction with given tools?
+We assume that we can \emph{verify} that two constructed points coincide.
+
+Evidently if a configuration is constructible, then it is verifiable --- simply repeat the construction and check if result is the same.
+Some nonconstuctable configuration can be verifiable.
+For example, it does not pose a problem to verify that the given angle is trisected while it is impossible to trisect a given angle with ruler and compass.
+A regular 7-gon provides another example of that type --- it is easy to verify, while Gauss--Wantzel theorem states that it is impossible to construct with ruler and compass.
+
+Since we did not prove impossibility of angle trisection and Gauss--Wantzel theorem, the following example might be more satisfactory.
+It is based on Exercise~\ref{ex:equilateral triangle} which states that it is impossible to construct an equilateral with set-square only.
 
 \begin{thm}{Exercise}\label{ex:equilateral triangle-verify}
-Make a set-square construction which verifies if the given triangle is  equilateral.
-(We assume that we can ``verify'' if two constructed points coincide.) 
+Make a set-square construction verifying that a given triangle is equilateral.
 \end{thm}
 
+This observation leads to a source of impossible constructions in a stronger sense --- those that are not even not verifiable.
 
-\section*{More impossible constructions}
-\addtocontents{toc}{More impossible constructions.}
-
-In this section we discuss yet another source of impossible constructions. 
-
+The following example is closely related to Exercise~\ref{ex:circumtool}.
 Recall that a \index{circumtool}\emph{circumtool} produces a circle passing thru any given three points
 or a line if all three points lie on one line.
-Let us restate Exercise~\ref{ex:circumtool}.
 
-\parbf{Exercise.}
+
+\parbf{Problem.}
 \textit{Show that with a circumtool only,
-it is impossible to construct the center of a given circle~$\Gamma$.}
+it is impossible to verify that a given point is the center of a given circle~$\Gamma$. In particular it is impossible to construct the center with a circumtool only.}
 \medskip
 
 \parbf{Remark.}
 In geometric constructions, we allow to choose some free points,
-say any point on the plane, or a point on a constructed line, or a point which does not lie on a constructed line and so on.
+say any point on the plane, or a point on a constructed line, or a point which does not lie on a constructed line, 
+or a point on a given line that does not lie on a given circle, and so on.
 
-In principle, when you make such a free choice it is possible to mark the center of $\Gamma$ by accident.
+In principle, when you make such a free choice it is possible to make a right construction by accident.
 Nevertheless, we do not accept such a coincidence as true construction; 
 we say that a construction produces the center if it produces it for any free choices.
 
 
 \parit{Solution.}\label{page:solution-for-ex:circumtool}
 Arguing by contradiction, 
-assume we have a construction of the center. 
+assume we have a verifying construction. 
 
 Apply an inversion in a circle perpendicular to $\Gamma$ to the whole construction.
 According to Corollary~\ref{cor:perp-inverse-clines},
@@ -323,38 +334,36 @@ that is, a constriction with a different choice of free points.
 
 According to Exercise~\ref{ex:inv-center not=center-inv}, 
 the inversion sends the center of $\Gamma$ to another point.
-That is, following the same construction, we can end up at a different point --- a contradiction.
+However this construction claims that this another point is the center --- a contradiction.
 \qeds
-
-\begin{thm}{Exercise}\label{ex:center-verify}
-Show that there is no circumtool-only construction which verifies if the given point is the center of a given circle.
-(We assume that we can only ``verify'' if two constructed points coincide.) 
-\end{thm}
 
 A similar example of impossible constructions for a ruler and a parallel tool
  is given in Exercise~\ref{ex:affine-perp}.
  
-Let us discuss yet another example for a ruler-only construction.
+Let us discuss another example for a ruler-only construction.
 Note that ruler-only constructions are invariant with respect to the projective transformations. 
-In particular, to solve the following exercise, it is sufficient to construct a projective transformation which fixes two points $A$ and $B$ and moves its midpoint.
+In particular, to solve the following exercise, it is sufficient to construct a projective transformation that fixes two points and moves their midpoint.
 
 \begin{thm}{Exercise}\label{ex:midpoint-proj}
-Show that the midpoint of a given segment cannot be constructed with only a ruler.
+Show that there is no ruler-only construction verifying that a given point is a  midpoint of a given segment.
+In particular it is impossible to construct the midpoint with ruler.
 \end{thm}
 
 The following theorem is a stronger version of the exercise above.
 
 \begin{thm}{Theorem}\label{thm:circle-center-proj}
-The center of a given circle cannot be constructed with only a ruler.
+There is no ruler-only construction verifying that a given point is the center of a given circle.
+In particular it is impossible to construct the center with ruler.
 \end{thm}
 
+The proof uses the construction in Exercise~\ref{ex:cone}.
+
 \parit{Sketch of the proof.}
-It is sufficient to construct a projective transformation 
-which sends the given circle $\Gamma$ to a circle $\Gamma'$ such that the center of $\Gamma'$ is not the image of the center of~$\Gamma$.
-(Compare the construction with Exercise~\ref{ex:cone}.) 
+The same argument as in the problem above shows that 
+it is sufficient to construct a projective transformation 
+that sends the given circle $\Gamma$ to a circle $\Gamma'$ such that the center of $\Gamma'$ is not the image of the center of~$\Gamma$.
 
-Let $\Gamma$ be a circle which lies in the plane $\Pi$ in the Euclidean space.
-
+Choose a circle $\Gamma$ that lies in the plane $\Pi$ in the Euclidean space.
 By Theorem~\ref{thm:inversion-3d}, 
 the inverse of a circle in a sphere is a circle or a line.
 Fix a sphere $\Sigma$ with the center $O$ so that the inversion $\Gamma'$ of $\Gamma$
@@ -366,50 +375,27 @@ Note that  $Z'\z\notin(OZ)$.
 It follows that the perspective projection $\Pi\to \Pi'$ with center at $O$ sends $\Gamma$ to $\Gamma'$, but $Z'$ is not the image of~$Z$.
 \qeds
 
-\section*{Construction of a polar}
+\section*{Comparison of construction tools}
+\addtocontents{toc}{Comparison of construction tools.}
 
-In this section we describe a powerful trick that can be used in the constructions only with ruler.
+We say that one set of tools is \emph{stronger} than another if any point that can be constructed with the second set can be constructed with the first set alone.
+If it holds the other way as well, then we say that the two sets of tools are \emph{equivalent}. 
 
-Assume $\Gamma$ is a circle in the plane and $P\notin \Gamma$.
-\begin{figure}[h!]
-\centering
-\includegraphics{mppics/pic-290}
-\end{figure}
-Draw two lines $x$ and $y$ thru $P$ which intersect $\Gamma$ at two pairs of points $X$, $X'$ and $Y$, $Y'$.
-Let $Z=(XY)\cap(X'Y')$ and $Z'=(XY')\cap(X'Y)$.
-Consider the line $p=(ZZ')$.
+For example \emph{Mohr--Mascheroni theorem} states that compass alone is equivalent to compass and ruler.
 
+To prove Mohr--Mascheroni theorem, 
+it is sufficient to perform the following two constructions using compass alone:
+(1) given four points $X$, $Y$, $P$ and $Q$, construct the intersection of the lines $(XY)$ and $(PQ)$
+and (2) given four points $X$, $Y$, and a circle $\Gamma$, construct the intersection of the lines $(XY)$ and $\Gamma$.
+Indeed, once it is done all the steps in a construction with compass and ruler can be performed with compass alone.
+Hence the theorem will follow.
 
-The following claim will be used in the constructions without a proof.
-
-\begin{thm}{Claim}\label{clm:polar}
-The constructed line $p=(ZZ')$ does not depend on the choice of the lines $x$ and $y$.
-Moreover, $P\mapsto p$ is a duality (see page~\pageref{page:duality}).
+\begin{thm}{Exercise}\label{ex:midpoint-proj}
+Compare the following set of tools: (a) a ruler and compass, (b) a set-square, and (c) a ruler and a parallel tool.
 \end{thm}
 
-The line $p$ is called the polar of $P$ with respect to~$\Gamma$.
-The same way the point $P$ is called the polar of the line $p$ with respect to~$\Gamma$.
-
-
-
-\begin{thm}{Exercise}\label{ex:tangent ruler}
-Let $p$ be the polar line of point $P$ with respect to the circle~$\Gamma$.
-Assume that $p$ intersects $\Gamma$ at points $V$ and~$W$.
-Show that the lines $(PV)$ and $(PW)$ are tangent to~$\Gamma$.
-
-Come up with a ruler-only construction of the tangent lines to the given circle $\Gamma$ thru the given point $P\notin\Gamma$.
-\end{thm}
-
-\begin{thm}{Exercise}\label{ex:concentric-circ}
-Assume two concentric circles $\Gamma$ and $\Gamma'$ are given.
-Construct the common center of $\Gamma$ and $\Gamma'$ with a ruler only.
-\end{thm}
-
-\begin{thm}{Exercise}\label{ex:proj-perp}
-Assume a line $\ell$ and a circle $\Gamma$ with its center $O$ are given.
-Suppose $O\notin \ell$.
-Construct a perpendicular from $O$ on $\ell$ with a ruler only.
-\end{thm}
+Another classical example is the so called \emph{Poncelet--Steiner theorem};
+it states that compass and ruler is equivalent to ruler alone, provided that a single circle and its centre are given.
 
 \addtocontents{toc}{\protect\end{quote}}
 

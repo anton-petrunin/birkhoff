@@ -1422,15 +1422,6 @@ The following observations should help:
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
 
-\parbf{Exercise~\ref{ex:collinear=affine}.}
-Assume that a triple of noncollinear points $P$, $Q$, and $R$ are mapped to one line~$\ell$.
-Note that all three lines $(PQ)$, $(QR)$, and $(RP)$ are mapped to~$\ell$.
-Therefore, any line which connects two points on these three lines is mapped to~$\ell$.
-
-Note that any point in the plane lies on a line passing thru two distinct points on these three lines.
-Therefore, the whole plane is mapped to $\ell$.
-The latter contradicts that the map is a bijection.
-
 \parbf{Exercise~\ref{ex:affine-par}.}
 Assume the two distinct lines $\ell$ and $m$ 
 are mapped to the intersecting lines $\ell'$ and~$m'$.
@@ -1441,10 +1432,34 @@ By the definition of affine map, it has to lie on both $\ell$ and $m$;
 that is, $\ell$ and $m$ are intersecting.
 Hence the result.
 
+\parbf{Exercise~\ref{ex:afine-linear}.}
+In each case check that the map is a bijection and apply Exercise~\ref{ex:line-coord}.
+
+\parbf{Exercise~\ref{ex:collinear=affine}.}
+Choose a line $(AB)$.
+
+\begin{wrapfigure}{o}{20mm}
+\centering
+\includegraphics{mppics/pic-353}
+\end{wrapfigure}
+
+Assume that $X'\in (A'B')$ for some $X\notin(AB)$.
+Since $P\mapsto P'$ maps colliner points to collinear, 
+the three lines $(AB)$, $(AX)$, and $(BX)$ are mapped to~$(A'B')$.
+Further, any line that connects a pair of points on these three lines $(AB)$, $(AX)$, and $(BX)$ is mapped to~$(A'B')$.
+
+Note that any point $Z$ lies on a line passing thru two distinct points on these three lines.
+Therefore, $Z'\z\in(A'B')$; that is, the whole plane is mapped to $(A'B')$.
+The latter contradicts that the map is a bijection.
+
+By assumption, if $X\in (AB)$, then $X'\z\in (A'B')$.
+Form above the converse holds as well.
+Hence the bijection maps lines to lines, and the second statement follows.
+
 {
 
 \begin{wrapfigure}{r}{30mm}
-\vskip-11mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-354}
 \end{wrapfigure}
@@ -1456,12 +1471,12 @@ with a ruler and a parallel tool.
 
 Guess a construction from the diagram.
 
-}
-
 \parbf{Exercise~\ref{ex:R-hom}.}
 Let $O$, $E$, $A$, and $B$ denote the points with the coordinates $(0,0)$, $(1,0)$, $(a,0)$, and $(b,0)$ correspondingly.
 
-To construct a point $W$ with the coordinates $(0,a+b)$, try to construct two parallelograms $ABPQ$ and $BWPQ$.
+}
+
+To construct a point $W$ with the coordinates $(0,a+b)$, try to construct two parallelograms $OAPQ$ and $BWPQ$.
 
 To construct $Z$ with coordinates $(0,a\cdot b)$
 choose a line $(OE')\ne (OE)$
@@ -1480,13 +1495,18 @@ The center lies in the intersection of the obtained lines.
 
 \parbf{Exercise~\ref{ex:affine-perp}.}
 Assume a construction produces two perpendicular lines.
-Apply a shear mapping which changes the angle between the lines.
+Apply an affine transformation that changes the angle between the lines;
+it exists by Theorem~\ref{thm:fundamental-theorem-of-affine-geometry}.
 
 Note that it transforms the construction to the same construction for other free choices points.
 Therefore, this construction does not produce perpendicular lines in general
- (it might be the center only by coincidence).
+ (it might produce a perpendicular line only by a coincidence).
  
-\parbf{Exercise~\ref{ex:inversive-angle}.} Apply \ref{thm:angle-inversion} and \ref{thm:inversions-inversive}.
+\parbf{Exercise~\ref{ex:affine-continuous} and \ref{ex:affine-coordinates}.}
+Fix a coordinate system and apply Corollary~\ref{cor:affine-linear} for $O=(0,0)$, $X=(1,0)$ and $Y=(0,1)$.
+ 
+\parbf{Exercise~\ref{ex:inversive-angle}.}
+Apply \ref{thm:angle-inversion} and \ref{thm:inversions-inversive}.
  
 \parbf{Exercise~\ref{ex:reflection/inversive}.}
 Fix a line $\ell$.
@@ -1581,6 +1601,34 @@ A similar solution can be build on the dual Pappus' theorem,
 see Exercise~\ref{ex:dual-pappus}.
 
 For part \textit{(\ref{ex:dual-desargues-construction:b})}, apply one of the discussed theorems to construct a line parallel to the given one and then apply part \textit{(\ref{ex:dual-desargues-construction:a})}.
+
+\parbf{Exercise~\ref{ex:tangent ruler}.}
+The line $v$ polar to $V$ is tangent to~$\Gamma$.
+Since $V\in p$, by Claim~\ref{clm:polar}, we get that $P\in v$;
+that is, $(PV)=v$.
+Hence the statement follows.
+
+\parbf{Exercise~\ref{ex:concentric-circ}.}
+Choose a point $P$ outside of the bigger circle.
+Construct the lines dual to $P$ for both circles.
+Note that these two lines are parallel. 
+
+\begin{wrapfigure}{r}{45mm}
+\centering
+\includegraphics{mppics/pic-370}
+\vskip-6mm
+\end{wrapfigure} 
+
+Assume that the lines intersect the bigger circle at two pairs of points $X$, $X'$ and $Y$, $Y'$.
+Set $Z\z=(XY)\cap (X'Y')$.
+Note that the line $(PZ)$ passes thru the common center.
+
+The center is the intersection of $(PZ)$ and another line constructed the same way.
+
+\parbf{Exercise~\ref{ex:proj-perp}.} 
+Construct polar lines to two point on $\ell$.
+Denote by $L$ the intersection of these two lines.
+Note that $\ell$ is polar to $L$ and therefore $(OL)\perp \ell$.
 
 \parbf{Exercise~\ref{ex:finite-pp}.}
 Let $A$, $B$, $C$, and $D$ 
@@ -1706,15 +1754,11 @@ Let $N$, $O$, $S$, $P$, $P'$, and $\hat P$
 be as on the diagram on page 
 \pageref{pic:stereographic_projection-klein}.
 
-
-
-Set $x=OP$;
-note that $OQ=1/x$.
-Notice that 
-$\triangle NOP\sim \triangle NP'S\sim \triangle P'\hat PP$
+Note that $OQ=\tfrac1x$ and therefore we need to show that $O\hat P=2/(x+\tfrac1x)$.
+To do this, show and use that 
+$\triangle SOP\sim \triangle SP'N\sim \triangle P'\hat PP$
 and
-$2\cdot NO\z=NS$.
-Use it to show that $O\hat P=2\cdot x/(1+x^2)$ and make a conclusion.
+$2\cdot SO\z=NS$.
 
 \parbf{Exercise~\ref{ex:hex}.} Consider the bijection $P\z\leftrightarrow \hat P$ of the h-plane with absolute~$\Omega$.
 Note that $\hat P\in [A_iB_i]$ if and only if $P\in\Gamma_i$.
@@ -2020,7 +2064,7 @@ It remains to solve for $\frac{AC}{AB}$.
 Then construct a pentagon with the sides $PQ$ and diagonals $VW$.
 
 \parbf{Exercise~\ref{ex:trisect-set-square}.} 
-Note that with a set square we can construct a line parallel to given line thru the given point.
+Note that with a set-square we can construct a line parallel to given line thru the given point.
 It remains to modify the construction in Exercise~\ref{ex:midpoint-affine}.
 
 \parbf{Exercise~\ref{ex:equilateral triangle}.}
@@ -2032,7 +2076,7 @@ to show that the third vertex is an irrational point.
 {
 
 \begin{wrapfigure}{r}{23mm}
-\vskip-0mm
+\vskip-4mm
 \centering
 \includegraphics{mppics/pic-368}
 \end{wrapfigure}
@@ -2041,45 +2085,18 @@ to show that the third vertex is an irrational point.
 Observe that three perpendiculars on the diagram meet at one point if and only if the triangle is isosceles.
 Use this observation couple of times to verify that the given triangle is equilateral.
 
-\parbf{Exercise~\ref{ex:center-verify}.} Apply the same argument as in Exercise~\ref{ex:circumtool}.
-
 \parbf{Exercise~\ref{ex:midpoint-proj}.}
 Consider the perspective projection as in Exercise~\ref{ex:persect}.
 Let $A\z=(1,1,1)$, $B\z=(1,3,1)$, and $M\z=(1,2,1)$.
 Note that $M$ is the midpoint of $[AB]$.
 
-}
-
 Their images are $A'\z=(1,1,1)$, $B'\z=(\tfrac13,1,\tfrac13)$, and $M'\z=(\tfrac12,1,\tfrac12)$.
 Clearly, $M'$ is not the midpoint of~$[A'B']$.
 
-\parbf{Exercise~\ref{ex:tangent ruler}.}
-The line $v$ polar to $V$ is tangent to~$\Gamma$.
-Since $V\in p$, by Claim~\ref{clm:polar}, we get that $P\in v$;
-that is, $(PV)=v$.
-Hence the statement follows.
+}
 
-\parbf{Exercise~\ref{ex:concentric-circ}.}
-Choose a point $P$ outside of the bigger circle.
-Construct the lines dual to $P$ for both circles.
-Note that these two lines are parallel. 
-
-\begin{wrapfigure}{r}{45mm}
-\centering
-\includegraphics{mppics/pic-370}
-\vskip-6mm
-\end{wrapfigure} 
-
-Assume that the lines intersect the bigger circle at two pairs of points $X$, $X'$ and $Y$, $Y'$.
-Set $Z\z=(XY)\cap (X'Y')$.
-Note that the line $(PZ)$ passes thru the common center.
-
-The center is the intersection of $(PZ)$ and another line constructed the same way.
-
-\parbf{Exercise~\ref{ex:proj-perp}.} 
-Construct polar lines to two point on $\ell$.
-Denote by $L$ the intersection of these two lines.
-Note that $\ell$ is polar to $L$ and therefore $(OL)\perp \ell$.
+\parbf{Exercise~\ref{ex:midpoint-proj}.}
+Use that $\tfrac\pi4$ is an angle of an isosceles right triangle, Exercise~\ref{ex:construction-perpendicular}, and Proposition~\ref{prop:perp-perp}.
 
 %\subsection*{Chapter~\ref{chap:area}}
 \refstepcounter{chapter}

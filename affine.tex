@@ -16,29 +16,53 @@ we cannot talk about distances, angle measures, and so on.
 In other words, affine geometry studies
 the properties of the Euclidean plane which preserved under {}\emph{affine transformations} defined below.
 
-A bijection of Euclidean plane to itself 
-is called \index{affine transformation}\emph{affine transformation}
-if it maps any line to a line.
-
-Recall that three points are \index{collinear}\emph{collinear} if they lie on one line. 
-Note that affine transformation sends collinear points to collinear; the following exercise gives a converse.
-
-\begin{thm}{Exercise}\label{ex:collinear=affine}
-Assume $f$ is a bijection from Euclidean plane to itself which sends collinear points to collinear points.
-Show that $f$ is an affine transformation.
-(In other words, show that $f$ maps noncollinear points to noncollinear.)
-\end{thm}
+A bijection from Euclidean plane to it self is called \index{affine transformations}\emph{affine transformation} if it maps lines to lines;
+that is, image of any line is a line.
 
 \begin{thm}{Exercise}\label{ex:affine-par}
-Show that affine transformation sends a pair of parallel lines to a pair of parallel lines.
+Show that affine transformation of the Euclidean plane sends a pair of parallel lines to a pair of parallel lines.
 \end{thm}
+
+Since the lines are defined using only metric, we get the following observation.
+
+\begin{thm}{Observation}
+Any motion of Euclidean plane is an affine transformation.
+\end{thm}
+
+The following exercise provides more general examples of affine transformations.
+
+\begin{thm}{Exercise}\label{ex:afine-linear}
+The following maps of coordinate plane to it self are affine transformations:
+\begin{enumerate}[(a)]
+\item\label{ex:afine-linear:shear} Shear map defined by $(x,y)\mapsto (x+k\cdot y,y)$ for a constant~$k$.
+\item\label{ex:afine-linear:scaling} Scaling defined by $(x,y)\mapsto (a\cdot x,a\cdot y)$ for a constant $a\ne 0$.
+\item $x$-scaling and $y$-scaling defined correspondingly by 
+\[(x,y)\mapsto (a\cdot x,y),\quad\text{and}\quad(x,y)\mapsto (x,a\cdot y)\]
+for a constant $a\ne 0$.
+\item\label{affine-general-formula} A transformation defined by
+\[(x,y)\mapsto(a\cdot x+b\cdot y+r,c\cdot x+d\cdot y+s)\]
+for constants $a,b,c,d,r,z$ such that the matrix $(\begin{smallmatrix}a&b\\c&d\end{smallmatrix})$ is invertible. 
+\end{enumerate}
+\end{thm}
+
+From Corollary~\ref{cor:affine-linear}, it will follows that any affine transformation can be written in the form \textit{(\ref{affine-general-formula})}.
+
+Recall that three points are \index{collinear}\emph{collinear} if they lie on one line.
+
+\begin{thm}{Exercise}\label{ex:collinear=affine}
+Suppose $P\mapsto P'$ is a bijection of Euclidean plane that maps collinear triple of points to collinear triples.
+Show that $P\mapsto P'$ maps noncollinear triples of points to noncollinear.
+
+Conclude that $P\mapsto P'$ is an affine transformation.
+\end{thm}
+
 
 \section*{Constructions}
 \addtocontents{toc}{Constructions.}
 
 Let us consider geometric constructions with a ruler and a \index{parallel tool}\emph{parallel tool};
 the latter makes possible to draw a line thru a given point parallel to a given line.
-By Exercisers~\ref{ex:affine-par}, any construction with these two tools are invariant with respect to affine transformation.
+By Exercisers~\ref{ex:affine-par}, any construction with these two tools are invariant with respect to affine transformations.
 For example, 
 to solve the following exercise,
 it is sufficient to prove that midpoint of a given segment can be constructed with a ruler and a parallel tool.
@@ -61,113 +85,7 @@ Using a ruler and a parallel tool, construct the points with the coordinates $(a
 Use ruler and parallel tool to construct the center of the given circle.
 \end{thm}
 
-\section*{Matrix form}
-\addtocontents{toc}{Matrix form.}
-
-Since the lines are defined in terms of metric, any motion of Euclidean plane is also an affine transformation.
-The following theorem provides more examples of an affine transformation which is not a motion.
-
-Fix a coordinate system on the Euclidean plane.
-Let us use the column notation for the coordinates;
-that is, we will write $\left(\begin{smallmatrix}
-x\\y
-\end{smallmatrix} \right)$ instead of $(x,y)$.
-
-\begin{thm}{Theorem}\label{thm:affine=linear}
-Any map 
-\[\beta\:\left(\begin{smallmatrix}
-x\\ y
-\end{smallmatrix} \right)
-  \mapsto
-  A
-  \cdot
-  \left(\begin{smallmatrix}
-x\\ y
-\end{smallmatrix} \right)
-  +
-\left(\begin{smallmatrix}
-v\\ w
-\end{smallmatrix} \right)
-=\left(\begin{smallmatrix}
-a\cdot x+b\cdot y+v\\ 
-c\cdot x+d\cdot y+w 
-\end{smallmatrix} \right)
-\]
-for a fixed invertible matrix $A=\bigl(\begin{smallmatrix}
-a&b\\ c&d
-\end{smallmatrix} \bigr)$ and a vector $\bigl(\begin{smallmatrix}
-v\\ w
-\end{smallmatrix} \bigr)$ defines an affine transformation of the Euclidean plane.
-\end{thm}
-
-\parit{Proof.}
-Let $A^{-1}$ be the inverse of the matrix $A$.
-Note that
-\[\left(\begin{smallmatrix}
-x\\ y
-\end{smallmatrix} \right)
-\mapsto
-  A^{-1}
-\cdot
-\left((\begin{smallmatrix}
-x\\ y
-\end{smallmatrix} )
--
-(\begin{smallmatrix}
-v\\ w
-\end{smallmatrix} )\right).
-\] 
-is inverse of~$\beta$.
-In particular, $\beta$ is a bijection.
-
-Recall that a line in the coordinate plane can be defined as a set of points 
-\[\left(\begin{smallmatrix}p\\q
-\end{smallmatrix} \right)\cdot t
-+
-\left(\begin{smallmatrix}r\\s
-\end{smallmatrix} \right)\]
-for fixed vectors $\left(\begin{smallmatrix}p\\q
-\end{smallmatrix} \right)$. $\left(\begin{smallmatrix}r\\s
-\end{smallmatrix}\right)$ such that $\left(\begin{smallmatrix}p\\q
-\end{smallmatrix} \right)\ne 0$, and all $t\in\mathbb{R}$ (see Exercise~\ref{ex:line-coord}\textit{\ref{ex:line-coord:parameter}}).
-
-Note that 
-\[\beta\left((\begin{smallmatrix}p\\q
-\end{smallmatrix} )\cdot t
-+
-(\begin{smallmatrix}r\\s
-\end{smallmatrix} )\right)
-=
-(\begin{smallmatrix}p'\\q'
-\end{smallmatrix})\cdot t
-+
-(\begin{smallmatrix}r'\\s'
-\end{smallmatrix} ),\]
-where 
-\[(\begin{smallmatrix}p'\\q'
-\end{smallmatrix})=A\cdot(\begin{smallmatrix}p\\q
-\end{smallmatrix})
-\quad\text{and}\quad
-(\begin{smallmatrix}r'\\s'
-\end{smallmatrix})=A\cdot(\begin{smallmatrix}r\\s
-\end{smallmatrix})+
-\left(\begin{smallmatrix}
-v\\ w
-\end{smallmatrix} \right).
-\]
-Since the matrix $A$ is invertible, $(\begin{smallmatrix}p'\\q'
-\end{smallmatrix})\ne 0$; 
-that is, $\beta$ maps lines to lines.
-\qeds
-
-The theorem implies that for any real $k$, 
-the so called {}\emph{shear mapping}
-\[\left(\begin{smallmatrix}
-x\\ y
-\end{smallmatrix} \right)\mapsto \left(\begin{smallmatrix}
-x+k\cdot y\\ y
-\end{smallmatrix} \right)\] is an affine transformation.
-The shear mapping can change the angle between vertical and horizontal lines almost arbitrary.
+Note that the shear map described in \ref{ex:afine-linear}\textit{\ref{ex:afine-linear:shear}} can change the angle between lines almost arbitrary.
 The latter can be used to prove impossibility of some constructions with a ruler and a parallel tool;
 here is one example.
 
@@ -175,45 +93,98 @@ here is one example.
 Show that with a ruler and a parallel tool one cannot construct a line perpendicular to a given line.
 \end{thm}
 
-\section*{The fundamental theorem of affine geometry}
-\addtocontents{toc}{The fundamental theorem of affine geometry.}
+\section*{Vector identity}
+\addtocontents{toc}{Vector identity.}
 
-The fundamental theorem of affine geometry is a converse to Theorem~\ref{thm:affine=linear}.
-%proved by Christian von Staudt \cite{staudt}.
+Further we assume knowledge of vector algebra.
+In particular, we use that if $\square ABCD$ is a parallelogram, then $\overrightarrow{AB}=\overrightarrow{DC}$ and 
+$\overrightarrow{AC}=\overrightarrow{AB}+\overrightarrow{AD}$.
 
-\begin{thm}{Theorem}\label{thm:affine=linear2}
-Any affine transformation  $\beta$ of the Euclidean plane can written in a matrix form
-\[\beta\:\left(\begin{smallmatrix}
-x\\ y
-\end{smallmatrix} \right)
-  \mapsto
-  A
-  \cdot
-  \left(\begin{smallmatrix}
-x\\ y
-\end{smallmatrix} \right)
-  +
-\left(\begin{smallmatrix}
-v\\ w
-\end{smallmatrix} \right)
-=\left(\begin{smallmatrix}
-a\cdot x+b\cdot y+v\\ 
-c\cdot x+d\cdot y+w 
-\end{smallmatrix} \right)
-\eqlbl{eq:affine=linear}
-\]
-for a fixed invertible matrix $A=\bigl(\begin{smallmatrix}
-a&b\\ c&d
-\end{smallmatrix} \bigr)$ and a vector $\bigl(\begin{smallmatrix}
-v\\ w
-\end{smallmatrix} \bigr)$.
+\begin{thm}{Proposition}\label{prop:affine-linear}
+Let $P\mapsto P'$ be an affine transformation of Euclidean plane.
+Then, for any triple of points of points $O$, $X$, $P$, we have
+\[\overrightarrow{OP}=t\cdot \overrightarrow{OX}
+\quad\text{if and only if}\quad
+\overrightarrow{O'P'}=t\cdot \overrightarrow{O'X'}
+\eqlbl{eq:OP=tOX}\]
 
-In particular, any affine transformation of Euclidean plane is continuous.
 \end{thm}
 
-In the proof we will use the following algebraic lemma:
+\parit{Proof.}
+Observe that the affine transformation described in Exercise~\ref{ex:afine-linear} as well as all motions satisfy the condition \ref{eq:OP=tOX}.
+Therefore a given affine transformation $P\mapsto P'$ satisfies \ref{eq:OP=tOX} if and only if its composition with motions and rescalings satisfies \ref{eq:OP=tOX}.
 
-\begin{thm}{Algebraic lemma}\label{lem:R-auto}
+Applying this observation we can reduce the problem to its partial case.
+Namely, we may assume that $O'=O$, $X'=X$;
+further we can assume that $O$ is the origin of a coordinate system and $X$ has coordinates $(1,0)$.
+
+In particular the affine transformation $P\mapsto P'$ maps $x$-axis to it self.
+Note that if $\overrightarrow{OP}=t\cdot \overrightarrow{OX}$, then $P=(t,0)$ for some $t\in \mathbb{R}$.
+Since $P'$ lies on $x$-axis, we have $P'=(f(t),0)$ for some function $t\mapsto f(t)$.
+It remains to show that 
+\[f(t)=t
+\eqlbl{eq:f(x)=x}\]
+for any $t$.
+
+Since $O'=O$ and $X'=X$, we get that $f(0)=0$ and $f(1)=1$.
+Further, according to Exercise~\ref{ex:R-hom}, we have that 
+$f(x\cdot y)=f(x)\cdot f(y)$ and $f(x+y)=f(x)+f(y)$ for any $x,y\in\mathbb{R}$.
+
+By the algebraic lemma (see \ref{lem:R-auto}), these conditions imply \ref{eq:f(x)=x}.
+\qeds
+
+\begin{thm}{Corollary}\label{cor:affine-linear}
+Suppose an affine transformations maps a nondegenerate triange $OXY$ to a triangle $O'X'Y'$.
+If 
+\[\overrightarrow{OP}=x\cdot\overrightarrow{OX}+y\cdot\overrightarrow{OY},\]
+then 
+\[\overrightarrow{O'P'}=x\cdot\overrightarrow{O'X'}+y\cdot\overrightarrow{O'Y'}.\]
+\end{thm}
+
+\parit{Proof.}
+If $a=0$ or $b=0$, then the statement follow directly from the proposition.
+
+Otherwise consider points $V$ and $W$ defined by
+\[\overrightarrow{OV}=x\cdot\overrightarrow{OX},
+\quad
+\overrightarrow{OW}=y\cdot\overrightarrow{OY}.
+\]
+By the proposition,
+\[\overrightarrow{O'V'}=x\cdot\overrightarrow{O'X'},
+\quad
+\overrightarrow{O'W'}=y\cdot\overrightarrow{O'Y'}.
+\]
+
+Note that 
+\[\overrightarrow{OP}=\overrightarrow{OV}+\overrightarrow{OW},\]
+or, equivalently, $\square OVPW$ is a parallelogram.
+According to Exercise~\ref{ex:affine-par}, $\square O'V'P'W'$ is a parallelogram as well.
+Therefore 
+\begin{align*}\overrightarrow{O'P'}&=\overrightarrow{O'V'}+\overrightarrow{O'W'}=
+\\
+&=x\cdot\overrightarrow{O'X'}+y\cdot\overrightarrow{O'Y'}.
+\end{align*}
+\qedsf
+
+\begin{thm}{Exercise}\label{ex:affine-continuous}
+Show that any affine transformation is continuous.
+\end{thm}
+
+The following exercise provides converse to Exercise \ref{affine-general-formula}\textit{\ref{affine-general-formula}}.
+
+\begin{thm}{Exercise}\label{ex:affine-coordinates}
+Show that any affine transformation can be written in coordinates as 
+\[(x,y)\mapsto(a\cdot x+b\cdot y+r,c\cdot x+d\cdot y+s)\]
+for constants $a,b,c,d,r,z$ such that the matrix $(\begin{smallmatrix}a&b\\c&d\end{smallmatrix})$ is invertible. 
+\end{thm}
+
+
+\section*{Algebraic lemma}
+\addtocontents{toc}{Algebraic lemma.}
+
+The following lemma was used in the proof of Proposition~\ref{prop:affine-linear}.
+
+\begin{thm}{Lemma}\label{lem:R-auto}
 Assume $f\:\mathbb{R}\to\mathbb{R}$ is a function such that for any $x,y\in\mathbb{R}$ we have
 \begin{enumerate}[(a)]
 \item\label{lem:R-auto:a} $f(1)=1$,
@@ -304,147 +275,13 @@ that is, $f(x)=y$.
 By \ref{a>0=>b>0} and \ref{a<0=>b<0} the values $x$ and $y$ cannot have opposite signs --- a contradiction.
 \qeds
 
-\begin{thm}{Lemma}\label{lem:3-fix}
-Assume $\gamma$ is an affine transformation which fix three points $\left(\begin{smallmatrix}
-0\\ 0
-\end{smallmatrix} \right)$, 
-$\left(\begin{smallmatrix}
-1\\ 0
-\end{smallmatrix} \right)$ 
-and $\left(\begin{smallmatrix}
-0\\ 1
-\end{smallmatrix} \right)$ on the coordinate plane.
-Then $\gamma$ is the identity map; 
-that is, $\gamma\left(\begin{smallmatrix}
-x\\ y
-\end{smallmatrix} \right)
-=
-\left(\begin{smallmatrix}
-x\\ y
-\end{smallmatrix} \right)$ for any point $\left(\begin{smallmatrix}
-x\\ y
-\end{smallmatrix} \right)$.
-\end{thm}
-
-\parit{Proof.}
-Since an affine transformation sends lines to lines, we get that each axes is mapped to itself.
-
-According to Exercise~\ref{ex:affine-par}, 
-parallel lines are mapped to parallel lines.
-Therefore, we get that horizontal lines mapped to horizontal lines 
-and
-vertical lines mapped to vertical.
-In other words,
-\[\gamma\left(\begin{smallmatrix}
-x\\ y
-\end{smallmatrix} \right)
-=
-\left(\begin{smallmatrix}
-f(x)\\ h(y)
-\end{smallmatrix} \right).\]
-for some functions $f,h\:\mathbb{R}\to\mathbb{R}$.
-
-Note that $f(1)=h(1)=1$ and according to 
-Exercise~\ref{ex:R-hom}, 
-both $f$ and $h$ satisfies the other two conditions of the algebraic lemma (\ref{lem:R-auto}).
-Applying the lemma, we get that $f$ and $h$ 
-are identity functions
-and so is~$\gamma$.
-\qeds
-
-\parit{Proof of \ref{thm:affine=linear2}.}
-Fix an affine transformation~$\alpha$.
-Set 
-\begin{align*}
-\left(\begin{smallmatrix}
-v\\ w
-\end{smallmatrix} \right)
-&= 
-\alpha\left(\begin{smallmatrix}
-0\\ 0
-\end{smallmatrix} \right),
-\\
-\left(\begin{smallmatrix}
-a\\ c
-\end{smallmatrix} \right)
-&=
-\alpha\left(\begin{smallmatrix}
-1\\ 0
-\end{smallmatrix} \right)
--
-\alpha\left(\begin{smallmatrix}
-0\\ 0
-\end{smallmatrix} \right),
-\\
-\left(\begin{smallmatrix}
-b\\ d
-\end{smallmatrix} \right)
-&=
-\alpha\left(\begin{smallmatrix}
-1\\ 0
-\end{smallmatrix} \right)
--
-\alpha\left(\begin{smallmatrix}
-0\\ 0
-\end{smallmatrix} \right).
-\end{align*}
+%\begin{thm}{Exercise}\label{ex:Q(sqrt(2)}
+%Let $S$ denotes the set of all numbers $p+q\cdot\sqrt2$, where $p$ and $q$ are rational numbers.
+%Observe that for the map $f\:p+q\cdot\sqrt2\mapsto p-q\cdot\sqrt2$, we have $f(1)=1$, $f(x+y)=f(x)+f(y)$, and $f(x\cdot y)=f(x)\cdot f(y)$ for any $x,y\in S$.
+%Since $f(\sqrt2)=-\sqrt2$ the map is not identity, so the proof of algebraic lemma can not be ap
+%\end{thm}
 
 
-Note that the points 
-$\alpha\left(\begin{smallmatrix}
-0\\ 0
-\end{smallmatrix} \right)$, 
-$\alpha\left(\begin{smallmatrix}
-0\\ 1
-\end{smallmatrix} \right)$, 
-$\alpha\left(\begin{smallmatrix}
-1\\ 0
-\end{smallmatrix} \right)$ do not lie on one line. 
-Therefore, the matrix $\bigl(\begin{smallmatrix}
-a&b\\ c&d
-\end{smallmatrix} \bigr)$
-is invertible.
-
-For the affine transformation $\beta$ defined by \ref{eq:affine=linear}
-we have 
-\begin{align*}
-\beta\left(\begin{smallmatrix}
-0\\ 0
-\end{smallmatrix} \right)
-&=
-\alpha\left(\begin{smallmatrix}
-0\\ 0
-\end{smallmatrix} \right),
-\\
-\beta\left(\begin{smallmatrix}
-1\\ 0
-\end{smallmatrix} \right)
-&=
-\alpha\left(\begin{smallmatrix}
-1\\ 0
-\end{smallmatrix} \right),
-\\
-\beta\left(\begin{smallmatrix}
-0\\ 1
-\end{smallmatrix} \right)
-&=
-\alpha\left(\begin{smallmatrix}
-0\\ 1
-\end{smallmatrix} \right).
-\end{align*}
-
-Consider the composition $\gamma\z=\alpha\circ \beta^{-1}$.
-Note that $\gamma$ is an affine transformation which fix points $\left(\begin{smallmatrix}
-0\\ 0
-\end{smallmatrix} \right)$, 
-$\left(\begin{smallmatrix}
-1\\ 0
-\end{smallmatrix} \right)$ 
-and $\left(\begin{smallmatrix}
-0\\ 1
-\end{smallmatrix} \right)$.
-By Lemma~\ref{lem:3-fix}, $\gamma$ is the identity map or equivalently $\alpha=\beta$.
-\qeds
 
 \section*{On inversive transformations}
 \addtocontents{toc}{On inversive transformations.}
@@ -476,68 +313,21 @@ Assume $\alpha(\infty)=\infty$.
 Recall that any circline passing thru $\infty$ is a line.
 If follows that $\alpha$ maps lines to lines;
 that is,
-it is an affine transformation.
+$\alpha$ is an affine transformation that maps circles to circles.
 
-Note that $\alpha$ is not an arbitrary affine transformation --- it maps circles to circles.
-
-Composing $\alpha$ with a reflection, say $\rho_1$, we can assume that $\alpha'\z=\rho_1\circ\alpha$ maps the unit circle with center at the origin to a concentric circle. 
-
-Composing the obtained map $\alpha'$ with a {}\emph{homothety} 
-\[\chi\:\left(\begin{smallmatrix}
-x\\ y
-\end{smallmatrix} \right)\mapsto \left(\begin{smallmatrix}
-k\cdot x\\ k\cdot y
-\end{smallmatrix} \right),\]
-we can assume that $\alpha''=\chi\circ\alpha'$ sends the unit circle to itself.
-
-
-Composing the obtained map $\alpha''$ with a reflection $\rho_2$ in a line thru the origin,
-we can assume that $\alpha'''=\rho_2\circ\alpha''$ maps the point $(1,0)$ to itself.
-
+Note that any motions and scalings (defined in Exercise~\ref{ex:afine-linear}\textit{\ref{ex:afine-linear:scaling}}) are affine transformations that map circles to circles.
+Composing $\alpha$ with motions and scalings, we can obtain another affine transformation $\alpha'$ that maps circles to circle and one unit circle to it self.
 By Exercise~\ref{ex:center-circ-affine},
-$\alpha'''$ fixes the center of the circle;
-that is, it fixes the origin.
+$\alpha'$ fixes the center of the circle.
 
-The obtained map $\alpha'''$ is an affine transformation.
-Applying Theorem~\ref{thm:affine=linear}, together with the properties of $\alpha''$ described above we get that
-\[\alpha'''\:\left(\begin{smallmatrix}
-x\\ y
-\end{smallmatrix} \right)
-  \mapsto
-  \left(\begin{smallmatrix}
-1&b\\ 0&d
-\end{smallmatrix} \right)
-  \cdot
-  \left(\begin{smallmatrix}
-x\\ y
-\end{smallmatrix} \right)
-\]
-for an invertible matrix $\left(\begin{smallmatrix}
-1&b\\ 0&d
-\end{smallmatrix} \right)$.
-Since the point $(0,1)$ maps to the unit circle we get that 
-\[b^2+d^2=1.\]
-Since the point $(\tfrac1{\sqrt{2}},\tfrac1{\sqrt{2}})$ maps to the unit circle we get that 
-\[(b+d)^2=1.\]
-It follows 
-\[\alpha'''\:\left(\begin{smallmatrix}
-x\\ y
-\end{smallmatrix} \right)
-  \mapsto
-  \left(\begin{smallmatrix}
-1&0\\ 0&\pm1
-\end{smallmatrix} \right)
-\cdot
-\left(\begin{smallmatrix}
-x
-\\ 
-y
-\end{smallmatrix} \right);
-\]
-that is, either $\alpha'''$ is the identity map or the reflection across the $x$-axis.
+Applying Proposition~\ref{prop:affine-linear}, we get that $\alpha'$ is distance preserving;
+that is, $\alpha'$ is a motion.
 
-Note that the homothety $\chi$ is a composition of two inversions in concentric circles.
-Therefore, $\alpha$ is a composition of inversions and reflections if and only are so is $\alpha'$, $\alpha''$, and $\alpha'''$.
+Summarizing, $\alpha$ is a composition of motions and rescalings.
+Observe that any rescaling is a composition of two inversions in concentric circles.
+Recall that any motion is a composition of reflections (see Exercise~\ref{ex:3-reflections}).
+Whence $\alpha$ is a composition of inversions and reflections.
+
 
 In the remaining case $\alpha(\infty)\ne \infty$, set $P=\alpha(\infty)$.
 Consider an inversion $\beta$ in a circle with center at~$P$.
@@ -563,8 +353,8 @@ Then
 Show that any reflection can be presented as a composition of three inversions. 
 \end{thm}
 
-The exercise above together with Theorem~\ref{thm:inversions-inversive},
-implies that any inversive map is a composition of inversions ---
+The exercise above imply a stronger version of Theorem~\ref{thm:inversions-inversive};
+namely \emph{any inversive map is a composition of inversions} ---
 no reflections needed.
 
 \addtocontents{toc}{\protect\end{quote}}

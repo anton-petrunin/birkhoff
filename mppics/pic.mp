@@ -3478,6 +3478,7 @@ label.top (btex $A'$ etex, z.AA);
 label.rt (btex $B'$ etex, z.BB);
 endfig;
 
+
 beginfig(226)
 save u, n;
 u:=.7cm;
@@ -4417,6 +4418,7 @@ label.urt (btex $P$ etex, z.P);
 label.lrt (btex $Q$ etex, z.Q);
 label.llft (btex $R$ etex, z.R);
 label.llft (btex $S$ etex, z.S);
+label.urt (btex $T$ etex, z.T);
 
 label.lft (btex $m$ etex rotated 90, z.P+(0,.5*x.RR));
 label.lft (btex $k$ etex rotated 90, z.S+(0,.5*x.RR));

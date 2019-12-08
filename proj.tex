@@ -199,7 +199,7 @@ This construction provides a method for solving problems in projective geometry
 which will be illustrated by the following classical example:
 
 
-\begin{thm}{Desargues' theorem}\label{thm:desargues}
+\begin{thm}{Desargues' theorem}\label{thm:desargues}\index{Desargues' theorem}
 Consider three concurrent lines $(AA')$, $(BB')$, and $(CC')$ in the real projective plane.
 Set
 \begin{align*}
@@ -214,7 +214,7 @@ Then the points $X$, $Y$, and $Z$ are collinear.
 
 \parit{Proof.}
 Without loss of generality, we may assume that the line $(XY)$ is ideal.
-If not, apply a perspective projection which sends the line $(XY)$ to the ideal line.
+If not, apply a perspective projection that sends the line $(XY)$ to the ideal line.
 
 \begin{wrapfigure}{o}{40mm}
 \vskip-8mm
@@ -259,7 +259,7 @@ Hence $\square B'BAA'$ is a parallelogram and $(AB)\parallel (A'B')$.
 
 Here is another classical theorem of projective geometry.
 
-\begin{thm}{Pappus' theorem}\label{thm:pappus}
+\begin{thm}{Pappus' theorem}\label{thm:pappus}\index{Pappus' theorem}
 Assume that two triples of points $A$, $B$, $C$,
 and $A'$, $B'$, $C'$ are collinear.
 Set 
@@ -397,7 +397,7 @@ would be the ``lines $x$, $y$, and $z$ intersect at one point $L$''.
 Let us formulate the dual statement for Desargues' theorem~\ref{thm:desargues}.
 
 
-\begin{thm}{Dual Desargues' theorem}\label{thm:dual-desargues}
+\begin{thm}{Dual Desargues' theorem}\label{thm:dual-desargues}\index{Dual Desargues' theorem}
 Consider the collinear points $X$, $Y$, and~$Z$.
 Assume that 
 \[X=(BC)\cap (B'C'),\quad Y=(CA)\cap (C'A'),\quad Z=(AB)\cap (A'B').\]
@@ -423,6 +423,51 @@ Given two parallel lines, construct with a ruler only a third parallel line thru
 Given a parallelogram, construct with a ruler only a line parallel to a given line thru a given point.
 \end{enumerate}
 
+\end{thm}
+
+\section*{Construction of a polar}
+
+In this section we describe a powerful trick that can be used in the constructions only with ruler.
+
+Assume $\Gamma$ is a circle in the plane and $P\notin \Gamma$.
+\begin{figure}[h!]
+\centering
+\includegraphics{mppics/pic-290}
+\end{figure}
+Draw two lines $x$ and $y$ thru $P$ which intersect $\Gamma$ at two pairs of points $X$, $X'$ and $Y$, $Y'$.
+Let $Z=(XY)\cap(X'Y')$ and $Z'=(XY')\cap(X'Y)$.
+Consider the line $p=(ZZ')$.
+
+
+The following claim will be used in the constructions without a proof.
+
+\begin{thm}{Claim}\label{clm:polar}
+The constructed line $p=(ZZ')$ does not depend on the choice of the lines $x$ and $y$.
+Moreover, $P\mapsto p$ defines a duality.
+\end{thm}
+
+The line $p$ is called the polar of $P$ with respect to~$\Gamma$.
+The same way the point $P$ is called the polar of the line $p$ with respect to~$\Gamma$.
+
+
+
+\begin{thm}{Exercise}\label{ex:tangent ruler}
+Let $p$ be the polar line of point $P$ with respect to the circle~$\Gamma$.
+Assume that $p$ intersects $\Gamma$ at points $V$ and~$W$.
+Show that the lines $(PV)$ and $(PW)$ are tangent to~$\Gamma$.
+
+Come up with a ruler-only construction of the tangent lines to the given circle $\Gamma$ thru the given point $P\notin\Gamma$.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:concentric-circ}
+Assume two concentric circles $\Gamma$ and $\Gamma'$ are given.
+Construct the common center of $\Gamma$ and $\Gamma'$ with a ruler only.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:proj-perp}
+Assume a line $\ell$ and a circle $\Gamma$ with its center $O$ are given.
+Suppose $O\notin \ell$.
+Construct a perpendicular from $O$ on $\ell$ with a ruler only.
 \end{thm}
 
 \section*{Axioms}

@@ -1,3 +1,559 @@
+\parbf{Exercise~\ref{ex:matrix-vector}.} Suppose that $\beta\:\left(\begin{smallmatrix}
+x\\ y
+\end{smallmatrix} \right)
+  \mapsto
+  M
+  \cdot
+  \left(\begin{smallmatrix}
+x\\ y
+\end{smallmatrix} \right)
+  +
+\left(\begin{smallmatrix}
+v\\ w
+\end{smallmatrix} \right)$.
+Let $M^{-1}$ be the inverse of the matrix $M$.
+Note that
+\[\beta^{-1}\:\left(\begin{smallmatrix}
+x\\ y
+\end{smallmatrix} \right)
+\mapsto
+M^{-1}
+\cdot
+(\begin{smallmatrix}
+x\\ y
+\end{smallmatrix} )
+-M^{-1}
+\cdot
+(\begin{smallmatrix}
+v\\ w
+\end{smallmatrix}).
+\] 
+is inverse of~$\beta$.
+Hence part \textit{(\ref{ex:matrix-vector:a})} follows.
+Part \textit{(\ref{ex:matrix-vector:b})} can be done by straightforward computations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Composing $\alpha$ with a reflection
+
+Composing $\alpha$ with a reflection, say $\rho_1$, we can assume that $\alpha'\z=\rho_1\circ\alpha$ maps the unit circle with center at the origin to a concentric circle. 
+
+
+Composing the obtained map $\alpha'$ with a {}\emph{homothety} 
+\[\chi\:\left(\begin{smallmatrix}
+x\\ y
+\end{smallmatrix} \right)\mapsto \left(\begin{smallmatrix}
+k\cdot x\\ k\cdot y
+\end{smallmatrix} \right),\]
+we can assume that $\alpha''=\chi\circ\alpha'$ sends the unit circle to itself.
+
+
+Composing the obtained map $\alpha''$ with a reflection $\rho_2$ in a line thru the origin,
+we can assume that $\alpha'''=\rho_2\circ\alpha''$ in addition maps the point $(1,0)$ to itself.
+
+By Exercise~\ref{ex:center-circ-affine},
+$\alpha'''$ fixes the center of the circle;
+that is, it fixes the origin.
+
+The obtained map $\alpha'''$ is an affine transformation.
+Applying Theorem~\ref{thm:affine=linear}, together with the properties of $\alpha''$ described above we get that
+\[\alpha'''\:\left(\begin{smallmatrix}
+x\\ y
+\end{smallmatrix} \right)
+  \mapsto
+  \left(\begin{smallmatrix}
+1&b\\ 0&d
+\end{smallmatrix} \right)
+  \cdot
+  \left(\begin{smallmatrix}
+x\\ y
+\end{smallmatrix} \right)
+\]
+for an invertible matrix $\left(\begin{smallmatrix}
+1&b\\ 0&d
+\end{smallmatrix} \right)$.
+Since the point $(0,1)$ maps to the unit circle we get that 
+\[b^2+d^2=1.\]
+Since the point $(\tfrac1{\sqrt{2}},\tfrac1{\sqrt{2}})$ maps to the unit circle we get that 
+\[(b+d)^2=1.\]
+It follows 
+\[\alpha'''\:\left(\begin{smallmatrix}
+x\\ y
+\end{smallmatrix} \right)
+  \mapsto
+  \left(\begin{smallmatrix}
+1&0\\ 0&\pm1
+\end{smallmatrix} \right)
+\cdot
+\left(\begin{smallmatrix}
+x
+\\ 
+y
+\end{smallmatrix} \right);
+\]
+that is, either $\alpha'''$ is the identity map or the reflection across the $x$-axis.
+
+Note that the homothety $\chi$ is a composition of two inversions in concentric circles.
+Therefore, $\alpha$ is a composition of inversions and reflections if and only are so is $\alpha'$, $\alpha''$, and $\alpha'''$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section*{Uniqueness}
+\addtocontents{toc}{Uniqueness.}
+
+\begin{thm}{Lemma}\label{lem:3-fix}
+Assume $\gamma$ is an affine transformation which fix three points $\left(\begin{smallmatrix}
+0\\ 0
+\end{smallmatrix} \right)$, 
+$\left(\begin{smallmatrix}
+1\\ 0
+\end{smallmatrix} \right)$ 
+and $\left(\begin{smallmatrix}
+0\\ 1
+\end{smallmatrix} \right)$ on the coordinate plane.
+Then $\gamma$ is the identity map; 
+that is, $\gamma\left(\begin{smallmatrix}
+x\\ y
+\end{smallmatrix} \right)
+=
+\left(\begin{smallmatrix}
+x\\ y
+\end{smallmatrix} \right)$ for any point $\left(\begin{smallmatrix}
+x\\ y
+\end{smallmatrix} \right)$.
+\end{thm}
+
+\parit{Proof.}
+Since an affine transformation sends lines to lines, we get that each axes is mapped to itself.
+
+According to Exercise~\ref{ex:affine-par}, 
+parallel lines are mapped to parallel lines.
+Therefore, we get that horizontal lines mapped to horizontal lines 
+and
+vertical lines mapped to vertical.
+In other words,
+\[\gamma\left(\begin{smallmatrix}
+x\\ y
+\end{smallmatrix} \right)
+=
+\left(\begin{smallmatrix}
+f(x)\\ h(y)
+\end{smallmatrix} \right).\]
+for some functions $f,h\:\mathbb{R}\to\mathbb{R}$.
+
+Note that $f(1)=h(1)=1$ and according to 
+Exercise~\ref{ex:R-hom}, 
+both $f$ and $h$ satisfies the other two conditions of the algebraic lemma (\ref{lem:R-auto}).
+Applying the lemma, we get that $f$ and $h$ 
+are identity functions
+and so is~$\gamma$.
+\qeds
+
+\parit{Proof of uniqueness in \ref{thm:fundamental-theorem-of-affine-geometry}.}
+Fix an affine transformation~$\alpha$.
+Set 
+\begin{align*}
+\left(\begin{smallmatrix}
+v\\ w
+\end{smallmatrix} \right)
+&= 
+\alpha\left(\begin{smallmatrix}
+0\\ 0
+\end{smallmatrix} \right),
+\\
+\left(\begin{smallmatrix}
+a\\ c
+\end{smallmatrix} \right)
+&=
+\alpha\left(\begin{smallmatrix}
+1\\ 0
+\end{smallmatrix} \right)
+-
+\alpha\left(\begin{smallmatrix}
+0\\ 0
+\end{smallmatrix} \right),
+\\
+\left(\begin{smallmatrix}
+b\\ d
+\end{smallmatrix} \right)
+&=
+\alpha\left(\begin{smallmatrix}
+1\\ 0
+\end{smallmatrix} \right)
+-
+\alpha\left(\begin{smallmatrix}
+0\\ 0
+\end{smallmatrix} \right).
+\end{align*}
+
+
+Note that the points 
+$\alpha\left(\begin{smallmatrix}
+0\\ 0
+\end{smallmatrix} \right)$, 
+$\alpha\left(\begin{smallmatrix}
+0\\ 1
+\end{smallmatrix} \right)$, 
+$\alpha\left(\begin{smallmatrix}
+1\\ 0
+\end{smallmatrix} \right)$ do not lie on one line. 
+Therefore, the matrix $\bigl(\begin{smallmatrix}
+a&b\\ c&d
+\end{smallmatrix} \bigr)$
+is invertible.
+
+For the affine transformation $\beta$ defined by \ref{eq:affine=linear}
+we have 
+\begin{align*}
+\beta\left(\begin{smallmatrix}
+0\\ 0
+\end{smallmatrix} \right)
+&=
+\alpha\left(\begin{smallmatrix}
+0\\ 0
+\end{smallmatrix} \right),
+\\
+\beta\left(\begin{smallmatrix}
+1\\ 0
+\end{smallmatrix} \right)
+&=
+\alpha\left(\begin{smallmatrix}
+1\\ 0
+\end{smallmatrix} \right),
+\\
+\beta\left(\begin{smallmatrix}
+0\\ 1
+\end{smallmatrix} \right)
+&=
+\alpha\left(\begin{smallmatrix}
+0\\ 1
+\end{smallmatrix} \right).
+\end{align*}
+
+Consider the composition $\gamma\z=\alpha\circ \beta^{-1}$.
+Note that $\gamma$ is an affine transformation which fix points $\left(\begin{smallmatrix}
+0\\ 0
+\end{smallmatrix} \right)$, 
+$\left(\begin{smallmatrix}
+1\\ 0
+\end{smallmatrix} \right)$ 
+and $\left(\begin{smallmatrix}
+0\\ 1
+\end{smallmatrix} \right)$.
+By Lemma~\ref{lem:3-fix}, $\gamma$ is the identity map or equivalently $\alpha=\beta$.
+\qeds
+
+\begin{thm}{Exercise}
+Show that any affine transformation is continuous. %??? 
+\end{thm}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{thm}{Theorem}
+If an affine transformation $\alpha$ of Eulidean plane fixes two points $P$ and $Q$,
+then it fixes all the points on the line $(PQ)$;
+that is, $\alpha(X)=X$ for any $X\in (PQ)$.
+\end{thm}
+
+\parit{Proof.}
+Without loss of generality we may assume that $PQ=1$.
+if not rescale whole plane.
+In this case we can choose coordinate on the line $(PQ)$ so that $P$ corresponds to $0$ and $Q$ corresponds to $1$.
+
+Suppose $X$ is a point on $(PQ)$ with coordinate $x$.
+Denote by $f(x)$ the coordinte of $\alpha(X)$.
+
+Since $\alpha(P)=P$ and $\alpha(Q)=Q$, we have $f(0)=0$ and $f(1)=1$.
+Further by Exercise~\ref{ex:R-hom}, $f(x+y)=f(x)+f(y)$ and $f(x\cdot y)=f(x)\cdot f(y)$.
+By Lemma~\ref{lem:R-auto}, $f(x)=x$ for any $x\in \mathbb{R}$.
+Hence the result.
+\qeds
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+In this section we introduce \emph{affine transformations} which after proving theorems \ref{thm:affine=linear} and ???, it will become a synonym for \emph{affine transformations}.
+
+A map $P\mapsto P'$ from the Euclidean plane to it self is called affine 
+if
+\[\overrightarrow{XZ}=t\cdot \overrightarrow{XY}
+\quad\Longleftrightarrow\quad
+\overrightarrow{X'Z'}=t\cdot \overrightarrow{X'Y'}\]
+for any triple of points.
+
+Note that any affine transformation is an affine transformation.
+Indeed, a line $(XY)$ can be defined as a set of points $Z$ such that 
+\[\overrightarrow{XZ}=t\cdot \overrightarrow{XY}\]
+for $t\in \mathbb{R}$.
+If $P\mapsto P'$ is an affine transormation, then 
+\[\overrightarrow{X'Z'}=t\cdot \overrightarrow{X'Y'},\]
+where $t$ is defined by \ref{eq:Xx}.
+
+Suppose $ABC$ is a nondegenerate triangle in the Euclidean plane.
+Note that in this case the vectors $\overrightarrow{CA}$ and $\overrightarrow{CB}$ are linearly independent.
+In particular for any point $X$ in the plane there is unique pair of real numbers $a$ and $b$ such that 
+\[\overrightarrow{CX}=x_1\cdot \overrightarrow{CA}+x_2\cdot \overrightarrow{CB}.\eqlbl{eq:a+b}\]
+
+Given another triangle, $A'B'C'$ consider the map $\alpha\:X\mapsto X'$ defined by 
+\[\overrightarrow{C'X'}=x_1\cdot \overrightarrow{C'A'}+x_2\cdot \overrightarrow{C'B'},\eqlbl{eq:a+b'}\]
+where $x_1$ and $x_2$ are as in \ref{eq:a+b}.
+A map that can be defined this way is called \emph{affine}.
+Note that affine transformation maps $\triangle ABC$ to $\triangle A'B'C'$.
+
+Observe that inverse of affine transformation is an affine transformation.
+Indeed, to define the inverse we need to swap the triangles $\triangle ABC$ and $\triangle A'B'C'$.
+Furthere note that any affine transformation is a bijection,
+simply because its inverse is defined.
+%Indeed \ref{eq:a+b} defines a bijection $X\leftrightarrow (a,b)$ btween points on the plane and pairs of real numbers. The same way \ref{eq:a+b'} defines a bijection $X'\leftrightarrow (a,b)$. Therefore $X\leftrightarrow X'$ is a bijection.
+
+Observe that a line $(XY)$ can be defined as a set of points $Z$ such that 
+\[\overrightarrow{XZ}=t\cdot \overrightarrow{XY}\]
+for $t\in \mathbb{R}$.
+If $P\mapsto P'$ is an affine transormation, then 
+\[\overrightarrow{X'Z'}=t\cdot \overrightarrow{X'Y'},\]
+where $t$ is defined by \ref{eq:Xx}.
+Indeed, assume that an affine transformation is defined by triangles $ABC$ and $A'B'C'$.
+Then 
+
+We may assume that 
+\begin{align*}
+\overrightarrow{CX}
+&=x_1\cdot \overrightarrow{CA}+x_2\cdot \overrightarrow{CB},
+&
+\overrightarrow{C'X'}
+&=x_1\cdot \overrightarrow{C'A'}+x_2\cdot \overrightarrow{C'B'},
+\\
+\overrightarrow{CY}&=y_1\cdot \overrightarrow{CA}+y_2\cdot \overrightarrow{CB},
+&
+\overrightarrow{C'Y'}&=y_1\cdot \overrightarrow{C'A'}+y_2\cdot \overrightarrow{C'B'},
+\\
+\overrightarrow{CZ}&=z_1\cdot \overrightarrow{CA}+z_2\cdot \overrightarrow{CB},
+&
+\overrightarrow{C'Z'}&=z_1\cdot \overrightarrow{C'A'}+z_2\cdot \overrightarrow{C'B'}.
+\end{align*}
+Straightforward calculations show that 
+\[\overrightarrow{XZ}=t\cdot \overrightarrow{XY}
+\quad\Longleftrightarrow\quad
+\overrightarrow{X'Z'}=t\cdot \overrightarrow{X'Y'}\]
+
+
+
+Fix a coordinate system on the Euclidean plane.
+If a point $P$ has coordinates $(x,y)$, then we will we will use the same letter $P$ for the column vector $(\begin{smallmatrix}x\\y\end{smallmatrix})$.
+This is an abuse of notation, but if the coordinate system is fixed it creates no problem --- the vector $(\begin{smallmatrix}x\\y\end{smallmatrix})$ uniquely defines point $P$ and the other way around.
+
+We say that a map from the Euclidean plane to it self is an \index{affine transformation}\emph{affine transformation} if it can be written as
+\[P\mapsto  M \cdot P +V.\]
+for a fixed invertible matrix $M=(\begin{smallmatrix}a&b\\c&d\end{smallmatrix})$ and a vector $V=(\begin{smallmatrix}r\\s\end{smallmatrix})$.
+Equivalently, the map can be written as 
+\[(\begin{smallmatrix}x\\y\end{smallmatrix})
+\mapsto
+(\begin{smallmatrix}a&b\\c&d\end{smallmatrix})
+\cdot
+(\begin{smallmatrix}x\\y\end{smallmatrix})
++
+(\begin{smallmatrix}r\\s\end{smallmatrix})=
+(\begin{smallmatrix}a\cdot x+b\cdot y+r\\c\cdot x+d\cdot y+s\end{smallmatrix}).\]
+
+\begin{thm}{Observations}\label{obs:matrix-vector}
+Any affine transformation is a bijection.
+Moreover, the afine transformations form a group with respect to composition;
+that is:
+\begin{enumerate}[(a)]
+\item inverse of affine transformation is affine;
+\item composition of affine transformation is affine.
+\end{enumerate}
+\end{thm}
+
+The proof is done by means of direct calculation.
+
+\parit{Proof.}
+Consider an affine transformation
+\[\beta\:P \mapsto M\cdot P+V.\]
+Denote by $M^{-1}$ the inverse of the matrix $M$;
+it exists since $M$ is invertible.
+Note that 
+\[\beta^{-1}\:P
+  \mapsto
+  M^{-1}
+  \cdot
+  P
+  -
+M^{-1}\cdot V.\]
+is an inverse of $\beta$.
+In particular $\beta$ is a bijection and its invese $\beta^{-1}$ is affine.
+
+Consider another affine transformation
+\[\beta'\:P  \mapsto M' \cdot P + V'.\]
+Note that 
+\[\beta'\circ \beta\:P
+\mapsto
+(M'\cdot M)
+\cdot
+P
++
+(M'\cdot V+V').\]
+Therefore the composition $\beta'\circ \beta$ is affine.
+\qeds
+
+\begin{thm}{Lemma}\label{lem:matrix-vector}
+Given two nondegenerate triangles $ABC$ and $A'B'C'$ in the Euclidean plane, there is a unique affine transformation that sens 
+$A\mapsto A'$, $B\mapsto B'$, and $C\mapsto C'$.
+\end{thm}
+
+
+\parit{Proof.}
+Denote by $a_1,a_2,b_1,b_2,c_1,c_2$ the coordinates of $A$, $B$, and $C$.
+Set 
+\begin{align*}
+a&=a_1-c_1,
+&
+b&=b_1-c_1,
+\\
+c&=a_2-c_2,
+&
+d&=b_2-c_2.
+\end{align*}
+Since the triangle $ABC$ is nondegenerate, the vectors $\bigl(\begin{smallmatrix}
+a\\ c
+\end{smallmatrix} \bigr)$ and $\bigl(\begin{smallmatrix}
+b\\ d
+\end{smallmatrix} \bigr)$ are linearly independent (see Exercise~\ref{ex:line-coord}\textit{\ref{ex:line-coord:parameter}}).
+Therefore the matrix $M\z=\bigl(\begin{smallmatrix}
+a&b\\ c&d
+\end{smallmatrix} \bigr)$ is invertible.
+Consider the affine transformation map 
+\[\beta\:P\mapsto M \cdot P + C.\]
+
+Set $O=(\begin{smallmatrix}0\\0
+\end{smallmatrix})$, $E=(\begin{smallmatrix}1\\0
+\end{smallmatrix})$, and $I=(\begin{smallmatrix}0\\1
+\end{smallmatrix})$.
+Straightforward calculations show that $\beta\:O\mapsto C$, $\beta\:E\mapsto A$, and $\beta\:I\z\mapsto B$.
+
+The same way one can construct an affine transformation $\beta'$ that sends $O\mapsto C'$, $E\mapsto A'$, and $I\z\mapsto B'$.
+
+By Observation~\ref{obs:matrix-vector}, the composition $\beta'\circ\beta^{-1}$ is affine.
+By construction, $\beta'\circ\beta^{-1}$ sends $A\mapsto A'$, $B\mapsto B'$, and $C\z\mapsto C'$.
+\qeds
+
+
+\begin{thm}{Theorem}\label{thm:affine=linear}
+Any affine transformation, is an affine transformation.
+\end{thm}
+
+\parit{Proof.}
+Choose an affine transformation $\beta\:P
+\mapsto
+M
+\cdot P
++
+V$.
+
+From Exercise~\ref{ex:line-coord}\textit{\ref{ex:line-coord:parameter}}, it follows that a line can be defined as a set  
+\[S+W \cdot t\]
+for fixed vectors $S$, $W$ such that $W\ne 0$, and all $t\in\mathbb{R}$.
+
+Note that 
+\[\beta\left(S+W \cdot t\right)
+=
+S'+W' \cdot t
+,\]
+where 
+\[S'=M\cdot S +V
+\quad\text{and}\quad
+W'=M\cdot W.
+\]
+Since the matrix $M$ is invertible, $W'\ne 0$; 
+in particular, $\beta$ maps lines to lines.
+\qeds
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \begin{thm}{Advanced exercise}\label{ex:area-affine}
 Show that for any affine transformation $\beta$ there is a constant $k>0$
 such that the equality 

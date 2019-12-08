@@ -565,6 +565,31 @@ label.ulft (btex $R$ etex, z.R);
 endfig;
 
 
+beginfig(353)
+save u;
+u:=1.4cm;
+
+z.P=(0,0)*u;
+z.Q=(1,0)*u;
+z.X=(.7,.9)*u;
+
+z.XP=.3[z.X,z.P];
+z.XQ=.5[z.X,z.Q];
+z.Z=(-1)[z.XP,z.XQ];
+
+draw ddline(z.P,z.Q)(.2,.2);
+draw ddline(z.X,z.P)(.2,.2);
+draw ddline(z.X,z.Q)(.2,.2);
+draw ddline(z.Z,z.XQ)(.2,.2);
+
+dOt z.P,z.Q,z.X,z.Z,z.XP,z.XQ;
+
+label.lrt (btex $A$ etex, z.P);
+label.llft (btex $B$ etex, z.Q);
+label.rt (btex $X$ etex, z.X);
+label.urt (btex $Z$ etex, z.Z);
+endfig;
+
 beginfig(354)
 u:=1cm;
 
