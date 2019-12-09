@@ -1446,15 +1446,13 @@ Choose a line $(AB)$.
 Assume that $X'\in (A'B')$ for some $X\notin(AB)$.
 Since $P\mapsto P'$ maps colliner points to collinear, 
 the three lines $(AB)$, $(AX)$, and $(BX)$ are mapped to~$(A'B')$.
-Further, any line that connects a pair of points on these three lines $(AB)$, $(AX)$, and $(BX)$ is mapped to~$(A'B')$.
-
-Note that any point $Z$ lies on a line passing thru two distinct points on these three lines.
-Therefore, $Z'\z\in(A'B')$; that is, the whole plane is mapped to $(A'B')$.
+Further, any line that connects a pair of points on these three lines is also mapped to~$(A'B')$.
+Use it to show that the whole plane is mapped to $(A'B')$.
 The latter contradicts that the map is a bijection.
 
 By assumption, if $X\in (AB)$, then $X'\z\in (A'B')$.
 Form above the converse holds as well.
-Hence the bijection maps lines to lines, and the second statement follows.
+Use it to prove the second statement.
 
 {
 
@@ -1495,15 +1493,18 @@ The center lies in the intersection of the obtained lines.
 
 \parbf{Exercise~\ref{ex:affine-perp}.}
 Assume a construction produces two perpendicular lines.
-Apply an affine transformation that changes the angle between the lines;
-it exists by Theorem~\ref{thm:fundamental-theorem-of-affine-geometry}.
+Apply a shear map that changes the angle between the lines (see Exercise~\ref{ex:afine-linear}\textit{\ref{ex:afine-linear:shear}}).
 
 Note that it transforms the construction to the same construction for other free choices points.
-Therefore, this construction does not produce perpendicular lines in general
- (it might produce a perpendicular line only by a coincidence).
+Therefore, this construction does not produce perpendicular lines in general.
+(It might produce a perpendicular line only by a coincidence.)
+ 
+\parbf{Exercise~\ref{ex:parallelogram-rule}.}
+Apply twice Exercise~\ref{ex:affine-par} and the parallelogram rule.
+(Note that the case if $A$, $B$, $X$, and $Y$ are collinear requires extra work.)
  
 \parbf{Exercise~\ref{ex:affine-continuous} and \ref{ex:affine-coordinates}.}
-Fix a coordinate system and apply Corollary~\ref{cor:affine-linear} for $O=(0,0)$, $X=(1,0)$ and $Y=(0,1)$.
+Fix a coordinate system and apply Corollary~\ref{cor:affine-linear} for the points $O=(0,0)$, $X=(1,0)$ and $Y=(0,1)$.
  
 \parbf{Exercise~\ref{ex:inversive-angle}.}
 Apply \ref{thm:angle-inversion} and \ref{thm:inversions-inversive}.
@@ -1608,16 +1609,17 @@ Since $V\in p$, by Claim~\ref{clm:polar}, we get that $P\in v$;
 that is, $(PV)=v$.
 Hence the statement follows.
 
-\parbf{Exercise~\ref{ex:concentric-circ}.}
-Choose a point $P$ outside of the bigger circle.
-Construct the lines dual to $P$ for both circles.
-Note that these two lines are parallel. 
-
 \begin{wrapfigure}{r}{45mm}
+\vskip-4mm
 \centering
 \includegraphics{mppics/pic-370}
 \vskip-6mm
 \end{wrapfigure} 
+
+\parbf{Exercise~\ref{ex:concentric-circ}.}
+Choose a point $P$ outside of the bigger circle.
+Construct the lines dual to $P$ for both circles.
+Note that these two lines are parallel. 
 
 Assume that the lines intersect the bigger circle at two pairs of points $X$, $X'$ and $Y$, $Y'$.
 Set $Z\z=(XY)\cap (X'Y')$.
@@ -1684,7 +1686,7 @@ $$
 Therefore, $AB_s=\tfrac\pi3$.
 
 \begin{wrapfigure}{r}{43mm}
-\vskip-0mm
+\vskip-6mm
 \centering
 \includegraphics{mppics/pic-358}
 \end{wrapfigure}

@@ -3478,6 +3478,31 @@ label.top (btex $A'$ etex, z.AA);
 label.rt (btex $B'$ etex, z.BB);
 endfig;
 
+beginfig(225)
+save u;
+u:=1cm;
+
+z.O=origin;
+z.V=(2,0)*u;
+z.W=(.4,1.6)*u;
+z.X=.6*z.V;
+z.Y=.4*z.W;
+
+draw z.V--z.V+z.W--z.W dashed evenly;
+draw z.X--z.Y;
+drawarrow z.O--(z.V+z.W);
+drawarrow z.O--z.V;
+drawarrow z.O--z.W;
+
+dOt z.O,z.X,z.Y;%,z.V,z.V+z.W,z.W;
+
+label.llft (btex $O$ etex, z.O);
+label.bot (btex $X$ etex, z.X);
+label.lft (btex $Y$ etex, z.Y);
+label.urt (btex $P$ etex, z.V+z.W);
+label.lrt (btex $V$ etex, z.V);
+label.ulft (btex $W$ etex, z.W);
+endfig;
 
 beginfig(226)
 save u, n;
