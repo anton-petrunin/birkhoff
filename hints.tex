@@ -1504,7 +1504,7 @@ Apply twice Exercise~\ref{ex:affine-par} and the parallelogram rule.
 (Note that the case if $A$, $B$, $X$, and $Y$ are collinear requires extra work.)
  
 \parbf{Exercise~\ref{ex:affine-continuous} and \ref{ex:affine-coordinates}.}
-Fix a coordinate system and apply Corollary~\ref{cor:affine-linear} for the points $O=(0,0)$, $X=(1,0)$ and $Y=(0,1)$.
+Fix a coordinate system and apply the fundamental theorem of affine geometry (\ref{thm:fundamental-theorem-of-affine-geometry}) for the points $O=(0,0)$, $X=(1,0)$ and $Y=(0,1)$.
  
 \parbf{Exercise~\ref{ex:inversive-angle}.}
 Apply \ref{thm:angle-inversion} and \ref{thm:inversions-inversive}.
@@ -1547,9 +1547,16 @@ Therefore, $(BC')\parallel (CB')$.
 
 The case $(AB)\parallel(A'B')$ is similar.
 
+\parbf{Exercise~\ref{ex:desargues-construction}.} 
+Denote the parallelogram by $AXYZ$.
+Suppose that the line $\ell$ intersects $(AX)$ and $(AZ)$
+at $B$ and $C$ correspondingly.
+To do \textit{(\ref{ex:desargues-construction:desargues})}, apply Desargues' theorem for $\triangle ABC$ and a point $O\in (AY)$. 
+To do \textit{(\ref{ex:desargues-construction:pappus})}, apply Pappus' theorem for right triples of points on the lines $(CZ)$ and $(BX)$.
+
 \parbf{Exercise~\ref{ex:dual-euclid}.}
-Assume the contrary.
-Choose two parallel lines $\ell$ and~$m$.
+Assume there is a duality.
+Choose two distinct parallel lines $\ell$ and~$m$.
 Let $L$ and $M$ be their dual points.
 Set $s=(ML)$, then its dual point $S$ has to lie on both $\ell$ and $m$ --- a contradiction.
 
@@ -1591,23 +1598,17 @@ R'&=a'\cap b.
 \end{align*}
 Then the lines $(PP')$, $(QQ')$, and $(RR')$ are concurrent.
 
-\parbf{Exercise~\ref{ex:dual-desargues-construction}.} To solve \textit{(\ref{ex:dual-desargues-construction:a})},
-assume $(AA')$ and $(BB')$ are the given lines and $C$ is the given point.
+(It is a partial case of \index{Brianchon's theorem}\emph{Brianchon's theorem}.)
+
+\parbf{Exercise~\ref{ex:dual-desargues-construction}.}
+Assume $(AA')$ and $(BB')$ are the given lines and $C$ is the given point.
 Apply the dual Desargues' theorem (\ref{thm:dual-desargues}) to construct $C'$ so that $(AA')$, $(BB')$, and $(CC')$ are concurrent. 
 Since $(AA')\z\parallel (BB')$, 
 we get that 
 $(AA')\parallel (BB')\parallel (CC')$.
 
-A similar solution can be build on the dual Pappus' theorem, 
-see Exercise~\ref{ex:dual-pappus}.
-
-For part \textit{(\ref{ex:dual-desargues-construction:b})}, apply one of the discussed theorems to construct a line parallel to the given one and then apply part \textit{(\ref{ex:dual-desargues-construction:a})}.
-
-\parbf{Exercise~\ref{ex:tangent ruler}.}
-The line $v$ polar to $V$ is tangent to~$\Gamma$.
-Since $V\in p$, by Claim~\ref{clm:polar}, we get that $P\in v$;
-that is, $(PV)=v$.
-Hence the statement follows.
+Now assume that $P$ is the given point and $(R'Q)$, $(P'R)$ are the given parallel lines.
+Try to construct point $Q'$ as in the dual Pappus' theorem (see the solution of Exercise~\ref{ex:dual-pappus}).
 
 \begin{wrapfigure}{r}{45mm}
 \vskip-4mm
@@ -1615,6 +1616,12 @@ Hence the statement follows.
 \includegraphics{mppics/pic-370}
 \vskip-6mm
 \end{wrapfigure} 
+
+\parbf{Exercise~\ref{ex:tangent ruler}.}
+The line $v$ polar to $V$ is tangent to~$\Gamma$.
+Since $V\in p$, by Claim~\ref{clm:polar}, we get that $P\in v$;
+that is, $(PV)=v$.
+Hence the statement follows.
 
 \parbf{Exercise~\ref{ex:concentric-circ}.}
 Choose a point $P$ outside of the bigger circle.

@@ -2816,6 +2816,88 @@ label.top (btex $\dots$ etex, z.C+.5*(1+n)*z.A+(0,4));
 label.top (btex $C_n$ etex, z.C+n*z.A);
 endfig;
 
+beginfig(187)
+save u,n;
+u:=1cm;
+n:=4;
+
+z.l=(.15,.02);
+z.r=(.15,-.02);
+
+z.B=origin;
+z.A=(2,0)*u;
+z.C=(.7,2)*u;
+
+z.BC=((z.C-z.B) zscaled z.r)+z.B;
+z.CB=((z.B-z.C) zscaled z.l)+z.C;
+
+z.AC=((z.C-z.A) zscaled z.l)+z.A;
+z.CA=((z.A-z.C) zscaled z.r)+z.C;
+
+z.AB=((z.B-z.A) zscaled z.l)+z.A;
+z.BA=((z.A-z.B) zscaled z.r)+z.B;
+
+save a,b,c,d;
+path a,b,c,d;
+
+a=z.B--z.BC{z.BC-z.B}..{z.C-z.CB}z.CB--z.C;
+b=z.A--z.AC{z.AC-z.A}..{z.C-z.CA}z.CA--z.C;
+c=z.A--z.B;
+d=(z.A--z.AB{z.AB-z.A}..{z.B-z.BA}z.BA--z.B) shifted (z.C-z.B);
+
+labelarcsprof(z.B,z.A,z.AC,11, 8, btex $\alpha$ etex);
+labelarcsprof2(z.A,z.B,z.BC,11, 12, btex $\beta$ etex);
+labelarcsprof3(z.CA,z.C,z.CB,11, 12, btex $\gamma$ etex);
+labelarcsprof1(z.AC,z.A,z.BC+z.A-z.B,3, 6, btex $\delta$ etex);
+
+picture abc;
+abc:= image(
+arcs(z.B,z.A,z.AC,10);
+arcs2(z.A,z.B,z.BC,10);
+arcs3(z.CA,z.C,z.CB,10);
+);
+
+picture ddd;
+ddd:= image(fill_angle(z.AC,z.A,z.BC+z.A-z.B,6););
+
+picture ABC;
+ABC:= image(
+draw a;
+draw b;
+draw c;
+);
+
+picture DDD;
+DDD:= image(
+draw d;
+);
+
+for i=1 upto n: draw (abc shifted (i*(z.A-z.B)));
+endfor
+;
+
+for i=0 upto n-1: draw (ddd shifted (i*(z.A-z.B)));
+endfor
+;
+
+for i=0 upto n: draw (ABC shifted (i*(z.A-z.B)));
+endfor
+;
+
+for i=0 upto n-1: draw (DDD shifted (i*(z.A-z.B)));
+endfor
+;
+
+for i=0 upto n: 
+dOt z.A + (i*(z.A-z.B));
+dOt z.C + (i*(z.A-z.B));
+endfor
+;
+
+dOt z.B;
+
+endfig;
+
 beginfig(188)
 save u;
 u:=.7cm;

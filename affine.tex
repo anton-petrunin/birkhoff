@@ -44,7 +44,7 @@ for constants $a,b,c,d,r,z$ such that the matrix $(\begin{smallmatrix}a&b\\c&d\e
 \end{enumerate}
 \end{thm}
 
-From Corollary~\ref{cor:affine-linear}, it will follow that any affine transformation can be written in the form \textit{(\ref{affine-general-formula})}.
+From the fundamental theorem of affine geometry (\ref{thm:fundamental-theorem-of-affine-geometry}), it will follow that any affine transformation can be written in the form \textit{(\ref{affine-general-formula})}.
 
 Recall that points are \index{collinear}\emph{collinear} if they lie on one line.
 
@@ -92,8 +92,8 @@ here is one example:
 Show that with a ruler and a parallel tool one cannot construct a line perpendicular to a given line.
 \end{thm}
 
-\section*{Vector identity}
-\addtocontents{toc}{Vector identity.}
+\section*{Fundamental theorem of affine geometry}
+\addtocontents{toc}{Fundamental theorem of affine geometry.}
 
 Further we assume knowledge of vector algebra, namely multiplication by real number, addition and the parallelogram rule.
 
@@ -139,12 +139,10 @@ $f(x\cdot y)=f(x)\cdot f(y)$ and $f(x+y)=f(x)+f(y)$ for any $x,y\in\mathbb{R}$.
 By the algebraic lemma (see \ref{lem:R-auto}), these conditions imply \ref{eq:f(x)=x}.
 \qeds
 
-\begin{thm}{Corollary}\label{cor:affine-linear}
+\begin{thm}{Fundamental theorem of affine geometry}\label{thm:fundamental-theorem-of-affine-geometry}
 Suppose an affine transformations maps a nondegenerate triange $OXY$ to a triangle $O'X'Y'$.
-If 
-\[\overrightarrow{OP}=x\cdot\overrightarrow{OX}+y\cdot\overrightarrow{OY},\]
-then 
-\[\overrightarrow{O'P'}=x\cdot\overrightarrow{O'X'}+y\cdot\overrightarrow{O'Y'}.\]
+Then 
+\[\overrightarrow{OP}=x\cdot\overrightarrow{OX}+y\cdot\overrightarrow{OY},\quad\text{if and only if}\quad\overrightarrow{O'P'}=x\cdot\overrightarrow{O'X'}+y\cdot\overrightarrow{O'Y'}.\]
 \end{thm}
 
 \parit{Proof.}
@@ -160,7 +158,7 @@ By the proposition,
 \overrightarrow{O'W'}=y\cdot\overrightarrow{O'Y'}.
 \]
 
-\begin{wrapfigure}{o}{43mm}
+\begin{wrapfigure}{o}{33mm}
 \centering
 \includegraphics{mppics/pic-225}
 \end{wrapfigure}
@@ -175,13 +173,6 @@ Therefore
 &=x\cdot\overrightarrow{O'X'}+y\cdot\overrightarrow{O'Y'}.
 \end{align*}
 \qedsf
-
-Note that the Corollary~\ref{cor:affine-linear} implies the following result:
-
-\begin{thm}{Fundamental theorem of affine geometry}\label{thm:fundamental-affine}
-Given two nondegenerate triangles $ABC$ and $A'B'C'$
-there is unique affine transformation that maps $A\mapsto A'$, $B\mapsto B'$, and $C\mapsto C'$.
-\end{thm}
 
 \begin{thm}{Exercise}\label{ex:affine-continuous}
 Show that any affine transformation is continuous.
