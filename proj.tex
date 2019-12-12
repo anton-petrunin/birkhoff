@@ -74,7 +74,7 @@ by applying plane geometry in the planes of the space.
 
 Consider two planes $\Pi$ and $\Pi'$ 
 in the Euclidean space. 
-Let $O$ be a point which does not belong neither to $\Pi$ nor~$\Pi'$.
+Let $O$ be a point that does not belong neither to $\Pi$ nor~$\Pi'$.
 
 \begin{wrapfigure}{o}{45mm}
 \centering
@@ -119,7 +119,7 @@ If $P\in \Pi$, then take the line $(OP)$;
 if $P$ is an ideal point of $\hat \Pi$, so it is defined by a parallel pencil of lines, then take the line thru $O$ parallel to the lines in this pencil. 
 
 The same construction gives a bijection between $\Lambda$ and $\hat \Pi'$.
-Composing these two bijections $\hat \Pi\leftrightarrow \Lambda\leftrightarrow \hat \Pi'$, we get a bijection between $\hat \Pi$ and $\hat \Pi'$ which coincides with the perspective projection $P\mapsto P'$
+Composing these two bijections $\hat \Pi\leftrightarrow \Lambda\leftrightarrow \hat \Pi'$, we get a bijection between $\hat \Pi$ and $\hat \Pi'$ that coincides with the perspective projection $P\mapsto P'$
 where it is defined.
 
 Note that the ideal line of $\hat\Pi$ maps to the intersection line of $\Pi'$ and the plane thru $O$ parallel to~$\Pi$.
@@ -145,28 +145,28 @@ Which points $P'\in\Pi'$ are not images of points under perspective projection?
 \addtocontents{toc}{Projective transformations.}
 
 A bijection from the real projective plane to itself 
-which sends lines to lines 
+that sends lines to lines 
 is called \index{projective transformation}\emph{projective transformation}.
 
-Projective geometry studies the properties of real projective plane which preserved under projective transformations.
+Projective geometry studies the properties of real projective plane that preserved under projective transformations.
 
 
 Note that any affine transformation defines  a projective transformation on the corresponding real projective plane.
 We will call such projective transformations \index{affine transformation}\emph{affine}; 
-these are projective transformations which send the ideal line to itself.
+these are projective transformations that send the ideal line to itself.
 
 The perspective projection discussed in the previous section 
 gives an example of projective transformation which is not affine.
 
 \begin{thm}{Theorem}\label{thm:moving}
-Given a line $\ell$ in the real projective plane, there is a perspective projection which sends $\ell$ to the ideal line.
+Given a line $\ell$ in the real projective plane, there is a perspective projection that sends $\ell$ to the ideal line.
 
 Moreover, any projective transformation can be obtained as a composition of an affine transformation and a perspective projection.
 \end{thm}
 
 \parit{Proof.}
 Identify the projective plane with a plane $\Pi$ in the space.
-Fix a point $O\notin \Pi$ and choose a plane $\Pi'$ which is
+Fix a point $O\notin \Pi$ and choose a plane $\Pi'$ that is
 parallel to the plane containing $\ell$ and~$O$.
 The corresponding perspective projection sends $\ell$ to the ideal line.
 
@@ -176,7 +176,7 @@ If $\alpha$ sends ideal line to itself,
 then it has to be affine. 
 It proves the theorem in this case.
 
-If $\alpha$ sends the ideal line to the line $\ell$, choose a perspective projection $\beta$ which sends $\ell$ back to the ideal line.
+If $\alpha$ sends the ideal line to the line $\ell$, choose a perspective projection $\beta$ that sends $\ell$ back to the ideal line.
 The composition $\beta\circ\alpha$ sends the ideal line to itself.
 That is, $\beta\circ\alpha$ is affine, hence the result.
 \qeds
@@ -274,8 +274,8 @@ Then the points $X$, $Y$, $Z$ are collinear.
 Pappus' theorem can be proved the same way as Desargues' theorem.
 
 \parit{Idea of the proof.}
-Applying a perspective projection, we can assume that $X$ and $Y$ lie on the ideal line.
-It remains to show that $Z$ lies on the ideal line.
+Applying a perspective projection, we can assume that $Y$ and $Z$ lie on the ideal line.
+It remains to show that $X$ lies on the ideal line.
 
 In other words, assuming that $(AB')\parallel (A'B)$ and $(AC')\parallel (A'C)$, we need to show that $(BC')\parallel(B'C)$.
 
@@ -335,13 +335,31 @@ for any point $P$ and line~$s$.
 Existence of duality in a plane 
 says that the lines and the points in this plane have the same rights in terms of incidence.
 
+{
+
+\begin{wrapfigure}{r}{46mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-245}
+\end{wrapfigure}
+
+\begin{thm}{Exercise}\label{ex:dual-configurations}
+Consider the configuration of lines and points on the diagram.
+
+Draw its dual configuration; label corresponding lines and points using the convention described above.
+\end{thm}
+
 \begin{thm}{Exercise}\label{ex:dual-euclid}
 Show that Euclidean plane does not admit a duality. 
 \end{thm}
 
+}
+
 \begin{thm}{Theorem}\label{thm:dual}
 The real projective plane admits a duality.
 \end{thm}
+
+
 
 \parit{Proof.}
 Consider a plane $\Pi$ and a point $O\notin\Pi$ in the space;
@@ -355,7 +373,7 @@ that is,
 \item if $P\in \Pi$, then $\dot P=(OP)$;
 \item if $P$ is an ideal point of $\hat \Pi$, 
 so $P$ is defined as a parallel pencil of lines,
-set $\dot P$ to be the line thru $O$ which is parallel to each lines in this pencil. 
+set $\dot P$ to be the line thru $O$ that is parallel to each lines in this pencil. 
 \end{itemize}
 
 Similarly there is a natural bijection $s\leftrightarrow\dot s$ between lines in  $\hat \Pi$ and all the planes passing thru~$O$.
@@ -382,7 +400,7 @@ such that
 for any two lines $\dot r$ and $\dot s$ passing thru~$O$.
 
 Set $\dot S$ to be the plane thru $O$ 
-which is perpendicular to~$\dot s$.
+that is perpendicular to~$\dot s$.
 Note that both conditions \ref{iff-dual} are equivalent to $\dot r\perp \dot s$;
 hence the result follows.
 \qeds
@@ -443,21 +461,28 @@ Assume $\Gamma$ is a circle in the plane and $P\notin \Gamma$.
 \centering
 \includegraphics{mppics/pic-290}
 \end{figure}
-Draw two lines $x$ and $y$ thru $P$ which intersect $\Gamma$ at two pairs of points $X$, $X'$ and $Y$, $Y'$.
+Draw two lines $x$ and $y$ thru $P$ that intersect $\Gamma$ at two pairs of points $X$, $X'$ and $Y$, $Y'$.
 Let $Z=(XY)\cap(X'Y')$ and $Z'=(XY')\cap(X'Y)$.
 Consider the line $p=(ZZ')$.
-
-
-The following claim will be used without a proof.
 
 \begin{thm}{Claim}\label{clm:polar}
 The constructed line $p=(ZZ')$ does not depend on the choice of the lines $x$ and $y$.
 Moreover, $P\mapsto p$ defines a duality.
 \end{thm}
 
+We will use this claim without a proof, but the proof is not hard.
+If $P$ lies outside of $\Gamma$, it can be done by moving $P$ to infinity keeping $\Gamma$ fixed as a set.
+If $P$ lies inside of $\Gamma$, it can be done by moving $P$ to the center of $\Gamma$.
+The existence of corresponding projective transformations follow from the idea in Exercise~\ref{ex:cone}.
+
+
 The line $p$ is called the polar of $P$ with respect to~$\Gamma$.
 The same way the point $P$ is called the polar of the line $p$ with respect to~$\Gamma$.
 
+\begin{thm}{Exercise}\label{ex:revert}
+Revert the described construction.
+That is, given a circle $\Gamma$ and a line $p$, construct a point $P$ such that the above construction for $P$ and $\Gamma$ produces the line $p$.
+\end{thm}
 
 
 \begin{thm}{Exercise}\label{ex:tangent ruler}
@@ -505,7 +530,7 @@ so the real projective plane discussed above becomes a particular example of pro
 \includegraphics{mppics/pic-246}
 \end{wrapfigure}
 
-There is an example of projective plane which contains exactly 3 points on each line.
+There is an example of projective plane that contains exactly 3 points on each line.
 This is the so called \index{Fano plane}\emph{Fano plane} which you can see on the diagram;
 it contains $7$ points and $7$ lines.
 This is an example of \index{finite projective plane}\emph{finite projective plane};

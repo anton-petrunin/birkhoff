@@ -17,31 +17,35 @@ soon or later you will have to learn Lebesgue measure if it is not done already.
 
 We say that the point $X$ lies \index{inside!a triangle}\emph{inside} a nondegenerate triangle $ABC$
 if the following three condition hold:
+
+{
+
+\begin{wrapfigure}{r}{27 mm}
+\vskip-20mm
+\centering
+\includegraphics{mppics/pic-292}
+\end{wrapfigure}
+
+
 \begin{itemize}
 \item $A$ and $X$ lie on the same side of the line~$(BC)$;
 \item $B$ and $X$ lie on the same side of the line~$(CA)$;
 \item $C$ and $X$ lie on the same side of the line~$(AB)$.
 \end{itemize}
 
-{
-
-\begin{wrapfigure}{o}{27 mm}
-\vskip-1mm
-\centering
-\includegraphics{mppics/pic-292}
-\end{wrapfigure}
-
 The set of all points inside $\triangle ABC$ 
 and on its sides $[AB]$, $[BC]$, $[CA]$
 will be called \index{triangle!solid triangle}\index{solid!triangle}\emph{solid triangle} $ABC$ and denoted by \index{25@$\solidtriangle$}$\solidtriangle ABC$.
 
+}
+
 \begin{thm}{Exercise}\label{ex:triangle-convex}
 Show that any solid triangle is \index{convex set}\emph{convex};
-that is, if $X,Y\in\solidtriangle ABC$,
+that is, for any pair of points $X,Y\z\in\solidtriangle ABC$,
 then the line segment $[XY]$ lies in  $\solidtriangle ABC$.
 \end{thm}
 
-}
+
 
 %\begin{thm}{Exercise}\label{ex:solid-triangle-sum}
 %Show that  $X\in\solidtriangle ABC$ if and only if
@@ -57,7 +61,7 @@ Recall that $\triangle ABC$ is an ordered triple of distinct points
 while $\solidtriangle ABC$ is an infinite set of points.
 
 In particular, $\solidtriangle ABC=\solidtriangle BAC$ for any triangle $ABC$.
-Indeed, any point which belong to the set $\solidtriangle ABC$ 
+Indeed, any point that belongs to the set $\solidtriangle ABC$ 
 also belongs to the set $\solidtriangle BAC$
 and the other way around.
 On the other hand,
@@ -81,14 +85,14 @@ we will have
 \[\triangle ABC\cong \triangle A'B'C'.\]
 
 Indeed it is sufficient to show that 
-if $f$ is a motion which maps $\solidtriangle ABC$ to $\solidtriangle A'B'C'$,
+if $f$ is a motion that maps $\solidtriangle ABC$ to $\solidtriangle A'B'C'$,
 then $f$ maps each vertex of $\triangle ABC$ to a vertex $\triangle A'B'C'$.
 The latter follows from the characterization of vertexes of solid triangles given in the following exercise:
 
 \begin{thm}{Exercise}\label{ex:vertex}
 Let $\triangle ABC$ be nondegenerate and $X\z\in \solidtriangle ABC$.
 Show that $X$ is a vertex of $\triangle ABC$
-if and only if there is a line $\ell$ which intersects $\solidtriangle ABC$
+if and only if there is a line $\ell$ that intersects $\solidtriangle ABC$
 at the single point~$X$.
 \end{thm}
 
@@ -150,13 +154,20 @@ as well as the intersection $\mathcal{P}\cap\mathcal{Q}$
 are also polygonal sets.
 \end{thm}
 
-A class of sets which closed with respect to union and intersection  is called a {}\emph{ring of sets}.
+A class of sets that closed with respect to union and intersection  is called a {}\emph{ring of sets}.
 The claim above, therefore, states that polygonal sets in the plane form a ring of sets.
 
 \parit{Informal proof.}
 Let us present $\mathcal{P}$ and $\mathcal{Q}$
 as a union of finite collection of elementary sets $\mathcal{P}_1,\dots,\mathcal{P}_k$ 
 and $\mathcal{Q}_1,\dots,\mathcal{Q}_n$ correspondingly.
+
+{
+
+\begin{wrapfigure}{o}{22 mm}
+\centering
+\includegraphics{mppics/pic-298}
+\end{wrapfigure}
 
 Note that
 \[\mathcal{P}\cup\mathcal{Q}
@@ -173,13 +184,6 @@ Note that
 \cup
 \mathcal{Q}_n.\]
 Therefore, $\mathcal{P}\cup\mathcal{Q}$ is polygonal.
-
-{
-
-\begin{wrapfigure}{o}{22 mm}
-\centering
-\includegraphics{mppics/pic-298}
-\end{wrapfigure}
 
 Note that $\mathcal{P}\cap \mathcal{Q}$ is the union of sets $\mathcal{P}_i\cap \mathcal{Q}_j$ for all $i$ and $j$.
 Therefore, in order to show that $\mathcal{P}\cap \mathcal{Q}$ is polygonal,
@@ -582,7 +586,7 @@ Then
 \end{thm}
 
 \parit{Proof.}
-Draw the line $m$ thru $A$ which is parallel to $(BC)$
+Draw the line $m$ thru $A$ that is parallel to $(BC)$
 and line $n$ thru $C$ parallel to~$(AB)$.
 Note that the lines $m$ and $n$ are not parallel;
 denote by $D$ their point of intersection.
@@ -919,7 +923,7 @@ holds for any polygonal sets $\mathcal{P}$ and $\mathcal{Q}$ such that $\mathcal
 
 \begin{thm}{Exercise}\label{ex:circle-is-quadrable}
 Let $\mathcal{D}$ be the unit disc;
-that is, $\mathcal{D}$ is a set which contains 
+that is, $\mathcal{D}$ is a set that contains 
 the unit circle $\Gamma$ and all the points inside~$\Gamma$.
 
 Show that $\mathcal{D}$ is a quadrable set.

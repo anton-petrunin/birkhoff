@@ -2819,7 +2819,7 @@ endfig;
 beginfig(187)
 save u,n;
 u:=1cm;
-n:=4;
+n:=5;
 
 z.l=(.15,.02);
 z.r=(.15,-.02);
@@ -2845,16 +2845,28 @@ b=z.A--z.AC{z.AC-z.A}..{z.C-z.CA}z.CA--z.C;
 c=z.A--z.B;
 d=(z.A--z.AB{z.AB-z.A}..{z.B-z.BA}z.BA--z.B) shifted (z.C-z.B);
 
-labelarcsprof(z.B,z.A,z.AC,11, 8, btex $\alpha$ etex);
-labelarcsprof2(z.A,z.B,z.BC,11, 12, btex $\beta$ etex);
-labelarcsprof3(z.CA,z.C,z.CB,11, 12, btex $\gamma$ etex);
-labelarcsprof1(z.AC,z.A,z.BC+z.A-z.B,3, 6, btex $\delta$ etex);
+draw cutcircle(circle(z.A,11), z.AC, z.B);
+
+draw cutcircle(circle(z.B,10),z.A, z.BC );
+draw cutcircle(circle(z.B,12),z.A, z.BC );
+
+draw cutcircle(circle(z.C,9), z.CB, z.CA);
+draw cutcircle(circle(z.C,11), z.CB, z.CA);
+draw cutcircle(circle(z.C,13), z.CB, z.CA);
+
+labelarcsprof1(z.AC,z.A,z.BC+z.A-z.B,3, 6, btex  etex);
 
 picture abc;
 abc:= image(
-arcs(z.B,z.A,z.AC,10);
-arcs2(z.A,z.B,z.BC,10);
-arcs3(z.CA,z.C,z.CB,10);
+
+draw cutcircle(circle(z.A,11), z.AC, z.B);
+
+draw cutcircle(circle(z.B,10),z.A, z.BC );
+draw cutcircle(circle(z.B,12),z.A, z.BC );
+
+draw cutcircle(circle(z.C,9), z.CB, z.CA);
+draw cutcircle(circle(z.C,11), z.CB, z.CA);
+draw cutcircle(circle(z.C,13), z.CB, z.CA);
 );
 
 picture ddd;
@@ -2865,11 +2877,15 @@ ABC:= image(
 draw a;
 draw b;
 draw c;
+rimmark(a);
+rimmark2(b);
+rimmark3(c);
 );
 
 picture DDD;
 DDD:= image(
 draw d;
+rimmark10(d);
 );
 
 for i=1 upto n: draw (abc shifted (i*(z.A-z.B)));
@@ -2889,12 +2905,12 @@ endfor
 ;
 
 for i=0 upto n: 
-dOt z.A + (i*(z.A-z.B));
-dOt z.C + (i*(z.A-z.B));
+%dOt z.A + (i*(z.A-z.B));
+%dOt z.C + (i*(z.A-z.B));
 endfor
 ;
 
-dOt z.B;
+%dOt z.B;
 
 endfig;
 
@@ -3966,6 +3982,44 @@ label.bot (btex $c$ etex, 1.3[z.R,z.Q]);
 label.lft (btex $d$ etex, 1.3[z.R,z.S]);
 label.llft (btex $e$ etex, 1.3[z.R,z.P]);
 label.lrt (btex $f$ etex, 1.3[z.S,z.Q]);
+endfig;
+
+beginfig(245)
+save u,m,n;
+u:=1cm;
+
+
+z.A=(0,0)*u;
+z.B=(2,0)*u;
+z.C=(.8,1.7)*u;
+
+z.AA=.4[z.B,z.C];
+z.BB=.4[z.C,z.A];
+z.CC=.4[z.A,z.B];
+
+draw ddline(z.A,z.B)(.5,.5);
+draw ddline(z.A,z.C)(.5,.5);
+draw ddline(z.C,z.B)(.5,.5);
+draw ddline(z.AA,z.BB)(.7,.7);
+draw ddline(z.AA,z.CC)(.7,.7);
+draw ddline(z.CC,z.BB)(.7,.7);
+
+dOt z.A,z.B,z.C,z.AA,z.BB,z.CC;
+
+whitelabel.ulft (btex $A$ etex, z.A);
+whitelabel.urt (btex $B$ etex, z.B);
+whitelabel.rt (btex $C$ etex, z.C);
+whitelabel.urt (btex $X$ etex, z.AA);
+whitelabel.llft (btex $Y$ etex, z.BB);
+whitelabel.lrt (btex $Z$ etex, z.CC);
+
+label.ulft (btex $u$ etex, 1.5[z.B,z.C]);
+label.urt (btex $v$ etex, 1.5[z.A,z.C]);
+label.rt (btex $w$ etex, 1.5[z.A,z.B]);
+label.bot (btex $p$ etex, 1.7[z.BB,z.CC]);
+label.llft (btex $q$ etex, 1.7[z.AA,z.CC]);
+label.lft (btex $r$ etex, 1.7[z.AA,z.BB]);
+
 endfig;
 
 beginfig(246)
