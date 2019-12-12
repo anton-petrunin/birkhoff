@@ -5243,7 +5243,45 @@ label.bot (btex $A'$ etex, z.AA);
 label.urt (btex $B'$ etex, z.BB);
 label.ulft (btex $C'$ etex, z.CC);
 
-label.rt (btex $X$ etex, z.X+(1,1));
+label.lrt (btex $X$ etex, z.X+(-2,-3));
+endfig;
+
+beginfig(319)
+save u;
+u:=.7cm;
+
+z.O=origin;
+
+z.A1=(-1,1)*u;
+z.A4=(2,1.4)*u;
+z.A2=.3[z.A1,z.A4];
+z.A3=.6[z.A1,z.A4];
+
+z.B1=-1.4*z.A1;
+z.B4=-.8*z.A4;
+z.B2=whatever[z.O,z.A2]=whatever[z.B1,z.B4];
+z.B3=whatever[z.O,z.A3]=whatever[z.B1,z.B4];
+
+draw ddline(z.A1,z.A4)(.2,.2);
+draw ddline(z.B1,z.B4)(.2,.2);
+draw z.A1--z.B1;
+draw z.A2--z.B2;
+draw z.A3--z.B3;
+draw z.A4--z.B4;
+
+dOt z.O,z.A1,z.A2,z.A3,z.A4,z.B1,z.B2,z.B3,z.B4;
+
+label.rt (btex $O$ etex, z.O+(2,0));
+
+label.top (btex $L_1$ etex, z.A1);
+label.top (btex $L_2$ etex, z.A2);
+label.top (btex $L_3$ etex, z.A3);
+label.top (btex $L_4$ etex, z.A4);
+
+label.bot (btex $M_1$ etex, z.B1);
+label.bot (btex $M_2$ etex, z.B2);
+label.bot (btex $M_3$ etex, z.B3);
+label.bot (btex $M_4$ etex, z.B4);
 endfig;
 
 beginfig(320)
