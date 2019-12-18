@@ -1,8 +1,8 @@
 \chapter{Projective geometry}\label{chap:proj}
 \addtocontents{toc}{\protect\begin{quote}}
 
-\section*{Real projective plane}
-\addtocontents{toc}{Real projective plane.}
+\section*{Projective completion}
+\addtocontents{toc}{Projective completion.}
 
 In the Euclidean plane, two distinct lines might have one or zero points of intersection 
 (in the latter case the lines are parallel).
@@ -29,12 +29,14 @@ Let us add one \index{point!ideal point}\index{ideal point}\emph{ideal point} fo
 and assume that all these ideal points lie on one \index{line!ideal line}\index{ideal line}\emph{ideal line}.
 We also assume that the ideal line belongs to each parallel pencil.
 
-We obtain the so called \index{real projective plane}\emph{real projective plane}.
-It comes with an incidence structure --- we say that three points lie on one line if the corresponding pencils contain a common line. 
+We obtain the so called \index{real projective plane}\emph{real projective plane}, or \index{projective completion}\emph{projective completion} of the original plane. 
+It comes with an incidence structure --- we say that three points lie on one line if the corresponding pencils contain a common line.
+This incidence structure is studied in projective geometry.
 
-Projective geometry studies this incidence structure on the projective plane.
-Loosely speaking, any statement in projective geometry can be formulated using only terms {}\emph{collinear points},
-\emph{concurrent lines}.
+A parallel pencil contains the ideal line and the lines $y=m\cdot x+b$ with fixed slope $m$;
+if $m=\infty$, we assume that the line is given by an equation $x=a$.
+Therefore real projective plane contains every point $(x,y)$ in the coordinate plane plus the ideal line containing one ideal point $P_m$ for every slope $m\in\mathbb{R}\cup\{\infty\}$.
+
 
 
 
@@ -69,6 +71,28 @@ It is straightforward to show the following:
 These statements make possible to generalize many notions and results from Euclidean plane geometry to the Euclidean space
 by applying plane geometry in the planes of the space.
 
+\section*{Space model}
+\addtocontents{toc}{Space model.}
+
+Let us identify the Euclidean plane plane with a plane $\Pi$ in the Euclidean space $\mathbb{R}^3$ that does not pass thru the origin $O$.
+Denote by $\hat\Pi$ the projective completion of $\Pi$.
+
+Denote by $\Phi$ the set of all lines in the space thru $O$.
+Let us define a bijection $P\leftrightarrow \dot P$ between $\hat \Pi$ and $\Phi$.
+If $P\in \Pi$, then take the line $\dot P=(OP)$;
+if $P$ is an ideal point of $\hat \Pi$, so it is defined by a parallel pencil of lines, then take the line $\dot P$ thru $O$ parallel to the lines in this pencil.
+
+Further denote by $\Psi$ the set of all planes in the space thru $O$.
+In a similar fashion, we can define a bijection $\ell\leftrightarrow \dot \ell$ between lines in $\hat \Pi$ and $\Psi$.
+If a line $\ell$ is not ideal, then take the plane  $\dot \ell$ that conatins $\ell$ and $O$;
+if the line $\ell$ is ideal, then take $\dot \ell$ to be the plane thru $O$ that is parallel to $\Pi$ (that is, $\dot\ell\cap\Pi=\emptyset$).
+
+\begin{thm}{Observation}\label{obs:bijections}
+Let $P$ and $\ell$ be a point and a line in the real projective plane.
+Then $P\in \ell$ if and only if $\dot P\subset \dot \ell$,
+where $\dot P$ and $\dot \ell$ denote the line and plane defined by the constructed bijections.
+\end{thm}
+
 \section*{Perspective projection}
 \addtocontents{toc}{Perspective projection.}
 
@@ -76,70 +100,60 @@ Consider two planes $\Pi$ and $\Pi'$
 in the Euclidean space. 
 Let $O$ be a point that does not belong neither to $\Pi$ nor~$\Pi'$.
 
-\begin{wrapfigure}{o}{45mm}
+\begin{wrapfigure}{o}{43mm}
 \centering
 \includegraphics{mppics/pic-230}
 \end{wrapfigure}
 
-Let us define the \index{perspective projection}\emph{perspective projection from $\Pi$ to $\Pi'$ with center at $O$}.
-The projection of a point $P\in \Pi$
-is defined as the intersection point $P'=\Pi'\cap (OP)$.
+A \index{perspective projection}\emph{perspective projection from $\Pi$ to $\Pi'$ with center at $O$} maps a point $P\in \Pi$
+to the intersection point $P'=\Pi'\cap (OP)$.
 
-Note that the perspective projection sends collinear points to collinear.
-Indeed, assume three points $P$, $Q$, $R$ lie on one line $\ell$ in $\Pi$
-and $P'$, $Q'$, $R'$ are their images in~$\Pi'$.
-Let $\Theta$ be the plane containing $O$ and $\ell$.
-Then all the points $P$, $Q$, $R$, $P'$, $Q'$, $R'$ lie on $\Theta$.
-Therefore, the points $P',Q',R'$ lie on the  intersection line $\ell'=\Theta\cap \Pi'$.
-
-\begin{wrapfigure}{o}{52mm}
-\centering
-\includegraphics{mppics/pic-232}
-\end{wrapfigure}
-
-The perspective projection is not a bijection between the planes.
+In general, perspective projection is not a bijection between the planes.
 Indeed, if the line $(OP)$ is parallel to $\Pi'$ 
 (that is, if $(OP)\cap\Pi'=\emptyset$)
-then the perspective projection is not defined.
+then the perspective projection of $P\in \Pi$ is undefined.
 Also, if $(OP')\parallel \Pi$ 
 for $P'\in \Pi'$,
 then the point $P'$ is not an image of the perspective projection.
 
-Let us remind that a similar story happened with inversion.
+For example, let $O$ be the origin of $(x,y,z)$-coordinate space
+and the planes $\Pi$ and $\Pi'$ are given by the equations
+$z=1$ and $x=1$ correspondingly.
+Then the perspective projection from $\Pi$ to $\Pi'$
+can be written in the coordinates as
+\[(x,y,1)\mapsto (1,\tfrac yx,\tfrac 1x).\]
+It follows since the coordinates have to be proportional;
+points on $\Pi$ have unit $z$-coordinate, 
+and points on $\Pi'$ have unit $y$-coordinate.
+
+The perspective projection, maps one plane to another.
+However, we can identify the two planes, say by fixing a coordinate system in each.
+In this case we get a partially defined map from the plane to itself.
+We will keep the name \emph{perspective transformation} for such maps.
+
+For the described perspective projection; we may get the map 
+\[\beta\:(x,y)\mapsto (\tfrac 1x,\tfrac yx).
+\eqlbl{eq:(x,y)-perspective}\]
+This map is undefined on the line $x=0$.
+Also points on this line are not images of points under perspective projection.
+
+Denote by $\hat \Pi$ and $\hat \Pi'$ the projective completions of $\Pi$ and $\Pi'$ correspondingly. 
+Note that the perspective projection is a restriction of composition of the two bijections $\hat \Pi\leftrightarrow\Phi \leftrightarrow\hat \Pi'$ constructed in the previous section.
+By Observation~\ref{obs:bijections}, the perspective projection can be extended to a bijection $\hat \Pi\leftrightarrow\hat \Pi'$ that sends lines to lines.%
+\footnote{A similar story happened with inversion.
 An inversion is not defined at its center;
 moreover, the center is not an inverse of any point.
 To deal with this problem we passed to inversive plane 
 which is Euclidean plane extended by one ideal point.
+The same strategy worked for perspective projection $\Pi\to\Pi'$, but this time real projective plane is the right choice of extension.}
 
-A similar strategy works for perspective projection $\Pi\to\Pi'$, but this time real projective plane is the right choice of extension.
-
-Let $\hat \Pi$ and $\hat \Pi'$ denote the corresponding real projective planes.
-Let us define a bijection between points in the real projective plane $\hat \Pi$ and the set $\Lambda$ of all the lines passing thru~$O$.
-If $P\in \Pi$, then take the line $(OP)$;
-if $P$ is an ideal point of $\hat \Pi$, so it is defined by a parallel pencil of lines, then take the line thru $O$ parallel to the lines in this pencil. 
-
-The same construction gives a bijection between $\Lambda$ and $\hat \Pi'$.
-Composing these two bijections $\hat \Pi\leftrightarrow \Lambda\leftrightarrow \hat \Pi'$, we get a bijection between $\hat \Pi$ and $\hat \Pi'$ that coincides with the perspective projection $P\mapsto P'$
-where it is defined.
-
-Note that the ideal line of $\hat\Pi$ maps to the intersection line of $\Pi'$ and the plane thru $O$ parallel to~$\Pi$.
-Similarly the ideal line of $\hat\Pi'$
-is the image of the intersection line of $\Pi$ and the plane thru $O$ parallel to~$\Pi'$.
-
-Strictly speaking we described a transformation from one real projective plane to another, 
-but if we identify the two planes, say by fixing a coordinate system in each, 
-we get a projective transformation from the plane to itself. 
-
-\begin{thm}{Exercise}\label{ex:persect}
-Let $O$ be the origin of $(x,y,z)$-coordinate space
-and the planes $\Pi$ and $\Pi'$ are given by the equations
-$x=1$ and $y=1$ correspondingly.
-The perspective projection from $\Pi$ to $\Pi'$ with center at $O$ sends $P$ to~$P'$.
-Assume $P$ has coordinates $(1,y,z)$, find the coordinates of~$P'$.
-
-For which points $P\in \Pi$ the perspective projection is undefined?
-Which points $P'\in\Pi'$ are not images of points under perspective projection?
-\end{thm}
+For example, to define extension of the perspective projection $\beta$ in \ref{eq:(x,y)-perspective},
+we have to observe that 
+\begin{itemize}
+\item The the pencil of vertical lines $x=a$ is mapped to itself.
+\item The ideal points defined by pencil of lines $y=m\cdot x+ b$ are mapped to the point $(0,m)$ and the other way around --- point $(0,m)$ is mapped to the ideal point defined by the  pencil of lines $y=m\cdot x+ b$.
+\end{itemize}
+This way we extend the perspective projection to a bijection from real projective space to itself.
 
 \section*{Projective transformations}
 \addtocontents{toc}{Projective transformations.}
@@ -155,35 +169,44 @@ Note that any affine transformation defines  a projective transformation on the 
 We will call such projective transformations \index{affine transformation}\emph{affine}; 
 these are projective transformations that send the ideal line to itself.
 
-The perspective projection discussed in the previous section 
+The extended perspective projection discussed in the previous section 
 gives an example of projective transformation which is not affine.
 
 \begin{thm}{Theorem}\label{thm:moving}
 Given a line $\ell$ in the real projective plane, there is a perspective projection that sends $\ell$ to the ideal line.
 
-Moreover, any projective transformation can be obtained as a composition of an affine transformation and a perspective projection.
+Moreover, a perspective transformation is either affine or, in a sutable coordinate system, it can be written as a composition of the extension of perspective projection 
+\[\beta\:(x,y)\mapsto (\tfrac xy,\tfrac 1y)\]
+and an affine transformation.
 \end{thm}
 
 \parit{Proof.}
-Identify the projective plane with a plane $\Pi$ in the space.
-Fix a point $O\notin \Pi$ and choose a plane $\Pi'$ that is
-parallel to the plane containing $\ell$ and~$O$.
-The corresponding perspective projection sends $\ell$ to the ideal line.
+We may choose an $(x,y)$-coordinate system such that the line $\ell$ is defined by equation $y=0$.
+Then the extension of $\beta$ gives the needed transformation.
 
-Assume $\alpha$ is a projective transformation.
-
-If $\alpha$ sends ideal line to itself,
+Fix a projective transformation $\gamma$.
+If $\gamma$ sends ideal line to itself,
 then it has to be affine. 
 It proves the theorem in this case.
 
-If $\alpha$ sends the ideal line to the line $\ell$, choose a perspective projection $\beta$ that sends $\ell$ back to the ideal line.
-The composition $\beta\circ\alpha$ sends the ideal line to itself.
-That is, $\beta\circ\alpha$ is affine, hence the result.
+If $\gamma$ sends the ideal line to the line $\ell$, choose a perspective projection $\beta$ as above.
+The composition $\beta\circ\gamma$ sends the ideal line to itself.
+That is, $\gamma=\beta\circ\gamma$ is affine.
+Note that $\beta$ is self-inverse; therefore $\alpha=\beta\circ \gamma$ --- hence the result.
 \qeds
+
+\begin{thm}{Exercise}\label{ex:proj-cross-ratio}
+Let $P\mapsto P'$ be (a) an affine transformation, (b) the perspective projection defined by $(x,y)\mapsto (\tfrac xy,\tfrac 1y)$, or (c) arbitrary projective transformation.
+Suppose $P_1,P_2,P_3,P_4$ lie on one line.
+Show that 
+\[\frac{P_1P_2\cdot P_3P_4}{P_2P_3\cdot P_4P_1}=\frac{P'_1P'_2\cdot P'_3P'_4}{P'_2P'_3\cdot P'_4P'_1};\]
+that is, each of these maps preserves cross ratio for quadruples of points on one line.
+
+\end{thm}
 
 {
 
-\begin{wrapfigure}{r}{40mm}
+\begin{wrapfigure}{r}{37mm}
 \vskip6mm
 \centering
 \includegraphics{mppics/pic-234}
@@ -260,7 +283,7 @@ Here is another classical theorem of projective geometry.
 \begin{thm}{Pappus' theorem}\label{thm:pappus}\index{Pappus' theorem}
 Assume that two triples of points $A$, $B$, $C$,
 and $A'$, $B'$, $C'$ are collinear.
-Set 
+Suppose that points $X$, $Y$, $Z$ are uniquely defined by
 \begin{align*}
 X&=(BC')\cap(B'C),
 &
@@ -291,6 +314,24 @@ In other words, assuming that $(AB')\parallel (A'B)$ and $(AC')\parallel (A'C)$,
 Finish the proof of Pappus' theorem using the idea described above.
 \end{thm}
 
+The following exercise gives a partial converse to Pappus' theorem.
+
+\begin{thm}{Exercise}\label{ex:pappus-converse}
+Given two triples of points $A$, $B$, $C$,
+and $A'$, $B'$, $C'$,
+suppose distinct points $X$, $Y$, $Z$ are uniquely defined by
+\begin{align*}
+X&=(BC')\cap(B'C),
+&
+Y&=(CA')\cap(C'A),
+&
+Z&=(AB')\cap(A'B).
+\end{align*}
+Assume that the triples $A$, $B$, $C$,
+and $X$, $Y$, $Z$ are collinear.
+Show that the triple $A'$, $B'$, $C'$ is collinear.
+\end{thm}
+
 \begin{thm}{Exercise}\label{ex:desargues-construction}
 Solve the following construction problem
 \begin{enumerate}[(a)]
@@ -312,17 +353,17 @@ Assume that a bijection $P\leftrightarrow p$ between the set of lines and the se
 That is,
 given a point $P$, we denote by $p$ the corresponding line;
 and the other way around, 
-given a line $s$ we denote by $S$ the corresponding point. 
+given a line $\ell$ we denote by $L$ the corresponding point. 
 
 The bijection between points and lines is called \index{duality}\emph{duality}\label{page:duality}%
 \footnote{The standard definition of duality is more general; we consider a special case which is also called \index{polarity}\emph{polarity}.}
 if 
-\[P\in s
+\[P\in \ell
 \quad
 \iff
 \quad 
-p\ni S.\]
-for any point $P$ and line~$s$.
+p\ni L.\]
+for any point $P$ and line~$\ell$.
 
 \begin{figure}[h!]
 \centering
@@ -337,7 +378,7 @@ says that the lines and the points in this plane have the same rights in terms o
 
 {
 
-\begin{wrapfigure}{r}{46mm}
+\begin{wrapfigure}{r}{40mm}
 \vskip-4mm
 \centering
 \includegraphics{mppics/pic-245}
@@ -346,7 +387,7 @@ says that the lines and the points in this plane have the same rights in terms o
 \begin{thm}{Exercise}\label{ex:dual-configurations}
 Consider the configuration of lines and points on the diagram.
 
-Draw its dual configuration; label corresponding lines and points using the convention described above.
+Start with generic quadrilateral $KLMN$ and extend it to a dual diagram; label the lines and points using the convention described above.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:dual-euclid}
@@ -365,43 +406,26 @@ The real projective plane admits a duality.
 Consider a plane $\Pi$ and a point $O\notin\Pi$ in the space;
 let $\hat \Pi$ denotes the corresponding real projective plane.
 
-Recall that there is a natural bijection $\hat \Pi\leftrightarrow\Lambda$ between $\hat \Pi$ 
-and the set $\Lambda$ of all the lines passing thru~$O$.
-Denote it by $P\leftrightarrow\dot P$;
-that is,
-\begin{itemize}
-\item if $P\in \Pi$, then $\dot P=(OP)$;
-\item if $P$ is an ideal point of $\hat \Pi$, 
-so $P$ is defined as a parallel pencil of lines,
-set $\dot P$ to be the line thru $O$ that is parallel to each lines in this pencil. 
-\end{itemize}
-
-Similarly there is a natural bijection $s\leftrightarrow\dot s$ between lines in  $\hat \Pi$ and all the planes passing thru~$O$.
-If $s$ is a line in $\Pi$, 
-then $\dot s$ is the plane containing $O$ and $s$;
-if $s$ is the ideal line of $\hat \Pi$,
-take $\dot s$ is the plane thru $O$ parallel to~$\Pi$. 
-
-It is straightforward to check that $\dot P\subset\dot s$
-if and only if $P\in s$;
-that is, the bijections $P\leftrightarrow \dot P$ and $s\leftrightarrow \dot s$
+Recall that $\Phi$ and $\Psi$ denote the set of all lines and planes passing thru $O$.
+According to Observation~\ref{obs:bijections}, there are bijections $P\leftrightarrow\dot P$  between points of $\hat\Pi$ and $\Phi$ and $\ell\leftrightarrow\dot\ell$ between lines in $\hat\Pi$ and $\Psi$ such that 
+$P\in\ell$ if and only if $\dot P\subset \dot \ell$.
+That is, the bijections $P\leftrightarrow \dot P$ and $\ell\leftrightarrow \dot \ell$
 remember all the incidence structure of the real projective plane~$\hat \Pi$.
 
-It remains to construct a bijection $\dot s \leftrightarrow \dot S$
-between the set of planes and 
-the set of lines passing thru $O$ 
+It remains to construct a bijection $\dot \ell \leftrightarrow \dot L$
+between $\Phi$ and $\Psi$ 
 such that 
-\[\dot r\subset \dot S
+\[\dot P\subset \dot \ell
 \quad
 \iff
 \quad
-\dot R\supset \dot s
+\dot p\supset \dot L
 \eqlbl{iff-dual}\]
-for any two lines $\dot r$ and $\dot s$ passing thru~$O$.
+for any two lines $\dot P$ and $\dot L$ passing thru~$O$.
 
-Set $\dot S$ to be the plane thru $O$ 
-that is perpendicular to~$\dot s$.
-Note that both conditions \ref{iff-dual} are equivalent to $\dot r\perp \dot s$;
+Set $\dot \ell$ to be the plane thru $O$ 
+that is perpendicular to~$\dot L$.
+Note that both conditions \ref{iff-dual} are equivalent to $\dot P\perp \dot L$;
 hence the result follows.
 \qeds
 
@@ -481,7 +505,7 @@ The same way the point $P$ is called the polar of the line $p$ with respect to~$
 
 \begin{thm}{Exercise}\label{ex:revert}
 Revert the described construction.
-That is, given a circle $\Gamma$ and a line $p$, construct a point $P$ such that the above construction for $P$ and $\Gamma$ produces the line $p$.
+That is, given a circle $\Gamma$ and a line $p$ that is not tangent to $\Gamma$, construct a point $P$ such that the described construction for $P$ and $\Gamma$ produces the line $p$.
 \end{thm}
 
 
@@ -520,7 +544,7 @@ Note that the real projective plane described above satisfies the following set 
 \end{framed}
 
 Let us take these three axioms as a definition of the \index{projective plane}\emph{projective plane};
-so the real projective plane discussed above becomes a particular example of projective plane.
+so the real projective plane discussed above becomes its particular example.
 
 {
 
@@ -543,7 +567,7 @@ Show that any line in projective plane contains at least three points.
 \end{thm}
 
 
-Consider the following analog of Axiom~p-\ref{def:proj-axioms:3}:
+Consider the following dual analog of Axiom~p-\ref{def:proj-axioms:3}:
 
 \begin{framed}
 \noindent {\rm p-III$'\!$.} 
@@ -580,7 +604,7 @@ Assume that one of the lines in a finite projective plane contains exactly $n+1$
 
 The number $n$ in the above exercise is called \index{order of finite projective plane}\emph{order} of finite projective plane.
 For example Fano plane has order $2$.
-Here is one of the most famous open problem in finite geometry.
+Let us finish by stating a famous open problem in finite geometry.
 
 \begin{thm}{Conjecture}
 The order of any finite projective plane is a power of a prime number.

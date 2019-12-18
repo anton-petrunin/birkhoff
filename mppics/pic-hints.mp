@@ -171,6 +171,33 @@ Dot z.X,z.Y;
 dOt z.O1,z.O2,z.A1,z.A2,z.B1,z.B2,z.Z;
 endfig;
 
+beginfig(333)
+save u;
+u:=1cm;
+
+z.A=(0,0)*u;
+z.B=(.8,1.6)*u;
+z.C=(2,0)*u;
+
+z.P=.6[z.A,z.B];
+z.Q=.6[z.C,z.B];
+
+parallel_mark(z.P--z.Q);
+parallel_mark(z.A--z.C);
+
+draw z.A--z.B--z.C--cycle;
+draw ddline(z.P,z.Q)(.4,.4);
+
+dOt z.A,z.B,z.C,z.P,z.Q;
+
+label.bot (btex $A$ etex, z.A);
+label.top (btex $B$ etex, z.B);
+label.bot (btex $C$ etex, z.C);
+
+label.ulft (btex $P$ etex, z.P);
+label.urt (btex $Q$ etex, z.Q);
+endfig;
+
 beginfig(334)%92
 save u;
 u:=.6cm;
@@ -224,6 +251,35 @@ draw ddline(z.C,z.CC)(.2,.2) dashed evenly;
 
 Dot z.C;
 dOt z.A,z.B,z.AA,z.BB,z.H;
+endfig;
+
+beginfig(337)
+save u;
+u:=1.1cm;
+
+z.A=(0,1)*u;
+z.B=z.A rotated 120;
+z.C=z.A rotated -120;
+z.P=z.A rotated 45;
+
+z.AA= z.A rotatedaround(z.P,-60);
+
+draw circumcircle(z.A,z.B,z.C);
+draw z.A--z.B--z.C--cycle;
+draw z.P--z.A;
+draw z.P--z.B;
+draw z.P--z.C;
+draw z.A--z.AA;
+
+rimmark(z.A--z.B,z.B--z.C,z.C--z.A);
+
+dOt z.A,z.B,z.C,z.P,z.AA;
+
+label.top (btex $A$ etex, z.A);
+label.llft (btex $B$ etex, z.B);
+label.lrt (btex $C$ etex, z.C);
+label.ulft (btex $P$ etex, z.P+(1,-1));
+label.urt (btex $A'$ etex, z.AA+(-1,0));
 endfig;
 
 beginfig(338)
@@ -525,6 +581,37 @@ draw circumcircle(z.B,z.BB,z.BBB);
 draw circumcircle(z.C,z.CC,z.CCC);
 
 clip currentpicture to absolute;
+
+endfig;
+
+beginfig(351)
+save u;
+u:=1.4cm;
+
+z.O=origin;
+x.RR=1.5*u;
+path absolute;
+absolute=circle(z.O,x.RR);
+fill absolute withcolor .5;
+
+z.A=(.9,.9)*u;
+z.AAA=(.8,1)*u;
+z.AA=inversion(z.O,x.RR)(z.A);
+
+z.B=(-.9,.8)*u;
+z.BBB=(-.8,1)*u;
+z.BB=inversion(z.O,x.RR)(z.B);
+
+z.C=(0,-.2)*u;
+z.CCC=(-.5,-.2)*u;
+z.CC=inversion(z.O,x.RR)(z.C);
+
+draw circumcircle(z.A,z.AA,z.AAA) pensemibold;
+draw circumcircle(z.B,z.BB,z.BBB) pensemibold;
+draw circumcircle(z.C,z.CC,z.CCC) pensemibold;
+
+clip currentpicture to absolute;
+draw absolute dashed evenly;
 
 endfig;
 

@@ -8,7 +8,7 @@ as an introduction to mathematical proofs.
 The geometric constructions were introduced in the end of Chapter~\ref{chap:perp}
 and since that moment they were used everywhere in the book.
 
-In this chapter we briefly discuss the classical results in geometric constructions.
+In this chapter we briefly discuss classical geometric constructions.
 
 %\input{brahmagupta.tex}
 %\input{car-kiselyov.tex}
@@ -170,8 +170,8 @@ It follows that $AD\cdot BD=CD^2$.
 
 {
 
-\begin{wrapfigure}{r}{37mm}
-\vskip-8mm
+\begin{wrapfigure}[7]{r}{37mm}
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-286}
 \end{wrapfigure}
@@ -182,14 +182,14 @@ Using this diagram, one should guess a solution of the following exercise.
 Given two line segments with lengths $a$ and $b$, give a ruler-and-compass construction of a segments with lengths $\tfrac {a^2}b$ and $\sqrt{a\cdot b}$.
 \end{thm}
 
-}
-
 Taking $1$ for $a$ or $b$ above, we can produce 
 $\sqrt a$, $a^2$, $\tfrac1b$.
 Combining these constructions we can produce
 $a\cdot b=(\sqrt{a\cdot b})^2$,
 $\tfrac ab=a\cdot\tfrac 1b$.
 In other words we produced a \index{compass-and-ruler calculator}\emph{compass-and-ruler calculator} which can do ``$+$'', ``$-$'', ``$\cdot$'', ``$/$'', and ``$\sqrt{\phantom{a}}$''.
+
+}
 
 The discussion above gives a sketch of the proof of the following theorem:
  
@@ -230,8 +230,6 @@ In the next section, we discuss similar but simpler examples of impossible const
  \item\label{ex:5-gon:b} Use (\ref{ex:5-gon:a}) to make a compass-and-ruler construction of a regular pentagon.
 \end{enumerate}
 \end{thm}
-
-%\clearpage%???
 
 \section*{Constructions with a set-square}
 \addtocontents{toc}{Constructions with a set-square.}
@@ -377,19 +375,23 @@ It follows that the perspective projection $\Pi\to \Pi'$ with center at $O$ send
 \section*{Comparison of construction tools}
 \addtocontents{toc}{Comparison of construction tools.}
 
-We say that one set of tools is \emph{stronger} than another if any point that can be constructed with the second set can be constructed with the first set alone.
-If it holds the other way as well, then we say that the two sets of tools are \emph{equivalent}. 
+We say that one set of tools is \emph{stronger} than another if any configuration of points that can be constructed with the second set can be constructed with the first set as well.
+If in addition, there is a configuration constructable with the first set, but not constructable with the second, then we say that the first set is \emph{stictly stronger} than the second.
+Otherwise (that is, if any configuration that can be constructed with the first set can be constructed with the second) we say that the sets of tools are \emph{equivalent}. 
 
 For example \emph{Mohr--Mascheroni theorem} states that compass alone is equivalent to compass and ruler.
+Note that one may not construct a line with a compass, but since we consider only configurations of points we do not have to.
+One may think that a \emph{line is constructed}, if we construct two points on it.
 
-To prove Mohr--Mascheroni theorem, 
-it is sufficient to perform the following two constructions using compass alone:
-(1) given four points $X$, $Y$, $P$ and $Q$, construct the intersection of the lines $(XY)$ and $(PQ)$
-and (2) given four points $X$, $Y$, and a circle $\Gamma$, construct the intersection of the lines $(XY)$ and $\Gamma$.
-Indeed, once it is done all the steps in a construction with compass and ruler can be performed with compass alone.
-Hence the theorem will follow.
+For sure compass and ruller form a stronger set than compass alone.
+Therefore Mohr--Mascheroni theorem will follow once we solve the following two construction problems:
+\begin{enumerate}[(i)]
+\item Given four points $X$, $Y$, $P$ and $Q$, construct the intersection of the lines $(XY)$ and $(PQ)$ with compass only.
+\item  Given four points $X$, $Y$, and a circle $\Gamma$, construct the intersection of the lines $(XY)$ and $\Gamma$ with compass only.
+\end{enumerate}
+Indeed, once we have these two constructions, we can do every step of a compass-and-ruler construction using compass alone.
 
-\begin{thm}{Exercise}\label{ex:midpoint-proj}
+\begin{thm}{Exercise}\label{ex:comparison}
 Compare the following set of tools: (a) a ruler and compass, (b) a set-square, and (c) a ruler and a parallel tool.
 \end{thm}
 
@@ -397,10 +399,3 @@ Another classical example is the so called \emph{Poncelet--Steiner theorem};
 it states that compass and ruler is equivalent to ruler alone, provided that a single circle and its centre are given.
 
 \addtocontents{toc}{\protect\end{quote}}
-
-%%%???Constuctions 
-%perp{ex:construction-perpendicular}{ex:center}{ex:tangent}{ex:tangent-circle}
-%inscriberd-angle{ex:two-right}{ex:perpendicular-ruler}{ex:3x120}
-%inversion{ex:consturuction-of-inversion}
-%affine{ex:R-hom}
-%car{ex:simple-apollonius}{ex:trisect-set-square}{ex:tangent ruler}{ex:concentric-circ}

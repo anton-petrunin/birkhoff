@@ -212,11 +212,11 @@ In the inversive plane, inverse of a circline is a circline.
 \end{thm}
 
 \parit{Proof.}
-Let $O$ denotes the center of the inversion.
+Let $O$ denotes the center of the inversion and $r$ its radius.
 
 Let $\Gamma$ be a circline.
 Choose three distinct points $A$, $B$, and $C$ on~$\Gamma$.
-(If $\triangle ABC$ is nondegenerate, 
+(If~$\triangle ABC$ is nondegenerate, 
 then $\Gamma$ is the circumcircle of $\triangle ABC$;
 if $\triangle ABC$ is degenerate, 
 then $\Gamma$ is the line passing thru $A$, $B$, and~$C$.)
@@ -241,18 +241,16 @@ $$\infty\in \Gamma
 \quad
 O\in\Gamma'.$$
 
-If $\infty\in\Gamma$, then $\Gamma$ is a line.
-Therefore, for any $\epsilon>0$, the line $\Gamma$ contains the point $P$ with  $OP>r^2/\epsilon$.
-For the inversion $P'\in\Gamma'$ of $P$, we have that $OP'=r^2/OP<\epsilon$.
+If $\infty\in\Gamma$, then $\Gamma$ is a line;
+or, equivalently, for any $\epsilon>0$, the circline $\Gamma$ contains a point $P$ with $OP>r/\epsilon$.
+For the inversion $P'\in\Gamma'$ of $P$, we have that $OP'=r^2/OP<r\cdot \epsilon$.
 That is, the circline $\Gamma'$ contains points arbitrary close to~$O$.
 It follows that $O\in \Gamma'$.
 The same way we can check the converse. 
 \qeds
 
-
-
-\begin{wrapfigure}[7]{R}{37mm}
-\vskip-0mm
+\begin{wrapfigure}{R}{37mm}
+\vskip-2mm
 \centering
 \includegraphics{mppics/pic-162}
 \end{wrapfigure}
@@ -263,10 +261,9 @@ Let $Q$ denotes the center of $\Gamma$ and $Q'$ denotes the inverse of~$Q$.
 Show that $Q'$ is not the center of~$\Gamma'$.
 \end{thm}
 
-
-
 Assume that a {}\emph{circumtool} is a geometric construction tool 
 that produces a circline passing thru any three given points.
+
 
 \begin{thm}{Exercise}\label{ex:circumtool}
 Show that with only a circumtool,

@@ -546,8 +546,6 @@ Apply that $\triangle ADC\sim \triangle CDB$.
 \parbf{Exercise~\ref{ex:pyth-conv}.}
 Apply the Pythagorean theorem (\ref{thm:pyth}) and the SSS congruence condition.
 
-%(???
-
 \parbf{Exercise~\ref{ex:two-pairs-sim}.}
 By the AA similarity condition (\ref{prop:sim}), $\triangle AYC\z\sim \triangle BXC$.
 
@@ -556,8 +554,6 @@ Conclude that
 Apply the SAS similarity condition to show that $\triangle ABC\z\sim \triangle YXC$.
 
 Use AA and equality of vertical angles to prove that $\triangle AZX\sim \triangle BZY$.
-
-%???)
 
 %\subsection*{Chapter~\ref{chap:angle-sum}}
 \refstepcounter{chapter}
@@ -572,20 +568,19 @@ The latter contradicts that $m\perp n$.
 \parbf{Exercise~\ref{ex:construction-parallel}.}
 Repeat the construction in Exercise~\ref{ex:construction-perpendicular} twice.
 
-%\parbf{Exercise~\ref{ex:parallel-central-symmetry}.}???
+\begin{wrapfigure}{r}{23mm}
+\vskip-8mm
+\centering
+\includegraphics{mppics/pic-333}
+\end{wrapfigure} 
 
 \parbf{Exercise~\ref{ex:smililar+parallel}.}
-Since  $\ell\parallel (AB)$, it cannot cross $[AB]$.
+Since  $\ell\parallel (AC)$, it cannot cross $[AC]$.
 By Pasch's theorem (\ref{thm:pasch}), $\ell$ has to cross another side of $\triangle ABC$.
 Therefore $\ell$ crosses $[BC]$; denote the point of intersection by $Q$.
 
-By the transversal property (\ref{thm:parallel-2}), $\measuredangle BAP \equiv \pi -\measuredangle APQ$.
-Since $P$ lies between $A$ and $C$, we get that 
-$\measuredangle BAC=\measuredangle BAP$ and $\measuredangle APQ+\measuredangle QPC\z\equiv \pi$.
-Hence $\measuredangle BAC= \measuredangle QPC$.
-
-The same way we can prove that $\measuredangle ABC= \measuredangle PQC$.
-By AA similarity condition, $\triangle ABC\z\sim\triangle PQC$, and therefore $\frac{PC}{AC}=\frac{QC}{BC}$.%???PIC
+Use the transversal property (\ref{thm:parallel-2}) to show that $\measuredangle BAC= \measuredangle BPQ$.
+The same argument shows that $\measuredangle ACB= \measuredangle PQB$; it remains to apply the AA similarity condition.
 
 \parbf{Exercise~\ref{ex:trisection}.}
 Assume we need to trisect segment $[AB]$.
@@ -716,26 +711,21 @@ a^2&=(c-x)^2+y^2
 $$
 if $0<a\le b\le c\le a+c$.
 
-
-
-%???(
-
-\parbf{Exercise~\ref{ex:line-coord}.} Let $M=(x,y)$. Note that $MA=MB$ if and only if
-\[(x-x_A)^2+(y-y_A)^2=(x-x_B)^2+(y-y_B)^2.\]
-To prove the first, simplify this equation.
+\parbf{Exercise~\ref{ex:line-coord}.} Note that $MA=MB$ if and only if
+\[(x-x_A)^2+(y-y_A)^2=(x-x_B)^2+(y-y_B)^2,\]
+where $M=(x,y)$. 
+To prove the first part, simplify this equation.
 For the remaining parts use that any line is a perpendicular bisector to some line segment.
 
-\parbf{Exercise~\ref{ex:circle-coord}.} Rewrite the equation as 
-\[(x+\tfrac a2)^2+(y+\tfrac b2)^2=(\tfrac a2)^2+(\tfrac b2)^2-c\]
-and think.
+\parbf{Exercise~\ref{ex:circle-coord}.} Rewrite it the following way and think 
+\[(x+\tfrac a2)^2+(y+\tfrac b2)^2=(\tfrac a2)^2+(\tfrac b2)^2-c.\]
+
 
 \parbf{Exercise~\ref{ex:apolonnius}.}
 We can choose the coordinates so that $B=(0,0)$ and $A=(a,0)$ for some $a>0$.
 If $M=(x,y)$, then the equation $AM=k\cdot BM$ can be written in coordinates as 
 \[k^2\cdot(x^2+y^2)=(x-a)^2+y^2.\]
 It remains to rewrite this equation as in Exercise~\ref{ex:circle-coord}.
-
-%???)
 
 %\subsection*{Chapter~\ref{chap:triangle}}
 \refstepcounter{chapter}
@@ -870,6 +860,8 @@ That is, $O$ is the midpoint of~$[AB]$.
 \vskip-12mm
 \centering
 \includegraphics{mppics/pic-336}
+\bigskip
+\includegraphics{mppics/pic-337}
 \end{wrapfigure}
 
 \parbf{Exercise~\ref{ex:perpendicular-ruler}.}
@@ -886,8 +878,6 @@ Use Corollary~\ref{cor:right-angle-diameter} to show that the points lie on the 
 \parbf{Exercise~\ref{ex:secant-circles}.}
 Apply Corollary~\ref{cor:inscribed-quadrilateral} twice for $\square ABYX$ and $\square ABY'X'$ and use the transversal property (\ref{thm:parallel-2}).
 
-}
-
 \parbf{Exercise~\ref{ex:a+b=c}.}
 Show that $P$ lies on the arc opposite from $ACB$;
 conclude that
@@ -895,8 +885,9 @@ conclude that
 
 Choose a point $A'\in [PC]$ such that $PA'=PA$.
 Note that $\triangle APA'$ is equilateral.
-Prove and use that $\triangle AA'C\cong \triangle APB$. %???+PIC
+Prove and use that $\triangle AA'C\cong \triangle APB$.
 
+}
 
 \parbf{Exercise~\ref{ex:inaccuracy}.}
 One needs to show that the lines $(A'B')$ and $(XP)$ are not parallel, otherwise the first line in the proof does not make sense.
@@ -1388,7 +1379,7 @@ and the vertices $P$, $Q$, and $R$
 lie on a horocycle.
 
 Without loss of generality, we may assume that $Q$ is the center of the absolute.
-In this case $\measuredangle_hPQR=\measuredangle PQR=\pm\tfrac\pi2$ and $PQ=QR$.
+In this case $\measuredangle_hPQR\z=\measuredangle PQR\z=\pm\tfrac\pi2$ and $PQ=QR$.
 
 Note that Euclidean circle passing thru $P$, $Q$, and $R$ is tangent to the absolute.
 Conclude that $PQ=\tfrac1{\sqrt2}$. 
@@ -1524,11 +1515,20 @@ is the reflection across~$\ell$.
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
 
-\parbf{Exercise~\ref{ex:persect}.}
-Since $O$, $P$, and $P'$ lie on one line we have that the coordinates of $P'$ are proportional to the coordinates of~$P$.
-The $y$ coordinate of $P'$ has to be equal to~$1$.
-Therefore, $P'$ has coordinates 
-$(\tfrac1y,1,\tfrac zy)$.
+\parbf{Exercise~\ref{ex:proj-cross-ratio}.}
+To prove \textit{(a)}, apply Proposition~\ref{prop:affine-linear}.
+
+To prove \textit{(b)}, suppose $P_i=(x_i,y_i)$;
+show and use that 
+\[\frac{P_1P_2\cdot P_3P_4}{P_2P_3\cdot P_4P_1}
+=\left|\frac{(x_1-x_2)\cdot(x_3-x_4)}{(x_2-x_3)\cdot (x_4-x_1)}\right|\]
+if all $P_i$ lie on a horizontal line $y=b$, and
+\[\frac{P_1P_2\cdot P_3P_4}{P_2P_3\cdot P_4P_1}
+=\left|\frac{(y_1-y_2)\cdot(y_3-y_4)}{(y_2-y_3)\cdot (y_4-y_1)}\right|\]
+otherwise. (See Exercise~\ref{ex:cross-ratio-area} for another proof.)
+
+
+To prove \textit{(c)}, apply \textit{(a)}, \textit{(b)}, and Theorem~\ref{thm:moving}.
 
 \parbf{Exercise~\ref{ex:pappus}.}
 Assume that $(AB)$ meets $(A'B')$ at~$O$.
@@ -1547,13 +1547,16 @@ Therefore, $(BC')\parallel (CB')$.
 
 The case $(AB)\parallel(A'B')$ is similar.
 
+\parbf{Exercise~\ref{ex:pappus-converse}.} Observe that the statement is equivalent to Pappus' theorem.
+
 \parbf{Exercise~\ref{ex:desargues-construction}.}
 To do \textit{(\ref{ex:desargues-construction:desargues})}, 
 suppose that the parallelogram is formed by the two pairs of parallel lines $(AB)\parallel (A'B')$ and $(BC)\parallel(B'C')$ and $\ell=(AC)$ in the notation of Desargues' theorem (\ref{thm:desargues}).
 
 To do \textit{(\ref{ex:desargues-construction:pappus})}, suppose that the parallelogram is formed by the two pairs of parallel lines $(AB')\parallel (A'B)$ and $(BC')\parallel(B'C)$ and $\ell=(AC')$ in the notation of Pappus' theorem (\ref{thm:pappus}).
 
-\parbf{Exercise~\ref{ex:dual-configurations}.} One may use the same diagram, but swap the labels $X\leftrightarrow U$, $p\leftrightarrow a$, and so on.
+\parbf{Exercise~\ref{ex:dual-configurations}.}
+Draw $a=(KN)$, $b=(KL)$, $c=(LM)$, $d=(MN)$, mark $P=b\cap d$, and continue. 
 
 \parbf{Exercise~\ref{ex:dual-euclid}.}
 Assume there is a duality.
@@ -1869,12 +1872,9 @@ It defines a unique line $(PT)$ parallel to~$\ell$.
 
 \parbf{Exercise~\ref{ex:|zw|}.} Use that $|z|^2=z\cdot \bar z$ for $z=v$, $w$, and $v\cdot w$.
 
-%(???
-
 \parbf{Exercise~\ref{ex:ptolemy}.} Given a quadrilateral $ABCD$, we can choose the complex coordinates so that $A$ has complex coordinate $0$. 
 Rewrite the terms in the Ptolemy's inequality in terms of the complex coordinates $u$, $v$, and $w$ of $B$, $C$, and $D$; apply the identity and the triangle inequality.
 
-%???)
 
 \parbf{Exercise~\ref{ex:3-sum-C}.} 
 Let $z$, $v$, and $w$ denote the complex coordinates of $Z$, $V$, and $W$ correspondingly.
@@ -2098,17 +2098,22 @@ Observe that three perpendiculars on the diagram meet at one point if and only i
 Use this observation couple of times to verify that the given triangle is equilateral.
 
 \parbf{Exercise~\ref{ex:midpoint-proj}.}
-Consider the perspective projection as in Exercise~\ref{ex:persect}.
-Let $A\z=(1,1,1)$, $B\z=(1,3,1)$, and $M\z=(1,2,1)$.
+Consider the perspective projection 
+$(x,y)\mapsto (\tfrac 1x,\tfrac yx)$ (see page~\pageref{eq:(x,y)-perspective}).
+Let $A\z=(1,1)$, $B\z=(3,1)$, and $M\z=(2,1)$.
 Note that $M$ is the midpoint of $[AB]$.
 
-Their images are $A'\z=(1,1,1)$, $B'\z=(\tfrac13,1,\tfrac13)$, and $M'\z=(\tfrac12,1,\tfrac12)$.
+Their images are $A'\z=(1,1)$, $B'\z=(\tfrac13,\tfrac13)$, and $M'\z=(\tfrac12,\tfrac12)$.
 Clearly, $M'$ is not the midpoint of~$[A'B']$.
 
 }
 
-\parbf{Exercise~\ref{ex:midpoint-proj}.}
-Use that $\tfrac\pi4$ is an angle of an isosceles right triangle, Exercise~\ref{ex:construction-perpendicular}, and Proposition~\ref{prop:perp-perp}.
+\parbf{Exercise~\ref{ex:comparison}.}
+A ruler and compass is strictly stronger than a set-square which is strictly stronger than a ruler and a parallel tool.
+To prove it, use exercises~\ref{ex:construction-perpendicular},
+\ref{ex:affine-perp},
+\ref{ex:equilateral triangle},
+and Proposition~\ref{prop:perp-perp}.
 
 %\subsection*{Chapter~\ref{chap:area}}
 \refstepcounter{chapter}
@@ -2257,7 +2262,7 @@ to each of these triangles and sum up the results.
 Without loss of generality we may assume that $\mathcal{P}$ is a union of a finite collection of solid triangles.
 Cut $\mathcal{P}$ along the extensions of the sides of all the triangles,
 it subdivides $\mathcal{P}$ into convex polygons.
-Cutting each polygon by diagonals from one vertex produce a subdivision into solid triangles. %???
+Cutting each polygon by diagonals from one vertex produce a subdivision into solid triangles.
 
 \parbf{Exercise~\ref{ex:pyth-2}.}
 Assuming $a>b$,

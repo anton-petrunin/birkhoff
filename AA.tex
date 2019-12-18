@@ -1,3 +1,54 @@
+
+\parit{Proof.}
+According to Theorem~\ref{thm:moving}, it is sufficient to prove theorem in two cases: for anny affine transformation and for the extended perspective projection
+\[\beta\:(x,y)\mapsto (\tfrac xy,\tfrac 1y).\]
+
+First consider the case of affine transformation.
+Let $a,b,c$ be the real numbers such that
+\begin{align*}\overrightarrow{L_2L_3}&=a\codt\overrightarrow{L_1L_2},& \overrightarrow{L_3L_4}&=b\codt\overrightarrow{L_1L_2},&
+\overrightarrow{L_4L_1}&=c\codt\overrightarrow{L_1L_2}.
+\end{align*}
+By Proposition~\ref{prop:affine-linear}, we have 
+\begin{align*}
+\overrightarrow{L_2'L_3'}&=a\codt\overrightarrow{L_1'L_2'},& \overrightarrow{L_3'L_4'}&=b\codt\overrightarrow{L_1'L_2'},&
+\overrightarrow{L_4'L_1'}&=c\codt\overrightarrow{L_1'L_2'}.
+\end{align*}
+
+Observe that 
+\[\frac{L_1L_2\cdot L_3L_4}{L_2L_3\cdot L_4L_1}
+=\left|\frac{b}{a\cdot c}\right|
+=\frac{L'_1L'_2\cdot L'_3L'_4}{L'_2L'_3\cdot L'_4L'_1}.\]
+Hence the affine case is proved.
+
+It remains to prove it for $\beta$.
+Suppose $L_i=(x_i,y_i)$.
+If the line $(L_1L_2)$ is not horizontal, then the values $y_1,y_2,y_3,y_4$ are different.
+In this case 
+\[\frac{L_1L_2\cdot L_3L_4}{L_2L_3\cdot L_4L_1}
+=\left|\frac{(y_1-y_2)\cdot(y_3-y_4)}{(y_2-y_3)\cdot (y_4-y_1)}\right|.\]
+Further 
+\[\frac{L'_1L'_2\cdot L'_3L'_4}{L'_2L'_3\cdot L'_4L'_1}
+=\left|\frac{(\tfrac1{y_1}-\tfrac1{y_2})\cdot(\tfrac1{y_3}-\tfrac1{y_4})}{(\tfrac1{y_2}-\tfrac1{y_3})\cdot (\tfrac1{y_4}-\tfrac1{y_1})}\right|.\]
+\qeds
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \parbf{Exercise~\ref{ex:matrix-vector}.} Suppose that $\beta\:\left(\begin{smallmatrix}
 x\\ y
 \end{smallmatrix} \right)

@@ -202,8 +202,6 @@ $\angle PQX$ has the same sign as $\angle PQY$.
 \section*{Half-planes}
 \addtocontents{toc}{Half-planes.}
 
-%(???
-
 \begin{thm}{Proposition}\label{prop:half-plane}
 Assume $X,Y\notin(PQ)$.
 Then the angles $PQX$ and $PQY$ have the same sign if and only if $[XY]$ does not intersect $(PQ)$.
@@ -221,8 +219,8 @@ let $Z$ denotes the point of intersection.
 Without loss of generality, we can assume $Z\ne P$.
 
 Note that $Z$ lies between $X$ and $Y$.
-By Lemma \ref{lem:straight-sign}, $\angle PZX$ and $\angle PZY$ have opposite signs.
-This proves the statement if $Z=Q$.
+According to Lemma~\ref{lem:straight-sign}, $\angle PZX$ and $\angle PZY$ have opposite signs.
+It proves the statement if $Z=Q$.
 
 If $Z\ne Q$, then $\angle ZQX$ and $\angle QZX$ have opposite signs by \ref{thm:signs-of-triug}.
 The same way we get that $\angle ZQY$ and $\angle QZY$ have opposite signs.
@@ -231,10 +229,8 @@ If $Q$ lies between $Z$ and $P$, then by Lemma~\ref{lem:straight-sign} two pairs
 It follows that $\angle PQX$ and $\angle PQY$ have opposite signs as required.
 
 In the remaining case $[QZ)=[QP)$ and therefore $\angle PQX=\angle ZQX$ and $\angle PQY=\angle ZQY$. 
-Hence again $\angle PQX$ and $\angle PQY$ have opposite signs as required.
+Therefore again $\angle PQX$ and $\angle PQY$ have opposite signs as required.
 \qeds
-
-%)???
 
 \begin{thm}[\abs]{Corollary}\label{cor:half-plane}
 The complement of a line $(PQ)$ in the plane 
@@ -483,18 +479,19 @@ $b(\beta_0)=b$,
 hence the result. 
 \qeds
 
-%(???
-
 Given a positive real number $r$ and a point $O$,
 the set $\Gamma$ of all points on distance $r$ from $O$ is called a \index{circle}\emph{circle} 
 with \index{radius}\emph{radius} $r$ and \index{center}\emph{center}~$O$.
 
-\begin{thm}{Exercise}\label{ex:intersecting-circles-3}
-Show that if two circles intersect if and only if 
-\[|r_1-r_2|\le d\le r_1+r_2,\]
-where $d$ denotes the distances between their centers and $r_1$, $r_2$ --- their radiuses.
-\end{thm}
+\begin{wrapfigure}{r}{40mm}
+\centering
+\includegraphics{mppics/pic-35}
+\end{wrapfigure}
 
-%???)
+\begin{thm}{Exercise}\label{ex:intersecting-circles-3}
+Show that two circles intersect if and only if 
+\[|R-r|\le d\le R+r,\]
+where $R$ and $r$ denote their radiuses, and $d$ ---  the distances between their centers.
+\end{thm}
 
 \addtocontents{toc}{\protect\end{quote}}

@@ -1,32 +1,47 @@
 \documentclass{article}
-\usepackage[english]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage{lpic}
+\usepackage{rotating}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage{punk}
-\usepackage[T1]{fontenc}
+\usepackage[margin=0cm]{geometry}
+
+\setlength{\unitlength}{1in}
+\setlength{\fboxsep}{0mm}
+\let\tmpfbox=\fbox
+\let\tmpfbox=\relax
+
 \pagestyle{empty}
-\usepackage{tikz}
-\usepackage[papersize={12.7094in,9.250in}, spine=0.432384in, cropgap=0.125in
+
+
+\usepackage[papersize={12.713912in,9.250in}, spine=0.432384in, cropgap=0.125in
 ,cropmarks, cropframe
-]{zwpagelayout}%0.125" + 6" + 192*0.002252" + 6" + .125" =  12.682384
+]{zwpagelayout}%0.125" + 6" + 206*0.002252" + 6" + .125" =  12.682384
+
+
+
+\definecolor{mycolor}{HTML}{41758A}%{92A42C}%{5E4BA4}%{3A73D5}%{250,205,25}
+\pagecolor{mycolor}
+
 \linespread{1}
-\definecolor{orange}{HTML}{41758A}%{92A42C}%{5E4BA4}%{3A73D5}%{250,205,25}
-\pagecolor{orange}
+
 \begin{document}
-\begin{lpic}[t(6in),b(0mm),r(0mm),l(6.2in)]{../mppics/pic-187(1)}
-\lbl[b]{60,135;{\hbox{\parbox{.3\textwidth}{\begin{center}
+\begin{picture}(10, 0)(1.25,8.125)
+
+\put(9,8){{\hbox{\parbox{.3\textwidth}{\begin{center}
         \ttfamily\bfseries\Huge  Euclidean plane and its relatives                           
                                   \end{center}
 }}}}
-\lbl{60,125;{\ttfamily\LARGE A minimalist introduction}}
-\lbl{60,115;{\ttfamily\large Anton Petrunin}}
-\lbl{-22,113,-90;{\ttfamily\bfseries\LARGE  EUCLIDEAN PLANE AND ITS RELATIVES}}
-\lbl{-22,-5,-90;{\ttfamily\large Anton Petrunin}}
-\lbl{60,-5;{\ttfamily\large \textsc{third edition}}}
-\lbl{-110,100;{\hbox{
-\hspace{3em}\parbox{.4\textwidth}
-{\ttfamily\large 
+
+\put(9.05,7.4){\ttfamily\LARGE \textsc{a minimalist introduction}}
+
+\put(9.9,7.1){\ttfamily\large Anton Petrunin}
+
+\put(7.25,.5){\ttfamily\large \textsc{third edition}}
+
+\put(6.34,8.8){\rotatebox{-90}{\ttfamily\bfseries\LARGE  EUCLIDEAN PLANE AND ITS RELATIVES}}
+
+\put(6.37,1.8){\rotatebox{-90}{\ttfamily\large \textsc{anton petrunin}}}
+\put(7.4,8.4){\rotatebox{-90}{\includegraphics{../mppics/pic-187}}}
+
+\put(.5,5.9){\parbox{.4\textwidth}{\ttfamily\large 
 The book is designed for a semester-long course in Foundations of Geometry and meant to be rigorous, conservative, elementary, and minimalist.
 \medskip
 \\
@@ -63,11 +78,15 @@ Additional topics
 \hbox{\ }17. Projective model\\
 \hbox{\ }18. Complex coordinates\\
 \hbox{\ }19. Geometric constructions\\
-\hbox{\ }20. Area 
-}}}}
-\lbl[lb]{-170,-22;\parbox{.4\textwidth}
- {\ttfamily updated on 2019-01-22\\ http://anton-petrunin.github.io/birkhoff/
-}}
-\end{lpic}
+\hbox{\ }20. Area }}
 
+\put(.5,1){\includegraphics{../mppics/pic-277}}
+
+\put(10.5,1){\includegraphics{../mppics/pic-351}}
+
+\put(.5,.5){\ttfamily %updated on 2020-01-01\\ 
+ anton-petrunin.github.io/birkhoff/
+}
+
+\end{picture}
 \end{document}

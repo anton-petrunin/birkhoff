@@ -449,6 +449,26 @@ label.bot (btex $r$ etex, .5[z.B,z.A]);
 
 endfig;
 
+beginfig(35)
+save u;
+u:=1cm;
+
+z.O1=(0,0)*u;
+z.O2=(2,0)*u;
+z.R1=(-.5)[z.O1,z.O2];
+z.R2=1.3[z.O1,z.O2];
+
+draw circle(z.O1,z.R1-z.O1);
+draw circle(z.O2,z.R2-z.O2);
+draw z.R1--z.R2;
+
+dOt z.O1,z.O2;
+
+label.top (btex $R$ etex, .5[z.O1,z.R1]);
+whitelabel.top (btex $d$ etex, .5[z.O1,z.O2]);
+label.top (btex $r$ etex, .5[z.O2,z.R2]);
+endfig;
+
 beginfig(36)
 save u;
 u:=1cm;
@@ -528,15 +548,15 @@ z.A=(-1,0)*u;
 z.B=-z.A;
 z.C=z.B zscaled (0,2.5);
 
-z.AA=.6[z.C,z.B];
-z.BB=.6[z.C,z.A];
+z.AA=.65[z.C,z.B];
+z.BB=.65[z.C,z.A];
 
 draw z.A--z.B--z.C--cycle;
 draw z.A--z.AA;
 draw z.B--z.BB;
 
-rimmark2(z.C--z.BB,z.C--z.AA);
-rimmark(z.BB--z.A,z.AA--z.B);
+rimmark(z.C--z.B,z.C--z.A);
+rimmark2(z.BB--z.A,z.AA--z.B);
 
 dOt z.A, z.B,z.AA, z.BB, z.C;
 
@@ -1159,7 +1179,7 @@ label.bot (btex $A'$ etex, z.AA);
 label.top (btex $B$ etex, z.B);
 label.bot (btex $C$ etex, z.C);
 label.bot (btex $D$ etex, z.D);
-label.top (btex $O$ etex, z.O+(1,0));
+label.top (btex $O$ etex, z.O+(2,0));
 endfig;
 
 
@@ -2819,7 +2839,7 @@ endfig;
 beginfig(187)
 save u,n;
 u:=1cm;
-n:=5;
+n:=8;
 
 z.l=(.15,.02);
 z.r=(.15,-.02);
@@ -2874,9 +2894,9 @@ ddd:= image(fill_angle(z.AC,z.A,z.BC+z.A-z.B,6););
 
 picture ABC;
 ABC:= image(
-draw a;
-draw b;
-draw c;
+draw a pensemibold;
+draw b pensemibold;
+draw c pensemibold;
 rimmark(a);
 rimmark2(b);
 rimmark3(c);
@@ -2884,7 +2904,7 @@ rimmark3(c);
 
 picture DDD;
 DDD:= image(
-draw d;
+draw d pensemibold;
 rimmark10(d);
 );
 
@@ -2905,12 +2925,12 @@ endfor
 ;
 
 for i=0 upto n: 
-%dOt z.A + (i*(z.A-z.B));
-%dOt z.C + (i*(z.A-z.B));
+Dot z.A + (i*(z.A-z.B));
+Dot z.C + (i*(z.A-z.B));
 endfor
 ;
 
-%dOt z.B;
+Dot z.B;
 
 endfig;
 
@@ -3815,7 +3835,7 @@ draw ddline(z.O,z.CC)(.1,.1) dashed evenly;
 
 draw ddline(z.BB,z.AA)(.2,.2);
 draw ddline(z.CC,z.BB)(.2,.2);
-draw ddline(z.AA,z.CC)(.2,.2);
+draw ddline(z.AA,z.CC)(.1,.1);
 
 draw ddline(z.B,z.A)(.3,.3);
 draw ddline(z.C,z.B)(.3,.3);
@@ -3985,41 +4005,48 @@ label.lrt (btex $f$ etex, 1.3[z.S,z.Q]);
 endfig;
 
 beginfig(245)
-save u,m,n;
-u:=1cm;
+save u,v;
+u:=2cm;
+v:=.7cm;
 
 
-z.A=(0,0)*u;
-z.B=(2,0)*u;
-z.C=(.8,1.7)*u;
+z.A=(0*u,0*v);
+z.B=(.4*u,1*v);
+z.C=(1.3*u,.8*v);
+z.D=(1.4*u,-.4*v);
 
-z.AA=.4[z.B,z.C];
-z.BB=.4[z.C,z.A];
-z.CC=.4[z.A,z.B];
+z.U=whatever[z.A,z.B]=whatever[z.C,z.D];
+z.V=whatever[z.A,z.C]=whatever[z.B,z.D];
+z.W=whatever[z.U,z.V]=whatever[z.B,z.C];
+z.X=whatever[z.A,z.W]=whatever[z.C,z.D];
 
-draw ddline(z.A,z.B)(.5,.5);
-draw ddline(z.A,z.C)(.5,.5);
-draw ddline(z.C,z.B)(.5,.5);
-draw ddline(z.AA,z.BB)(.7,.7);
-draw ddline(z.AA,z.CC)(.7,.7);
-draw ddline(z.CC,z.BB)(.7,.7);
+draw ddline(z.A,z.U)(.2,.2);
+draw ddline(z.D,z.U)(.2,.2);
+draw ddline(z.B,z.C)(.4,.2);
+draw ddline(z.A,z.C)(.2,.2);
+draw ddline(z.B,z.D)(.1,.2);
+draw ddline(z.A,z.X)(.2,.2);
+draw ddline(z.U,z.V)(.3,.5);
 
-dOt z.A,z.B,z.C,z.AA,z.BB,z.CC;
+dOt z.A,z.B,z.C,z.D,z.U,z.V,z.W,z.X;
 
-whitelabel.ulft (btex $A$ etex, z.A);
-whitelabel.urt (btex $B$ etex, z.B);
-whitelabel.rt (btex $C$ etex, z.C);
-whitelabel.urt (btex $X$ etex, z.AA);
-whitelabel.llft (btex $Y$ etex, z.BB);
-whitelabel.lrt (btex $Z$ etex, z.CC);
+label.bot (btex $A$ etex, z.A);
+label.top (btex $B$ etex, z.B);
+label.llft (btex $D$ etex, z.C+(1,-1));
+label.llft (btex $C$ etex, z.D);
+label.lft (btex $U$ etex, z.U);
+label.bot (btex $V$ etex, z.V+(2,-2));
+label.top (btex $W$ etex, z.W+(-2,0));
+label.urt (btex $X$ etex, z.X+(-1,2));
 
-label.ulft (btex $u$ etex, 1.5[z.B,z.C]);
-label.urt (btex $v$ etex, 1.5[z.A,z.C]);
-label.rt (btex $w$ etex, 1.5[z.A,z.B]);
-label.bot (btex $p$ etex, 1.7[z.BB,z.CC]);
-label.llft (btex $q$ etex, 1.7[z.AA,z.CC]);
-label.lft (btex $r$ etex, 1.7[z.AA,z.BB]);
+label.rt (btex $k$ etex, 1.2[z.A,z.U]);
+label.rt (btex $\ell$ etex, 1.2[z.B,z.D]);
+label.bot (btex $m$ etex, 1.2[z.U,z.D]);
+label.rt (btex $n$ etex, 1.2[z.A,z.C]);
 
+label.lft (btex $p$ etex, 1.4[z.C,z.B]);
+label.bot (btex $q$ etex, 1.5[z.U,z.V]);
+label.rt (btex $r$ etex, 1.2[z.A,z.X]);
 endfig;
 
 beginfig(246)
@@ -4675,6 +4702,32 @@ label.rt (btex $Q$ etex, z.Q);
 label.llft (btex $V$ etex, z.V);
 label.lrt (btex $W$ etex, z.W);
 label.bot (btex $M$ etex, z.M);
+endfig;
+
+beginfig(277)
+save u;
+u:=1.4cm;
+
+z.O=origin;
+z.P=(-.8,-.6)*u;
+z.Q=(1.2,-.2)*u;
+z.V= z.P zscaled(1,1);
+z.W= z.Q zscaled(1,-1);
+z.M=.5[z.V,z.W];
+
+mark_rt_angle_withsize(z.O,z.P,z.V,6);
+mark_rt_angle_withsize(z.O,z.Q,z.W,6);
+markdashed_rt_angle_withsize(z.P,z.M,z.Q,6);
+
+draw z.O--z.P--z.V--z.W--z.Q--cycle pensemibold;
+draw z.V--z.O--z.W pensemibold;
+draw z.P--z.M--z.Q--cycle dashed evenly;
+
+rimmark(z.O--z.P,z.P--z.V);
+rimmark2(z.O--z.Q,z.Q--z.W);
+rimmark3(z.V--z.M,z.M--z.W);
+rimmark10(z.P--z.M,z.M--z.Q);
+
 endfig;
 
 beginfig(278)
