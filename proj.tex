@@ -31,10 +31,11 @@ We also assume that the ideal line belongs to each parallel pencil.
 
 We obtain the so called \index{real projective plane}\emph{real projective plane}, or \index{projective completion}\emph{projective completion} of the original plane. 
 It comes with an incidence structure --- we say that three points lie on one line if the corresponding pencils contain a common line.
-This incidence structure is studied in projective geometry.
+Projective geometry studies this incidence structure.
 
+Let us decribe points of projective completion in coordinates.
 A parallel pencil contains the ideal line and the lines $y=m\cdot x+b$ with fixed slope $m$;
-if $m=\infty$, we assume that the line is given by an equation $x=a$.
+if $m=\infty$, we assume that the lines are given by equations $x=a$.
 Therefore real projective plane contains every point $(x,y)$ in the coordinate plane plus the ideal line containing one ideal point $P_m$ for every slope $m\in\mathbb{R}\cup\{\infty\}$.
 
 
@@ -54,12 +55,10 @@ $$AB
 \sqrt{(x_A-x_B)^2+(y_A-y_B)^2+(z_A-z_B)^2}.$$
 The obtained metric space is called \index{Euclidean space}\emph{Euclidean space}.
 
-Assume at least one of the real numbers $a$, $b$ or $c$ is distinct from zero.
-Then the subset of points $(x,y,z)\in\mathbb{R}^3$ 
-described by equation
+The subset of points in $\mathbb{R}^3$ is called \index{plane!plane in the space}\emph{plane} if it can be
+described by an equation
 $$a\cdot x+b\cdot y+c\cdot z+d=0$$ 
-is called \index{plane!plane in the space}\emph{plane};
-here $d$ is a real number.
+for some constants $a$, $b$, $c$, and $d$ such that at least one of values $a$, $b$ or $c$ is distinct from zero.
 
 It is straightforward to show the following:
 \begin{itemize}
@@ -122,12 +121,12 @@ $z=1$ and $x=1$ correspondingly.
 Then the perspective projection from $\Pi$ to $\Pi'$
 can be written in the coordinates as
 \[(x,y,1)\mapsto (1,\tfrac yx,\tfrac 1x).\]
-It follows since the coordinates have to be proportional;
+Indeed the coordinates have to be proportional;
 points on $\Pi$ have unit $z$-coordinate, 
-and points on $\Pi'$ have unit $y$-coordinate.
+and points on $\Pi'$ have unit $z$-coordinate.
 
 The perspective projection, maps one plane to another.
-However, we can identify the two planes, say by fixing a coordinate system in each.
+However, we can identify the two planes by fixing a coordinate system in each.
 In this case we get a partially defined map from the plane to itself.
 We will keep the name \emph{perspective transformation} for such maps.
 
@@ -145,7 +144,7 @@ An inversion is not defined at its center;
 moreover, the center is not an inverse of any point.
 To deal with this problem we passed to inversive plane 
 which is Euclidean plane extended by one ideal point.
-The same strategy worked for perspective projection $\Pi\to\Pi'$, but this time real projective plane is the right choice of extension.}
+The same strategy worked for perspective projection $\Pi\to\Pi'$, but this time we need to add an ideal line.}
 
 For example, to define extension of the perspective projection $\beta$ in \ref{eq:(x,y)-perspective},
 we have to observe that 
@@ -153,7 +152,6 @@ we have to observe that
 \item The the pencil of vertical lines $x=a$ is mapped to itself.
 \item The ideal points defined by pencil of lines $y=m\cdot x+ b$ are mapped to the point $(0,m)$ and the other way around --- point $(0,m)$ is mapped to the ideal point defined by the  pencil of lines $y=m\cdot x+ b$.
 \end{itemize}
-This way we extend the perspective projection to a bijection from real projective space to itself.
 
 \section*{Projective transformations}
 \addtocontents{toc}{Projective transformations.}
@@ -162,15 +160,12 @@ A bijection from the real projective plane to itself
 that sends lines to lines 
 is called \index{projective transformation}\emph{projective transformation}.
 
-Projective geometry studies the properties of real projective plane that preserved under projective transformations.
-
-
 Note that any affine transformation defines  a projective transformation on the corresponding real projective plane.
 We will call such projective transformations \index{affine transformation}\emph{affine}; 
 these are projective transformations that send the ideal line to itself.
 
 The extended perspective projection discussed in the previous section 
-gives an example of projective transformation which is not affine.
+provides another source of examples of projective transformations.
 
 \begin{thm}{Theorem}\label{thm:moving}
 Given a line $\ell$ in the real projective plane, there is a perspective projection that sends $\ell$ to the ideal line.
@@ -189,7 +184,8 @@ If $\gamma$ sends ideal line to itself,
 then it has to be affine. 
 It proves the theorem in this case.
 
-If $\gamma$ sends the ideal line to the line $\ell$, choose a perspective projection $\beta$ as above.
+Suppose $\gamma$ sends the ideal line to a line $\ell$.
+Choose a perspective projection $\beta$ as above.
 The composition $\beta\circ\gamma$ sends the ideal line to itself.
 That is, $\gamma=\beta\circ\gamma$ is affine.
 Note that $\beta$ is self-inverse; therefore $\alpha=\beta\circ \gamma$ --- hence the result.
@@ -268,7 +264,7 @@ in particular, $\measuredangle OAB=\pm\measuredangle OA'B'$.
 Note that $\measuredangle AOB=\measuredangle A'OB'$.
 Therefore, 
 \[\measuredangle OAB=\measuredangle OA'B'.\]
-By the transversal property~\ref{thm:parallel-2},
+By the transversal property (\ref{thm:parallel-2}), we have
 $(AB)\parallel (A'B')$.
 
 The case $(AA')\parallel(BB')\parallel(CC')$ is done similarly.
@@ -339,7 +335,8 @@ Solve the following construction problem
 \item\label{ex:desargues-construction:pappus} using Pappus' theorem.
 \end{enumerate}
 \parbf{Problem.}
-Suppose a parallelogram and a line $\ell$ that crosses all its sides (or their extensions) at different points are given. 
+Suppose a parallelogram is given.
+Assume a line $\ell$ crosses all sides (or their extensions) of the parallelogram at different points are given. 
 Construct another line parallel to $\ell$ with a ruler only.
 \end{thm}
 
@@ -372,9 +369,6 @@ for any point $P$ and line~$\ell$.
 \includegraphics{mppics/pic-244}
 \caption*{Dual configurations.}
 \end{figure}
-
-Existence of duality in a plane 
-says that the lines and the points in this plane have the same rights in terms of incidence.
 
 {
 
@@ -409,8 +403,6 @@ let $\hat \Pi$ denotes the corresponding real projective plane.
 Recall that $\Phi$ and $\Psi$ denote the set of all lines and planes passing thru $O$.
 According to Observation~\ref{obs:bijections}, there are bijections $P\leftrightarrow\dot P$  between points of $\hat\Pi$ and $\Phi$ and $\ell\leftrightarrow\dot\ell$ between lines in $\hat\Pi$ and $\Psi$ such that 
 $P\in\ell$ if and only if $\dot P\subset \dot \ell$.
-That is, the bijections $P\leftrightarrow \dot P$ and $\ell\leftrightarrow \dot \ell$
-remember all the incidence structure of the real projective plane~$\hat \Pi$.
 
 It remains to construct a bijection $\dot \ell \leftrightarrow \dot L$
 between $\Phi$ and $\Psi$ 
@@ -442,7 +434,8 @@ Which line corresponds to $O$?
 Which point corresponds to the line  $a\cdot x\z+b\cdot y=0$?
 \end{thm}
 
-The existence of duality in the real projective plane makes possible to formulate an equivalent dual statement to any statement in projective geometry.
+Duality  says that lines and points have the same rights in terms of incidence.
+It makes possible to formulate an equivalent dual statement to any statement in projective geometry.
 For example, the dual statement for ``the points $X$, $Y$, and $Z$ lie on one line $\ell$''
 would be the ``lines $x$, $y$, and $z$ intersect at one point $L$''.
 Let us formulate the dual statement for Desargues' theorem~\ref{thm:desargues}.
@@ -478,7 +471,7 @@ Given two parallel lines, construct a third parallel line thru a given point wit
 
 \section*{Construction of a polar}
 
-In this section we describe a powerful trick that can be used in the constructions only with ruler.
+In this section we describe a powerful trick that can be used in the constructions with ruler.
 
 Assume $\Gamma$ is a circle in the plane and $P\notin \Gamma$.
 \begin{figure}[h!]

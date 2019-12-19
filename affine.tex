@@ -10,8 +10,8 @@
 \addtocontents{toc}{Affine transformations.}
 
 \emph{Affine geometry} studies the so called \index{incidence structure}\emph{incidence structure} of the Euclidean plane.
-The incidence structure says which points lie on which lines and nothing else;
-we cannot talk about distances, angle measures, and so on.
+The incidence structure sees only which points lie on which lines and nothing else;
+it does not directly see distances, angle measures, and many other things.
 
 A bijection from Euclidean plane to it self is called \index{affine transformations}\emph{affine transformation} if it maps lines to lines;
 that is, image of any line is a line.
@@ -85,7 +85,7 @@ Use ruler and parallel tool to construct the center of the given circle.
 \end{thm}
 
 Note that the shear map (described in \ref{ex:afine-linear}\textit{\ref{ex:afine-linear:shear}}) can change angles between lines almost arbitrary.
-The latter can be used to prove impossibility of some constructions;
+This observation can be used to prove impossibility of some constructions;
 here is one example:
 
 \begin{thm}{Exercise}\label{ex:affine-perp}
@@ -119,7 +119,7 @@ Then, for any triple of points of points $O$, $X$, $P$, we have
 
 \parit{Proof.}
 Observe that the affine transformations described in Exercise~\ref{ex:afine-linear} as well as all motions satisfy the condition \ref{eq:OP=tOX}.
-Therefore a given affine transformation $P\mapsto P'$ satisfies \ref{eq:OP=tOX} if and only if its composition with motions and rescalings satisfies \ref{eq:OP=tOX}.
+Therefore a given affine transformation $P\mapsto P'$ satisfies \ref{eq:OP=tOX} if and only if its composition with motions and scalings satisfies \ref{eq:OP=tOX}.
 
 Applying this observation we can reduce the problem to its partial case.
 Namely, we may assume that $O'=O$, $X'=X$, the point $O$ is the origin of a coordinate system and $X$ has coordinates $(1,0)$.
@@ -136,17 +136,20 @@ for any $t$.
 Since $O'=O$ and $X'=X$, we get that $f(0)=0$ and $f(1)=1$.
 Further, according to Exercise~\ref{ex:R-hom}, we have that 
 $f(x\cdot y)=f(x)\cdot f(y)$ and $f(x+y)=f(x)+f(y)$ for any $x,y\in\mathbb{R}$.
-By the algebraic lemma (see \ref{lem:R-auto}), these conditions imply \ref{eq:f(x)=x}.
+By the algebraic lemma (proved below, see \ref{lem:R-auto}), these conditions imply \ref{eq:f(x)=x}.
 \qeds
 
 \begin{thm}{Fundamental theorem of affine geometry}\label{thm:fundamental-theorem-of-affine-geometry}
 Suppose an affine transformations maps a nondegenerate triange $OXY$ to a triangle $O'X'Y'$.
-Then 
-\[\overrightarrow{OP}=x\cdot\overrightarrow{OX}+y\cdot\overrightarrow{OY},\quad\text{if and only if}\quad\overrightarrow{O'P'}=x\cdot\overrightarrow{O'X'}+y\cdot\overrightarrow{O'Y'}.\]
+Then $\triangle O'X'Y'$ is nondegenerate, and
+\[\overrightarrow{OP}=x\cdot\overrightarrow{OX}+y\cdot\overrightarrow{OY}\quad\text{if and only if}\quad\overrightarrow{O'P'}=x\cdot\overrightarrow{O'X'}+y\cdot\overrightarrow{O'Y'}.\]
 \end{thm}
 
 \parit{Proof.}
-If $x=0$ or $y=0$, then the statement follow directly from the proposition.
+Since an affine transformation maps lines to lines, the triangle
+$O'X'Y'$ is nondegenerate.
+
+If $x=0$ or $y=0$, then the second statement follow directly from the proposition.
 Otherwise consider points $V$ and $W$ defined by
 \[\overrightarrow{OV}=x\cdot\overrightarrow{OX},
 \quad
@@ -183,14 +186,14 @@ The following exercise provides converse to Exercise \ref{affine-general-formula
 \begin{thm}{Exercise}\label{ex:affine-coordinates}
 Show that any affine transformation can be written in coordinates as 
 \[(x,y)\mapsto(a\cdot x+b\cdot y+r,c\cdot x+d\cdot y+s)\]
-for constants $a,b,c,d,r,z$ such that the matrix $(\begin{smallmatrix}a&b\\c&d\end{smallmatrix})$ is invertible. 
+for constants $a,b,c,d,r,s$ such that the matrix $(\begin{smallmatrix}a&b\\c&d\end{smallmatrix})$ is invertible. 
 \end{thm}
 
 
 \section*{Algebraic lemma}
 \addtocontents{toc}{Algebraic lemma.}
 
-The following lemma is used in the proof of Proposition~\ref{prop:affine-linear}.
+The following lemma was used in the proof of Proposition~\ref{prop:affine-linear}.
 
 \begin{thm}{Lemma}\label{lem:R-auto}
 Assume $f\:\mathbb{R}\to\mathbb{R}$ is a function such that for any $x,y\in\mathbb{R}$ we have
@@ -300,7 +303,7 @@ Recall that the term {}\emph{circline} stands for {}\emph{circle or line}.
 
 An \index{inversive transformation}\emph{inversive transformation} is a bijection from inversive plane to itself that sends circlines to circlines.
 \emph{Inversive geometry} studies the {}\emph{circline incidence structure} of inversive plane
-(it says which points lie on which circlines and nothing else).
+(it sees which points lie on which circlines and nothing else).
 
 \begin{thm}{Theorem}\label{thm:inversions-inversive}
 A map from inversive plane to itself is an inversive transformation
@@ -311,8 +314,8 @@ Exercise~\ref{ex:inversion-Mob} gives another description of inversive transform
 
 \parit{Proof.}
 Evidently, reflection is an inversive transformation --- it maps lines to lines and circles to circles.
-According to Theorem~\ref{thm:inverse-cline} any inversion is an inversive transformation.
-Therefore, the same holds for composition of inversions and reflection.
+According to Theorem~\ref{thm:inverse-cline} any inversion is an inversive transformation as well.
+Therefore, the same holds for any composition of inversions and reflections.
 
 To prove the converse, 
 fix an inversive transformation~$\alpha$.
@@ -336,8 +339,8 @@ $\overrightarrow{XY}=\overrightarrow{OP}$, then $\overrightarrow{X'Y'}=\overrigh
 It follows that $XY=X'Y'$ for any points $X$ and $Y$;
 that is, $\alpha'$ is a motion.
 
-Summarizing the discussion above, $\alpha$ is a composition of motions and rescalings.
-Observe that any rescaling is a composition of two inversions in concentric circles.
+Summarizing the discussion above, $\alpha$ is a composition of motions and scalings.
+Observe that any scaling is a composition of two inversions in concentric circles.
 Recall that any motion is a composition of reflections (see Exercise~\ref{ex:3-reflections}).
 Whence $\alpha$ is a composition of inversions and reflections.
 
@@ -350,7 +353,7 @@ Since $\alpha$ amd $\beta$ are inversive, so is $\gamma$.
 From above we get that $\gamma$ is a composition of reflections and inversions.
 Since $\beta$ is self-inverse, we get
 $\alpha=\beta\circ\gamma$;
-therefore $\alpha$ is also a composition of reflections and inversions.
+therefore $\alpha$ is also a composition of reflections and inversions as well.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:inversive-angle}
@@ -369,7 +372,7 @@ Show that any reflection can be presented as a composition of three inversions.
 \end{thm}
 
 The exercise above imply a stronger version of Theorem~\ref{thm:inversions-inversive};
-namely \emph{any inversive map is a composition of inversions} ---
+namely \emph{any inversive transformation is a composition of inversions} ---
 no reflections needed.
 
 \addtocontents{toc}{\protect\end{quote}}

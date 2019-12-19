@@ -173,6 +173,26 @@ Applying Axiom~\ref{def:birkhoff-axioms:3} again,
 we get \ref{eq:A'B'C'simA'B'C''}.
 \qeds
 
+\begin{thm}[\abs]{Corollary}\label{cor:degenerate-trig}
+If $\triangle ABC$ is nondegenerate, then
+\[AB+BC>AC.\]
+
+\end{thm}
+
+\parit{Proof.}
+By triangle inequality $AB+BC\ge AC$;
+it remains to show that $AB+BC\ne AC$.
+
+Arguing by contradiction, suppose $AB+BC= AC$.
+Choose $B'\in [AC]$ such that $AB=AB'$;
+note that $BC\z=B'C$ and $\measuredangle AB'C=\pi$.
+
+By SSS, 
+\[\triangle ABC\cong \triangle AB'C.\]
+Therefore $\measuredangle ABC=\pi$;
+that is, $\triangle ABC$ is degenerate --- a contradiction.
+\qeds
+
 {
 
 \begin{thm}{Advanced exercise}\label{ex:SMS}
@@ -205,10 +225,6 @@ Show that
 \item $\triangle A B B'\cong \triangle B A A'$.
 \end{enumerate}
 }
-
-\begin{thm}{Exercise}\label{ex:degenerate-trig}
-Show that if $AB+BC=AC$, then $B\in [AC]$.
-\end{thm}
 
 \begin{thm}{Exercise}\label{ex:ABC-motion}
 Let $\triangle ABC$ be a nondegenerate triangle and 
