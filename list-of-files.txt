@@ -1,4 +1,6 @@
+list-of-files.txt
 all-lectures.tex
+all-lectures.bbl
 lectures.sty
 title.tex
 intro.tex
@@ -218,3 +220,12 @@ mppics/pic-320.mps
 mppics/pic-354.mps
 mppics/pic-46.mps
 mppics/pic-8.mps
+mppics/pic-35.mps
+mppics/pic-189.mps
+mppics/pic-225.mps
+mppics/pic-245.mps
+mppics/pic-319.mps
+mppics/pic-333.mps
+mppics/pic-337.mps
+mppics/pic-349.mps
+mppics/pic-353.mps

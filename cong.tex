@@ -174,14 +174,12 @@ we get \ref{eq:A'B'C'simA'B'C''}.
 \qeds
 
 \begin{thm}[\abs]{Corollary}\label{cor:degenerate-trig}
-If $\triangle ABC$ is nondegenerate, then
-\[AB+BC>AC.\]
-
+If $AB+BC=AC$, then $B\in [AC]$.
 \end{thm}
 
 \parit{Proof.}
-By triangle inequality $AB+BC\ge AC$;
-it remains to show that $AB+BC\ne AC$.
+We may assume that $AB>0$ and $BC>0$;
+otherwise $A=B$ or $B=C$.
 
 Arguing by contradiction, suppose $AB+BC= AC$.
 Choose $B'\in [AC]$ such that $AB=AB'$;
@@ -189,11 +187,11 @@ note that $BC\z=B'C$ and $\measuredangle AB'C=\pi$.
 
 By SSS, 
 \[\triangle ABC\cong \triangle AB'C.\]
-Therefore $\measuredangle ABC=\pi$;
-that is, $\triangle ABC$ is degenerate --- a contradiction.
+Therefore $\measuredangle ABC=\pi$.
+By Theorem~\ref{thm:straight-angle}, $B$ lies between $A$ and $C$.
 \qeds
 
-{
+
 
 \begin{thm}{Advanced exercise}\label{ex:SMS}
 Let $M$ be the midpoint of the side $[A B]$ of $\triangle A B C$ and
@@ -205,8 +203,10 @@ Prove that
 
 \end{thm}
 
-\begin{wrapfigure}[4]{r}{26mm}
-\vskip-8mm
+{
+
+\begin{wrapfigure}[6]{r}{26mm}
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-42}
 \end{wrapfigure}
@@ -216,15 +216,12 @@ Let $\triangle A B C$ be an isosceles triangle with the base $[A B]$.
 Suppose that $C A'\z=C B'$
 for some points $A'\z\in [B C]$ and $B'\z\in[A C]$.
 Show that
-\end{thm}
-}
-\vskip-2mm
-{\it
 \begin{enumerate}[(a)]
 \item $\triangle A A' C\cong \triangle B B' C$;
 \item $\triangle A B B'\cong \triangle B A A'$.
 \end{enumerate}
-}
+
+\end{thm}
 
 \begin{thm}{Exercise}\label{ex:ABC-motion}
 Let $\triangle ABC$ be a nondegenerate triangle and 
@@ -238,9 +235,15 @@ f(B)=B
 \quad
 f(C)=C.$$
 
-Show that $f$ is the identity;
-that is, $f(X)=X$ for any point $X$ on the plane.
 \end{thm}
+
+}
+
+\vskip-2mm
+\textit{Show that $f$ is the identity map;
+that is, $f(X)=X$ for any point $X$ on the plane.}
+
+
 
 \section*{On side-side-angle and side-angle-angle}
 \addtocontents{toc}{On side-side-angle and side-angle-angle.}
@@ -268,7 +271,7 @@ The second triple is {}\emph{side-angle-angle}, or briefly SAA;
 it specifies one side and two angles one of which is opposite to the side.
 This provides a congruence condition; 
 that is, if one of the triangles $ABC$ or $A'B'C'$ is nondegenerate and
-\[AB=A'B',\quad \measuredangle ABC\equiv\pm \measuredangle A'B'C',\quad\measuredangle BCA\z\equiv\pm \measuredangle B'C'A',\]
+$AB=A'B'$, $\measuredangle ABC\equiv\pm \measuredangle A'B'C'$, $\measuredangle BCA\z\equiv\pm \measuredangle B'C'A'$,
 then $\triangle ABC\cong\triangle A'B'C'$.
 
 The SAA condition will not be used directly in the sequel.

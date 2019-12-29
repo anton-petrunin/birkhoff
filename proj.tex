@@ -352,6 +352,14 @@ given a point $P$, we denote by $p$ the corresponding line;
 and the other way around, 
 given a line $\ell$ we denote by $L$ the corresponding point. 
 
+\begin{figure}[h!]
+\centering
+\includegraphics{mppics/pic-242}
+\hskip15mm
+\includegraphics{mppics/pic-244}
+\caption*{Dual configurations.}
+\end{figure}
+
 The bijection between points and lines is called \index{duality}\emph{duality}\label{page:duality}%
 \footnote{The standard definition of duality is more general; we consider a special case which is also called \index{polarity}\emph{polarity}.}
 if 
@@ -361,14 +369,6 @@ if
 \quad 
 p\ni L.\]
 for any point $P$ and line~$\ell$.
-
-\begin{figure}[h!]
-\centering
-\includegraphics{mppics/pic-242}
-\hskip15mm
-\includegraphics{mppics/pic-244}
-\caption*{Dual configurations.}
-\end{figure}
 
 {
 
@@ -484,7 +484,8 @@ Consider the line $p=(ZZ')$.
 
 \begin{thm}{Claim}\label{clm:polar}
 The constructed line $p=(ZZ')$ does not depend on the choice of the lines $x$ and $y$.
-Moreover, $P\mapsto p$ defines a duality.
+
+Moreover, $P\leftrightarrow p$ can be extended to a duality such that any point $P$ on the circle $\Gamma$ corresponds to a line $p$ tangent to $\Gamma$ at~$P$. 
 \end{thm}
 
 We will use this claim without a proof, but the proof is not hard.
@@ -493,8 +494,8 @@ If $P$ lies inside of $\Gamma$, it can be done by moving $P$ to the center of $\
 The existence of corresponding projective transformations follow from the idea in Exercise~\ref{ex:cone}.
 
 
-The line $p$ is called the polar of $P$ with respect to~$\Gamma$.
-The same way the point $P$ is called the polar of the line $p$ with respect to~$\Gamma$.
+The line $p$ is called the \index{polar}\emph{polar} of $P$ with respect to~$\Gamma$.
+The same way the point $P$ is called the \emph{polar} of the line $p$ with respect to~$\Gamma$.
 
 \begin{thm}{Exercise}\label{ex:revert}
 Revert the described construction.
