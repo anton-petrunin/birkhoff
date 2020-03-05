@@ -128,7 +128,7 @@ We assume that $O'=O$; that is, $O$ is a reflection of itself across itself.
 If the reflection across $O$ moves a set $S$ to itself, then we say that $S$ is \index{central symmetry}\emph{centrally symmetric} with respect to $O$. 
 
 Recall that any motion is either direct or indirect;
-that is, it either preserves or reverts signs angles (see page \pageref{direct motion}). 
+that is, it either preserves or reverts the signs of angles (see page \pageref{direct motion}). 
 
 \begin{thm}[\abs]{Proposition}\label{prop:point-reflection}
 Any reflection across a point is a direct motion.
@@ -138,7 +138,7 @@ Any reflection across a point is a direct motion.
 Observe that if $X'$ is a reflection of $X$ across $O$, 
 then $X$ is a reflection of $X'$.
 In other words, the composition of the reflection with itself is the identity map.
-In particular any reflection across a point is a bijection.
+In particular, any reflection across a point is a bijection.
 
 \begin{wrapfigure}{o}{33mm}
 \centering
@@ -176,7 +176,7 @@ Use this statement and Corollary~\ref{cor:reflection+angle} to build another pro
 
 
 \begin{thm}{Theorem}\label{thm:parallel-point-reflection}
-Let $\ell$ be a line, $Q\in \ell$, and $P$ is arbitrary point.
+Let $\ell$ be a line, $Q\in \ell$, and $P$ is an arbitrary point.
 Suppose $O$ is the midpoint of $[PQ]$.
 Then a line $m$ passing thru $P$ is parallel to $\ell$ if and only if $m$ is a reflection of $\ell$ across $O$.
 \end{thm}
@@ -202,7 +202,7 @@ that is, $\ell=m$ and in particular $\ell\parallel m$ --- a contradiction.
 Let $\ell'$ be the reflection of $\ell$ across $O$.
 According to the ``if'' part of the theorem, $\ell'\parallel \ell$.
 Note that both lines $\ell'$ and $m$ pass thru $P$.
-By uniqueness of parallel line (\ref{thm:parallel}), if $m\parallel \ell$, then $\ell'=m$; whence the statement follows.
+By uniqueness of parallel lines (\ref{thm:parallel}), if $m\parallel \ell$, then $\ell'=m$; whence the statement follows.
 \qeds
 
 
@@ -236,9 +236,9 @@ $$\measuredangle A B C+\measuredangle B C D
 \measuredangle A B C+\measuredangle B C D
 \equiv
 \pi.$$ 
-Moreover, if $(AB)\ne(C D)$, then in the first case 
-$A$ and $D$ lie on the opposite sides of $(BC)$,
-in the second case 
+Moreover, if $(AB)\ne(C D)$, then in the first case, 
+$A$ and $D$ lie on opposite sides of $(BC)$;
+in the second case,
 $A$ and $D$ lie on the same sides of~$(BC)$.
 \end{thm}
 
@@ -265,13 +265,16 @@ Note that
 \qquad
 \measuredangle A'CO\equiv-\measuredangle BCA'.\eqlbl{eq:A B O= A B C}
 \]
-Since $A'$, $C$ and $D$ lie on one line, Exercise~\ref{ex:ABCO-line} implis that 
+Since $A'$, $C$ and $D$ lie on one line, Exercise~\ref{ex:ABCO-line} implies that 
 \[2\cdot \measuredangle BCD\equiv 2\cdot \measuredangle BCA'.\eqlbl{eq:2BCD= 2BCA'}\]
 Finally note that \ref{A B O = A' C O}, \ref{eq:A B O= A B C}, and \ref{eq:2BCD= 2BCA'} imply \ref{A B C + B C D}.
 \qeds
 
 \parit{``If''-part.}
-Given points $A$, $B$, and $C$ there is unique line $(CD)$ such that \ref{A B C + B C D} holds.
+By Theorem~\ref{thm:parallel} there is unique line $(CD)$ thru $C$ that is parallel to $(AB)$.
+From the ``only-if'' part we know that  \ref{A B C + B C D} holds.
+
+On the other hand, there is a \emph{unique} line $(CD)$ such that \ref{A B C + B C D} holds.
 Indeed, suppose there are two such lines $(CD)$ and $(CD')$, then
 $$2\cdot(\measuredangle A B C+\measuredangle B C D)\equiv 2\cdot(\measuredangle A B C+\measuredangle B C D')\equiv0.
 $$ 
@@ -279,9 +282,7 @@ Therefore
 $2\cdot\measuredangle B C D\equiv 2\cdot\measuredangle B C D'$
 and by Exercise~\ref{ex:ABCO-line},  $D'\in (CD)$, or equivalently the line $(CD)$ coincides with the line $(CD')$.
 
-From the ``only-if'' part we know that if \ref{A B C + B C D} holds then $(CD)\parallel(AB)$.
-By Theorem~\ref{thm:parallel} there is unique line thru $C$ that is parallel to $(AB)$.
-Therefore it must be the same line $(CD)$ such that \ref{A B C + B C D} hold.
+Therefore if \ref{A B C + B C D} holds, then $(CD)\parallel (AB)$.
 
 \medskip
 
@@ -291,15 +292,15 @@ Therefore
 Applying \ref{A B C + B C D}, we get $\measuredangle A B C+\measuredangle B C D=0$.
 
 Similarly if $A$ and $D$ lie on the same side of $(BC)$,
-then $\angle ABC$ and $\angle BCD$ the same sign.
+then $\angle ABC$ and $\angle BCD$ have the same sign.
 Therefore
 \[0<|\measuredangle A B C+\measuredangle B C D|<2\cdot\pi\]
 and \ref{A B C + B C D} implies that $\measuredangle A B C+\measuredangle B C D\z\equiv\pi$.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:smililar+parallel}
-Let $\triangle ABC$ be a nondegenerate triangle and $P$ lies between $A$ and $B$.
-Suppose that a line $\ell$ passes thru $P$ and parallel to $(AC)$.
+Let $\triangle ABC$ be a nondegenerate triangle, and $P$ lies between $A$ and $B$.
+Suppose that a line $\ell$ passes thru $P$ and is parallel to $(AC)$.
 Show that $\ell$ crosses the side $[BC]$ at another point, say $Q$, and 
 \[\triangle ABC\z\sim\triangle PBQ.\]
 In particular, 

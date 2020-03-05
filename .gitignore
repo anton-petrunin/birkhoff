@@ -15,4 +15,5 @@ www/*
 *.kilepr
 */*.zip
 *.mps
+*.mpx
 
