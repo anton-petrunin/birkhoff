@@ -556,7 +556,7 @@ endfig;
 
 beginfig(350)
 save u;
-u:=1.4cm;
+u:=1cm;
 
 z.O=origin;
 x.RR=1.5*u;
