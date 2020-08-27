@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CaR version="20150810">
+<Construction job="true" last="D" target1="E">
+<Window x="0.0" y="0.0" w="8.0"/>
+<Assignment>
+<P>Draw the circle with center at A and radius AB.</P>
+<P>Draw the line (CD); mark its point of intersection with the
+circle.</P>
+<P>You suppose to get a &quot;well done&quot; message; make a
+screenshot.</P>
+</Assignment>
+<Objects>
+<Point name="A" n="0" showname="true" x="-3.4237288135593227" y="1.5932203389830502" shape="circle">Точка на -3.42373, 1.59322</Point>
+<Point name="B" n="1" showname="true" x="-0.1016949152542379" y="3.0508474576271194" shape="circle">Точка на -0.10169, 3.05085</Point>
+<Point name="C" n="2" showname="true" x="-3.796610169491525" y="-0.16949152542372925" shape="circle">Точка на -3.79661, -0.16949</Point>
+<Point name="D" n="3" showname="true" x="2.6052631578947363" y="1.026315789473684" shape="circle">Точка на 2.60526, 1.02632</Point>
+<Circle name="c1" n="6" through="B" midpoint="A" acute="true">Окружность вокруг P1  через P2</Circle>
+<Line name="l1" n="9" from="C" to="D">Прямая через P3 и P4</Line>
+<Intersection name="E" n="4" showname="true" first="l1" second="c1" shape="circle" which="first">Пересечение между l1 с c1</Intersection>
+</Objects>
+</Construction>
+</CaR>
