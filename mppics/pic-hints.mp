@@ -228,6 +228,44 @@ label.urt (btex $X$ etex, z.X);
 
 endfig;
 
+beginfig(335)
+save u;
+u:=2cm;
+
+z.A=origin;
+z.B=(2,0)*u;
+z.M=(1.4,.5)*u;
+z.N=z.M+abs(z.B-z.M)*unitvector(z.M);
+z.L=z.M-abs(z.B-z.M)*unitvector(z.M);
+z.P=(abs(z.M)/abs(z.N))*z.B;
+z.Q=(abs(z.M)/abs(z.L))*z.B;
+
+z.LM=whatever[z.L,z.B]=whatever[z.M,z.P];
+z.MN=whatever[z.N,z.B]=whatever[z.M,z.Q];
+
+draw ddline(z.A,z.N)(.1,.1);
+draw ddline(z.A,z.Q)(.1,.1);
+draw ddline(z.B,z.N)(.2,.2);
+draw ddline(z.P,z.M)(.2,.2);
+draw ddline(z.B,z.L)(.2,.2);
+draw ddline(z.Q,z.M)(.1,.1);
+draw ddarc(z.L,z.B,z.N)(20,20);
+
+parallel_mark(z.MN--z.B);
+parallel_mark(z.M--z.LM);
+parallel_mark2(z.LM--z.B);
+parallel_mark2(z.M--z.MN);
+
+dOt z.A,z.B,z.M,z.L,z.N,z.P,z.Q;
+
+whitelabel.bot (btex $A$ etex, z.A);
+whitelabel.bot (btex $B$ etex, z.B);
+whitelabel.bot (btex $P$ etex, z.P);
+whitelabel.bot (btex $Q$ etex, z.Q);
+whitelabel.top (btex $L$ etex, z.L);
+whitelabel.top (btex $M$ etex, z.M);
+whitelabel.top (btex $N$ etex, z.N);
+endfig;
 
 beginfig(336)
 save u;
