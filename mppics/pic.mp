@@ -1932,8 +1932,9 @@ mark_rt_angle_withsize(z.B,z.BBB,z.C,6);
 
 draw circle(z.O,z.X);
 draw z.A--z.B--z.C--cycle;
-draw z.A--z.AA--z.C--z.BB--z.B;
-draw z.AA--z.BB;
+draw z.A--z.AA;
+draw z.BB--z.B;
+draw z.AA--z.BB--z.C--cycle dashed evenly;
 
 rimmark(z.AA--z.C);rimmark(z.BB--z.C);
 
