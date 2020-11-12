@@ -55,7 +55,7 @@ u:=1cm;
 
 z.A=(1,0)*u;
 z.B=origin;
-z.C=(-.5,1.2)*u;
+z.C=(-.7,1.2)*u;
 z.D=z.A zscaled (0,-.7);
 z.X=whatever[z.B,z.D]=whatever[z.A,z.C];
 
@@ -71,6 +71,32 @@ label.llft (btex $B$ etex, z.B+(0,1));
 label.ulft (btex $C$ etex, z.C);
 label.rt (btex $D$ etex, z.D);
 label.urt (btex $X$ etex, z.X);
+endfig;
+
+beginfig(325)
+save u;
+u:=1cm;
+
+z.A=origin;
+z.B=(2,0)*u;
+z.X=(.9,.5)*u;
+z.Y=altitude(z.A,z.X,z.B);
+z.C=altitude(z.A,z.B,z.X);
+
+mark_rt_angle_withsize(z.A,z.C,z.B,6);
+mark_rt_angle_withsize(z.A,z.Y,z.X,6);
+
+draw z.A--z.B--z.C--cycle;
+draw z.X--z.Y;
+
+dOt z.A,z.B,z.C,z.X,z.Y;
+
+label.lft (btex $A$ etex, z.A);
+label.rt (btex $B$ etex, z.B);
+label.top (btex $C$ etex, z.C);
+label.bot (btex $Y$ etex, z.Y);
+label.ulft (btex $X$ etex, z.X);
+
 endfig;
 
 beginfig(326)

@@ -1853,8 +1853,8 @@ u:=1.4cm;
 
 z.O=origin;
 z.X=(0,-1)*u;
-z.Y=z.X rotated 40;
-z.XX=z.X rotated -135;
+z.Y=z.X rotated 55;
+z.XX=z.X rotated -150;
 z.YY=z.X rotated -80;
 z.P=whatever[z.X,z.XX]=whatever[z.Y,z.YY];
 
@@ -1901,7 +1901,7 @@ draw z.X--z.YY--z.Z--z.XX--z.Y--z.ZZ--cycle;
 
 dOt z.P,z.X,z.Y,z.Z,z.XX,z.YY,z.ZZ;
 
-label.llft (btex $P$ etex, z.P);
+label.llft (btex $P$ etex, z.P+(0,-1));
 label.bot (btex $X$ etex, z.X);
 label.rt (btex $Y$ etex, z.Y);
 label.ulft (btex $Z$ etex, z.Z);

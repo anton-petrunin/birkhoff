@@ -65,17 +65,16 @@ if not, one has to change the direction of the $y$-coordinate.
 \section*{Conjugation and absolute value}
 \addtocontents{toc}{Conjugation and absolute value.}
 
-Let $z$ be a complex number with real part $x$ and imaginary part $y$.
+Let $z=x+i\cdot y$; 
+that is, $z$ is a complex number with real part $x$ and imaginary part $y$.
 If $y=0$, we say that the complex number $z$ is \index{real complex number}\emph{real} and if $x=0$ we say that $z$ is \index{imaginary complex number}\emph{imaginary}.
 The set of points 
 with real (imaginary) complex coordinates is a line in the plane,
 which is called \index{real line}\emph{real} (respectively \index{imaginary line}\emph{imaginary}) line. 
 The real line will be denoted as $\mathbb{R}$.
 
-\medskip
-
-The complex number $\bar z\df x-i\cdot y$ is called the \index{complex conjugate}\emph{complex conjugate} of~$z$.
-
+The complex number
+\[\bar z\df x-i\cdot y\] is called the \index{complex conjugate}\emph{complex conjugate} of $z=x+i\cdot y$.
 Let $Z$ and $\bar Z$ be the points in the plane with the complex coordinates $z$ and $\bar z$ respectively.
 Note that the point $\bar Z$ is the reflection of $Z$ across the real line.
 
@@ -120,8 +119,8 @@ If $|z|=1$, then $z$ is called a \index{unit complex number}\emph{unit complex n
 Show that $|v\cdot w|=|v|\cdot |w|$ for any $v,w\in\mathbb{C}$.
 \end{thm}
 
-Note that 
-if $Z$ and $W$ are points in the Euclidean plane, $z$ and $w$ are their complex coordinates, then
+Suppose that $Z$ and $W$ are points with complex coordinates $z$ and $w$.
+Note that
 $$ZW=|z-w|.\eqlbl{eq:C-dist}$$
 The triangle inequality for the points with complex coordinates $0$, $v$, and $v+w$ implies that
 \[|v+w|\le |v|+|w|\]
@@ -132,7 +131,7 @@ this inequality is also called \index{triangle inequality}\emph{triangle inequal
 Use the identity 
 \[u\cdot (v-w)+v\cdot (w-u)+w\cdot(u-v)=0\]
 for $u,v,w\in\mathbb{C}$ and the triangle inequality
-to prove the Ptolemy's inequality (\ref{ptolemy-inq}).
+to prove Ptolemy's inequality (\ref{ptolemy-inq}).
 \end{thm}
 
 \section*{Euler's formula}
@@ -240,7 +239,7 @@ for any $\triangle ZVW$ in the Euclidean plane.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:C-sim}
-Assume that points $V$, $W$, and $Z$ have complex coordinates $v$, $w$, and $z=v\cdot w$ respectively, and the points $O$ and $E$ are as above.
+Suppose that points $O$, $E$, $V$, $W$, and $Z$ have complex coordinates $0$, $1$, $v$, $w$, and $z=v\cdot w$ respectively.
 Show that 
 \[\triangle OEV\sim \triangle OWZ.\]
 
@@ -288,7 +287,7 @@ Show that  $\triangle PMQ$ is an isosceles right triangle.
 
 \parit{Solution.}
 Choose the complex coordinates so that $O$ is the origin;
-denote by $v, w, p, q, m$ the complex coordinates of the corresponding points.
+denote by $v, w, p, q, m$ the complex coordinates of the remaining points respectively.
 
 Since $\triangle OPV$ and $\triangle OQW$ are isosceles and $\measuredangle VPO=\measuredangle OQW=\tfrac\pi2$,
 \ref{eq:C-dist} and \ref{eq:angle-arg} imply that
@@ -334,7 +333,7 @@ Use the method of complex coordinates to show that
 }
 
 \begin{thm}{Exercise}\label{ex:6-circles}
-Check the following identity with six cross ratios:
+Check the following identity with six complex cross ratios:
 \[(u,w;v,z)\cdot(u',w';v',z')=\frac{(v,w';v',w)\cdot(z,u';z',u)}{(u,v';u',v)\cdot(w,z';w',z)}.\]
 
 Use it together with Theorem~\ref{thm:inscribed-quadrangle-C} to prove that if
@@ -370,7 +369,7 @@ Denote by $a$, $b$, $u$, $v$, and $w$ the complex coordinates of $A$, $B$, $U$, 
 \addtocontents{toc}{Fractional linear transformations.}
 
 \begin{thm}{Exercise}\label{ex:movie}
-Watch video ``M\"obius transformations tevealed'' by Douglas Arnold and Jonathan Rogness.
+Watch video ``Möbius transformations revealed'' by Douglas Arnold and Jonathan Rogness.
 (It is available on \href{http://youtu.be/JX3VmDgiFnY}{YouTube}.)
 \end{thm}
 
@@ -448,21 +447,26 @@ f(z) &= \frac ac-\frac{a\cdot d-b\cdot c}{c\cdot(c\cdot z + d)} =
 That is, 
 $$f(z)=f_4\circ f_3\circ f_2\circ f_1 (z),
 \eqlbl{eq:moebius-compose}$$
-where $f_1$, $f_2$, $f_3$, and $f_4$ are elementary transformations of the following form:
-\begin{itemize}
-\item $f_1(z)= z+\tfrac dc$,
-\item $f_2(z)= \tfrac1z$,
-\item $f_3(z)= - \tfrac{a\cdot d-b\cdot c}{c^2} \cdot z$,
-\item $f_4(z)= z+\tfrac ac$.
-\end{itemize}
-
-\medskip
+where $f_1$, $f_2$, $f_3$, and $f_4$ are the following elementary transformations:
+\begin{align*}
+f_1(z)&= z+\tfrac dc,
+&
+f_2(z)&= \tfrac1z,
+\\
+f_3(z)&= - \tfrac{a\cdot d-b\cdot c}{c^2} \cdot z,
+&
+f_4(z)&= z+\tfrac ac.
+\end{align*}
 
 If $c=0$, then
 \[f(z) = \frac{a\cdot z + b}{ d}.\]
-In this case
-\[f(z)=f_2\circ f_1 (z),\]
-where $f_1(z)= \tfrac ad\cdot z$ and $f_2(z)= z+\tfrac bd$.
+In this case $f(z)=f_2\circ f_1 (z)$,
+where 
+\begin{align*}
+f_1(z)&= \tfrac ad\cdot z,
+&
+f_2(z)= z+\tfrac bd.
+\end{align*}
 
 \parit{``If'' part.}
 We need to show that by composing elementary transformations,
@@ -596,14 +600,17 @@ that is, a complex number $z$
 belongs to $\mathbb{D}$ if and only if $|z|<1$.
 
 Let us use the disc $\mathbb{D}$ as a h-plane in the conformal disc model;
-the h-distance between $z, w\in\mathbb{D}$ will be denoted by $d_h(z,w)$.
+the h-distance between $z, w\in\mathbb{D}$ will be denoted by $d_h(z,w)$;
+that is,
+\[d_h(z,w)\df ZW_h,\]
+where $Z$ and $W$ are h-points with complex coordinates $z$ and $w$ respectively.
 
 A function $f\:\mathbb{D}\to \mathbb{C}$ is called \index{holomorphic function}\emph{holomorphic} if for every $z\in \mathbb{D}$
 there is a complex number $s$ such that
 \[f(z+w)=f(z)+s\cdot w+o(|w|).\]
 In other words, $f$ is {}\emph{complex-differentiable}
 at any $z\in\mathbb{D}$.
-The number $s$ above is called the derivative of $f$ at $z$ and is denoted by~$f'(z)$.
+The complex number $s$ is called the {}\emph{derivative} of $f$ at $z$, or briefly $s=f'(z)$.
 
 \begin{thm}{Schwarz--Pick theorem}
 Assume $f\: \mathbb{D}\to \mathbb{D}$ is a holomorphic function.
@@ -623,9 +630,10 @@ where $v$ and $w$ are complex constants such that $|v|>|w|$.
 
 
 \begin{thm}{Exercise}\label{ex:schwarz-tanh}
+Recall that hyperbolic tangent $\tanh$ is defined on page~\pageref{hyperbolic tangent}.
 Show that 
 \[\tanh [\tfrac12\cdot d_h(z,w)]=\left|\frac{z-w}{1-z\cdot\bar w}\right|.\]
-Conclude the inequality in Schwarz--Pick theorem can be rewritten as
+Conclude that the inequality in Schwarz--Pick theorem can be rewritten as
 \[\left|\frac{z'-w'}{1-z'\cdot\bar w'}\right|\le\left|\frac{z-w}{1-z\cdot\bar w}\right|,\]
 where
 $z'=f(z)$ and $w'=f(w)$.
