@@ -1314,7 +1314,9 @@ As usual we assume that the absolute is a unit circle.
 Suppose that $O$ denotes the h-midpoint of $[PQ]_h$.
 By the main observation (\ref{thm:main-observ})
 we can assume that $O$ is the center of the absolute.
-In this case $O$ is also the Euclidean midpoint of $[PQ]$.
+In this case $O$ is also the Euclidean midpoint of $[PQ]$.%
+\footnote{Instead, we may move $Q$ to the center of absolute.
+In this case the derivations are simpler. But since $Q'Q=Q'P=Q'P'=\infty$ and one has to justify that $\tfrac\infty\infty=1$ every time.}
 
 Set $a=OP=OQ$; in this case we have
 \begin{align*}PQ&=2\cdot a,
@@ -1355,13 +1357,49 @@ Hence the part \textit{(\ref{ex:coshsinh})} follows.
 
 The parts \textit{(\ref{ex:coshtanh})} and \textit{(\ref{ex:coshcosh})} follow from \textit{(\ref{ex:cosh/2})}, \textit{(\ref{ex:coshsinh})}, the definition of hyperbolic tangent, and the double-argument identity for hyperbolic cosine, see \ref{double-argument}.
 
+
+
 %\subsection*{Chapter~\ref{chap:h-plane}}
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
 
+{
+
+\begin{wrapfigure}{r}{34mm}
+\vskip-5mm
+\centering
+\includegraphics{mppics/pic-359}
+\end{wrapfigure}
+
+\parbf{\ref{ex:ultra-parallel}}; \textit{``only-if'' part.} Suppose $\ell$ and $m$ are ultraparallel; that is, they do not intersect and have distinct ideal points.
+Denote the ideal points by $A$, $B$, $C$, and $D$;
+we may assume that they appear on the absolute in the same order.
+In this case the h-line with ideal points $A$ and $C$ intersects the h-line with ideal points $B$ and $D$.
+Denote by $O$ their point of intersection.
+
+By \ref{lem:P-->O}, we can assume that $O$ is the center of absolute.
+Note that $\ell$ is the reflection of $m$ across $O$ in the Euclidean sense.
+
+}
+
+Drop an h-perpendicular $n$ from $O$ to $\ell$, and
+show that $n\perp m$.
+
+
+\parit{``If'' part.} 
+Suppose $n$ is a common perpendicular.
+Denote by $L$ and $M$ its points of intersection with $\ell$ and $m$ respectively.
+By \ref{lem:P-->O}, we can assume that the center of absolute $O$ is the h-midpoint of $L$ and $M$.
+Note that in this case $\ell$ is the reflection of $m$ across $O$ in the Euclidean sense.
+It follows that the ideal points of the h-lines $\ell$ and $m$ are symmetric to each other.
+Therefore, if one pair of them coincides, then so is the other pair. 
+By \ref{ex:ideal-line-unique}, $\ell=m$, which contradicts the assumption $\ell\ne m$.
+
+
+
 \parbf{\ref{ex:small-angle}.}
 By triangle inequality, the h-distance from $B$ to $(AC)_h$ is at least 50.
-It remains to estimate $|\measuredangle_h ABC|$ using Corollary~\ref{cor:angle-parallelism}.
+It remains to estimate $|\measuredangle_h ABC|$ using Proposition~\ref{prop:angle-parallelism}.
 The inequalities $\cos\phi\z\le 1-\tfrac1{10}\cdot\phi^2$ for $|\phi|<\tfrac\pi2$ and $e^3>10$ should help to finish the proof.
 
 \parbf{\ref{ex:side-sup}.}
@@ -1375,7 +1413,7 @@ $$BC_h<\tfrac12\cdot\ln\frac{1+\frac1{\sqrt{2}}}{1-\frac1{\sqrt{2}}}=\ln\left(1+
 {
 
 \begin{wrapfigure}{r}{45mm}
-\vskip-0mm
+\vskip-4mm
 \centering
 \includegraphics{mppics/pic-352}
 \end{wrapfigure}
@@ -1417,9 +1455,8 @@ Use that $e\z>2$ and in particular the function $r\mapsto e^{-r}$ is decreasing.
 Apply the hyperbolic Pythagorean theorem and the definition of hyperbolic cosine.
 The following observations should help:
 \begin{itemize}
- \item The function $x\mapsto e^x$ is increasing and the function $x\mapsto e^{-x}$ is decreasing.
- \item Without loss of generality, we may assume that $a\le b\le c$; in this case 
- \[-c\le a-b\le b-a\le c.\]
+ \item $x\mapsto e^x$ is an increasing positive function.
+ \item By the triangle inequality,  we have $-c\le a-b$ and $-c\le b-a$.
 \end{itemize}
 
 
@@ -1444,7 +1481,7 @@ In each case check that the map is a bijection and apply \ref{ex:line-coord}.
 Choose a line $(AB)$.
 
 \begin{wrapfigure}{o}{20mm}
-\vskip-6mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-353}
 \end{wrapfigure}
@@ -1592,8 +1629,8 @@ To extend this bijection to the whole projective plane, assume that
 (1) the ideal line corresponds to the origin 
 and (2) the ideal point given by the pencil of the lines $b\cdot x-a\cdot y=c$ for different values of $c$ corresponds to the line given by the equation $a\cdot x+b\cdot y=0$.
 
-\begin{wrapfigure}{r}{40mm}
-\vskip-4mm
+\begin{wrapfigure}{r}{36mm}
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-356}
 \vskip-4mm
@@ -1638,7 +1675,7 @@ that is, $(PV)=v$.
 Hence the statement follows.
 
 \begin{wrapfigure}{r}{45mm}
-\vskip-0mm
+\vskip-4mm
 \centering
 \includegraphics{mppics/pic-370}
 \vskip-6mm
@@ -1705,6 +1742,12 @@ part \textit{(\ref{ex:oder:a})} and apply~\textit{(\ref{ex:oder:b})}.
 
 {
 
+\begin{wrapfigure}{r}{43mm}
+\vskip-6mm
+\centering
+\includegraphics{mppics/pic-358}
+\end{wrapfigure}
+
 
 \parbf{\ref{ex:2(pi/4)=pi/3}.} 
 Applying the Pythagorean theorem, we get that
@@ -1712,12 +1755,6 @@ $$
 \cos AB_s=\cos AC_s\cdot\cos BC_s=\tfrac12.
 $$
 Therefore, $AB_s=\tfrac\pi3$.
-
-\begin{wrapfigure}{r}{43mm}
-\vskip-6mm
-\centering
-\includegraphics{mppics/pic-358}
-\end{wrapfigure}
 
 Alternatively, 
 look at the tessellation of a hemisphere on the picture; 
@@ -1795,7 +1832,7 @@ Note that $\hat P\in [A_iB_i]$ if and only if $P\in\Gamma_i$.
 
 \begin{wrapfigure}{r}{42mm}
 \centering
-\vskip-4mm
+\vskip-0mm
 \includegraphics{mppics/pic-360}
 \end{wrapfigure}
 
@@ -2105,7 +2142,7 @@ to show that the third vertex is an irrational point.
 {
 
 \begin{wrapfigure}{r}{23mm}
-\vskip-4mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-368}
 \end{wrapfigure}
@@ -2226,10 +2263,10 @@ In particular,
 =
 \area(\solidsquare ABEF)+\area(\solidsquare CDFE).\]
 
-
+{
 
 \begin{wrapfigure}{r}{28mm}
-\vskip-6mm
+\vskip-4mm
 \centering
 \includegraphics{mppics/pic-376}
 \end{wrapfigure}
@@ -2242,7 +2279,7 @@ By Proposition~\ref{prop:area-parallelogram} and Theorem~\ref{thm:area-of-triang
 \end{align*}
 and hence the result.
 
-
+}
 
 \parbf{\ref{ex:area-diag}.}
 Let $h_A$ and $h_C$ denote the distances from $A$ and $C$ to the line~$(BD)$ respectively.
@@ -2347,7 +2384,7 @@ Further use part \textit{(\ref{ex:cross-ratio-area:a})} to rewrite it using area
 Let $\mathcal{P}_n$ and $\mathcal{Q}_n$ be the solid regular $n$-gons
 so that $\Gamma$ is inscribed in $\mathcal{Q}_n$ and circumscribed around~$\mathcal{P}_n$.
 Clearly,
-\[\mathcal{P}_n\subset\mathcal{D}\subset\mathcal{Q}_n.\]
+$\mathcal{P}_n\subset\mathcal{D}\subset\mathcal{Q}_n$.
 
 Show that 
 $\tfrac{\area\mathcal{P}_n}{\area\mathcal{Q}_n}=(\cos\tfrac\pi n)^2$;
@@ -2357,7 +2394,6 @@ $$\frac{\area\mathcal{P}_n}{\area\mathcal{Q}_n}\to 1
 \text{as}
 \quad
 n\to\infty.$$
-
 Next show that $\area\mathcal{Q}_n<100$, say for all $n\ge 100$.
 
 These two statements imply that

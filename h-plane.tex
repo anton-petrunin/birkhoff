@@ -39,6 +39,10 @@ On the diagram, the two solid h-lines passing thru $P$ are asymptotically parall
 the dashed h-line is ultra parallel to~$\ell$.
 
 
+\begin{thm}{Exercise}\label{ex:ultra-parallel}
+Show that two distinct h-lines $\ell$ and $m$ are ultraparallel if and only if they have a \emph{common perpendicular};
+that is, there is an $h$-line $n$ such that $n\perp \ell$ and $n\perp m$.
+\end{thm}
 
 
 
@@ -48,8 +52,11 @@ the dashed h-line is ultra parallel to~$\ell$.
 \begin{thm}{Proposition}\label{prop:angle-parallelism}
 Let $Q$ be the foot point of $P$ on h-line~$\ell$.
 Then
-$$PQ_h=\tfrac12\cdot\ln \tfrac{1+\cos\phi}{1-\cos\phi},$$
+\[PQ_h=\tfrac12\cdot\ln \tfrac{1+\cos\phi}{1-\cos\phi},\]
 where $\phi$ is the angle of parallelism of $P$ to~$\ell$.
+
+In particular, if $\beta\z=|\measuredangle_h XPY|$ for some points $X,Y\in\ell$, then 
+\[PQ_h<\tfrac12\cdot\ln \frac{1+\cos\tfrac\beta2}{1-\cos\tfrac\beta2}.\]
 
 \end{thm}
 
@@ -92,25 +99,11 @@ PQ_h&=QX_h=
 \\
 &=\tfrac12\cdot\ln \tfrac{1+\cos\phi}{1-\cos\phi}.
 \end{align*}
-\qedsf
 
-\begin{thm}{Corollary}\label{cor:angle-parallelism}
-Let $ABC$ be an h-triangle and $\beta\z=|\measuredangle_h ABC|$.
-Then the h-distance from $B$ to $(AC)_h$ is less than
-\[\tfrac12\cdot\ln \frac{1+\cos\tfrac\beta2}{1-\cos\tfrac\beta2}.\]
-
-\end{thm}
-
-\parit{Proof.}
-Suppose that $\phi$ denotes the angle of parallelism of $B$ to~$(AC)_h$.
-Note that $\phi>\tfrac\beta2$; therefore 
-\[
-\tfrac12\cdot\ln \frac{1+\cos\phi}{1-\cos\phi}
-<
-\tfrac12\cdot\ln \frac{1+\cos\frac\beta2}{1-\cos\frac\beta2}.\]
-It remains to apply Proposition~\ref{prop:angle-parallelism}.
+The last statement follows since $\phi>\tfrac\beta2$ and the function 
+\[\phi\mapsto  \tfrac12\cdot\ln \tfrac{1+\cos\phi}{1-\cos\phi}\] 
+is decreasing in the interval $(0,\tfrac\pi2]$.
 \qeds
-
 
 \begin{thm}{Exercise}\label{ex:small-angle}
 Let $ABC$ be an equilateral h-triangle with side $100$.
@@ -153,7 +146,7 @@ $\measuredangle_hXIY\ge\tfrac23\cdot\pi$;
 if not relabel $X$, $Y$, and $Z$. 
 
 Since $r$ is the h-distance from $I$ to $(XY)_h$,
-Corollary~\ref{cor:angle-parallelism} implies that
+Proposition~\ref{prop:angle-parallelism} implies that
 \begin{align*}r&<\tfrac12\cdot\ln \tfrac{1+\cos\frac\pi3}{1-\cos\frac\pi3}=
 \\
 &=\tfrac12\cdot\ln\frac{1+\tfrac12}{1-\tfrac12}=
@@ -551,12 +544,12 @@ It follows that if $a$, $b$, and $c$ are small, then
 \end{align*}
 In other words, the original Pythagorean theorem (\ref{thm:pyth}) is a limit case of the hyperbolic Pythagorean theorem for small triangles.
 
-For large $a$ and $b$ the terms $e^{-a}$ and $e^{-b}$ are neglectable.
+For large $a$ and $b$ the terms $e^{-a}$, $e^{-b}$, and $e^{-a-b+\ln 2}$ are neglectable.
 In this case we have the following approximations:
 \begin{align*}
 \cosh a\cdot\cosh b&\approx \tfrac{e^a}2\cdot\tfrac{e^b}2=
 \\
-&=\tfrac{e^{a+b-\ln 2}}{2}\approx
+&=\frac{e^{a+b-\ln 2}}{2}\approx
 \\
 &\approx \cosh(a+b-\ln 2).
 \end{align*}
@@ -570,8 +563,10 @@ Show that
 
 \end{thm}
 
+
 \begin{wrapfigure}{o}{43mm}
 \centering
+\vskip-4mm
 \includegraphics{mppics/pic-224}
 \end{wrapfigure}
 
@@ -599,9 +594,9 @@ Therefore
 &&&&&
 \cosh b&=\tfrac12\cdot (\tfrac{1+y}{1-y}+\tfrac{1-y}{1+y})=
 \\
-&=\tfrac{1+x^2}{1-x^2},
+&=\frac{1+x^2}{1-x^2},
 &&&&&
-&=\tfrac{1+y^2}{1-y^2}.
+&=\frac{1+y^2}{1-y^2}.
 \end{aligned}
 \eqlbl{cosha+coshb}
 \]

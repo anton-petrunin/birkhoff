@@ -863,6 +863,54 @@ label.urt (btex $B$ etex, z.B);
 label.bot (btex $C$ etex, z.XX);
 endfig;
 
+beginfig(359)
+save u;
+u:=1cm;
+
+z.O=origin;
+x.RR=1.5*u;
+
+path absolute, p[];
+absolute=circle(z.O,x.RR);
+fill absolute withcolor .5;
+
+z.A=(.5,0)*u;
+z.AA=inversion(z.O,x.RR)(z.A);
+
+p1=circle(.5[z.A,z.AA],.5(z.A-z.AA));
+
+draw p1;
+draw p1 rotated 180;
+
+clip currentpicture to absolute;
+
+z.a=absolute intersectionpoint p1;
+z.b=z.a yscaled -1;
+z.c=-z.a;
+z.d=-z.b;
+
+draw z.a--z.c;
+draw z.b--z.d;
+draw -(x.RR,0)--(x.RR,0);
+
+mark_rt_angle_withsize(z.O,z.A,z.A+(0,x.RR),4);
+
+dOt z.a,z.b,z.c,z.d,z.O,z.A,-z.A;
+
+z.ell=z.A+.3*(0,x.RR)+(1,0);
+
+label.urt (btex $A$ etex, z.a);
+label.lrt (btex $B$ etex, z.b);
+label.llft (btex $C$ etex, z.c);
+label.ulft (btex $D$ etex, z.d);
+label.bot (btex $O$ etex, z.O+(0,-2));
+label.lrt (btex $L$ etex, z.A);
+label.llft (btex $M$ etex, -z.A);
+label.bot (btex $n$ etex, .8*(x.RR,0));
+label.rt (btex $\ell$ etex, z.ell);
+label.lft (btex $m$ etex, z.ell xscaled -1);
+endfig;
+
 beginfig(360)
 save u,k;
 u:=1.2cm;
