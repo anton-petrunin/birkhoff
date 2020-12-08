@@ -3297,6 +3297,41 @@ label.urt (btex $\phi$ etex, z.O+(12,.3));
 label.lrt (btex $\phi$ etex, z.B+(.3,-12));
 endfig;
 
+beginfig(209)
+save u;
+u:=1.4cm;
+
+z.O=origin;
+x.R=1.5*u;
+path absolute, p[];
+absolute=circle(z.O,x.R);
+fill absolute withcolor .5;
+
+z.Q=(.8,0)*u;
+2[z.Q,z.Z]=inversion(z.O,x.R)(z.Q);
+z.X=inversion(z.O,x.R)(z.Z);
+z.A= support.bot(absolute, z.Z);
+z.B=z.A reflectedabout(z.O,z.Q);
+
+p1=arc(z.A,z.Q,z.B);
+draw p1;
+
+z.x=point .4 of p1;
+z.y=point 1.8 of p1;
+
+draw z.x--z.O--z.y;
+draw circle(z.O,11) rotated angle z.y cutafter (z.O--z.x);
+dOt z.O,z.x,z.y;
+
+
+
+
+label.lft (btex $P$ etex, z.O);
+label.rt (btex $\beta$ etex, z.O+(11,0));
+label.ulft (btex $X$ etex, z.x);
+label.llft (btex $Y$ etex, z.y);
+endfig;
+
 beginfig(210)
 save u,n;
 u:=1.4cm;

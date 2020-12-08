@@ -52,10 +52,10 @@ that is, there is an $h$-line $n$ such that $n\perp \ell$ and $n\perp m$.
 \begin{thm}{Proposition}\label{prop:angle-parallelism}
 Let $Q$ be the foot point of $P$ on h-line~$\ell$.
 Then
-\[PQ_h=\tfrac12\cdot\ln \tfrac{1+\cos\phi}{1-\cos\phi},\]
+\[PQ_h=\tfrac12\cdot\ln \frac{1+\cos\phi}{1-\cos\phi},\]
 where $\phi$ is the angle of parallelism of $P$ to~$\ell$.
 
-In particular, if $\beta\z=|\measuredangle_h XPY|$ for some points $X,Y\in\ell$, then 
+In particular, if $P\notin\ell$ and $\beta\z=|\measuredangle_h XPY|$ for some points $X,Y\in\ell$, then 
 \[PQ_h<\tfrac12\cdot\ln \frac{1+\cos\tfrac\beta2}{1-\cos\tfrac\beta2}.\]
 
 \end{thm}
@@ -100,7 +100,13 @@ PQ_h&=QX_h=
 &=\tfrac12\cdot\ln \tfrac{1+\cos\phi}{1-\cos\phi}.
 \end{align*}
 
-The last statement follows since $\phi>\tfrac\beta2$ and the function 
+\begin{wrapfigure}{o}{46mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-209}
+\end{wrapfigure}
+
+The last statement follows since $\phi\z>\tfrac\beta2$ and the function 
 \[\phi\mapsto  \tfrac12\cdot\ln \tfrac{1+\cos\phi}{1-\cos\phi}\] 
 is decreasing in the interval $(0,\tfrac\pi2]$.
 \qeds
@@ -179,7 +185,6 @@ of the other circles with the h-plane.
 You will see that all these intersections have a {}\emph{perfectly round shape} in the h-plane.
 
 One may think of these curves as trajectories of a car with a fixed position of the steering wheel.
-
 In the Euclidean plane, 
 this way you either run along a circle or along a line.
 
@@ -219,18 +224,11 @@ By the main observation (\ref{thm:main-observ}) the inversion in $\Delta$ is a m
 In other words, $g$ is the set of points that lie on a fixed h-distance and on the same side of~$m$.
 
 
+
 Such a curve $g$ is called 
 \index{equidistant}\emph{equidistant} to h-line~$m$.
 In Euclidean geometry, the equidistant from a line is a line;
 apparently in hyperbolic geometry the picture is different.
-
-{
-
-\begin{wrapfigure}{r}{33mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-214}
-\end{wrapfigure}
 
 \parbf{Horocycles.}
 If the circle $\Gamma$ touches the absolute from inside at one point $A$, then the complement $h=\Gamma\backslash\{A\}$ lies in the h-plane.
@@ -238,18 +236,26 @@ This set is called a \index{horocycle}\emph{horocycle}.
 It also has a perfectly round shape in the sense described above.
 
 
-Horocycles are the border case between circles and equidistants to h-lines.
+\begin{wrapfigure}{r}{33mm}
+\vskip-6mm
+\centering
+\includegraphics{mppics/pic-214}
+\end{wrapfigure}
+
+The shape of a horocycle is between shapes of circles and equidistants to h-lines.
 A horocycle might be considered as a limit of circles 
 thru a fixed point
 with the centers running to infinity along a line.
 The same horocycle is a limit of equidistants thru a fixed point to sequence of h-lines that runs to infinity.
+
+Since any three points lie on a circline, we have that any nondegenerate h-triangle is inscribed in an h-circle, horocycle or an equidistant.
 
 \begin{thm}{Exercise}\label{ex:right-trig-horocycle}
 Find the leg of an isosceles right h-triangle inscribed in a horocycle.
 \end{thm}
 
 
-}
+
 
 \section*{Hyperbolic triangles}
 \addtocontents{toc}{Hyperbolic triangles.}
