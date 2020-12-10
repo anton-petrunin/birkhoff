@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CaR version="20150810">
-<Construction job="true" last="s2" target1="I1">
+<Construction job="true" last="s2" target1="X">
 <Window x="0.0" y="0.0" w="8.0"/>
+<Assignment>
+<P>Find the point of intersection X of [AB] and the extension
+of the line segment [CD].</P>
+</Assignment>
 <Objects>
-<Point name="P1" n="0" x="-4.815789473684211" y="1.8947368421052628" shape="circle">Точка на -4.81579, 1.89474</Point>
-<Point name="P2" n="1" x="-3.921052631578948" y="-0.8157894736842097" shape="circle">Точка на -3.92105, -0.81579</Point>
-<Segment name="s1" n="2" from="P1" to="P2">Отрезок от P1  до P2</Segment>
-<Point name="P3" n="3" x="-3.2631578947368425" y="0.8421052631578947" shape="circle">Точка на -3.26316, 0.84211</Point>
-<Point name="P4" n="4" x="-0.3157894736842106" y="0.9999999999999991" shape="circle">Точка на -0.31579, 1.0</Point>
-<Segment name="s2" n="7" from="P3" to="P4">Отрезок от P3  до P4</Segment>
-<Line name="l1" n="6" hidden="true" from="P3" to="P4">Прямая через P3 и P4</Line>
-<Intersection name="I1" n="5" first="s1" second="l1" shape="circle">Пересечение между s1 с l1</Intersection>
+<Point name="B" n="0" showname="true" xcoffset="-0.2631573684210524" ycoffset="0.3421021052631583" keepclose="true" x="-4.815790000000001" y="1.9473700000000003" shape="circle">Точка на -4.81579, 1.94737</Point>
+<Point name="A" n="1" showname="true" x="-3.92105" y="-0.7631600000000001" shape="circle">Точка на -3.92105, -0.76316</Point>
+<Segment name="s1" n="2" from="B" to="A">Отрезок от B  до A</Segment>
+<Point name="C" n="3" showname="true" xcoffset="-0.3421031578947371" ycoffset="-0.052636315789473476" keepclose="true" x="-3.26316" y="0.84211" shape="circle">Точка на -3.26316, 0.84211</Point>
+<Point name="D" n="4" showname="true" xcoffset="0.28947421052631594" ycoffset="-8.881784197001252E-16" keepclose="true" x="-0.31579" y="1.0" shape="circle">Точка на -0.31579, 1.0</Point>
+<Segment name="s2" n="7" from="C" to="D">Отрезок от C  до D</Segment>
+<Line name="l1" n="6" hidden="true" from="C" to="D">Прямая через C и D</Line>
+<Intersection name="X" n="5" showname="true" xcoffset="-0.4117986526640047" ycoffset="-0.04274409272661517" keepclose="true" first="s1" second="l1" shape="circle">Пересечение между s1 с l1</Intersection>
 </Objects>
 </Construction>
 </CaR>
