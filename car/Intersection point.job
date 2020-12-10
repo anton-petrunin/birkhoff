@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CaR version="20150810">
+<Construction job="true" last="s2" target1="I1">
+<Window x="0.0" y="0.0" w="8.0"/>
+<Objects>
+<Point name="P1" n="0" x="-4.815789473684211" y="1.8947368421052628" shape="circle">Точка на -4.81579, 1.89474</Point>
+<Point name="P2" n="1" x="-3.921052631578948" y="-0.8157894736842097" shape="circle">Точка на -3.92105, -0.81579</Point>
+<Segment name="s1" n="2" from="P1" to="P2">Отрезок от P1  до P2</Segment>
+<Point name="P3" n="3" x="-3.2631578947368425" y="0.8421052631578947" shape="circle">Точка на -3.26316, 0.84211</Point>
+<Point name="P4" n="4" x="-0.3157894736842106" y="0.9999999999999991" shape="circle">Точка на -0.31579, 1.0</Point>
+<Segment name="s2" n="7" from="P3" to="P4">Отрезок от P3  до P4</Segment>
+<Line name="l1" n="6" hidden="true" from="P3" to="P4">Прямая через P3 и P4</Line>
+<Intersection name="I1" n="5" first="s1" second="l1" shape="circle">Пересечение между s1 с l1</Intersection>
+</Objects>
+</Construction>
+</CaR>
