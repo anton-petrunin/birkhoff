@@ -2842,6 +2842,9 @@ save u,n;
 u:=1cm;
 n:=8;
 
+picture pic;
+
+pic:= image(
 z.l=(.15,.02);
 z.r=(.15,-.02);
 
@@ -2932,6 +2935,9 @@ endfor
 ;
 
 Dot z.B;
+);
+
+draw pic withcolor 1;
 
 endfig;
 
@@ -4742,8 +4748,11 @@ endfig;
 
 beginfig(277)
 save u;
-u:=1.4cm;
+u:=2cm;
 
+picture pic;
+
+pic:= image(
 z.O=origin;
 z.P=(-.8,-.6)*u;
 z.Q=(1.2,-.2)*u;
@@ -4751,7 +4760,7 @@ z.V= z.P zscaled(1,1);
 z.W= z.Q zscaled(1,-1);
 z.M=.5[z.V,z.W];
 
-mark_rt_angle_withsize(z.O,z.P,z.V,6);
+mark_rt_angle_withsize(z.O,z.P,z.V,6) ;
 mark_rt_angle_withsize(z.O,z.Q,z.W,6);
 markdashed_rt_angle_withsize(z.P,z.M,z.Q,6);
 
@@ -4763,6 +4772,9 @@ rimmark(z.O--z.P,z.P--z.V);
 rimmark2(z.O--z.Q,z.Q--z.W);
 rimmark3(z.V--z.M,z.M--z.W);
 rimmark10(z.P--z.M,z.M--z.Q);
+);
+
+draw pic withcolor 1;
 
 endfig;
 

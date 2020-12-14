@@ -38,13 +38,6 @@ isbn=false]{biblatex}
 \renewcommand*{\bibfont}{\scriptsize}
 \addbibresource{library.bib}
 
-\DeclareFieldFormat{mynote}{{#1}}
-\AtEveryBibitem{%
-    \csappto{blx@bbx@\thefield{entrytype}}{% put at end of entry
-        \space\printfield{mynote}
-    }
-}
-
 
 %\usepackage{multibib}
 \usepackage{epigraph}

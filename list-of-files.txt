@@ -32,10 +32,12 @@ pics/by-sa.eps
 mppics/pic-128.mps
 mppics/pic-160.mps
 mppics/pic-194.mps
+mppics/pic-209.mps
 mppics/pic-224.mps
 mppics/pic-258.mps
 mppics/pic-290.mps
 mppics/pic-322.mps
+mppics/pic-325.mps
 mppics/pic-356.mps
 mppics/pic-48.mps
 mppics/pic-80.mps
@@ -46,7 +48,9 @@ mppics/pic-226.mps
 mppics/pic-26.mps
 mppics/pic-292.mps
 mppics/pic-324.mps
+mppics/pic-335.mps
 mppics/pic-358.mps
+mppics/pic-359.mps
 mppics/pic-50.mps
 mppics/pic-82.mps
 mppics/pic-10.mps

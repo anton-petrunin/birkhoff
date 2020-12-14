@@ -319,7 +319,7 @@ endfig;
 
 beginfig(337)
 save u;
-u:=1.1cm;
+u:=1.5cm;
 
 z.A=(0,1)*u;
 z.B=z.A rotated 120;
@@ -656,7 +656,7 @@ z.O=origin;
 x.RR=1.5*u;
 path absolute;
 absolute=circle(z.O,x.RR);
-fill absolute withcolor .5;
+fill absolute withcolor 0;
 
 z.A=(.9,.9)*u;
 z.AAA=(.8,1)*u;
@@ -670,12 +670,12 @@ z.C=(0,-.2)*u;
 z.CCC=(-.5,-.2)*u;
 z.CC=inversion(z.O,x.RR)(z.C);
 
-draw circumcircle(z.A,z.AA,z.AAA) pensemibold;
-draw circumcircle(z.B,z.BB,z.BBB) pensemibold;
-draw circumcircle(z.C,z.CC,z.CCC) pensemibold;
+draw circumcircle(z.A,z.AA,z.AAA) pensemibold withcolor 1;
+draw circumcircle(z.B,z.BB,z.BBB) pensemibold withcolor 1;
+draw circumcircle(z.C,z.CC,z.CCC) pensemibold withcolor 1;
 
 clip currentpicture to absolute;
-draw absolute dashed evenly;
+draw absolute dashed evenly withcolor 1;
 
 endfig;
 
@@ -1009,7 +1009,7 @@ endfig;
 
 beginfig(366)
 save u;
-u:=1.4cm;
+u:=1cm;
 
 z.O=origin;
 z.B=(0,1)*u;
@@ -1019,11 +1019,11 @@ z.D=z.B rotated -144;
 z.E=z.B rotated 144;
 z.X=whatever[z.A,z.C]=whatever[z.B,z.E];
 
-arcs(z.C,z.A,z.B,10);
-arcs(z.A,z.C,z.B,10);
-arcs(z.A,z.B,z.X,10);
-arcs2(z.C,z.X,z.B,10);
-arcs2(z.C,z.B,z.X,10);
+arcs(z.C,z.A,z.B,6);
+arcs(z.A,z.C,z.B,6);
+arcs(z.A,z.B,z.X,6);
+arcs2(z.C,z.X,z.B,6);
+arcs2(z.C,z.B,z.X,6);
 
 draw circle(z.O,z.B);
 draw z.A--z.B--z.C--z.D--z.E--cycle;
