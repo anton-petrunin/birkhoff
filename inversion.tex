@@ -234,19 +234,19 @@ It remains to prove that
 $O\in \Gamma$ $\Leftrightarrow$ $\infty\in\Gamma'$ 
 and 
 $\infty\in \Gamma$ $\Leftrightarrow$ $O\in\Gamma'$.
-Since $\Gamma$ is the inverse of $\Gamma'$, it is sufficient to prove that 
+We will prove that
 $$\infty\in \Gamma
 \quad
-\iff
+\Longrightarrow
 \quad
-O\in\Gamma'.$$
+O\in\Gamma';$$
+the remaining implications can be proved along the same lines.
 
 If $\infty\in\Gamma$, then $\Gamma$ is a line;
-or, equivalently, for any $\epsilon>0$, the circline $\Gamma$ contains a point $P$ with $OP>r/\epsilon$.
+or, equivalently, for any $\epsilon>0$, the circline $\Gamma$ contains a point $P$ such that $OP>r/\epsilon$.
 For the inversion $P'\in\Gamma'$ of $P$, we have that $OP'=r^2/OP<r\cdot \epsilon$.
 That is, the circline $\Gamma'$ contains points arbitrarily close to~$O$.
 It follows that $O\in \Gamma'$.
-The same way we can check the converse. 
 \qeds
 
 \begin{wrapfigure}{R}{37mm}
@@ -435,6 +435,9 @@ and $Q$ be the center of~$\Gamma$.
 Let $X$ and $Y$ denote the points of intersections of  $\Gamma$ and~$\Omega$.
 According to Lemma~\ref{lem:tangent}, $\Gamma\perp\Omega$ if and only if $(OX)$ and $(OY)$ are tangent to~$\Gamma$.
 
+Since $O\ne X$, Lemma \ref{lem:perp<oblique} implies that $O$ lies outside of~$\Gamma$.
+By Theorem \ref{thm:inverse}\textit{\ref{thm:inverse:circle}}, $\Gamma'$ is a circle.
+
 Note that $\Gamma'$ is also tangent to $(OX)$ and $(OY)$ at $X$ and $Y$ respectively. 
 It follows that $X$ and $Y$ are the foot points of the center of $\Gamma'$ on $(OX)$ and $(OY)$.
 Therefore, both $\Gamma'$ and $\Gamma$ have the center~$Q$.
@@ -458,7 +461,7 @@ Let $X$ be a point of their intersection.
 We need to show that $(OX)$ is tangent to $\Gamma$;
 that is, $X$ is the only intersection point of $(OX)$ and~$\Gamma$.
 
-Assume $Z$ is another point of intersection.
+Assume $Z$ is another point of intersection of $(OX)$ and~$\Gamma$.
 Since $O$ is outside of $\Gamma$, 
 the point $Z$ lies on the half-line $[OX)$.
 

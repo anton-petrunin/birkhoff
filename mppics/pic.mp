@@ -2521,6 +2521,8 @@ label.lrt (btex $O$ etex, z.O);
 label.urt (btex $Q$ etex, z.Q);
 label.lrt (btex $X$ etex, z.X);
 label.top (btex $Y$ etex, z.Y+(-1,0));
+label.urt (btex $\Omega$ etex, z.O+(0,-abs(z.X-z.O)) rotated -45);
+label.urt (btex $\Gamma$ etex, z.Q+(0,abs(z.X-z.Q)) rotated -45);
 
 endfig;
 
