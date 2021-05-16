@@ -3,8 +3,8 @@
 \addtocontents{toc}{\protect\begin{quote}}
 
 Area will be defined as a function satisfying certain conditions (page \pageref{page:area-def}).
-The so-called {}\emph{Lebesgue measure} gives an example of such function.
-In particular a construction of Lebesgue measure implies the existence of area function.
+The so-called {}\emph{Lebesgue measure} gives an example of such a function.
+In particular, the existence Lebesgue measure implies the existence of an area function.
 This construction is included in any textbook in real analysis.
 
 Based solely on its existence,  we develop the concept of area with no cheating.
@@ -87,7 +87,7 @@ we will have
 Indeed it is sufficient to show that 
 if $f$ is a motion that maps $\solidtriangle ABC$ to $\solidtriangle A'B'C'$,
 then $f$ maps each vertex of $\triangle ABC$ to a vertex $\triangle A'B'C'$.
-The latter follows from the characterization of vertexes of solid triangles given in the following exercise:
+The latter follows from the characterization of vertices of solid triangles given in the following exercise:
 
 \begin{thm}{Exercise}\label{ex:vertex}
 Let $\triangle ABC$ be nondegenerate and $X\z\in \solidtriangle ABC$.
@@ -119,7 +119,7 @@ Note that according to this definition, the empty set $\emptyset$
 is a polygonal set.
 Indeed, $\emptyset$ is a union of an empty collection of elementary sets.
 
-A polygonal set is called \index{polygonal set!degenerate polygonal set}\index{degenerate!polygonal set}\emph{degenerate} if it can be presented as union of finite number of one-point sets and segments.
+A polygonal set is called \index{polygonal set!degenerate polygonal set}\index{degenerate!polygonal set}\emph{degenerate} if it can be presented as a union of a finite collection of one-point sets and segments.
 
 If $X$ and $Y$ lie on opposite sides of the line $(AB)$,
 then the union
@@ -149,8 +149,8 @@ Show that a circle is not a polygonal set.
 
 \begin{thm}{Claim}\label{clm:poly-ring}
 For any two polygonal sets $\mathcal{P}$ and $\mathcal{Q}$,
-the union $\mathcal{P}\cup\mathcal{Q}$ 
-as well as the intersection $\mathcal{P}\cap\mathcal{Q}$ 
+the union $\mathcal{P}\cup\mathcal{Q}$, 
+as well as the intersection $\mathcal{P}\cap\mathcal{Q}$, 
 are also polygonal sets.
 \end{thm}
 
@@ -159,7 +159,7 @@ The claim above, therefore, states that polygonal sets in the plane form a ring 
 
 \parit{Informal proof.}
 Let us present $\mathcal{P}$ and $\mathcal{Q}$
-as a union of finite collection of elementary sets $\mathcal{P}_1,\dots,\mathcal{P}_k$ 
+as a union of a finite collection of elementary sets $\mathcal{P}_1,\dots,\mathcal{P}_k$ 
 and $\mathcal{Q}_1,\dots,\mathcal{Q}_n$ respectively.
 
 {
@@ -228,21 +228,21 @@ for any two polygonal sets $\mathcal{P}$ and $\mathcal{Q}$.
 The first condition is called \emph{normalization}; essentially it says that a solid unit square is used as a unit to measure area.
 The three conditions in \textit{(\ref{area-3})} are called \emph{invariance}, \emph{monotonicity}, and \emph{additivity}.
 
-Lebesgue measure, provides an example of area function; 
-namely if one takes $\area\mathcal{P}$  to be Lebesgue measure of $\mathcal{P}$,
+The Lebesgue measure provides an example of area function; 
+namely, if one takes area of $\mathcal{P}$ to be its Lebesgue measure,
 then the function $\mathcal{P}\mapsto\area\mathcal{P}$ satisfies the above conditions.
 
-The construction of Lebesgue measure can be found in any textbook on real analysis.
+The construction of the Lebesgue measure can be found in any textbook on real analysis.
 We do not discuss it here.
 
-If the reader is not familiar with Lebesgue measure, then he should take existence of area function as granted; 
+If the reader is not familiar with the Lebesgue measure, then he should take the existence of area function as granted; 
 it might be considered as an additional axiom altho it follows from the axioms \ref{def:birkhoff-axioms:0}--\ref{def:birkhoff-axioms:4}.
 
 \section*{Vanishing area and subdivisions}
 \addtocontents{toc}{Vanishing area and subdivisions.}
 
 \begin{thm}{Proposition}\label{prop:area-segment}
-Any one-point set as well as any segment in the Euclidean plane have  vanishing area.
+Any one-point set, as well as any segment in the Euclidean plane, have vanishing area.
 \end{thm}
 
 \parit{Proof.}
@@ -299,7 +299,7 @@ Since area is nonnegative by definition, applying additivity several times, we g
 \\
 &+\area\{C_1\}+\dots+\area\{C_k\}.
 \end{align*}
-By Proposition~\ref{prop:area-segment}, the right hand side vanishes.
+By Proposition~\ref{prop:area-segment}, the right-hand side vanishes.
 
 On the other hand, 
 $\area\mathcal{P}\ge 0$,
@@ -353,7 +353,7 @@ $\mathcal{Q}_i\cong\mathcal{Q}'_i$ for each $i$.
 
 According to the proposition, if $\mathcal{P}$ and $\mathcal{P}$ are equidecomposable, then $\area \mathcal{P}=\area\mathcal{P}'$.
 A converse to this statement also holds;
-namely \emph{if two nondegenerate polygonal sets have equal area, then they are equidecomposable.}
+namely, \emph{if two nondegenerate polygonal sets have equal area, then they are equidecomposable.}
 
 The last statement was proved by William Wallace, Farkas Bolyai and Paul Gerwien.
 The analogous statement in three dimensions, known as \emph{Hilbert's third problem}, is false; it was proved by Max Dehn.
@@ -478,7 +478,7 @@ That is, the first identity in the algebraic lemma holds.
 \end{wrapfigure}
 
 Note that the rectangle $\mathcal{R}_{a+b,c}$
-can be subdivided into two rectangle 
+can be subdivided into two rectangles 
 congruent to $\mathcal{R}_{a,c}$
 and~$\mathcal{R}_{b,c}$.
 Therefore, by Proposition~\ref{prop:subdivision}, 
@@ -486,7 +486,7 @@ Therefore, by Proposition~\ref{prop:subdivision},
 \area \mathcal{R}_{a+b,c}=\area \mathcal{R}_{a,c}+\area \mathcal{R}_{b,c}
 \]
 That is, the second identity in the algebraic lemma holds.
-The proof of the third identity is analogues.
+The proof of the third identity is similar.
 
 It remains to apply the algebraic lemma.
 \qeds
@@ -523,7 +523,7 @@ By Proposition~\ref{thm:area-rect},
 
 Without loss of generality, we may assume that  $\solidsquare ABCA'$ 
 contains $\solidsquare ABCD$ and $\solidsquare ABB'A'$.
-In this case $\solidsquare ABCA'$ admits two subdivisions: 
+In this case, $\solidsquare ABCA'$ admits two subdivisions: 
 \[\solidsquare ABCA'=\solidsquare ABCD\cup\solidtriangle AA'D=\solidsquare ABB'A'\cup\solidtriangle BB'C.\]
 
 By Proposition~\ref{prop:subdivision},
@@ -579,8 +579,8 @@ Show that
 
 
 \begin{thm}{Theorem}\label{thm:area-of-triangle}
-Let $a=BC$ and $h_A$ to be the altitude from $A$
-in  $\triangle ABC$.
+Let $h_A$ be the altitude from $A$
+in  $\triangle ABC$ and $a=BC$.
 Then 
 \[\area(\solidtriangle ABC)=\tfrac12\cdot a\cdot h_A.\]
 \end{thm}
@@ -633,7 +633,7 @@ Note that from Theorem~\ref{thm:area-of-triangle},
 it follows that
 \[h_A\cdot BC=h_B\cdot CA=h_C\cdot AB.\]
 
-Give a proof of this statement without using area.
+Give a proof of this statement without using Theorem~\ref{thm:area-of-triangle}.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:half-parallelogram}
@@ -678,7 +678,7 @@ Conclude that for any polygonal set, its area is uniquely defined.
 \section*{Area method}
 \addtocontents{toc}{Area method.}
 
-In this section we will give examples of
+In this section, we will give examples of
 slim proofs using the properties of area.
 Note that these proofs are not truly elementary since the price one pays to introduce the area function is high.
 
@@ -801,7 +801,7 @@ and hence the result.
 \qeds
 
 Suppose $ABC$ is a nondegenerate triangle and $A'$ lies between $B$ and $C$.
-In this case the line segment $[AA']$ is called \index{cevian}\emph{cevian}%
+In this case, the line segment $[AA']$ is called \index{cevian}\emph{cevian}%
 \footnote{it is named after Giovanni Ceva and pronounced as \emph{chevian}.} of $\triangle ABC$ at $A$.
 The second statement in the following exercise is called \index{Ceva's theor}\emph{Ceva's theorem}.
 
@@ -853,7 +853,7 @@ Assume that the lines $(L_1M_1)$, $(L_2M_2)$, $(L_3M_3)$, and $(L_4M_4)$ pass th
  for any $i\ne j$.
  \item\label{ex:cross-ratio-area:b} Use \textit{(\ref{ex:cross-ratio-area:a})} to prove that 
  \[\frac{L_1L_2\cdot L_3L_4}{L_2L_3\cdot L_4L_1}=\frac{M_1M_2\cdot M_3M_4}{M_2M_3\cdot M_4M_1};\]
- that is, the quadruples $(L_1, L_2, L_3, L_4)$ and $(M_1, M_2, M_3, M_4)$ have the same cross ratio.
+ that is, the quadruples $(L_1, L_2, L_3, L_4)$ and $(M_1, M_2, M_3, M_4)$ have the same cross-ratio.
  
 \end{enumerate}
 
@@ -868,10 +868,10 @@ Area can be defined in the neutral planes and spheres.
 In the definition,
 the solid unit square $\mathcal{K}_1$ has to be  
 exchanged to a fixed nondegenerate polygonal set $\mathcal{U}$.
-One has to make such change for good reason --- 
+One has to make such a change for good reason --- 
 hyperbolic plane and sphere have no squares.
 
-The set $\mathcal{U}$ in this case plays role of the unit measure for the area
+In this case, the set $\mathcal{U}$ plays the role of the unit measure for the area
 and changing $\mathcal{U}$ will require conversion of area units.
 
 \begin{wrapfigure}{o}{26 mm}
@@ -894,7 +894,7 @@ a\to0.\]
 
 This convention works equally well for spheres and neutral planes, including the Euclidean plane.
 In spherical geometry  equivalently we may assume that if $r$ is the radius of the sphere, 
-then the area of whole sphere is $4\cdot\pi\cdot r^2$.
+then the area of the whole sphere is $4\cdot\pi\cdot r^2$.
 
 Recall that {}\emph{defect of triangle} $\triangle ABC$ is defined as 
 $$\defect(\triangle ABC)
@@ -914,7 +914,7 @@ $k=1$ for the unit sphere,
 and $k=\tfrac1{r^2}$ for the sphere of radius~$r$.
 
 Since the angles of ideal triangle vanish, any ideal triangle in h-plane has area~$\pi$.
-Similarly in the unit sphere the area of equilateral triangle with right angles has area $\tfrac\pi2$;
+Similarly, in the unit sphere the area of equilateral triangle with right angles has area $\tfrac\pi2$;
 since whole sphere can be subdivided in eight such triangles, we get that the area of unit sphere is $4\cdot\pi$.
 
 The identity \ref{eq:curv-defect} can be used as an alternative way to introduce area function; it works on spheres and all neutral planes, except for the Euclidean plane.
@@ -962,9 +962,9 @@ the area function satisfying the conditions on page \pageref{page:area-def} is u
 
 If you do not require uniqueness, then  there are ways to extend area function to all bounded sets.
 (A set in the plane is called \index{bounded set}\emph{bounded} if it lies inside of a circle.)
-In the hyperbolic plane and in the sphere
+On the sphere and hyperbolic plane, 
 there is no similar construction.
 If you wonder why,
-read about \index{doubling the ball}\emph{doubling the ball paradox} of Felix Hausdorff, Stefan Banach, and Alfred Tarski.
+read about \index{doubling the ball}\emph{doubling the ball}, a paradox of Felix Hausdorff, Stefan Banach, and Alfred Tarski.
 
 \addtocontents{toc}{\protect\end{quote}}                          

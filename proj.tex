@@ -16,11 +16,11 @@ Our aim is to extend the Euclidean plane by ideal points so that any two distinc
 \end{wrapfigure}
 
 A collection of lines in the Euclidean plane is called \index{concurrent}\emph{concurrent} if they all intersect at a single point or all of them pairwise parallel.
-A maximal set of concurrent lines in the plane is called \index{pencil}\emph{pencil}.
+A maximal set of concurrent lines in the plane is called a \index{pencil}\emph{pencil}.
 There are two types of pencils: 
 \emph{central pencils} contain all lines passing thru a fixed point called the \index{center!center of the pencil}\emph{center of the pencil}
 and  
-\emph{parallel pencil} contain pairwise parallel lines.
+\emph{parallel pencils} contain pairwise parallel lines.
 
 Each point in the Euclidean plane uniquely defines a central pencil with the center in it.
 Note that any two lines completely determine the pencil containing both.
@@ -29,7 +29,7 @@ Let us add one \index{point!ideal point}\index{ideal point}\emph{ideal point} fo
 and assume that all these ideal points lie on one \index{line!ideal line}\index{ideal line}\emph{ideal line}.
 We also assume that the ideal line belongs to each parallel pencil.
 
-We obtain the so-called \index{real projective plane}\emph{real projective plane}, or \index{projective completion}\emph{projective completion} of the original plane. 
+We obtain the so-called \index{real projective plane}\emph{real projective plane} (or \index{projective completion}\emph{projective completion} of the original plane). 
 It comes with an incidence structure --- we say that three points lie on one line if the corresponding pencils contain a common line.
 Projective geometry studies this incidence structure.
 
@@ -58,7 +58,7 @@ The obtained metric space is called \index{Euclidean space}\emph{Euclidean space
 The subset of points in $\mathbb{R}^3$ is called \index{plane!plane in the space}\emph{plane} if it can be
 described by an equation
 $$a\cdot x+b\cdot y+c\cdot z+d=0$$ 
-for some constants $a$, $b$, $c$, and $d$ such that at least one of values $a$, $b$ or $c$ is distinct from zero.
+for some constants $a$, $b$, $c$, and $d$ such that at least one of the values $a$, $b$ or $c$ is distinct from zero.
 
 It is straightforward to show the following:
 \begin{itemize}
@@ -81,7 +81,7 @@ Let us define a bijection $P\leftrightarrow \dot P$ between $\hat \Pi$ and $\Phi
 If $P\in \Pi$, then take the line $\dot P=(OP)$;
 if $P$ is an ideal point of $\hat \Pi$, so it is defined by a parallel pencil of lines, then take the line $\dot P$ thru $O$ parallel to the lines in this pencil.
 
-Further denote by $\Psi$ the set of all planes in the space thru $O$.
+Further, denote by $\Psi$ the set of all planes in the space thru $O$.
 In a similar fashion, we can define a bijection $\ell\leftrightarrow \dot \ell$ between lines in $\hat \Pi$ and $\Psi$.
 If a line $\ell$ is not ideal, then take the plane  $\dot \ell$ that contains $\ell$ and $O$;
 if the line $\ell$ is ideal, then take $\dot \ell$ to be the plane thru $O$ that is parallel to $\Pi$ (that is, $\dot\ell\cap\Pi=\emptyset$).
@@ -97,14 +97,14 @@ where $\dot P$ and $\dot \ell$ denote the line and plane defined by the construc
 
 Consider two planes $\Pi$ and $\Pi'$ 
 in the Euclidean space. 
-Let $O$ be a point that does not belong neither to $\Pi$ nor~$\Pi'$.
+Let $O$ be a point that belongs neither to $\Pi$ nor~$\Pi'$.
 
 \begin{wrapfigure}{o}{43mm}
 \centering
 \includegraphics{mppics/pic-230}
 \end{wrapfigure}
 
-A \index{perspective projection}\emph{perspective projection from $\Pi$ to $\Pi'$ with center at $O$} maps a point $P\in \Pi$
+A \index{perspective projection}\emph{perspective projection from $\Pi$ to $\Pi'$ with center $O$} maps a point $P\in \Pi$
 to the intersection point $P'=\Pi'\cap (OP)$.
 
 In general, perspective projection is not a bijection between the planes.
@@ -115,7 +115,7 @@ Also, if $(OP')\parallel \Pi$
 for $P'\in \Pi'$,
 then the point $P'$ is not an image of the perspective projection.
 
-For example, let $O$ be the origin of $(x,y,z)$-coordinate space
+For example, suppose $O$ is the origin of $(x,y,z)$-coordinate space,
 and the planes $\Pi$ and $\Pi'$ are given by the equations
 $z=1$ and $x=1$ respectively.
 Then the perspective projection from $\Pi$ to $\Pi'$
@@ -125,16 +125,16 @@ Indeed the coordinates have to be proportional;
 points on $\Pi$ have unit $z$-coordinate, 
 and points on $\Pi'$ have unit $z$-coordinate.
 
-The perspective projection, maps one plane to another.
+The perspective projection maps one plane to another.
 However, we can identify the two planes by fixing a coordinate system in each.
-In this case we get a partially defined map from the plane to itself.
+In this case, we get a partially defined map from the plane to itself.
 We will keep the name \emph{perspective transformation} for such maps.
 
 For the described perspective projection; we may get the map 
 \[\beta\:(x,y)\mapsto (\tfrac 1x,\tfrac yx).
 \eqlbl{eq:(x,y)-perspective}\]
 This map is undefined on the line $x=0$.
-Also points on this line are not images of points under perspective projection.
+Also, points on this line are not images of points under perspective projection.
 
 Denote by $\hat \Pi$ and $\hat \Pi'$ the projective completions of $\Pi$ and $\Pi'$ respectively. 
 Note that the perspective projection is a restriction of composition of the two bijections $\hat \Pi\leftrightarrow\Phi \leftrightarrow\hat \Pi'$ constructed in the previous section.
@@ -146,11 +146,11 @@ To deal with this problem we passed to the inversive plane
 which is the Euclidean plane extended by one ideal point.
 The same strategy worked for perspective projection $\Pi\to\Pi'$, but this time we need to add an ideal line.}
 
-For example, to define extension of the perspective projection $\beta$ in \ref{eq:(x,y)-perspective},
+For example, to define an extension of the perspective projection $\beta$ in \ref{eq:(x,y)-perspective},
 we have to observe that 
 \begin{itemize}
 \item The pencil of vertical lines $x=a$ is mapped to itself.
-\item The ideal points defined by pencil of lines $y=m\cdot x+ b$ are mapped to the point $(0,m)$ and the other way around --- point $(0,m)$ is mapped to the ideal point defined by the  pencil of lines $y=m\cdot x+ b$.
+\item The ideal points defined by pencils of lines $y=m\cdot x+ b$ are mapped to the point $(0,m)$ and the other way around --- point $(0,m)$ is mapped to the ideal point defined by the  pencil of lines $y=m\cdot x+ b$.
 \end{itemize}
 
 \section*{Projective transformations}
@@ -196,7 +196,7 @@ Let $P\mapsto P'$ be (a) an affine transformation, (b) the perspective projectio
 Suppose $P_1,P_2,P_3,P_4$ lie on one line.
 Show that 
 \[\frac{P_1P_2\cdot P_3P_4}{P_2P_3\cdot P_4P_1}=\frac{P'_1P'_2\cdot P'_3P'_4}{P'_2P'_3\cdot P'_4P'_1};\]
-that is, each of these maps preserves cross ratio for quadruples of points on one line.
+that is, each of these maps preserves cross-ratio for quadruples of points on one line.
 
 \end{thm}
 
@@ -253,7 +253,7 @@ By the AA similarity condition, $\triangle OBC\z\sim\triangle OB'C'$.
 In particular,
 \[\frac{OB}{OB'}=\frac{OC}{OC'}.\]
 
-The same way we get that $\triangle OAC\z\sim\triangle OA'C'$ and
+In the same way, we get that $\triangle OAC\z\sim\triangle OA'C'$ and
 \[\frac{OA}{OA'}=\frac{OC}{OC'}.\]
 Therefore, 
 \[\frac{OA}{OA'}=\frac{OB}{OB'}.\]
@@ -268,7 +268,7 @@ By the transversal property (\ref{thm:parallel-2}), we have
 $(AB)\parallel (A'B')$.
 
 The case $(AA')\parallel(BB')\parallel(CC')$ is done similarly.
-In this case the quadrangles $B'BCC'$ and $A'ACC'$ are parallelograms.
+In this case, the quadrangles $B'BCC'$ and $A'ACC'$ are parallelograms.
 Therefore, 
 \[BB'=CC'=AA'.\]
 Hence $\square B'BAA'$ is a parallelogram and $(AB)\parallel (A'B')$.
@@ -447,7 +447,7 @@ Assume that
 Then the lines  $(AA')$, $(BB')$, and $(CC')$ are concurrent.
 \end{thm}
 
-In this theorem the points $X$, $Y$, and $Z$ 
+In this theorem, the points $X$, $Y$, and $Z$ 
 are dual to the lines $(AA')$, $(BB')$, and $(CC')$ in the original formulation, and the other way around.
 
 Once Desargues' theorem is proved, applying duality (\ref{thm:dual})
@@ -470,7 +470,7 @@ Given two parallel lines, construct a third parallel line thru a given point wit
 
 \section*{Construction of a polar}
 
-In this section we describe a powerful trick that can be used in the constructions with ruler.
+In this section, we describe a powerful trick that can be used in the constructions with ruler.
 
 Assume $\Gamma$ is a circle in the plane and $P\notin \Gamma$.
 \begin{figure}[!ht]
@@ -487,10 +487,10 @@ The constructed line $p=(ZZ')$ does not depend on the choice of the lines $x$ an
 Moreover, $P\leftrightarrow p$ can be extended to a duality such that any point $P$ on the circle $\Gamma$ corresponds to a line $p$ tangent to $\Gamma$ at~$P$. 
 \end{thm}
 
-We will use this claim without a proof, but the proof is not hard.
+We will not prove this claim, but the proof is not hard.
 If $P$ lies outside of $\Gamma$, it can be done by moving $P$ to infinity keeping $\Gamma$ fixed as a set.
 If $P$ lies inside of $\Gamma$, it can be done by moving $P$ to the center of $\Gamma$.
-The existence of corresponding projective transformations follow from the idea in Exercise~\ref{ex:cone}.
+The existence of corresponding projective transformations follows from the idea in Exercise~\ref{ex:cone}.
 
 The line $p$ is called the \index{polar}\emph{polar} of the point $P$ with respect to~$\Gamma$.
 
@@ -549,13 +549,13 @@ so the real projective plane discussed above becomes its particular example.
 There is an example of a projective plane that contains exactly 3 points on each line.
 This is the so-called \index{Fano plane}\emph{Fano plane} which you can see on the diagram;
 it contains $7$ points and $7$ lines.
-This is an example of \index{finite projective plane}\emph{finite projective plane};
+This is an example of a \index{finite projective plane}\emph{finite projective plane};
 that is, a projective plane with finitely many points.
 
 }
 
 \begin{thm}{Exercise}\label{ex:finite-pp}
-Show that any line in projective plane contains at least three points.
+Show that any line in a projective plane contains at least three points.
 \end{thm}
 
 
@@ -579,9 +579,9 @@ and
 
 \end{thm}
 
-The exercise above shows that in the axiomatic system of projective plane,
+The exercise above shows that in the given axiomatic system,
 lines and points have the same rights.
-In fact, one can switch everywhere words ``point'' with ``line'', ``pass thru'' with ``lies on'', ``collinear'' with ``concurrent'' and we get an equivalent set of axioms ---  Axioms p-\ref{def:proj-axioms:1} and p-\ref{def:proj-axioms:2} convert into each other,
+One can switch everywhere words ``point'' with ``line'', ``pass thru'' with ``lies on'', ``collinear'' with ``concurrent'' and we get an equivalent set of axioms ---  Axioms p-\ref{def:proj-axioms:1} and p-\ref{def:proj-axioms:2} convert into each other,
 and the same happens with the pair p-\ref{def:proj-axioms:3} and p-\ref{def:proj-axioms:3}$'$.
 
 \begin{thm}{Exercise}\label{ex:oder}
@@ -595,7 +595,7 @@ Assume that one of the lines in a finite projective plane contains exactly $n+1$
 \end{thm}
 
 The number $n$ in the above exercise is called \index{order of finite projective plane}\emph{order} of finite projective plane.
-For example the Fano plane has order $2$.
+For example, the Fano plane has order $2$.
 Let us finish by stating a famous open problem in finite geometry.
 
 \begin{thm}{Conjecture}

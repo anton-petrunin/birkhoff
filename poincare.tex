@@ -11,8 +11,8 @@ In this chapter, we use inversive geometry
 to construct the model of a hyperbolic plane --- a neutral plane that is not Euclidean.
 
 Namely, we construct the so-called \index{conformal disc model}\emph{conformal disc model} of the hyperbolic plane.
-This model was discovered by Beltrami in \cite{beltrami} 
-and often called the {}\emph{Poincar\'e disc model}. 
+This model was discovered by Beltrami \cite{beltrami}; 
+it is often called the {}\emph{Poincar\'e disc model}. 
 
 The figure above shows the conformal disc model of the hyperbolic plane which is cut into congruent triangles with angles $\tfrac\pi3$, $\tfrac\pi3$, and~$\tfrac\pi4$.
 
@@ -72,7 +72,7 @@ Show that an h-line is uniquely determined by one of its ideal points and one h-
 
 \begin{thm}{Exercise}\label{ex:line/h-line}
 Show that the h-segment $[PQ]_h$ coincides with the Euclidean segment $[PQ]$
-if and only if the line $(PQ)$ pass thru the center of the absolute.
+if and only if the line $(PQ)$ passes thru the center of the absolute.
 \end{thm}
 
 \parbf{Hyperbolic distance.}\label{h-dist}
@@ -82,14 +82,14 @@ Without loss of generality, we may assume that on the Euclidean circline contain
 
 Consider the function 
 $$\delta(P,Q)\df\frac{AQ\cdot PB}{AP\cdot QB}.$$
-Note that the right hand side is a cross-ratio;
+Note that the right-hand side is a cross-ratio;
 by Theorem~\ref{lem:inverse-4-angle} it is invariant under inversion.
 Set $\delta(P,P)=1$ for any h-point~$P$.
 Let us define h-distance as the logarithm of $\delta$; that is,
 $$PQ_h\df\ln[\delta(P,Q)].$$
 
 The proof that $PQ_h$ is a metric on the h-plane will be given later.
-For now it is just a function that returns a real value $PQ_h$ for any pair of h-points $P$ and~$Q$.
+For now, it is just a function that returns a real value $PQ_h$ for any pair of h-points $P$ and~$Q$.
 
 \begin{thm}{Exercise}\label{ex:h-dist-eq}
 Let $O$ be the center of the absolute and the h-points $O$, $X$, and $Y$ lie on one h-line in the same order.
@@ -106,7 +106,7 @@ The \index{hyperbolic angle}\emph{hyperbolic angle $PQR$} (briefly $\angle_h PQR
 Let $[QX)$ and $[QY)$ be (Euclidean) half-lines 
 that are tangent to $[QP]_h$ and $[QR]_h$ 
 at~$Q$.
-Then the \index{angle measure!hyperbolic angle measure}\index{hyperbolic angle measure}\emph{hyperbolic angle measure} (or \index{h-angle measure}\emph{h-angle measure}) of $\angle_h PQR$ denoted by
+Then the \index{angle measure!hyperbolic angle measure}\index{hyperbolic angle measure}\emph{hyperbolic angle measure} (or \index{h-angle measure}\emph{h-angle measure}) of $\angle_h PQR$ is denoted by
 $\measuredangle_h PQR$ and defined as
 $\measuredangle XQY$.
 
@@ -156,7 +156,7 @@ Moreover, $O$ is the inverse of $P$ in~$\Gamma$.
 \end{wrapfigure}
 
 \parit{Proof.} 
-Follows from Exercise~\ref{ex:centers-of-perp-circles}.
+Follows by Exercise~\ref{ex:centers-of-perp-circles}.
 \qeds
 
 Assume $\Gamma$ is a circline that is perpendicular to the absolute.
@@ -233,7 +233,7 @@ In particular,
 y&=\ln \frac{AP\cdot BO}{PB\cdot OA}=\ln\frac{1+x}{1-x}.
 \end{align*}
 
-Taking the exponential function of the left and the right hand side and applying obvious algebra manipulations, we get that
+Taking the exponential function of the left and the right-hand side and applying obvious algebra manipulations, we get that
 $$x=\frac{e^y-1}{e^y+1}.$$
 \qedsf
 
@@ -302,7 +302,7 @@ denote it by $\Delta_\rho$.
 \end{wrapfigure}
 
 If $P\ne O$, then by Lemma~\ref{lem:P-->O} and the main observation (\ref{thm:main-observ})
-there is inversion that respects all h-notions and sends $O\mapsto P$.
+there is an inversion that respects all h-notions and sends $O\mapsto P$.
 
 Let $\Delta_\rho'$ be the inverse of $\Delta_\rho$.
 Since the inversion preserves the h-distance,
@@ -348,10 +348,10 @@ $$
 \delta(Q,P)=\frac{1+QP}{1-QP}\ge 1$$
 and therefore
 $$QP_h=\ln[\delta(Q,P)]\ge 0.$$
-Moreover, the equalities holds if and only if $P=Q$.
+Moreover, the equalities hold if and only if $P=Q$.
 \qeds
 
-The following claim says that the h-distance meets the condition~\ref{def:metric-space}\textit{\ref{def:metric-space:c}}.
+The following claim says that the h-distance meets Condition~\ref{def:metric-space}\textit{\ref{def:metric-space:c}}.
 
 \begin{thm}{Claim}
 For any h-points $P$ and $Q$, we have
@@ -419,7 +419,7 @@ Note that $\hat Q$ is the Euclidean midpoint of~$[ST]$.
 \includegraphics{mppics/pic-200}
 \end{wrapfigure}
 
-By the Euclidean triangle inequality 
+By the Euclidean triangle inequality,
 $$PT
 =
 P\hat Q+\hat Q R
@@ -525,7 +525,7 @@ According to Lemma~\ref{lem:P-->O},
 the point $O$ is the inverse of $Q$ in~$\Gamma$.
 
 Let $P'$ and $R'$ denote the inversions in $\Gamma$ of the points $P$ and $R$ respectively.
-Note that the point $P'$ is completely determined by the points $Q$ and $P$.
+Note that the point $P'$ is completely determined by $Q$ and $P$.
 Moreover, the map $(Q,P)\mapsto P'$ is continuous at any pair of points $(Q,P)$ such that $Q\ne O$.
 The same is true for the map $(Q,R)\mapsto R'$
 
@@ -556,8 +556,8 @@ Q' P'_h&=Q P_h, & Q' R'_h&= Q R_h &&\text{and}
 
 \parit{Proof.}
 Applying the main observation, 
-we can assume that $Q$ and $Q'$ coincide with the center of the absolute; in particular $Q=Q'$.
-In this case 
+we can assume that $Q$ and $Q'$ coincide with the center of the absolute; in particular, $Q=Q'$.
+In this case, 
 $$\measuredangle P' Q R'=\measuredangle_h P' Q R'=\pm\measuredangle_h P Q R=\pm\measuredangle P Q R.$$
 Since 
 $$Q P_h=Q P'_h\quad \text{and}\quad Q R_h=Q R'_h,$$
@@ -569,7 +569,10 @@ $$Q P=Q P'
 \quad
 Q R=Q R'.$$
 By SAS,
-there is a motion of the Euclidean plane that sends $Q$ to itself, $P$ to $P'$ and $R$ to $R'$
+there is a motion of the Euclidean plane that sends
+$Q$ to itself,
+$P$ to $P'$, 
+and $R$ to $R'$.
 
 Note that the center of the absolute is fixed by the corresponding motion.
 It follows that this motion gives also a motion of the h-plane;
@@ -600,7 +603,7 @@ and have no points of intersection with~$\ell$.
 \parit{Instead of proof.}
 Applying the main observation we can assume that $P$ is the center of the absolute.
 
-The remaining part of the proof can be guessed from the picture
+The remaining part of the proof can be guessed from the picture.
 \qeds
 
 }
@@ -614,7 +617,7 @@ such that any pair of these three lines lies on one side of the remaining h-line
 \section*{Hyperbolic trigonometry}
 \addtocontents{toc}{Hyperbolic trigonometry}
 
-In this section we give formulas for h-distance using \index{hyperbolic functions}\emph{hyperbolic functions}.
+In this section, we give formulas for h-distance using \index{hyperbolic functions}\emph{hyperbolic functions}.
 One of these formulas will be used in the proof of the hyperbolic Pythagorean theorem (\ref{thm:pyth-h-poincare}).
 
 Recall that $\cosh$, $\sinh$, and $\tanh$ denote \index{ch@$\cosh$}\index{hyperbolic cosine}\emph{hyperbolic cosine}, \index{sh@$\sinh$}\index{hyperbolic sine}\emph{hyperbolic sine}, and \index{th@$\tanh$}\index{hyperbolic tangent}\emph{hyperbolic tangent}\label{hyperbolic tangent};
@@ -662,7 +665,7 @@ hold for any real value $x$.
 \qedsf
 
 \begin{thm}{Advanced exercise}\label{ex:cosh}
-Let $P$ and $Q$ be two h-poins distinct from the center of absolute.
+Let $P$ and $Q$ be two h-points distinct from the center of absolute.
 Denote by $P'$ and $Q'$ the inverses of $P$ and $Q$ in the absolute.
 
 \begin{wrapfigure}[20]{r}{40mm}
