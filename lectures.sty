@@ -14,9 +14,9 @@ urlcolor=black%
 ]{hyperref}
 \usepackage{caption}
 
-\usepackage[russian,german,english]{babel}
-\usepackage[T1,T2A]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[russian,german,english]{babel}
 \DeclareUnicodeCharacter{2010}{-}% support older LaTeX versions
 
 
@@ -37,6 +37,11 @@ isbn=false]{biblatex}
 \renewbibmacro{in:}{}
 \renewcommand*{\bibfont}{\scriptsize}
 \addbibresource{library.bib}
+
+\DeclareFieldFormat{postnote}{#1}
+\DeclareFieldFormat{multipostnote}{#1}
+\DeclareFieldFormat{pages}{#1}
+%removes p. in the cites
 
 
 %\usepackage{multibib}
