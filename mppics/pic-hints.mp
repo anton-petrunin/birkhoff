@@ -802,7 +802,7 @@ Dot z.M;
 
 label.top (btex $P$ etex, z.P);
 whitelabel.bot (btex $Q$ etex, z.Q);
-whitelabel.bot (btex $R$ etex, z.R);
+whitelabel.bot (btex $R$ etex, z.R+(0,-1));
 label.urt (btex $P'$ etex, z.PP);
 label.rt (btex $Q'$ etex, z.QQ);
 label.lft (btex $R'$ etex, z.RR);

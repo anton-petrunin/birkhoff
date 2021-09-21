@@ -546,7 +546,7 @@ u:=.8cm;
 
 z.A=(-1,0)*u;
 z.B=-z.A;
-z.C=z.B zscaled (0,2.5);
+z.C=z.B zscaled (0,2.2);
 
 z.AA=.65[z.C,z.B];
 z.BB=.65[z.C,z.A];

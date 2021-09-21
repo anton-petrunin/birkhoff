@@ -2,7 +2,7 @@
 \addtocontents{toc}{\protect\begin{quote}}
 
 This chapter contains long proofs of intuitively evident statements.
-It is okay to skip it, but make sure you know definitions of positive/negative angles and that your intuition agrees with \ref{thm:signs-of-triug}, \ref{prop:half-plane}, \ref{cor:half-plane}, \ref{thm:pasch}, and \ref{thm:abc}.
+It is okay to skip it, but make sure you know definitions of positive/negative angles and your intuition agrees with \ref{thm:signs-of-triug}, \ref{prop:half-plane}, \ref{cor:half-plane}, \ref{thm:pasch}, and \ref{thm:abc}.
 
 \section*{Sign of an angle}
 \addtocontents{toc}{Sign of an angle.}
@@ -338,8 +338,7 @@ Show that without Axiom~\ref{def:birkhoff-axioms:2c}, this is no longer true.
 \section*{Triangle with the given sides}
 \addtocontents{toc}{Triangle with the given sides.}
 
-Consider the triangle $ABC$.
-Set 
+Given $\triangle ABC$, set 
 \begin{align*}
 a&=BC,
 &
@@ -361,13 +360,45 @@ that is, there is $\triangle ABC$
 such that $a=BC$, $b=CA$, and $c=AB$.
 \end{thm}
 
+A proof of the following proposition is given at the end of the section.
+
+\begin{thm}[\abs]{Proposition}\label{prop:C-cont}
+Fix a real number $r>0$ 
+and two distinct points $A$ and~$B$.
+Then for 
+any real number $\beta\in [0,\pi]$,
+there is a unique point $C_\beta$ such that $BC_\beta=r$
+and $\measuredangle ABC_\beta=\beta$.
+Moreover, $\beta\mapsto C_\beta$ 
+is a continuous map from $[0,\pi]$ to the plane.
+\end{thm}
+
+\parit{Proof of Theorem~\ref{thm:abc} modulo Proposition~\ref{prop:C-cont}.}\label{page:proof:thm:abc}
+Fix the points $A$ and $B$ such that $AB=c$.
+Given $\beta\in [0,\pi]$,
+suppose that $C_\beta$ denotes the point in the plane such that $BC_\beta\z=a$ and $\measuredangle ABC=\beta$.
+
+According to \ref{prop:C-cont},
+the map
+$\beta\mapsto C_\beta$ is continuous.
+Therefore, the function $b\:\beta\mapsto AC_\beta$ is continuous
+(formally, it follows from Exercise~\ref{ex:dist-cont} and Exercise~\ref{ex:comp+cont}).
+
+Note that $b(0)=c-a$ and $b(\pi)=c+a$.
+Since $c-a\le b\le c+a$,
+by the intermediate value theorem (\ref{thm:intermidiate})
+there is $\beta_0\in[0,\pi]$ such that
+$b(\beta_0)=b$,
+hence the result. 
+\qeds
+
+The proof of Proposition~\ref{prop:C-cont} relies on the following lemma.
+
 \begin{wrapfigure}{o}{27mm}
 \vskip2mm
 \centering
 \includegraphics{mppics/pic-32}
 \end{wrapfigure}
-
-The proof is given at the end of the section.
 
 Assume $r>0$ and $\pi>\beta>0$.
 Consider the triangle $ABC$ such that 
@@ -381,7 +412,7 @@ In particular, the distance $AC$ depends only on $\beta$ and~$r$.
 Set 
 $$s(\beta,r)\df AC.$$
 
-\begin{thm}[\abs]{Proposition}\label{prop:f(r,a)}
+\begin{thm}[\abs]{Lemma}\label{lem:f(r,a)}
 Given $r>0$ and $\epsilon>0$, there is $\delta>0$ such that
 \[0<\beta<\delta\quad\Longrightarrow\quad s(r,\beta)<\epsilon.\]
 
@@ -389,13 +420,6 @@ Given $r>0$ and $\epsilon>0$, there is $\delta>0$ such that
 
 \parit{Proof.}
 Fix two points $A$ and $B$ such that $AB\z=r$.
-
-{
-
-\begin{wrapfigure}{o}{36mm}
-\centering
-\includegraphics{mppics/pic-34}
-\end{wrapfigure}
 
 Choose a point $X$ such that $\measuredangle ABX$ is positive.
 Let $Y\in [AX)$ be the point such that $AY=\tfrac\epsilon2$;
@@ -405,8 +429,15 @@ Note that $X$ and $Y$ lie on the same side of $(AB)$;
 therefore, $\angle ABY$ is positive. 
 Set $\delta\z=\measuredangle ABY$.
 
+{
+
+\begin{wrapfigure}{o}{36mm}
+\centering
+\includegraphics{mppics/pic-34}
+\end{wrapfigure}
+
 Suppose $0<\beta<\delta$;
-by Axiom~\ref{def:birkhoff-axioms:2a}, we can choose $C$ so that $\measuredangle ABC=\beta$ and $BC\z=r$.
+by Axiom~\ref{def:birkhoff-axioms:2a}, we can choose $C$ so that $\measuredangle ABC\z=\beta$ and $BC\z=r$.
 Further we can choose a half-line $[BZ)$ such that $\measuredangle ABZ\z=\tfrac12\cdot \beta$.
 
 Note that $A$ and $Y$ lie on opposite sides of~$(BZ)$ and  $\measuredangle ABZ\z\equiv -\measuredangle CBZ$.
@@ -434,48 +465,16 @@ s(r,\beta)&=AC\le
 
 }
 
-\begin{thm}[\abs]{Corollary}\label{cor:C-cont}
-Fix a real number $r>0$ 
-and two distinct points $A$ and~$B$.
-Then for 
-any real number $\beta\in [0,\pi]$,
-there is a unique point $C_\beta$ such that $BC_\beta=r$
-and $\measuredangle ABC_\beta=\beta$.
-Moreover, $\beta\mapsto C_\beta$ 
-is a continuous map from $[0,\pi]$ to the plane.
-\end{thm}
-
-\parit{Proof.}
+\parit{Proof of Proposition~\ref{prop:C-cont}.}
 The existence and uniqueness of $C_\beta$ follow from Axiom~\ref{def:birkhoff-axioms:2a} and Proposition~\ref{prop:point-on-half-line}.
 
 Note that if $\beta_1\ne\beta_2$, then
 $$C_{\beta_1}C_{\beta_2}=s(r,|\beta_1-\beta_2|).$$
 
-By Proposition~\ref{prop:f(r,a)}, the map $\beta\mapsto C_\beta$ is continuous.
+By \ref{lem:f(r,a)}, the map $\beta\mapsto C_\beta$ is continuous.
 \qeds
 
 
-
-
-
-\parit{Proof of Theorem~\ref{thm:abc}.}\label{page:proof:thm:abc}
-Fix the points $A$ and $B$ such that $AB=c$.
-Given $\beta\in [0,\pi]$,
-suppose that $C_\beta$ denotes the point in the plane such that $BC_\beta\z=a$ and $\measuredangle ABC=\beta$.
-
-According to Corollary~\ref{cor:C-cont},
-the map
-$\beta\mapsto C_\beta$ is continuous.
-Therefore, the function $b(\beta)=AC_\beta$ is continuous
-(formally, it follows from Exercise~\ref{ex:dist-cont} and Exercise~\ref{ex:comp+cont}).
-
-Note that $b(0)=c-a$ and $b(\pi)=c+a$.
-Since $c-a\le b\le c+a$,
-by the intermediate value theorem (\ref{thm:intermidiate})
-there is $\beta_0\in[0,\pi]$ such that
-$b(\beta_0)=b$,
-hence the result. 
-\qeds
 
 Given a positive real number $r$ and a point $O$,
 the set $\Gamma$ of all points on distance $r$ from $O$ is called a \index{circle}\emph{circle} 

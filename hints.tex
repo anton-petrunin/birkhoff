@@ -375,10 +375,23 @@ This way we proved the ``if'' part.
 To prove the ``only if'' part, you need to switch $A$ and $B$ and
 repeat the above argument.
 
-
-
 \parbf{\ref{ex:side-angle}.}
-Apply \ref{ex:pbisec-side}, Theorem~\ref{thm:ASA}, and \ref{ex:PP(PN)}.
+Apply \ref{ex:pbisec-side} and \ref{thm:isos}.
+
+\parbf{\ref{ex:2-reflections}.}
+Note that $\measuredangle XBA=\measuredangle ABP$, $\measuredangle PBC=\measuredangle CBY$.
+Therefore,
+\begin{align*}
+\measuredangle XBY
+&\equiv
+\measuredangle XBP+\measuredangle PBY
+\equiv
+ 2\cdot(\measuredangle ABP+\measuredangle PBC)
+\equiv
+ 2\cdot \measuredangle ABC.
+\end{align*}
+
+\vskip-4mm
 
 \parbf{\ref{ex:3-reflections}.}
 Choose an arbitrary nondegenerate triangle $ABC$.
@@ -402,18 +415,10 @@ Therefore, this reflection sends $C''$ to~$\hat C$.
 
 Apply \ref{ex:ABC-motion} to show that the composition of the constructed reflections coincides with the given motion.
 
-\parbf{\ref{ex:2-reflections}.}
-Note that $\measuredangle XBA=\measuredangle ABP$, $\measuredangle PBC=\measuredangle CBY$.
-Therefore,
-\begin{align*}
-\measuredangle XBY
-&\equiv
-\measuredangle XBP+\measuredangle PBY
-\equiv
- 2\cdot(\measuredangle ABP+\measuredangle PBC)
-\equiv
- 2\cdot \measuredangle ABC.
-\end{align*}
+By Corollary~\ref{cor:reflection+angle}, any reflection is an indirect motion.
+Show that a composition of even number of reflections is direct,
+and a composition of odd number of reflections is indirect.
+The last statement follows since any motion is a composition of reflections.
 
 {
 

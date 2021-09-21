@@ -224,6 +224,13 @@ $$\measuredangle BAP'=-\measuredangle BAP.$$
 
 }
 
+\begin{thm}{Exercise}\label{ex:2-reflections}
+Let $X$ and $Y$ be the reflections of $P$ across the lines $(AB)$ and $(BC)$ respectively.
+Show that 
+$$\measuredangle XBY\equiv 2\cdot \measuredangle ABC.$$
+
+\end{thm}
+
 
 \begin{thm}[\abs]{Corollary}\label{cor:reflection+angle}
 The reflection across a line is a motion of the plane. 
@@ -280,33 +287,31 @@ we get that
 $$\measuredangle Q'P'R'\equiv-\measuredangle QPR.$$
 \qedsf
 
+\section*{Direct and indirect motions}\label{direct motion}
+\addtocontents{toc}{Direct and indirect motions.}
+
+A motion $X\mapsto X'$ is called \index{direct motion}\emph{direct} if 
+$$\measuredangle Q'P'R'= \measuredangle QPR$$ 
+for any triangle $PQR$;
+if instead we always have 
+$$\measuredangle Q'P'R'\equiv -\measuredangle QPR,$$ 
+then the motion $f$ is called \index{indirect motion}\emph{indirect}.
+
+By Corollary~\ref{cor:reflection+angle}, any reflection across a line is an indirect motion.
+Note that composition of two reflections is a direct motion.
+More generally, composition of two indirect motions is direct,
+composition of two direct motions is direct,
+and composition of a direct and indirect motions is indirect.
+
 \begin{thm}{Exercise}\label{ex:3-reflections}
 Show that any motion of the plane can be presented as a 
 composition of at most three reflections across lines.
-\end{thm} %???change to a proposition
 
-The motions of the plane can be divided into two types, 
-\index{direct motion}\emph{direct} 
-and 
-\index{indirect motion}\emph{indirect}.\label{direct motion}
-The motion $f$ is direct if 
-$$\measuredangle Q'P'R'= \measuredangle QPR$$ 
-for any $\triangle PQR$ and $P'=f(P)$, $Q'=f(Q)$ and $R'=f(R)$;
-if instead we have 
-$$\measuredangle Q'P'R'\equiv -\measuredangle QPR$$ 
-for any $\triangle PQR$, then the motion $f$ is called indirect.
+Conclude that any motion of the plane is either direct or indirect.
+\end{thm} 
 
-Indeed, by Corollary~\ref{cor:reflection+angle}, any reflection is an indirect motion.
-Applying the exercise above, any motion is a composition of reflections.
-If the number of reflections is odd then the composition indirect;
-if the number is even, then the motion is direct.
 
-\begin{thm}{Exercise}\label{ex:2-reflections}
-Let $X$ and $Y$ be the reflections of $P$ across the lines $(AB)$ and $(BC)$ respectively.
-Show that 
-$$\measuredangle XBY\equiv 2\cdot \measuredangle ABC.$$
 
-\end{thm}
 
 \section*{Perpendicular is shortest}
 \addtocontents{toc}{Perpendicular is shortest.}
@@ -419,7 +424,7 @@ if $P$ is the only point of intersection of $\ell$ and $\Gamma$,
 we say that {}\emph{$\ell$ is tangent to $\Gamma$ at $P$}. 
 
 Similarly, according to Exercise~\ref{ex:two-circ},
-two distinct circles might have 2, 1 or 0 points of intersections.
+two distinct circles might have 2, 1, or 0 points of intersections.
 If $P$ is the only point of intersection of circles $\Gamma$ and $\Gamma'$,
 we say that \index{tangent!circles}\emph{$\Gamma$ is tangent to $\Gamma$ at $P$}; we also assume that circle is tangent to itself at any of its points.
 
@@ -495,8 +500,8 @@ and their intersections (assuming that such points exist).
 
 We can also look at the different sets of construction tools.
 For example,
-we may only use the ruler or
-we may invent a new tool, 
+we may only use the ruler,
+or we may invent a new tool, 
 say a tool that produces a midpoint for any given two points.
 
 As an example, let us consider the following problem:
