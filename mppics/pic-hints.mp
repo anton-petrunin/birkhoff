@@ -250,7 +250,7 @@ label.llft (btex $A$ etex, z.A);
 label.top (btex $B$ etex, z.B);
 label.lrt (btex $C$ etex, z.C);
 label.urt (btex $X$ etex, z.X);
-
+label.ulft (btex $O$ etex, z.O);
 
 endfig;
 
