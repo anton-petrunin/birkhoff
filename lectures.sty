@@ -93,9 +93,13 @@ isbn=false]{biblatex}
 \newcommand\claim[2][{}]{\par\medskip\noindent\refstepcounter{thm}\hbox{\bf \arabic{chapter}.\arabic{thm}. #2.#1}
 \it\ %\ignorespaces
 }
+\newcommand\nonumclaim[2][{}]{\par\medskip\noindent\refstepcounter{thm}\hbox{\bf #2.#1}
+\it\ %\ignorespaces
+}
 \def\endclaim{
 \par\medskip}
 \newenvironment{thm}{\claim}{\endclaim}
+\newenvironment{thm*}{\nonumclaim}{\endclaim}
 
 \def\a{\textit{a}}
 %\def\abs{$\!\!{}^{{}^{\a}}$}
