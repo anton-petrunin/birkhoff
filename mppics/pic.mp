@@ -684,7 +684,7 @@ dOt z.P,z.Q,z.PP,z.QQ;
 label.urt (btex $P$ etex, z.P);
 label.lrt (btex $P'$ etex, z.PP);
 label.ulft (btex $Q$ etex, z.Q);
-label.urt (btex $Q$ etex, z.QQ);
+label.urt (btex $Q'$ etex, z.QQ);
 label.bot (btex $\ell$ etex, .3[z.Q,z.QQ]);
 label.lft (btex $m$ etex rotated 90, .3[z.P,z.PP]);
 endfig;
@@ -3163,6 +3163,28 @@ label.rt (btex $T$ etex, z.T);
 label.top (btex $\Delta$ etex, z.Q rotatedaround(z.Ph,-120) +(0,-1));
 endfig;
 
+beginfig(201)
+save u;
+u:=1cm;
+
+z.o=origin;
+z.A=(-1,0)*u;
+z.B=(1,0)*u;
+z.X=(-.3,0)*u;
+z.Y=(.4,0)*u;
+
+fill circle(z.o,z.A-z.o) withcolor .5;
+draw z.A--z.B;
+
+dOt z.A,z.B,z.X,z.Y;
+
+label.lft (btex $A$ etex, z.A);
+label.rt (btex $B$ etex, z.B);
+label.top (btex $X$ etex, z.X);
+label.top (btex $Y$ etex, z.Y);
+
+endfig;
+
 
 beginfig(202)
 save u;
@@ -4113,6 +4135,32 @@ draw ddline(z.BB,z.AA)(.2,.2);
 draw ddline(z.CC,z.AA)(.2,.2);
 draw ddline(z.BB,z.CC)(.2,.2);
 draw circle(z.O,z.A);
+
+dOt z.A,z.B,z.C,z.AA,z.BB,z.CC,z.O;
+endfig;
+
+beginfig(246)
+save u;
+u:=.5cm;
+
+z.k=(.2,.2);
+
+z.O=origin;
+z.A=(0,-2)*u;
+z.B=z.A rotated 120;
+z.C=z.A rotated -120;
+
+z.AA=z.A zscaled z.k;
+z.BB=z.B zscaled z.k;
+z.CC=z.C zscaled z.k;
+
+draw circumcircle(z.A,z.B,z.C);
+draw ddarc(z.A,z.AA,z.O)(20,14);
+draw ddarc(z.B,z.BB,z.O)(20,14);
+draw ddarc(z.C,z.CC,z.O)(20,14);
+draw ddarc(z.CC,z.AA,z.B)(14,14);
+draw ddarc(z.AA,z.BB,z.C)(14,14);
+draw ddarc(z.BB,z.CC,z.A)(14,14);
 
 dOt z.A,z.B,z.C,z.AA,z.BB,z.CC,z.O;
 endfig;

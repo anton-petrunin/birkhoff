@@ -399,17 +399,11 @@ Moreover, the equality holds if and only if $P$, $Q$, and $R$ lie on one h-line 
 \parit{Proof.}
 Without loss of generality, we may assume that $P$ is the center of the absolute
 and 
-$PQ_h\z\ge QR_h\z>0$.
+$0<QR_h\le PQ_h$.
 
-Suppose that $\Delta$ denotes the h-circle with the center $Q$ and h-radius $\rho=QR_h$.
-Let $S$ and $T$ be the points of intersection of $(PQ)$ and~$\Delta$.
-
-By Lemma~\ref{lem:h-tiangle=}, $PQ_h\z\ge QR_h$.
-Therefore, we can assume that the points $P$, $S$, $Q$, and $T$ appear on the h-line in the same order.
-
-According to Lemma~\ref{lem:h-circle=circle}, $\Delta$ is a Euclidean circle;
-suppose that $\hat Q$ denotes its Euclidean center.
-Note that $\hat Q$ is the Euclidean midpoint of~$[ST]$.
+Let $\Delta$ be the h-circle with the center $Q$ and h-radius $QR_h$.
+Choose points $S$ and $T$ on the intersection of $(PQ)$ with~$\Delta$ so that $P$, $S$, $Q$, and $T$ appear on the h-line in the same order.
+The latter is possible by Lemma~\ref{lem:h-tiangle=}, since $QS_h\z=QT_h\z=QR_h\z\le PQ_h$.
 
 {
 
@@ -419,6 +413,10 @@ Note that $\hat Q$ is the Euclidean midpoint of~$[ST]$.
 \includegraphics{mppics/pic-200}
 \end{wrapfigure}
 
+According to Lemma~\ref{lem:h-circle=circle}, $\Delta$ is a Euclidean circle;
+let $\hat Q$ be its Euclidean center.
+
+Note that $\hat QS\z=\hat QT\z=\hat QR$.
 By the Euclidean triangle inequality,
 $$PT
 =
@@ -432,10 +430,10 @@ By Lemma~\ref{lem:O-h-dist},
 PT_h&=\ln\frac{1+PT}{1-PT},\\
 PR_h&=\ln\frac{1+PR}{1-PR}.
 \end{align*}
-Since the function $f(x)=\ln\frac{1+x}{1-x}$ is increasing for $x\in[0,1)$, 
-inequality \ref{RT>RQ} implies
-$$PT_h\ge PR_h$$
-and the equality holds if and only if $T=R$.
+Note that the function $x\mapsto\ln\frac{1+x}{1-x}$ is increasing in $[0,1)$.
+Therefore, \ref{RT>RQ} implies
+$$PT_h\ge PR_h;$$
+moreover, the equality holds if and only if $T\z=R$.
 
 }
 
@@ -461,6 +459,12 @@ Let $\ell$ be an h-line.
 Applying the main observation (\ref{thm:main-observ}) we can assume that $\ell$ contains the center of the absolute.
 In this case, $\ell$ is an intersection of a diameter of the absolute and the h-plane.
 Let $A$ and $B$ be the endpoints of the diameter.
+
+\begin{wrapfigure}{o}{29mm}
+\vskip-5mm
+\centering
+\includegraphics{mppics/pic-201}
+\end{wrapfigure}
 
 Consider the map $\iota\:\ell\to \mathbb{R}$ defined as
 $$\iota(X)=\ln \frac{AX}{XB}.$$
