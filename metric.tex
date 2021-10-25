@@ -1,8 +1,8 @@
 \chapter{Preliminaries}\label{chap:metr}
-\addtocontents{toc}{\protect\begin{quote}}
 
-\section*{What is the axiomatic approach?}
-\addtocontents{toc}{What is the axiomatic approach?}
+
+\section{What is the axiomatic approach?}
+\label{preaxioms}
 
 In the axiomatic approach, one defines the plane as anything that satisfies a given list of properties.
 These properties are called {}\emph{axioms}.
@@ -36,8 +36,7 @@ Assume for now that we have an intuitive understanding of such notions as {}\emp
 These observations are good to start with.
 Further we will develop the language to reformulate them rigorously.
 
-\section*{What is a model?}
-\addtocontents{toc}{What is a model?}
+\section{What is a model?}
 \label{page:model}
 
 The Euclidean plane can be defined rigorously the following way:
@@ -61,12 +60,11 @@ For example, we may remove one axiom from the list,
 or exchange it to another axiom. 
 We will do such modifications in Chapter~\ref{chap:non-euclid} and further.
 
-\section*{Metric spaces}
-\addtocontents{toc}{Metric spaces.}
+\section{Metric spaces}
 
 The notion of metric space provides 
 a rigorous way to say: {}\emph{``we can measure distances between points''}.
-That is, instead of (\ref{preaxiomI}) on page \pageref{preaxiomI},
+That is, instead of (\ref{preaxiomI}) in Section~\ref{preaxioms},
 we can say {}\emph{``Euclidean plane is a metric space''}.
 
 \begin{thm}{Definition}\label{def:metric-space}
@@ -95,8 +93,7 @@ Given two points $A,B\z\in \mathcal X$,
 the value $d(A, B)$ is called \index{distance}\emph{distance} from $A$ to~$B$.
 \end{thm}
 
-\section*{Examples}
-\addtocontents{toc}{Examples.}
+\section{Examples}
 
 \begin{itemize}
 \item {}\emph{Discrete metric.} Let $\mathcal X$ be an arbitrary set. 
@@ -133,8 +130,7 @@ Prove that the following functions are metrics on $\mathbb{R}^2$:
 \end{thm}
 
 
-\section*{Shortcut for distance}
-\addtocontents{toc}{Shortcut for distance.}
+\section{Shortcut for distance}
 
 Most of the time, 
 we study only one metric on space.
@@ -162,11 +158,10 @@ holds for any four points $A$, $B$, $P$, $Q$ in a metric space.
 \end{thm}
 
 
-\section*{Isometries, motions, and lines}
-\addtocontents{toc}{Isometries, motions, and lines.}
+\section{Isometries, motions, and lines}
 
 In this section, we define {}\emph{lines} in a metric space.
-Once it is done the sentence {}\emph{``We can draw a unique line that passes thru two given points.''} becomes rigorous; see (\ref{preaxiomII}) on page \pageref{preaxiomII}. 
+Once it is done the sentence {}\emph{``We can draw a unique line that passes thru two given points.''} becomes rigorous; see (\ref{preaxiomII}) in Section~\ref{preaxioms}. 
 
 Recall that a map $f\:\mathcal{X}\to\mathcal{Y}$
 is a \index{bijection}\emph{bijection}
@@ -215,7 +210,7 @@ Prove that $(\mathbb{R}^2,d_1)$ is isometric to $(\mathbb{R}^2,d_\infty)$.
 \end{thm}
 
 \begin{thm}{Advanced exercise}\label{ad-ex:motions of Manhattan plane}
-Describe all the motions of the Manhattan plane, defined on page~\pageref{Manhattan plane}.
+Describe all the motions of the Manhattan plane, defined in \ref{ex:dist-square}.
 \end{thm}
 
 If $\mathcal X$ is a metric space and $\mathcal Y$ is a subset of $\mathcal X$,
@@ -252,8 +247,7 @@ Why?
 Show that any motion maps a line to a line. 
 \end{thm}
 
-\section*{Half-lines and segments}
-\addtocontents{toc}{Half-lines and segments.}
+\section{Half-lines and segments}
 
 Assume there is a line $\ell$ passing thru
 two distinct points $P$ and $Q$.
@@ -280,12 +274,11 @@ $QX+XQ=PQ$.
 \end{thm}
 
 
-\section*{Angles}
-\addtocontents{toc}{Angles.}
+\section{Angles}
 
 Our next goal is to introduce {}\emph{angles} and {}\emph{angle measures}; 
 after that, the statement {}\emph{``we can measure angles''} will become rigorous;
-see (\ref{preaxiomIII}) on page~\pageref{preaxiomIII}.
+see (\ref{preaxiomIII}) in Section~\ref{preaxioms}.
 
 An ordered pair of half-lines that start at the same point is called an \index{angle}\emph{angle}.
 The angle $AOB$ (also denoted by \index{10@$\angle$, $\measuredangle$}$\angle AOB$) is the pair of half-lines $[OA)$ and $[OB)$.
@@ -321,14 +314,7 @@ Here is the first property of angle measure which will become a part of the axio
 
 \textit{Given a half-line $[O A)$ and $\alpha\in(-\pi,\pi]$ there is a unique half-line $[O B)$ such that $\measuredangle A O B= \alpha$.}
 
-
-
-
-
-\section*{Reals modulo $\bm{2\cdot\pi}$}
-\addtocontents{toc}{Reals modulo $2\cdot\pi$.}
-
-
+\section[Reals modulo $2\cdot\pi$]{Reals modulo $\bm{2\cdot\pi}$}
 
 Consider three half-lines starting from the same point, $[O A)$, $[O B)$, and $[O C)$.
 They make three angles $A O B$, $B O C$, and $A O C$,
@@ -395,8 +381,7 @@ $$\pi
 Show that $2\cdot\alpha\equiv0$ if and only if $\alpha\equiv0$ or $\alpha\equiv\pi$.
 \end{thm}
 
-\section*{Continuity}
-\addtocontents{toc}{Continuity.}
+\section{Continuity}
 
 The angle measure is also assumed to be continuous.
 Namely, the following property of angle measure will become a part of the axioms:
@@ -406,7 +391,7 @@ $$\measuredangle\:(A,O,B)\mapsto\measuredangle A O B$$
 \textit{is continuous at any triple of points $(A,O,B)$
 such that $O\ne A$ and $O\ne B$ and $\measuredangle A O B\ne\pi$.}
 
-To explain this property, we need to extend the notion of {}\emph{continuity} to the functions between metric spaces.
+To explain this property, we need to extend the notion of {}\emph{continuity} to functions between metric spaces.
 The definition is a straightforward generalization of the standard definition for real-to-real functions.
 
 Further, let $\mathcal X$ and $\mathcal Y$ be two metric spaces,
@@ -428,7 +413,7 @@ d_{\mathcal Y}(f(A),f(A'))
 A map $f\:\mathcal X\to\mathcal Y$ is called \index{continuous}\emph{continuous} if it is continuous at every point $A\in \mathcal X$.
 
 One may define a continuous map of several variables the same way.
-Assume $f(A,B,C)$ is a function that returns a point in the space $\mathcal Y$ for a triple of points $(A,B,C)$
+Assume $f$ is a function that returns a point in the space $\mathcal Y$ for a triple of points $(A,B,C)$
 in the space~$\mathcal X$.
 The map $f$ might be defined only for some triples in~$\mathcal X$.
 
@@ -444,10 +429,10 @@ Let $\mathcal{X}$ be a metric space.
 \begin{enumerate}[(a)]
 \item\label{ex:dist-cont:a} Let $A\in \mathcal{X}$ be a fixed point.
 Show that the function 
-$$f(B)\df
+$$f\:B\mapsto
 d_{\mathcal{X}}(A,B)$$ 
 is continuous at any point~$B$.
-\item Show that $d_{\mathcal{X}}(A,B)$ is continuous at any pair $A,B\in \mathcal{X}$.
+\item Show that the function $(A,B)\mapsto d_{\mathcal{X}}(A,B)$ is continuous at any pair $A,B\in \mathcal{X}$.
 \end{enumerate}
 
 \end{thm}
@@ -465,13 +450,10 @@ Show that $h\:\mathcal{X}\to\mathcal{Z}$ is continuous at any point.
 Show that any distance-preserving map is continuous at any point.
 \end{thm}
 
+\section{Congruent triangles}
+\label{sec:cong-triangles}
 
-
-
-\section*{Congruent triangles} 
-\addtocontents{toc}{Congruent triangles.}
-
-Our next goal is to give a rigorous meaning for (\ref{preaxiomIV}) on page \pageref{preaxiomIV}.
+Our next goal is to find a rigorous meaning for statement (\ref{preaxiomIV}) in Section~\ref{preaxioms}.
 To do this, we introduce the notion of {}\emph{congruent triangles}
 so instead of {}\emph{``if we rotate or shift we will not see the difference''} we say that for triangles, the side-angle-side congruence holds;
 that is, two triangles are congruent if they have two pairs of equal sides and the same angle measure between these sides.
@@ -545,5 +527,3 @@ Note that a point $M$ is a midpoint of $A$ and $B$ if and only if $f(M)$ is a mi
 The set of midpoints for $A$ and $B$ is infinite, it contains all points $(t,t)$ for $t\in[0,1]$ (it is the gray segment on the picture above).
 On the other hand, the midpoint for $B$ and $C$ is unique (it is the black point on the picture).
 Thus, the map $f$ cannot be bijective --- a contradiction.
-
-\addtocontents{toc}{\protect\end{quote}}

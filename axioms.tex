@@ -1,11 +1,8 @@
 %\part*{Euclidean geometry}
-\addtocontents{toc}{\protect\begin{center}}
-\addtocontents{toc}{\bf EUCLIDEAN GEOMETRY}
-\addtocontents{toc}{\protect\end{center}
-\vskip-3mm}
+\addtocontents{toc}{\protect\contentsline{part}{\protect\numberline{}Euclidean geometry}{}{}}
+  
 \chapter{Axioms}
 \label{chap:axioms}
-\addtocontents{toc}{\protect\begin{quote}}
 
 \vfill
 
@@ -29,7 +26,7 @@ the system of Friedrich Bachmann \cite{bachmann} based on the concept of symmetr
 and the system of Alfred Tarski \cite{tarski} --- a minimalist system designed for analysis using mathematical logic.
 
 We will use another system which is very close to the one proposed by George Birkhoff \cite{birkhoff}.
-This system is based on the {}\emph{key observations}  (\ref{preaxiomI})--(\ref{preaxiomV}) listed on page~\pageref{preaxiomI}.
+This system is based on the {}\emph{key observations}  (\ref{preaxiomI})--(\ref{preaxiomV}) listed in Section~\ref{preaxioms}.
 The axioms use the notions of 
 metric space, 
 lines, 
@@ -43,13 +40,14 @@ All this is discussed in the preliminaries.
 Our system is built upon metric spaces.
 In particular, we use real numbers as a building block. 
 By that reason our approach is not purely axiomatic --- we build the theory upon something else;
-it resembles a model-based introduction to Euclidean geometry discussed on page~\pageref{page:model}.
+it resembles a model-based introduction to Euclidean geometry discussed in Section~\ref{page:model}.
 We used this approach to minimize the tedious parts which are unavoidable in purely axiomatic foundations.
 
 \newpage
 
-\section*{The axioms}
-\addtocontents{toc}{The axioms.}
+\section{The axioms}
+\label{sec:axioms}
+
 
 \begin{framed}
 \begin{enumerate}[I.]
@@ -118,12 +116,11 @@ Show that there are (a) an infinite set of points,
 (b) an infinite set of lines on the plane.
 \end{thm}
 
-\section*{Lines and half-lines}
-\addtocontents{toc}{Lines and half-lines.}
+\section{Lines and half-lines}
 
 \begin{thm}[\abs]{Proposition}\label{lem:line-line}
 \let\thefootnote\relax\footnotetext{${}^\a$ A statement marked with ``$\a$'' if Axiom~\ref{def:birkhoff-axioms:4} was not used in its proof.
-Ignore this mark for a while; it will be important in Chapter~\ref{chap:non-euclid}, see page \pageref{a-mark}.}
+Ignore this mark for a while; it will be important in Chapter~\ref{chap:non-euclid}.}
 Any two distinct lines intersect at most at one point.
 \end{thm}
 
@@ -154,8 +151,7 @@ Thus, $O A'=r$ if and only if $f(A')=r$.
 Since isometry has to be bijective, the statement follows.
 \qeds
 
-\section*{Zero angle}
-\addtocontents{toc}{Zero angle.}
+\section{Zero angle}
 
 \begin{thm}[\abs]{Proposition}\label{lem:AOA=0}
 $\measuredangle A O A= 0$ for any $A\not=O$.
@@ -194,8 +190,7 @@ By Proposition~\ref{lem:AOA=0}, $\measuredangle A O A=0$.
 Hence the result.
 \qeds
 
-\section*{Straight angle}
-\addtocontents{toc}{Straight angle.}
+\section{Straight angle}
 
 If $\measuredangle A O B=\pi$,
 we say that $\angle A O B$ is a 
@@ -304,8 +299,7 @@ $$2\cdot \measuredangle AOB\equiv 2\cdot \measuredangle AOC.$$
 Show that there is a nondegenerate triangle.
 \end{thm}
 
-\section*{Vertical angles}
-\addtocontents{toc}{Vertical angles.}
+\section{Vertical angles}
 
 A pair of angles $AOB$ and $A'OB'$ 
 is called \index{angle!vertical angles}\index{vertical angles}\emph{vertical}
@@ -353,8 +347,3 @@ is the midpoint for both segments
 $[A B]$ and $[C D]$.
 Prove that $A C= B D$. 
 \end{thm}
-
-
-
-
-\addtocontents{toc}{\protect\end{quote}}

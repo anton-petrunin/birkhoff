@@ -1,8 +1,7 @@
 \chapter{Area}
 \label{chap:area}
-\addtocontents{toc}{\protect\begin{quote}}
 
-Area will be defined as a function satisfying certain conditions (page \pageref{page:area-def}).
+Area will be defined as a function satisfying certain conditions (Section~\ref{sec:def(area)}).
 The so-called {}\emph{Lebesgue measure} gives an example of such a function.
 In particular, the existence Lebesgue measure implies the existence of an area function.
 This construction is included in any textbook in real analysis.
@@ -12,8 +11,7 @@ We choose this approach since any rigorous introduction to area is tedious.
 We do not want to cheat and at the same time we do not want to waste your time; 
 soon or later you will have to learn Lebesgue measure if it is not done already.
 
-\section*{Solid triangles}
-\addtocontents{toc}{Solid  triangles.}
+\section{Solid triangles}
 
 {
 
@@ -57,7 +55,7 @@ The notations $\triangle ABC$ and $\solidtriangle ABC$ look similar,
 they also have close but different meanings, 
 which better not to confuse.
 Recall that $\triangle ABC$ is an ordered triple of distinct points
-(see page \pageref{page:def:triangle}),
+(see Section~\ref{sec:cong-triangles}),
 while $\solidtriangle ABC$ is an infinite set of points.
 
 In particular, $\solidtriangle ABC=\solidtriangle BAC$ for any triangle $ABC$.
@@ -96,8 +94,7 @@ if and only if there is a line $\ell$ that intersects $\solidtriangle ABC$
 at the single point~$X$.
 \end{thm}
 
-\section*{Polygonal sets}
-\addtocontents{toc}{Polygonal sets.}
+\section{Polygonal sets}
 
 \index{elementary set}\emph{Elementary set} on the plane 
 is a set of one of the following three types:
@@ -193,8 +190,8 @@ The diagram should suggest an idea for the proof of the latter statement in case
 The other cases are simpler; a formal proof can be built on Exercise~\ref{ex:triangle-convex}
 \qeds
 
-\section*{Definition of area}
-\addtocontents{toc}{Definition of area.}
+\section{Definition of area}
+\label{sec:def(area)}
 
 \index{area}\emph{Area} is defined as a function $\mathcal{P}\mapsto \area\mathcal{P}$
 that returns a nonnegative real number $\area\mathcal{P}$ for any polygonal set $\mathcal{P}$ and satisfying the following conditions:\label{page:area-def}
@@ -238,8 +235,7 @@ We do not discuss it here.
 If the reader is not familiar with the Lebesgue measure, then he should take the existence of area function as granted; 
 it might be considered as an additional axiom altho it follows from the axioms \ref{def:birkhoff-axioms:0}--\ref{def:birkhoff-axioms:4}.
 
-\section*{Vanishing area and subdivisions}
-\addtocontents{toc}{Vanishing area and subdivisions.}
+\section{Vanishing area and subdivisions}
 
 \begin{thm}{Proposition}\label{prop:area-segment}
 Any one-point set, as well as any segment in the Euclidean plane, have vanishing area.
@@ -360,8 +356,7 @@ The analogous statement in three dimensions, known as \emph{Hilbert's third prob
 
 
 
-\section*{Area of solid rectangles}
-\addtocontents{toc}{Area of solid rectangles,}
+\section{Rectangles}
 
 \begin{thm}{Theorem}\label{thm:area-rect}
 A solid rectangle 
@@ -492,8 +487,7 @@ It remains to apply the algebraic lemma.
 \qeds
 
 
-\section*{Area of solid parallelograms}
-\addtocontents{toc}{parallelograms}
+\section{Parallelograms}
 
 \begin{thm}{Proposition}\label{prop:area-parallelogram}
 Let $\square ABCD$ be a parallelogram in the Euclidean plane, $a=AB$ and $h$ be the distance between the lines $(AB)$ and~$(CD)$.
@@ -574,8 +568,7 @@ Show that
 
 }
 
-\section*{Area of solid triangles}
-\addtocontents{toc}{and triangles.}
+\section{Triangles}
 
 
 \begin{thm}{Theorem}\label{thm:area-of-triangle}
@@ -675,8 +668,7 @@ Conclude that for any polygonal set, its area is uniquely defined.
 
 
 
-\section*{Area method}
-\addtocontents{toc}{Area method.}
+\section{Area method}
 
 In this section, we will give examples of
 slim proofs using the properties of area.
@@ -861,9 +853,7 @@ Assume that the lines $(L_1M_1)$, $(L_2M_2)$, $(L_3M_3)$, and $(L_4M_4)$ pass th
 \end{thm}
 
 
-\section*{Area in
-the neutral planes and spheres}
-\addtocontents{toc}{Area in the neutral planes and spheres.}
+\section{Neutral planes and spheres}
 
 Area can be defined in the neutral planes and spheres.
 In the definition,
@@ -920,8 +910,7 @@ since whole sphere can be subdivided in eight such triangles, we get that the ar
 
 The identity \ref{eq:curv-defect} can be used as an alternative way to introduce area function; it works on spheres and all neutral planes, except for the Euclidean plane.
 
-\section*{Quadrable sets}
-\addtocontents{toc}{Quadrable  sets.}
+\section{Quadrable sets}
 
 A set $\mathcal{S}$ 
 in the plane is called \index{quadrable set}\emph{quadrable}
@@ -959,13 +948,11 @@ Since $\mathcal{D}$ is quadrable, the expression $\area\mathcal{D}$ makes sense 
 \medskip
 
 It turns out that the class of quadrable sets is the largest class for which 
-the area function satisfying the conditions on page \pageref{page:area-def} is uniquely defined.
+the area function satisfying the conditions in Section~\ref{sec:def(area)} is \emph{uniquely} defined.
 
 If you do not require uniqueness, then  there are ways to extend area function to all bounded sets.
 (A set in the plane is called \index{bounded set}\emph{bounded} if it lies inside of a circle.)
 On the sphere and hyperbolic plane, 
 there is no similar construction.
 If you wonder why,
-read about \index{doubling the ball}\emph{doubling the ball}, a paradox of Felix Hausdorff, Stefan Banach, and Alfred Tarski.
-
-\addtocontents{toc}{\protect\end{quote}}                          
+read about \index{doubling the ball}\emph{doubling the ball} --- a paradox of Felix Hausdorff, Stefan Banach, and Alfred Tarski.                         

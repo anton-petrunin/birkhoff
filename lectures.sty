@@ -67,6 +67,15 @@ isbn=false]{biblatex}
 
 \csname @openrightfalse\endcsname
 
+\usepackage{titletoc}% http://ctan.org/pkg/titletoc
+\titlecontents*{section}[.5em]
+  {\small}
+  {\thecontentslabel.~{}}
+  {}
+  { \textbf{\thecontentspage}}
+  [; ][.]
+
+
 % Fix latex
 \def\smallskip{\vskip\smallskipamount}
 \def\medskip{\vskip\medskipamount}
@@ -174,3 +183,7 @@ semi-pe-ri-me-ter}
 \renewcommand{\theeqtn}{\numform{eqtn}}
 \newcommand{\eqlbl}[1]{\refstepcounter{eqtn}\leqno\text{\numform{eqtn}\label{#1}}}
 \newcommand{\eqtag}[1]{\refstepcounter{eqtn}\tag*{\numform{eqtn}\label{#1}}}
+
+
+\makeatletter\renewcommand{\p@section}{\thechapter}\makeatother
+\renewcommand{\thesection}{\Alph{section}}

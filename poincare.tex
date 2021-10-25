@@ -1,5 +1,4 @@
 \chapter{Hyperbolic plane}\label{chap:poincare}
-\addtocontents{toc}{\protect\begin{quote}}
 
 \begin{figure}[!ht]
 \vspace*{-9mm}
@@ -16,8 +15,8 @@ it is often called the {}\emph{Poincar\'e disc model}.
 
 The figure above shows the conformal disc model of the hyperbolic plane which is cut into congruent triangles with angles $\tfrac\pi3$, $\tfrac\pi3$, and~$\tfrac\pi4$.
 
-\section*{Conformal disc model}
-\addtocontents{toc}{Conformal disc model.}
+\section{Conformal disc model}
+\label{sec:conformal-model}
 
 In this section, we give new names for some objects in the Euclidean plane
 which will represent lines, angle measures, and distances in the hyperbolic plane.
@@ -116,8 +115,7 @@ Show that there is a unique h-line passing thru $P$
 and perpendicular to~$\ell$.
 \end{thm}
 
-\section*{Plan of the proof}
-\addtocontents{toc}{Plan of the proof.}
+\section{Plan of the proof}
 
 We defined all the {}\emph{h-notions} needed in the formulation of the axioms \ref{def:birkhoff-axioms:0}--\ref{def:birkhoff-axioms:3} and h-\ref{def:birkhoff-axioms:4}.
 It remains to show that all these axioms hold; 
@@ -132,8 +130,7 @@ Most importantly we will prove the ``if''-part of Theorem~\ref{thm:consistent}.
 Indeed, any statement in hyperbolic geometry can be restated in the Euclidean plane using the introduced h-notions.
 Therefore, if the system of axioms \ref{def:birkhoff-axioms:0}--\ref{def:birkhoff-axioms:3}, and h-\ref{def:birkhoff-axioms:4} leads to a contradiction, then so does the system axioms \ref{def:birkhoff-axioms:0}--\ref{def:birkhoff-axioms:4}.
 
-\section*{Auxiliary statements}
-\addtocontents{toc}{Auxiliary statements.}
+\section{Auxiliary statements}
 
 One may compare the conformal model with a {}\emph{telescope} --- it makes it possible to {}\emph{see} the h-plane from the Euclidean plane.
 Continuing this analogy further, we may say that the following lemma will be used to {}\emph{aim} the telescope at any particular point in the h-plane.
@@ -320,11 +317,10 @@ Assume $P$, $\hat P$, and $O$ are as in the Lemma~\ref{lem:h-circle=circle} and 
 Show that $\hat P\in [OP]$.
 \end{thm}
 
-\section*{Axiom~\ref{def:birkhoff-axioms:0}}
-\addtocontents{toc}{Axioms: \ref{def:birkhoff-axioms:0},}
+\section[Axioms]{Axiom~\ref{def:birkhoff-axioms:0}}
 
 Evidently, the h-plane contains at least two points.
-Therefore, to show that Axiom~\ref{def:birkhoff-axioms:0} holds in the h-plane, we need to show that the h-distance defined on page \pageref{h-dist} is a metric on h-plane;
+Therefore, to show that Axiom~\ref{def:birkhoff-axioms:0} holds in the h-plane, we need to show that the h-distance defined in Section~\ref{sec:conformal-model} is a metric;
 that is, the conditions \textit{(\ref{def:metric-space:a})}--\textit{(\ref{def:metric-space:d})} 
 in Definition~\ref{def:metric-space} hold for h-distance.
 
@@ -430,7 +426,7 @@ By Lemma~\ref{lem:O-h-dist},
 PT_h&=\ln\frac{1+PT}{1-PT},\\
 PR_h&=\ln\frac{1+PR}{1-PR}.
 \end{align*}
-Note that the function $x\mapsto\ln\frac{1+x}{1-x}$ is increasing in $[0,1)$.
+Note that the function $x\mapsto\ln\frac{1+x}{1-x}$ is increasing for $0\le x<1$.
 Therefore, \ref{RT>RQ} implies
 $$PT_h\ge PR_h;$$
 moreover, the equality holds if and only if $T\z=R$.
@@ -444,7 +440,6 @@ Hence the claim follows.
 \qeds
 
 \section*{Axiom~\ref{def:birkhoff-axioms:1}}
-\addtocontents{toc}{\ref{def:birkhoff-axioms:1},}
 
 Note that once the following claim is proved,
 Axiom~\ref{def:birkhoff-axioms:1} 
@@ -479,10 +474,9 @@ The converse follows from Claim~\ref{clm:h-dist+trig-inq}.
 
 
 \section*{Axiom~\ref{def:birkhoff-axioms:2}}
-\addtocontents{toc}{\ref{def:birkhoff-axioms:2},}
 
-Note that the first part of Axiom~\ref{def:birkhoff-axioms:2} follows directly from the definition of the h-angle measure defined on page~\pageref{h-angle measure}.
-It remains to show that $\measuredangle_h$ satisfies the conditions \ref{def:birkhoff-axioms:2a}, \ref{def:birkhoff-axioms:2b}, and \ref{def:birkhoff-axioms:2c} on page \pageref{def:birkhoff-axioms:2b}.
+Note that the first part of Axiom~\ref{def:birkhoff-axioms:2} follows directly from the definition of the h-angle measure (defined in Section~\ref{sec:conformal-model}).
+It remains to show that $\measuredangle_h$ satisfies the conditions \ref{def:birkhoff-axioms:2a}, \ref{def:birkhoff-axioms:2b}, and \ref{def:birkhoff-axioms:2c} (see Section~\ref{sec:axioms}).
 
 The following two claims say that
 $\measuredangle_h$ satisfies
@@ -541,7 +535,6 @@ the claim follows from the corresponding axiom of the Euclidean plane.
 \qeds
 
 \section*{Axiom~\ref{def:birkhoff-axioms:3}}
-\addtocontents{toc}{\ref{def:birkhoff-axioms:3},}
 
 The following claim says that Axiom~\ref{def:birkhoff-axioms:3} holds in the h-plane.
 
@@ -585,10 +578,8 @@ $\triangle_h P Q R$ and $\triangle_h P' Q R'$ are h-congruent.
 \qeds
 
 \section*{Axiom h-$\!$\ref{def:birkhoff-axioms:4}}
-\addtocontents{toc}{h-\ref{def:birkhoff-axioms:4}.}
 
-
-Finally, we need to check that the Axiom~h-$\!$\ref{def:birkhoff-axioms:4} on page \pageref{def:hyperbolic-4a} holds;
+Finally, we need to check that the Axiom~h-$\!$\ref{def:birkhoff-axioms:4} in Section~\ref{sec:unprovable} holds;
 that is, we need to prove the following claim.
 
 {
@@ -618,8 +609,9 @@ there are 3 mutually parallel h-lines
 such that any pair of these three lines lies on one side of the remaining h-line.
 \end{thm}
  
-\section*{Hyperbolic trigonometry}
-\addtocontents{toc}{Hyperbolic trigonometry}
+\section{Hyperbolic trigonometry}
+\label{sec:hyp-trig}
+
 
 In this section, we give formulas for h-distance using \index{hyperbolic!functions}\emph{hyperbolic functions}.
 One of these formulas will be used in the proof of the hyperbolic Pythagorean theorem (\ref{thm:pyth-h-poincare}).
@@ -694,5 +686,3 @@ $\displaystyle{\cosh PQ_h=\frac{PQ\cdot P'Q'+PQ'\cdot P'Q}{PP'\cdot QQ'}.}$
 \end{enumerate}
 
 \end{thm}
-
-\addtocontents{toc}{\protect\end{quote}}

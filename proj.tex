@@ -1,8 +1,6 @@
 \chapter{Projective geometry}\label{chap:proj}
-\addtocontents{toc}{\protect\begin{quote}}
 
-\section*{Projective completion}
-\addtocontents{toc}{Projective completion.}
+\section{Projective completion}
 
 In the Euclidean plane, two distinct lines might have one or zero points of intersection 
 (in the latter case the lines are parallel).
@@ -38,14 +36,9 @@ A parallel pencil contains the ideal line and the lines $y=m\cdot x+b$ with fixe
 if $m=\infty$, we assume that the lines are given by equations $x=a$.
 Therefore the real projective plane contains every point $(x,y)$ in the coordinate plane plus the ideal line containing one ideal point $P_m$ for every slope $m\in\mathbb{R}\cup\{\infty\}$.
 
+\section{Euclidean space}
 
-
-
-\section*{Euclidean space}
-\addtocontents{toc}{Euclidean space.}
-
-Let us repeat the construction of metric $d_2$ (page 
-\pageref{def:d_2}) in space.
+Let us repeat the construction of metric $d_2$ (Exercise~\ref{ex:dist-square}) in space.
 
 Suppose that $\mathbb{R}^3$ denotes the set of all triples $(x,y,z)$ of real numbers.
 Assume $A=(x_A,y_A,z_A)$ and $B=(x_B,y_B,z_B)$ are arbitrary points in $\mathbb{R}^3$.
@@ -70,8 +63,7 @@ It is straightforward to show the following:
 These statements make it possible to generalize many notions and results from Euclidean plane geometry to the Euclidean space
 by applying plane geometry in the planes of the space.
 
-\section*{Space model}
-\addtocontents{toc}{Space model.}
+\section{Space model}
 
 Let us identify the Euclidean plane with a plane $\Pi$ in the Euclidean space $\mathbb{R}^3$ that does not pass thru the origin $O$.
 Denote by $\hat\Pi$ the projective completion of $\Pi$.
@@ -92,8 +84,8 @@ Then $P\in \ell$ if and only if $\dot P\subset \dot \ell$,
 where $\dot P$ and $\dot \ell$ denote the line and plane defined by the constructed bijections.
 \end{thm}
 
-\section*{Perspective projection}
-\addtocontents{toc}{Perspective projection.}
+\section{Perspective projection}
+\label{sec:perspective-projection}
 
 Consider two planes $\Pi$ and $\Pi'$ 
 in the Euclidean space. 
@@ -153,8 +145,7 @@ we have to observe that
 \item The ideal points defined by pencils of lines $y=m\cdot x+ b$ are mapped to the point $(0,m)$ and the other way around --- point $(0,m)$ is mapped to the ideal point defined by the  pencil of lines $y=m\cdot x+ b$.
 \end{itemize}
 
-\section*{Projective transformations}
-\addtocontents{toc}{Projective transformations.}
+\section{Projective transformations}
 
 A bijection from the real projective plane to itself 
 that sends lines to lines 
@@ -208,9 +199,7 @@ that is, each of these maps preserves cross-ratio for quadruples of points on on
 \includegraphics{mppics/pic-234}
 \end{wrapfigure}
 
-\section*{Moving points to infinity}
-\addtocontents{toc}{Moving points to infinity.}
-
+\section{Moving points to infinity}
 
 Theorem~\ref{thm:moving} makes it possible to take any line in the projective plane and declare it to be ideal.
 In other words, we can choose a preferred affine plane by removing one line from the projective plane.
@@ -341,10 +330,7 @@ Construct another line parallel to $\ell$ with a ruler only.
 \end{thm}
 
 
-\section*{Duality}
-\addtocontents{toc}{Duality.}
-
-
+\section{Duality}
 
 Assume that a bijection $P\leftrightarrow p$ between the set of lines and the set of points of a plane is given.
 \begin{figure}[!ht]
@@ -468,7 +454,7 @@ Solve the following construction problem
 Given two parallel lines, construct a third parallel line thru a given point with a ruler only.
 \end{thm}
 
-\section*{Construction of a polar}
+\section{Construction of a polar}
 
 In this section, we describe a powerful trick that can be used in the constructions with ruler.
 
@@ -520,8 +506,7 @@ Suppose $O\notin \ell$.
 Construct a perpendicular from $O$ on $\ell$ with a ruler only.
 \end{thm}
 
-\section*{Axioms}
-\addtocontents{toc}{Axioms.}
+\section{Axioms}
 
 Note that the real projective plane described above satisfies the following set of axioms:
 
@@ -601,5 +586,3 @@ Let us finish by stating a famous open problem in finite geometry.
 \begin{thm}{Conjecture}
 The order of any finite projective plane is a power of a prime number.
 \end{thm}
-
-\addtocontents{toc}{\protect\end{quote}}

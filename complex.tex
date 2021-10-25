@@ -1,11 +1,9 @@
 \chapter{Complex coordinates}\label{chap:complex}
-\addtocontents{toc}{\protect\begin{quote}}
 
 In this chapter, we give an interpretation of inversive geometry using complex coordinates.
 The results of this chapter lead to a deeper understanding of both concepts.
 
-\section*{Complex numbers}
-\addtocontents{toc}{Complex numbers.}
+\section{Complex numbers}
 
 Informally,
 a complex number is a number that can be put in the form 
@@ -41,8 +39,7 @@ to write the pair $(x,y)$.
 \eqlbl{eq:comlex+x}
 \] 
 
-\section*{Complex coordinates}
-\addtocontents{toc}{Complex coordinates.}
+\section{Complex coordinates}
 
 Recall that one can think of the Euclidean plane
 as the set of all pairs of real numbers $(x,y)$ equipped with the metric 
@@ -60,9 +57,8 @@ with complex coordinates $0$, $1$, and $i$, then $\measuredangle EOI=\pm\tfrac\p
 Further, we assume that $\measuredangle EOI=\tfrac\pi2$;
 if not, one has to change the direction of the $y$-coordinate. 
 
-
-\section*{Conjugation and absolute value}
-\addtocontents{toc}{Conjugation and absolute value.}
+\section{Conjugation and absolute value}
+\label{sec:complex-conjugation}
 
 Let $z=x+i\cdot y$; 
 that is, $z$ is a complex number with real part $x$ and imaginary part $y$.
@@ -133,8 +129,7 @@ for $u,v,w\in\mathbb{C}$ and the triangle inequality
 to prove Ptolemy's inequality (\ref{ptolemy-inq}).
 \end{thm}
 
-\section*{Euler's formula}
-\addtocontents{toc}{Euler's formula.}
+\section{Euler's formula}
 
 Let $\alpha$ be a real number.
 The following identity is called \index{Euler's formula}\emph{Euler's formula}:
@@ -192,8 +187,7 @@ If you know the power series for the sine, cosine, and exponential function, the
 &= \cos \alpha  +  i\cdot\sin \alpha.
 \end{align*}
 
-\section*{Argument and polar coordinates}
-\addtocontents{toc}{Argument and polar coordinates.}
+\section{Argument and polar coordinates}
 
 As before, we assume that $O$ and $E$ are the points with complex coordinates $0$ and $1$ respectively.
 
@@ -271,8 +265,7 @@ Use this observation to show that Theorem~\ref{thm:inscribed-quadrangle-C}
 is indeed a reformulation of Corollary~\ref{cor:inscribed-quadrangle}.
 \end{thm}
 
-\section*{Method of complex coordinates}
-\addtocontents{toc}{Method of complex coordinates.}
+\section{Method of complex coordinates}
 
 The following problem illustrates the method of complex coordinates.
 
@@ -363,8 +356,7 @@ Denote by $a$, $b$, $u$, $v$, and $w$ the complex coordinates of $A$, $B$, $U$, 
  
 \end{thm}
 
-\section*{Fractional linear transformations}
-\addtocontents{toc}{Fractional linear transformations.}
+\section{Fractional linear transformations}
 
 \begin{thm}{Exercise}\label{ex:movie}
 Watch the video ``Möbius transformations revealed'' by Douglas Arnold and Jonathan Rogness.
@@ -389,14 +381,9 @@ $$f(-d/c) = \infty
 \quad
 f(\infty) = a/c;$$
 and if $c=0$ we assume
-$$f(\infty) = \infty.$$
+$f(\infty) = \infty$.
 
-
-
-
-
-\section*{Elementary transformations}
-\addtocontents{toc}{Elementary transformations.}
+\section{Elementary transformations}
 
 The following three types of fractional linear transformations are called \index{elementary transformation}\emph{elementary}:
 \begin{enumerate}
@@ -515,12 +502,10 @@ Show that the inverse of a fractional linear transformation is a fractional line
 \begin{thm}{Exercise}\label{ex:3-point-Mob}
 Given distinct values $z_0,z_1,z_\infty\in \hat{\mathbb{C}}$,
 construct a fractional linear transformation $f$ such that 
-\[f(z_0)=0,
-\quad 
-f(z_1)=1
-\quad\text{and}\quad 
-f(z_\infty)\z=\infty.\]
-
+$f(z_0)=0$,
+$f(z_1)=1$,
+and 
+$f(z_\infty)\z=\infty$.
 Show that such a transformation is unique.
 \end{thm}
 
@@ -530,10 +515,7 @@ Show that any inversion is a composition of the complex conjugation and a fracti
 Use Theorem~\ref{thm:inversions-inversive} to conclude that any inversive transformation is either fractional linear transformation or a complex conjugate to a fractional linear transformation.
 \end{thm}
 
-
-
-\section*{Complex cross-ratio}
-\addtocontents{toc}{Complex cross-ratio.}
+\section{Complex cross-ratio}
 
 Let $u$, $v$, $w$, and $z$ be four distinct complex numbers.
 Recall that 
@@ -554,9 +536,7 @@ Note that
 \begin{align*}
 \frac{UW\cdot VZ}{VW\cdot UZ}&=|(u,v;w,z)|,
 \\
-\measuredangle WUZ +\measuredangle ZVW&=\arg\frac{u-w}{u-z}+\arg\frac{v-z}{v-w}\equiv 
-\\
-&\equiv \arg(u,v;w,z).
+\measuredangle WUZ +\measuredangle ZVW&=\arg\frac{u-w}{u-z}+\arg\frac{v-z}{v-w}\equiv \arg(u,v;w,z).
 \end{align*}
 These equations make it possible to reformulate Theorem~\ref{lem:inverse-4-angle} using the complex coordinates
 the following way:
@@ -587,8 +567,8 @@ $$
 
 \end{thm}
 
-\section*{Schwarz--Pick theorem}
-\addtocontents{toc}{Schwarz--Pick theorem.}
+\section{Schwarz--Pick theorem}
+
 The following theorem shows 
 that the metric in the conformal disc model naturally appears in other branches of mathematics.
 We do not give its proof, but it can be found in any textbook on geometric complex analysis.
@@ -626,9 +606,9 @@ Show that if a fractional linear transformation $f$ appears in the equality case
 where $v$ and $w$ are complex constants such that $|v|>|w|$.
 \end{thm}
 
+Recall that hyperbolic tangent $\tanh$ is defined in Section~\ref{sec:hyp-trig}.
 
 \begin{thm}{Exercise}\label{ex:schwarz-tanh}
-Recall that hyperbolic tangent $\tanh$ is defined on page~\pageref{hyperbolic tangent}.
 Show that 
 \[\tanh [\tfrac12\cdot d_h(z,w)]=\left|\frac{z-w}{1-z\cdot\bar w}\right|.\]
 Conclude that the inequality in Schwarz--Pick theorem can be rewritten as
@@ -636,7 +616,6 @@ Conclude that the inequality in Schwarz--Pick theorem can be rewritten as
 where
 $z'=f(z)$ and $w'=f(w)$.
 \end{thm}
-
 
 \begin{thm}{Exercise}\label{ex:schwarz}
 Show that the Schwarz lemma stated below 
@@ -655,10 +634,3 @@ such that
 $f(z)=u\cdot z$
 for any $z\in\mathbb{D}$.
 \end{thm}
-
-
-
-
-
-
-\addtocontents{toc}{\protect\end{quote}}
