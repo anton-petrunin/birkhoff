@@ -368,13 +368,15 @@ Assume that a function $s$
 returns a nonnegative real number $s(a,b)$ 
 for any pair of positive real numbers $(a,b)$ 
 and it satisfies the following identities:
-\begin{align*}
+\[\begin{aligned}
 s(1,1)&=1;
 \\
 s(a,b+c)&=s(a,b)+s(a,c)
 \\
 s(a+b,c)&=s(a,c)+s(b,c)
-\end{align*}
+\end{aligned}
+\eqlbl{3s}
+\]
 for any $a,b,c>0$.
 Then 
 \[s(a,b)=a\cdot b\] 
@@ -388,22 +390,24 @@ Note that if $a>a'$ and $b>b'$ then
 \[s(a,b)\ge s(a',b').\eqlbl{s(a,b)>s(a',b')}\]
 Indeed, since $s$ returns nonnegative numbers, we get that
 \begin{align*}
-s(a,b)&=s(a',b)+s(a-a',b)\ge
+s(a,b)&=s(a',b)+s(a-a',b)\ge 
 \\
 &\ge s(a',b)=
 \\
-&\ge s(a',b')+s(a',b-b')\ge
+&= s(a',b')+s(a',b-b')\ge
 \\
 &\ge s(a',b').
 \end{align*}
 
-Applying the second and third identity few times we get that
+Applying the second and third identity in \ref{3s} few times we get that
 \begin{align*}
-s(a,m\cdot b)=s(m\cdot a,b)=m\cdot s(a,b)
+m\cdot s(a,b)&=s(a,m\cdot b)=
+\\&=s(m\cdot a,b)
 \end{align*}
 for any positive integer $m$. Therefore
 \begin{align*}
-s(\tfrac kl,\tfrac mn)&=k \cdot s(\tfrac 1l,\tfrac mn)=
+s(\tfrac kl,\tfrac mn)
+&=k \cdot s(\tfrac 1l,\tfrac mn)=
 \\
 &=k\cdot m \cdot s(\tfrac 1l,\tfrac 1n)=
 \\

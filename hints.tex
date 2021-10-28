@@ -1229,7 +1229,9 @@ Set $a=AB$, $b=BC$, $c=CD$ and $d=DA$; we need to show that $c\ge a$.
 \includegraphics{mppics/pic-349}
 \end{figure}
 
-Mimic the proof of \ref{thm:3sum-a} for the shown fence made from copies of quadrangle $ABCD$. 
+Mimic the proof of \ref{thm:3sum-a} for the shown fence made from copies of quadrangle $ABCD$.
+
+(Alternatively, use \ref{thm:3sum-a} to show that $|\measuredangle CBD|\ge|\measuredangle ADB|$ and use it to show that $c\ge a$.)
 
 \parbf{\ref{ex:defect}.}
 Note that 
@@ -1302,21 +1304,17 @@ hold if $0<a<\tfrac12$.
 \parbf{\ref{ex:h-perp-unique}.} 
 Spell the meaning of terms ``perpendicular'' and ``h-line'' and then apply \ref{ex:construction-perp-clines}.
 
-\parbf{\ref{ex:h-circle=circle}.}
-Let $X$ and $Y$ denote the points of intersections of $(OP)$ and~$\Delta_\rho'$.
-Consider an isometry $(OP)\to\mathbb{R}$ such that $O$ corresponds to $0$.
-Let $x$, $y$, $p$, and $\hat p$ denote the real numbers corresponding to $X$, $Y$, $P$, and~$\hat P$.
-
-We can assume that $p>0$ and $x\z<y$.
-Note that $\hat p=\tfrac{x+y}2$ and
-\[\frac{(1+x)\cdot(1-p)}{(1-x)\cdot(1+p)}=\frac{(1+p)\cdot(1-y)}{(1-p)\cdot(1+y)}.\]
-It remains to show that all this implies $0<\hat p <p$.
+{
 
 \begin{wrapfigure}{r}{34mm}
-\vskip-8mm
+\vskip-6mm
 \centering
 \includegraphics{mppics/pic-350}
 \end{wrapfigure}
+
+\parbf{\ref{ex:h-circle=circle}.}
+Choose the vertices $P$, $Q$ and $R$ on a Euclidean circle that intersects the absolute and is not orthogonal to it.
+Apply~\ref{lem:h-circle=circle}.
 
 \parbf{\ref{ex:3-h-lines}.} Look at the diagram and think.
 
@@ -1324,6 +1322,8 @@ It remains to show that all this implies $0<\hat p <p$.
 By \ref{cor:invese-comp} and \ref{lem:inverse-4-angle},
 the right-hand sides in the identities 
 survive under an inversion in a circle perpendicular to the absolute.
+
+}
 
 As usual, we assume that the absolute is a unit circle.
 Suppose that $O$ denotes the h-midpoint of $[PQ]_h$.

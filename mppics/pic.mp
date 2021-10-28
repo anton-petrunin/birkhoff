@@ -3132,6 +3132,50 @@ label.lft (btex $Q$ etex, z.Q);
 
 endfig;
 
+beginfig(199)
+save u;
+u:=1cm;
+
+z.O=origin;
+z.P=(1.1,.6)*u;
+z.R=(1.2,.2)*u;
+z.A=(1.4,0)*u;
+z.T=z.A rotated 55;
+z.Q=altitude(z.O,z.T,z.A);
+z.Z=whatever*z.Q=z.T zscaled (1,whatever);
+z.Gamma=z.T rotatedaround(z.Z,-20);
+z.PP=inversion(z.Z,abs(z.T-z.Z))(z.P);
+z.RR=inversion(z.Z,abs(z.T-z.Z))(z.R);
+
+fill circle(z.O,z.A) withcolor .5;
+
+path p,q,pp,qq;
+p=arc(z.Z,z.P,z.Q) cutbefore z.P;
+q=arc(z.Z,z.R,z.Q) cutbefore z.R;
+pp=z.O--z.PP;
+qq=z.O--z.RR;
+
+draw arc(z.Gamma,z.T,z.Gamma yscaled -1);
+draw p;
+draw q;
+draw pp;
+draw qq;
+
+draw circle(z.Q,7) cutbefore q cutafter p;
+draw circle(z.O,7) cutbefore pp cutafter qq;
+
+dOt z.O,z.Q,z.Z,z.P,z.R,z.PP,z.RR;
+
+label.ulft (btex $P$ etex, z.P);
+label.bot (btex $Q$ etex, z.Q);
+label.bot (btex $R$ etex, z.R);
+label.bot (btex $Z$ etex, z.Z);
+label.bot (btex $O$ etex, z.O);
+label.rt (btex $P'$ etex, z.PP);
+label.lft (btex $R'$ etex, z.RR);
+label.urt (btex $\Gamma$ etex, z.Gamma);
+endfig;
+
 beginfig(200)
 save u;
 u:=2cm;

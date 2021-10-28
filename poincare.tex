@@ -208,7 +208,7 @@ x&=\frac{e^y-1}{e^y+1}.
 \end{thm}
 
 Observe that according to lemma, $OP_h\to \infty$ as $OP\to 1$.
-That is if $P$ approaches absolute in Euclidean sense, it escapes to infinity in the h-sense.
+That is, if $P$ approaches absolute in Euclidean sense, it escapes to infinity in the h-sense.
 
 \begin{wrapfigure}[6]{o}{38mm}
 \vskip-4mm
@@ -313,11 +313,12 @@ that is, the center $\hat P$ lies on~$(OP)$.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:h-circle=circle}
-Assume $P$, $\hat P$, and $O$ are as in the Lemma~\ref{lem:h-circle=circle} and $P\z\ne O$.
-Show that $\hat P\in [OP]$.
+Describe a nondegenerate h-triangle $\triangle_hPQR$ that does not have an h-circumcircle;
+that is, its vertices $P$, $Q$, and $R$ do not lie on an h-circle nor h-line.
 \end{thm}
 
-\section[Axioms]{Axiom~\ref{def:birkhoff-axioms:0}}
+\section[Axioms]{Axioms}
+\subsection*{Axiom~\ref{def:birkhoff-axioms:0}}
 
 Evidently, the h-plane contains at least two points.
 Therefore, to show that Axiom~\ref{def:birkhoff-axioms:0} holds in the h-plane, we need to show that the h-distance defined in Section~\ref{sec:conformal-model} is a metric;
@@ -439,7 +440,7 @@ $$PT_h=PQ_h+QR_h.$$
 Hence the claim follows.
 \qeds
 
-\section*{Axiom~\ref{def:birkhoff-axioms:1}}
+\subsection*{Axiom~\ref{def:birkhoff-axioms:1}}
 
 Note that once the following claim is proved,
 Axiom~\ref{def:birkhoff-axioms:1} 
@@ -473,7 +474,7 @@ The converse follows from Claim~\ref{clm:h-dist+trig-inq}.
 \qeds
 
 
-\section*{Axiom~\ref{def:birkhoff-axioms:2}}
+\subsection*{Axiom~\ref{def:birkhoff-axioms:2}}
 
 Note that the first part of Axiom~\ref{def:birkhoff-axioms:2} follows directly from the definition of the h-angle measure (defined in Section~\ref{sec:conformal-model}).
 It remains to show that $\measuredangle_h$ satisfies the conditions \ref{def:birkhoff-axioms:2a}, \ref{def:birkhoff-axioms:2b}, and \ref{def:birkhoff-axioms:2c} (see Section~\ref{sec:axioms}).
@@ -515,17 +516,24 @@ such that $Q\ne P$, $Q\ne R$, and $\measuredangle_h P Q R\ne\pi$.
 
 \parit{Proof.}
 Suppose that $O$ denotes the center of the absolute.
-We can assume that $Q$ is distinct from~$O$.
+We can assume that $Q$ is distinct from~$O$;
+the latter follows from the main observation.
 
-Suppose that $Z$ denotes the inverse of $Q$ in the absolute;
-suppose that $\Gamma$ denotes the circle perpendicular to the absolute and centered at~$Z$.
+\begin{wrapfigure}{o}{45mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-199}
+\end{wrapfigure}
+
+Let $Z$ be the inverse of $Q$ in the absolute;
+denote by $\Gamma$ the circle centered at~$Z$ and perpendicular to the absolute.
 According to Lemma~\ref{lem:P-->O},
 the point $O$ is the inverse of $Q$ in~$\Gamma$.
 
-Let $P'$ and $R'$ denote the inversions in $\Gamma$ of the points $P$ and $R$ respectively.
+Let $P'$ and $R'$ be the inversions in $\Gamma$ of the points $P$ and $R$ respectively.
 Note that the point $P'$ is completely determined by $Q$ and $P$.
-Moreover, the map $(Q,P)\mapsto P'$ is continuous at any pair of points $(Q,P)$ such that $Q\ne O$.
-The same is true for the map $(Q,R)\mapsto R'$
+Moreover, the map $(Q,P)\mapsto P'$ is continuous at any pair of h-points $(Q,P)$ such that $Q\ne O$.
+The same is true for the map $(Q,R)\mapsto R'$.
 
 According to the main observation 
 $$\measuredangle_h P Q R\equiv -\measuredangle_h P' O R'.$$
@@ -534,7 +542,7 @@ the maps $(Q,P)\mapsto P'$, $(Q,R)\mapsto R'$ are continuous,
 the claim follows from the corresponding axiom of the Euclidean plane.
 \qeds
 
-\section*{Axiom~\ref{def:birkhoff-axioms:3}}
+\subsection*{Axiom~\ref{def:birkhoff-axioms:3}}
 
 The following claim says that Axiom~\ref{def:birkhoff-axioms:3} holds in the h-plane.
 
@@ -577,7 +585,7 @@ in particular, the h-triangles
 $\triangle_h P Q R$ and $\triangle_h P' Q R'$ are h-congruent.
 \qeds
 
-\section*{Axiom h-$\!$\ref{def:birkhoff-axioms:4}}
+\subsection*{Axiom h-$\!$\ref{def:birkhoff-axioms:4}}
 
 Finally, we need to check that the Axiom~h-$\!$\ref{def:birkhoff-axioms:4} in Section~\ref{sec:unprovable} holds;
 that is, we need to prove the following claim.
@@ -585,7 +593,7 @@ that is, we need to prove the following claim.
 {
 
 \begin{wrapfigure}{o}{30mm}
-\vskip-0mm
+\vskip-4mm
 \centering
 \includegraphics{mppics/pic-202}
 \end{wrapfigure}
