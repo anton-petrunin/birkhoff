@@ -56,7 +56,7 @@ basic circle is shown.</P>
 <Point name="P1" n="0" hidden="true" parameter="true" x="0.0" y="0.0">Point at 0.0, 0.0</Point>
 <Circle name="k" n="1" mainparameter="true" midpoint="P1">???</Circle>
 <Point name="P16" n="2" mainparameter="true" x="1.2081475452336594" y="1.7053522738256321">Point at 1.20815, 1.70535</Point>
-<Point name="P17" n="3" mainparameter="true" x="2.855222426515075" y="3.6112532078798423">Point at 2.85522, 3.61125</Point>
+<Point name="P17" n="3" mainparameter="true" x="2.855222426515075" y="3.611253207879842">Point at 2.85522, 3.61125</Point>
 <Line name="g1" n="4" hidden="super" from="P1" to="P16">Gerade durch P1 und P16</Line>
 <Midpoint name="M1" n="5" hidden="super" first="P1" second="P16">Mitte zwischen P1 und P16</Midpoint>
 <Plumb name="l1" n="6" hidden="super" point="M1" line="g1" valid="true">Lot durch M1 zu g1</Plumb>
@@ -450,8 +450,8 @@ the intersection in the green circle.</P>
 <Objects>
 <Point name="Mc" n="0" hidden="true" x="0" actx="0.0" y="0" acty="0.0" fixed="true">Point at &quot;0&quot;, &quot;0&quot;</Point>
 <Circle name="k" n="1" color="1" type="thin" background="true" fixed="1+5" midpoint="Mc" filled="true">Kreis um Mc mit Radius 1+5</Circle>
-<Point name="P2" n="1" hidden="true" x="-2.651288831945184" y="-3.1143388598418174" shape="circle">Point at -2.65129, -3.11434</Point>
-<Point name="P3" n="2" hidden="true" x="0.9746160292863646" y="-2.735159266510413" shape="circle">Point at 0.97462, -2.73516</Point>
+<Point name="P2" n="1" hidden="true" x="-2.6512888319451844" y="-3.1143388598418174" shape="circle">Point at -2.65129, -3.11434</Point>
+<Point name="P3" n="2" hidden="true" x="0.9746160292863647" y="-2.735159266510413" shape="circle">Point at 0.97462, -2.73516</Point>
 <Line name="l1" n="3" hidden="super" from="Mc" to="P2">Line through Mc and P2</Line>
 <Midpoint name="M1" n="4" hidden="super" first="Mc" second="P2">Midpoint between Mc and P2</Midpoint>
 <Plumb name="p1" n="5" hidden="super" point="M1" line="l1" valid="true">Perpendicular line through M1 to l1</Plumb>
