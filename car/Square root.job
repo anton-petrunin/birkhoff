@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CaR version="20150810">
+<Construction job="true" last="(a,0)" target1="$(\sqrt{a},0)$">
+<Window x="0.0" y="0.0" w="8.0"/>
+<Objects>
+<Point name="(0,0)" n="0" showname="true" x="-5.0" y="0.0" shape="circle">Point at -5.0, 0.0</Point>
+<Point name="(1,0)" n="1" showname="true" x="-3.0" y="0.0" shape="circle">Point at -3.0, 0.0</Point>
+<Line name="a" n="2" from="(0,0)" to="(1,0)">Line through P1 and P2</Line>
+<PointOn name="(a,0)" n="3" showname="true" on="a" alpha="9.210526315789474" x="4.210526315789474" y="0.0" shape="circle">Point on a</PointOn>
+<Circle name="c1" n="8" through="(1,0)" midpoint="(0,0)" acute="true">Circle around P1 through P2</Circle>
+<Intersection name="I2" n="9" first="a" second="c1" shape="circle" which="second">Intersection between l1 and c1</Intersection>
+<Circle name="c2" n="16" hidden="super" through="(a,0)" midpoint="I2" acute="true">Circle around I2 through (a,0)</Circle>
+<Circle name="c3" n="17" hidden="super" through="I2" midpoint="(a,0)" acute="true">Circle around (a,0) through I2</Circle>
+<Intersection name="I3" n="18" hidden="super" first="c2" second="c3" which="second">Intersection between c2 and c3</Intersection>
+<Intersection name="I4" n="19" hidden="super" first="c3" second="c2" which="second">Intersection between c3 and c2</Intersection>
+<Line name="l2" n="20" from="I3" to="I4">Line through I3 and I4</Line>
+<Intersection name="I5" n="21" first="l2" second="a" shape="circle">Intersection between l2 and l1</Intersection>
+<Circle name="c4" n="24" through="(a,0)" midpoint="I5" acute="true">Circle around I5 through (a,0)</Circle>
+<Plumb name="p1" n="27" point="(0,0)" line="a" valid="true">Perpendicular line through P1 to l1</Plumb>
+<Intersection name="I6" n="30" first="p1" second="c4" shape="circle" which="first">Intersection between p1 and c4</Intersection>
+<Circle name="c5" n="31" through="I6" midpoint="(0,0)" acute="true">Circle around P1 through I6</Circle>
+<Intersection name="$(\sqrt{a},0)$" n="4" showname="true" first="a" second="c5" shape="circle" which="first">Intersection between l1 and c5</Intersection>
+</Objects>
+</Construction>
+</CaR>
