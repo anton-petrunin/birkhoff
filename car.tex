@@ -1,20 +1,17 @@
 \chapter{Geometric constructions}
 \label{chap:car}
 
-Geometric constructions have great pedagogical value 
-as an introduction to mathematical proofs.
-The geometric constructions were introduced at the end of Chapter~\ref{chap:perp}
-and since that moment they were used everywhere in the book.
 
-In this chapter, we briefly discuss classical geometric constructions.
+The geometric constructions were introduced at the end of Chapter~\ref{chap:perp} and used everywhere since then.
+They have a great pedagogical value as an introduction to mathematical proofs.
+
+In this chapter, we discuss briefly the theory behind geometric constructions.
+
 
 %\input{brahmagupta.tex}
 %\input{car-kiselyov.tex}
 
 \section{Classical problems}
-
-In this section, we list a couple of classical construction problems;
-each known for more than a thousand years. 
 
 The solutions of the following two problems are quite nontrivial.
 
@@ -22,31 +19,32 @@ The solutions of the following two problems are quite nontrivial.
 Construct an inscribed quadrangle with given sides.
 \end{thm}
 
-
- 
-\begin{thm}{Problem of Apollonius} Construct a circle that is tangent to three given circles.
-\end{thm}
-
 {
 
-\begin{wrapfigure}{r}{22mm}
+\begin{wrapfigure}[7]{r}{22mm}
 \vskip-10mm
 \centering
 \includegraphics{mppics/pic-284}
 \end{wrapfigure}
 
-Several solutions of this problem are presented in \cite{hadamard}. 
-The following exercise is a simplified version of the problem of Apollonius, which is still nontrivial.
-
-\begin{thm}{Exercise}\label{ex:simple-apollonius}
-Construct a circle that passes thru a given point and is tangent to two intersecting lines.
+Several solutions of the following problem are presented in \cite{hadamard}.
+ 
+\begin{thm}{Problem of Apollonius} Construct a circle that is tangent to three given circles.
 \end{thm}
+
+Play Euclidea \cite{euclidea} to become an expert in classical geometric constructions;
+it is an addictive interactive geometry game.
 
 }
 
+\section{Impossible constructions}
 
-The following three problems cannot be solved in principle; 
-that is, the needed compass-and-ruler construction does not exist.
+Impossible construction problems cannot be solved in principle; 
+that is, the required compass-and-ruler construction does not exist.
+The following problems have existed for about two thousand years;
+their impossibility was proved only in the $19^\text{th}$ century.
+The method used in the proofs is indicated in the next section.
+
 
 \begin{thm*}{Doubling the cube}
 Construct the side of a new cube 
@@ -85,8 +83,7 @@ $n$ is the product of a power of $2$ and any number of distinct Fermat primes.
 \end{thm}
 
 A \index{Fermat prime}\emph{Fermat prime} is a prime number of the form $2^k+1$ for some integer~$k$.
-Only five Fermat primes are known  today:
-$$3, 5, 17, 257, 65537.$$
+Only five Fermat primes are known  today: $3$, $5$, $17$, $257$, and $65537$.
 For example, 
 \begin{itemize}
 \item one can construct a regular 340-gon since $340=2^2\cdot 5\cdot 17$ and $5$, as well as $17$, are Fermat primes;
@@ -96,11 +93,7 @@ altho $9=3\cdot 3$ is a product of two Fermat primes,
 these primes are not distinct.
 \end{itemize}
 
-\medskip
-
-The impossibility of these constructions 
-was proved only in the $19^\text{th}$ century.
-The method used in the proofs is indicated in the next section.
+%\input{car-kiselyov.tex}
 
 \section{Constructible numbers}
 
@@ -113,9 +106,9 @@ We may always assume that the initial configuration has at least two points;
 if not, we could add one or two points to the configuration.
 Moreover, applying a scaling to the whole plane, we can assume that the first two points in the initial configuration lie at distance 1 from each other.
 
-In this case, we can choose a  coordinate system, such that one of the initial points is the origin $(0,0)$ and yet another initial point has the coordinates~$(1,0)$.
-In this coordinate system,
-the initial configuration of $n$ points is described by 
+In this case, we can choose a  coordinate system, 
+so that the points $(0,0)$ and $(1,0)$ are among the initial points;
+so the initial configuration of $n$ points is described by 
 $2\cdot n-4$ numbers --- their coordinates $x_3,y_3,\z\dots,x_n,y_n$.
 
 \medskip
@@ -152,6 +145,12 @@ the square root ``$\sqrt{\phantom{a}}\,$'' is not needed.
 
 On the other hand, it is easy to make compass-and-ruler constructions that produce segments of the lengths $a+b$ and $a-b$ from two given segments of lengths $a>b$.
 
+\begin{wrapfigure}{r}{37mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-286}
+\end{wrapfigure}
+
 To perform ``$\cdot$'', ``$/\,$''
 and ``$\sqrt{\phantom{a}}\,$'' consider the following diagram:
 let $[AB]$ be a diameter of a circle; 
@@ -161,35 +160,26 @@ Therefore
 $$\triangle ABC\sim\triangle ACD\sim \triangle CBD.$$
 It follows that $AD\cdot BD=CD^2$. 
 
-{
-
-\begin{wrapfigure}[7]{r}{37mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-286}
-\end{wrapfigure}
-
 Using this diagram, one should guess a solution to the following exercise.
 
 \begin{thm}{Exercise}\label{ex:a2/b}
 Given two line segments with lengths $a$ and $b$, give a ruler-and-compass construction of a segments with lengths $\tfrac {a^2}b$ and $\sqrt{a\cdot b}$.
 \end{thm}
 
+
 Taking $1$ for $a$ or $b$ above, we can produce 
 $\sqrt a$, $a^2$, $\tfrac1b$.
 Combining these constructions we can produce
 $a\cdot b=(\sqrt{a\cdot b})^2$,
 $\tfrac ab=a\cdot\tfrac 1b$.
-In other words we produced a \index{compass-and-ruler calculator}\emph{compass-and-ruler calculator} which can do ``$+$'', ``$-$'', ``$\cdot$'', ``$/\,$'', and ``$\sqrt{\phantom{a}}\,$''.
+In other words we produced a \index{compass-and-ruler calculator}\emph{compass-and-ruler calculator} which can do ``$+$'', ``$-$'', ``$\cdot$'', ``$/\,$'', and the square root ``$\sqrt{\phantom{a}}\,$''.
 
-}
-
-The discussion above gives a sketch of the proof of the following theorem:
+The discussion above sketches a proof of the following theorem:
  
 \begin{thm}{Theorem}\label{thm:constructible-numbers}
 Assume that the initial configuration of geometric construction is given by the points $A_1=(0,0)$, $A_2=(1,0)$, $A_3\z=(x_3,y_3),\z\dots,A_n=(x_n,y_n)$.
 Then a point $X=(x,y)$ can be constructed using a compass-and-ruler construction
-if and only if both coordinates $x$ and $y$ can be expressed from the integer numbers and $x_3$, $y_3$, $x_4$, $y_4,\z\dots,x_n,y_n$ using the arithmetic operations ``$+$'', ``$-$'', ``$\cdot$'', ``$/\,$'', and the square root ``$\sqrt{\phantom{a}}\,$''.
+if and only if both coordinates $x$ and $y$ can be expressed from the integer numbers and $x_3$, $y_3$, $x_4$, $y_4,\z\dots,x_n,y_n$ using the arithmetic operations ``$+$'', ``$-$'', ``$\cdot$'', ``$/\,$'', and ``$\sqrt{\phantom{a}}\,$''.
 \end{thm}
 
 The numbers that can be expressed from the given numbers using the arithmetic operations and the square root ``$\sqrt{\phantom{a}}\,$'' are called \index{constructible numbers}\emph{constructible};
@@ -199,12 +189,14 @@ if the list of given numbers is not given, then we can only use the integers.
 The theorem above translates any compass-and-ruler construction problem into a purely algebraic language.
 For example:
 \begin{itemize}
-\item The impossibility of a solution for doubling the cube problem states that $\sqrt[3]{2}$ is not a constructible number.
+\item The impossibility of the doubling the cube problem states that $\sqrt[3]{2}$ is not a constructible number.
 That is, $\sqrt[3]{2}$ cannot be expressed thru integers using
 ``$+$'', ``$-$'', ``$\cdot$'', ``$/\,$'', and ``$\sqrt{\phantom{a}}\,$''.
 
-\item The impossibility of a solution for squaring the circle states that 
+\item The impossibility of the squaring the circle states that 
 $\sqrt{\pi}$, or equivalently $\pi$, is not a constructible number.
+
+\item The impossibility of the angle trisection states that $\cos\tfrac\alpha3$ is not a constructible number from $\cos\alpha$.
 
 \item The Gauss--Wantzel theorem says for which integers $n$ the number 
 $\cos\tfrac{2\cdot\pi}n$ is constructible.
@@ -227,47 +219,71 @@ In the next section, we discuss similar but simpler examples of impossible const
 \section{Set-square constructions}
 
 {
+
 \begin{wrapfigure}[5]{r}{26mm}
-\vskip-8mm
+\vskip-12mm
 \centering
 \includegraphics{mppics/pic-288}
 \end{wrapfigure}
 
-A set-square is a construction tool shown in the picture ---
+A \index{set-square}\emph{set-square} (or 45°-\emph{set-square}) is a construction tool shown in the picture ---
 it can produce a line thru a given point
 that makes the angles
 $\tfrac\pi2$ or $\pm\tfrac\pi4$ 
-to a given line and it can be also used as a ruler;
-that is, it can produce a line thru a given pair of points.
+to a given line plus it can be used as a ruler.
 
 \begin{thm}{Exercise}\label{ex:trisect-set-square}
 Trisect a given segment with a set-square.
 \end{thm}
 
-
-Let us consider set-square constructions.
-Following the same lines as in the previous section, we can define {}\emph{set-square constructible numbers}
-and prove the following analog of Theorem~\ref{thm:constructible-numbers}:
+The following theorem is an analog of Theorem~\ref{thm:constructible-numbers} for the set-square constructions.
 
 }
 
-\begin{thm}{Theorem}
+\begin{thm}{Theorem}\label{thm:set-square-constructible-numbers}
 Assume that the initial configuration of a geometric construction is given by the points $A_1=(0,0)$, $A_2=(1,0)$, $A_3\z=(x_3,y_3),\z\dots,A_n=(x_n,y_n)$.
 Then a point $X=(x,y)$ can be constructed using a set-square construction
 if and only if both coordinates $x$ and $y$ can be expressed from the integer numbers and $x_3$, $y_3$, $x_4$, $y_4,\z\dots,x_n$, $y_n$ using the arithmetic operations ``$+$'', ``$-$'', ``$\cdot$'', and ``$/$'' only. 
 \end{thm}
- 
-Let us apply this theorem to show the impossibility of some constructions with a set-square.
+
+The proof of this theorem is close to Theorem~\ref{thm:constructible-numbers}.
+(The ``if'' part nearly follows from Exercise~\ref{ex:R-hom}.
+The ``only-if'' part is proved by induction on number of elementary constructions; one needs to write equation for each line in a set-square construction and verify that an intersection point of such lines satisfies the theorem.)
+
+Unlike Theorem~\ref{thm:constructible-numbers} it can be applied directly to show the impossibility of some constructions with a set-square --- no need to use the field theory.
 
 Note that if all the coordinates $x_3,y_3,\dots,x_n,y_n$ are rational numbers, then the theorem above implies that with a set-square, one can only construct the points with rational coordinates.
 A point with both rational coordinates is called \index{rational point}\emph{rational},
 and if at least one of the coordinates is irrational, then the point is called \index{irrational point}\emph{irrational}.
 
 \begin{thm}{Exercise}\label{ex:equilateral triangle}
-Show that an equilateral triangle in the Euclidean plane has at least one irrational point.
-
-Conclude that with a set-square, one cannot construct an equilateral triangle with a given base.
+Use it to show that with a set-square, one cannot construct an equilateral triangle with a given base.
+(You may use that $\sqrt{3}$ is an irrational number.)
 \end{thm}
+
+{
+
+\begin{wrapfigure}{r}{20mm}
+\vskip-8mm
+\centering
+\includegraphics{mppics/pic-289}
+\end{wrapfigure}
+
+
+\begin{thm}{Exercise}\label{ex:set-square-bisect}
+Show that it is impossible to bisect a given angle with a set-square only.
+\end{thm}
+
+\begin{thm}{Advanced exercise}\label{ex:90-60-30}
+Consider another tool --- a 30°-set-square that can produce a line thru a given point
+that makes the angles
+$\tfrac\pi2$, $\pm\tfrac\pi3$, $\pm\tfrac\pi6$
+to a given line and can be used as a ruler.
+
+{Show that with it is impossible to construct a square with a 30°-set-square.}
+\end{thm}
+
+}
 
 \section{Verifications}
 \label{sec:verification}
@@ -276,7 +292,8 @@ Suppose we need to verify that a given configuration is defined by a certain pro
 Is it possible to do this task by a geometric construction with given tools?
 We assume that we can \emph{verify} that two constructed points coincide.
 
-Evidently, if a configuration is constructible, then it is verifiable --- simply repeat the construction and check if the result is the same.
+Evidently, if a configuration is constructible, then it is \index{verifiable construction}\emph{verifiable}%
+\footnote{Adopting the terminology of computability theory, we may also say that such a construction is \index{decidable construction}\emph{decidable}.} --- simply repeat the construction and check if the result is the same.
 Some nonconstuctable configurations are verifiable.
 For example, it does not pose a problem to verify that the given angle is trisected while it is impossible to trisect a given angle with ruler and compass.
 A regular 7-gon provides another example of that type --- it is easy to verify, while Gauss--Wantzel theorem states that it is impossible to construct with ruler and compass.
@@ -285,21 +302,26 @@ Since we did not prove the impossibility of angle trisection and Gauss--Wantzel 
 It is based on Exercise~\ref{ex:equilateral triangle} which states that it is impossible to construct an equilateral with set-square only.
 
 \begin{thm}{Exercise}\label{ex:equilateral triangle-verify}
-Make a set-square construction verifying that a given triangle is equilateral.
+Make a set-square construction verifying that 
+\begin{enumerate}[(a)]
+\item\label{ex:verify:triangle} a triangle is equilateral.
+\item\label{ex:verify:bisector} a line bisects an angle.
+\end{enumerate}
 \end{thm}
 
 This observation leads to a source of impossible constructions in a stronger sense --- those that are even not verifiable.
 
 The following example is closely related to Exercise~\ref{ex:circumtool}.
 Recall that a \index{circumtool}\emph{circumtool} produces a circle passing thru any given three points
-or a line if all three points lie on one line.
+or a line if all three points lie on one line;
+the \index{inversor}\emph{inversor} --- a tool that constructs an inverse of a given point in a given circline.
 
 
-\begin{thm*}{Problem} 
-Show that with a circumtool only,
+\begin{thm}{Problem}\label{prob:center-inversor+circumtool}
+Show that with a circumtool and inversor,
 it is impossible to verify that a given point is the center of a given circle~$\Gamma$.
 In particular, it is impossible to construct the center with a circumtool only.
-\end{thm*}
+\end{thm}
 
 \parbf{Remark.}
 In geometric constructions, we allow to choose some free points,
@@ -319,7 +341,8 @@ Apply an inversion in a circle perpendicular to $\Gamma$ to the whole constructi
 According to Corollary~\ref{cor:perp-inverse-clines},
 the circle
 $\Gamma$ maps to itself.
-Since the inversion sends a circline to a circline, we get that the whole  construction is mapped to an equivalent construction; 
+Recall that the inversion sends a circline to a circline (\ref{thm:inverse-cline}) and respects inversion (\ref{cor:invese-comp}).
+Therefore we get that the whole  construction is mapped to an equivalent construction; 
 that is, a constriction with a different choice of free points.
 
 According to Exercise~\ref{ex:inv-center not=center-inv}, 
@@ -370,22 +393,39 @@ It follows that the perspective projection $\Pi\to \Pi'$ with center $O$ sends $
 We say that one set of tools is \emph{stronger} than another if any configuration of points that can be constructed with the second set can be constructed with the first set as well.
 If in addition, there is a configuration constructible with the first set, but not constructible with the second, then we say that the first set is {}\emph{strictly stronger} than the second.
 Otherwise (that is, if any configuration that can be constructed with the first set can be constructed with the second), we say that the sets of tools are \emph{equivalent}. 
+Two sets of tools might be also \emph{not comparable};
+that is, there are constructions possible with the first set of tools and not possible with the second, and the other way around.
 
-For example, \emph{Mohr--Mascheroni theorem} states that compass alone is equivalent to compass and ruler.
-Note that one may not construct a line with a compass, but since we consider only configurations of points we do not have to.
+As an example, consider the following classical result:
+
+\begin{thm}{Mohr--Mascheroni theorem}
+Compass alone is equivalent to compass and ruler.
+\end{thm}
+
+Note that the theorem does \emph{not} state that one can construct a whole line with a compass alone!
+--- since we consider only configurations of points we do not have to.
 One may think that a \emph{line is constructed} if we construct two points on it.
 
 For sure compass and ruler form a stronger set than compass alone.
 Therefore Mohr--Mascheroni theorem will follow once we solve the following two construction problems:
 \begin{enumerate}[(i)]
 \item Given four points $X$, $Y$, $P$, and $Q$, construct the intersection of the lines $(XY)$ and $(PQ)$ with compass only.
-\item  Given four points $X$, $Y$, and a circle $\Gamma$, construct the intersection of the lines $(XY)$ and $\Gamma$ with compass only.
+\item Given two points $X$, $Y$, and a circle $\Gamma$, construct the intersection of the lines $(XY)$ and $\Gamma$ with compass only.
 \end{enumerate}
 Indeed, once we have these two constructions, we can do every step of a compass-and-ruler construction using a compass alone.
 
+If you wonder how such theorem can be proved, read about \emph{Peaucellier--Lipkin inversor};
+it is a planar linkage capable of transforming rotary motion into perfect straight-line motion.
+Another classical theorem that can be proved using this linkage is the so-called \emph{Poncelet--Steiner theorem};
+it states that the set of compass and ruler is equivalent to ruler alone, provided that a single circle and its center are given.
+
 \begin{thm}{Exercise}\label{ex:comparison}
-Compare the following set of tools: (a) a ruler and compass, (b) a set-square, and (c) a ruler and a parallel tool.
+Compare the following set of tools:
+(a) a ruler and compass, 
+(b) a set-square, 
+(c) a ruler and a parallel tool,
+and
+(d) circumtool and inversor.
 \end{thm}
 
-Another classical example is the so-called \emph{Poncelet--Steiner theorem};
-it states that the set of compass and ruler is equivalent to ruler alone, provided that a single circle and its center are given.
+

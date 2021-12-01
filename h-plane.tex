@@ -19,6 +19,11 @@ Further, $\phi(s)\to \pi/2$ as $s\to 0$,
 and $\phi(s)\to0$ as $s\to\infty$.
 (In Euclidean geometry, the angle of parallelism is identically equal to~$\pi/2$.)
 
+\begin{thm}{Exercise}\label{ex:lambert-parallelism}
+Suppose that $\square_hABCD$ has right h-angles at $A$, $B$, and~$C$.
+Show that $|\measuredangle_h CDA|>\phi$, where $\phi$ is the angle of parallelism of $D$ to~$(AB)_h$.
+\end{thm}
+
 \begin{wrapfigure}{o}{34mm}
 \vskip-6mm
 \centering
@@ -41,10 +46,6 @@ the dashed h-line is ultra parallel to~$\ell$.
 Show that two distinct h-lines $\ell$ and $m$ are ultraparallel if and only if they have a \emph{common perpendicular};
 that is, there is an $h$-line $n$ such that $n\perp \ell$ and $n\perp m$.
 \end{thm}
-
-
-
-
 
 
 \begin{thm}{Proposition}\label{prop:angle-parallelism}
@@ -88,6 +89,12 @@ In particular,
 $$ZX\cdot ZP=ZB^2;$$
 that is, $X$ is the inverse of $P$ in~$\Gamma$.
 
+\begin{wrapfigure}{o}{36mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-209}
+\end{wrapfigure}
+
 The inversion in $\Gamma$ is the reflection of the h-plane across~$\ell$. 
 Therefore
 \begin{align*}
@@ -98,22 +105,21 @@ PQ_h&=QX_h=
 &=\tfrac12\cdot\ln \tfrac{1+\cos\phi}{1-\cos\phi}.
 \end{align*}
 
-\begin{wrapfigure}{o}{46mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-209}
-\end{wrapfigure}
-
 The last statement follows since $\phi\z>\tfrac\beta2$ and the function 
 \[\phi\mapsto  \tfrac12\cdot\ln \tfrac{1+\cos\phi}{1-\cos\phi}\] 
 is decreasing in the interval $(0,\tfrac\pi2]$.
 \qeds
+
+\begin{thm}{Exercise}\label{ex:right-angle-parallelism} Let $\triangle_hABC$ be an h-triangle with right h-angle at $C$.
+Show that the h-distance from $C$ to $[AB]_h$ cannot exceed 1.
+\end{thm}
 
 \begin{thm}{Exercise}\label{ex:small-angle}
 Let $ABC$ be an equilateral h-triangle with side $100$.
 Show that 
 \[|\measuredangle_h ABC|<\frac1{10\,000\,000\,000}.\]
 \end{thm}
+
 
 \section{Inradius of h-triangle}
 
@@ -219,8 +225,6 @@ By the main observation (\ref{thm:main-observ}) the inversion in $\Delta$ is a m
 
 In other words, $g$ is the set of points that lie at a fixed h-distance and on the same side of~$m$.
 
-
-
 Such a curve $g$ is called 
 \index{equidistant}\emph{equidistant} to h-line~$m$.
 In Euclidean geometry, the equidistant from a line is a line;
@@ -231,9 +235,8 @@ If the circle $\Gamma$ touches the absolute from inside at one point $A$, then t
 This set is called a \index{horocycle}\emph{horocycle}.
 It also has a perfectly round shape in the sense described above.
 
-
 \begin{wrapfigure}{r}{33mm}
-\vskip-6mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-214}
 \end{wrapfigure}
@@ -318,25 +321,29 @@ $\measuredangle_hCAB=\pm\measuredangle_hC'A'B'$.
 
 \parit{Proof.}
 Note that if $AB_h=A'B'_h$, then the theorem follows from ASA.
+Assume $AB_h\ne A'B'_h$. 
+Without loss of generality, we may assume that $AB_h<A'B'_h$.
 
 \begin{wrapfigure}{o}{32mm}
 \centering
 \includegraphics{mppics/pic-218}
 \end{wrapfigure}
 
-Assume the contrary. 
-Without loss of generality, we may assume that $AB_h<A'B'_h$.
-Therefore, we can choose the point $B''\in [A'B']_h$ such that $A'B''_h=AB_h$.
+Let us choose $B''\in [A'B')_h$ and $C''\in [A'C')_h$ such that 
+$A'B''_h=AB_h$ and $A'C''_h=AC_h$.
+By SAS, $\triangle_hA'B''C''\cong\triangle_hABC$;
+it follows that $\measuredangle_h A'B''C''=\pm\measuredangle_h A'B'C'$.
+Since angles of triangle have the same signs (\ref{thm:signs-of-triug}), we have
+\[\measuredangle_h A'B''C''=\measuredangle_h A'B'C'.\eqlbl{A'B''C''congA'B'C'}\]
 
-Choose an h-half-line $[B''X)$ so that 
-\[\measuredangle_h A'B''X=\measuredangle_h A'B'C'.\]
-According to Exercise~\ref{ex:parallel-abs}, $(B''X)_h\parallel(B'C')_h$.
+Let us show that points $B''$ and $C''$ lie on the sides $[A'B']_h$ and $[A'C']_h$ respectively.
+Indeed, according to Exercise~\ref{ex:parallel-abs}, \ref{A'B''C''congA'B'C'} implies that $(B''C'')_h\z\parallel(B'C')_h$.
+In particular, $B''$ and $C''$ lie on one side from $(B'C')_h$.
+Since $AB_h<A'B'_h$ and $B''\in [A'B')_h$, we have $B''$ and $A'$ lie on one side from $(B'C')_h$.
+It follows that $C''$ and $A'$ lie on one side from $(B'C')_h$;
+therefore, $C''\in [A'C']_h$.
 
-By Pasch's theorem (\ref{thm:pasch}), $(B''X)_h$ intersects~$[A'C']_h$.
-Suppose that $C''$ denotes the point of intersection.
-
-According to ASA, $\triangle_h ABC\cong\triangle_h A'B''C''$;
-in particular, 
+Since $\triangle_h ABC\cong\triangle_h A'B''C''$, we have
 $$\defect(\triangle_h ABC)=\defect(\triangle_h A'B''C'').
 \eqlbl{eq:defect=defect}$$
 
@@ -354,12 +361,12 @@ By Theorem~\ref{thm:3sum-h}, all the defects have to be positive.
 Therefore
 $$\defect(\triangle_h A'B'C')
 >\defect(\triangle_h ABC).$$
-On the other hand,
+On the other hand, by assumption we have
 $$\begin{aligned}
 \defect(\triangle_h A'B'C')
-&= |\measuredangle_hA'B'C'|+|\measuredangle_hB'C'A'|+|\measuredangle_hC'A'B'|=
+&= \pi -|\measuredangle_hA'B'C'|-|\measuredangle_hB'C'A'|-|\measuredangle_hC'A'B'|=
 \\
-&=|\measuredangle_hABC|+|\measuredangle_hBCA|+|\measuredangle_hCAB|=
+&=\pi -|\measuredangle_hABC|-|\measuredangle_hBCA|-|\measuredangle_hCAB|=
 \\
 &=\defect(\triangle_h ABC)
  \end{aligned}$$
@@ -381,10 +388,9 @@ Let us give another interpretation of the h-distance.
 \begin{thm}{Lemma}\label{lem:conformal}
 Consider the h-plane with the unit circle centered at~$O$ as the absolute.
 Fix a point $P$ and let $Q$ be another point in the h-plane.
-Set $x=PQ$ and $y=PQ_h$.
 Then
-$$\lim_{x\to 0}\frac{y}{x}=\frac{2}{1-OP^2}.$$
-
+$$\frac{PQ_h}{PQ}\to \frac{2}{1-OP^2}.$$
+as $Q\to P$.
 \end{thm}
 
 The above formula tells us that the h-distance from $P$ to a nearby point $Q$ is almost proportional to the Euclidean distance
@@ -401,17 +407,20 @@ In this case, the h-distance is the minimal time needed to travel from one point
 \end{wrapfigure}
 
 \parit{Proof.}
-If $P=O$, then by Lemma~\ref{lem:O-h-dist}
-$$\frac{y}{x}=\frac{\ln \tfrac{1+x}{1-x}}{x}\to 2\eqlbl{eq:O=P}$$
-as $x\to0$.
+Set $x=PQ$ and $y=PQ_h$.
 
-If $P\ne O$, let $Z$ denotes the inverse of $P$ in the absolute.
-Suppose that $\Gamma$ denotes the circle with the center $Z$ 
+If $P=O$, then by Lemma~\ref{lem:O-h-dist} we have
+$$\frac{y}{x}=\frac{\ln \tfrac{1+x}{1-x}}{x}\to 2\eqlbl{eq:O=P}$$
+as $x\to0$.%
+\footnote{In other words, the function $x\mapsto \ln \tfrac{1+x}{1-x}$ has derivative 2 at $x=0$.} 
+
+Suppose $P\ne O$; let $Z$ denotes the inverse of $P$ in the absolute.
+Let $\Gamma$ be the circle with the center $Z$ 
 perpendicular to the absolute.
 
 According to the main observation (\ref{thm:main-observ}) and Lemma~\ref{lem:P-->O}, 
 the inversion in $\Gamma$ is a motion of the h-plane which sends $P$ to~$O$.
-In particular, if $Q'$ denotes the inverse of $Q$ in $\Gamma$, then $OQ'_h=PQ_h$.
+In particular, $OQ'_h=PQ_h$, where $Q'$ denotes the inverse of $Q$ in~$\Gamma$.
 
 Set $x'=OQ'$.
 According to Lemma~\ref{lem:inversion-sim},
@@ -444,7 +453,11 @@ Before we proceed with the proof, let us discuss the same problem in the Euclide
 The circumference of a circle in the Euclidean plane
 can be defined as the limit of perimeters of regular $n$-gons inscribed in the circle as $n\to \infty$.
 
-
+\begin{wrapfigure}{o}{47mm}
+\centering
+\vskip-2mm
+\includegraphics{mppics/pic-222}
+\end{wrapfigure}
 
 Namely, let us fix $r>0$.
 Given a positive integer $n$, consider $\triangle AOB$
@@ -453,11 +466,6 @@ $\measuredangle AOB=\tfrac{2\cdot\pi}{n}$ and $OA=OB=r$.
 Set $x_n=AB$.
 Note that $x_n$ is the side of a regular $n$-gon inscribed in the circle of radius $r$. 
 Therefore, the perimeter of the $n$-gon is $n\cdot x_n$.
-
-\begin{wrapfigure}{o}{47mm}
-\centering
-\includegraphics{mppics/pic-222}
-\end{wrapfigure}
 
 The circumference of the circle with the radius $r$ 
 might be defined as the limit

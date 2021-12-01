@@ -3141,6 +3141,7 @@ z.P=(1.1,.6)*u;
 z.R=(1.2,.2)*u;
 z.A=(1.4,0)*u;
 z.T=z.A rotated 55;
+z.TT=z.T yscaled -1;
 z.Q=altitude(z.O,z.T,z.A);
 z.Z=whatever*z.Q=z.T zscaled (1,whatever);
 z.Gamma=z.T rotatedaround(z.Z,-20);
@@ -3161,8 +3162,10 @@ draw q;
 draw pp;
 draw qq;
 
-draw circle(z.Q,7) cutbefore q cutafter p;
-draw circle(z.O,7) cutbefore pp cutafter qq;
+drawarrow reverse (circle(z.Q,7) cutbefore q cutafter p);
+drawarrow circle(z.O,7) cutbefore pp cutafter qq;
+draw z.T--z.T-3*(unitvector(z.T) rotated -90) --z.T-3*(unitvector(z.T) rotated -90)-3*(unitvector(z.T))--z.T-3*(unitvector(z.T))--cycle;
+draw z.TT--z.TT+3*(unitvector(z.TT) rotated -90) --z.TT+3*(unitvector(z.TT) rotated -90)-3*(unitvector(z.TT))--z.TT-3*(unitvector(z.TT))--cycle;
 
 dOt z.O,z.Q,z.Z,z.P,z.R,z.PP,z.RR;
 
@@ -3373,7 +3376,7 @@ endfig;
 
 beginfig(209)
 save u;
-u:=1.4cm;
+u:=1cm;
 
 z.O=origin;
 x.R=1.5*u;
@@ -5025,17 +5028,37 @@ endfig;
 beginfig(288)
 save u,k;
 u:=1cm;
-k:=2/5;
+k:=.5cm;
 
 z.c=origin;
 z.a=(2,.5)*u;
 z.b=z.a rotated 90;
 
-z.z=bisector((z.a+z.b)/2,z.b,z.c);
+z.z=incenter(z.a,z.b,z.c);
 
-z.aa=k[z.z,z.a];
-z.bb=k[z.z,z.b];
-z.cc=k[z.z,z.c];
+z.aa=z.a+k*(z.z-z.a)/abs(z.z-z.c);
+z.bb=z.b+k*(z.z-z.b)/abs(z.z-z.c);
+z.cc=z.c+k*unitvector(z.z-z.c);
+
+draw woodenThing(z.c--z.cc--z.bb--z.b--cycle, angle(z.b-z.c));
+draw woodenThing(z.c--z.cc--z.aa--z.a--cycle, angle(z.a-z.c));
+draw woodenThing(z.b--z.bb--z.aa--z.a--cycle, angle(z.a-z.b));
+endfig;
+
+beginfig(289)
+save u,k;
+u:=1cm;
+k:=.5cm;
+
+z.c=origin;
+z.a=(1.6,.2)*u;
+z.b=z.a zscaled (0,sqrt(3));
+
+z.z=incenter(z.a,z.b,z.c);
+
+z.aa=z.a+k*(z.z-z.a)/abs(z.z-z.c);
+z.bb=z.b+k*(z.z-z.b)/abs(z.z-z.c);
+z.cc=z.c+k*unitvector(z.z-z.c);
 
 draw woodenThing(z.c--z.cc--z.bb--z.b--cycle, angle(z.b-z.c));
 draw woodenThing(z.c--z.cc--z.aa--z.a--cycle, angle(z.a-z.c));

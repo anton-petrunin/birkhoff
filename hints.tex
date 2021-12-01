@@ -1379,10 +1379,13 @@ The parts \textit{(\ref{ex:coshtanh})} and \textit{(\ref{ex:coshcosh})} follow f
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
 
+\parbf{\ref{ex:lambert-parallelism}.} Use \ref{prop:perp-perp} to show that $(AB)_h\parallel (CD)_h$.
+Apply the definition of angle of parallelism.
+
 {
 
 \begin{wrapfigure}{r}{34mm}
-\vskip-5mm
+\vskip-4mm
 \centering
 \includegraphics{mppics/pic-359}
 \end{wrapfigure}
@@ -1411,6 +1414,8 @@ It follows that the ideal points of the h-lines $\ell$ and $m$ are symmetric to 
 Therefore, if one pair of them coincides, then so is the other pair. 
 By \ref{ex:ideal-line-unique}, $\ell=m$, which contradicts the assumption $\ell\ne m$.
 
+\parbf{\ref{ex:right-angle-parallelism}.} Show that the angle of parallelism of $C$ to $(AB)_h$ is less than $\tfrac\pi4$, and apply \ref{prop:angle-parallelism}.
+You may use approximations $\sqrt2\approx 1.414$ and $e\approx2.718$.
 
 
 \parbf{\ref{ex:small-angle}.}
@@ -1491,8 +1496,10 @@ In each case check that the map is a bijection and apply \ref{ex:line-coord}.
 \parbf{\ref{ex:collinear=affine}.}
 Choose a line $(AB)$.
 
+{
+
 \begin{wrapfigure}{o}{20mm}
-\vskip-0mm
+\vskip-2mm
 \centering
 \includegraphics{mppics/pic-353}
 \end{wrapfigure}
@@ -1504,6 +1511,8 @@ Further, any line that connects a pair of points on these three lines is also ma
 Use it to show that the whole plane is mapped to $(A'B')$.
 The latter contradicts that the map is a bijection.
 
+}
+
 By assumption, if $X\in (AB)$, then $X'\z\in (A'B')$.
 From above the converse holds as well.
 Use it to prove the second statement.
@@ -1511,7 +1520,7 @@ Use it to prove the second statement.
 {
 
 \begin{wrapfigure}{r}{30mm}
-\vskip-0mm
+\vskip-4mm
 \centering
 \includegraphics{mppics/pic-354}
 \end{wrapfigure}
@@ -1526,16 +1535,18 @@ Guess a construction from the diagram.
 \parbf{\ref{ex:R-hom}.}
 Let $O$, $E$, $A$, and $B$ denote the points with the coordinates $(0,0)$, $(1,0)$, $(a,0)$, and $(b,0)$ respectively.
 
-To construct a point $W$ with the coordinates $(0,a+b)$, try to construct two parallelograms $OAPQ$ and $BWPQ$.
+To construct a point $W$ with the coordinates $(a+b,0)$, try to construct two parallelograms $OAPQ$ and $BWPQ$.
+The point $(a-b,0)$ can be constructed along the same lines.
 
 }
 
-To construct $Z$ with coordinates $(0,a\cdot b)$
+To construct $Z$ with coordinates $(a\cdot b,0)$
 choose a line $(OE')\ne (OE)$
 and try to construct the points $A'\in (OE')$
 and $Z \in(OE)$
 so that 
 $\triangle OEE'\z\sim \triangle OAA'$ and $\triangle OE'B\z\sim \triangle OA'Z$.
+The point $(\tfrac ab,0)$ can be constructed along the same lines.
 
 \parbf{\ref{ex:center-circ-affine}.}
 Draw two parallel chords $[XX']$ and~$[YY']$.
@@ -2082,24 +2093,24 @@ Apply Schwarz--Pick theorem for a function $f$ such that $f(0)\z=0$ and then app
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
 
-{
-
-\begin{wrapfigure}{r}{37mm}
-\vskip-4mm
-\centering
-\includegraphics{mppics/pic-364}
-\end{wrapfigure}
-
-\parbf{\ref{ex:simple-apollonius}.}
-Let $O$ be the point of intersection of the lines.
-Construct a circle $\Gamma$, tangent to both lines, that crosses~$[OP)$;
-denote its center by $I$.
-Suppose that $X$ denotes one of the points of intersections of $\Gamma$ and $[OP)$.
-
-Construct a point $I'\in[OI)$ such that $\tfrac{OI'}{OI}=\tfrac{OP}{OX}$.
-Observe that the circle passing thru $P$ and centered at $I'$ is a solution.
-
-}
+%{
+%
+%\begin{wrapfigure}{r}{37mm}
+%\vskip-4mm
+%\centering
+%\includegraphics{mppics/pic-364}
+%\end{wrapfigure}
+%
+%\parbf{\ref{ex:simple-apollonius}.}
+%Let $O$ be the point of intersection of the lines.
+%Construct a circle $\Gamma$, tangent to both lines, that crosses~$[OP)$;
+%denote its center by $I$.
+%Suppose that $X$ denotes one of the points of intersections of $\Gamma$ and $[OP)$.
+%
+%Construct a point $I'\in[OI)$ such that $\tfrac{OI'}{OI}=\tfrac{OP}{OX}$.
+%Observe that the circle passing thru $P$ and centered at $I'$ is a solution.
+%
+%}
 
 \parbf{\ref{ex:a2/b}.}
 To construct  $\sqrt{a\cdot b}$:
@@ -2139,22 +2150,38 @@ Note that with a set-square we can construct a line parallel to a given line thr
 It remains to modify the construction in \ref{ex:midpoint-affine}.
 
 \parbf{\ref{ex:equilateral triangle}.}
-Assume that two vertices have rational coordinates, say $(a_1,b_1)$ and $(a_2,b_2)$.
-Find the coordinates of the third vertex.
-Use that the number $\sqrt{3}$ is irrational
-to show that the third vertex is an irrational point.
+We can choose a coordinate system so that the given vertices are $(0,0)$ and $(1,0)$.
+Show that the remaining vertex is $(\tfrac12,\pm\tfrac{\sqrt{3}}2)$;
+observe that this point is irrational, and apply \ref{thm:set-square-constructible-numbers}.
 
+\parbf{\ref{ex:set-square-bisect}.}
+Assume that one can construct bisector of $\angle AOB$, where $A=(1,0)$, $O=(0,0)$, and $C=(1,1)$.
+Let $D$ be the point of intersection of the bisector with the line $(AB)$.
+Show that $D$ is an irrational point.
+Apply \ref{thm:set-square-constructible-numbers} and arrive at a contradiction.
+
+\parbf{\ref{ex:90-60-30}.}
+Suppose that every initial point has coordinates $(a,b\cdot\sqrt{3})$ for some rational values $a$ and $b$.
+Show and use that any point that can be constructed with the 30°-set-square have coordinates of the same type.
 {
 
 \begin{wrapfigure}{r}{23mm}
-\vskip-5mm
+\vskip-6mm
 \centering
 \includegraphics{mppics/pic-368}
 \end{wrapfigure}
 
-\parbf{\ref{ex:equilateral triangle-verify}.}
+\parbf{\ref{ex:equilateral triangle-verify},} \textit{(\ref{ex:verify:triangle})}.
 Observe that three perpendiculars on the diagram meet at one point if and only if the triangle is isosceles.
 Use this observation couple of times to verify that the given triangle is equilateral.
+
+\parit{(\ref{ex:verify:bisector}).}
+Suppose that a line $\ell$ pass thru the vertex of the given angle.
+Choose a point $P\in \ell$.
+Suppose $X$ and $Y$ are the foot points of $P$ on the sides of the angle.
+Show and use that $(XY)\perp \ell$ if and only if $\ell$ bisects the angle.
+
+}
 
 \parbf{\ref{ex:midpoint-proj}.}
 Consider the perspective projection 
@@ -2165,14 +2192,28 @@ Note that $M$ is the midpoint of $[AB]$.
 Their images are $A'\z=(1,1)$, $B'\z=(\tfrac13,\tfrac13)$, and $M'\z=(\tfrac12,\tfrac12)$.
 Clearly, $M'$ is not the midpoint of~$[A'B']$.
 
-}
 
 \parbf{\ref{ex:comparison}.}
-The set of ruler and compass is strictly stronger than a set-square which is strictly stronger than a ruler and parallel tool.
-To prove it, use \ref{ex:construction-perpendicular},
+$(a)$ is strictly stronger than $(b)$,
+$(b)$ is strictly stronger than $(c)$,
+$(a)$ is strictly stronger than $(d)$,
+and $(d)$ is not not comparable with $(b)$ and $(c)$.
+Most of these statements follow from \ref{ex:construction-perpendicular},
+\ref{prop:perp-perp},
+\ref{ex:consturuction-of-inversion},
 \ref{ex:affine-perp},
-\ref{ex:equilateral triangle},
-and \ref{prop:perp-perp}.
+\ref{ex:equilateral triangle}, 
+\ref{prob:center-inversor+circumtool}.
+
+To show that $(d)$ is not stronger than $(c)$, show that one cannot construct a midpoint using the set $(d)$ and use the solution of \ref{ex:midpoint-affine}.
+To show that $(b)$ is not stronger than $(d)$, show that given the initial configuration of 6 points 
+$(0,0)$, 
+$(1,0)$,
+$(2,0)$,
+$(0,1)$, 
+$(1,1)$,
+$(2,1)$,
+one can construct an equilateral triangle using the set $(d)$ and apply \ref{ex:equilateral triangle}.
 
 %\subsection*{Chapter~\ref{chap:area}}
 \refstepcounter{chapter}
@@ -2218,7 +2259,7 @@ It remains to note that any circle contains an infinite number of points.
 {
 
 \begin{wrapfigure}{r}{28mm}
-\vskip-4mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-372}
 
