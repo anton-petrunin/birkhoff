@@ -2150,9 +2150,17 @@ Note that with a set-square we can construct a line parallel to a given line thr
 It remains to modify the construction in \ref{ex:midpoint-affine}.
 
 \parbf{\ref{ex:equilateral triangle}.}
-We can choose a coordinate system so that the given vertices are $(0,0)$ and $(1,0)$.
-Show that the remaining vertex is $(\tfrac12,\pm\tfrac{\sqrt{3}}2)$;
-observe that this point is irrational, and apply \ref{thm:set-square-constructible-numbers}.
+Choose a coordinate system so that the given vertices are $(0,0)$ and $(1,0)$.
+Show that the remaining vertex is $(\tfrac12,\pm\tfrac{\sqrt{3}}2)$.
+Observe that it is an irrational point; apply \ref{thm:set-square-constructible-numbers}.%
+\footnote{It is okay to use that $\sqrt{3}$ is irrational without proving it.
+But let us explain why it is true. 
+Assume the contrary; that is, $\tfrac mn=\sqrt{3}$ for some integers $m$ and $n$.
+We can assume that $m$ and $n$ do not share a prime factor; in particular if $m$ is divisible by $3$, then $n$ is not.
+Observe that $m^2=3\cdot n^2$.
+It follows that $m$ is divisible by 3; that is, $m=3\cdot k$ for some integer $k$.
+It follows that $3\cdot k^2=n^2$.
+Therefore, $n$ is divisible by 3 --- a contradiction.} 
 
 \parbf{\ref{ex:set-square-bisect}.}
 Assume that one can construct bisector of $\angle AOB$, where $A=(1,0)$, $O=(0,0)$, and $C=(1,1)$.
@@ -2283,7 +2291,7 @@ Use \ref{prop:area-parallelogram} to prove the following two identities:
 Without loss of generality, we may assume that the angles $ABC$ and $BCA$ are acute.
 
 \begin{wrapfigure}{r}{28mm}
-\vskip-0mm
+\vskip-4mm
 \centering
 \includegraphics{mppics/pic-374}
 \vskip4mm
@@ -2316,7 +2324,7 @@ In particular,
 By \ref{prop:area-parallelogram} and \ref{thm:area-of-triangle} we get that 
 \begin{align*}
 \area(\solidtriangle ABM)&=\tfrac12\cdot\area(\solidsquare ABEF),
-\\
+&
 \area(\solidtriangle CDM)&=\tfrac12\cdot\area(\solidsquare CDFE)
 \end{align*}
 and hence the result.
