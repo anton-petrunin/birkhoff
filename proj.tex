@@ -20,9 +20,9 @@ There are two types of pencils:
 and  
 \emph{parallel pencils} contain pairwise parallel lines.
 
-Each point in the Euclidean plane uniquely defines a central pencil with the center in it.
 Note that any two lines completely determine the pencil containing both.
 
+Each point in the Euclidean plane uniquely defines a central pencil with the center in it.
 Let us add one \index{point!ideal point}\index{ideal!point}\emph{ideal point} for each parallel pencil,
 and assume that all these ideal points lie on one \index{line!ideal line}\index{ideal!line}\emph{ideal line}.
 We also assume that the ideal line belongs to each parallel pencil.
@@ -31,10 +31,9 @@ We obtain the so-called \index{projective!plane}\index{real!projective plane}\em
 It comes with an incidence structure --- we say that three points lie on one line if the corresponding pencils contain a common line.
 Projective geometry studies this incidence structure.
 
-Let us describe points of projective completion in coordinates.
 A parallel pencil contains the ideal line and the lines $y=m\cdot x+b$ with fixed slope $m$;
 if $m=\infty$, we assume that the lines are given by equations $x=a$.
-Therefore the real projective plane contains every point $(x,y)$ in the coordinate plane plus the ideal line containing one ideal point $P_m$ for every slope $m\in\mathbb{R}\cup\{\infty\}$.
+Therefore the projective completion contains all the points in the $(x,y)$-plane plus the ideal line containing one ideal point $P_m$ for every slope $m\in\mathbb{R}\cup\{\infty\}$.
 
 \section{Euclidean space}
 
@@ -107,6 +106,16 @@ Also, if $(OP')\parallel \Pi$
 for $P'\in \Pi'$,
 then the point $P'$ is not an image of the perspective projection.
 
+Denote by $\hat \Pi$ and $\hat \Pi'$ the projective completions of $\Pi$ and $\Pi'$ respectively. 
+Note that the perspective projection is a restriction of composition of the two bijections $\hat \Pi\leftrightarrow\Phi \leftrightarrow\hat \Pi'$ constructed in the previous section.
+By Observation~\ref{obs:bijections}, the perspective projection can be extended to a bijection $\hat \Pi\leftrightarrow\hat \Pi'$ that sends lines to lines.%
+\footnote{A similar story happened with inversion.
+An inversion is not defined at its center;
+moreover, the center is not an inverse of any point.
+To deal with this problem we passed to the inversive plane 
+which is the Euclidean plane extended by one ideal point.
+The same strategy worked for perspective projection $\Pi\to\Pi'$, but this time we need to add an ideal line.}
+
 For example, suppose $O$ is the origin of $(x,y,z)$-coordinate space,
 and the planes $\Pi$ and $\Pi'$ are given by the equations
 $z=1$ and $x=1$ respectively.
@@ -127,16 +136,6 @@ For the described perspective projection; we may get the map
 \eqlbl{eq:(x,y)-perspective}\]
 This map is undefined on the line $x=0$.
 Also, points on this line are not images of points under perspective projection.
-
-Denote by $\hat \Pi$ and $\hat \Pi'$ the projective completions of $\Pi$ and $\Pi'$ respectively. 
-Note that the perspective projection is a restriction of composition of the two bijections $\hat \Pi\leftrightarrow\Phi \leftrightarrow\hat \Pi'$ constructed in the previous section.
-By Observation~\ref{obs:bijections}, the perspective projection can be extended to a bijection $\hat \Pi\leftrightarrow\hat \Pi'$ that sends lines to lines.%
-\footnote{A similar story happened with inversion.
-An inversion is not defined at its center;
-moreover, the center is not an inverse of any point.
-To deal with this problem we passed to the inversive plane 
-which is the Euclidean plane extended by one ideal point.
-The same strategy worked for perspective projection $\Pi\to\Pi'$, but this time we need to add an ideal line.}
 
 For example, to define an extension of the perspective projection $\beta$ in \ref{eq:(x,y)-perspective},
 we have to observe that 
@@ -178,8 +177,8 @@ It proves the theorem in this case.
 Suppose $\gamma$ sends the ideal line to a line $\ell$.
 Choose a perspective projection $\beta$ as above.
 The composition $\beta\circ\gamma$ sends the ideal line to itself.
-That is, $\gamma=\beta\circ\gamma$ is affine.
-Note that $\beta$ is self-inverse; therefore $\alpha=\beta\circ \gamma$ --- hence the result.
+That is, $\alpha=\beta\circ\gamma$ is affine.
+Note that $\beta$ is self-inverse; therefore $\gamma=\beta\circ\alpha$ --- hence the result.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:proj-cross-ratio}
@@ -325,7 +324,7 @@ Solve the following construction problem
 \end{enumerate}
 \parbf{Problem.}
 Suppose a parallelogram and a line $\ell$ are given.
-Assume the line $\ell$ crosses all sides (or their extensions) of the parallelogram at different points are given. 
+Assume the line $\ell$ crosses all sides (or their extensions) of the parallelogram at different points. 
 Construct another line parallel to $\ell$ with a ruler only.
 \end{thm}
 
