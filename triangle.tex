@@ -16,7 +16,7 @@ It is the center of the \index{circumcircle}\emph{circumcircle} of the triangle;
 that is, a circle that passes thru all three vertices of the triangle.
 The circumcenter of the triangle is usually denoted by~$O$.
 
-\begin{wrapfigure}{o}{28mm}
+\begin{wrapfigure}{o}{29mm}
 \centering
 \includegraphics{mppics/pic-102}
 \end{wrapfigure}
@@ -138,7 +138,7 @@ According to Exercise~\ref{ex:chevinas},
 $[A A']$ and $[B B']$ have a point of intersection;
 denote it by $M$.
 
-\begin{wrapfigure}{o}{34mm}
+\begin{wrapfigure}{o}{36mm}
 \vskip-4mm
 \centering
 \includegraphics{mppics/pic-106}
@@ -195,6 +195,11 @@ Show that for any angle, its bisector and external bisector are perpendicular.
 The bisectors of  $\angle ABC$, $\angle BCA$, and $\angle CAB$ of a nondegenerate triangle $A B C$
 are called \index{bisector!of the triangle}\emph{bisectors of the triangle} $A B C$ at vertices $A$, $B$, and $C$ respectively.
 
+\begin{thm}{Exercise}\label{ex:bisect=altitude}
+Assume that at one vertex of a nondegenerate triangle the bisector coincides with the altitude.
+Show that  the triangle is isosceles.
+\end{thm}
+
 \begin{thm}{Lemma}\label{lem:bisect-ratio}
 Let $\triangle A B C$ be  a nondegenerate triangle.
 Assume that the bisector at the vertex $A$ 
@@ -243,6 +248,24 @@ Together with \ref{eq:AB/EC=DB/DC}, it implies \ref{bisect-ratio}.
 Formulate and prove an analog of Lemma~\ref{lem:bisect-ratio} for the external bisector.
 \end{thm}
 
+\begin{thm}{Exercise}\label{ex:bisect=median} 
+Assume that an angle bisector of a nondegenerate triangle bisects the opposite side. 
+Show that the triangle is isosceles.
+\end{thm}
+
+\begin{wrapfigure}{r}{38mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-118}
+\end{wrapfigure}
+
+\begin{thm}{Exercise}\label{ex:bisector-parallel} 
+Assume that the bisector at $A$ of the triangle $ABC$ intersects the side $[BC]$ at the point $D$;
+the line thru $D$ and parallel to $(CA)$ intersects $(AB)$ at the point $E$;
+the line thru $E$ and parallel to $(BC)$ intersects $(AC)$ at $F$.
+Show that $AE=FC$.
+\end{thm}
+
 \section{Equidistant property}
 
 Recall that distance from a line $\ell$ to a point $P$ is defined as the distance from $P$ to its foot point on $\ell$; see Section~\ref{sec:perp<oblique}. 
@@ -264,13 +287,6 @@ Note that
 \[Y\ne Z.\]
 Otherwise, both lines $(AB)$ and $(BC)$ are perpendicular bisectors of $[XY]$, that is, $(AB)=(BC)$ which is impossible since $\triangle ABC$ is not degenerate.
 
-{
-
-\begin{wrapfigure}{o}{24mm}
-\centering
-\includegraphics{mppics/pic-112}
-\end{wrapfigure}
-
 By Proposition~\ref{prop:reflection},
 \[XB=YB=ZB.\]
 
@@ -289,7 +305,10 @@ XY&=XZ.
 \end{aligned}
 $$
 
-}
+\begin{wrapfigure}{o}{24mm}
+\centering
+\includegraphics{mppics/pic-112}
+\end{wrapfigure}
 
 Since $Y\ne Z$, we get that $\measuredangle XBY\ne \measuredangle XBZ$.
 Therefore $X$ is equidistant from $(AB)$ and $(BC)$ if and only if
@@ -365,22 +384,11 @@ Therefore, $(C I)$ cannot be the exterior bisector of $\angle B C A$.
 Hence the result.
 \qeds
 
-\section{More exercises}
-
-\begin{thm}{Exercise}\label{ex:bisect=median} %??? move it to section ``Angle besectors''
-Assume that an angle bisector of a nondegenerate triangle bisects the opposite side. 
-Show that the triangle is isosceles.
-\end{thm}
-
-\begin{thm}{Exercise}\label{ex:bisect=altitude}%??? move it to section ``Medians and centroid''
-Assume that at one vertex of a nondegenerate triangle the bisector coincides with the altitude.
-Show that  the triangle is isosceles.
-\end{thm}
-
 {
 
 \begin{wrapfigure}{r}{30mm}
 \centering
+\vskip-2mm
 \includegraphics{mppics/pic-116}
 \end{wrapfigure}
 
@@ -401,15 +409,4 @@ Prove that the orthocenter of an acute triangle coincides with the incenter of i
 What should be an analog of this statement for an obtuse triangle?
 \end{thm}
 
-\begin{wrapfigure}{r}{38mm}
-\vskip-4mm
-\centering
-\includegraphics{mppics/pic-118}
-\end{wrapfigure}
 
-\begin{thm}{Exercise}\label{ex:bisector-parallel} 
-Assume that the bisector at $A$ of the triangle $ABC$ intersects the side $[BC]$ at the point $D$;
-the line thru $D$ and parallel to $(CA)$ intersects $(AB)$ at the point $E$;
-the line thru $E$ and parallel to $(BC)$ intersects $(AC)$ at $F$.
-Show that $AE=FC$.
-\end{thm}

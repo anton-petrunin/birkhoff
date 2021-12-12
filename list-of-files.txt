@@ -57,6 +57,8 @@ mppics/pic-10.mps
 mppics/pic-132.mps
 mppics/pic-164.mps
 mppics/pic-198.mps
+mppics/pic-199.mps
+mppics/pic-201.mps
 mppics/pic-228.mps
 mppics/pic-260.mps
 mppics/pic-294.mps
@@ -210,6 +212,7 @@ mppics/pic-190.mps
 mppics/pic-220.mps
 mppics/pic-254.mps
 mppics/pic-286.mps
+mppics/pic-289.mps
 mppics/pic-32.mps
 mppics/pic-352.mps
 mppics/pic-44.mps

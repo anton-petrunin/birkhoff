@@ -13,7 +13,7 @@ In this chapter, we discuss briefly the theory behind geometric constructions.
 
 \section{Classical problems}
 
-The solutions of the following two problems are quite nontrivial.
+The solutions to the following two problems are quite nontrivial.
 
 \begin{thm}{Problem of Brahmagupta} 
 Construct an inscribed quadrangle with given sides.
@@ -22,18 +22,18 @@ Construct an inscribed quadrangle with given sides.
 {
 
 \begin{wrapfigure}[7]{r}{22mm}
-\vskip-10mm
+\vskip-6mm
 \centering
 \includegraphics{mppics/pic-284}
 \end{wrapfigure}
 
-Several solutions of the following problem are presented in \cite{hadamard}.
+Several solutions to the following problem are presented in \cite{hadamard}.
  
 \begin{thm}{Problem of Apollonius} Construct a circle that is tangent to three given circles.
 \end{thm}
 
-Play Euclidea \cite{euclidea} to become an expert in classical geometric constructions;
-it is an addictive interactive geometry game.
+There is an addictive way to become an expert in classical geometric constructions ---
+play Euclidea \cite{euclidea}; it is an interactive geometry game.
 
 }
 
@@ -48,7 +48,7 @@ The method used in the proofs is indicated in the next section.
 
 \begin{thm*}{Doubling the cube}
 Construct the side of a new cube 
-that has the volume twice as big as the volume of a given cube. 
+that has a volume twice as big as the volume of a given cube. 
 \end{thm*}
 
 In other words, 
@@ -65,7 +65,7 @@ If $r$ is the radius of the given circle, we need to construct a segment of leng
 Divide the given angle into three equal angles.
 \end{thm*}
 
-In fact, there is no compass-and-ruler construction that trisects angle with measure~$\tfrac\pi3$. 
+Moreover, there is no compass-and-ruler construction that trisects angle with measure~$\tfrac\pi3$. 
 The existence of such a construction would imply constructability of a regular 9-gon which is prohibited by the following famous result:
 
 A \index{regular $n$-gon}\emph{regular $n$-gon} inscribed in a circle with center $O$ is a sequence of points $A_1\dots A_n$ on the circle such that 
@@ -74,7 +74,7 @@ The points $A_1,\dots, A_n$ are \index{vertex!of a regular $n$-gon}\emph{vertice
 the segments $[A_1A_2], \z\dots, [A_nA_1]$ are \index{side!of a regular $n$-gon}\emph{sides} 
 and the remaining segments $[A_iA_j]$ are \index{diagonal!of a regular $n$-gon}\emph{diagonals} of the $n$-gon.
 
-Construction of a regular $n$-gon, therefore, is reduced to the construction of an angle with size $\tfrac2n\cdot \pi$.
+The construction of a regular $n$-gon, therefore, is reduced to the construction of an angle with size $\tfrac2n\cdot \pi$.
 
 \begin{thm}{Gauss--Wantzel theorem}
 A regular $n$-gon can be constructed with a ruler and a compass 
@@ -97,7 +97,7 @@ these primes are not distinct.
 
 \section{Constructible numbers}
 
-Let us give an intuitive definition of compass-and-ruler constructions; a formal definition is subtler than you might think \cite{akopyan-fedorov}.
+Let us give an intuitive definition of compass-and-ruler constructions; a formal definition is subtler than one might think \cite{engeler}.
 
 In the classical compass-and-ruler constructions initial configuration can be completely described by a finite number of points;
 each line is defined by two points on it and each circle is described by its center and a point on it (equivalently, you may describe a circle by three points on it).
@@ -106,7 +106,7 @@ In the same way, the result of construction can be described by a finite collect
 
 We may always assume that the initial configuration has at least two points;
 if not, we could add one or two points to the configuration.
-Moreover, applying a scaling to the whole plane, we can assume that the first two points in the initial configuration lie at distance 1 from each other.
+Moreover, by scaling the whole plane, we can assume that the first two points in the initial configuration lie at distance 1 from each other.
 
 In this case, we can choose a  coordinate system, 
 so that the points $(0,0)$ and $(1,0)$ are among the initial points;
@@ -148,7 +148,7 @@ the square root ``$\sqrt{\phantom{a}}\,$'' is not needed.
 On the other hand, it is easy to make compass-and-ruler constructions that produce segments of the lengths $a+b$ and $a-b$ from two given segments of lengths $a>b$.
 
 \begin{wrapfigure}{r}{37mm}
-\vskip-4mm
+\vskip-6mm
 \centering
 \includegraphics{mppics/pic-286}
 \end{wrapfigure}
@@ -165,7 +165,7 @@ It follows that $AD\cdot BD=CD^2$.
 Using this diagram, one should guess a solution to the following exercise.
 
 \begin{thm}{Exercise}\label{ex:a2/b}
-Given two line segments with lengths $a$ and $b$, give a ruler-and-compass construction of a segments with lengths $\tfrac {a^2}b$ and $\sqrt{a\cdot b}$.
+Given two line segments with lengths $a$ and $b$, give a ruler-and-compass construction of segments with lengths $\tfrac {a^2}b$ and $\sqrt{a\cdot b}$.
 \end{thm}
 
 
@@ -174,7 +174,7 @@ $\sqrt a$, $a^2$, $\tfrac1b$.
 Combining these constructions we can produce
 $a\cdot b=(\sqrt{a\cdot b})^2$,
 $\tfrac ab=a\cdot\tfrac 1b$.
-In other words we produced a \index{compass-and-ruler calculator}\emph{compass-and-ruler calculator} which can do ``$+$'', ``$-$'', ``$\cdot$'', ``$/\,$'', and the square root ``$\sqrt{\phantom{a}}\,$''.
+In other words, we produced a \index{compass-and-ruler calculator}\emph{compass-and-ruler calculator} which can do ``$+$'', ``$-$'', ``$\cdot$'', ``$/\,$'', and the square root ``$\sqrt{\phantom{a}}\,$''.
 
 The discussion above sketches a proof of the following theorem:
  
@@ -191,11 +191,11 @@ if the list of given numbers is not given, then we can only use the integers.
 The theorem above translates any compass-and-ruler construction problem into a purely algebraic language.
 For example:
 \begin{itemize}
-\item The impossibility of the doubling the cube problem states that $\sqrt[3]{2}$ is not a constructible number.
+\item The impossibility of the doubling-cube problem states that $\sqrt[3]{2}$ is not a constructible number.
 That is, $\sqrt[3]{2}$ cannot be expressed thru integers using
 ``$+$'', ``$-$'', ``$\cdot$'', ``$/\,$'', and ``$\sqrt{\phantom{a}}\,$''.
 
-\item The impossibility of the squaring the circle states that 
+\item The impossibility of squaring the circle states that 
 $\sqrt{\pi}$, or equivalently $\pi$, is not a constructible number.
 
 \item The impossibility of the angle trisection states that $\cos\tfrac\alpha3$ is not a constructible number from $\cos\alpha$.
@@ -213,7 +213,7 @@ In the next section, we discuss similar but simpler examples of impossible const
 
 \begin{thm}{Exercise}\label{ex:5-gon}
 \begin{enumerate}[(a)]
- \item\label{ex:5-gon:a} Show that diagonal of regular pentagon is $\tfrac{1+\sqrt5}2$ times larger than its side.
+ \item\label{ex:5-gon:a} Show that the diagonal of a regular pentagon is $\tfrac{1+\sqrt5}2$ times larger than its side.
  \item\label{ex:5-gon:b} Use (\ref{ex:5-gon:a}) to make a compass-and-ruler construction of a regular pentagon.
 \end{enumerate}
 \end{thm}
@@ -234,13 +234,13 @@ that makes the angles
 $\tfrac\pi2$ or $\pm\tfrac\pi4$ 
 to a given line plus it can be used as a ruler.
 
+}
+
 \begin{thm}{Exercise}\label{ex:trisect-set-square}
 Trisect a given segment with a set-square.
 \end{thm}
 
 The following theorem is an analog of Theorem~\ref{thm:constructible-numbers} for the set-square constructions.
-
-}
 
 \begin{thm}{Theorem}\label{thm:set-square-constructible-numbers}
 Assume that the initial configuration of a geometric construction is given by the points $A_1=(0,0)$, $A_2=(1,0)$, $A_3\z=(x_3,y_3),\z\dots,A_n=(x_n,y_n)$.
@@ -250,7 +250,7 @@ if and only if both coordinates $x$ and $y$ can be expressed from the integer nu
 
 The proof of this theorem is close to Theorem~\ref{thm:constructible-numbers}.
 (The ``if'' part nearly follows from Exercise~\ref{ex:R-hom}.
-The ``only-if'' part is proved by induction on number of elementary constructions; one needs to write equation for each line in a set-square construction and verify that an intersection point of such lines satisfies the theorem.)
+The ``only-if'' part is proved by induction on the number of elementary constructions; one needs to write an equation for each line in a set-square construction and verify that an intersection point of such lines satisfies the theorem.)
 
 Unlike Theorem~\ref{thm:constructible-numbers} it can be applied directly to show the impossibility of some constructions with a set-square --- no need to use the field theory.
 
@@ -297,8 +297,8 @@ We assume that we can \emph{verify} that two constructed points coincide.
 Evidently, if a configuration is constructible, then it is \index{verifiable construction}\emph{verifiable}%
 \footnote{Adopting the terminology of computability theory, we may also say that such a construction is \index{decidable construction}\emph{decidable}.} --- simply repeat the construction and check if the result is the same.
 Some nonconstuctable configurations are verifiable.
-For example, it does not pose a problem to verify that the given angle is trisected while it is impossible to trisect a given angle with ruler and compass.
-A regular 7-gon provides another example of that type --- it is easy to verify, while Gauss--Wantzel theorem states that it is impossible to construct with ruler and compass.
+For example, it does not pose a problem to verify that the given angle is trisected while it is impossible to trisect a given angle with a ruler and compass.
+A regular 7-gon provides another example of that type --- it is easy to verify, while Gauss--Wantzel theorem states that it is impossible to construct with a ruler and compass.
 
 Since we did not prove the impossibility of angle trisection and Gauss--Wantzel theorem, the following example might be more satisfactory.
 It is based on Exercise~\ref{ex:equilateral triangle} which states that it is impossible to construct an equilateral with set-square only.
@@ -330,9 +330,9 @@ In geometric constructions, we allow to choose some free points,
 say any point on the plane, or a point on a constructed line, or a point that does not lie on a constructed line, 
 or a point on a given line that does not lie on a given circle, and so on.
 
-In principle, when you make such a free choice it is possible to make a right construction by accident.
+In principle, when you make such a free choice it is possible to make the right construction by accident.
 Nevertheless, we do not accept such a coincidence as true construction; 
-we say that a construction produces the center if it produces it for any free choices.
+we say that construction produces the center if it produces it for any free choices.
 
 
 \parit{Solution.}\label{page:solution-for-ex:circumtool}
@@ -416,7 +416,7 @@ Therefore Mohr--Mascheroni theorem will follow once we solve the following two c
 \end{enumerate}
 Indeed, once we have these two constructions, we can do every step of a compass-and-ruler construction using a compass alone.
 
-If you wonder how such theorem can be proved, read about \emph{Peaucellier--Lipkin inversor};
+If you wonder how such a theorem can be proved, read about the \emph{Peaucellier--Lipkin inversor};
 it is a planar linkage capable of transforming rotary motion into perfect straight-line motion.
 Another classical theorem that can be proved using this linkage is the so-called \emph{Poncelet--Steiner theorem};
 it states that the set of compass and ruler is equivalent to ruler alone, provided that a single circle and its center are given.
