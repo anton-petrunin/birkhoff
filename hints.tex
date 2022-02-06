@@ -4,10 +4,12 @@
 \chapter{Hints}
 %\addcontentsline{toc}{chapter}{Hints}
 %\subsection*{Chapter~\ref{chap:metr}}
+\begin{multicols}{2}
+ 
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
 
-\parbf{\ref{ex:dist-square}.} Check the triangle inequality for $A=0$, $B=1$ and $C=2$.
+\parbf{\ref{ex:dist-square}.} Check the triangle inequality for $A\z=0$, $B\z=1$ and $C\z=2$.
 
 \parbf{\ref{ex:d_1+d_2+d_infty}.} 
 Check all the conditions in Definition~\ref{def:metric-space}.
@@ -40,9 +42,12 @@ $|y_1+y_2|\le |y_1|+|y_2|$.
 The inequality
 $$d_2(A,C)\le d_2(A,B)+d_2(B,C)\eqlbl{eq:trig-inq-d2}$$
 can be written as 
-$$\sqrt{\bigl(x_1+x_2\bigr)^2+\bigl(y_1+y_2\bigr)^2}
-\le 
-\sqrt{x_1^2+y_1^2}+\sqrt{x_2^2+y_2^2}.$$
+\begin{align*}
+&\sqrt{\bigl(x_1+x_2\bigr)^2+\bigl(y_1+y_2\bigr)^2}\le
+\\
+&\qquad\le
+\sqrt{x_1^2+y_1^2}+\sqrt{x_2^2+y_2^2}.
+\end{align*}
 Take the square of the left and the right-hand sides,
 simplify,
 take the square again and simplify again.
@@ -57,15 +62,21 @@ and evidently true.
 The inequality
 $$d_\infty(A,C)\le d_\infty(A,B)+d_\infty(B,C)$$
 can be written as 
-$$\max\{|x_1+x_2|,|y_1+y_2|\}
-\le 
-\max\{|x_1|,|y_1|\}+\max\{|x_2|,|y_2|\}.\eqlbl{eq:max-trig}$$
+$$
+\begin{aligned}
+&\max\{|x_1+x_2|,|y_1+y_2|\}\le
+\\
+&\qquad\le 
+\max\{|x_1|,|y_1|\}+\max\{|x_2|,|y_2|\}.
+\end{aligned}
+\eqlbl{eq:max-trig}$$
 Without loss of generality, we may assume that 
 $$\max\{|x_1+x_2|,|y_1+y_2|\}=|x_1+x_2|.$$
 Further,
 \begin{align*}
 |x_1+x_2|&\le |x_1|+|x_2|\le 
-\max\{|x_1|,|y_1|\}+\max\{|x_2|,|y_2|\}.
+\\
+&\le\max\{|x_1|,|y_1|\}+\max\{|x_2|,|y_2|\}.
 \end{align*}
 Hence \ref{eq:max-trig} follows.
 
@@ -75,7 +86,7 @@ Hence \ref{eq:max-trig} follows.
 If $A\ne B$, then $d_\mathcal{X}(A,B)>0$.
 Since $f$ is distance-preserving,
 $$d_\mathcal{Y}(f(A),f(B))=d_\mathcal{X}(A,B).$$
-Therefore, $d_\mathcal{Y}(f(A),f(B))>0$; hence $f(A)\ne f(B)$.
+Therefore, $d_\mathcal{Y}(f(A),f(B))>0$; hence $f(A)\z\ne f(B)$.
 
 \parbf{\ref{ex:motion-of-R}.}
 Set $f(0)=a$ and $f(1)=b$.
@@ -102,8 +113,8 @@ any motion of the Manhattan plane
 can be written in one of the following two ways:
 \begin{align*}
 (x,y)&\mapsto (\pm x+a,\pm y+b)
-&&\text{or} 
-&(x,y)&\mapsto (\pm y+b,\pm x+a),
+\intertext{or} 
+(x,y)&\mapsto (\pm y+b,\pm x+a),
 \end{align*}
 for some fixed real numbers $a$ and~$b$.
 (In each case we have 4 choices of signs, so for a fixed pair $(a,b)$ we have 8 distinct motions.)
@@ -139,7 +150,7 @@ $|x-q|+|x|=|q|$.
 \parbf{\ref{ex:2a=0}.}
 The equation
 $2\cdot\alpha\equiv 0$
-means that $2\cdot\alpha=2\cdot k\cdot\pi$ for some integer~$k$.
+means that $2\cdot\alpha\z=2\cdot k\cdot\pi$ for some integer~$k$.
 Therefore,
 $\alpha=k\cdot\pi$ for some integer~$k$.
 
@@ -148,16 +159,19 @@ The first identity means that $\alpha\equiv 0$ and the second means that $\alpha
 
 \parbf{\ref{ex:dist-cont}.} \textit{(a).}
 By the triangle inequality,
-$|f(A')-f(A)|\le d(A',A)$.
+$|f(A')\z-f(A)|\le d(A',A)$.
 Therefore, we can take $\delta=\epsilon$.
 
 \parit{(b).}
 By the triangle inequality,
 \begin{align*}
-|f(A',B')-f(A,B)|
-&\le |f(A',B')-f(A,B')|
-+|f(A,B')-f(A,B)|
-\le
+&|f(A',B')-f(A,B)|
+\le 
+\\
+&\le|f(A',B')-f(A,B')|+
+\\
+&\quad+
+|f(A,B')-f(A,B)|\le
 \\
 &\le d(A',A)+d(B',B).
 \end{align*}
@@ -223,7 +237,7 @@ and \ref{ex:2a=0}.
 By Axiom~\ref{def:birkhoff-axioms:2b},
 $2\cdot\measuredangle BOC
 \equiv 
-2\cdot\measuredangle AOC-2\cdot \measuredangle AOB
+2\cdot\measuredangle AOC\z-2\cdot \measuredangle AOB
 \equiv 0$.
 By \ref{ex:2a=0}, 
 it implies that 
@@ -234,13 +248,13 @@ It remains to apply \ref{ex:2.4} and \ref{thm:straight-angle} respectively in th
 Fix two points $A$ and $B$ provided by Axiom~\ref{def:birkhoff-axioms:0}.
 
 Fix a real number $0<\alpha<\pi$.
-By Axiom~\ref{def:birkhoff-axioms:2a} there is a point $C$ such that $\measuredangle ABC=\alpha$.
+By Axiom~\ref{def:birkhoff-axioms:2a} there is a point $C$ such that $\measuredangle ABC\z=\alpha$.
 
 Use \ref{lem:line-line} to show that $\triangle ABC$ is nondegenerate.
 
 \parbf{\ref{ex:O-mid-AB+CD}.} 
 Applying \ref{prop:vert}, we get that
-$\measuredangle AOC= \measuredangle BOD$.
+$\measuredangle AOC\z= \measuredangle BOD$.
 It remains to apply Axiom~\ref{def:birkhoff-axioms:3}.
 
 %\subsection*{Chapter~\ref{chap:half-planes}}
@@ -300,8 +314,6 @@ To prove the ``if'' part,
 observe that \ref{thm:abc} implies the existence of a triangle with sides $r_1$, $r_2$, and $d$.
 Use this triangle to show that there is a point $X$ such that $O_1X=r_1$ and $O_2X=r_2$, where $O_1$ and $O_2$ are the centers of the corresponding circles.
 
-
-
 %\subsection*{Chapter~\ref{chap:cong}}
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
@@ -335,24 +347,26 @@ $\measuredangle ABC\equiv -\measuredangle ABC$.
 Conclude that $\measuredangle ABC=0$ or $\pi$.
 That is, $\triangle ABC$ is degenerate --- a contradiction. 
 
+
+
 %\subsection*{Chapter~\ref{chap:perp}}
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
 
 {
 
-\begin{wrapfigure}{r}{29mm}
-\vskip -7mm
-\centering
-\includegraphics{mppics/pic-322}
-\end{wrapfigure}
-
 \parbf{\ref{ex:acute-obtuce}.} 
 By Axiom~\ref{def:birkhoff-axioms:2b} and \ref{thm:straight-angle}, we have
-$\measuredangle XOA-\measuredangle XOB\z\equiv\pi$.
+$\measuredangle XOA\z-\measuredangle XOB\z\equiv\pi$.
 Since $|\measuredangle XOA|$, $|\measuredangle XOB|\z\le \pi$, we get that
 $|\measuredangle XOA|\z+|\measuredangle XOB|\z=\pi$.
 Hence the statement follows. 
+
+\begin{Figure}
+\vskip -0mm
+\centering
+\includegraphics{mppics/pic-322}
+\end{Figure}
 
 
 \parbf{\ref{ex:pbisec-side}.}
@@ -378,14 +392,17 @@ repeat the above argument.
 Apply \ref{ex:pbisec-side} and \ref{thm:isos}.
 
 \parbf{\ref{ex:2-reflections}.}
-Note that $\measuredangle XBA=\measuredangle ABP$, $\measuredangle PBC=\measuredangle CBY$.
+Note that $\measuredangle XBA=\measuredangle ABP$, $\measuredangle PBC\z=\measuredangle CBY$.
 Therefore,
 \begin{align*}
 \measuredangle XBY
 &\equiv
-\measuredangle XBP+\measuredangle PBY
-\equiv
- 2\cdot(\measuredangle ABP+\measuredangle PBC)
+\measuredangle XBP+\measuredangle PBY\equiv
+\\
+&\equiv
+ 2\cdot(\measuredangle ABP+\measuredangle PBC)\equiv
+\\
+&
 \equiv
  2\cdot \measuredangle ABC.
 \end{align*}
@@ -419,16 +436,6 @@ Show that a composition of even number of reflections is direct,
 and a composition of odd number of reflections is indirect.
 The last statement follows since any motion is a composition of reflections.
 
-{
-
-\begin{wrapfigure}{r}{28mm}
-\vskip-7mm
-\centering
-\includegraphics{mppics/pic-324}
-\bigskip
-\includegraphics{mppics/pic-325}
-\end{wrapfigure}
-
 \parbf{\ref{ex:obtuce}.}
 If $\angle ABC$ is right, the statement follows from \ref{lem:perp<oblique}.
 Therefore, we can assume that $\angle ABC$ is obtuse.
@@ -441,19 +448,30 @@ By \ref{cor:half-plane},
 $A$ and $C$ lie on opposite sides of~$(BD)$.
 In particular, $[AC]$ intersects $(BD)$ at a point; denote it by~$X$.
 
-Note that $AX<AC$ and by \ref{lem:perp<oblique}, $AB\le AX$.
+Note that $AX<AC$ and by \ref{lem:perp<oblique}, $AB\z\le AX$.
 
+\begin{Figure}
+\vskip-0mm
+\begin{minipage}{.49\textwidth}
+\centering
+\includegraphics{mppics/pic-324}
+\end{minipage}
+\hfill
+\begin{minipage}{.49\textwidth}
+\centering
+\includegraphics{mppics/pic-325}
+\end{minipage}
+\end{Figure}
 
 \parbf{\ref{ex:right-triangle-inq}.}
 Let $Y$ be the foot point of $X$ on $(AB)$.
 Apply \ref{lem:perp<oblique} to show that 
-$XY<AX\le AC<AB$.
+$XY<AX\le AC\z<AB$.
 
 \parbf{\ref{ex:inside-outside}.}
 Let $O$ be the center of the circle.
 Note that we can assume that $O\ne P$.
 
-}
 
 Assume $P$ lies between $X$ and~$Y$.
 By \ref{ex:acute-obtuce}, we can assume that $\angle OPX$ is right or obtuse.
@@ -485,50 +503,29 @@ The given data is marked in bold.
 
 \medskip
 
-\begin{figure}[!ht]
-\begin{minipage}{.24\textwidth}
+\begin{Figure}
+\begin{minipage}{.49\textwidth}
 \centering
 \includegraphics{mppics/pic-326}
 \end{minipage}
 \hfill
-\begin{minipage}{.24\textwidth}
+\begin{minipage}{.49\textwidth}
 \centering
 \includegraphics{mppics/pic-328}
 \end{minipage}
-\hfill
-\begin{minipage}{.24\textwidth}
+\end{Figure}
+
+\begin{Figure}
+\begin{minipage}{.49\textwidth}
 \centering
 \includegraphics{mppics/pic-330}
 \end{minipage}
 \hfill
-\begin{minipage}{.24\textwidth}
+\begin{minipage}{.49\textwidth}
 \centering
 \includegraphics{mppics/pic-332}
 \end{minipage}
-
-\medskip
-
-\begin{minipage}{.24\textwidth}
-\centering
-\caption*{\textbf{\ref{ex:construction-perpendicular}}}
-\end{minipage}
-\hfill
-\begin{minipage}{.24\textwidth}
-\centering
-\caption*{\textbf{\ref{ex:center}}}
-\end{minipage}
-\hfill
-\begin{minipage}{.24\textwidth}
-\centering
-\caption*{\textbf{\ref{ex:tangent}}}
-\end{minipage}
-\hfill
-\begin{minipage}{.24\textwidth}
-\centering
-\caption*{\textbf{\ref{ex:tangent-circle}}}
-\end{minipage}
-\vskip-4mm
-\end{figure}
+\end{Figure}
 
 %\subsection*{Chapter~\ref{chap:parallel}}
 \refstepcounter{chapter}
@@ -554,6 +551,8 @@ Apply the SAS similarity condition to show that $\triangle ABC\z\sim \triangle Y
 
 Similarly, apply AA and equality of vertical angles to prove that $\triangle AZX\sim \triangle BZY$ and use SAS to show that $\triangle ABZ\z\sim \triangle YXZ$.
 
+
+
 %\subsection*{Chapter~\ref{chap:angle-sum}}
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
@@ -570,7 +569,7 @@ Repeat the construction in \ref{ex:construction-perpendicular} twice.
 {
 
 \begin{wrapfigure}{r}{23mm}
-\vskip-8mm
+\vskip-5mm
 \centering
 \includegraphics{mppics/pic-333}
 \end{wrapfigure} 
@@ -581,7 +580,7 @@ By Pasch's theorem (\ref{thm:pasch}), $\ell$ has to cross another side of $\tria
 Therefore $\ell$ crosses $[BC]$; denote the point of intersection by $Q$.
 
 Use the transversal property (\ref{thm:parallel-2}) to show that $\measuredangle BAC= \measuredangle BPQ$.
-The same argument shows that $\measuredangle ACB= \measuredangle PQB$; it remains to apply the AA similarity condition.
+The same argument shows that $\measuredangle ACB\z= \measuredangle PQB$; it remains to apply the AA similarity condition.
 
 }
 
@@ -602,7 +601,7 @@ If $\triangle ABC$ is degenerate, then one of the angle measures is $\pi$ and th
 Hence the result.
 
 Assume $\triangle ABC$ is nondegenerate.
-Set $\alpha=\measuredangle CAB$, $\beta=\measuredangle ABC$, and $\gamma=\measuredangle BCA$.
+Set $\alpha\z=\measuredangle CAB$, $\beta=\measuredangle ABC$, and $\gamma=\measuredangle BCA$.
 
 By \ref{thm:signs-of-triug},
 we may assume that $0<\alpha,\beta,\gamma<\pi$.
@@ -613,14 +612,6 @@ By \ref{thm:3sum},
 $$\alpha+\beta+\gamma\equiv\pi.\eqlbl{eq:|3|==pi}$$
 
 From \ref{eq:|3|<3pi} and \ref{eq:|3|==pi} the result follows.
-
-{
-
-\begin{wrapfigure}{r}{35mm}
-\vskip-6mm
-\centering
-\includegraphics{mppics/pic-334}
-\end{wrapfigure}
 
 \parbf{\ref{ex:right-isos}.}
 Apply twice \ref{thm:isos} and once \ref{thm:3sum}. 
@@ -636,18 +627,22 @@ $
 \equiv
 \pi$.
 
-
 Show that $\angle CAX$ is acute.
 Conclude that 
 $\measuredangle CAX\z=\pm\tfrac\pi4$.
 
+\begin{Figure}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-334}
+\end{Figure}
+
 \parbf{\ref{ex:quadrangle}.}
 Apply \ref{thm:3sum} to $\triangle ABC$ and $\triangle BDA$.
 
-}
 
 \parbf{\ref{ex:romb}.}
-Since $\triangle ABC$ is isosceles, $\measuredangle CAB=\measuredangle BCA$.
+Since $\triangle ABC$ is isosceles, $\measuredangle CAB\z=\measuredangle BCA$.
  
 By SSS, $\triangle ABC\cong \triangle CDA$.
 Therefore, 
@@ -677,19 +672,21 @@ By \ref{lem:parallelogram},
 its diagonals $[AC]$ and $[BD]$ have a common midpoint; denote it by~$M$.
 
 Use SSS and \ref{lem:parallelogram} to show that
-\[AB=CD
-\quad
-\iff
-\quad
+\begin{align*}
+AB&=CD
+\\
+&\Updownarrow
+\\
 \triangle AMB
-\cong
+&\cong
 \triangle AMD
-\quad
-\iff
-\quad
+\\
+&\Updownarrow
+\\
 \measuredangle AMB
-=
-\pm\tfrac\pi2.\]
+&=
+\pm\tfrac\pi2.
+\end{align*}
 
 \parbf{\ref{ex:coordinates}.} \textit{(a).} Use the uniqueness of the parallel line (\ref{thm:parallel}).
 
@@ -698,7 +695,7 @@ Use SSS and \ref{lem:parallelogram} to show that
 \parbf{\ref{ex:abc}.}
 Set $A=(0,0)$, $B=(c,0)$, and $C=(x,y)$.
 Clearly, $AB=c$,
-$AC^2=x^2+y^2$ and $BC^2=(c-x)^2+y^2$.
+$AC^2=x^2+y^2$ and $BC^2\z=(c-x)^2+y^2$.
 
 It remains to show that there is a pair of real numbers $(x,y)$ 
 that satisfy the following system of equations:
@@ -733,11 +730,10 @@ It remains to rewrite this equation as in \ref{ex:circle-coord}.
 Assume $M\notin(AB)$.
 Show and use that the points $P$ and $Q$ constructed on the following diagram lie on the Apollonian circle.
 
-\begin{figure}[!ht]
+\begin{Figure}
 \centering
 \includegraphics{mppics/pic-335}
-\end{figure}
-
+\end{Figure}
 
 
 %\subsection*{Chapter~\ref{chap:triangle}}
@@ -748,7 +744,7 @@ Show and use that the points $P$ and $Q$ constructed on the following diagram li
 Apply \ref{thm:circumcenter} and \ref{thm:perp-bisect}.
 
 \parbf{\ref{ex:orthic-4}.}
-Note that $(AC)\perp (BH)$ and $(BC)\perp (AH)$ and apply \ref{thm:orthocenter}.
+Note that $(AC)\perp (BH)$ and $(BC)\z\perp (AH)$ and apply \ref{thm:orthocenter}.
 
 (Note that each of $A,B,C,H$ is the orthocenter of the remaining three; such a quadruple of points $A,B,C,H$ is called \index{orthocentric system}\emph{orthocentric system}.)
 
@@ -762,8 +758,11 @@ Let $(BX)$ and $(BY)$ be the internal and external bisectors of $\angle ABC$.
 Then 
 \begin{align*}
 2\cdot \measuredangle XBY&\equiv2\cdot \measuredangle XBA+2\cdot \measuredangle ABY\equiv
+\\
+&\equiv
 \measuredangle CBA+\pi+2\cdot \measuredangle ABC\equiv
- \pi+\measuredangle CBC=\pi
+\\
+&\equiv\pi+\measuredangle CBC=\pi
 \end{align*}
 and hence the result.
 
@@ -773,7 +772,7 @@ Apply ASA to the two triangles that the bisector cuts from the original triangle
 \parbf{\ref{ex:ext-disect}.} 
 If $E$ is the point of intersection of $(BC)$ 
 with the external bisector of $\angle BAC$, then 
-$\frac{AB}{AC}=\frac{EB}{EC}$.
+$\frac{AB}{AC}\z=\frac{EB}{EC}$.
 It can be proved along the same lines as \ref{lem:bisect-ratio}.
 
 \parbf{\ref{ex:bisect=median}.}
@@ -796,7 +795,7 @@ be its orthic triangle.
 Note that $\triangle AA'C\sim\triangle BB'C$.
 Use it to show that $\triangle A'B'C\sim \triangle ABC$.
 
-In the same way, we get that $\triangle AB'C'\sim \triangle ABC$.
+In the same way, we get that $\triangle AB'C'\z\sim \triangle ABC$.
 It follows that $\measuredangle A'B'C\z=\measuredangle AB'C'$.
 Conclude that $(BB')$ bisects $\angle A'B'C'$.
 
@@ -818,13 +817,17 @@ If $P$ is outside of $\Gamma$ then $[PX)\z=[PX')$ and $[PY)=[PY')$.
 In both cases we have that $\measuredangle XPY=\measuredangle X'PY'$.
 
 Applying \ref{thm:inscribed-angle} and \ref{ex:ABCO-line}, we get that
-\[2\cdot \measuredangle Y'X'P
-\equiv
-2\cdot \measuredangle Y'X'X 
-\equiv
-2\cdot\measuredangle Y'YX
-\equiv
-2\cdot\measuredangle PYX.\]
+\begin{align*}
+2\cdot \measuredangle Y'X'P
+&\equiv
+2\cdot \measuredangle Y'X'X\equiv 
+\\
+&\equiv
+2\cdot\measuredangle Y'YX\equiv
+\\
+&\equiv
+2\cdot\measuredangle PYX.
+\end{align*}
 According to \ref{thm:signs-of-triug}, $\angle Y'X'P$ and $\angle PYX$ have the same sign;
 therefore
 $\measuredangle Y'X'P\z= \measuredangle PYX$.
@@ -845,8 +848,12 @@ Thus
 \measuredangle A'OC
 &\equiv 
 2\cdot \measuredangle A' A C
-\equiv-2\cdot\measuredangle B' B C
-\equiv-\measuredangle B'OC.
+\equiv
+\\
+&\equiv-2\cdot\measuredangle B' B C
+\equiv
+\\
+&\equiv-\measuredangle B'OC.
 \end{align*}
 
 By SAS, $\triangle A'OC\cong\triangle B'OC$.
@@ -862,7 +869,7 @@ any point $Z$ in the intersection $\Gamma\cap \Gamma'$ will do.
 
 
 \parbf{\ref{ex:VVAA}.} 
-Note that $\measuredangle AA'B=\pm\tfrac\pi2$ and $\measuredangle AB'B=\pm\tfrac\pi2$.
+Note that $\measuredangle AA'B=\pm\tfrac\pi2$ and $\measuredangle AB'B\z=\pm\tfrac\pi2$.
 Then apply \ref{cor:inscribed-quadrangle}
 to $\square AA'BB'$.
 
@@ -870,8 +877,8 @@ If $O$ is the center of the circle, then
 $\measuredangle AOB\equiv 2\cdot \measuredangle AA'B\equiv\pi$.
 That is, $O$ is the midpoint of~$[AB]$.
 
-\begin{wrapfigure}{r}{30mm}
-\vskip-2mm
+\begin{wrapfigure}[8]{r}{20mm}
+\vskip-5mm
 \centering
 \includegraphics{mppics/pic-336}
 \end{wrapfigure}
@@ -901,9 +908,9 @@ One needs to show that the lines $(A'B')$ and $(XP)$ are not parallel; otherwise
 In addition, we implicitly used the following identities:
 \begin{align*}
 2\cdot \measuredangle AXP&\equiv2\cdot \measuredangle AXY,
-&
+\\
 2\cdot \measuredangle ABP&\equiv2\cdot \measuredangle ABB',
-&
+\\
 2\cdot \measuredangle AA'B'&\equiv2\cdot \measuredangle AA'Y.
 \end{align*}
 
@@ -932,19 +939,11 @@ Conclude that
 $2\cdot \measuredangle CXY\equiv 2\cdot \measuredangle BXZ$
 and hence $X$, $Y$, and $Z$ lie on one line.
 
-\medskip
-
-\begin{minipage}{.47\textwidth}
+\begin{Figure}
 \centering
 \includegraphics{mppics/pic-338}
-\end{minipage}
-\hfill
-\begin{minipage}{.47\textwidth}
-\centering
-\includegraphics{mppics/pic-337}
-\end{minipage}
+\end{Figure}
 
-\medskip
 
 %\parbf{\ref{ex:arc-tan-straight}.}
 %By \ref{thm:3sum},
@@ -957,9 +956,14 @@ Show that $P$ lies on the arc opposite from $ACB$;
 conclude that
 $\measuredangle APC\z=\measuredangle CPB\z=\pm\tfrac\pi3$.
 
-Choose a point $A'\in [PC]$ such that $PA'=PA$.
+Choose a point $A'\in [PC]$ such that $PA'\z=PA$.
 Note that $\triangle APA'$ is equilateral.
 Prove and use that $\triangle AA'C\cong \triangle APB$.
+
+\begin{Figure}
+\centering
+\includegraphics{mppics/pic-337}
+\end{Figure}
 
 \parbf{\ref{ex:tangent-arc}.}
 If $C\in (AX)$, then the arc is the line segment $[AC]$ or the union of two half-lines in $(AX)$ with vertices at $A$ and~$C$.
@@ -977,7 +981,7 @@ Note that one of the two arcs with endpoints $A$ and $C$ is tangent to~$[AX)$.
 The uniqueness follows from \ref{prop:arc(angle=tan)}.
 
 \parbf{\ref{ex:tangent-lim}.} Use \ref{prop:arc(angle=tan)} and \ref{thm:3sum} to show that 
-$\measuredangle XAY=\measuredangle ACY$.
+$\measuredangle XAY\z=\measuredangle ACY$.
 By Axiom~\ref{def:birkhoff-axioms:2c}, $\measuredangle ACY\to 0$ as $AY\to 0$;
 hence the result.
 
@@ -986,16 +990,14 @@ Apply \ref{prop:arc(angle=tan)} twice.
 
 (Alternatively, apply \ref{cor:reflection+angle} for the reflection across the perpendicular bisector of $[AC]$.)
 
-{
-
-\begin{wrapfigure}{r}{32mm}
-\vskip-8mm
-\centering
-\includegraphics{mppics/pic-340}
-\end{wrapfigure}
-
 \parbf{\ref{ex:3x120}.} Guess a construction from the diagram.
 To show that it produces the needed point, apply \ref{thm:inscribed-angle}.
+
+\begin{Figure}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-340}
+\end{Figure}
 
 %\subsection*{Chapter~\ref{chap:inversion}}
 \refstepcounter{chapter}
@@ -1005,7 +1007,7 @@ To show that it produces the needed point, apply \ref{thm:inscribed-angle}.
 By \ref{lem:tangent}, $\angle OTP'$ is right. 
 Therefore, $\triangle OPT\z\sim \triangle OTP'$
 and in particular
-$OP\cdot OP'=OT^2$
+$OP\cdot OP'\z=OT^2$
 and hence the result.
 
 \parbf{\ref{ex:appolo-circ}.}
@@ -1013,7 +1015,7 @@ Suppose that $O$ denotes the center of $\Gamma$.
 Assume that $X,Y\z\in \Gamma$;
 in particular, $OX\z=OY$.
 
-}
+
 
 Note that the inversion sends $X$ and $Y$ to themselves.
 By \ref{lem:inversion-sim},
@@ -1031,13 +1033,13 @@ By \ref{lem:inversion-sim},
 \begin{align*}
 \measuredangle IA'B'&\equiv -\measuredangle IBA,
 &
+\measuredangle IB'A'&\equiv -\measuredangle IAB,
+\\
 \measuredangle IB'C'&\equiv -\measuredangle ICB,
 &
-\measuredangle IC'A'&\equiv -\measuredangle IAC,
-\\
-\measuredangle IB'A'&\equiv -\measuredangle IAB,
-&
 \measuredangle IC'B'&\equiv -\measuredangle IBC,
+\\
+\measuredangle IC'A'&\equiv -\measuredangle IAC,
 &
 \measuredangle IA'C'&\equiv -\measuredangle ICA.
 \end{align*}
@@ -1048,25 +1050,21 @@ $(B'I)\z\perp (C'A')$
 and
 $(C'I)\z\perp (B'A')$.
 
-{
+\parbf{\ref{ex:consturuction-of-inversion}.}
+Guess the construction from the diagram.
 
-\begin{wrapfigure}{r}{34mm}
+\begin{Figure}
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-342}
-\end{wrapfigure}
-
-\parbf{\ref{ex:consturuction-of-inversion}.}
-Guess the construction from the diagram (the two nonintersecting lines on the diagram are parallel).
+\end{Figure}
 
 \parbf{\ref{ex:inv-center not=center-inv}.}
-First show that for any $r>0$ and for any real numbers $x,y$ distinct from $0$,
+First show that for any $r\z>0$ and for any real numbers $x,y$ distinct from $0$,
 $$\frac{r^2}{(x+y)/2}
 =
 \left(\frac {r^2}x+\frac {r^2}y\right)/2$$
 if and only if $x=y$.
-
-}
 
 Suppose that $\ell$ denotes the line passing thru $Q$, $Q'$, and the center of the inversion $O$.
 Choose an isometry $\ell\to\mathbb{R}$ that sends $O$ to $0$;
@@ -1083,16 +1081,6 @@ A solution is given in Section~\ref{sec:verification}.
 Apply an inversion in a circle with the center at the only point of intersection of the circles;
 then use \ref{thm:inverse}.
 
-{
-
-\begin{wrapfigure}[15]{r}{55mm}
-\vskip-8mm
-\centering
-\includegraphics{mppics/pic-344}
-\vskip6mm
-\includegraphics{mppics/pic-346}
-\end{wrapfigure}
-
 \parbf{\ref{ex:4-circles}.}
 Label the points of tangency by $X$, $Y$, $A$, $B$, $P$, and $Q$ as on the diagram.
 Apply an inversion with the center at $P$. 
@@ -1104,12 +1092,20 @@ in particular, they lie on one circle.
 These points are images of $A$, $B$, $X$, and $Y$ under the inversion.
 By \ref{thm:inverse-cline}, the points $A$, $B$, $X$, and $Y$ also lie on one circline.
 
+\begin{Figure}
+\centering
+\includegraphics{mppics/pic-344}
+\end{Figure}
+
 \parbf{\ref{ex:inverse}.} 
 Apply the inversion in a circle with center~$A$. 
 Point $A$ will go to infinity, the two circles tangent at $A$ will become parallel lines
 and the two parallel lines will become circles tangent at~$A$; see the diagram.
 
-}
+\begin{Figure}
+\centering
+\includegraphics{mppics/pic-346}
+\end{Figure}
 
 It remains to show that the dashed line $(AB')$ is parallel to the other two lines.
 
@@ -1123,8 +1119,8 @@ Suppose that $T$ denotes a point of intersection of $\Omega_1$ and~$\Omega_2$.
 Let $P$ be the foot point of $T$ on~$(O_1O_2)$.
 Show that
 $\triangle O_1PT
-\sim \triangle O_1TO_2
-\sim \triangle TPO_2$.
+\z\sim \triangle O_1TO_2
+\z\sim \triangle TPO_2$.
 Conclude that $P$ coincides with the inverses of $O_1$ in $\Omega_2$ and of $O_2$ in~$\Omega_1$.
 
 \parbf{\ref{ex:4-th-perp-circ}.}
@@ -1184,14 +1180,6 @@ $2\cdot(\measuredangle ABC+\measuredangle BCD)\equiv0$,
 but $(AB)\z\nparallel(C D)$.
 Let $Z$ be the point of intersection of $(AB)$ and~$(CD)$.
 
-{
-
-\begin{wrapfigure}{r}{31mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-348}
-\end{wrapfigure}
-
 Note that 
 $
 2\cdot \measuredangle ABC\equiv 2\cdot \measuredangle ZBC,
@@ -1200,20 +1188,23 @@ $2\cdot \measuredangle BCD\equiv 2\cdot \measuredangle BCZ$.
 
 Apply \ref{prop:2sum} to $\triangle ZBC$ and try to arrive at a contradiction.
 
-
-
 \parbf{\ref{ex:SAA}.}
 Let $C''\in [B'C')$ be the point such that $B'C''\z=BC$.
 
 Note that by SAS, $\triangle ABC\cong \triangle A'B'C''$.
 Conclude that $\measuredangle B'C'A'\z= \measuredangle B'C''A'$.
 
-Therefore, it is sufficient to show that $C''=C'$.
+Therefore, it is sufficient to show that $C''\z=C'$.
 If $C'\z\ne C''$ apply \ref{prop:2sum} to $\triangle A'C'C''$ and try to arrive at a contradiction.
 
 %(This proof was given in Euclid's Elements \cite[Book I, Proposition 26]{euclid}.)
 
-}
+\begin{Figure}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-348}
+\end{Figure}
+
 
 \parbf{\ref{ex:chev<side}.} 
 Use \ref{ex:side-angle} and \ref{prop:2sum}.
@@ -1223,13 +1214,13 @@ Alternatively, use the same argument as in the solution of \ref{ex:inside-outsid
 \parbf{\ref{ex:neutral-quadrangle}.}
 Set $a=AB$, $b=BC$, $c=CD$ and $d=DA$; we need to show that $c\ge a$.
 
-\begin{figure}[!ht]
+Mimic the proof of \ref{thm:3sum-a} for the shown fence made from copies of quadrangle $ABCD$.
+
+\begin{Figure}
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-349}
-\end{figure}
-
-Mimic the proof of \ref{thm:3sum-a} for the shown fence made from copies of quadrangle $ABCD$.
+\end{Figure}
 
 (Alternatively, use \ref{thm:3sum-a} to show that $|\measuredangle CBD|\ge|\measuredangle ADB|$ and use it to show that $c\ge a$.)
 
@@ -1304,17 +1295,17 @@ hold if $0<a<\tfrac12$.
 \parbf{\ref{ex:h-perp-unique}.} 
 Spell the meaning of terms ``perpendicular'' and ``h-line'' and then apply \ref{ex:construction-perp-clines}.
 
-{
 
-\begin{wrapfigure}{r}{34mm}
-\vskip-6mm
-\centering
-\includegraphics{mppics/pic-350}
-\end{wrapfigure}
 
 \parbf{\ref{ex:h-circle=circle}.}
 Choose the vertices $P$, $Q$ and $R$ on a Euclidean circle that intersects the absolute and is not orthogonal to it.
 Apply~\ref{lem:h-circle=circle}.
+
+\begin{wrapfigure}{r}{34mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-350}
+\end{wrapfigure}
 
 \parbf{\ref{ex:3-h-lines}.} Look at the diagram and think.
 
@@ -1322,8 +1313,6 @@ Apply~\ref{lem:h-circle=circle}.
 By \ref{cor:invese-comp} and \ref{lem:inverse-4-angle},
 the right-hand sides in the identities 
 survive under an inversion in a circle perpendicular to the absolute.
-
-}
 
 As usual, we assume that the absolute is a unit circle.
 Suppose that $O$ denotes the h-midpoint of $[PQ]_h$.
@@ -1335,7 +1324,8 @@ In this case, the derivations are simpler.
 But since $Q'Q=Q'P=Q'P'=\infty$, one has to justify that $\tfrac\infty\infty=1$ every time.}
 
 Set $a=OP=OQ$; in this case, we have
-\begin{align*}PQ&=2\cdot a,
+\begin{align*}
+PQ&=2\cdot a,
 &
 PP'=QQ'&=\tfrac1a-a,
 \\
@@ -1345,35 +1335,34 @@ PQ'=QP'&=\tfrac1a+a.
 \end{align*}
 and 
 \[PQ_h=\ln \tfrac{(1+a)^2}{(1-a)^2}=2\cdot \ln \tfrac{1+a}{1-a}.\]
-
 Therefore
 \begin{align*}
 \cosh[\tfrac12\cdot PQ_h]
 &=\tfrac12\cdot(\tfrac{1+a}{1-a}+\tfrac{1-a}{1+a})=
-&&&
+\\
+&=\tfrac{1+a^2}{1-a^2};
+\\
 \sqrt{\frac{PQ'\cdot P'Q}{PP'\cdot QQ'}}
 &=\frac{\frac1a+a}{\frac1a-a}=
 \\
-&=\tfrac{1+a^2}{1-a^2};
-&&&&=\tfrac{1+a^2}{1-a^2}.
+&=\tfrac{1+a^2}{1-a^2}.
 \intertext{
 Hence the part \textit{(\ref{ex:cosh/2})} follows.
 Similarly,
 }
 \sinh[\tfrac12\cdot PQ_h]
 &=\tfrac12\cdot\left(\tfrac{1+a}{1-a}-\tfrac{1-a}{1+a}\right)=
-&&&
+\\
+&=\tfrac{2\cdot a}{1-a^2};
+\\
 \sqrt{\frac{PQ\cdot P'Q'}{PP'\cdot QQ'}}
 &=\frac{2}{\frac1a-a}=
 \\
-&=\tfrac{2\cdot a}{1-a^2};
-&&&&=\tfrac{2\cdot a}{1-a^2}.
+&=\tfrac{2\cdot a}{1-a^2}.
 \end{align*} 
 Hence the part \textit{(\ref{ex:coshsinh})} follows.
 
 The parts \textit{(\ref{ex:coshtanh})} and \textit{(\ref{ex:coshcosh})} follow from \textit{(\ref{ex:cosh/2})}, \textit{(\ref{ex:coshsinh})}, the definition of hyperbolic tangent, and the double-argument identity for hyperbolic cosine, see \ref{double-argument}.
-
-
 
 %\subsection*{Chapter~\ref{chap:h-plane}}
 \refstepcounter{chapter}
@@ -1381,14 +1370,6 @@ The parts \textit{(\ref{ex:coshtanh})} and \textit{(\ref{ex:coshcosh})} follow f
 
 \parbf{\ref{ex:lambert-parallelism}.} Use \ref{prop:perp-perp} to show that $(AB)_h\parallel (CD)_h$.
 Apply the definition of angle of parallelism.
-
-{
-
-\begin{wrapfigure}{r}{34mm}
-\vskip-4mm
-\centering
-\includegraphics{mppics/pic-359}
-\end{wrapfigure}
 
 \parbf{\ref{ex:ultra-parallel}}; \textit{``only-if'' part.} Suppose $\ell$ and $m$ are ultraparallel; that is, they do not intersect and have distinct ideal points.
 Denote the ideal points by $A$, $B$, $C$, and $D$;
@@ -1399,11 +1380,14 @@ Denote by $O$ their point of intersection.
 By \ref{lem:P-->O}, we can assume that $O$ is the center of absolute.
 Note that $\ell$ is the reflection of $m$ across $O$ in the Euclidean sense.
 
-}
-
 Drop an h-perpendicular $n$ from $O$ to $\ell$, and
 show that $n\perp m$.
 
+\begin{Figure}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-359}
+\end{Figure}
 
 \parit{``If'' part.} 
 Suppose $n$ is a common perpendicular.
@@ -1431,14 +1415,6 @@ Applying \ref{prop:angle-parallelism},
 we get that
 $$BC_h<\tfrac12\cdot\ln\frac{1+\frac1{\sqrt{2}}}{1-\frac1{\sqrt{2}}}=\ln\left(1+\sqrt{2}\right).$$
 
-{
-
-\begin{wrapfigure}{r}{45mm}
-\vskip-4mm
-\centering
-\includegraphics{mppics/pic-352}
-\end{wrapfigure}
-
 The right-hand side is the limit of $BC_h$ if $CD_h\to\infty$.
 Therefore, $\ln\left(1+\sqrt{2}\right)$ is the optimal upper bound.
 
@@ -1453,11 +1429,15 @@ lie on a horocycle.
 Without loss of generality, we may assume that $Q$ is the center of the absolute.
 In this case, $\measuredangle_hPQR\z=\measuredangle PQR\z=\pm\tfrac\pi2$ and $PQ=QR$.
 
-}
-
 Note that Euclidean circle passing thru $P$, $Q$, and $R$ is tangent to the absolute.
 Conclude that $PQ=\tfrac1{\sqrt2}$. 
 Apply \ref{lem:O-h-dist} to find $PQ_h$.
+
+\begin{Figure}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-352}
+\end{Figure}
 
 
 \parbf{\ref{ex:angle-preserving-hyp}.}
@@ -1472,9 +1452,8 @@ Apply the hyperbolic Pythagorean theorem and the definition of hyperbolic cosine
 The following observations should help:
 \begin{itemize}
  \item $x\mapsto e^x$ is an increasing positive function.
- \item By the triangle inequality,  we have $-c\le a-b$ and $-c\le b-a$.
+ \item By the triangle inequality,  we have $-c\z\le a-b$ and $-c\z\le b-a$.
 \end{itemize}
-
 
 %\subsection*{Chapter~\ref{chap:trans}}
 \refstepcounter{chapter}
@@ -1504,7 +1483,7 @@ Choose a line $(AB)$.
 \includegraphics{mppics/pic-353}
 \end{wrapfigure}
 
-Assume that $X'\in (A'B')$ for some $X\notin(AB)$.
+Assume that $X'\z\in (A'B')$ for some $X\z\notin(AB)$.
 Since $P\mapsto P'$ maps collinear points to collinear, 
 the three lines $(AB)$, $(AX)$, and $(BX)$ are mapped to~$(A'B')$.
 Further, any line that connects a pair of points on these three lines is also mapped to~$(A'B')$.
@@ -1517,20 +1496,18 @@ By assumption, if $X\in (AB)$, then $X'\z\in (A'B')$.
 From above the converse holds as well.
 Use it to prove the second statement.
 
-{
-
-\begin{wrapfigure}{r}{30mm}
-\vskip-4mm
-\centering
-\includegraphics{mppics/pic-354}
-\end{wrapfigure}
-
 \parbf{\ref{ex:midpoint-affine}.}
 According to the remark before the exercise,
 it is sufficient to construct the midpoint of $[AB]$
 with a ruler and a parallel tool.
 
 Guess a construction from the diagram.
+
+\begin{Figure}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-354}
+\end{Figure}
 
 \parbf{\ref{ex:R-hom}.}
 Let $O$, $E$, $A$, and $B$ denote the points with the coordinates $(0,0)$, $(1,0)$, $(a,0)$, and $(b,0)$ respectively.
@@ -1627,7 +1604,7 @@ The case $(AB)\parallel(A'B')$ is similar.
 To do \textit{(\ref{ex:desargues-construction:desargues})}, 
 suppose that the parallelogram is formed by the two pairs of parallel lines $(AB)\parallel (A'B')$ and $(BC)\parallel(B'C')$ and $\ell=(AC)$ in the notation of Desargues' theorem (\ref{thm:desargues}).
 
-To do \textit{(\ref{ex:desargues-construction:pappus})}, suppose that the parallelogram is formed by the two pairs of parallel lines $(AB')\parallel (A'B)$ and $(BC')\parallel(B'C)$ and $\ell=(AC')$ in the notation of Pappus' theorem (\ref{thm:pappus}).
+To do \textit{(\ref{ex:desargues-construction:pappus})}, suppose that the parallelogram is formed by the two pairs of parallel lines $(AB')\z\parallel (A'B)$ and $(BC')\parallel(B'C)$ and $\ell=(AC')$ in the notation of Pappus' theorem (\ref{thm:pappus}).
 
 \parbf{\ref{ex:dual-configurations}.}
 Draw $a=(KN)$, $b=(KL)$, $c=(LM)$, $d=(MN)$, mark $P=b\cap d$, and continue. 
@@ -1651,12 +1628,6 @@ To extend this bijection to the whole projective plane, assume that
 (1) the ideal line corresponds to the origin 
 and (2) the ideal point given by the pencil of the lines $b\cdot x-a\cdot y=c$ for different values of $c$ corresponds to the line given by the equation $a\cdot x+b\cdot y=0$.
 
-\begin{wrapfigure}{r}{36mm}
-\vskip-3mm
-\centering
-\includegraphics{mppics/pic-356}
-\vskip-4mm
-\end{wrapfigure}
 
 \parbf{\ref{ex:dual-pappus}.}
 Assume one set of concurrent lines $a$, $b$, $c$, 
@@ -1675,6 +1646,13 @@ Q'&=c'\cap a,
 R'&=a'\cap b.
 \end{align*}
 Then the lines $(PP')$, $(QQ')$, and $(RR')$ are concurrent.
+
+\begin{Figure}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-356}
+\vskip-0mm
+\end{Figure}
 
 (Note that the obtained configuration of nine points and nine lines is the same as in the original theorem and the obtained result is its reformulation.)
 
@@ -1697,12 +1675,7 @@ Since $V\in p$, by \ref{clm:polar}, we get that $P\in v$;
 that is, $(PV)=v$.
 Hence the statement follows.
 
-\begin{wrapfigure}{r}{45mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-370}
-\vskip-6mm
-\end{wrapfigure} 
+
 
 \parbf{\ref{ex:concentric-circ}.}
 Choose a point $P$ outside of the bigger circle.
@@ -1714,6 +1687,13 @@ Set $Z\z=(XY)\cap (X'Y')$.
 Note that the line $(PZ)$ passes thru the common center.
 
 The center is the intersection of $(PZ)$ and another line constructed in the same way.
+
+\begin{Figure}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-370}
+\vskip-6mm
+\end{Figure} 
 
 \parbf{\ref{ex:proj-perp}.} 
 Construct polar lines to two points on~$\ell$.
@@ -1752,16 +1732,8 @@ By Axiom~p-\ref{def:proj-axioms:1}, any point $Y$ in the plane lies in a unique 
 From part \textit{(\ref{ex:oder:a})}, each such line contains $X$ and yet $n$ point.
 Hence \textit{(\ref{ex:oder:b})} follows.
 
-{
-
-\begin{wrapfigure}[12]{r}{43mm}
-\vskip-2mm
-\centering
-\includegraphics{mppics/pic-358}
-\end{wrapfigure}
-
 To solve \textit{(\ref{ex:oder:c})}, show that the equation
-$n^2+n+1\z=10$ 
+\[n^2+n+1\z=10\] 
 does not admit an integer solution and then apply part~\textit{(\ref{ex:oder:b})}.
 
 
@@ -1781,6 +1753,14 @@ $$
 $$
 Therefore, $AB_s=\tfrac\pi3$.
 
+
+
+\begin{Figure}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-358}
+\end{Figure}
+
 Alternatively, 
 look at the tessellation of a hemisphere on the picture; 
 it is made from 12 copies of $\triangle_s A B C$ and yet 4 equilateral spherical triangles.
@@ -1794,7 +1774,6 @@ Note that points on $\Omega$ do not move.
 Moreover, the points inside $\Omega$ 
 are mapped outside of $\Omega$ and the other way around.
 
-}
 
 Further, note that this map sends circles to circles;
 moreover, the perpendicular circles are mapped to perpendicular circles.
@@ -1831,7 +1810,7 @@ The remaining calculations in $\Lambda$ are similar to those in the proof of \re
 \parbf{\ref{ex:s-medians}.}
 \textit{(\ref{ex:s-medians:a})}.
 Observe and use that 
-$OA'=OB'=OC'$.
+$OA'\z=OB'\z=OC'$.
 
 \parit{(\ref{ex:s-medians:b}).} Note that the medians of spherical triangle $ABC$ 
 map to the medians of Euclidean a triangle $A'B'C'$.
@@ -1844,14 +1823,6 @@ It remains to apply \ref{thm:centroid} for $\triangle A'B'C'$.
 \parbf{\ref{ex:P-->hat-P}.}
 Let $N$, $O$, $S$, $P$, $P'$, and $\hat P$ 
 be as on the diagram in Section~\ref{sec:special-bijection}.
-
-{
-
-\begin{wrapfigure}[10]{r}{42mm}
-\centering
-\vskip-0mm
-\includegraphics{mppics/pic-360}
-\end{wrapfigure}
 
 Note that $OQ=\tfrac1x$ and therefore we need to show that $O\hat P=2/(x+\tfrac1x)$.
 To do this, show and use that 
@@ -1872,7 +1843,11 @@ the center of the circumcircle coincides with the center of the absolute.
 In this case, the h-medians of the triangle coincide with the Euclidean medians.
 It remains to apply \ref{thm:centroid}.
 
-}
+\begin{Figure}
+\centering
+\vskip-0mm
+\includegraphics{mppics/pic-360}
+\end{Figure}
 
 \parbf{\ref{ex:klein-perp}.} 
 Let $\hat\ell$ and $\hat m$ denote the h-lines in the conformal model that correspond to $\ell$ and $m$.
@@ -1884,17 +1859,16 @@ If $\bar m$ is passing thru $Z$, then the inversion in $\Gamma$ exchanges the id
 In particular, $\hat\ell$ maps to itself. 
 Hence the result.
 
-\begin{wrapfigure}{r}{42mm}
-\centering
-\includegraphics{mppics/pic-362}
-\end{wrapfigure}
-
 \parbf{\ref{ex:klein-for-angle-parallelism}.}
 Let $Q$ be the foot point of $P$ on the line and $\phi$ be the angle of parallelism. 
 We can assume that $P$ is the center of the absolute.
 Therefore $PQ=\cos\phi$ and
-
 \[PQ_h=\tfrac12\cdot\ln\frac{1+\cos\phi}{1-\cos\phi}.\]
+
+\begin{Figure}
+\centering
+\includegraphics{mppics/pic-362}
+\end{Figure}
 
 \parbf{\ref{ex:klein-inradius}.} 
 Apply \ref{ex:klein-for-angle-parallelism} for $\phi=\tfrac\pi3$.
@@ -1931,10 +1905,15 @@ a
 and
 \[
 \begin{aligned}
-\cosh a&=\tfrac12\cdot\left(
-{\sqrt{\frac{\sqrt{1-t^2}+s}{\sqrt{1-t^2}-s}}
-+
-\sqrt{\frac{\sqrt{1-t^2}-s}{\sqrt{1-t^2}+s}}}\right)=\frac{\sqrt{1-t^2}}{\sqrt{1-t^2-s^2}}=\frac{\sqrt{1-t^2}}{\sqrt{1-u^2}}.
+\cosh a&=\tfrac12\cdot
+\sqrt{\frac{\sqrt{1-t^2}+s}{\sqrt{1-t^2}-s}}+
+\\
+&+
+\tfrac12\cdot\sqrt{\frac{\sqrt{1-t^2}-s}{\sqrt{1-t^2}+s}}=
+\\
+&=\frac{\sqrt{1-t^2}}{\sqrt{1-t^2-s^2}}=
+\\
+&=\frac{\sqrt{1-t^2}}{\sqrt{1-u^2}}.
 \end{aligned}
 \eqlbl{cosh-a}
 \]
@@ -1960,7 +1939,8 @@ Rewrite the terms in the Ptolemy's inequality in terms of the complex coordinate
 Let $z$, $v$, and $w$ denote the complex coordinates of $Z$, $V$, and $W$ respectively.
 Then 
 \begin{align*}
-\measuredangle ZVW+\measuredangle VWZ+\measuredangle WZV
+&\qquad \measuredangle ZVW+\measuredangle VWZ+\measuredangle WZV\equiv
+\\
 &\equiv
 \arg \tfrac{w-v}{z-v}+\arg \tfrac{z-w}{v-w}+\arg \tfrac{v-z}{w-z}\equiv
 \\
@@ -1974,7 +1954,7 @@ Then
 \parbf{\ref{ex:C-sim}.}
 Note and use that 
 $
-\measuredangle EOV=\measuredangle WOZ=\arg v$
+\measuredangle EOV=\measuredangle WOZ\z=\arg v$
 and
 $\frac{OW}{OZ}=\frac{OZ}{OW}=|v|$.
 
@@ -1982,12 +1962,14 @@ $\frac{OW}{OZ}=\frac{OZ}{OW}=|v|$.
 \parbf{\ref{ex:real-cross-ratio}.}
 Note that 
 \begin{align*}
-\arg\frac{(v-u)\cdot(z-w)}{(v-w)\cdot(z-u)}
+&\qquad\arg\frac{(v-u)\cdot(z-w)}{(v-w)\cdot(z-u)}\equiv
+\\
 &\equiv
 \arg\frac{v-u}{z-u}
 +
 \arg\frac{z-w}{v-w}=
- \measuredangle ZUV+\measuredangle VWZ.
+\\
+&= \measuredangle ZUV+\measuredangle VWZ.
 \end{align*}
 
 The statement follows since the value $\tfrac{(v-u)\cdot(z-w)}{(v-w)\cdot(z-u)}$ is real if and only if 
@@ -1997,13 +1979,18 @@ The statement follows since the value $\tfrac{(v-u)\cdot(z-w)}{(v-w)\cdot(z-u)}$
 We can choose the complex coordinates so that the points $O$, $E$, $A$, $B$, and $C$ have coordinates
 $0$, $1$, $1+i$, $2+i$, and $3+i$ respectively.
 
-Set $\measuredangle EOA=\alpha$, $\measuredangle EOB=\beta$, and $\measuredangle EOC=\gamma$.
+Set $\measuredangle EOA=\alpha$, $\measuredangle EOB=\beta$, and $\measuredangle EOC\z=\gamma$.
 Note that
 \begin{align*}
-\alpha+\beta+\gamma
+&\qquad\alpha+\beta+\gamma\equiv
+\\
 &\equiv\arg(1+i)+\arg(2+i)+\arg(3+i)\equiv
 \\
-&\equiv\arg[(1+i)\cdot(2+i)\cdot(3+i)]\equiv\arg [10\cdot i]=\tfrac\pi2.
+&\equiv\arg[(1+i)\cdot(2+i)\cdot(3+i)]\equiv
+\\
+&\equiv\arg [10\cdot i]=
+\\
+&=\tfrac\pi2.
 \end{align*}
 Note that these three angles are acute and conclude that $\alpha+\beta+\gamma=\tfrac\pi2$.
 
@@ -2016,9 +2003,9 @@ Therefore so is the sixth cross-ratio; it remains to apply the theorem again.
 \parbf{\ref{ex:4-sim}.}
 Use \ref{thm:signs-of-triug} and \ref{cor:half-plane} to show that $\angle UAB$, $\angle BVA$, and $\angle ABW$ have the same sign.
 Note that by SAS we have that 
-\[\frac{AU}{AB}=\frac{VB}{VA}=\frac{BA}{BW}
-\quad\text{and}\quad
-\measuredangle UAB=\measuredangle BVA=\measuredangle ABW.\]
+\[\frac{AU}{AB}=\frac{VB}{VA}=\frac{BA}{BW}\]
+and
+\[\measuredangle UAB=\measuredangle BVA=\measuredangle ABW.\]
 The later means that 
 $|\tfrac{u-a}{b-a}|=|\tfrac{b-v}{a-v}|=|\tfrac{a-b}{w-b}|$,
 and
@@ -2059,7 +2046,7 @@ Let $Z'$ be the inverse of the point $Z$.
 Assume that the circle of the inversion has center $W$ and radius~$r$.
 Let $z$, $z'$, and $w$ denote the complex coordinate of the points $Z$, $Z'$, and $W$ respectively.
 
-By the definition of inversion, $\arg (z-w)=\arg (z'-w)$ and
+By the definition of inversion, $\arg (z-w)\z=\arg (z'-w)$ and
 $|z-w|\cdot|z'-w|=r^2$.
 It follows that $(\bar z'-\bar w)\cdot ( z- w)= r^2$.
 Equivalently,
@@ -2173,7 +2160,7 @@ Suppose that every initial point has coordinates $(a,b\cdot\sqrt{3})$ for some r
 Show and use that any point that can be constructed with the 30°-set-square have coordinates of the same type.
 {
 
-\begin{wrapfigure}{r}{23mm}
+\begin{wrapfigure}{r}{21mm}
 \vskip-6mm
 \centering
 \includegraphics{mppics/pic-368}
@@ -2267,7 +2254,7 @@ It remains to note that any circle contains an infinite number of points.
 {
 
 \begin{wrapfigure}{r}{28mm}
-\vskip-0mm
+\vskip-4mm
 \centering
 \includegraphics{mppics/pic-372}
 
@@ -2290,15 +2277,6 @@ Use \ref{prop:area-parallelogram} to prove the following two identities:
 \parbf{\ref{ex:three-trig}.}
 Without loss of generality, we may assume that the angles $ABC$ and $BCA$ are acute.
 
-\begin{wrapfigure}{r}{28mm}
-\vskip-4mm
-\centering
-\includegraphics{mppics/pic-374}
-\vskip4mm
-\includegraphics{mppics/pic-376}
-\vskip-6mm
-\end{wrapfigure}
-
 Let $A'$ and $B'$ denote the foot points of $A$ and $B$ on $(BC)$ and $(AC)$ respectively.
 Note that $h_A=AA'$ and $h_B=BB'$.
 
@@ -2308,6 +2286,18 @@ In particular
 $\frac{AA'}{BB'}=\frac{AC}{BC}$
 or, equivalently, $h_A\cdot BC=h_B\cdot AC$.
 
+\begin{Figure}
+\vskip-0mm
+\begin{minipage}{.49\textwidth}
+\centering
+\includegraphics{mppics/pic-374}
+\end{minipage}
+\hfill
+\begin{minipage}{.49\textwidth}
+\centering
+\includegraphics{mppics/pic-376}
+\end{minipage}
+\end{Figure}
 
 \parbf{\ref{ex:half-parallelogram}.}
 Draw the line $\ell$ 
@@ -2317,14 +2307,17 @@ which will be denoted by
 $\solidsquare ABEF$ and
 $\solidsquare CDFE$.
 In particular,
-\[\area(\solidsquare ABCD)
-=
-\area(\solidsquare ABEF)+\area(\solidsquare CDFE).\]
+\begin{align*}
+&\area(\solidsquare ABCD)=
+\\
+&\qquad=
+\area(\solidsquare ABEF)+\area(\solidsquare CDFE).
+\end{align*}
 
 By \ref{prop:area-parallelogram} and \ref{thm:area-of-triangle} we get that 
 \begin{align*}
 \area(\solidtriangle ABM)&=\tfrac12\cdot\area(\solidsquare ABEF),
-&
+\\
 \area(\solidtriangle CDM)&=\tfrac12\cdot\area(\solidsquare CDFE)
 \end{align*}
 and hence the result.
@@ -2334,19 +2327,20 @@ Let $h_A$ and $h_C$ denote the distances from $A$ and $C$ to the line~$(BD)$ res
 According to \ref{thm:area-of-triangle},
 \begin{align*}
 \area(\solidtriangle ABM)&=\tfrac12\cdot h_A\cdot BM;
-&
+\\
 \area(\solidtriangle BCM)&=\tfrac12\cdot h_C\cdot BM;
 \\
 \area(\solidtriangle CDM)&=\tfrac12\cdot h_C\cdot DM;
-&
+\\
 \area(\solidtriangle ABM)&=\tfrac12\cdot h_A\cdot DM.
 \end{align*}
 Therefore
 \begin{align*}
-\area(\solidtriangle ABM)\cdot \area(\solidtriangle CDM)
-&=\tfrac14 \cdot h_A\cdot h_C\cdot DM\cdot BM=
+&\area(\solidtriangle ABM)\cdot \area(\solidtriangle CDM)=
 \\
-&=\area(\solidtriangle BCM)\cdot \area(\solidtriangle DAM).
+&\qquad=\tfrac14 \cdot h_A\cdot h_C\cdot DM\cdot BM=
+\\
+&\qquad=\area(\solidtriangle BCM)\cdot \area(\solidtriangle DAM).
 \end{align*}
 
 \parbf{\ref{ex:area-inradius}.}
@@ -2386,29 +2380,26 @@ Case $b>a$ can be done in the same way.
 \parbf{\ref{ex:sum-3-dist}.} 
 If $X$ is a point inside of $\triangle ABC$, then $\solidtriangle ABC$ is subdivided into $\solidtriangle ABX$, $\solidtriangle BCX$, and $\solidtriangle CAX$.
 Therefore
-\[\area(\solidtriangle ABX)
+\begin{align*}
+&\area(\solidtriangle ABX)
 +\area(\solidtriangle BCX)
-+\area(\solidtriangle CAX)
-=\area(\solidtriangle ABC).\]
+\\
+&\qquad+\area(\solidtriangle CAX)
+=\area(\solidtriangle ABC).
+\end{align*}
 
 Set $a=AB=BC=CA$.
 Let $h_1$, $h_2$, and $h_3$ denote the distances from $X$ to the sides $[AB]$, $[BC]$, and~$[CA]$. 
 Then by \ref{thm:area-of-triangle},
 \begin{align*}
 \area(\solidtriangle ABX)&=\tfrac12\cdot h_1\cdot a,
-&
+\\
 \area(\solidtriangle BCX)&=\tfrac12\cdot h_2\cdot a,
-&
+\\
 \area(\solidtriangle CAX)&=\tfrac12\cdot h_3\cdot a.
 \end{align*}
 Therefore, 
 \[h_1+h_2+h_3=\tfrac2a\cdot\area(\solidtriangle ABC).\]
-
-\begin{wrapfigure}{r}{40 mm}
-\vskip4mm
-\centering
-\includegraphics{mppics/pic-318}
-\end{wrapfigure}
 
 \parbf{\ref{ex:ceva}.} Apply \ref{clm:area-ratio} to show that 
 \[\frac{\area(\solidtriangle ABB')}{\area(\solidtriangle BCB')}=
@@ -2416,11 +2407,20 @@ Therefore,
 \frac{AB'}{B'C}.\]
 And observe that 
 \begin{align*}
-\area(\solidtriangle ABB')&=\area(\solidtriangle ABX)+\area(\solidtriangle AXB'),
+\area(\solidtriangle ABB')&=\area(\solidtriangle ABX)+
 \\
-\area(\solidtriangle BCB')&=\area(\solidtriangle BCX)+\area(\solidtriangle XCB').
+&\qquad+\area(\solidtriangle AXB'),
+\\
+\area(\solidtriangle BCB')&=\area(\solidtriangle BCX)+\\
+&\qquad+\area(\solidtriangle XCB').
 \end{align*}
 It implies the first identity; the rest is analogous.
+
+\begin{Figure}
+\vskip0mm
+\centering
+\includegraphics{mppics/pic-318}
+\end{Figure}
 
 \parbf{\ref{ex:cross-ratio-area}.}
 To prove \textit{(\ref{ex:cross-ratio-area:a})}, apply \ref{clm:area-ratio} twice to the triangles $OL_iL_j$, $OL_jM_i$, and $OM_iM_j$.
@@ -2446,7 +2446,9 @@ n\to\infty.$$
 Next show that $\area\mathcal{Q}_n<100$, say for all $n\ge 100$.
 
 These two statements imply that
-$(\area\mathcal{Q}_n-\area\mathcal{P}_n)\to 0$.
+\[(\area\mathcal{Q}_n\z-\area\mathcal{P}_n)\to 0.\]
 Hence the result.
+
+\end{multicols}
 
 \newpage

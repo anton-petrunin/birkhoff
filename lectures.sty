@@ -53,7 +53,11 @@ isbn=false]{biblatex}
 \usetikzlibrary{arrows}
 
 \usepackage{wrapfig}
+
 \usepackage{multicol}
+\newenvironment{Figure}
+  {\par\medskip\noindent\minipage{\linewidth}}
+  {\endminipage\par\medskip}
 
 \usepackage{titling}
 \newcommand{\subtitle}[1]{%
@@ -76,6 +80,17 @@ isbn=false]{biblatex}
   { \textbf{\thecontentspage}}
   [; ][.]
 
+\usepackage{accsupp}
+\usepackage{soulutf8}
+\sodef\an{}{.1em}{.5em plus.1em}{.5em plus.1em minus.1em}
+
+\newcommand\ann[1]{%
+    \BeginAccSupp{method=escape,ActualText={\detokenize{#1}}}%
+      \an{#1}%
+    \EndAccSupp{}%
+}
+
+\def\emph{\ann}
 
 % Fix latex
 \def\smallskip{\vskip\smallskipamount}

@@ -44,8 +44,10 @@ a minimalist introduction.}}
 
 \newgeometry{top=0.9in, bottom=0.9in,inner=0.55in, outer=0.45in}
 %\newgeometry{top=1.025in, bottom=1.025in,inner=0.5in, outer=0.625in, paperwidth=6.125in, paperheight=9.25in}%with bleed
-{\small
+{\footnotesize
+
 \input{hints.tex}
+
 }
 \newpage
 \phantomsection
@@ -54,6 +56,9 @@ a minimalist introduction.}}
 }
 \renewcommand{\bibname}{Used resources}
 {
+
+\def\emph{\textit}
+
 \printbibliography[heading=bibintoc]
 \fussy
 }

@@ -256,7 +256,7 @@ endfig;
 
 beginfig(335)
 save u;
-u:=2cm;
+u:=1.2cm;
 
 z.A=origin;
 z.B=(2,0)*u;
@@ -295,7 +295,7 @@ endfig;
 
 beginfig(336)
 save u;
-u:=1cm;
+u:=.7cm;
 
 z.A=(0,0)*u;
 z.B=(2,0)*u;
@@ -559,8 +559,8 @@ endfig;
 
 beginfig(349)
 save u,n;
-u:=1cm;
-n:=4;
+u:=.7cm;
+n:=3;
 
 
 z.l=(.5,.15);
@@ -874,7 +874,7 @@ endfig;
 
 beginfig(359)
 save u;
-u:=1cm;
+u:=1.2cm;
 
 z.O=origin;
 x.RR=1.5*u;
