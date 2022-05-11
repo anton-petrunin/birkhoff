@@ -9,7 +9,7 @@ This construction is included in any textbook in real analysis.
 Based solely on its existence,  we develop the concept of area with no cheating.
 We choose this approach since any rigorous introduction to area is tedious.
 We do not want to cheat and at the same time we do not want to waste your time; 
-soon or later you will have to learn Lebesgue measure if it is not done already.
+soon or later you will have to learn the Lebesgue measure if it is not done already.
 
 \section{Solid triangles}
 
@@ -21,9 +21,7 @@ soon or later you will have to learn Lebesgue measure if it is not done already.
 \includegraphics{mppics/pic-292}
 \end{wrapfigure}
 
-We say that the point $X$ lies \index{inside!a triangle}\emph{inside} a nondegenerate triangle $ABC$
-if the following three condition hold:
-
+We say that the point $X$ lies \index{inside!a triangle}\emph{inside} a nondegenerate triangle $ABC$ if the following three conditions hold:
 
 \begin{itemize}
 \item $A$ and $X$ lie on the same side of the line~$(BC)$;
@@ -194,7 +192,7 @@ The other cases are simpler; a formal proof can be built on Exercise~\ref{ex:tri
 \label{sec:def(area)}
 
 \index{area}\emph{Area} is defined as a function $\mathcal{P}\mapsto \area\mathcal{P}$
-that returns a nonnegative real number $\area\mathcal{P}$ for any polygonal set $\mathcal{P}$ and satisfying the following conditions:\label{page:area-def}
+that returns a nonnegative real number $\area\mathcal{P}$ for any polygonal set $\mathcal{P}$ and satisfies the following conditions:\label{page:area-def}
 \textit{
 \begin{enumerate}[(a)]
 \item
@@ -238,7 +236,7 @@ it might be considered as an additional axiom altho it follows from the axioms \
 \section{Vanishing area and subdivisions}
 
 \begin{thm}{Proposition}\label{prop:area-segment}
-Any one-point set, as well as any segment in the Euclidean plane, have vanishing area.
+Any one-point set, as well as any segment in the Euclidean plane, has a vanishing area.
 \end{thm}
 
 \parit{Proof.}
@@ -281,7 +279,7 @@ Whence $\area\{A\}=0$.
 \qeds
 
 \begin{thm}{Corollary}\label{cor:degenerate}
-Any degenerate polygonal set has vanishing area.
+Any degenerate polygonal set has a vanishing area.
 \end{thm}
 
 \parit{Proof.}
@@ -310,7 +308,7 @@ and the intersection $\mathcal{Q}_i\cap\mathcal{Q}_j$ is degenerate for any pair
 the intersections $\mathcal{Q}_i\cap\mathcal{Q}_j$ are polygonal.)
 
 \begin{thm}{Proposition}\label{prop:subdivision}
-Assume polygonal sets $\mathcal{P}$ is subdivided into polygonal sets $\mathcal{Q}_1,\dots,\mathcal{Q}_n$.
+Assume that a polygonal set $\mathcal{P}$ is subdivided into polygonal sets $\mathcal{Q}_1,\dots,\mathcal{Q}_n$.
 Then 
 \[\area\mathcal{P}=\area\mathcal{Q}_1+\dots+\area\mathcal{Q}_n.\]
 
@@ -351,7 +349,7 @@ According to the proposition, if $\mathcal{P}$ and $\mathcal{P}$ are equidecompo
 A converse to this statement also holds;
 namely, \textit{if two nondegenerate polygonal sets have equal area, then they are equidecomposable.}
 
-The last statement was proved by William Wallace, Farkas Bolyai and Paul Gerwien.
+The last statement was proved by William Wallace, Farkas Bolyai, and Paul Gerwien.
 The analogous statement in three dimensions, known as \emph{Hilbert's third problem}, is false; it was proved by Max Dehn.
 
 
@@ -494,7 +492,7 @@ It remains to apply the algebraic lemma.
 \section{Parallelograms}
 
 \begin{thm}{Proposition}\label{prop:area-parallelogram}
-Let $\square ABCD$ be a parallelogram in the Euclidean plane, $a=AB$ and $h$ be the distance between the lines $(AB)$ and~$(CD)$.
+Let $\square ABCD$ be a parallelogram in the Euclidean plane, $a=AB$, and $h$ be the distance between the lines $(AB)$ and~$(CD)$.
 Then 
 \[\area(\solidsquare ABCD)=a\cdot h.\]
 
@@ -510,7 +508,7 @@ Then
 \end{wrapfigure}
 
 \parit{Proof.}
-Let $A'$ and $B'$ denote the foot points of $A$ and $B$
+Let $A'$ and $B'$ denote the footpoints of $A$ and $B$
 on the line~$(CD)$.
 
 Note that $ABB'A'$ is a rectangle with sides $a$ and $h$.
@@ -635,7 +633,7 @@ Give a proof of this statement without using Theorem~\ref{thm:area-of-triangle}.
 
 \begin{thm}{Exercise}\label{ex:half-parallelogram}
 Assume $M$ lies inside the parallelogram $ABCD$;
-that is, $M$ belongs to the solid parallelogram $\solidsquare ABCD$, but does not lie on its sides.
+that is, $M$ belongs to the solid parallelogram $\solidsquare ABCD$ but does not lie on its sides.
 Show that
 \[\area(\solidtriangle ABM)+\area(\solidtriangle CDM)
 =\tfrac12\cdot \area(\solidsquare ABCD).\]
@@ -669,13 +667,9 @@ Show that any polygonal set admits a subdivision into a finite collection of sol
 Conclude that for any polygonal set, its area is uniquely defined.
 \end{thm}
 
-
-
-
 \section{Area method}
 
-In this section, we will give examples of
-slim proofs using the properties of area.
+In this section, we will give examples of slim proofs using the properties of the area function.
 Note that these proofs are not truly elementary since the price one pays to introduce the area function is high.
 
 {
@@ -867,7 +861,7 @@ One has to make such a change for good reason ---
 hyperbolic plane and sphere have no squares.
 
 In this case, the set $\mathcal{U}$ plays the role of the unit measure for the area
-and changing $\mathcal{U}$ will require conversion of area units.
+and changing $\mathcal{U}$ will require the conversion of area units.
 
 \begin{wrapfigure}{o}{26 mm}
 \vskip-0mm
@@ -876,7 +870,7 @@ and changing $\mathcal{U}$ will require conversion of area units.
 \end{wrapfigure}
 
 According to the standard convention, the set $\mathcal{U}$
-is taken so that on small scales area behaves like area in the Euclidean plane.
+is taken so that on small scales area behaves like in the Euclidean plane.
 Say, 
 if $\mathcal{K}_a$ denotes the solid quadrangle $\solidsquare ABCD$ 
 with right angles at $A$, $B$, and $C$ such that  $AB=BC=a$, 
@@ -908,9 +902,9 @@ $k=-1$ for the h-plane,
 $k=1$ for the unit sphere,
 and $k=\tfrac1{r^2}$ for the sphere of radius~$r$.
 
-Since the angles of ideal triangle vanish, any ideal triangle in h-plane has area~$\pi$.
-Similarly, in the unit sphere the area of equilateral triangle with right angles has area $\tfrac\pi2$;
-since whole sphere can be subdivided in eight such triangles, we get that the area of unit sphere is $4\cdot\pi$.
+Since the angles of an ideal triangle vanish, any ideal triangle in h-plane has area~$\pi$.
+Similarly, in the unit sphere, the area of an equilateral triangle with right angles has area $\tfrac\pi2$;
+since the whole sphere can be subdivided into eight such triangles, we get that the area of the unit sphere is $4\cdot\pi$.
 
 The identity \ref{eq:curv-defect} can be used as an alternative way to introduce area function; it works on spheres and all neutral planes, except for the Euclidean plane.
 
