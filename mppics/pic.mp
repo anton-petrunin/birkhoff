@@ -5025,6 +5025,53 @@ label.ulft (btex $C$ etex, z.C);
 label.bot (btex $D$ etex, z.D);
 endfig;
 
+beginfig(287)
+save u,k,p;
+u:=1cm;
+k:=.5cm;
+path p[];
+
+z.l=3*(1,0)*u rotated 20;
+z.h=k*z.l/abs(z.l) rotated 90;
+z.shift=(0,1.5)*u;
+z.r=.2*z.h;
+
+p1=origin--z.l--z.l+z.h--z.h--cycle;
+
+draw woodenThing(p1, angle(z.l));
+draw woodenThing(p1, angle(z.l)) shifted z.shift;
+
+z.z1=z.h/2+z.h rotated -90;
+z.z2=z.h/2+z.l-z.h rotated -90;
+
+p2=
+z.z1+1.5*abs(z.r)*unitvector(z.shift) rotated 90{z.shift}
+..
+{z.shift}z.shift+z.z1+1.5*abs(z.r)*unitvector(z.shift) rotated 90
+..
+z.shift+z.z1-1.5*abs(z.r)*unitvector(z.shift) rotated 90{-z.shift}
+..
+{-z.shift}z.z1-1.5*abs(z.r)*unitvector(z.shift) rotated 90
+..cycle;
+
+%draw p2;
+%fill p2 withcolor .5;
+%draw p2 shifted (z.z2-z.z1);
+%fill p2 shifted (z.z2-z.z1) withcolor .5;
+
+fill p2 withcolor 1;
+draw woodenThing(p2, angle(z.shift));
+fill p2 shifted (z.z2-z.z1) withcolor 1;
+draw woodenThing(p2 shifted (z.z2-z.z1), angle(z.shift));
+
+fill circle(z.z1, z.r) withcolor 0;
+fill circle(z.z1, z.r) shifted z.shift  withcolor 0;
+fill circle(z.z2, z.r) withcolor 0;
+fill circle(z.z2, z.r) shifted z.shift  withcolor 0;
+
+
+endfig;
+
 beginfig(288)
 save u,k;
 u:=1cm;
@@ -5064,6 +5111,7 @@ draw woodenThing(z.c--z.cc--z.bb--z.b--cycle, angle(z.b-z.c));
 draw woodenThing(z.c--z.cc--z.aa--z.a--cycle, angle(z.a-z.c));
 draw woodenThing(z.b--z.bb--z.aa--z.a--cycle, angle(z.a-z.b));
 endfig;
+
 
 beginfig(290)
 save u;
