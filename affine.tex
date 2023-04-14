@@ -153,33 +153,29 @@ Then $\triangle O'X'Y'$ is nondegenerate, and
 Since an affine transformation maps lines to lines, the triangle
 $O'X'Y'$ is nondegenerate.
 
-If $x=0$ or $y=0$, then the second statement follows directly from the proposition.
-Otherwise, consider points $V$ and $W$ defined by
+\begin{wrapfigure}{o}{33mm}
+\centering
+\vskip-0mm
+\includegraphics{mppics/pic-225}
+\end{wrapfigure}
+
+Consider points $V$ and $W$ defined by
 \[\overrightarrow{OV}=x\cdot\overrightarrow{OX},
 \quad
 \overrightarrow{OW}=y\cdot\overrightarrow{OY}.
 \]
-By the proposition,
-\[\overrightarrow{O'V'}=x\cdot\overrightarrow{O'X'},
-\quad
-\overrightarrow{O'W'}=y\cdot\overrightarrow{O'Y'}.
-\]
-
-\begin{wrapfigure}{o}{33mm}
-\centering
-\includegraphics{mppics/pic-225}
-\end{wrapfigure}
 
 Note that 
-\[\overrightarrow{OP}=\overrightarrow{OV}+\overrightarrow{OW},\]
-or, equivalently, $\square OVPW$ is a parallelogram.
-According to Exercise~\ref{ex:affine-par}, $\square O'V'P'W'$ is a parallelogram as well.
-Therefore 
-\begin{align*}\overrightarrow{O'P'}&=\overrightarrow{O'V'}+\overrightarrow{O'W'}=
+$\overrightarrow{WP}=\overrightarrow{OV}$.
+Applying Exercise~\ref{ex:parallelogram-rule} and the proposition, we get
+\begin{align*}\overrightarrow{O'P'}&=\overrightarrow{O'W'}+\overrightarrow{W'P'}=
+\\
+&=\overrightarrow{O'W'}+\overrightarrow{O'V'}=
 \\
 &=x\cdot\overrightarrow{O'X'}+y\cdot\overrightarrow{O'Y'}.
 \end{align*}
 \qedsf
+
 
 \begin{thm}{Exercise}\label{ex:affine-continuous}
 Show that any affine transformation is continuous.
@@ -218,8 +214,12 @@ Therefore, the lemma states that the identity function is the only automorphism 
 For the field of complex numbers, the conjugation $z\mapsto\bar z$ (see Section~\ref{sec:complex-conjugation}) gives an example of a nontrivial automorphism.
 
 \begin{thm}{Exercise}\label{ex:f(1)=1}
-Suppose that function $f\:\mathbb{R}\to\mathbb{R}$ satisfies the condition (\ref{lem:R-auto:c}) in the lemma.
-Show that $f(1)=0$ or $f(1)=1$.
+Suppose that $f\:\mathbb{R}\to\mathbb{R}$ satisfies the condition (\ref{lem:R-auto:c}) in the lemma.
+Show that 
+\begin{enumerate}[(a)]
+ \item if $f(1)\ne 1$, then $f(x)=0$ for any $x$;
+  \item if $f(0)\ne 0$, then $f(x)=1$ for any $x$.
+\end{enumerate}
 \end{thm}
 
 
