@@ -1,4 +1,5 @@
 *.pdf
+.kile/*
 lib/*
 www/*
 *.backup

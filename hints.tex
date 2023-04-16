@@ -108,16 +108,16 @@ That is, you need to check if this map is bijective and distance-preserving.
 \parbf{\ref{ad-ex:motions of Manhattan plane}.} 
 First prove that \textit{two points $A=(x_A,y_A)$ and $B\z=(x_B,y_B)$ on the Manhattan plane have a unique midpoint if and only if $x_A=x_B$ or $y_A=y_B$}; compare with the example in Section~\ref{sec:cong-triangles}. 
 
-Then use the above statement to prove that
+Use the above statement to prove that
 any motion of the Manhattan plane 
-can be written in one of the following two ways:
+can be written in one of the following eight ways:
 \begin{align*}
 (x,y)&\mapsto (\pm x+a,\pm y+b)
 \intertext{or} 
 (x,y)&\mapsto (\pm y+b,\pm x+a),
 \end{align*}
-for some fixed real numbers $a$ and~$b$.
-(In each case we have 4 choices of signs, so for a fixed pair $(a,b)$ we have 8 distinct motions.)
+for fixed real numbers $a$ and~$b$ .
+In each case we have 4 choices of signs, so for a fixed pair $(a,b)$ we have 8 distinct motions.
 
 \parbf{\ref{ex:y=|x|}.}
 Assume three points $A$, $B$, and $C$ lie on one line.
@@ -150,12 +150,12 @@ $|x-q|+|x|=|q|$.
 \parbf{\ref{ex:2a=0}.}
 The equation
 $2\cdot\alpha\equiv 0$
-means that $2\cdot\alpha\z=2\cdot k\cdot\pi$ for some integer~$k$.
+means that $2\cdot\alpha\z=2\cdot k\cdot\pi$ for an integer~$k$.
 Therefore,
-$\alpha=k\cdot\pi$ for some integer~$k$.
+$\alpha=k\cdot\pi$.
 
-Equivalently, $\alpha=2\cdot n\cdot \pi$ or $\alpha=(2\cdot n+1)\cdot \pi$ for some integer~$n$.
-The first identity means that $\alpha\equiv 0$ and the second means that $\alpha\equiv \pi$.
+Equivalently, $\alpha=2\cdot n\cdot \pi$ or $\alpha=(2\cdot n+1)\cdot \pi$ for an integer~$n$.
+In these cases, we have $\alpha\equiv 0$ or $\alpha\equiv \pi$ respectively.
 
 \parbf{\ref{ex:dist-cont}.} \textit{(a).}
 By the triangle inequality,
@@ -531,7 +531,7 @@ The given data is marked in bold.
 \setcounter{eqtn}{0}
 
 \parbf{\ref{ex:angle-preserving-euclid}.}
-By the AA similarity condition, the transformation multiplies the sides of any nondegenerate triangle by some number that may depend on the triangle. 
+By the AA similarity condition, the transformation multiplies the sides of any nondegenerate triangle by a number that may depend on the triangle. 
 
 Note that for any two nondegenerate triangles that share one side this number is the same.
 Applying this observation to a chain of triangles leads to a solution.
@@ -720,7 +720,7 @@ For the remaining parts use that any line is a perpendicular bisector to some li
 
 
 \parbf{\ref{ex:apolonnius}.}
-We can choose the coordinates so that $B=(0,0)$ and $A=(a,0)$ for some $a>0$.
+We can choose the coordinates so that $B=(0,0)$ and $A=(a,0)$ for $a>0$.
 If $M=(x,y)$, then the equation $AM=k\cdot BM$ can be written in coordinates as 
 \[k^2\cdot(x^2+y^2)=(x-a)^2+y^2.\]
 It remains to rewrite this equation as in \ref{ex:circle-coord}.
@@ -1480,7 +1480,7 @@ Choose a line $(AB)$.
 \includegraphics{mppics/pic-353}
 \end{wrapfigure}
 
-Assume that $X'\z\in (A'B')$ for some $X\z\notin(AB)$.
+Assume $X'\z\in (A'B')$ for some $X\z\notin(AB)$.
 Since $P\mapsto P'$ maps collinear points to collinear, 
 the three lines $(AB)$, $(AX)$, and $(BX)$ are mapped to~$(A'B')$.
 Further, any line that connects a pair of points on these three lines is also mapped to~$(A'B')$.
@@ -1537,8 +1537,24 @@ Therefore, this construction does not produce perpendicular lines in general.
 (It might produce a perpendicular line only by a coincidence.)
  
 \parbf{\ref{ex:parallelogram-rule}.}
-Apply twice \ref{ex:affine-par} and the parallelogram rule.
-(Note that the case if $A$, $B$, $X$, and $Y$ are collinear requires extra work.)
+The first part follows from \ref{ex:affine-par}.
+
+Suppose $A$, $B$, $X$, and $Y$ are not collinear;
+in this case, $\square ABYX$ is a parallelogram.
+By the parallelogram rule, the only-if part follows.
+
+Now suppose $A$, $B$, $X$, and $Y$ lie on one line, say~$\ell$.
+Choose two more points $P,Q\notin\ell$ such that 
+\[\overrightarrow{XY}=\overrightarrow{PQ}
+\quad\text{and therefore}\quad 
+\overrightarrow{PQ}=\overrightarrow{AB}.\]
+From above we get 
+\[\overrightarrow{X'Y'}=\overrightarrow{P'Q'}
+\quad\text{and}\quad 
+\overrightarrow{P'Q'}=\overrightarrow{A'B'}.\]
+Hence the only-if part follows in the general case.
+
+The if part follows since inverse of an affine transformation is affine.
  
 \parbf{\ref{ex:affine-continuous} and \ref{ex:affine-coordinates}.}
 Fix a coordinate system and apply the fundamental theorem of affine geometry (\ref{thm:fundamental-theorem-of-affine-geometry}) for the points $O=(0,0)$, $X=(1,0)$ and $Y=(0,1)$.
@@ -2105,16 +2121,15 @@ such that $AD=a$ and $BD=b$;
 (4) let $C$ be an intersection of $\Gamma$ and~$\ell$.
 Then $DC= \sqrt{a\cdot b}$.
 
+The construction of $\tfrac{a^2}b$ is analogous.
+
 {
 
 \begin{wrapfigure}{r}{27mm}
-\vskip-0mm
+\vskip-3mm
 \centering
 \includegraphics{mppics/pic-366}
 \end{wrapfigure}
-
-The construction of $\tfrac{a^2}b$ is analogous.
-
 
 \parbf{\ref{ex:5-gon},} \textit{(\ref{ex:5-gon:a})}.
 Look at the diagram;
@@ -2139,10 +2154,10 @@ Show that the remaining vertex is $(\tfrac12,\pm\tfrac{\sqrt{3}}2)$.
 Observe that it is an irrational point; apply \ref{thm:set-square-constructible-numbers}.%
 \footnote{It is okay to use that $\sqrt{3}$ is irrational without proving it.
 But let us explain why it is true. 
-Assume the contrary; that is, $\tfrac mn=\sqrt{3}$ for some integers $m$ and $n$.
+Assume the contrary; that is, $\tfrac mn=\sqrt{3}$ for integers $m$ and $n$.
 We can assume that $m$ and $n$ do not share a prime factor; in particular, if $m$ is divisible by $3$, then $n$ is not.
 Observe that $m^2=3\cdot n^2$.
-It follows that $m$ is divisible by 3; that is, $m=3\cdot k$ for some integer $k$.
+It follows that $m$ is divisible by 3; that is, $m=3\cdot k$ for an integer $k$.
 It follows that $3\cdot k^2=n^2$.
 Therefore, $n$ is divisible by 3 --- a contradiction.} 
 
@@ -2153,7 +2168,7 @@ Show that $D$ is an irrational point.
 Apply \ref{thm:set-square-constructible-numbers} and arrive at a contradiction.
 
 \parbf{\ref{ex:90-60-30}.}
-Suppose that every initial point has coordinates $(a,b\cdot\sqrt{3})$ for some rational values $a$ and $b$.
+Suppose that every initial point has coordinates $(a,b\cdot\sqrt{3})$ for rational values $a$ and $b$.
 Show and use that any point that can be constructed with the 30°-set-square has coordinates of the same type.
 
 {
