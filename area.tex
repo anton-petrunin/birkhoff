@@ -21,7 +21,7 @@ soon or later you will have to learn the Lebesgue measure if it is not done alre
 \includegraphics{mppics/pic-292}
 \end{wrapfigure}
 
-We say that the point $X$ lies \index{inside!a triangle}\emph{inside} a nondegenerate triangle $ABC$ if the following three conditions hold:
+We say that point $X$ lies \index{inside!a triangle}\emph{inside} a nondegenerate triangle $ABC$ if the following three conditions hold:
 
 \begin{itemize}
 \item $A$ and $X$ lie on the same side of the line~$(BC)$;
@@ -184,7 +184,7 @@ Note that $\mathcal{P}\cap \mathcal{Q}$ is the union of sets $\mathcal{P}_i\cap 
 Therefore, in order to show that $\mathcal{P}\cap \mathcal{Q}$ is polygonal,
 it is sufficient to show that each $\mathcal{P}_i\cap \mathcal{Q}_j$ is polygonal for any pair $i$,~$j$.
 
-The diagram should suggest an idea for the proof of the latter statement in case if $\mathcal{P}_i$ and  $\mathcal{Q}_j$ are solid triangles. 
+The diagram suggests a proof of the latter statement for solid triangles $\mathcal{P}_i$ and $\mathcal{Q}_j$. 
 The other cases are simpler; a formal proof can be built on Exercise~\ref{ex:triangle-convex}
 \qeds
 
@@ -223,8 +223,8 @@ for any two polygonal sets $\mathcal{P}$ and $\mathcal{Q}$.
 The first condition is called \emph{normalization}; essentially it says that a solid unit square is used as a unit to measure area.
 The three conditions in \textit{(\ref{area-3})} are called \emph{invariance}, \emph{monotonicity}, and \emph{additivity}.
 
-The Lebesgue measure provides an example of area function; 
-namely, if one takes area of $\mathcal{P}$ to be its Lebesgue measure,
+The Lebesgue measure provides an example of an area function; 
+namely, if one takes the area of $\mathcal{P}$ to be its Lebesgue measure,
 then the function $\mathcal{P}\mapsto\area\mathcal{P}$ satisfies the above conditions.
 
 The construction of the Lebesgue measure can be found in any textbook on real analysis.
@@ -397,7 +397,7 @@ s(a,b)&=s(a',b)+s(a-a',b)\ge
 &\ge s(a',b').
 \end{align*}
 
-Applying the second and third identity in \ref{3s} few times we get that
+Applying the second and third identity in \ref{3s} a few times we get that
 \begin{align*}
 m\cdot s(a,b)&=s(a,m\cdot b)=
 \\&=s(m\cdot a,b)
@@ -623,7 +623,7 @@ From above and Proposition~\ref{prop:area-parallelogram}, we get that
 \qedsf
 
 \begin{thm}{Exercise}\label{ex:three-trig}
-Let $h_A$, $h_B$, and $h_C$ denote the altitudes of $\triangle ABC$ from vertices $A$, $B$ and $C$ respectively.
+Let $h_A$, $h_B$, and $h_C$ denote the altitudes of $\triangle ABC$ from vertices $A$, $B$, and $C$ respectively.
 Note that from Theorem~\ref{thm:area-of-triangle},
 it follows that
 \[h_A\cdot BC=h_B\cdot CA=h_C\cdot AB.\]
@@ -681,7 +681,7 @@ Note that these proofs are not truly elementary since the price one pays to intr
 \end{wrapfigure}
 
 We start with the proof of the Pythagorean theorem.
-In the Elements of Euclid, the Pythagorean theorem was formulated as equality  \ref{eq:pyth+area} below
+In the Elements of Euclid, the Pythagorean theorem was formulated as equality  \ref{eq:pyth+area} below,
 and the proof used a similar technique.
 
 \parit{Proof.}
@@ -707,7 +707,7 @@ see the second diagram.
 
 \end{enumerate}
 
-Applying Proposition~\ref{prop:subdivision} few times,
+Applying Proposition~\ref{prop:subdivision} a few times,
 we get that
 \begin{align*}
 \area\mathcal{K}_{a+b}
@@ -769,7 +769,7 @@ Now let us show how to use this claim to prove Lemma~\ref{lem:bisect-ratio}.
 First, let us recall its statement:
 
 \begin{thm*}{Lemma}
-If $\triangle A B C$ is nondegenerate and its angle bisector at $A$ intersects $[BC]$ at the point~$D$.
+If $\triangle A B C$ is nondegenerate and its angle bisector at $A$ intersects $[BC]$ at point~$D$.
 Then 
 $$\frac{AB}{AC}=\frac{DB}{DC}.$$
 \end{thm*}
@@ -800,7 +800,7 @@ The second statement in the following exercise is called \index{Ceva's theorem}\
 
 \begin{thm}{Exercise}\label{ex:ceva}
 Let $ABC$ be a nondegenerate triangle.
-Suppose its cevians $[AA']$, $[BB']$ and $[CC']$ intersect at one point $X$.
+Suppose its cevians $[AA']$, $[BB']$, and $[CC']$ intersect at one point $X$.
 Show that 
 
 \vskip-3mm
@@ -836,7 +836,7 @@ Conclude that
 \begin{thm}{Exercise}\label{ex:cross-ratio-area}
 Suppose that points $L_1$, $L_2$, $L_3$, $L_4$ lie on a line $\ell$ 
 and points $M_1$, $M_2$, $M_3$, $M_4$ lie on a line $m$. 
-Assume that the lines $(L_1M_1)$, $(L_2M_2)$, $(L_3M_3)$, and $(L_4M_4)$ pass thru a point $O$ that does not lie on $\ell$ nor~$m$.
+Assume that the lines $(L_1M_1)$, $(L_2M_2)$, $(L_3M_3)$, and $(L_4M_4)$ pass thru point $O$ that does not lie on $\ell$ nor~$m$.
 
 \begin{enumerate}[(a)]
  \item\label{ex:cross-ratio-area:a} Apply Claim~\ref{clm:area-ratio} to show that
@@ -860,8 +860,8 @@ exchanged to a fixed nondegenerate polygonal set $\mathcal{U}$.
 One has to make such a change for good reason --- 
 hyperbolic plane and sphere have no squares.
 
-In this case, the set $\mathcal{U}$ plays the role of the unit measure for the area
-and changing $\mathcal{U}$ will require the conversion of area units.
+In this case, the set $\mathcal{U}$ plays the role of the unit measure for the area;
+changing $\mathcal{U}$ will require the conversion of area units.
 
 \begin{wrapfigure}{o}{26 mm}
 \vskip-0mm
@@ -889,7 +889,7 @@ Recall that {}\emph{defect of triangle} $\triangle ABC$ is defined as
 $$\defect(\triangle ABC)
 \df 
 \pi-|\measuredangle ABC|-|\measuredangle BCA|-|\measuredangle CAB|.$$
-It turns out that any neutral plane or  sphere
+It turns out that for any neutral plane or sphere,
 there is a real number $k$
 such that 
 $$k\cdot\area(\solidtriangle ABC)+\defect(\triangle ABC)=0
@@ -912,7 +912,7 @@ The identity \ref{eq:curv-defect} can be used as an alternative way to introduce
 
 A set $\mathcal{S}$ 
 in the plane is called \index{quadrable set}\emph{quadrable}
-if for any $\epsilon>0$ there are two polygonal sets 
+if, for any $\epsilon>0$, there are two polygonal sets 
 $\mathcal{P}$ and $\mathcal{Q}$
 such that 
 \[\mathcal{P}
@@ -948,7 +948,7 @@ Since $\mathcal{D}$ is quadrable, the expression $\area\mathcal{D}$ makes sense 
 It turns out that the class of quadrable sets is the largest class for which 
 the area function satisfying the conditions in Section~\ref{sec:def(area)} is \textit{uniquely} defined.
 
-If you do not require uniqueness, then  there are ways to extend area function to all bounded sets.
+If you do not require uniqueness, then there are ways to extend the area function to all bounded sets.
 (A set in the plane is called \index{bounded set}\emph{bounded} if it lies inside of a circle.)
 On the sphere and hyperbolic plane, 
 there is no similar construction.

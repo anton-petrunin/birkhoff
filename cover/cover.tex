@@ -1,3 +1,4 @@
+%Lualatex+needs P22UndergroundCYBookSC.tt and P22-Underground-Reg.ttf
 \documentclass[
 coverheight=9in,
 coverwidth=6in,
@@ -6,7 +7,10 @@ bleedwidth=.125in,
 marklength=0in,
 markcolor=black]{bookcover}
 
-\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+\usepackage{background}
+\usepackage{blindtext}
+\usepackage{fontspec}
 
 \newbookcoverpart{pfront}{
 \setpartposx{\marklength+\bleedwidth+\spinewidth+\coverwidth+10mm}
@@ -30,32 +34,41 @@ markcolor=black]{bookcover}
 \bookcovercomponent{color}{bg whole}{mycolor}
 %\bookcovercomponent{center}{bg whole}{\includegraphics{fon}}
 
+\setmainfont{P22-Underground-Reg}
+
 \bookcovercomponent{center}{spine}
 {\rotatebox[origin=c]{-90}{
 \color{white}
-\fontsize{18}{25}\usefont{OT1}{lmtt}{b}{n}
+\fontsize{18}{25}\selectfont
 EUCLIDEAN PLANE AND ITS RELATIVES
 \hskip30mm
 ANTON PETRUNIN
 }}
 
+
 \bookcovercomponent{center}{pfront}{
 \begin{flushright}
-{\color{white}\fontsize{35}{48}\usefont{OT1}{lmtt}{b}{n}
-Euclidean plane\\[3mm]
+{\color{white}\fontsize{42}{48}\selectfont
+Euclidean plane
+\\[3mm]
 }
-{\color{white}\fontsize{31}{48}\usefont{OT1}{lmtt}{b}{n}
+{\color{white}\fontsize{41.3}{48}\selectfont
 and its relatives}
 \\[5mm]
-{\color{white}\ttfamily\LARGE\textsc{a minimalist introduction}\hskip-1mm
+\setmainfont{P22UndergroundCYBookSC}
+{\color{white}\fontsize{21.5}{48}\selectfont
+a minimalist introduction\hskip.2mm 
 }
-\\[3mm]
-{\color{white}\ttfamily\LARGE{Anton Petrunin}\hskip-1mm 
+\\[4mm]
+{\color{white}\fontsize{15}{48}\selectfont
+Anton Petrunin\hskip.4mm
 }
 \vfill
 \includegraphics{../mppics/pic-351}
 \end{flushright}
 }
+
+\setmainfont{P22UndergroundCYBookSC}
 
 \bookcovercomponent{center}{pfront}{
 \begin{flushleft}
@@ -64,15 +77,19 @@ and its relatives}
 \includegraphics{../mppics/pic-187}
 }
 \vfill
-{\color{white}\textsc{third edition}}
+{\color{white}\fontsize{10}{48}\selectfont
+third edition\\
+seventh printing}
 \end{flushleft}
 
 }
 
+\setmainfont{P22-Underground-Reg}
+
 \bookcovercomponent{center}{pback}{
 \begin{flushleft}
-\parbox{.8\textwidth}{
-\ttfamily\large\color{white}
+\parbox{.75\textwidth}{
+\color{white}\fontsize{10}{14}\selectfont
 The book is designed for a semester-long course in Foundations of geometry and meant to be rigorous, conservative, elementary, and minimalist.
 \medskip
 \\
@@ -113,9 +130,10 @@ Additional topics
 \vfill
 \includegraphics{../mppics/pic-277} 
 \\[3mm]
-{\color{white}\ttfamily\large  arXiv:1302.1630v21}
+\color{white}\fontsize{10}{14}\selectfont
+arXiv:1302.1630v22
 \\[1mm]
-{\color{white}\ttfamily\large anton-petrunin.github.io/birkhoff/}
+anton-petrunin.github.io/birkhoff/
 \end{flushleft}
 }
 
