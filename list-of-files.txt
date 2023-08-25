@@ -46,6 +46,7 @@ mppics/pic-162.mps
 mppics/pic-196.mps
 mppics/pic-226.mps
 mppics/pic-26.mps
+mppics/pic-287.mps
 mppics/pic-292.mps
 mppics/pic-324.mps
 mppics/pic-335.mps
