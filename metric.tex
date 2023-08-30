@@ -19,12 +19,10 @@ so that one mathematician could understand the other.
 
 The best way to understand an axiomatic system
 is to make one by yourself.
-Look around and choose a physical model 
-of the Euclidean plane;
-imagine an infinite and perfect surface of a chalkboard. 
-Now try to collect the key observations
-about this model.
 Assume for now that we have an intuitive understanding of such notions as {}\emph{line} and {}\emph{point}.
+Imagine an infinite and perfect surface of a chalkboard. 
+Let us try to collect the key observations about this model.
+
 \begin{enumerate}[(i)]
  \item\label{preaxiomI} We can measure distances between points.
  \item\label{preaxiomII} We can draw a unique line 
@@ -54,11 +52,10 @@ but it is not intuitively clear why we define points and distances this way.
 
 On the other hand, the observations made in the previous section are intuitively obvious ---
 this is the main advantage of the axiomatic approach.
-
 Another advantage --- the axiomatic approach is easily adjustable. 
 For example, we may remove one axiom from the list,
 or exchange it for another axiom. 
-We will do such modifications in Chapter~\ref{chap:non-euclid} and further.
+We will do it in Chapter~\ref{chap:non-euclid}.
 
 \section{Metric spaces}
 
@@ -161,8 +158,8 @@ holds for any four points $A$, $B$, $P$, $Q$ in a metric space.
 
 \section{Isometries, motions, and lines}
 
-In this section, we define {}\emph{lines} in a metric space.
-Once it is done the sentence {}\emph{``We can draw a unique line that passes thru two given points.''} becomes rigorous; see (\ref{preaxiomII}) in Section~\ref{preaxioms}. 
+In this section, we define lines in a metric space.
+Once it is done the sentence \textit{``We can draw a unique line that passes thru two given points.''} becomes rigorous; see (\ref{preaxiomII}) in Section~\ref{preaxioms}. 
 
 Recall that a map $f\:\mathcal{X}\to\mathcal{Y}$
 is a \index{bijection}\emph{bijection}
@@ -185,8 +182,7 @@ for any $A,B\in {\mathcal X}$.
 
 A bijective distance-preserving map is called an \index{isometry}\emph{isometry}. 
 
-Two metric spaces are called
-\emph{isometric} if there exists an isometry from one to the other.
+Two metric spaces are called \emph{isometric} if there exists an isometry from one to the other.
 
 The isometry from a metric space to itself 
 is also called a \index{motion}\emph{motion} of the space.
@@ -225,7 +221,7 @@ A subset $\ell$ of metric space is called a \index{line}\emph{line} if it is iso
 \end{thm}
 
 A triple of points that lie on one line is called \index{collinear points}\emph{collinear}.
-Note that if $A$, $B$, and  $C$ are  collinear, $AC\ge AB$ and $AC\ge BC$, then $AC= AB+BC$.
+Note that if $A$, $B$, and  $C$ are  collinear, $AC\ge AB$, and $AC\ge BC$, then $AC\z= AB+BC$.
 
 Some metric spaces have no lines; for example, discrete metrics.
 The picture shows examples of lines on the Manhattan plane $(\mathbb{R}^2,d_1)$. 
@@ -258,7 +254,7 @@ but if we write \index{60@$(PQ)$, $[PQ)$, $[PQ]$}$(PQ)$ we assume that we made a
 
 We will denote by $[P Q)$ the \index{half-line}\emph{half-line}
 that starts at $P$ and contains~$Q$. 
-Formally speaking, $[P Q)$ is a subset of $(P Q)$ which corresponds to $[0,\infty)$ under an isometry $f\:(P Q)\to \mathbb{R}$ such that $f(P)=0$ and $f(Q)>0$.
+Formally speaking, $[P Q)$ is a subset of $(P Q)$ that corresponds to $[0,\infty)$ under an isometry $f\:(P Q)\to \mathbb{R}$ such that $f(P)=0$ and $f(Q)>0$.
 
 The subset of line $(P Q)$ between $P$ and $Q$ is called the \index{segment}\emph{segment between} $P$ and $Q$; it is denoted by~$[P Q]$.
 Formally, the segment can be defined as the intersection of two half-lines: $[P Q]=[P Q)\cap[Q P)$.
@@ -277,7 +273,7 @@ $PX+XQ=PQ$.
 
 \section{Angles}
 
-Our next goal is to introduce {}\emph{angles} and {}\emph{angle measures}; 
+Our next goal is to introduce angles and angle measures; 
 after that, the statement \textit{``we can measure angles''} will become rigorous;
 see (\ref{preaxiomIII}) in Section~\ref{preaxioms}.
 
@@ -288,7 +284,7 @@ In this case, the point $O$ is called the \index{vertex!of angle}\emph{vertex} o
 Intuitively, the angle measure tells how much one has to rotate the first half-line counterclockwise, so it gets the position of the second half-line of the angle. 
 The full turn is assumed to be $2\cdot\pi$;
 it corresponds to the angle measure in radians.%
-\footnote{For a while you may think that $\pi$ is a positive real number that measures the size of a half-turn in certain units. Its concrete value $\pi\approx 3.14$ will not be important for a long time.}
+\footnote{For a while you may think that $\pi$ is a positive real number that measures the size of a half-turn in certain units. Its value $\pi\approx 3.14$ will not be important.}
 
 The angle measure of $\angle AOB$ is denoted by $\measuredangle AOB$;
 it is a real number in the interval $(-\pi,\pi]$. 
@@ -312,7 +308,6 @@ means only equality of two real numbers;
 in this case, $O$ may be distinct from~$O'$.
 
 Here is the first property of angle measure which will become a part of the axiom.
-
 \textit{Given a half-line $[O A)$ and $\alpha\in(-\pi,\pi]$ there is a unique half-line $[O B)$ such that $\measuredangle A O B= \alpha$.}
 
 
@@ -338,16 +333,11 @@ if $\alpha=\beta+2\cdot\pi\cdot n$
 for an integer~$n$.
 In this case, we say 
 $$\textit{``$\alpha$ is equal to $\beta$ modulo $2\cdot\pi$''}.$$
-For example, 
-$$-\pi
+For example, $-\pi
 \equiv
-\pi\equiv 3\cdot\pi
-\quad
-\text{and}
-\quad
-\tfrac12\cdot\pi
+\pi\equiv 3\cdot\pi$ and $\tfrac12\cdot\pi
 \equiv
--\tfrac32\cdot\pi.$$
+-\tfrac32\cdot\pi$.
 
 The introduced relation ``$\equiv$'' behaves as an equality sign,
 but
@@ -418,8 +408,8 @@ d_{\mathcal Y}(f(A),f(A'))
 A map $f\:\mathcal X\to\mathcal Y$ is called \index{continuous}\emph{continuous} if it is continuous at every point $A\in \mathcal X$.
 
 One may define a continuous map of several variables the same way.
-Assume $f$ is a function that returns a point in space $\mathcal Y$ for a triple of points $(A,B,C)$
-in space~$\mathcal X$.
+Assume $f$ is a function that returns a point in $\mathcal Y$ for a triple of points $(A,B,C)$
+in~$\mathcal X$.
 The map $f$ might be defined only for some triples in~$\mathcal X$.
 
 Assume $f(A,B,C)$ is defined.
@@ -437,7 +427,7 @@ Show that the function
 $$f\:B\mapsto
 d_{\mathcal{X}}(A,B)$$ 
 is continuous at any point~$B$.
-\item Show that the function $(A,B)\mapsto d_{\mathcal{X}}(A,B)$ is continuous at any pair $A,B\in \mathcal{X}$.
+\item Show that the function $g\:(A,B)\mapsto d_{\mathcal{X}}(A,B)$ is continuous at any pair $A,B\in \mathcal{X}$.
 \end{enumerate}
 
 \end{thm}
@@ -452,26 +442,25 @@ Show that $h\:\mathcal{X}\to\mathcal{Z}$ is continuous at any point.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:isom-cont}
-Show that any distance-preserving map is continuous at any point.
+Show that any distance-preserving map is continuous.
 \end{thm}
 
 \section{Congruent triangles}
 \label{sec:cong-triangles}
 
 Our next goal is to find a rigorous meaning for statement (\ref{preaxiomIV}) in Section~\ref{preaxioms}.
-To do this, we introduce the notion of {}\emph{congruent triangles}
-so instead of \textit{``if we rotate or shift we will not see the difference''} we say that for triangles, the side-angle-side congruence holds;
-that is, two triangles are congruent if they have two pairs of equal sides and the same angle measure between these sides.
+To do this, we introduce the notion of congruent triangles
+so instead of \textit{``if we rotate or shift we will not see the difference''} we say that for triangles, the side-angle-side congruence holds.
 
-An {}\emph{ordered} triple of distinct points in a metric space $\mathcal{X}$, 
+An \textit{ordered} triple of distinct points in a metric space $\mathcal{X}$, 
 say $A,B,C$,
 is called a \index{triangle}\emph{triangle $ABC$}\label{page:def:triangle} (briefly \index{20@$\triangle$}$\triangle A B C$).
 Note that the triangles $A B C$ and $A C B$ are different.
 
-Two triangles $A' B' C'$ and $A B C$ are called 
+Two triangles $A' B' C'$ and $A B C$ are  
 \index{triangle!congruent triangles}
 \index{congruent!triangles}\emph{congruent}
-(it can be written as \index{32@$\cong$}$\triangle A' B' C'\z\cong\triangle A B C$) if there is a motion $f\:\mathcal{X}\to\mathcal{X}$ such that 
+(briefly  \index{32@$\cong$}$\triangle A' B' C'\z\cong\triangle A B C$) if there is a motion $f\:\mathcal{X}\to\mathcal{X}$ such that 
 \[A'\z=f(A),
 \quad
 B'=f(B)
@@ -532,3 +521,10 @@ Note that a point $M$ is a midpoint of $A$ and $B$ if and only if $f(M)$ is a mi
 The set of midpoints for $A$ and $B$ is infinite, it contains all points $(t,t)$ for $t\in[0,1]$ (it is the gray segment in the picture above).
 On the other hand, the midpoint for $B$ and $C$ is unique (it is the black point in the picture).
 Thus, the map $f$ cannot be bijective --- a contradiction.
+
+\begin{thm}{Exercise}\label{ex:ncong}
+Consider a metric space with four points $\{A,B,C,D\}$ and metric defined by $AB=AC=AD=BC=BD=1$, and 
+$CD=2$.
+Show that (a) $\triangle ABC\cong \triangle BAC$, and (b) $\triangle ABC\ncong \triangle BCA$.
+\end{thm}
+
