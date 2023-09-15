@@ -38,7 +38,7 @@ will be called \index{triangle!solid triangle}\index{solid!triangle}\emph{solid 
 \begin{thm}{Exercise}\label{ex:triangle-convex}
 Show that any solid triangle is \index{convex set}\emph{convex};
 that is, for any pair of points $X,Y\z\in\solidtriangle ABC$,
-then the line segment $[XY]$ lies in  $\solidtriangle ABC$.
+the line segment $[XY]$ lies in  $\solidtriangle ABC$.
 \end{thm}
 
 
@@ -236,7 +236,8 @@ it might be considered as an additional axiom altho it follows from the axioms \
 \section{Vanishing area and subdivisions}
 
 \begin{thm}{Proposition}\label{prop:area-segment}
-Any one-point set, as well as any segment in the Euclidean plane, has a vanishing area.
+For any two points $A$ and $B$, we have
+\[\area[AB]=0\quad\text{and}\quad\area\{A\}=0.\]
 \end{thm}
 
 \parit{Proof.}
@@ -418,16 +419,25 @@ s(\tfrac kl,\tfrac mn)
 for any positive integers $k$, $l$, $m$, and $n$.
 That is, the needed identity holds for any pair of rational numbers $a=\tfrac kl$ and $b=\tfrac mn$.
 
-Arguing by contradiction, assume $s(a,b)\ne a\cdot b$ for a pair of positive real numbers $(a,b)$. 
-We have two cases: $s(a,b)> a\cdot b$ and $s(a,b)\z< a\cdot b$.
+Arguing by contradiction, assume $s(a,b)\ne a\cdot b$ for a pair of positive real numbers $(a,b)$;
+so, $s(a,b)> a\cdot b$ or $s(a,b)\z< a\cdot b$.
 
+Further \index{63@$\lfloor x \rfloor$, $\lceil x \rceil$}$\lfloor x \rfloor$ and $\lceil x \rceil$ will denote \index{floor and ceiling}\emph{floor} and \emph{ceiling} of $x$;
+that is, $\lfloor x \rfloor$ is the greatest integer such that $\lfloor x \rfloor\le x$,
+and $\lceil x \rceil$ is the least integer such that $\lceil x \rceil\ge x$.
+
+{
+
+\columnratio{0.5}
+\setlength{\columnseprule}{.2pt}
+\begin{paracol}{2}
 If $s(a,b)> a\cdot b$,
 we can choose a positive integer $n$ such that
 \[s(a,b)> (a+\tfrac1n)\cdot (b+\tfrac1n).\eqlbl{s(a,b)>}\]
 Set $k=\lfloor a\cdot n \rfloor+1$ and $m=\lfloor b\cdot n \rfloor+1$;
 equivalently, $k$ and $m$ are positive integers such that
 \[a< \tfrac kn\le a+\tfrac1n
-\quad\text{and}\quad 
+\ \text{and}\ 
 b<\tfrac mn\le b+\tfrac1n.\]
 By \ref{s(a,b)>s(a',b')}, we get that
 \begin{align*}
@@ -438,15 +448,15 @@ s(a,b)&\le s(\tfrac kn,\tfrac mn)=
 &\le (a+\tfrac1n)\cdot(b+\tfrac1n),
 \end{align*}
 which contradicts \ref{s(a,b)>}.
-
-The case $s(a,b)< a\cdot b$ is similar.
-Fix a positive integer $n$ such that $a>\tfrac1n$, $b>\tfrac1n$, and
+\switchcolumn
+If $s(a,b)< a\cdot b$, choose a positive integer $n$ such that $a>\tfrac1n$, $b>\tfrac1n$, and
+\refstepcounter{eqtn}%???
 \[s(a,b)< (a-\tfrac1n)\cdot (b-\tfrac1n).\eqlbl{s(a,b)<}\]
 Set $k=\lceil a\cdot n \rceil-1$ and $m=\lceil b\cdot n \rceil-1$; that is,
 \[a> \tfrac kn\ge a-\tfrac1n
-\quad\text{and}\quad 
+\ \text{and}\  
 b>\tfrac mn\ge b-\tfrac1n.\]
-Applying \ref{s(a,b)>s(a',b')} again, we get that
+By \ref{s(a,b)>s(a',b')}, we get that
 \begin{align*}
 s(a,b)&\ge s(\tfrac kn,\tfrac mn)=
 \\
@@ -454,8 +464,15 @@ s(a,b)&\ge s(\tfrac kn,\tfrac mn)=
 \\
 &\ge (a-\tfrac1n)\cdot(b-\tfrac1n),
 \end{align*}
-which contradicts \ref{s(a,b)<}.
-\qeds
+which contradicts \ref{s(a,b)<}.\qeds
+\end{paracol}
+\refstepcounter{eqtn}%???
+}
+
+
+
+
+
 
 
 \parit{Proof of Theorem~\ref{thm:area-rect}.}
@@ -478,7 +495,7 @@ Note that the rectangle $\mathcal{R}_{a+b,c}$
 can be subdivided into two rectangles 
 congruent to $\mathcal{R}_{a,c}$
 and~$\mathcal{R}_{b,c}$.
-Therefore, by Proposition~\ref{prop:subdivision}, 
+By Proposition~\ref{prop:subdivision}, 
 \[
 \area \mathcal{R}_{a+b,c}=\area \mathcal{R}_{a,c}+\area \mathcal{R}_{b,c}.
 \]
@@ -726,7 +743,7 @@ Hence the statement follows.\qeds
 {
 
 \begin{wrapfigure}{r}{19mm}
-\vskip-4mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-314}
 \end{wrapfigure}
@@ -934,14 +951,14 @@ such that the inequality
 holds for any polygonal sets $\mathcal{P}$ and $\mathcal{Q}$ such that $\mathcal{P}\subset\mathcal{S}\subset\mathcal{Q}$.
 
 \begin{thm}{Exercise}\label{ex:circle-is-quadrable}
-Let $\mathcal{D}$ be the unit disc;
+Let $\mathcal{D}$ be a \emph{unit disc};
 that is, $\mathcal{D}$ is a set that contains 
 the unit circle $\Gamma$ and all the points inside~$\Gamma$.
 
 Show that $\mathcal{D}$ is a quadrable set.
 \end{thm}
 
-Since $\mathcal{D}$ is quadrable, the expression $\area\mathcal{D}$ makes sense and the constant $\pi$ can be defined as $\pi=\area\mathcal{D}$.
+Since $\mathcal{D}$ is quadrable, the expression $\area\mathcal{D}$ makes sense and the constant $\pi$ can be defined as $\pi\df\area\mathcal{D}$.
 
 \medskip
 
