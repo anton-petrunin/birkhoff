@@ -226,7 +226,7 @@ endfig;
 
 beginfig(334)%92
 save u;
-u:=.6cm;
+u:=.5cm;
 
 z.B=origin;
 z.O=(-1,-2)*u;

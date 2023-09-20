@@ -361,7 +361,6 @@ That is, $\triangle ABC$ is degenerate --- a contradiction.
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
 
-{
 
 \parbf{\ref{ex:acute-obtuce}.} 
 By Axiom~\ref{def:birkhoff-axioms:2b} and \ref{thm:straight-angle}, we have
@@ -370,15 +369,14 @@ Since $|\measuredangle XOA|$, $|\measuredangle XOB|\z\le \pi$, we get that
 $|\measuredangle XOA|\z+|\measuredangle XOB|\z=\pi$.
 Hence the statement follows. 
 
-\begin{Figure}
-\vskip -0mm
-\centering
-\includegraphics{mppics/pic-322}
-\end{Figure}
-
-
 \parbf{\ref{ex:pbisec-side}.}
 Assume $X$ and $A$ lie on the same side of~$\ell$.
+
+\begin{wrapfigure}{r}{27mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-322}
+\end{wrapfigure}
 
 Note that $A$ and $B$ lie on opposite sides of~$\ell$.
 Therefore, by \ref{cor:half-plane}, 
@@ -386,10 +384,8 @@ $[AX]$ does not intersect $\ell$
 and $[BX]$ intersects $\ell$;
 suppose that $Y$ denotes the intersection point.
 
-}
-
-Note that $BX=AY+YX\ge AX$.
-Since $X\notin\ell$, by \ref{thm:perp-bisect} we have $BX\ne BA$.
+By the triangle inequality, $BX=AY\z+YX\z\ge AX$.
+Since $X\notin\ell$, by \ref{thm:perp-bisect} we have $AX\ne BX$.
 Therefore $BX> AX$.
 
 This way we proved the ``if'' part.
@@ -537,10 +533,10 @@ The given data is marked in bold.
 \setcounter{eqtn}{0}
 
 \parbf{\ref{ex:angle-preserving-euclid}.}
-By the AA similarity condition, the transformation multiplies the sides of any nondegenerate triangle by a number that may depend on the triangle. 
+By the AA similarity condition, the transformation multiplies the sides of any nondegenerate triangle by the same number; we need to show that this number does not depend on the triangle. 
 
 Note that for any two nondegenerate triangles that share one side, this number is the same.
-Applying this observation to a chain of triangles leads to a solution.
+Apply this observation to a chain of triangles.
 
 \parbf{\ref{ex:pyth}.}
 Apply that $\triangle ADC\sim \triangle CDB$.
@@ -556,7 +552,13 @@ Apply the SAS similarity condition to show that $\triangle ABC\z\sim \triangle Y
 
 Similarly, apply AA and equality of vertical angles to prove that $\triangle AZX\sim \triangle BZY$ and use SAS to show that $\triangle ABZ\z\sim \triangle YXZ$.
 
+\parbf{\ref{ex:ABC+D}.}
+Show and use that $\triangle ABC\sim \triangle CBD$.
 
+\parbf{\ref{ex:right-perp-bi}.}
+Show and use that $\triangle AQM\sim \triangle ABC\z\sim\triangle PBM$.
+
+%\parbf{\ref{ex:footpoints}.} Show and use that $\triangle XAA'\sim \triangle XBB'\sim \triange XCC'$
 
 %\subsection*{Chapter~\ref{chap:angle-sum}}
 \refstepcounter{chapter}
@@ -624,6 +626,12 @@ Apply twice \ref{thm:isos} and once \ref{thm:3sum}.
 \parbf{\ref{ex:pi/4-isos}.} 
 Suppose that $O$ denotes the center of the circle.
 
+\begin{wrapfigure}{r}{28mm}
+\vskip-5mm
+\centering
+\includegraphics{mppics/pic-334}
+\end{wrapfigure} 
+
 Note that $\triangle AOX$ is isosceles
 and $\angle OXC$ is right.
 Applying \ref{thm:3sum} and \ref{thm:isos} and simplifying, you should get
@@ -635,12 +643,6 @@ $
 Show that $\angle CAX$ is acute.
 Conclude that 
 $\measuredangle CAX\z=\pm\tfrac\pi4$.
-
-\begin{Figure}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-334}
-\end{Figure}
 
 \parbf{\ref{ex:quadrangle}.}
 Apply \ref{thm:3sum} to $\triangle ABC$ and $\triangle BDA$.
@@ -808,6 +810,10 @@ If $\triangle ABC$ is obtuse, then its orthocenter coincides with one of the \in
 that is, 
 the point of intersection of two external and one internal bisectors of $\triangle ABC$.
 
+\parbf{\ref{ex:bisector-incenter}.}
+Apply \ref{lem:bisect-ratio} twice.
+Use the obtained identity to show that the angle bisector at $C$ passes thru $I$.
+
 %\subsection*{Chapter~\ref{chap:inscribed-angle}}
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
@@ -878,15 +884,15 @@ Note that $\measuredangle AA'B=\pm\tfrac\pi2$ and $\measuredangle AB'B\z=\pm\tfr
 Then apply \ref{cor:inscribed-quadrangle}
 to $\square AA'BB'$.
 
-If $O$ is the center of the circle, then 
-$\measuredangle AOB\equiv 2\cdot \measuredangle AA'B\equiv\pi$.
-That is, $O$ is the midpoint of~$[AB]$.
-
 \begin{wrapfigure}[8]{r}{20mm}
-\vskip-5mm
+\vskip-4mm
 \centering
 \includegraphics{mppics/pic-336}
 \end{wrapfigure}
+
+If $O$ is the center of the circle, then 
+$\measuredangle AOB\equiv 2\cdot \measuredangle AA'B\equiv\pi$.
+That is, $O$ is the midpoint of~$[AB]$.
 
 \parbf{\ref{ex:perpendicular-ruler}.}
 Guess the construction from the diagram.
