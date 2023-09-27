@@ -1,10 +1,5 @@
 \chapter[Similar triangles]{Similar triangles}\label{chap:parallel}
 
-
-
-
-\section{Similar triangles}
-
 Two triangles $A' B' C'$ and $A B C$ are called
 \index{triangle!similar triangles}\index{similar triangles}\emph{similar} (briefly \index{30@$\sim$}$\triangle A' B' C'\z\sim\triangle A B C$) if (1) their sides are proportional; 
 that is, 
@@ -21,7 +16,7 @@ C' A'
 k\cdot C A
 \eqlbl{dist}
 $$
-for some $k>0$, and (2) the corresponding angles are equal up to sign:
+for some coefficient $k>0$, and (2) the corresponding angles are equal up to sign:
 $$
 \begin{aligned}
 \measuredangle A' B' C'&=\pm\measuredangle A B C,
@@ -37,7 +32,10 @@ $$
 \begin{itemize}
 \item According to \ref{thm:signs-of-triug}, in the above three equalities, the signs can be assumed to be the same.
 
-\item If $\triangle A' B' C'\sim\triangle A B C$ with $k=1$ in \ref{dist}, 
+\item The equations in \ref{dist} can be rewritten as
+\[\frac{A'B'}{AB}=\frac{B'C'}{BC}=\frac{C'A'}{CA}.\]
+
+\item If $\triangle A' B' C'\sim\triangle A B C$ with the coefficient $k=1$, 
  then $\triangle A' B' C'\z\cong\triangle A B C$.
 
 \item Note that ``$\sim$'' is an 
@@ -53,6 +51,8 @@ $$\triangle A'' B'' C''\sim\triangle A B C.$$
 \end{enumerate}
 \end{itemize}
 
+\section{Similarity conditions}
+
 Using the new notation ``$\sim$'', we can reformulate Axiom~\ref{def:birkhoff-axioms:4}:
 
 \begin{thm}{Reformulation of Axiom~\ref{def:birkhoff-axioms:4}}
@@ -67,7 +67,7 @@ $AC'=k\cdot AC$,
 then $\triangle ABC\sim\triangle AB'C'$.
 \end{thm}
 
-In other words, the Axiom~\ref{def:birkhoff-axioms:4} provides 
+In other words, Axiom~\ref{def:birkhoff-axioms:4} provides 
 a condition which guarantees that two triangles are similar.
 Let us formulate three more such {}\emph{similarity conditions}.
 
@@ -123,9 +123,9 @@ Hence the result.
 
 
 
-A bijection $X\leftrightarrow X'$ from a plane to itself is called \index{angle-preserving transformation}\emph{angle-preserving transformation} if 
+A bijection $X\leftrightarrow X'$ from a plane to itself is called an \index{angle-preserving transformation}\emph{angle-preserving transformation} if 
 \[\measuredangle ABC= \measuredangle A'B'C'\]
-for any triangle $ABC$ and its image $\triangle A'B'C'$.
+for any $\triangle ABC$ and its image $\triangle A'B'C'$.
 
 (The term \index{transformation}\emph{transformation} is used for a bijection of space to itself that preserves a specified geometric structure.
 For example, {}\emph{motions} are \textit{distance-preserving transformations}.)
@@ -229,7 +229,7 @@ Finding such pairs might be tricky at first.
 
 
 \begin{thm}{Exercise}\label{ex:two-pairs-sim}
-Let $ABC$ be a nondegenerate triangle and the points $X$, $Y$, and $Z$ as on the diagram.
+Let $ABC$ be a nondegenerate triangle and the points $X$, $Y$, and $Z$ as shown in the diagram.
 Assume $\measuredangle CAY\z\equiv\measuredangle XBC$.
 Find four pairs of similar triangles with these six points as the vertices
 and prove their similarity.
@@ -243,14 +243,25 @@ Assume $D\in [AB]$ and $\measuredangle CAB=\measuredangle BCD$.
 Show that $CD=\tfrac{b\cdot a}c$, where $a=BC$, $b=CA$, and $c=AB$. 
 \end{thm}
 
+{
+
+\begin{wrapfigure}{r}{28mm}
+\vskip-8mm
+\centering
+\includegraphics{mppics/pic-69}
+\end{wrapfigure}
+
 \begin{thm}{Exercise}\label{ex:right-perp-bi}
 Assume $\triangle ABC$ has a right angle at~$C$.
-Denote by $P$, $Q$ and $M$ intersections of the perpendicular bisector to $[AB]$ with the lines 
-$(BC)$, $(CA)$, and $(AB)$, respectively.
+Denote by $P$, $Q$ and $M$ intersections of the perpendicular bisector of $[AB]$ with the lines 
+$(BC)$, $(CA)$, and $(AB)$ respectively.
 Show that 
 \[4\cdot MP\cdot MQ=AB^2.\]
 
 \end{thm}
+
+
+}
 
 %\begin{thm}{Exercise}\label{ex:footpoints}
 %Suppose that $\triange ABC$ and $\triange A'B'C'$ are nondegenerate,
@@ -262,8 +273,8 @@ Show that
 \section{Ptolemy's inequality}
 
 A \index{quadrangle}\emph{quadrangle} is defined as an ordered quadruple of distinct points in the plane.
-These 4 points are called \index{vertex!of quadrangle}\emph{vertices}.
-The quadrangle $ABCD$ will be also denoted by \index{25@$\square$}$\square ABCD$.
+These four points are called \index{vertex!of quadrangle}\emph{vertices}.
+The quadrangle $ABCD$ will also be denoted by \index{25@$\square$}$\square ABCD$.
 
 Given a quadrangle $ABCD$,
 the four segments $[AB]$, $[BC]$, $[CD]$, and $[DA]$ are called \index{side!of quadrangle}\emph{sides of $\square ABCD$};
@@ -279,7 +290,7 @@ for any $\square ABCD$.
 We will present a classical proof of this inequality using the method of similar triangles with additional construction.
 This proof is given as an illustration --- it will not be used further in the sequel.
 
-\begin{wrapfigure}{r}{33mm}
+\begin{wrapfigure}{o}{33mm}
 \centering
 \includegraphics{mppics/pic-70}
 \end{wrapfigure}

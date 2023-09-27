@@ -7,6 +7,9 @@ a minimalist introduction.}}
 %\newcommand{\arxiv}[2]{#1} %for kdp
 \newcommand{\arxiv}[2]{#2} %for arXiv
 
+\newcommand{\spell}[2]{#1} %for book
+%\newcommand{\spell}[2]{#2} %for spelling
+
 \geometry{top=0.9in, bottom=0.9in,inner=0.9in, outer=0.7in, paperwidth=6in, paperheight=9in}
 %\geometry{top=1.025in, bottom=1.025in,inner=0.9in, outer=0.825in, paperwidth=6.125in, paperheight=9.25in}%with bleed
 
@@ -14,7 +17,7 @@ a minimalist introduction.}}
 %\overfullrule=100mm
 
 \begin{document}
-%\pagestyle{empty}\renewcommand\includegraphics[2][{}]{}\def\emph{\textit}\renewcommand\footnote[1]{\ (#1)}
+\spell{}{\pagestyle{empty}\renewcommand\includegraphics[2][{}]{}\def\emph{\textit}\renewcommand\footnote[1]{\ (#1)}\renewcommand\z{}\renewcommand\texorpdfstring[2]{}\renewcommand\section[1]{SECTION. {#1} SECTION.}}
 
 \input{title.tex}
 \input{intro.tex}

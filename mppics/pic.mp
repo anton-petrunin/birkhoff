@@ -568,6 +568,36 @@ label.top (btex $C$ etex, z.C);
 
 endfig;
 
+beginfig(43)
+save u;
+u:=.6cm;
+
+z.A=(0,0)*u;
+z.B=(2,0)*u;
+z.C=(1.4,1.1)*u;
+
+z.AA=z.B+(z.C-z.B) rotated -60;
+z.BB=z.C+(z.A-z.C) rotated -60;
+z.CC=z.A+(z.B-z.A) rotated -60;
+
+rimmark(z.B--z.C,z.C--z.AA,z.AA--z.B);
+rimmark2(z.C--z.A,z.A--z.BB,z.BB--z.C);
+rimmark3(z.A--z.B,z.B--z.CC,z.CC--z.A);
+
+draw z.A--z.B--z.C--cycle;
+draw z.A--z.CC--z.B--z.AA--z.C--z.BB--cycle;
+
+dOt z.A,z.B,z.C,z.AA,z.BB,z.CC;
+
+label.llft (btex $A$ etex, z.A);
+label.lrt (btex $B$ etex, z.B);
+label.top (btex $C$ etex, z.C);
+label.urt (btex $A'$ etex, z.AA);
+label.ulft (btex $B'$ etex, z.BB);
+label.bot (btex $C'$ etex, z.CC);
+
+endfig;
+
 beginfig(44)
 save u;
 u:=.7cm;
@@ -939,6 +969,36 @@ label.lrt (btex $Y$ etex, z.Y);
 label.top (btex $Z$ etex, z.Z+(1.5,.5));
 endfig;
 
+beginfig(69)
+save u;
+u:=1cm;
+
+z.A=(-1,0)*u;
+z.B=-z.A;
+z.C=z.B rotated 130;
+z.M=.5[z.A,z.B];
+z.P=whatever[z.B,z.C]=z.M+whatever*((z.B-z.A) rotated 90);
+z.Q=whatever[z.A,z.C]=z.M+whatever*((z.B-z.A) rotated 90);
+
+mark_rt_angle_withsize(z.A, z.C, z.B, 6);
+mark_rt_angle_withsize(z.A, z.M, z.Q, 6);
+rimmark(z.M--z.A,z.M--z.B);
+
+
+draw z.A--z.B--z.C;
+draw ddline(z.A,z.Q)(0,.2);
+draw ddline(z.M,z.Q)(.2,.2);
+
+dOt z.A,z.B,z.C,z.M,z.P,z.Q;
+
+label.lft (btex $A$ etex, z.A);
+label.rt (btex $B$ etex, z.B);
+label.ulft (btex $C$ etex, z.C);
+label.lrt (btex $M$ etex, z.M);
+label.urt (btex $P$ etex, z.P);
+label.rt (btex $Q$ etex, z.Q);
+endfig;
+
 beginfig(70)
 save u;
 u:=1cm;
@@ -963,7 +1023,8 @@ arcs (z.C,z.A,z.D,10);
 
 draw p0;
 draw p1;
-draw z.X--z.D--z.B--z.C;
+draw z.X--z.D;
+draw z.B--z.C;
 
 dOt z.A,z.B,z.C,z.D,z.X;
 

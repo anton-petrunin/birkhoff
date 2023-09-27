@@ -1,15 +1,16 @@
 \chapter{Area}
 \label{chap:area}
 
-Area will be defined as a function satisfying certain conditions (Section~\ref{sec:def(area)}).
-The so-called {}\emph{Lebesgue measure} gives an example of such a function.
-In particular, the existence Lebesgue measure implies the existence of an area function.
-This construction is included in any textbook in real analysis.
+We will define area as a function that satisfies certain conditions (Section~\ref{sec:def(area)}).
+The so-called {}\emph{Lebesgue measure} provides an example of such a function.
+In particular, the existence of the Lebesgue measure implies the existence of an area function.
+This construction is included in any textbook on real analysis.
 
-Based solely on its existence,  we develop the concept of area with no cheating.
-We choose this approach since any rigorous introduction to area is tedious.
-We do not want to cheat and at the same time we do not want to waste your time; 
-soon or later you will have to learn the Lebesgue measure if it is not done already.
+Based solely on the existence, we develop the concept of area with no cheating.
+We choose this approach because any rigorous introduction to area is either tedious or comes with cheating.
+We do not want to cheat while also respecting your time. 
+Sooner or later, you will need to learn about the Lebesgue measure if you haven't already.
+
 
 \section{Solid triangles}
 
@@ -49,9 +50,8 @@ the line segment $[XY]$ lies in  $\solidtriangle ABC$.
 %\end{thm}
 
 
-The notations $\triangle ABC$ and $\solidtriangle ABC$ look similar,
-they also have close but different meanings, 
-which better not to confuse.
+The notations $\triangle ABC$ and $\solidtriangle ABC$ look similar, 
+and they also have closely related but different meanings, which it is better not to confuse.
 Recall that $\triangle ABC$ is an ordered triple of distinct points
 (see Section~\ref{sec:cong-triangles}),
 while $\solidtriangle ABC$ is an infinite set of points.
@@ -94,7 +94,7 @@ at the single point~$X$.
 
 \section{Polygonal sets}
 
-\index{elementary set}\emph{Elementary set} on the plane 
+An e\index{elementary set}\emph{elementary set} on the plane 
 is a set of one of the following three types:
 \begin{itemize}
  \item one-point set;
@@ -117,9 +117,9 @@ Indeed, $\emptyset$ is a union of an empty collection of elementary sets.
 A polygonal set is called \index{polygonal set!degenerate polygonal set}\index{degenerate!polygonal set}\emph{degenerate} if it can be presented as a union of a finite collection of one-point sets and segments.
 
 If $X$ and $Y$ lie on opposite sides of the line $(AB)$,
-then the union
+then the polygonal set
 $\solidtriangle AXB\cup \solidtriangle BYA$
-is a polygonal set which is called \index{solid!quadrangle, parallelogram,\\ rectangle, square}\index{quadrangle!solid quadrangle}\emph{solid quadrangle} $AXBY$ and denoted by 
+is called \index{solid!quadrangle, parallelogram,\\ rectangle, square}\index{quadrangle!solid quadrangle}\emph{solid quadrangle} $AXBY$ and denoted by 
 \index{27@$\solidsquare$}$\solidsquare AXBY$.
 In particular, 
 we can talk about \index{parallelogram!solid parallelogram}\emph{solid parallelograms}, \index{rectangle!solid rectangle}\emph{rectangles}, and \index{square!solid square}\emph{squares}.
@@ -180,12 +180,12 @@ Note that
 \mathcal{Q}_n.\]
 Therefore, $\mathcal{P}\cup\mathcal{Q}$ is polygonal.
 
-Note that $\mathcal{P}\cap \mathcal{Q}$ is the union of sets $\mathcal{P}_i\cap \mathcal{Q}_j$ for all $i$ and $j$.
-Therefore, in order to show that $\mathcal{P}\cap \mathcal{Q}$ is polygonal,
-it is sufficient to show that each $\mathcal{P}_i\cap \mathcal{Q}_j$ is polygonal for any pair $i$,~$j$.
+Note that $\mathcal{P}\cap \mathcal{Q}$ is the union of $\mathcal{P}_i\cap \mathcal{Q}_j$ for all $i$ and $j$.
+Therefore, to show that $\mathcal{P}\cap \mathcal{Q}$ is polygonal,
+it is sufficient to show that $\mathcal{P}_i\cap \mathcal{Q}_j$ is polygonal for any $i$ and $j$.
 
 The diagram suggests a proof of the latter statement for solid triangles $\mathcal{P}_i$ and $\mathcal{Q}_j$. 
-The other cases are simpler; a formal proof can be built on Exercise~\ref{ex:triangle-convex}
+The other cases are simpler; a formal proof can be built on Exercise~\ref{ex:triangle-convex}.
 \qeds
 
 \section{Definition of area}
@@ -197,7 +197,7 @@ that returns a nonnegative real number $\area\mathcal{P}$ for any polygonal set 
 \begin{enumerate}[(a)]
 \item
 $\area\mathcal{K}_1=1$
-where  $\mathcal{K}_1$ a solid square with unit side;
+where  $\mathcal{K}_1$ is a solid unit square;
 \item\label{area-3} the conditions
 \begin{align*}
 \mathcal{P}\cong\mathcal{Q}
@@ -223,15 +223,15 @@ for any two polygonal sets $\mathcal{P}$ and $\mathcal{Q}$.
 The first condition is called {}\emph{normalization}; essentially it says that a solid unit square is used as a unit to measure area.
 The three conditions in \textit{(\ref{area-3})} are called {}\emph{invariance}, {}\emph{monotonicity}, and {}\emph{additivity}.
 
-The Lebesgue measure provides an example of an area function; 
-namely, if one takes the area of $\mathcal{P}$ to be its Lebesgue measure,
+The Lebesgue measure is an example of an area function. 
+Namely, if one takes the area of $\mathcal{P}$ to be its Lebesgue measure,
 then the function $\mathcal{P}\mapsto\area\mathcal{P}$ satisfies the above conditions.
 
 The construction of the Lebesgue measure can be found in any textbook on real analysis.
 We do not discuss it here.
 
-If the reader is not familiar with the Lebesgue measure, then he should take the existence of area function as granted; 
-it might be considered as an additional axiom altho it follows from the axioms \ref{def:birkhoff-axioms:0}--\ref{def:birkhoff-axioms:4}.
+If the reader is not familiar with the Lebesgue measure, then the existence of area function can be taken as granted; 
+it might be added to axioms altho it follows from the axioms \ref{def:birkhoff-axioms:0}--\ref{def:birkhoff-axioms:4}.
 
 \section{Vanishing area and subdivisions}
 
@@ -244,42 +244,42 @@ For any two points $A$ and $B$, we have
 Fix a line segment~$[AB]$.
 Consider a sold square $\solidsquare ABCD$.
 
-Note that given a positive integer $n$,
+Note that for any positive integer $n$,
 there are $n$ disjoint segments $[A_1B_1],\dots,[A_nB_n]$ 
 in $\solidsquare ABCD$,
 such that each $[A_iB_i]$ is congruent to $[AB]$ in the sense of the Definition~\ref{def:cong-sets}.
 
-\begin{wrapfigure}[9]{o}{37 mm}
-\vskip-5mm
+\begin{wrapfigure}[10]{o}{37 mm}
+\vskip-2mm
 \centering
 \includegraphics{mppics/pic-300}
+\vskip0mm
 \end{wrapfigure}
 
-Applying invariance, additivity, and monotonicity of the area function, 
-we get that
+Applying the invariance, additivity, and monotonicity of the area function, 
+we get
 \begin{align*}
 n\cdot \area[AB]
 &=\area\left([A_1B_1]\cup\dots\cup[A_nB_n]\right)\le
 \\
 &\le \area(\solidsquare ABCD)              
 \end{align*}
-That is,
+In other words,
 \[\area[AB]\le \tfrac1n\cdot\area(\solidsquare ABCD)\] 
 for any positive integer~$n$.
-Therefore, $\area[AB]\le 0$.
-On the other hand, by definition of area, $\area[AB]\ge 0$,
-hence
+It follows that $\area[AB]\le 0$. 
+Since area cannot be negative, we get
 \[\area[AB]= 0.\]
 
 For any one-point set $\{A\}$ 
 we have that $\{A\}\subset [AB]$.
 Therefore, 
 \[0\le \area\{A\}\le \area[AB]=0.\]
-Whence $\area\{A\}=0$.
+Hence $\area\{A\}=0$.
 \qeds
 
 \begin{thm}{Corollary}\label{cor:degenerate}
-Any degenerate polygonal set has a vanishing area.
+Any degenerate polygonal set has vanishing area.
 \end{thm}
 
 \parit{Proof.}
@@ -300,7 +300,7 @@ $\area\mathcal{P}\ge 0$,
 hence the result.
 \qeds
 
-We say that polygonal set $\mathcal{P}$ is \index{subdivision of polygonal set}\emph{subdivided} 
+We say that a polygonal set $\mathcal{P}$ is \index{subdivision of polygonal set}\emph{subdivided} 
 into two polygonal sets $\mathcal{Q}_1,\dots,\mathcal{Q}_n$ 
 if $\mathcal{P}=\mathcal{Q}_1\cup\dots\cup \mathcal{Q}_n$ 
 and the intersection $\mathcal{Q}_i\cap\mathcal{Q}_j$ is degenerate for any pair $i$ and $j$.
@@ -321,7 +321,7 @@ Then
 \end{wrapfigure}
 
 \parit{Proof.}
-Assume $n=2$; by additivity of area,
+Assume $n=2$; by the additivity of area,
 \[\area\mathcal{P}=\area\mathcal{Q}_1+\area\mathcal{Q}_2-\area(\mathcal{Q}_1\cap\mathcal{Q}_2).\]
 
 Since $\mathcal{Q}_1\cap\mathcal{Q}_2$ is degenerate,
@@ -357,8 +357,7 @@ The analogous statement in three dimensions, known as {}\emph{Hilbert's third pr
 \section{Rectangles}
 
 \begin{thm}{Theorem}\label{thm:area-rect}
-A solid rectangle 
-with sides $a$ and $b$ has area $a\cdot b$.
+The area of a rectangle is the product of its adjacent sides.
 \end{thm}
 
 \begin{thm}{Algebraic lemma}\label{lem:alg-area}
@@ -421,23 +420,23 @@ That is, the needed identity holds for any pair of rational numbers $a=\tfrac kl
 Arguing by contradiction, assume $s(a,b)\ne a\cdot b$ for a pair of positive real numbers $(a,b)$;
 so, $s(a,b)> a\cdot b$ or $s(a,b)\z< a\cdot b$.
 
-Further \index{63@$\lfloor x \rfloor$, $\lceil x \rceil$}$\lfloor x \rfloor$ and $\lceil x \rceil$ will denote \index{floor and ceiling}\emph{floor} and \emph{ceiling} of $x$;
+Recall that \index{63@$\lfloor x \rfloor$, $\lceil x \rceil$}$\lfloor x \rfloor$ and $\lceil x \rceil$  denote \index{floor and ceiling}\emph{floor} and \emph{ceiling} of $x$;
 that is, $\lfloor x \rfloor$ is the greatest integer such that $\lfloor x \rfloor\le x$,
 and $\lceil x \rceil$ is the least integer such that $\lceil x \rceil\ge x$.
 
-{
-
-\columnratio{0.5}
-\setlength{\columnseprule}{.2pt}
-\begin{paracol}{2}
+\raggedcolumns\setlength{\multicolsep}{.5mm}
+\setlength{\columnseprule}{1pt}
+\begin{multicols}{2}
 If $s(a,b)> a\cdot b$,
 we can choose a positive integer $n$ such that
 \[s(a,b)> (a+\tfrac1n)\cdot (b+\tfrac1n).\eqlbl{s(a,b)>}\]
 Set $k=\lfloor a\cdot n \rfloor+1$ and $m=\lfloor b\cdot n \rfloor+1$;
 equivalently, $k$ and $m$ are positive integers such that
-\[a< \tfrac kn\le a+\tfrac1n
-\ \text{and}\ 
-b<\tfrac mn\le b+\tfrac1n.\]
+\begin{align*}
+a< \tfrac kn&\le a+\tfrac1n,
+\\
+b<\tfrac mn&\le b+\tfrac1n.
+\end{align*}
 By \ref{s(a,b)>s(a',b')}, we get that
 \begin{align*}
 s(a,b)&\le s(\tfrac kn,\tfrac mn)=
@@ -447,14 +446,17 @@ s(a,b)&\le s(\tfrac kn,\tfrac mn)=
 &\le (a+\tfrac1n)\cdot(b+\tfrac1n),
 \end{align*}
 which contradicts \ref{s(a,b)>}.
-\switchcolumn
+
+\columnbreak
+
 If $s(a,b)< a\cdot b$, choose a positive integer $n$ such that $a>\tfrac1n$, $b>\tfrac1n$, and
-\refstepcounter{eqtn}%???
 \[s(a,b)< (a-\tfrac1n)\cdot (b-\tfrac1n).\eqlbl{s(a,b)<}\]
 Set $k=\lceil a\cdot n \rceil-1$ and $m=\lceil b\cdot n \rceil-1$; that is,
-\[a> \tfrac kn\ge a-\tfrac1n
-\ \text{and}\  
-b>\tfrac mn\ge b-\tfrac1n.\]
+\begin{align*}
+a> \tfrac kn&\ge a-\tfrac1n,
+\\ 
+b>\tfrac mn&\ge b-\tfrac1n.
+\end{align*}
 By \ref{s(a,b)>s(a',b')}, we get that
 \begin{align*}
 s(a,b)&\ge s(\tfrac kn,\tfrac mn)=
@@ -464,9 +466,9 @@ s(a,b)&\ge s(\tfrac kn,\tfrac mn)=
 &\ge (a-\tfrac1n)\cdot(b-\tfrac1n),
 \end{align*}
 which contradicts \ref{s(a,b)<}.\qeds
-\end{paracol}
-\refstepcounter{eqtn}%???
-}
+\end{multicols}
+\setlength{\columnseprule}{0pt}
+
 
 
 
@@ -479,7 +481,7 @@ Suppose that $\mathcal{R}_{a,b}$ denotes the solid rectangle with sides $a$ and~
 Set 
 \[s(a,b)=\area \mathcal{R}_{a,b}.\]
 
-By definition of area, 
+By the definition of area, 
 $s(1,1)=\area(\mathcal{K})=1$.
 That is, the first identity in the algebraic lemma holds.
 
@@ -491,8 +493,7 @@ That is, the first identity in the algebraic lemma holds.
 \end{wrapfigure}
 
 Note that the rectangle $\mathcal{R}_{a+b,c}$
-can be subdivided into two rectangles 
-congruent to $\mathcal{R}_{a,c}$
+can be subdivided into two rectangles $\mathcal{R}_{a,c}$
 and~$\mathcal{R}_{b,c}$.
 By Proposition~\ref{prop:subdivision}, 
 \[
@@ -508,16 +509,16 @@ It remains to apply the algebraic lemma.
 \section{Parallelograms}
 
 \begin{thm}{Proposition}\label{prop:area-parallelogram}
-Let $\square ABCD$ be a parallelogram in the Euclidean plane, $a=AB$, and $h$ be the distance between the lines $(AB)$ and~$(CD)$.
+Let $\square ABCD$ be a parallelogram in the Euclidean plane.
 Then 
-\[\area(\solidsquare ABCD)=a\cdot h.\]
-
+\[\area(\solidsquare ABCD)=a\cdot h,\]
+where $a=AB$, and $h$ is the distance between the lines $(AB)$ and~$(CD)$.
 \end{thm}
 
 
 {
 
-\begin{wrapfigure}{o}{41 mm}
+\begin{wrapfigure}{r}{41 mm}
 \vskip-3mm
 \centering
 \includegraphics{mppics/pic-306}
@@ -529,7 +530,8 @@ on the line~$(CD)$.
 
 Note that $ABB'A'$ is a rectangle with sides $a$ and $h$.
 By Proposition~\ref{thm:area-rect},
-\[\area( \solidsquare ABB'A')=h\cdot a.\eqlbl{eq:ABBA}\]
+\[\area( \solidsquare ABB'A')=h\cdot a.
+\eqlbl{eq:ABBA}\]
 
 }
 
@@ -685,8 +687,8 @@ Conclude that for any polygonal set, its area is uniquely defined.
 
 \section{Area method}
 
-In this section, we will give examples of slim proofs using the properties of the area function.
-Note that these proofs are not truly elementary since the price one pays to introduce the area function is high.
+In this section, we give examples of proofs using the properties of the area function.
+These proofs are not truly elementary --- the price for the existence of the area function is high.
 
 {
 
@@ -702,23 +704,23 @@ and the proof used a similar technique.
 
 \parit{Proof.}
 We need to show that 
-if $a$ and $b$ are legs and $c$ is the hypotenuse 
-of a right triangle, then
-\[a^2+b^2=c^2.\]
+\[a^2+b^2=c^2,\]
+where $a$ and $b$ are legs and $c$ is the hypotenuse 
+of a right triangle.
 
-Suppose that $\mathcal{T}$ denotes the right solid triangle with legs $a$ and $b$
-and $\mathcal{K}_{x}$  the solid square with side~$x$.
+Let $\mathcal{K}_{x}$ be the solid square with side~$x$.
+Denote by $\mathcal{T}$ the right solid triangle with legs $a$ and $b$.
 
 }
 
 Let us construct two subdivisions of $\mathcal{K}_{a+b}$:
 \begin{enumerate}[1.]
 \item Subdivide $\mathcal{K}_{a+b}$ into two solid squares congruent to $\mathcal{K}_a$ and $\mathcal{K}_b$
-and 4 solid triangles congruent to $\mathcal{T}$,
+and four solid triangles congruent to $\mathcal{T}$;
 see the first diagram.
 
 \item Subdivide $\mathcal{K}_{a+b}$ into one solid square congruent to $\mathcal{K}_c$
-and 4 solid right triangles congruent to $\mathcal{T}$,
+and four solid right triangles congruent to $\mathcal{T}$;
 see the second diagram.
 
 \end{enumerate}
@@ -734,7 +736,7 @@ we get that
 \end{align*}
 Therefore, 
 \[\area\mathcal{K}_{a}+\area\mathcal{K}_{b}=\area\mathcal{K}_{c}.\eqlbl{eq:pyth+area}\]
-By Theorem~\ref{thm:area-rect},
+By Theorem~\ref{thm:area-rect}, we know that 
 \[\area\mathcal{K}_x=x^2,\] 
 for any $x>0$. 
 Hence the statement follows.\qeds
@@ -785,8 +787,7 @@ Now let us show how to use this claim to prove Lemma~\ref{lem:bisect-ratio}.
 First, let us recall its statement:
 
 \begin{thm*}{Lemma}
-If $\triangle A B C$ is nondegenerate and its angle bisector at $A$ intersects $[BC]$ at point~$D$.
-Then 
+If $\triangle A B C$ is nondegenerate and its angle bisector at $A$ intersects $[BC]$ at point~$D$, then 
 $$\frac{AB}{AC}=\frac{DB}{DC}.$$
 \end{thm*}
 
@@ -803,13 +804,13 @@ Applying  Claim~\ref{clm:area-ratio}, we get that
 
 By Proposition~\ref{prop:angle-bisect-dist} the triangles $ABD$ and $ACD$ have equal altitudes from~$D$.
 Applying  Claim~\ref{clm:area-ratio} again, we get that
-\[\frac{\area(\solidtriangle ABD)}{\area(\solidtriangle ACD)}=\frac{AB}{AC}\]
-and hence the result.
+\[\frac{\area(\solidtriangle ABD)}{\area(\solidtriangle ACD)}=\frac{AB}{AC}.\]
+Hence the result follows.
 \qeds
 
 Suppose $ABC$ is a nondegenerate triangle and $A'$ lies between $B$ and $C$.
 In this case, the line segment $[AA']$ is called \index{cevian}\emph{cevian}%
-\footnote{it is named after Giovanni Ceva and pronounced as {}\emph{chevian}.} of $\triangle ABC$ at $A$.
+\footnote{It is pronounced as ``chevian'' and named after the Italian mathematician Giovanni Ceva.} of $\triangle ABC$ at $A$.
 The second statement in the following exercise is called \index{Ceva's theorem}\emph{Ceva's theorem}.
 
 
@@ -870,14 +871,14 @@ Assume that the lines $(L_1M_1)$, $(L_2M_2)$, $(L_3M_3)$, and $(L_4M_4)$ pass th
 \section{Neutral planes and spheres}
 
 Area can be defined in the neutral planes and spheres.
-In the definition,
+In this definition,
 the solid unit square $\mathcal{K}_1$ has to be  
-exchanged to a fixed nondegenerate polygonal set $\mathcal{U}$.
-One has to make such a change for good reason --- 
+exchanged for a fixed nondegenerate polygonal set $\mathcal{U}$.
+Such a change is necessary for a good reason --- 
 hyperbolic plane and sphere have no squares.
 
-In this case, the set $\mathcal{U}$ plays the role of the unit measure for the area;
-changing $\mathcal{U}$ will require the conversion of area units.
+In this case, the set $\mathcal{U}$ serves as the unit measure for area;
+changing $\mathcal{U}$ would require a conversion of area units.
 
 \begin{wrapfigure}{o}{26 mm}
 \vskip-0mm
@@ -886,9 +887,8 @@ changing $\mathcal{U}$ will require the conversion of area units.
 \end{wrapfigure}
 
 According to the standard convention, the set $\mathcal{U}$
-is taken so that on small scales area behaves like in the Euclidean plane.
-Say, 
-if $\mathcal{K}_a$ denotes the solid quadrangle $\solidsquare ABCD$ 
+is chosen so that on small scales the area behaves like in the Euclidean plane.
+For example, if $\mathcal{K}_a$ denotes the solid quadrangle $\solidsquare ABCD$ 
 with right angles at $A$, $B$, and $C$ such that  $AB=BC=a$, 
 then we may assume that
 \[\tfrac{1}{a^2}\cdot\area \mathcal{K}_a\to 1
@@ -901,7 +901,7 @@ This convention works equally well for spheres and neutral planes, including the
 In spherical geometry  equivalently we may assume that if $r$ is the radius of the sphere, 
 then the area of the whole sphere is $4\cdot\pi\cdot r^2$.
 
-Recall that \index{defect}\emph{defect of triangle} $\triangle ABC$ is defined as 
+Recall that the \index{defect}\emph{defect of triangle} $\triangle ABC$ is defined as 
 $$\defect(\triangle ABC)
 \df 
 \pi-|\measuredangle ABC|-|\measuredangle BCA|-|\measuredangle CAB|.$$
@@ -918,11 +918,11 @@ $k=-1$ for the h-plane,
 $k=1$ for the unit sphere,
 and $k=\tfrac1{r^2}$ for the sphere of radius~$r$.
 
-Since the angles of an ideal triangle vanish, any ideal triangle in h-plane has area~$\pi$.
-Similarly, in the unit sphere, the area of an equilateral triangle with right angles has area $\tfrac\pi2$;
+Since the angles of an ideal triangle vanish, any ideal triangle in the h-plane has area~$\pi$.
+Similarly, in the unit sphere, the area of an equilateral triangle with right angles has an area of $\tfrac\pi2$;
 since the whole sphere can be subdivided into eight such triangles, we get that the area of the unit sphere is $4\cdot\pi$.
 
-The identity \ref{eq:curv-defect} can be used as an alternative way to introduce area function; it works on spheres and all neutral planes, except for the Euclidean plane.
+The identity \ref{eq:curv-defect} can be used as an alternative way to introduce the area function; it works on spheres and all neutral planes, except for the Euclidean plane.
 
 \section{Quadrable sets}
 
@@ -965,8 +965,8 @@ It turns out that the class of quadrable sets is the largest class for which
 the area function satisfying the conditions in Section~\ref{sec:def(area)} is \textit{uniquely} defined.
 
 If you do not require uniqueness, then there are ways to extend the area function to all bounded sets.
-(A set in the plane is called \index{bounded set}\emph{bounded} if it lies inside of a circle.)
+(A set in the plane is called \index{bounded set}\emph{bounded} if it lies inside a circle.)
 On the sphere and hyperbolic plane, 
 there is no similar construction.
 If you wonder why,
-read about \index{doubling the ball}\emph{doubling the ball} --- a paradox of Felix Hausdorff, Stefan Banach, and Alfred Tarski.                         
+read about the \index{doubling the ball}\emph{doubling the ball} --- a paradox of Felix Hausdorff, Stefan Banach, and Alfred Tarski.                         

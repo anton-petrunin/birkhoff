@@ -4,42 +4,37 @@
 \section{What is the axiomatic approach?}
 \label{preaxioms}
 
-In the axiomatic approach, one defines the plane as anything that satisfies a given list of properties.
-These properties are called {}\emph{axioms}.
-The axiomatic system for the theory 
-is like the rules for a game.
-Once the axiom system is fixed, a statement is considered to be true if it follows from the axioms, and nothing else is considered to be true.
+In the axiomatic approach, one defines the plane as anything that satisfies a specified set of properties known as {}\emph{axioms}.
+These axioms essentially serve as the rules for a mathematical game.
+Once the axiom system is fixed, a statement is true if it logically follows from the axioms, and nothing else is.
 
 The formulations of the first axioms were not rigorous at all.
 For example, Euclid described a {}\emph{line} as \textit{breadthless length}
 and a {}\emph{straight line} as a line that \textit{lies evenly with the points on itself}.
-On the other hand,
-these formulations were sufficiently clear 
-so that one mathematician could understand the other.
+However, these formulations were clear enuf for one mathematician to understand another.
 
 The best way to understand an axiomatic system
 is to make one by yourself.
-Assume for now that we have an intuitive understanding of such notions as {}\emph{line} and {}\emph{point}.
+For now, let's assume an intuitive understanding of concepts like lines and points.
 Imagine an infinite and perfect surface of a chalkboard. 
 Let us try to collect the key observations about this model.
 
 \begin{enumerate}[(i)]
  \item\label{preaxiomI} We can measure distances between points.
- \item\label{preaxiomII} We can draw a unique line 
- that passes thru two given points.
+ \item\label{preaxiomII} We can draw a unique line thru two given points.
  \item\label{preaxiomIII} We can measure angles.
  \item\label{preaxiomIV} If we rotate or shift we will not see the difference.
  \item\label{preaxiomV} If we change the scale we will not see the difference.
 \end{enumerate}
 These observations are good to start with.
-Further, we will develop the language to reformulate them rigorously.
+Later, we will develop a language to reformulate them rigorously.
 
 \section{What is a model?}
 \label{page:model}
 
 The Euclidean plane can be defined rigorously the following way:
 
-\textit{Define a {}\emph{point} in the Euclidean plane as a pair of real numbers $(x,y)$ and define the {}\emph{distance} between the two points $(x_1,y_1)$ and $(x_2,y_2)$ by the following formula:}
+\textit{Define a {}\emph{point} in the Euclidean plane as a pair of real numbers $(x,y)$ and define the {}\emph{distance} between two points $(x_1,y_1)$ and $(x_2,y_2)$ by the following formula:}
 \[\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}.\]
 
 That is it!
@@ -51,26 +46,24 @@ Shortness is the main advantage of the model approach,
 but it is not intuitively clear why we define points and distances this way.
 
 On the other hand, the observations made in the previous section are intuitively obvious ---
-this is the main advantage of the axiomatic approach.
+this is the primary advantage of the axiomatic approach.
 Another advantage --- the axiomatic approach is easily adjustable. 
-For example, we may remove one axiom from the list,
-or exchange it for another axiom. 
+For example, we can remove or replace an axiom from the list. 
 We will do it in Chapter~\ref{chap:non-euclid}.
 
 \section{Metric spaces}
 
-The notion of metric space provides 
+The concept of a metric space provides 
 a rigorous way to say: \textit{``we can measure distances between points''}.
 That is, instead of (\ref{preaxiomI}) in Section~\ref{preaxioms},
 we can say \textit{``Euclidean plane is a metric space''}.
 
 \begin{thm}{Definition}\label{def:metric-space}
 Let $\mathcal X$ be a nonempty set and 
-$d$ be a function
-that returns a real number $d(A,B)$
-for any pair $A,B\in\mathcal X$.
-Then $d$
-is called \index{metric}\emph{metric} on 
+let $d$ be a function
+that assigns a real number $d(A,B)$
+to any pair $A,B\in\mathcal X$.
+Then $d$ is called a \index{metric}\emph{metric} on 
 $\mathcal X$ if, for any
 $A,B,C\in \mathcal X$, the following conditions are satisfied:
 \begin{enumerate}[(a)]
@@ -82,12 +75,11 @@ $d(A,B)=0.$
 \item\label{def:metric-space:d} \index{triangle!inequality}Triangle inequality: 
 $d(A, C) \le d(A, B) + d(B, C).$
 \end{enumerate}
-A \index{metric!space}\emph{metric space} is a set with a metric on it. 
+A \index{metric!space}\emph{metric space} is defined as a set equipped with a metric. 
 More formally, a metric space is a pair $(\mathcal X, d)$ where $\mathcal X$ is a set and $d$ is a metric on~$\mathcal X$.
 
-The elements of $\mathcal X$ are called \index{point}\emph{points} of the metric space.
-Given two points $A,B\z\in \mathcal X$, 
-the value $d(A, B)$ is called \index{distance}\emph{distance} from $A$ to~$B$.
+The elements of $\mathcal X$ are referred to as \index{point}\emph{points} of the metric space.
+The value $d(A, B)$ is called the \index{distance}\emph{distance} from $A$ to~$B$.
 \end{thm}
 
 \pagebreak
@@ -99,7 +91,7 @@ the value $d(A, B)$ is called \index{distance}\emph{distance} from $A$ to~$B$.
 For any $A,B\z\in\mathcal X$ set $d(A,B)\z=0$ if $A=B$ and $d(A,B)=1$ otherwise.
 The metric $d$ is called the \index{discrete metric}\emph{discrete metric} on~$\mathcal X$.
 \item\index{real!line}\emph{Real line.}
-Set of all real numbers ($\mathbb{R}$) with metric $d$ defined by 
+Set of all real numbers ($\mathbb{R}$) with the metric $d$ defined as 
 $$d(A,B)\df|A-B|.$$
 \end{itemize}
 
@@ -130,8 +122,7 @@ Prove that the following functions are metrics on $\mathbb{R}^2$:
 
 \section{Shortcut for distance}
 
-Most of the time, 
-we study only one metric on space.
+Most of the time, we need only one metric on a space.
 Therefore, we will not need to name the metric each time.
 
 Given a metric space $\mathcal X$,
@@ -146,8 +137,8 @@ the latter is used only if we need to emphasize that $A$ and $B$ are points of t
 For example, the triangle inequality can be written as 
 $$AC\le AB+BC.$$
 
-For multiplication, we will always use ``$\cdot$'',
-so $AB$ could not be confused with $A\cdot B$.
+To avoid confusion, we will always use ``$\cdot$'' for multiplication,
+so $AB$ is not mistaken for $A\cdot B$.
 
 \begin{thm}{Exercise}\label{ex:4-triangle}
 Show that the inequality
@@ -182,10 +173,9 @@ for any $A,B\in {\mathcal X}$.
 
 A bijective distance-preserving map is called an \index{isometry}\emph{isometry}. 
 
-Two metric spaces are called \index{isometric spaces}\emph{isometric} if there exists an isometry from one to the other.
+Two metric spaces are called \index{isometric spaces}\emph{isometric} if there exists an isometry between them.
 
-The isometry from a metric space to itself 
-is also called a \index{motion}\emph{motion} of the space.
+An isometry from a metric space to itself is also referred a \index{motion}\emph{motion}.
 
 \begin{thm}{Exercise}\label{ex:dist-preserv=>injective}
 Show that any distance-preserving map is \index{injective map}\emph{injective};
@@ -207,13 +197,13 @@ Prove that $(\mathbb{R}^2,d_1)$ is isometric to $(\mathbb{R}^2,d_\infty)$.
 \end{thm}
 
 \begin{thm}{Advanced exercise}\label{ad-ex:motions of Manhattan plane}
-Describe all the motions of the Manhattan plane, defined in \ref{ex:dist-square}.
+Describe all the motions of the Manhattan plane (defined in \ref{ex:dist-square}).
 \end{thm}
 
 If $\mathcal X$ is a metric space and $\mathcal Y$ is a subset of $\mathcal X$,
 then a metric on $\mathcal Y$ can be obtained by restricting the metric from~$\mathcal X$. 
 In other words, 
-the distance between two points of $\mathcal Y$ is defined to be the distance between these points in $\mathcal X$.
+the distance between two points in $\mathcal Y$ is defined to be the distance between these points in $\mathcal X$.
 This way any subset of a metric space can be also considered as a metric space. 
 
 \begin{thm}{Definition}\label{def:line}
@@ -232,7 +222,7 @@ The picture shows examples of lines on the Manhattan plane $(\mathbb{R}^2,d_1)$.
 
 \begin{thm}{Exercise}\label{ex:y=|x|}
 Consider the graph $y=|x|$ in $\mathbb{R}^2$.
-In which of the following spaces 
+Determine in which of the following spaces 
 (a) $(\mathbb{R}^2,d_1)$, 
 (b) $(\mathbb{R}^2,d_2)$, 
 (c) $(\mathbb{R}^2,d_\infty)$ 
@@ -278,15 +268,14 @@ after that, the statement \textit{``we can measure angles''} will become rigorou
 see (\ref{preaxiomIII}) in Section~\ref{preaxioms}.
 
 An ordered pair of half-lines that start at the same point is called an \index{angle}\emph{angle}.
-The angle $AOB$ (also denoted by \index{10@$\angle$, $\measuredangle$}$\angle AOB$) is the pair of half-lines $[OA)$ and $[OB)$.
-In this case, the point $O$ is called the \index{vertex!of angle}\emph{vertex} of the angle.
+The angle $AOB$ (also denoted by \index{10@$\angle$, $\measuredangle$}$\angle AOB$) is the pair of half-lines $[OA)$ and $[OB)$; the point $O$ is called the \index{vertex!of angle}\emph{vertex} of the angle.
 
 Intuitively, the angle measure tells how much one has to rotate the first half-line counterclockwise, so it gets the position of the second half-line of the angle. 
 The full turn is assumed to be $2\cdot\pi$;
 it corresponds to the angle measure in radians.%
-\footnote{For a while you may think that $\pi$ is a positive real number that measures the size of a half-turn in certain units. Its value $\pi\approx 3.14$ will not be important.}
+\footnote{For now, you can think of $\pi$ as a the size of a half-turn in specific units. Its numerical value, $\pi\approx 3.14$, is not essential at this stage.}
 
-The angle measure of $\angle AOB$ is denoted by $\measuredangle AOB$;
+The angle measure of $\angle AOB$ is denoted as  $\measuredangle AOB$;
 it is a real number in the interval $(-\pi,\pi]$. 
 
 \begin{wrapfigure}{o}{25mm}
@@ -322,7 +311,7 @@ so the value $\measuredangle A O C$ should coincide with
 the sum $\measuredangle A O B+\measuredangle B O C$ up to full rotation.
 This property will be expressed by the formula 
 $$\measuredangle A O B+\measuredangle B O C\equiv \measuredangle A O C,$$
-where \index{34@$\equiv$}``$\equiv$'' is a new notation which we are about to introduce.
+where \index{34@$\equiv$}``$\equiv$'' is a new notation that we are about to introduce.
 The last identity will become a part of the axioms.
 
 We will write $\alpha\equiv\beta\pmod{2\cdot\pi}$, or briefly
@@ -339,7 +328,7 @@ For example, $-\pi
 \equiv
 -\tfrac32\cdot\pi$.
 
-The introduced relation ``$\equiv$'' behaves as an equality sign,
+The introduced relation ``$\equiv$'' behaves like an equality sign,
 but
 \[\dots\equiv\alpha-2\cdot\pi\equiv \alpha\equiv \alpha+2\cdot\pi\equiv \alpha+4\cdot\pi\equiv\dots;\] 
 that is, if the angle measures differ by full turn,
@@ -361,7 +350,7 @@ $$\alpha+\alpha'\equiv\beta+\beta',
 \quad
 n\cdot\alpha\equiv n\cdot\beta$$
 for any integer~$n$.
-But ``$\equiv$'' does not in general respect multiplication with non-integer numbers; for example, 
+However, ``$\equiv$'' does not respect multiplication with non-integer numbers; for example, 
 $$\pi
 \equiv 
 -\pi
@@ -386,10 +375,10 @@ $$\measuredangle\:(A,O,B)\mapsto\measuredangle A O B$$
 \textit{is continuous at any triple of points $(A,O,B)$
 such that $O\ne A$ and $O\ne B$ and $\measuredangle A O B\ne\pi$.}
 
-To explain this property, we need to extend the notion of {}\emph{continuity} to functions between metric spaces.
+To clarify this property, we need to extend the concept of {}\emph{continuity} to functions between metric spaces.
 The definition is a straightforward generalization of the standard definition for real-to-real functions.
 
-Further, let $\mathcal X$ and $\mathcal Y$ be two metric spaces,
+Let $\mathcal X$ and $\mathcal Y$ be two metric spaces,
 and $d_{\mathcal X}$, $d_{\mathcal Y}$ be their metrics.
 
 A map $f\:\mathcal X\to\mathcal Y$ is called \index{continuous}\emph{continuous} at point $A\in \mathcal X$
@@ -407,7 +396,7 @@ d_{\mathcal Y}(f(A),f(A'))
 
 A map $f\:\mathcal X\to\mathcal Y$ is called \index{continuous}\emph{continuous} if it is continuous at every point $A\in \mathcal X$.
 
-One may define a continuous map of several variables the same way.
+One may define a continuous map of several variables in a similar manner.
 Assume $f$ is a function that returns a point in $\mathcal Y$ for a triple of points $(A,B,C)$
 in~$\mathcal X$.
 The map $f$ might be defined only for some triples in~$\mathcal X$.
@@ -448,8 +437,8 @@ Show that any distance-preserving map is continuous.
 \section{Congruent triangles}
 \label{sec:cong-triangles}
 
-Our next goal is to find a rigorous meaning for statement (\ref{preaxiomIV}) in Section~\ref{preaxioms}.
-To do this, we introduce the notion of congruent triangles
+Our next goal is to find a rigorous interpretation for statement (\ref{preaxiomIV}) in Section~\ref{preaxioms}.
+To do this, we will introduce the concept of congruent triangles
 so instead of \textit{``if we rotate or shift we will not see the difference''} we say that for triangles, the side-angle-side congruence holds.
 
 An \textit{ordered} triple of \textit{distinct} points in a metric space $\mathcal{X}$, 
@@ -519,11 +508,11 @@ We say that $M$ is a midpoint of $A$ and $B$ if
 Note that a point $M$ is a midpoint of $A$ and $B$ if and only if $f(M)$ is a midpoint of $B$ and~$C$.
 
 The set of midpoints for $A$ and $B$ is infinite, it contains all points $(t,t)$ for $t\in[0,1]$ (it is the gray segment in the picture above).
-On the other hand, the midpoint for $B$ and $C$ is unique (it is the black point in the picture).
-Thus, the map $f$ cannot be bijective --- a contradiction.
+In contrast, the midpoint for $B$ and $C$ is unique.
+Thus, the map $f$ cannot be bijective, leading to a contradiction.
 
 \begin{thm}{Exercise}\label{ex:ncong}
-Consider a metric space with four points $\{A,B,C,D\}$ and metric defined by $AB=AC=AD=BC=BD=1$, and 
+Consider a metric space with four points $A$, $B$, $C$, $D$ and a metric defined by $AB=AC=AD=BC=BD=1$, and 
 $CD=2$.
 Show that (a) $\triangle ABC\cong \triangle BAC$, and (b) $\triangle ABC\ncong \triangle BCA$.
 \end{thm}

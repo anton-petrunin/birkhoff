@@ -5,7 +5,7 @@ Spherical geometry studies the surface of a unit sphere.
 This geometry has applications in cartography, navigation, and astronomy.
 
 The spherical geometry is a close relative of the Euclidean and hyperbolic geometries.
-Most of the theorems of hyperbolic geometry have spherical analogs,
+Most of the theorems in hyperbolic geometry have spherical analogs,
 but spherical geometry is easier to visualize. 
 
 \section{Euclidean space}
@@ -18,10 +18,10 @@ $$AB
 \df
 \sqrt{(x_A-x_B)^2+(y_A-y_B)^2+(z_A-z_B)^2}.$$
 
-The planes in the space are defined as the set of solutions of 
+The planes in this space are defined as the set of solutions of 
 $$a\cdot x+b\cdot y+c\cdot z+d=0$$ 
-for real numbers $a$, $b$, $c$, and $d$ such that at least one of the numbers $a$, $b$, or $c$ is not zero.
-Any plane in the Euclidean space is isometric to the Euclidean plane.
+for constants $a$, $b$, $c$, and $d$, where at least one of the numbers $a$, $b$, or $c$ is not zero.
+Any such plane is isometric to the Euclidean plane.
 
 A sphere in space is the direct analog of a circle in the plane.
 Formally, a \index{sphere}\emph{sphere} with center $O$ and radius $r$ is the set of points in the space that lie at the distance $r$ from~$O$.
@@ -81,8 +81,8 @@ $$\cos AB_s=\langle v_A,v_B\rangle.
 \parit{Proof of the spherical Pythagorean Theorem.}
 Since the angle at $C$ is right,
 we can choose the coordinates in $\mathbb{R}^3$ so that 
-$v_C\z=(0,0,1)$, $v_A$ lies in the $xz$-plane, so $v_A\z=(x_A,0,z_A)$,
-and $v_B$ lies in the $yz$-plane, so $v_B=(0,y_B,z_B)$.
+$v_C\z=(0,0,1)$, $v_A$ lies in the $(x,y)$-plane, so $v_A\z=(x_A,0,z_A)$,
+and $v_B$ lies in the $(y,z)$-plane, so $v_B=(0,y_B,z_B)$.
 
 Applying, \ref{eq:scalar-s-dist},
 we get that
@@ -96,7 +96,7 @@ z_B&=\langle v_C,v_B\rangle
 
 {
 
-\begin{wrapfigure}{r}{43mm}
+\begin{wrapfigure}{r}{40mm}
 \centering
 \includegraphics{mppics/pic-248}
 \end{wrapfigure}
@@ -119,11 +119,11 @@ and $AC_s=BC_s=\tfrac\pi4$, then $AB_s=\tfrac\pi3$.
 
 }
 
-\section[Inversion]{Inversion of the space}
+\section[Inversion]{Inversion across a sphere}
 
-The inversion across a sphere is defined the same way as we define the inversion across a circle.
+The inversion across a sphere is defined the same way as the inversion across a circle.
 
-Formally, let $\Sigma$ be the sphere with the center $O$ and radius~$r$.
+Formally, let $\Sigma$ be the sphere with center $O$ and radius~$r$.
 The \index{inversion!inversion across a sphere}\emph{inversion} across $\Sigma$ of a point $P$ is the point $P'\in[OP)$ such that
 $$OP\cdot OP'=r^2.$$
 In this case, the sphere $\Sigma$  will be called the 
@@ -133,10 +133,8 @@ and its center is called the \index{inversion!center of inversion}\emph{center o
 We also add $\infty$ to the space and assume that the center of inversion is mapped to $\infty$ and the other way around. 
 The space $\mathbb{R}^3$ with the point $\infty$ will be called \index{inversive!space}\emph{inversive space}.
 
-The inversion of the space 
-has many properties 
-of the inversion of the plane.
-Most important for us are the analogs of theorems \ref{lem:inverse-4-angle}, \ref{thm:inverse-cline}, \ref{thm:angle-inversion} which can be summarized as follows:
+The inversion of space shares many properties with the inversion of the plane.
+Most importantly, analogs of theorems \ref{lem:inverse-4-angle}, \ref{thm:inverse-cline}, \ref{thm:angle-inversion} can be summarized as follows:
 
 \begin{thm}{Theorem}\label{thm:inversion-3d}
 The inversion across the sphere has the following properties:
@@ -154,9 +152,8 @@ measure between tangent half-lines to the arcs.
 \end{thm}
 
 
-We do not present the proofs here, but
-they nearly repeat the corresponding proofs in plane geometry.
-To prove \textit{(\ref{thm:inversion-3d:a})}, you will need in addition the following lemma;
+We do not present the proofs here, but they closely resemble the corresponding proofs in plane geometry.
+To prove \textit{(\ref{thm:inversion-3d:a})}, you additionally need the following lemma;
 its proof is left to the reader.
 
 \begin{thm}{Lemma}
@@ -172,7 +169,7 @@ the intersection $\Pi\cap \Sigma$ is either an empty set,
 a one-point set, or a circle.
 \end{thm}  
 
-The following observation helps to reduce part~\textit{(\ref{thm:inversion-3d:b})} to part~\textit{(\ref{thm:inversion-3d:a})}.
+The following observation reduces part~\textit{(\ref{thm:inversion-3d:b})} to part~\textit{(\ref{thm:inversion-3d:a})}.
 
 \begin{thm}{Observation}
 Any circle in the space is an intersection of two spheres.
@@ -185,7 +182,7 @@ Any circle in the space is an intersection of two spheres.
 \includegraphics{mppics/pic-250}
 \end{wrapfigure}
 
-Let us define a \index{circular cone}\emph{circular cone} as a set formed by line segments from a fixed point, called the \index{tip of cone}\emph{tip} of the cone, to all the points on a fixed circle, called the \index{base!of cone}\emph{base} of the cone;
+Now, let us define a \index{circular cone}\emph{circular cone} as a set formed by line segments from a fixed point, called the \index{tip of cone}\emph{tip} of the cone, to all the points on a fixed circle, called the \index{base!of cone}\emph{base} of the cone;
 we always assume that the base does not lie in the same plane as the tip.
 We say that the cone is \index{right circular cone}\emph{right} 
 if the center of the base circle is the footpoint of the tip on the base plane;
@@ -213,7 +210,7 @@ Consider the unit sphere $\Sigma$
 centered at the origin $(0,0,0)$.
 This sphere can be described by the equation $x^2+y^2+z^2\z=1$. 
 
-Suppose that $\Pi$ denotes the $xy$-plane;
+Suppose that $\Pi$ denotes the $(x,y)$-plane;
 it is defined by the equation $z = 0$.
 Clearly, $\Pi$
 runs thru the center of~$\Sigma$.
@@ -246,17 +243,17 @@ $\xi_s: \Sigma\to\Pi$ and  $\xi^{-1}_s: \Pi\to\Sigma$
 are the restrictions to $\Sigma$ and $\Pi$ respectively of the inversion across the sphere $\Upsilon$ with the center $S$ and radius $\sqrt{2}$.
 
 
-From above and Theorem~\ref{thm:inversion-3d},
+From the above and Theorem~\ref{thm:inversion-3d},
 it follows that the stereographic projection preserves 
 the angles between arcs;
 more precisely, \textit{the absolute value of the angle measure} between arcs on the sphere.
 
 This makes it particularly useful in cartography.
-A map of a big region of the earth cannot be done on a constant scale,
+A map of a large region of the earth cannot be done on a constant scale,
 but by using a stereographic projection, one can keep the angles between roads the same as on the earth.
 
 In the following exercises,
-we assume that $\Sigma$, $\Pi$, $\Upsilon$, $\Omega$, $O$, $S$, and $N$ are as above.
+we assume that $\Sigma$, $\Pi$, $\Upsilon$, $\Omega$, $O$, $S$, and $N$ are as described above.
   
 \begin{thm}{Exercise}\label{ex:two-stereographics}
 Show that $\xi_n \circ \xi^{-1}_s$, the composition of stereographic projections 
@@ -284,11 +281,11 @@ $$\lim_{x\to 0}\, \frac{y}{x}=\frac{2}{1+OP^2}.$$
 
 \section{Central projection}
 
-The central projection is analogous to the projective model of hyperbolic plane which is discussed in Chapter~\ref{chap:klein}.
+Central projection is analogous to the projective model of the hyperbolic plane which is discussed in Chapter~\ref{chap:klein}.
 
-Let $\Sigma$ be the unit sphere centered at the origin which will be denoted by~$O$.
+Let $\Sigma$ be the unit sphere centered at the origin~$O$.
 Suppose that $\Pi^+$ denotes the plane defined by the equation $z=1$.
-This plane is parallel to the $xy$-plane and it passes thru 
+This plane is parallel to the $(x,y)$-plane and passes thru 
 the north pole $N\z=(0,0,1)$ of~$\Sigma$.
 
 {
@@ -314,8 +311,8 @@ The described bijection $\Sigma^+\leftrightarrow \Pi^+$ is called the \index{cen
 the hemisphere~$\Sigma^+$.
 
 Note that the central projection sends the intersections of the great circles with $\Sigma^+$ to the lines in~$\Pi^+$.
-The latter follows since the great circles are intersections of $\Sigma$ with planes passing thru the origin
-as well as the lines in $\Pi^+$ are the intersection of $\Pi^+$ with these planes.
+This follows since the great circles are intersections of $\Sigma$ with planes passing thru the origin,
+and the lines in $\Pi^+$ are the intersection of $\Pi^+$ with these planes.
 
 The following exercise 
 is analogous to Exercise~\ref{ex:h-median}

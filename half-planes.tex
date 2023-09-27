@@ -1,11 +1,11 @@
 \chapter{Half-planes}\label{chap:half-planes}
 
-This chapter contains long proofs of intuitively evident statements.
-It is okay to skip it, but make sure you know the definitions of positive/negative angles and your intuition agrees with \ref{thm:signs-of-triug}, \ref{prop:half-plane}, \ref{cor:half-plane}, \ref{thm:pasch}, and \ref{thm:abc}.
+This chapter contains lengthy proofs of intuitively evident statements.
+It is okay to skip it, but make sure you understand the definitions of positive/negative angles and that your intuition agrees with statements \ref{thm:signs-of-triug}, \ref{prop:half-plane}, \ref{cor:half-plane}, \ref{thm:pasch}, and \ref{thm:abc}.
 
 \section{Sign of an angle}
 
-The positive and negative angles can be visualized as {}\emph{counterclockwise} and {}\emph{clockwise} directions; formally, they are defined the following way:
+Positive and negative angles can be visualized as {}\emph{counterclockwise} and {}\emph{clockwise} directions; they are defined the following way:
 \begin{itemize}
 \item The angle $A O B$ is called \index{angle!positive and negative angles}\emph{positive} 
 if $0<\measuredangle A O B<\pi$;
@@ -35,7 +35,7 @@ $$\alpha-\beta\equiv \pi.\eqlbl{eq:alpha-beta}$$
 
 It follows that $\alpha=\pi$ $\Leftrightarrow$ $\beta=0$
 and $\alpha=0$ $\Leftrightarrow$ $\beta=\pi$.
-In these two cases, the sign of $\angle AOX$ and $\angle BOX$ are undefined.
+In these two cases, the signs of $\angle AOX$ and $\angle BOX$ are undefined.
 
 In the remaining cases we have that $|\alpha|<\pi$ and $|\beta|<\pi$.
 If $\alpha$ and $\beta$ have the same sign, then $|\alpha-\beta|<\pi$;
@@ -55,8 +55,8 @@ Show that $\measuredangle ABC= \measuredangle A'B'C'$.
 \begin{thm}{Intermediate value theorem}\label{thm:intermidiate}
 Let $f\:[a,b]\to \mathbb{R}$ be a continuous function.
 Assume 
-$f(a)$ and $f(b)$ have opposite signs,
-then $f(t_0)=0$ for some $t_0\in[a,b]$.
+$f(a)$ and $f(b)$ have opposite signs.
+Then $f(t_0)=0$ for some $t_0\in[a,b]$.
 \end{thm}
 
 \begin{wrapfigure}{r}{38mm}
@@ -247,7 +247,7 @@ such that
 \includegraphics{mppics/pic-24}
 \end{wrapfigure}
 
-We say that $X$ and $Y$ lie on  {}\emph{one side of} $(PQ)$ if they lie in one of the half-planes of $(PQ)$ and we say that  $P$ and $Q$ lie on the {}\emph{opposite sides of} $\ell$ if they lie in the different half-planes of~$\ell$.
+We say that $X$ and $Y$ lie on {}\emph{one side of} $(PQ)$ if they lie in one of the half-planes of $(PQ)$ and we say that  $P$ and $Q$ lie on {}\emph{opposite sides of} $\ell$ if they lie in different half-planes of~$\ell$.
 
 
 \begin{thm}{Exercise}\label{ex:vert-intersect}
@@ -258,8 +258,7 @@ Show that the line $(AB)$ does not intersect the segment~$[A'B']$.
 }
 
 Consider the triangle $ABC$.
-The segments $[AB]$, $[BC]$, and $[CA]$ are called 
-\index{side!of the triangle}\emph{sides of the triangle}.
+Segments $[AB]$, $[BC]$, and $[CA]$ are called the \index{side!of the triangle}\emph{sides of the triangle}.
 
 {
 
@@ -434,7 +433,7 @@ Set $\delta\z=\measuredangle ABY$.
 
 Suppose $0<\beta<\delta$;
 by Axiom~\ref{def:birkhoff-axioms:2a}, we can choose $C$ so that $\measuredangle ABC\z=\beta$ and $BC\z=r$.
-Further, we can choose a half-line $[BZ)$ such that $\measuredangle ABZ\z=\tfrac12\cdot \beta$.
+Furthermore, we can choose a half-line $[BZ)$ such that $\measuredangle ABZ\z=\tfrac12\cdot \beta$.
 
 Note that $A$ and $Y$ lie on opposite sides of~$(BZ)$ and  $\measuredangle ABZ\z\equiv -\measuredangle CBZ$.
 In particular, $(BZ)$ intersects $[AY]$;
@@ -484,5 +483,5 @@ with \index{radius}\emph{radius} $r$ and \index{center}\emph{center}~$O$.
 \begin{thm}{Exercise}\label{ex:intersecting-circles-3}
 Show that two circles intersect if and only if 
 \[|R-r|\le d\le R+r,\]
-where $R$ and $r$ denote their radiuses, and $d$ ---  the distance between their centers.
+where $R$ and $r$ denote their radiuses, and $d$ is the distance between their centers.
 \end{thm}

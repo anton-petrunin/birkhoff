@@ -30,9 +30,9 @@ Assume $\ell$ and $m$ intersect,
 let $O=\ell\cap m$.
 
 Let us apply Theorem~\ref{thm:perp-bisect}.
-Since $O\in\ell$, we have that $OA\z=OB$ and since $O\in m$, we have that $OA\z=OC$.
+Since $O\in\ell$, we have $OA\z=OB$ and since $O\in m$, we have $OA\z=OC$.
 It follows that $OB\z=OC$;
-that is, $O$ lies on the perpendicular bisector to~$[B C]$.
+that is, $O$ lies on the perpendicular bisector of~$[B C]$.
 
 It remains to show that $\ell\nparallel m$;
 assume the contrary.
@@ -46,6 +46,8 @@ that is, $\triangle ABC$ is degenerate --- a contradiction.
 \begin{thm}{Exercise}\label{ex:unique-cline}
 There is a unique circle that passes thru the vertices of a given nondegenerate triangle in the Euclidean plane. 
 \end{thm}
+
+
 
 \section{Altitudes and orthocenter}
 
@@ -97,7 +99,7 @@ C'&=\ell\cap m.
 
 }
 
-Note that $\square A B A' C$, $\square B C B' A$, and $\square C B C' A$ are parallelograms.
+Note that $\square A B C B'$, $\square B C A C'$, and $\square C A B A'$, are parallelograms.
 Applying Lemma~\ref{lem:parallelogram} we get that $\triangle ABC$ is the median triangle of $\triangle A' B' C'$;
 that is, $A$, $B$, and $C$ are the midpoints of $[B' C']$, $[C' A']$, and $[A' B']$ respectively.
 
@@ -165,7 +167,7 @@ hence the result.
 \begin{thm}{Exercise}\label{ex:midle}
 Let $\square ABCD$ be a nondegenerate quadrangle
 and $X$, $Y$, $V$, and~$W$ be midpoints of 
-$[AB]$, $[BC]$, $[CD]$, and~$[DA]$, respectively.
+$[AB]$, $[BC]$, $[CD]$, and~$[DA]$ respectively.
 Show that $\square XYVW$ is a parallelogram.
 \end{thm}
 
@@ -210,7 +212,7 @@ $$\frac{AB}{AC}=\frac{DB}{DC}.
 
 \end{thm}
 
-\begin{wrapfigure}{o}{28mm}
+\begin{wrapfigure}{r}{28mm}
 \vskip-6mm
 \centering
 \includegraphics{mppics/pic-110}
@@ -226,7 +228,7 @@ Note also that $B$ and $C$ lie on opposite sides of~$(AD)$.
 By the transversal property (\ref{thm:parallel-2}),
 $$\measuredangle BAD=\measuredangle CED.\eqlbl{eq:<BAD=<CED}$$
 
-Further, the angles $ADB$ and $EDC$ are vertical; by \ref{prop:vert} we have
+Furthermore, the angles $ADB$ and $EDC$ are vertical; by \ref{prop:vert} we have
 $$\measuredangle ADB=\measuredangle EDC.$$
 
 By the AA similarity condition, 
@@ -272,7 +274,7 @@ Show that $AE=FC$.
 
 \section{Equidistant property}
 
-Recall that distance from a line $\ell$ to a point $P$ is defined as the distance from $P$ to its footpoint on $\ell$; see Section~\ref{sec:perp<oblique}. 
+Recall that the distance from a line $\ell$ to a point $P$ is defined as the distance from $P$ to its footpoint on $\ell$; see Section~\ref{sec:perp<oblique}. 
 
 \begin{thm}[\abs]{Proposition}\label{prop:angle-bisect-dist}
 Assume $\triangle ABC$ is not degenerate.
@@ -289,7 +291,8 @@ in this case, $X=B$ is the only point equidistant from the two lines.
 Let $Y$ and $Z$ be the reflections of $X$ across $(AB)$ and $(BC)$ respectively.
 Note that 
 \[Y\ne Z.\]
-Otherwise, both lines $(AB)$ and $(BC)$ are perpendicular bisectors of $[XY]$, that is, $(AB)=(BC)$ which is impossible since $\triangle ABC$ is not degenerate.
+Otherwise, both lines $(AB)$ and $(BC)$ are perpendicular bisectors of $[XY]$.
+Hence $(AB)=(BC)$, but this is impossible since $\triangle ABC$ is not degenerate.
 
 By Proposition~\ref{prop:reflection},
 \[XB=YB=ZB.\]
@@ -309,7 +312,7 @@ XY&=XZ
 \end{aligned}
 $$
 
-\begin{wrapfigure}{o}{24mm}
+\begin{wrapfigure}{r}{24mm}
 \centering
 \includegraphics{mppics/pic-112}
 \end{wrapfigure}
@@ -346,23 +349,22 @@ Angle bisectors of any nondegenerate triangle intersect at one point.
 \end{thm}
 
 
-The point of intersection of bisectors is called the \index{incenter}\emph{incenter} of the triangle; 
-it is usually denoted by~$I$.
-The point $I$ lie at the same distance from each side.
+The point of intersection of bisectors is called the \index{incenter}\emph{incenter} of the triangle, 
+usually denoted by~$I$.
+The point $I$ lies at the same distance from each side.
 In particular, it is the center of a circle tangent to each side of the triangle.
 This circle is called 
 the \index{incircle}\emph{incircle} and its radius is called 
 the \index{inradius}\emph{inradius} of the triangle.
 
+\parit{Proof.} 
+Let $\triangle ABC$ be a nondegenerate triangle.
 
 \begin{wrapfigure}{o}{28mm}
-\vskip-6mm
+\vskip-2mm
 \centering
 \includegraphics{mppics/pic-114}
 \end{wrapfigure}
-
-\parit{Proof.} 
-Let $\triangle ABC$ be a nondegenerate triangle.
 
 Note that points $B$ and $C$ lie on opposite sides of the bisector of $\angle BAC$.
 Hence this bisector intersects $[BC]$ at a point, say~$A'$.
@@ -403,7 +405,8 @@ $$AY=AZ= \tfrac12\cdot(A B+ A C- B C).$$
 
 \end{thm}
 
-By the definition, the vertices of an \index{triangle!orthic triangle}\index{orthic triangle}\emph{orthic triangle} are the base points of the altitudes of the given triangle.
+Assume that base points $A'$, $B'$, and $C'$ of the altitudes of a given triangle $ABC$ are all mutually distinct.
+Then $\triangle A'B'C'$ is called an \index{triangle!orthic triangle}\index{orthic triangle}\emph{orthic triangle} of $\triangle ABC$.
 
 }
 

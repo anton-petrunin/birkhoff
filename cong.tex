@@ -5,7 +5,7 @@
 Our next goal is to give conditions that guarantee the congruence of two triangles.
 
 One such condition is given in Axiom~\ref{def:birkhoff-axioms:3}; it states that if two pairs of sides of two triangles are equal, and the included angles are equal up to sign, then the triangles are congruent.
-This axiom is also called {}\emph{side-angle-side congruence condition}, or briefly, \index{SAS congruence condition}\emph{SAS}.
+This axiom is also called the {}\emph{side-angle-side congruence condition}, or briefly, \index{SAS congruence condition}\emph{SAS}.
 
 \section{Angle-side-angle}
 
@@ -24,7 +24,7 @@ $$\triangle A B C\cong\triangle A' B' C'.$$
 
 \end{thm}
 
-Note that for degenerate triangles the statement does not hold.
+Note that for degenerate triangles this statement does not hold.
 For example, consider one triangle with sides $1$, $4$, $5$ 
 and the other with sides $2$, $3$,~$5$.
 
@@ -42,7 +42,7 @@ or
 \quad\text{and}\quad
 \measuredangle C A B=-\measuredangle C' A' B'.
 \eqlbl{eq:-angles}\]
-Further, we assume that \ref{eq:+angles} holds; 
+Let us assume that \ref{eq:+angles} holds; 
 the case \ref{eq:-angles} is analogous.
 
 \begin{wrapfigure}{o}{26mm}
@@ -106,7 +106,7 @@ $$\measuredangle B A C
 
 To prove the converse, we assume that
 $\measuredangle C A B \z\equiv - \measuredangle C B A$.
-By ASA condition (\ref{thm:ASA}), $\triangle C A B\z\cong\triangle CBA$.
+By the ASA condition (\ref{thm:ASA}), $\triangle C A B\z\cong\triangle CBA$.
 Therefore,~$C A\z=C B$.
 \qeds
 
@@ -144,7 +144,7 @@ $$\triangle A' B' C''\cong\triangle A B C.$$
 It will suffice to
 prove that 
 $$\triangle A' B' C'\cong\triangle A' B' C''.\eqlbl{eq:A'B'C'simA'B'C''}$$
-The condition \ref{eq:A'B'C'simA'B'C''} trivially holds if $C''\z=C'$.
+The condition \ref{eq:A'B'C'simA'B'C''} holds trivially if $C''\z=C'$.
 Thus, it remains to consider the case $C''\z\ne C'$.
 
 \begin{wrapfigure}{o}{30mm}
@@ -231,25 +231,37 @@ f(B)=B,
 \quad
 f(C)=C.$$
 
+Show that $f$ is the identity map;
+that is, $f(X)=X$ for any point $X$ on the plane.
 \end{thm}
 
 }
 
-\vskip-2mm
-\textit{Show that $f$ is the identity map;
-that is, $f(X)=X$ for any point $X$ on the plane.}
+%{
 
+%\begin{wrapfigure}{r}{28mm}\vskip-11mm\centering\includegraphics{mppics/pic-43}\end{wrapfigure}
 
+%\begin{thm}{Exercise}\label{ex:3-isos}
+%Suppose that $\triangle ABC'$, $\triangle BCA'$, and $\triangle CAB'$ are isosceles triangles that lie outside of $\triangle ABC$;
+%that is,
+%$A$ and $A'$ lie on the opposite sides of $(BC)$,
+%$B$ and $B'$ lie on the opposite sides of $(CA)$,
+%$C$ and $C'$ lie on the opposite sides of $(AB)$.
+
+%Show that $AA'=BB'=CC'$.
+%\end{thm}
+
+%}
 
 \section{On side-side-angle and side-angle-angle}
 
 In each of the conditions SAS, ASA, and SSS we specify three corresponding parts of the triangles.
-Let us discuss other triples of corresponding parts.
+Now, let us discuss other triples of corresponding parts.
 
 The first triple is called {}\emph{side-side-angle}, or briefly SSA;
 it specifies two sides and a non-included angle.
-This condition is not sufficient for congruence;
-that is, there are two nondegenerate triangles $ABC$ and $A'B'C'$ such that
+This condition is not sufficient for congruence.
+In other words, there exist two nondegenerate triangles $ABC$ and $A'B'C'$ such that
 \[AB=A'B',\quad BC=B'C',\quad \measuredangle BAC\equiv\pm \measuredangle B'A'C',\]
 but $\triangle ABC\not\cong\triangle A'B'C'$ and $AC\ne A'C'$.
 
@@ -259,8 +271,8 @@ but $\triangle ABC\not\cong\triangle A'B'C'$ and $AC\ne A'C'$.
 \includegraphics{mppics/pic-44}
 \end{wrapfigure}
 
-We will not use this negative statement in the sequel and therefore there is no need to prove it formally.
-An example can be guessed from the diagram.
+We will not use this negative statement, so there is no need to prove it formally.
+You can guess an example from the diagram.
 
 The second triple is {}\emph{side-angle-angle}, or briefly SAA;
 it specifies one side and two angles one of which is opposite to the side.
@@ -270,8 +282,9 @@ $AB=A'B'$, $\measuredangle ABC\equiv\pm \measuredangle A'B'C'$, $\measuredangle 
 then $\triangle ABC\cong\triangle A'B'C'$.
 
 The SAA condition will not be used directly in the sequel.
-One proof of this condition can be obtained from ASA and the theorem on the sum of angles of a triangle that is proved below (see~\ref{thm:3sum}). 
-For more direct proof, see Exercise~\ref{ex:SAA}.
+One proof of this condition can be obtained from ASA and the theorem on the sum of angles of a triangle, which is proved below (see~\ref{thm:3sum}). 
+For a more direct proof, see Exercise~\ref{ex:SAA}.
 
-Another triple is called {}\emph{angle-angle-angle}, or briefly AAA;
-by Axiom~\ref{def:birkhoff-axioms:4}, it is not a congruence condition in the Euclidean plane, but in the hyperbolic plane it is; see \ref{thm:AAA}.
+Another triple is called {}\emph{angle-angle-angle}, or briefly AAA.
+By Axiom~\ref{def:birkhoff-axioms:4}, it is not a congruence condition in the Euclidean plane.
+However, in the hyperbolic plane it is; see \ref{thm:AAA}.

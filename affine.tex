@@ -9,10 +9,9 @@
 The incidence structure sees only which points lie on which lines and nothing else;
 it does not directly see distances, angle measures, and many other things.
 
-A bijection from the Euclidean plane to itself is called \index{affine transformation}\emph{affine transformation} if it maps lines to lines;
+A bijection from the Euclidean plane to itself is called an \index{affine transformation}\emph{affine transformation} if it maps lines to lines;
 that is, the image of any line is a line.
-So we can say that affine geometry studies
-the properties of the Euclidean plane preserved under affine transformations.
+So, one can say that affine geometry studies the properties of the Euclidean plane that are preserved under affine transformations.
 
 \begin{thm}{Exercise}\label{ex:affine-par}
 Show that an affine transformation of the Euclidean plane sends any pair of parallel lines to a pair of parallel lines.
@@ -42,11 +41,11 @@ for constants $a,b,c,d,r,s$ such that the matrix $(\begin{smallmatrix}a&b\\c&d\e
 
 From the fundamental theorem of affine geometry (\ref{thm:fundamental-theorem-of-affine-geometry}), it will follow that any affine transformation can be written in the form \textit{(\ref{affine-general-formula})}.
 
-Recall that points are \index{collinear}\emph{collinear} if they lie on one line.
+Recall that points are \index{collinear}\emph{collinear} if they lie on a single line.
 
 \begin{thm}{Exercise}\label{ex:collinear=affine}
 Suppose $P\mapsto P'$ is a bijection of the Euclidean plane that maps collinear triples of points to collinear triples.
-Show that $P\mapsto P'$ maps noncollinear triples to noncollinear.
+Show that $P\mapsto P'$ maps noncollinear triples to noncollinear ones.
 
 Conclude that $P\mapsto P'$ is an affine transformation.
 \end{thm}
@@ -54,17 +53,16 @@ Conclude that $P\mapsto P'$ is an affine transformation.
 
 \section{Constructions}
 
-\begin{wrapfigure}{r}{34mm}
-\vskip-12mm
+\begin{wrapfigure}{o}{34mm}
+\vskip-10mm
 \centering
 \includegraphics{mppics/pic-287}
 \end{wrapfigure}
 
 Let us consider geometric constructions with a ruler and a \index{parallel!tool}\emph{parallel tool};
-the latter makes it possible to draw a line thru a given point parallel to a given line.
+the latter allows us to draw a line thru a given point parallel to a given line.
 (One may think of the tool on the figure.
-It consists of two straight edges joined by two arms;
-they can move, but remain parallel to each other.)
+It consists of two straight edges joined by two arms that can move while remaining parallel to each other.)
 
 By Exercisers~\ref{ex:affine-par}, any construction with these two tools is invariant with respect to affine transformations.
 For example, 
@@ -72,7 +70,7 @@ to solve the following exercise,
 it is sufficient to prove that the midpoint of a given segment can be constructed with a ruler and a parallel tool.
 
 \begin{thm}{Exercise}\label{ex:midpoint-affine}
-Let $M$ be a midpoint of a segment $[AB]$ in the Euclidean plane.
+Let $M$ be the  midpoint of a segment $[AB]$ in the Euclidean plane.
 Assume that an affine transformation sends the points $A$, $B$, and $M$
 to $A'$, $B'$, and $M'$ respectively.
 Show that $M'$ is the midpoint of~$[A'B']$.
@@ -86,7 +84,7 @@ Using a ruler and a parallel tool, construct points with coordinates $(a+b,0)$, 
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:center-circ-affine}
-Construct a center of a given circle using the ruler and the parallel tool.
+Construct the center of a given circle using the ruler and the parallel tool.
 \end{thm}
 
 Note that the shear map (described in \ref{ex:afine-linear}\textit{\ref{ex:afine-linear:shear}}) can change angles between lines almost arbitrarily.
@@ -99,7 +97,7 @@ Show that one cannot construct a line perpendicular to a given line with the rul
 
 \section{Fundamental theorem of affine geometry}
 
-Further, we assume knowledge of vector algebra; namely, multiplication by a real number, addition, and the parallelogram rule.
+In this section, we assume knowledge of vector algebra; namely, multiplication by a real number, addition, and the parallelogram rule.
 
 \begin{thm}{Exercise}\label{ex:parallelogram-rule}
 Show that affine transformations map parallelograms to parallelograms.
@@ -138,7 +136,7 @@ It remains to show that
 for any $t$.
 
 Since $O'=O$ and $X'=X$, we get that $f(0)=0$ and $f(1)=1$.
-Further, according to Exercise~\ref{ex:R-hom}, we have that 
+Furthermore, according to Exercise~\ref{ex:R-hom}, we have that 
 $f(x\cdot y)=f(x)\cdot f(y)$ and $f(x+y)=f(x)+f(y)$ for any $x,y\in\mathbb{R}$.
 By the algebraic lemma (proved below, see \ref{lem:R-auto}), these conditions imply \ref{eq:f(x)=x}.
 \qeds
@@ -153,17 +151,19 @@ Then $\triangle O'X'Y'$ is nondegenerate, and
 Since an affine transformation maps lines to lines, the triangle
 $O'X'Y'$ is nondegenerate.
 
-\begin{wrapfigure}{o}{33mm}
-\centering
-\vskip-0mm
-\includegraphics{mppics/pic-225}
-\end{wrapfigure}
-
 Consider points $V$ and $W$ defined by
 \[\overrightarrow{OV}=x\cdot\overrightarrow{OX},
 \quad
 \overrightarrow{OW}=y\cdot\overrightarrow{OY}.
 \]
+
+{
+
+\begin{wrapfigure}{o}{33mm}
+\centering
+\vskip-0mm
+\includegraphics{mppics/pic-225}
+\end{wrapfigure}
 
 Note that 
 $\overrightarrow{WP}=\overrightarrow{OV}$.
@@ -176,6 +176,7 @@ Applying Exercise~\ref{ex:parallelogram-rule} and the proposition, we get
 \end{align*}
 \qedsf
 
+}
 
 \begin{thm}{Exercise}\label{ex:affine-continuous}
 Show that any affine transformation is continuous.
@@ -313,7 +314,7 @@ Recall that the term {}\emph{circline} stands for \textit{circle or line}.
 
 An \index{inversive!transformation}\emph{inversive transformation} is a bijection from the inversive plane to itself that sends circlines to circlines.
 {}\emph{Inversive geometry} studies the {}\emph{circline incidence structure} of the inversive plane
-(it sees which points lie on which circlines and nothing else).
+(it deals with which points lie on which circlines and nothing else).
 
 \begin{thm}{Theorem}\label{thm:inversions-inversive}
 A map from the inversive plane to itself is an inversive transformation
@@ -352,7 +353,7 @@ that is, $\alpha'$ is a motion.
 Summarizing the discussion above, $\alpha$ is a composition of motions and scalings.
 Observe that any scaling is a composition of two inversions across concentric circles.
 Recall that any motion is a composition of reflections (see Exercise~\ref{ex:3-reflections}).
-Whence $\alpha$ is a composition of inversions and reflections.
+Hence $\alpha$ is a composition of inversions and reflections.
 
 
 In the remaining case $\alpha(\infty)\ne \infty$, set $P=\alpha(\infty)$.
@@ -373,7 +374,7 @@ More precisely, assume $A'B_1'C_1'$, $A'B_2'C_2'$ are the images of two arcs $AB
 Let $\alpha$ and $\alpha'$ denote the angle between the tangent half-lines to $AB_1C_1$ and $AB_2C_2$ at $A$
 and the angle between the tangent half-lines to $A'B_1'C_1'$ and $A'B_2'C_2'$ at $A'$ respectively.
 Then 
-\[\alpha'=\pm \alpha.\]
+\[\alpha'\equiv\pm \alpha.\]
 \end{thm}
 
 

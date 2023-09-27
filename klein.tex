@@ -1,14 +1,15 @@
 \chapter{Projective model}\label{chap:klein}
 
-The \textit{projective model} is another model of hyperbolic plane discovered by Eugenio Beltrami; it is often called the {}\emph{Klein model}.
+The \textit{projective model} is another model of the hyperbolic plane discovered by Eugenio Beltrami; it is often called the {}\emph{Klein model}.
 The projective and conformal models are saying exactly the same thing but in two different languages. 
-Some problems in hyperbolic geometry admit simpler proof using the projective model and others have simpler proof in the conformal model.
+Some problems in hyperbolic geometry are more easily proven using the projective model, while others have simpler proofs in the conformal model.
 Therefore, it is worth knowing both. 
 
 \section{Special bijection on the h-plane}
 \label{sec:special-bijection}
 
-Consider the conformal disc model with the absolute at the unit circle $\Omega$ centered at~$O$.
+Consider the conformal disc model.
+Assume its absolute is a unit circle $\Omega$ centered at~$O$.
 Choose a coordinate system $(x,y)$ on the plane with the origin at $O$, 
 so the circle $\Omega$ is described by the equation $x^2+y^2=1$.
 
@@ -21,7 +22,7 @@ so the circle $\Omega$ is described by the equation $x^2+y^2=1$.
 \caption*{Plane thru $P$, $O$, and $S$.}
 \end{wrapfigure}
 
-Let us think that our plane is the coordinate $xy$-plane in the Euclidean space; denote it by $\Pi$.
+Let us think that our plane is the coordinate $(x,y)$-plane in the Euclidean space; denote it by $\Pi$.
 Let $\Sigma$ be the unit sphere centered at $O$;
 it is described by the equation 
 $$x^2+y^2+z^2=1.$$
@@ -29,8 +30,8 @@ Set $S=(0,0,-1)$ and $N=(0,0,1)$;
 these are the south and north poles of~$\Sigma$.
 
 Consider the stereographic projection $\Pi\to\Sigma$ from $S$;
-given point $P\in\Pi$ denote by $P'$ its image in $\Sigma$.
-Note that the  h-plane is mapped to the {}\emph{northern hemisphere};
+given a point $P\in\Pi$ denote by $P'$ its image in $\Sigma$.
+Note that the  h-plane is mapped to the {}\emph{northern hemisphere},
 that is, to the set of points $(x,y,z)$ in $\Sigma$ described by the inequality~$z>0$.
 
 }
@@ -41,12 +42,12 @@ this is the closest point to~$P'$.
 
 Note that the composition $P\z\leftrightarrow P'\z\leftrightarrow\hat P$ of these two maps
 gives a bijection from the h-plane to itself.
-Further, note that $P=\hat P$
+Furthermore, note that $P=\hat P$
  if and only if  $P\in \Omega$ or $P=O$.
 
 \begin{thm}{Exercise}\label{ex:P-->hat-P}
 Suppose that $P\leftrightarrow \hat P$ is the bijection described above.
-Assume that $P$ is a point of h-plane distinct from the center of absolute and $Q$ is its inverse across the absolute.
+Assume that $P$ is a point of the h-plane distinct from the center of the absolute and $Q$ is its inverse across the absolute.
 Show that the midpoint of $[PQ]$ is the inversion of $\hat P$ across the absolute. 
 \end{thm}
 
@@ -155,17 +156,16 @@ The following picture illustrates the map $P\mapsto \hat P$ described in the pre
 if you take the picture on the left and apply the map $P\z\mapsto \hat P$,
 you get the picture on the right.
 The pictures are {}\emph{conformal} and \index{projective!model}\emph{projective models} of the hyperbolic plane respectively.
-The map $P\mapsto \hat P$ is a ``translation'' from one to another.
+The map $P\mapsto \hat P$ is a \textit{translation} from one to another.
 
 In the projective model, things look different;
 some become simpler, and others become more complex.
 
 \parbf{Lines.}
-The h-lines in the projective model are chords of the absolute;
-more precisely, chords without their endpoints.
+In the projective model, the h-lines are represented as chords of the absolute, more precisely, chords without their endpoints.
 
 This observation can be used to transfer statements about lines and points from the Euclidean plane to the h-plane.
-As an example let us state a hyperbolic version of Pappus' theorem for h-plane.
+As an example let us state a version of Pappus' theorem for h-plane.
 
 \begin{thm}{Hyperbolic Pappus' theorem}\label{thm:pappus-h}
 Assume that two triples of h-points $A$, $B$, $C$,
@@ -185,12 +185,11 @@ In the projective model, this statement follows immediately from the original Pa
 The same can be done for Desargues' theorem \ref{thm:desargues}.
 The same argument shows that the construction of a tangent line with a ruler only described in Exercise~\ref{ex:tangent ruler} works in the h-plane as well.
 
-On the other hand, note that it is not at all easy to prove this statement using the conformal model.
+On the other hand, note that it is not easy to prove this statement using the conformal model.
 
 \parbf{Circles and equidistants.}
-The h-circles and equidistants in the projective model are a certain type of ellipses and their open arcs.
-
-It follows since the stereographic projection sends circles on the plane to circles on the unit sphere and the footpoint projection of the circle back to the plane is an ellipse.
+In the projective model, the h-circles and equidistants are ellipses and their open arcs.
+This follows since the stereographic projection sends circles on the plane to circles on the unit sphere and the footpoint projection of the circle back to the plane is an ellipse.
 (One may define an \index{ellipse}\emph{ellipse} as a footpoint projection of a circle.)
 
 
@@ -213,13 +212,14 @@ assuming the points $A, P, Q, B$ appear on the line in the same order.
 \end{wrapfigure}
 
 \parbf{Angles.}
-The angle measures in the projective model are very different from the Euclidean angles and it is hard to figure out by looking at the picture.\label{klein-angles}
+The hyperbolic angle measure in the projective model is very different from Euclidean, making it hard to determine from the picture. 
+\label{klein-angles}
 For example, all the intersecting h-lines on the picture 
 are perpendicular.
 
 }
 
-There are two useful exceptions:
+However, there are two useful exceptions:
 
 \begin{itemize}
 \item If $O$ is the center of the absolute, then 
@@ -233,7 +233,7 @@ $$\measuredangle_h OAB=\measuredangle OAB=\pm\tfrac\pi2.$$
 To find the angle measure in the projective model,
 you may apply a motion of the h-plane that moves 
 the vertex of the angle to the center of the absolute;
-once it is done the hyperbolic and Euclidean angles have the same measure.
+once done, the hyperbolic and Euclidean angles have the same measure.
 
 \parbf{Motions.}
 The motions of the h-plane in the conformal and projective models are relevant to inversive transformations and projective transformations in the same way.
@@ -248,13 +248,13 @@ The following exercise is a hyperbolic analog of Exercise~\ref{ex:s-medians}.
 This is the first example of a statement that admits an easier proof using  the projective model.
 
 \begin{thm}{Exercise}\label{ex:h-median}
-Let $P$ and $Q$ be points in h-plane that lie at the same distance from the center of the absolute.
-Observe that in the projective model, h-midpoint of $[PQ]_h$ coincides with the Euclidean midpoint of $[PQ]_h$.
+Let $P$ and $Q$ be points in the h-plane that lie at the same distance from the center of the absolute.
+Observe that in the projective model, the h-midpoint of $[PQ]_h$ coincides with the Euclidean midpoint of $[PQ]_h$.
 
 Conclude that if an h-triangle is inscribed in an h-circle, then its medians meet at one point.
 
-Recall that an h-triangle might be also inscribed in a horocycle or an equidistant.
-Think how to prove the statement in this case.
+Recall that an h-triangle might also be inscribed in a horocycle or an equidistant.
+Think about how to prove the statement in this case.
 \end{thm}
 
 {
@@ -266,7 +266,7 @@ Think how to prove the statement in this case.
 \end{wrapfigure}
 
 \begin{thm}{Exercise}\label{ex:klein-perp}
-Let $\ell$ and $m$ are  h-lines in the projective model.
+Let $\ell$ and $m$ be  h-lines in the projective model.
 Let $s$ and $t$ denote the Euclidean lines tangent to the absolute
 at the ideal points of $\ell$. 
 Show that 
@@ -283,7 +283,7 @@ Use the projective model to derive the formula for the angle of parallelism  (Pr
 Use the projective model to find an inradius of an ideal triangle.
 \end{thm}
 
-The projective model of h-plane can be used to give another proof of the hyperbolic Pythagorean theorem (\ref{thm:pyth-h-poincare}).
+The projective model can be used to give another proof of the hyperbolic Pythagorean theorem (\ref{thm:pyth-h-poincare}).
 
 First, let us recall its statement:
 \[\cosh c=\cosh a\cdot\cosh b,\eqlbl{eq:hyp-pyth-proj}\]
@@ -308,7 +308,7 @@ Finish the proof of the hyperbolic Pythagorean theorem (\ref{thm:pyth-h-poincare
 
 \section{Bolyai's construction}
 
-Assume we need to construct a line thru $P$ asymptotically parallel to the given line $\ell$ in the h-plane.
+Assume we need to construct a line thru $P$ that is asymptotically parallel to the given line $\ell$ in the h-plane.
 
 If $A$ and $B$ are ideal points of $\ell$ in the projective model, 
 then we could simply draw the Euclidean line $(PA)$.
@@ -322,10 +322,10 @@ In the following construction we assume that you know a compass-and-ruler constr
 \item Drop a perpendicular from $P$ to~$\ell$; denote it by~$m$.
 Let $Q$ be the footpoint of $P$ on~$\ell$.
 \item Erect a perpendicular from $P$ to~$m$; denote it by~$n$.
-\item Mark by $R$ a point on $\ell$ distinct from $Q$.
+\item Mark a point $R$ on $\ell$ distinct from $Q$.
 \item Drop a perpendicular from $R$ to~$n$; denote it by~$k$. 
 \item Draw the circle $\Gamma$ with center $P$ and the radius $QR$. 
-Mark by $T$ a point of intersection of $\Gamma$ with~$k$.
+Mark a point of intersection of $\Gamma$ with~$k$; denote it by $T$.
 \item The line $(PT)_h$ is asymptotically parallel to~$\ell$.
 \end{enumerate}
 \end{thm}
@@ -338,7 +338,7 @@ To prove that Bolyai's construction gives the asymptotically parallel line in th
 it is sufficient to show the following:
 
 \begin{thm}{Proposition}\label{prop:boyai}
-Assume $P$, $Q$, $R$, $S$, $T$ are points in h-plane
+Assume $P$, $Q$, $R$, $S$, $T$ are points in the h-plane
 such that 
 \begin{itemize}
 \item $S\in (RT)_h$,

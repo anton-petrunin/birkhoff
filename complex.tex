@@ -6,7 +6,7 @@ The results of this chapter lead to a deeper understanding of both concepts.
 \section{Complex numbers}
 
 Informally,
-a complex number is a number that can be put in the form 
+a complex number is a number that can be expressed in the form 
 $$z=x+i\cdot y,
 \eqlbl{eq:z=x+iy}$$ 
 where $x$ and $y$ 
@@ -15,7 +15,7 @@ are real numbers and $i^2=-1$.
 The set of complex numbers 
 will be further denoted by~$\mathbb{C}$.
 If $x$, $y$, and $z$ are as in \ref{eq:z=x+iy}, 
-then $x$ is called the \index{real!part}\emph{real part} and $y$ the \index{imaginary!part}\emph{imaginary part} of the complex number~$z$.
+then $x$ is called the \index{real!part}\emph{real part} and $y$ is the \index{imaginary!part}\emph{imaginary part} of the complex number~$z$.
 Briefly, it is written as 
 \[x=\Re z
 \quad
@@ -23,10 +23,10 @@ Briefly, it is written as
 \quad 
 y=\Im z.\]
 
-On the more formal level, a complex number is a pair of real numbers $(x,y)$ with the addition and multiplication described below;
-the expression $x + i\cdot y$ 
-is only a convenient way 
+On a more formal level, the expression $x + i\cdot y$ 
+is just a convenient way 
 to write the pair $(x,y)$.
+Furthermore, addition and multiplication of the pairs are defined as follows:
 \[
 \begin{aligned}
 (x_1+i\cdot y_1) + (x_2+i\cdot y_2) 
@@ -41,21 +41,19 @@ to write the pair $(x,y)$.
 
 \section{Complex coordinates}
 
-Recall that one can think of the Euclidean plane
-as the set of all pairs of real numbers $(x,y)$ equipped with the metric 
+Remember that we can view the Euclidean plane as the set of all pairs of real numbers $(x,y)$ equipped with the metric 
 $$AB=\sqrt{(x_A-x_B)^2+(y_A-y_B)^2},$$
 where $A=(x_A,y_A)$ and $B=(x_B,y_B)$.
 
-One can pack the coordinates $(x,y)$ of a point
-in one complex number $z=x+i\cdot y$.
-This way we get a one-to-one correspondence between points of the Euclidean plane and~$\mathbb{C}$.
+We can pack the coordinates $(x,y)$ of a point in a single complex number $z=x+i\cdot y$.
+This creates a direct link between points in the Euclidean plane and~$\mathbb{C}$ (the set of complex numbers).
 Given a point $Z=(x,y)$, 
-the complex number $z=x+ i\cdot y$ is called the \index{complex coordinate}\emph{complex coordinate} of~$Z$.
+the complex number $z=x+ i\cdot y$ is referred to as the \index{complex coordinate}\emph{complex coordinate} of~$Z$.
 
 Note that if $O$, $E$, and $I$ are points in the plane 
-with complex coordinates $0$, $1$, and $i$, then $\measuredangle EOI=\pm\tfrac\pi2$.
-Further, we assume that $\measuredangle EOI=\tfrac\pi2$;
-if not, one has to change the direction of the $y$-coordinate. 
+with complex coordinates $0$, $1$, and $i$ respectively,, then $\measuredangle EOI=\pm\tfrac\pi2$.
+We will assume that $\measuredangle EOI=\tfrac\pi2$;
+if not, one needs to adjust the direction of the $y$-coordinate. 
 
 \section{Conjugation and absolute value}
 \label{sec:complex-conjugation}
@@ -63,9 +61,7 @@ if not, one has to change the direction of the $y$-coordinate.
 Let $z=x+i\cdot y$; 
 that is, $z$ is a complex number with real part $x$ and imaginary part $y$.
 If $y=0$, we say that the complex number $z$ is \index{real!complex number}\emph{real}; if $x=0$, we say that $z$ is \index{imaginary!number}\emph{imaginary}.
-The set of points 
-with real (imaginary) complex coordinates is a line in the plane,
-which is called \index{real!line}\emph{real} (respectively \index{imaginary!line}\emph{imaginary}) line. 
+The set of points with real (imaginary) complex coordinates forms a line in the plane, known as the real (or imaginary) line. 
 The real line will be denoted as $\mathbb{R}$.
 
 The complex number
@@ -82,7 +78,7 @@ y&=\Im z=\frac{z-\bar z}{i\cdot2},
 x^2+y^2&=z\cdot\bar z.
 \end{aligned}\eqlbl{eq:conj-1}$$
 
-The last formula in \ref{eq:conj-1} makes it possible to express the quotient $\tfrac{w}{z}$ of two complex numbers $w$ and $z=x+i\cdot y$:
+The last formula in \ref{eq:conj-1} allows us to express the quotient $\tfrac{w}{z}$ of two complex numbers $w$ and $z=x+i\cdot y$:
 $$\frac{w}{z}=\tfrac{1}{z\cdot\bar z}\cdot w\cdot\bar z=\tfrac{1}{x^2+y^2}\cdot w\cdot\bar z.$$
 
 \label{page:cojugation=authomorphism}
@@ -96,7 +92,7 @@ Note that
 &
 \overline {z/w}&=\bar z/\bar w.
 \end{align*}
-That is, the complex conjugation
+That is, complex conjugation
 \textit{respects}
 all the arithmetic operations.
 
@@ -117,10 +113,10 @@ Show that $|v\cdot w|=|v|\cdot |w|$ for any $v,w\in\mathbb{C}$.
 Suppose that $Z$ and $W$ are points with complex coordinates $z$ and $w$.
 Note that
 $$ZW=|z-w|.\eqlbl{eq:C-dist}$$
-The triangle inequality for the points with complex coordinates $0$, $v$, and $v+w$ implies that
+The triangle inequality for points with complex coordinates $0$, $v$, and $v+w$ implies that
 \[|v+w|\le |v|+|w|\]
 for any $v,w\in\mathbb{C}$;
-this inequality is also called \index{triangle!inequality}\emph{triangle inequality}.
+this inequality is also called the \index{triangle!inequality}\emph{triangle inequality}.
 
 \begin{thm}{Exercise}\label{ex:ptolemy}
 Use the identity 
@@ -145,10 +141,8 @@ In particular, $e^{i\cdot\pi}=-1$ and $e^{i\cdot\frac\pi2}=i$.
 \includegraphics{mppics/pic-272}
 \end{wrapfigure}
 
-Geometrically, Euler's formula means the following:
-Assume that
-$O$ and $E$ 
-are the points with complex coordinates $0$ and $1$ respectively.
+Geometrically, Euler’s formula can be understood as follows: Imagine
+$O$ and $E$ as points with complex coordinates $0$ and $1$ respectively.
 Assume 
 \[OZ=1\quad \text{and}\quad \measuredangle EOZ\z\equiv \alpha,\]
 then $e^{i\cdot\alpha}$ is the complex coordinate of $Z$.
@@ -157,26 +151,24 @@ can be uniquely expressed as $e^{i\cdot\alpha}$ for some $\alpha\in(-\pi,\pi]$.
 
 }
 
-\parbf{Why is it true?}
-The proof of Euler's identity depends on the way you define the exponential function.
-If you never had to apply the exponential function to an imaginary number,
+\parbf{Why is this true?}
+The proof of Euler's identity depends on how you define the exponential function.
+
+If you have never applied the exponential function to an imaginary number, 
 you may take the right-hand side in \ref{eq:euler} 
 as the definition of $e^{i\cdot\alpha}$.
-
-In this case, formally nothing has to be proved,
+In this case, nothing has to be proved,
 but it is better to check that $e^{i\cdot\alpha}$ satisfies familiar identities.
-Mainly,
+Primarily,
 $$e^{i\cdot \alpha}\cdot e^{i\cdot \beta}= e^{i\cdot(\alpha+\beta)}.$$
-The latter can be proved using \ref{eq:comlex+x} and the following trigonometric formulas,
-which we assume to be known:
+The latter can be proved using \ref{eq:comlex+x} and the following well-known trigonometric formulas:
 \begin{align*}
 \cos(\alpha+\beta)&=\cos\alpha\cdot\cos\beta-\sin\alpha\cdot\sin\beta,
 \\
 \sin(\alpha+\beta)&=\sin\alpha\cdot\cos\beta+\cos\alpha\cdot\sin\beta.
 \end{align*}
 
-If you know the power series for the sine, cosine, and exponential function, then the following might convince you that the identity \ref{eq:euler} holds:
-
+If you are familiar with the power series for sine, cosine, and the exponential function, then the following might convince you that identity \ref{eq:euler} holds:
 \begin{align*}
  e^{i\cdot \alpha } &{}= 1 + i\cdot \alpha  + \frac{(i\cdot \alpha )^2}{2!} + \frac{(i\cdot \alpha  )^3}{3!} + \frac{(i\cdot \alpha )^4}{4!} + \frac{(i\cdot  \alpha )^5}{5!} +  \cdots =
  \\
@@ -214,7 +206,7 @@ Note that
 \arg \tfrac z w&\equiv \arg z-\arg w
 \end{align*}
 if $z\ne0 $ and $w\ne0$.
-In particular, if $Z$, $V$, $W$ are points with complex coordinates $z$, $v$, and $w$ respectively, then
+In particular, if $Z$, $V$, and $W$ are points with complex coordinates $z$, $v$, and $w$ respectively, then
 $$
 \begin{aligned}
 \measuredangle VZW
@@ -228,7 +220,7 @@ if $\measuredangle VZW$ is defined.
 \begin{thm}{Exercise}\label{ex:3-sum-C}
 Use the formula \ref{eq:angle-arg} to show that  
 $$\measuredangle ZVW+\measuredangle VWZ+\measuredangle WZV\equiv \pi$$
-for any $\triangle ZVW$ in the Euclidean plane.
+for any triangle $ZVW$ in the Euclidean plane.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:C-sim}
@@ -238,7 +230,7 @@ Show that
 
 \end{thm}
 
-The following theorem is a translation of Corollary~\ref{cor:inscribed-quadrangle} to the complex-number language.
+The following theorem is a translation of Corollary~\ref{cor:inscribed-quadrangle} into complex-number language.
 
 \begin{thm}{Theorem}\label{thm:inscribed-quadrangle-C}
 Let $\square UVWZ$ be a quadrangle and $u$, $v$, $w$, and $z$ be the complex coordinates of its vertices. 
@@ -269,14 +261,14 @@ The following problem illustrates the method of complex coordinates.
 \begin{thm}{Problem}\label{prob:2right-tringles}
 Let $\triangle OPV$ and $\triangle OQW$ be isosceles right triangles such that 
 \[\measuredangle VPO=\measuredangle OQW=\tfrac\pi2\] 
-and $M$ be a midpoint of $[VW]$.
+and $M$ be the midpoint of $[VW]$.
 Assume $P$, $Q$, and $M$ are distinct points.
 Show that  $\triangle PMQ$ is an isosceles right triangle.
 \end{thm}
 
 \parit{Solution.}
-Choose the complex coordinates so that $O$ is the origin;
-denote by $v, w, p, q, m$ the complex coordinates of the remaining points respectively.
+Choose complex coordinates so that $O$ is the origin.
+Denote by $v, w, p, q, m$ the complex coordinates of the remaining points respectively.
 
 Since $\triangle OPV$ and $\triangle OQW$ are isosceles and $\measuredangle VPO=\measuredangle OQW=\tfrac\pi2$,
 \ref{eq:C-dist} and \ref{eq:angle-arg} imply that
@@ -314,7 +306,7 @@ that is, $PM=QM$ and $\measuredangle QMP =\tfrac\pi2$.
 \end{wrapfigure}
 
 \begin{thm}{Exercise}\label{ex:3-squares}
-Consider three squares with common sides as on the diagram.
+Consider three squares with common sides as shown in the diagram.
 Use the method of complex coordinates to show that 
 \[\measuredangle EOA+\measuredangle EOB+\measuredangle EOC=\pm\tfrac\pi2.\]
 
@@ -370,7 +362,7 @@ A \index{fractional linear transformation}\emph{fractional linear transformation
 that can be written as
 $$f(z) = \frac{a\cdot z + b}{c\cdot z + d},$$
 where the coefficients $a$, $b$, $c$, $d$ are complex numbers satisfying $a\cdot d \z- b\cdot c \not= 0$.
-(If $a\cdot d - b\cdot c = 0$ the function defined above is a constant and is not considered to be a fractional linear transformation.) 
+(If $a\cdot d - b\cdot c = 0$ the function defined above is a constant; it is not a fractional linear transformation.) 
 
 In case $c\not=0$, we assume that
 $$f(-d/c) = \infty
@@ -395,7 +387,7 @@ Suppose that $O$ denotes the point with the complex coordinate~$0$.
 
 The first map $z\mapsto z+w,$ corresponds to the so-called 
 \index{parallel!translation}\emph{parallel translation} 
-of the Euclidean plane, its geometric meaning should be evident.
+of the Euclidean plane; its geometric meaning should be evident.
 
 The second map is called the \index{rotational homothety}\emph{rotational homothety} with the center at~$O$.
 That is, the point $O$ maps to itself,
@@ -492,7 +484,7 @@ Hence the result.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:inverse-Mob}
-Show that if $f$ a fractional linear transformation, then so is its inverse $f^{-1}$.
+Show that if $f$ is a fractional linear transformation, then so is its inverse $f^{-1}$.
 \end{thm}
 
 
@@ -507,9 +499,9 @@ Show that such a transformation is unique.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:inversion-Mob}
-Show that any inversion is a composition of the complex conjugation and a fractional linear transformation.
+Show that any inversion is a composition of complex conjugation and a fractional linear transformation.
 
-Use Theorem~\ref{thm:inversions-inversive} to conclude that any inversive transformation is either a fractional linear transformation or a complex conjugate to a fractional linear transformation.
+Use Theorem~\ref{thm:inversions-inversive} to conclude that any inversive transformation is either a fractional linear transformation or a complex conjugate of a fractional linear transformation.
 \end{thm}
 
 \section{Complex cross-ratio}
@@ -535,7 +527,7 @@ Note that
 \\
 \measuredangle WUZ +\measuredangle ZVW&=\arg\frac{u-w}{u-z}+\arg\frac{v-z}{v-w}\equiv \arg(u,v;w,z).
 \end{align*}
-These equations make it possible to reformulate Theorem~\ref{lem:inverse-4-angle} using the complex coordinates
+These equations allow us to reformulate Theorem~\ref{lem:inverse-4-angle} using the complex coordinates
 the following way:
 
 \begin{thm}{Theorem}\label{lem:inverse-4-angle-C}
@@ -569,7 +561,7 @@ The following theorem shows
 that the metric in the conformal disc model naturally appears in other branches of mathematics.
 We do not give its proof, but it can be found in any textbook on geometric complex analysis.
 
-Suppose that $\mathbb{D}$ denotes the unit disc in the complex plane centered at~$0$;
+Suppose $\mathbb{D}$ denotes the unit disc in the complex plane centered at~$0$;
 that is, a complex number $z$
 belongs to $\mathbb{D}$ if and only if $|z|<1$.
 
@@ -597,7 +589,7 @@ In this case, $f$ is a fractional linear transformation as well as a motion of t
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:schwarz-moebius}
-Show that if a fractional linear transformation $f$ appears in the equality case of Schwarz--Pick theorem, then it can be written as 
+Show that if a fractional linear transformation $f$ appears in the equality case of the Schwarz--Pick theorem, then it can be written as 
 \[f(z)=\frac{v\cdot z+\bar w}{w\cdot z+\bar v}.\]
 where $v$ and $w$ are complex constants such that $|v|>|w|$.
 \end{thm}
@@ -615,7 +607,7 @@ $z'=f(z)$ and $w'=f(w)$.
 
 \begin{thm}{Exercise}\label{ex:schwarz}
 Show that the Schwarz lemma stated below 
-follows from Schwarz--Pick theorem.
+follows from the Schwarz--Pick theorem.
 \end{thm}
 
 \begin{thm}{Schwarz lemma}

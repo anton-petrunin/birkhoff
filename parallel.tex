@@ -1,10 +1,8 @@
 \chapter{Parallel lines}\label{chap:angle-sum}
 
-\section{Parallel lines}
-
 {
 
-\begin{wrapfigure}{r}{19mm}
+\begin{wrapfigure}{o}{19mm}
 \vskip-4mm
 \centering
 \includegraphics{mppics/pic-72}
@@ -53,7 +51,7 @@ Then apply Proposition~\ref{prop:perp-perp}.
 
 \parit{Uniqueness.}
 If $P\in\ell$, then $m=\ell$ by the definition of parallel lines.
-Further, we assume $P\notin\ell$.
+Now, assume $P\notin\ell$.
 
 Let us construct the lines $n\ni P$ and $m\ni P$ as in the proof of existence, so $m\parallel \ell$.
 
@@ -108,7 +106,7 @@ Show that $k\nparallel n$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:construction-parallel}
-Make a ruler-and-compass construction of a line thru a given point that is parallel to a given line.
+Make a compass-and-ruler construction of a line thru a given point that is parallel to a given line.
 \end{thm}
 
 \section{Reflection across a point}
@@ -122,7 +120,7 @@ We assume that $O'=O$; that is, $O$ is a reflection of itself across itself.
 If the reflection across $O$ moves a set $S$ to itself, then we say that $S$ is \index{central symmetry}\emph{centrally symmetric} with respect to $O$. 
 
 Recall that any motion is either direct or indirect;
-that is, it either preserves or reverts the signs of angles (Section~\ref{direct motion}). 
+that is, it either preserves or reverses the signs of angles (Section~\ref{direct motion}). 
 
 \begin{thm}[\abs]{Proposition}\label{prop:point-reflection}
 A reflection across a point is a direct motion.
@@ -144,12 +142,13 @@ let $X'$ and $Y'$ be their reflections across $O$.
 To check that the reflection is distance preserving, we need to show that $X'Y'=XY$.
 
 We may assume that $X$, $Y$, and $O$ are distinct; otherwise, the statement is trivial.
-By definition of the reflection across $O$, we have that $OX=OX'$, $OY=OY'$, and the angles $XOY$ and $X'OY'$ are vertical;
+By the definition of the reflection across $O$, we have that $OX=OX'$, $OY=OY'$, and the angles $XOY$ and $X'OY'$ are vertical;
 in particular, $\measuredangle XOY\z=\measuredangle X'OY'$.
 By SAS, $\triangle XOY\cong\triangle X'OY'$;
 therefore $X'Y'=XY$.
 
-Finally, the reflection across $O$ cannot be indirect since $\measuredangle XOY\z=\measuredangle X'OY'$;
+By \ref{ex:3-reflections}, the reflection across $O$ is either direct or indirect.
+It cannot be indirect since $\measuredangle XOY\z=\measuredangle X'OY'$;
 therefore it is a direct motion.
 \qeds
 
@@ -317,7 +316,7 @@ $$\measuredangle A B C+ \measuredangle B C A + \measuredangle C A B \equiv \pi.$
 \parit{Proof.} 
 First note that 
 if $\triangle A B C$ is degenerate, then the equality follows from Corollary~\ref{cor:degenerate=pi}.
-Further, we assume that $\triangle A B C$ is nondegenerate.
+Now, assume that $\triangle A B C$ is nondegenerate.
 
 \begin{wrapfigure}{o}{23mm}
 \centering
@@ -340,12 +339,22 @@ we have
 \[\measuredangle CAX\equiv\measuredangle CAB+\measuredangle ABC.\]
 The latter identity and \ref{eq:ABC+CAB} imply the theorem.\qeds
 
+\begin{thm}{Exercise}\label{ex:|3sum|}
+Show that 
+$$|\measuredangle A B C|+ |\measuredangle B C A| + |\measuredangle C A B| = \pi$$
+for any $\triangle ABC$.
+\end{thm} 
+
 {
 
 \begin{wrapfigure}{r}{30mm}
-\vskip-4mm
+\vskip-8mm
 \centering
 \includegraphics{mppics/pic-88}
+\vskip4mm
+\includegraphics{mppics/pic-90}
+\vskip4mm
+\includegraphics{mppics/pic-92}
 \end{wrapfigure}
 
 \begin{thm}{Exercise}\label{ex:pent}
@@ -358,25 +367,6 @@ BA=AD=DC.\]
 Find the angles of $\triangle ABC$. 
 \end{thm}
 
-}
-
-\begin{thm}{Exercise}\label{ex:|3sum|}
-Show that 
-$$|\measuredangle A B C|+ |\measuredangle B C A| + |\measuredangle C A B| = \pi$$
-for any $\triangle ABC$.
-\end{thm} 
-
-
-
-{
-
-\begin{wrapfigure}{r}{30mm}
-\vskip-12mm
-\centering
-\includegraphics{mppics/pic-90}
-\vskip4mm
-\includegraphics{mppics/pic-92}
-\end{wrapfigure}
 
 \begin{thm}{Exercise}\label{ex:right-isos}
 Let $\triangle ABC$ be an isosceles nondegenerate triangle with the base~$[AC]$.
@@ -454,6 +444,17 @@ The remaining statements follow since reflection across $M$ is a direct motion o
 \qeds
 
 }
+
+\begin{thm}{Exercise}\label{ex:4parallels}
+Assume that point $P$ is distinct from vertices of a parallelogram $ABCD$.
+Let $a$, $b$, $c$ and $d$ be lines thru points $A$, $B$, $C$ and $D$ such that 
+$a\parallel (CP)$,
+$b\parallel (DP)$,
+$c\parallel (AP)$, and
+$d\parallel (BP)$.
+Show that the lines $a$, $b$, $c$ and $d$ intersect at one point.
+\end{thm}
+
 
 \begin{thm}{Exercise}\label{ex:romb}
 Assume $ABCD$ is a quadrangle such that
@@ -537,7 +538,7 @@ such that $a=BC$, $b=CA$, and $c=AB$.
 
 \begin{thm}{Exercise}\label{ex:line-coord}
 Consider two distinct points $A=(x_A,y_A)$ and $B\z=(x_B,y_B)$ on the coordinate plane.
-Show that the perpendicular bisector to $[AB]$ is described by the equation
+Show that the perpendicular bisector of $[AB]$ is described by the equation
 \[2\cdot (x_B-x_A)\cdot x+2\cdot (y_B-y_A)\cdot y=x_B^2+y_B^2-x_A^2-y_A^2.\]
 
 Conclude that line can be defined as a subset of the coordinate plane of the following type:
@@ -550,7 +551,7 @@ for constants $a$, $b$, and $c$ such that $a\ne 0$ or $b\ne0$.
 \end{thm}
 
 \section{Apollonian circle}
-The exercises in this section illustrate the method of coordinates --- they will not be used further in the sequel.
+The exercises in this section illustrate the method of coordinates; they will not be used further in the sequel.
 
 \begin{thm}{Exercise}\label{ex:circle-coord}
 Show that for fixed real values $a$, $b$, and $c$ the equation 
@@ -574,10 +575,10 @@ is a circle.
 \end{figure}
 
 The circle in the exercise above is an example of the so-called \index{Apollonian circle}\emph{Apollonian circle with focuses $A$ and $B$}.
-A few of these circles for diﬀerent values $k$ are shown on the diagram;
-for $k=1$, it becomes the perpendicular bisector to $[AB]$.
+A few of these circles for different values of $k$ are shown on the diagram;
+for $k=1$, it becomes the perpendicular bisector of $[AB]$.
 
 
 \begin{thm}{Exercise}\label{ex:apolonnius-construction}
-Make a ruler-and-compass construction of an Apollonian circle with given focuses $A$ and $B$ thru a given point $M$.
+Make a compass-and-ruler construction of an Apollonian circle with given focuses $A$ and $B$ thru a given point $M$.
 \end{thm}

@@ -7,13 +7,13 @@
 \end{figure}
 
 In this chapter, we use inversive geometry 
-to construct the model of a hyperbolic plane --- a neutral plane that is not Euclidean.
+to construct a model of a hyperbolic plane --- a neutral plane that is not Euclidean.
 
 Namely, we construct the so-called \index{conformal disc model}\emph{conformal disc model} of the hyperbolic plane.
-This model was discovered by Eugenio Beltrami \cite{beltrami}; 
-it is often called the {}\emph{Poincar\'e disc model}. 
+This model was discovered by Eugenio Beltrami \cite{beltrami},
+and it is commonly referred to as the {}\emph{Poincar\'e disc model}. 
 
-The figure above shows the conformal disc model of the hyperbolic plane which is cut into congruent triangles with angles $\tfrac\pi3$, $\tfrac\pi3$, and~$\tfrac\pi4$.
+The figure above shows the conformal disc model of the hyperbolic plane which is divided into congruent triangles with angles $\tfrac\pi3$, $\tfrac\pi3$, and~$\tfrac\pi4$.
 
 \section{Conformal disc model}
 \label{sec:conformal-model}
@@ -24,42 +24,42 @@ which will represent lines, angle measures, and distances in the hyperbolic plan
 \parbf{Hyperbolic plane.}
 Let us fix a circle on the Euclidean plane 
 and call it \index{absolute}\emph{absolute}.
-The set of points inside the absolute will be called the \index{hyperbolic!plane}\index{plane!hyperbolic plane}\emph{hyperbolic plane} (or \index{plane!h-plane}\index{h-plane}\emph{h-plane}).
+The set of points inside the absolute will be referred to as the \index{hyperbolic!plane}\index{plane!hyperbolic plane}\emph{hyperbolic plane} (or \index{plane!h-plane}\index{h-plane}\emph{h-plane}).
 
 Note that the points on the absolute do \textit{not} belong to the h-plane.
 The points in the h-plane will be also called \index{h-point}\emph{h-points}.
 
-Often we will assume that the absolute is a unit circle.
+We will often assume that the absolute is a unit circle.
 
 
 
 \parbf{Hyperbolic lines.}
-The intersections of the h-plane with circlines perpendicular to the absolute are called {}\emph{hyperbolic lines} or \index{h-line}\emph{h-lines}.
+The intersections of the h-plane with circlines that are perpendicular to the absolute are called {}\emph{hyperbolic lines} or \index{h-line}\emph{h-lines}.
 
 \begin{wrapfigure}{o}{48mm}
 \centering
 \includegraphics{mppics/pic-190}
 \end{wrapfigure}
 
-By Corollary~\ref{cor:h-line}, there is a unique h-line that passes thru the given two distinct h-points $P$ and~$Q$.
+By Corollary~\ref{cor:h-line}, there exists a unique h-line that passes thru any two distinct h-points $P$ and~$Q$.
 This h-line will be denoted by~\index{62@$(PQ)_h$, $[PQ)_h$,$[PQ]_h$}$(PQ)_h$.
 
 The arcs of hyperbolic lines will be called {}\emph{hyperbolic segments} or \index{h-segment}\emph{h-segments}.
-An h-segment with endpoints $P$ and $Q$ will be denoted by~$[PQ]_h$.
+An h-segment with endpoints $P$ and $Q$ will be denoted as~$[PQ]_h$.
 
-The subset of an h-line on one side from a point will be called a {}\emph{hyperbolic half-line} (or \index{h-half-line}\emph{h-half-line}).
-More precisely, an h-half-line is an intersection of the h-plane with an arc perpendicular to the absolute that has exactly one of its endpoints in the h-plane.
-An h-half-line starting at $P$ and passing thru $Q$ will be denoted by~$[PQ)_h$.
+The portion of an h-line on one side from a point will be called a {}\emph{hyperbolic half-line} (or \index{h-half-line}\emph{h-half-line}).
+More precisely, an h-half-line is the intersection of the h-plane with an arc that is perpendicular to the absolute and has exactly one of its endpoints in the h-plane.
+An h-half-line starting at $P$ and passing thru $Q$ will be denoted as~$[PQ)_h$.
 
-If $\Gamma$ is the circline containing the h-line $(PQ)_h$, then the points of intersection of $\Gamma$ with the absolute are called 
+If $\Gamma$ is the circline containing the h-line $(PQ)_h$, then the points ($A$ and $B$ on the diagram) where $\Gamma$ intersects the absolute are called 
 \index{point!ideal point}\index{ideal!point}\emph{ideal points} of~$(PQ)_h$.
 (Note that the ideal points of an h-line do not belong to the h-line.)
 
-An ordered triple of h-points, say $(P,Q,R)$, will be called {}\emph{h-triangle $PQR$} and denoted by \index{21@$\triangle_h$}$\triangle_h P Q R$.
+An ordered triple of h-points, say $(P,Q,R)$, will be called an {}\emph{h-triangle $PQR$} and denoted by \index{21@$\triangle_h$}$\triangle_h P Q R$.
 
-Let us point out, that so far an h-line $(PQ)_h$ is just a subset of the h-plane;
-below we will introduce h-distance 
-and later we will show that $(PQ)_h$ is a line for the h-distance in the sense of the Definition~\ref{def:line}. 
+It is important to clarify that at this point, that \textit{so far an h-line $(PQ)_h$ is just a subset of the h-plane},
+but soon we will introduce h-distance 
+and show that $(PQ)_h$ is a line for the h-distance in the sense of the Definition~\ref{def:line}. 
 
 \begin{thm}{Exercise}\label{ex:ideal-line-unique}
 Show that an h-line is uniquely determined by its ideal points.
@@ -75,15 +75,15 @@ if and only if the line $(PQ)$ passes thru the center of the absolute.
 \end{thm}
 
 \parbf{Hyperbolic distance.}\label{h-dist}
-Let $P$ and $Q$ be distinct h-points;
-let $A$ and $B$ denote the ideal points of $(PQ)_h$.
+Consider two distinct h-points $P$ and $Q$,
+and let $A$ and $B$ denote the ideal points of $(PQ)_h$.
 Without loss of generality, we may assume that on the Euclidean circline containing the h-line $(PQ)_h$, the points $A,P,Q,B$ appear in the same order.
 
 Consider the function 
 $$\delta(P,Q)\df\frac{AQ\cdot PB}{AP\cdot QB}.$$
 Note that the right-hand side is a cross-ratio;
 by Theorem~\ref{lem:inverse-4-angle} it is invariant under inversion.
-Set $\delta(P,P)=1$ for any h-point~$P$.
+We set $\delta(P,P)=1$ for any h-point~$P$.
 Let us define h-distance as the logarithm of $\delta$; that is,
 $$PQ_h\df\ln[\delta(P,Q)].$$
 
@@ -100,34 +100,34 @@ Prove that $OX_h<XY_h$.
 \parbf{Hyperbolic angles.}\label{h-angle measure}
 Consider three h-points $P$, $Q$, and $R$
 such that $P\ne Q$ and $R\ne Q$.
-The \index{hyperbolic!angle}\emph{hyperbolic angle $PQR$} (briefly $\angle_h PQR$)\index{11@$\angle_h$, $\measuredangle_h$} is an ordered pair of h-half-lines $[QP)_h$ and $[QR)_h$.
+The \index{hyperbolic!angle}\emph{hyperbolic angle $PQR$} (briefly $\angle_h PQR$)\index{11@$\angle_h$, $\measuredangle_h$} consists of the ordered pair of h-half-lines $[QP)_h$ and $[QR)_h$.
 
 Let $[QX)$ and $[QY)$ be (Euclidean) half-lines 
 that are tangent to $[QP]_h$ and $[QR]_h$ 
 at~$Q$.
 Then the \index{angle!measure!hyperbolic angle measure}\index{hyperbolic!angle measure}\emph{hyperbolic angle measure} (or \index{h-angle measure}\emph{h-angle measure}) of $\angle_h PQR$ is denoted by
-$\measuredangle_h PQR$ and defined as
+$\measuredangle_h PQR$ and is defined as
 $\measuredangle XQY$.
 
 \begin{thm}{Exercise}\label{ex:h-perp-unique}
-Let $\ell$ be an h-line and $P$ be an h-point that does not lie on~$\ell$.
-Show that there is a unique h-line thru $P$ and perpendicular to~$\ell$.
+Let $P$ be an h-point that does not lie on an h-line~$\ell$.
+Show that there is a unique h-line thru $P$ that is perpendicular to~$\ell$.
 \end{thm}
 
 \section{Plan of the proof}
 
-We defined all the {}\emph{h-notions} needed in the formulation of the axioms \ref{def:birkhoff-axioms:0}--\ref{def:birkhoff-axioms:3} and h-\ref{def:birkhoff-axioms:4}.
+We have introduced all the {}\emph{h-notions} needed in the formulation of the axioms \ref{def:birkhoff-axioms:0}--\ref{def:birkhoff-axioms:3} and h-\ref{def:birkhoff-axioms:4}.
 It remains to show that all these axioms hold; 
 this will be done by the end of this chapter.
 
-Once we are done with the proofs, 
-we get that the model provides an example of a neutral plane; 
-in particular, Exercise~\ref{ex:h-perp-unique} can be proved the same way as Theorem~\ref{perp:ex+un}.
+Once our proofs are complete, we will have a model that serves as an example of a neutral plane.
+After that we can use axiomatic approach in the h-plane;
+for example, Exercise~\ref{ex:h-perp-unique} can be proved the same way as Theorem~\ref{perp:ex+un}.
 
 Most importantly we will prove the ``if''-part of Theorem~\ref{thm:consistent}.
 
 Indeed, any statement in hyperbolic geometry can be restated in the Euclidean plane using the introduced h-notions.
-Therefore, if the system of axioms \ref{def:birkhoff-axioms:0}--\ref{def:birkhoff-axioms:3}, and h-\ref{def:birkhoff-axioms:4} leads to a contradiction, then so does the system axioms \ref{def:birkhoff-axioms:0}--\ref{def:birkhoff-axioms:4}.
+Consequently, if the system of axioms \ref{def:birkhoff-axioms:0}--\ref{def:birkhoff-axioms:3}, and h-\ref{def:birkhoff-axioms:4} leads to a contradiction, then so does the system axioms \ref{def:birkhoff-axioms:0}--\ref{def:birkhoff-axioms:4}.
 
 \section{Auxiliary statements}
 
@@ -205,7 +205,7 @@ x&=\frac{e^y-1}{e^y+1}.
 \end{thm}
 
 Observe that according to the lemma, $OP_h\to \infty$ as $OP\to 1$.
-That is, if $P$ approaches absolute in the Euclidean sense, it escapes to infinity in the h-sense.
+That is, if $P$ the approaches absolute in the Euclidean sense, it escapes to infinity in the h-sense.
 
 \begin{wrapfigure}[6]{o}{38mm}
 \vskip-4mm
@@ -320,10 +320,10 @@ that is, its vertices $P$, $Q$, and $R$ do not lie on an h-circle or h-line.
 Evidently, the h-plane contains at least two points.
 Therefore, to show that Axiom~\ref{def:birkhoff-axioms:0} holds in the h-plane, we need to show that the h-distance defined in Section~\ref{sec:conformal-model} is a metric;
 that is, the conditions \textit{(\ref{def:metric-space:a})}--\textit{(\ref{def:metric-space:d})} 
-in Definition~\ref{def:metric-space} hold for h-distance.
+in Definition~\ref{def:metric-space} hold for the h-distance.
 
 
-The following claim says that the h-distance meets the conditions \textit{(\ref{def:metric-space:a})} 
+The following claim says that the h-distance satisfies conditions \textit{(\ref{def:metric-space:a})} 
 and \textit{(\ref{def:metric-space:b})}.
 
 \begin{thm}{Claim}
@@ -336,7 +336,7 @@ and $PQ_h=0$ if and only if $P=Q$.
 \parit{Proof.}
 According to Lemma~\ref{lem:P-->O}
 and the main observation (\ref{thm:main-observ}), 
-we may assume that $Q$ is the center of the absolute.
+we can assume that $Q$ is the center of the absolute.
 In this case
 $$
 \delta(Q,P)=\frac{1+QP}{1-QP}\ge 1$$
@@ -345,7 +345,7 @@ $$QP_h=\ln[\delta(Q,P)]\ge 0.$$
 Moreover, the equalities hold if and only if $P=Q$.
 \qeds
 
-The following claim says that the h-distance meets Condition~\ref{def:metric-space}\textit{\ref{def:metric-space:c}}.
+The following claim says that the h-distance meets~\ref{def:metric-space}\textit{\ref{def:metric-space:c}}.
 
 \begin{thm}{Claim}
 For any h-points $P$ and $Q$, we have
@@ -455,19 +455,20 @@ In this case, $\ell$ is an intersection of a diameter of the absolute and the h-
 Let $A$ and $B$ be the endpoints of the diameter.
 
 \begin{wrapfigure}{o}{29mm}
-\vskip-5mm
+\vskip-3mm
 \centering
 \includegraphics{mppics/pic-201}
+\vskip-2mm
 \end{wrapfigure}
 
 Consider the map $\iota\:\ell\to \mathbb{R}$ defined as
 $$\iota(X)=\ln \frac{AX}{XB}.$$
 Note that $\iota\:\ell\to \mathbb{R}$ is a bijection.
 
-Further, if $X,Y\in \ell$ and the points $A$, $X$, $Y$, and $B$ appear on $[AB]$ in the same order, then
+Furthermore, if $X,Y\in \ell$ and the points $A$, $X$, $Y$, and $B$ appear on $[AB]$ in the same order, then
 \[\iota(Y)-\iota(X)=\ln \frac{AY}{YB}-\ln \frac{AX}{XB}=\ln \frac{AY\cdot BX}{YB\cdot XB}=XY_h.\]
 
-We proved that any h-line is a line for h-distance.
+We have shown that any h-line is a line for h-distance.
 The converse follows from Claim~\ref{clm:h-dist+trig-inq}.
 \qeds
 
@@ -496,7 +497,7 @@ $$\measuredangle_h P O Q+\measuredangle_h Q O R
 Applying the main observation, 
 we may assume that $O$ is the center of the absolute.
 In this case, for any h-point $P\z\ne O$, the h-half-line
-$[OP)_h$ is the intersection of the Euclidean half-line $[OP)$ with h-plane.
+$[OP)_h$ is the intersection of the Euclidean half-line $[OP)$ with the h-plane.
 Hence \ref{clm:h2a} and \ref{clm:h2b} 
 follow from the axioms \ref{def:birkhoff-axioms:2a} and \ref{def:birkhoff-axioms:2b} of the Euclidean plane.
 \qeds
@@ -585,12 +586,12 @@ $\triangle_h P Q R$ and $\triangle_h P' Q R'$ are h-congruent.
 
 \subsection*{Axiom h-$\!$\ref{def:birkhoff-axioms:4}}
 
-Finally, we need to check that the Axiom~h-$\!$\ref{def:birkhoff-axioms:4} in Section~\ref{sec:unprovable} holds;
+Finally, we need to check that Axiom~h-$\!$\ref{def:birkhoff-axioms:4} in Section~\ref{sec:unprovable} holds;
 that is, we need to prove the following claim.
 
 {
 
-\begin{wrapfigure}{o}{31mm}
+\begin{wrapfigure}{r}{31mm}
 \vskip-4mm
 \centering
 \includegraphics{mppics/pic-202}
@@ -611,7 +612,7 @@ The remaining part of the proof can be guessed from the picture.
 
 \begin{thm}{Exercise}\label{ex:3-h-lines}
 \begin{enumerate}[(a)]
-\item Show that in the h-plane there are 3 mutually parallel h-lines 
+\item Show that in the h-plane there are three mutually parallel h-lines 
 such that any pair of these three lines lies on one side of the remaining h-line.
 \item Draw three h-lines $\ell$, $m$, and $n$ such that $\ell\parallel m$, $m\parallel n$, but $\ell\nparallel n$.
 Conclude that the parallelness is not an equivalence relation for h-lines.
@@ -622,7 +623,7 @@ Conclude that the parallelness is not an equivalence relation for h-lines.
 \label{sec:hyp-trig}
 
 
-In this section, we give formulas for h-distance using \index{hyperbolic!functions}\emph{hyperbolic functions}.
+This section provides formulas for h-distance using \index{hyperbolic!functions}\emph{hyperbolic functions}.
 One of these formulas will be used in the proof of the hyperbolic Pythagorean theorem (\ref{thm:pyth-h-poincare}).
 
 Recall that $\cosh$, $\sinh$, and $\tanh$ denote \index{ch@$\cosh$}\index{hyperbolic!cosine}\emph{hyperbolic cosine}, \index{sh@$\sinh$}\index{hyperbolic!sine}\emph{hyperbolic sine}, and \index{th@$\tanh$}\index{hyperbolic!tangent}\emph{hyperbolic tangent}\label{hyperbolic tangent};
@@ -634,7 +635,7 @@ that is, the functions defined by
 \[\tanh x\df \tfrac{\sinh x}{\cosh x}.
 \]
 
-These hyperbolic functions are analogous to sine and cosine and tangent. 
+These hyperbolic functions are analogous to sine, cosine, and tangent. 
 
 \begin{thm}{Exercise}\label{ex:hyp-fun}
 Prove the following identities:
@@ -670,7 +671,7 @@ hold for any real value $x$.
 \qedsf
 
 \begin{thm}{Advanced exercise}\label{ex:cosh}
-Let $P$ and $Q$ be two h-points distinct from the center of absolute.
+Let $P$ and $Q$ be two h-points distinct from the center of the absolute.
 Denote by $P'$ and $Q'$ the inverses of $P$ and $Q$ across the absolute.
 
 \begin{wrapfigure}[20]{r}{40mm}
