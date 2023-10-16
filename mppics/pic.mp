@@ -464,9 +464,9 @@ draw z.R1--z.R2;
 
 dOt z.O1,z.O2, z.R1, z.R2;
 
-label.top (btex $R$ etex, .5[z.O1,z.R1]);
+label.top (btex $r_1$ etex, .5[z.O1,z.R1]);
 whitelabel.top (btex $d$ etex, .5[z.O1,z.O2]);
-label.top (btex $r$ etex, .5[z.O2,z.R2]);
+label.top (btex $r_2$ etex, .5[z.O2,z.R2]);
 endfig;
 
 beginfig(36)

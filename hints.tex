@@ -5,7 +5,7 @@
 %\addcontentsline{toc}{chapter}{Hints}
 %\subsection*{Chapter~\ref{chap:metr}}
 
-\raggedcolumns\setlength{\multicolsep}{-5mm}
+\raggedcolumns\setlength{\multicolsep}{-10mm}
 \spell{\begin{multicols}{2}}{}
 
 \refstepcounter{chapter}
@@ -494,9 +494,9 @@ that is, $P$ lies outside~$\Gamma$.
 
 \parbf{\ref{ex:two-circ}.} Use \ref{ex:chord-perp} and \ref{perp:ex+un}.
 
-\parbf{\ref{ex:tangent-circles}.} 
-Let $P'$ be the reflection of $P$ across~$(OO')$.
-Note that $P'$ lies on both circles and $P'\ne P$ if and only if $P\notin(OO')$.
+\parbf{\ref{ex:tangent-circles}.}
+Assume that $Q$ is another point on both circles.
+Show and use that $Q$ is the reflection of $P$ across~$(OO')$.
 
 \parbf{\ref{ex:tangent-circles-2}.}  Apply \ref{ex:tangent-circles}.
 
@@ -506,6 +506,8 @@ Note that the centers lie on the perpendicular bisector of the segment~$[AB]$.
 
 \parbf{\ref{ex:construction-perpendicular}--\ref{ex:tangent-circle}.}
 The given data is marked in bold.
+
+\vfill
 
 \begin{Figure}
 \begin{minipage}{.49\textwidth}
@@ -518,6 +520,8 @@ The given data is marked in bold.
 \includegraphics{mppics/pic-328}
 \end{minipage}
 \end{Figure}
+
+\vfill
 
 \begin{Figure}
 \begin{minipage}{.49\textwidth}
@@ -756,7 +760,7 @@ Note that $(AC)\perp (BH)$ and $(BC)\z\perp (AH)$ and apply \ref{thm:orthocenter
 \parbf{\ref{ex:midle}.}
 Use the idea from the proof of \ref{thm:centroid}
 to show that $(XY)\z\parallel (AC)\z\parallel (VW)$ and
-$(XV)\z\parallel (BD)\z\parallel (YW)$.
+$(XW)\z\parallel (BD)\z\parallel (YV)$.
 
 \parbf{\ref{ex:perp-bisectors}.}
 Let $(BX)$ and $(BY)$ be the internal and external bisectors of $\angle ABC$.
@@ -1503,23 +1507,24 @@ The latter contradicts that the map is a bijection.
 
 }
 
-\begin{wrapfigure}{r}{30mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-354}
-\end{wrapfigure}
-
 By assumption, if $X\in (AB)$, then $X'\z\in (A'B')$.
 From above, if $X\notin (AB)$, then $X'\z\notin (A'B')$.
 Use it to prove the second statement.
 
+{
+
+\begin{wrapfigure}{r}{30mm}
+\vskip-5mm
+\centering
+\includegraphics{mppics/pic-354}
+\end{wrapfigure}
+
 \parbf{\ref{ex:midpoint-affine}.}
-According to the remark before the exercise,
-it is sufficient to construct the midpoint of $[AB]$
+It is sufficient to construct the midpoint of $[AB]$
 with a ruler and a parallel tool.
+Guess the construction from the diagram.
 
-Guess a construction from the diagram.
-
+}
 
 \parbf{\ref{ex:R-hom}.}
 Let $O$, $E$, $A$, and $B$ be the points with coordinates $(0,0)$, $(1,0)$, $(a,0)$, and $(b,0)$ respectively.
