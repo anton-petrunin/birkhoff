@@ -42,7 +42,7 @@ In particular, the sphere does not satisfy the axioms of the neutral plane.
 
 Here is an analog of the Pythagorean theorems (\ref{thm:pyth} and \ref{thm:pyth-h-poincare}) in spherical geometry.
 
-\begin{thm}{Spherical Pythagorean Theorem}\label{thm:s-pyth}
+\begin{thm}{Spherical Pythagorean theorem}\label{thm:s-pyth}
 Let $\triangle_sABC$ be a spherical triangle with a right angle at~$C$.
 Set $a=BC_s$, $b=CA_s$, and $c=AB_s$.
 Then
@@ -78,7 +78,7 @@ By \ref{eq:scal-angle} we get that
 $$\cos AB_s=\langle v_A,v_B\rangle.
 \eqlbl{eq:scalar-s-dist}$$
 
-\parit{Proof of the spherical Pythagorean Theorem.}
+\parit{Proof of the spherical Pythagorean theorem.}
 Since the angle at $C$ is right,
 we can choose the coordinates in $\mathbb{R}^3$ so that 
 $v_C\z=(0,0,1)$, $v_A$ lies in the $(x,y)$-plane, so $v_A\z=(x_A,0,z_A)$,
@@ -118,6 +118,33 @@ and $AC_s=BC_s=\tfrac\pi4$, then $AB_s=\tfrac\pi3$.
 \end{thm}
 
 }
+
+\section{Imaginary distance}
+
+Recall that  
+\[
+\cosh x=\frac {e^{x}+e^{-x}}2
+\qquad\text{and}\qquad
+\cos x=\frac {e^{i\cdot x}+e^{-i\cdot x}}2.
+\]
+The first formula is the definition of the hyperbolic cosine;
+the second one is called Euler's formula (see \ref{sec:Euler's formula}).
+It follows that 
+\[\cosh x=\cos (i\cdot x)
+\qquad\text{and}\qquad
+\cos x=\cosh (i\cdot x).\]
+
+Look at the formulas in hyperbolic and spherical Pythagorean theorems (see \ref{thm:s-pyth} and \ref{thm:pyth-h-poincare}):
+\begin{align*}
+\cosh c&=\cosh a\cdot \cosh b,
+&
+\cos c&=\cos a\cdot \cos b.
+\end{align*}
+Note that if we change $a$, $b$, and $c$ to $i\cdot a$, $i\cdot b$, and $i\cdot c$,
+then the first formula transforms to the second one, and the other way around.
+
+The same holds for all analytic formulas in spherical and hyperbolic geometry.
+This remarkable discovery was made by Franz Taurinus \cite{taurinus}; we are not going to prove it.
 
 \section[Inversion]{Inversion across a sphere}
 

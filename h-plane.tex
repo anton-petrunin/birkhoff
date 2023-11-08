@@ -12,7 +12,7 @@ Drop a perpendicular $(PQ)_h$ from $P$ to $\ell$;
 let $Q$ be its footpoint.
 Let $\phi$ be the smallest value such that the h-line $(PZ)_h$ with $|\measuredangle_h Q P Z|=\phi$ does not intersect~$\ell$.
 
-The value $\phi$ is called the \index{angle!angle of parallelism}\emph{angle of parallelism} of $P$ to~$\ell$.
+The value $\phi$ is called the \index{angle!angle of parallelism}\emph{angle of parallelism} at $P$ to~$\ell$.
 Clearly, $\phi$ depends only on the h-distance $s=PQ_h$.
 Furthermore, $\phi(s)\to \pi/2$ as $s\to 0$, 
 and $\phi(s)\to0$ as $s\to\infty$.
@@ -20,7 +20,7 @@ and $\phi(s)\to0$ as $s\to\infty$.
 
 \begin{thm}{Exercise}\label{ex:lambert-parallelism}
 Suppose that $\square_hABCD$ has right h-angles at $A$, $B$, and~$C$.
-Show that $|\measuredangle_h CDA|>\phi$, where $\phi$ is the angle of parallelism of $D$ to~$(AB)_h$.
+Show that $|\measuredangle_h CDA|>\phi$, where $\phi$ is the angle of parallelism at $D$ with respect to~$(AB)_h$.
 \end{thm}
 
 \begin{wrapfigure}{o}{34mm}
@@ -50,11 +50,16 @@ that is, there is an $h$-line $n$ such that $n\perp \ell$ and $n\perp m$.
 \begin{thm}{Proposition}\label{prop:angle-parallelism}
 Let $Q$ be a footpoint of $P$ on an h-line~$\ell$.
 Then
-\[PQ_h=\tfrac12\cdot\ln \frac{1+\cos\phi}{1-\cos\phi},\]
-where $\phi$ is the angle of parallelism of $P$ to~$\ell$.
+\[h=\tfrac12\cdot\ln \frac{1+\cos\phi}{1-\cos\phi}
+\qquad\text{and}\qquad
+\cos\phi=\frac{e^{2\cdot h}-1}{e^{2\cdot h}+1},\]
+where $h=PQ_h$, and $\phi$ is the angle of parallelism at $P$ with respect to~$\ell$.
 
 In particular, if $P\notin\ell$ and $\beta\z=|\measuredangle_h XPY|$ for some points $X,Y\in\ell$, then 
-\[PQ_h<\tfrac12\cdot\ln \frac{1+\cos\tfrac\beta2}{1-\cos\tfrac\beta2}.\]
+\[
+h<\tfrac12\cdot\ln \frac{1+\cos\tfrac\beta2}{1-\cos\tfrac\beta2}
+\qquad\text{and}\qquad
+\cos\tfrac\beta2>\frac{e^{2\cdot h}-1}{e^{2\cdot h}+1}.\]
 
 \end{thm}
 
@@ -97,12 +102,13 @@ that is, $X$ is the inverse of $P$ across~$\Gamma$.
 The inversion across $\Gamma$ is the reflection of the h-plane across~$\ell$. 
 Therefore
 \begin{align*}
-PQ_h&=QX_h=
+h&=PQ_h=QX_h=
 \\
 &=\tfrac12\cdot PX_h=
 \\
 &=\tfrac12\cdot\ln \tfrac{1+\cos\phi}{1-\cos\phi}.
 \end{align*}
+Taking exponent of the left and right hand side and simplifying, we get the second identity.
 
 The last statement follows since $\phi\z>\tfrac\beta2$ and the function 
 \[\phi\mapsto  \tfrac12\cdot\ln \tfrac{1+\cos\phi}{1-\cos\phi}\] 
@@ -231,6 +237,12 @@ Such a curve $g$ is called
 \index{equidistant}\emph{equidistant} to h-line~$m$.\footnote{It can also be called \index{hypercycle}\emph{hypercycle}.}
 In Euclidean geometry, the equidistant from a line is a line;
 apparently, in hyperbolic geometry, the picture is different.
+
+\begin{thm}{Exercise}\label{ex:equidistant-reflection}
+Let $g$ be the set of all h-reflections of a given h-point $P$ across the points on a given h-line $m$.
+Show that $g$ is equidistant to $m$.
+\end{thm}
+
 
 \parbf{Horocycles.}
 If the circle $\Gamma$ touches the absolute from inside at one point $A$, then the complement $h=\Gamma\backslash\{A\}$ lies in the h-plane.
@@ -449,12 +461,6 @@ $$\sinh r\df \frac{e^r-e^{-r}}{2}.$$
 
 \end{thm}
 
-\begin{wrapfigure}[11]{o}{47mm}
-\centering
-\vskip-4mm
-\includegraphics{mppics/pic-222}
-\end{wrapfigure}
-
 Before we proceed with the proof, let us discuss the same problem in the Euclidean plane.
 
 The circumference of a circle in the Euclidean plane
@@ -467,6 +473,12 @@ $\measuredangle AOB=\tfrac{2\cdot\pi}{n}$ and $OA=OB=r$.
 Set $x_n=AB$.
 Note that $x_n$ is the side of a regular $n$-gon inscribed in the circle with radius $r$. 
 Therefore, the perimeter of the $n$-gon is $n\cdot x_n$.
+
+\begin{wrapfigure}[11]{o}{47mm}
+\centering
+\vskip-0mm
+\includegraphics{mppics/pic-222}
+\end{wrapfigure}
 
 The circumference of the circle with radius $r$ 
 can then be defined as the limit

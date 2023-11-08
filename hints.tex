@@ -1238,7 +1238,10 @@ Mimic the proof of \ref{thm:3sum-a} for the shown fence made from copies of quad
 \includegraphics{mppics/pic-349}
 \end{Figure}
 
-(Alternatively, use \ref{thm:3sum-a} to show that $|\measuredangle CBD|\ge|\measuredangle ADB|$ and then use this to show that $c\ge a$.)
+\parit{Alternative way.}
+By \ref{lem:perp<oblique}, we can assume that $\angle BCD$ is right.
+Use \ref{thm:3sum-a} to show that $|\measuredangle CBD|\ge|\measuredangle ADB|$.
+Use \ref{prop:angle-side} and the construction in the neutral proof of \ref{thm:hypotenuse-leg} to show that $2\cdot c\ge 2\cdot a$.
 
 \parbf{\ref{ex:defect}.}
 Note that 
@@ -1333,9 +1336,6 @@ Let $O$ be the h-midpoint of $[PQ]_h$.
 By the main observation (\ref{thm:main-observ})
 we can assume that $O$ is the center of the absolute.
 In this case, $O$ is also the Euclidean midpoint of $[PQ]$.%
-\footnote{We could also move $Q$ to the center of absolute.
-In this case, the derivations are simpler.
-But since $Q'Q=Q'P=Q'P'=\infty$, one has to justify that $\tfrac\infty\infty=1$ every time.}
 
 Set $a=OP=OQ$; in this case, we have
 \begin{align*}
@@ -1378,11 +1378,16 @@ Hence part \textit{(\ref{ex:coshsinh})} follows.
 
 Parts \textit{(\ref{ex:coshtanh})} and \textit{(\ref{ex:coshcosh})} follow from \textit{(\ref{ex:cosh/2})}, \textit{(\ref{ex:coshsinh})}, the definition of a hyperbolic tangent, and the double-argument identity for hyperbolic cosine, see \ref{double-argument}.
 
+(We could also move $Q$ to the center of absolute.
+In this case, the derivations are simpler.
+But since $Q'Q=Q'P=Q'P'=\infty$, one has to justify that $\tfrac\infty\infty=1$ every time.)
+
 %\subsection*{Chapter~\ref{chap:h-plane}}
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
 
-\parbf{\ref{ex:lambert-parallelism}.} Use \ref{prop:perp-perp} to show that $(AB)_h\parallel (CD)_h$.
+\parbf{\ref{ex:lambert-parallelism}.}
+Use \ref{prop:perp-perp} to show that $(AB)_h\parallel (CD)_h$.
 Apply the definition of the angle of parallelism.
 
 \parbf{\ref{ex:ultra-parallel}}; \textit{``only-if'' part.}
@@ -1390,42 +1395,45 @@ Suppose $\ell$ and $m$ are ultraparallel; that is, they do not intersect and hav
 Denote the ideal points by $A$, $B$, $C$, and $D$;
 we may assume that they appear on the absolute in the same order.
 
+In this case, the h-line with ideal points $A$ and $C$ intersects the h-line with ideal points $B$ and $D$.
+Let $O$ be their point of intersection.
+By \ref{thm:main-observ}, we can assume that $O$ is the center of absolute.
+Note that $\ell$ is the reflection of $m$ across $O$ in the Euclidean sense.
+
+Drop an h-perpendicular $n$ from $O$ to $\ell$ and
+show that $n\perp m$.
+
 \begin{Figure}
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-359}
 \end{Figure}
 
-In this case, the h-line with ideal points $A$ and $C$ intersects the h-line with ideal points $B$ and $D$.
-Let $O$ be their point of intersection.
-By \ref{lem:P-->O}, we can assume that $O$ is the center of absolute.
-Note that $\ell$ is the reflection of $m$ across $O$ in the Euclidean sense.
-
-Drop an h-perpendicular $n$ from $O$ to $\ell$ and
-show that $n\perp m$.
-
 \parit{``If'' part.} 
 Suppose $n$ is a common perpendicular.
 Let $L$ and $M$ be its points of intersection with $\ell$ and $m$ respectively.
 
 Let $O$ be the center of the absolute.
-By \ref{lem:P-->O}, we can assume that $O$ is the h-midpoint of $L$ and $M$.
+By \ref{thm:main-observ}, we can assume that $O$ is the h-midpoint of $L$ and $M$.
 Notice that in this case $\ell$ is the reflection of $m$ across $O$ in the Euclidean sense.
 It follows that the ideal points of the h-lines $\ell$ and $m$ are symmetric to each other.
 Therefore, if one pair of them coincides, then the other pair does too. 
 By \ref{ex:ideal-line-unique}, $\ell=m$, which contradicts the assumption $\ell\ne m$.
 
-\parbf{\ref{ex:right-angle-parallelism}.} Show that the angle of parallelism of $C$ to $(AB)_h$ is less than $\tfrac\pi4$, and apply \ref{prop:angle-parallelism}.
+\parbf{\ref{ex:right-angle-parallelism}.} Show that the angle of parallelism at $C$ with respect to $(AB)_h$ is less than $\tfrac\pi4$, and apply \ref{prop:angle-parallelism}.
 You can use approximations such as $\sqrt2\approx 1.414$ and $e\approx2.718$.
 
 
 \parbf{\ref{ex:small-angle}.}
 By the triangle inequality, the h-distance from $B$ to $(AC)_h$ is at least 50.
-It remains to estimate $|\measuredangle_h ABC|$ using \ref{prop:angle-parallelism}.
-The inequalities $\cos\phi\z\le 1-\tfrac1{10}\cdot\phi^2$ for $|\phi|<\tfrac\pi2$ and $e^3>10$ should help to finish the proof.
+By \ref{prop:angle-parallelism}, $|\measuredangle_h ABC|<2\cdot\phi$, where $\phi$ is the angle of parallelism at the distance $50$.
+Show that $\cos\phi\z=\tfrac{e^{100}-1}{e^{100}+1}$ and
+use it to estimate~$\phi$.
+
+The inequalities $\cos\phi\z\le 1-\tfrac1{10}\cdot\phi^2$ for $|\phi|\z<\tfrac\pi2$ and $e^3>10$ should help to finish the proof.
 
 \parbf{\ref{ex:side-sup}.}
-Note that the angle of parallelism of $B$ to $(CD)_h$ is greater than $\tfrac\pi4$,
+Note that the angle of parallelism at $B$ with respect to $(CD)_h$ is greater than $\tfrac\pi4$,
 and it approaches to $\tfrac\pi4$ as $CD_h\to\infty$.
 
 Applying \ref{prop:angle-parallelism},
@@ -1435,14 +1443,16 @@ $$BC_h<\tfrac12\cdot\ln\frac{1+\frac1{\sqrt{2}}}{1-\frac1{\sqrt{2}}}=\ln\left(1+
 The right-hand side is the limit of $BC_h$ as $CD_h\to\infty$.
 Therefore, $\ln\left(1+\sqrt{2}\right)$ is the optimal upper bound.
 
+\parbf{\ref{ex:equidistant-reflection}.}
+Let $P'$ be another h-point.
+Denote by $R$ and $R'$ the h-footpoint of $P$ and $P'$ on $m$.
+
+Show and use that $P'$ is an h-reflection of $P$ across $Q\in m$ if and only if $P$ and $P'$ lie on the opposite sides of $m$, 
+$PR_h=P'R'_h$, and $Q$ is the h-midpoint of $[RR']_h$. 
+You may need \ref{prop:vert}, SAS, and SAA (see \ref{ex:SAA}).
+
 \parbf{\ref{ex:right-trig-horocycle}.}
 As usual, we assume that the absolute is a unit circle.
-
-\begin{Figure}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-352}
-\end{Figure}
 
 Consider a hyperbolic triangle $PQR$
 with a right angle at $Q$, where  $PQ_h\z=QR_h$
@@ -1451,6 +1461,12 @@ lie on a horocycle.
 
 We may assume that $Q$ is the center of the absolute.
 In this case, $\measuredangle_hPQR\z=\measuredangle PQR\z=\pm\tfrac\pi2$ and $PQ=QR$.
+
+\begin{Figure}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-352}
+\end{Figure}
 
 Note that the Euclidean circle passing thru $P$, $Q$, and $R$ is tangent to the absolute.
 Conclude that $PQ=\tfrac1{\sqrt2}$. 
@@ -1490,14 +1506,6 @@ In each case, check that the map is a bijection and apply \ref{ex:line-coord}.
 \parbf{\ref{ex:collinear=affine}.}
 Choose a line $(AB)$.
 
-{
-
-\begin{wrapfigure}{o}{20mm}
-\vskip-2mm
-\centering
-\includegraphics{mppics/pic-353}
-\end{wrapfigure}
-
 Assume $X'\z\in (A'B')$ for some $X\z\notin(AB)$.
 Since $P\mapsto P'$ maps collinear points to collinear, 
 the three lines $(AB)$, $(AX)$, and $(BX)$ are mapped to~$(A'B')$.
@@ -1505,26 +1513,27 @@ Furthermore, any line connecting a pair of points on these three lines is also m
 Use it to show that the entire plane is mapped to $(A'B')$.
 The latter contradicts that the map is a bijection.
 
-}
-
 By assumption, if $X\in (AB)$, then $X'\z\in (A'B')$.
 From above, if $X\notin (AB)$, then $X'\z\notin (A'B')$.
 Use it to prove the second statement.
 
-{
-
-\begin{wrapfigure}{r}{30mm}
-\vskip-5mm
+\begin{Figure}
+\vskip-0mm
+\begin{minipage}{.49\textwidth}
+\centering
+\includegraphics{mppics/pic-353}
+\end{minipage}
+\hfill
+\begin{minipage}{.49\textwidth}
 \centering
 \includegraphics{mppics/pic-354}
-\end{wrapfigure}
+\end{minipage}
+\end{Figure}
 
 \parbf{\ref{ex:midpoint-affine}.}
 It is sufficient to construct the midpoint of $[AB]$
 with a ruler and a parallel tool.
 Guess the construction from the diagram.
-
-}
 
 \parbf{\ref{ex:R-hom}.}
 Let $O$, $E$, $A$, and $B$ be the points with coordinates $(0,0)$, $(1,0)$, $(a,0)$, and $(b,0)$ respectively.
@@ -1850,20 +1859,18 @@ It remains to apply \ref{thm:centroid} for $\triangle A'B'C'$.
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
 
-\parbf{\ref{ex:P-->hat-P}.}
-Let $N$, $O$, $S$, $P$, $P'$, and $\hat P$ 
-be as on the diagram in \ref{sec:special-bijection}.
+%\parbf{\ref{ex:P-->hat-P}.}
+%Let $N$, $O$, $S$, $P$, $P'$, and $\hat P$ 
+%be as on the diagram in \ref{sec:special-bijection}.
 
-Note that $OQ=\tfrac1x$ and therefore we need to show that $O\hat P=2/(x+\tfrac1x)$.
-To do this, show and use that 
-$\triangle SOP\sim \triangle SP'N\sim \triangle P'\hat PP$
-and
-$2\cdot SO\z=NS$.
-
+%Note that $OQ=\tfrac1x$ and therefore we need to show that $O\hat P=2/(x+\tfrac1x)$.
+%To do this, show and use that $\triangle SOP\sim \triangle SP'N\sim \triangle P'\hat PP$ and $2\cdot SO\z=NS$.
 
 \parbf{\ref{ex:hex}.}
 Consider the bijection $P\z\leftrightarrow \hat P$ of the h-plane with the absolute~$\Omega$.
 Note that $\hat P\in [A_iB_i]$ if and only if $P\in\Gamma_i$.
+
+\parbf{\ref{ex:P<->hatP}.} Apply \ref{lem:P-hat-chord} and the definition of h-distance in \ref{sec:conformal-model}.
 
 \parbf{\ref{ex:h-median}.} 
 The observation follows since the reflection across the perpendicular bisector of $[PQ]$ is a motion of the Euclidean plane and a motion of the h-plane as well.
@@ -1879,6 +1886,13 @@ In this case, the h-medians of the triangle coincide with the Euclidean medians.
 It remains to apply \ref{thm:centroid}.
 
 
+\parbf{\ref{ex:h-altitudes}.} 
+Use the projective model.
+Assume that two h-altitudes intersect at a point~$H$.
+Move $H$ to the center of the absolute.
+By \ref{obs:h-p-perp} these h-altitudes become Euclidean altitudes of the triangle.
+By \ref{thm:orthocenter}, the remaining Euclidean altitude passes thru $H$.
+By \ref{obs:h-p-perp} this Euclidean altitude is also an h-altitude.
 
 \parbf{\ref{ex:klein-perp}.} 
 Let $\hat\ell$ and $\hat m$ denote the h-lines in the conformal model that correspond to $\ell$ and $m$.
@@ -1918,7 +1932,7 @@ therefore
 \frac1{\sqrt{1-t^2}}.
 \eqlbl{cosh-b}
 \]
-In the same way, we get that
+The same way, we get
 \[\begin{aligned}\cosh c&=\frac1{\sqrt{1-u^2}}.
 \end{aligned}
 \eqlbl{cosh-c}
@@ -2194,25 +2208,23 @@ Apply \ref{thm:set-square-constructible-numbers} and arrive at a contradiction.
 Suppose that every initial point has coordinates $(a,b\cdot\sqrt{3})$ for rational values $a$ and $b$.
 Show and use that any point that can be constructed with the 30°-set-square has coordinates of the same type.
 
-{
-
-\begin{wrapfigure}{r}{21mm}
-\vskip-6mm
+\begin{wrapfigure}[8]{r}{21mm}
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-368}
 \end{wrapfigure}
 
 \parbf{\ref{ex:equilateral triangle-verify},} \textit{(\ref{ex:verify:triangle})}.
 Observe that three perpendiculars on the diagram meet at one point if and only if the triangle is isosceles.
+
 Use this observation a couple of times to verify that the given triangle is equilateral.
+
 
 \parit{(\ref{ex:verify:bisector}).}
 Suppose that a line $\ell$ passes thru the vertex of the given angle.
 Choose a point $P\in \ell$.
 Suppose $X$ and $Y$ are the footpoints of $P$ on the sides of the angle.
 Show and use that $(XY)\perp \ell$ if and only if $\ell$ bisects the angle.
-
-}
 
 \parbf{\ref{ex:midpoint-proj}.}
 Consider the perspective projection 
@@ -2298,6 +2310,7 @@ It remains to note that any circle contains an infinite number of points.
 Suppose that $E$ denotes the point of intersection of the lines $(BC)$ and~$(C'D')$.
 
 Use \ref{prop:area-parallelogram} to prove the following two identities:
+
 \begin{align*}
 \area(\solidsquare AB'ED)
 &=\area(\solidsquare ABCD),
@@ -2416,7 +2429,7 @@ If $X$ is a point inside of $\triangle ABC$, then $\solidtriangle ABC$ is subdiv
 Therefore
 \begin{align*}
 &\area(\solidtriangle ABX)
-+\area(\solidtriangle BCX)
++\area(\solidtriangle BCX)+
 \\
 &\qquad+\area(\solidtriangle CAX)
 =\area(\solidtriangle ABC).

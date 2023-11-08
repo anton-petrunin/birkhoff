@@ -135,24 +135,35 @@ One may compare the conformal model with a telescope --- it makes it possible to
 Continuing this analogy further, we may say that the following lemma will be used to \textit{aim} the telescope at any particular point in the h-plane.
 
 \begin{thm}{Lemma}\label{lem:P-->O} 
-Consider an h-plane with a unit circle as the absolute.
+Consider an h-plane with a unit circle $\Omega$ as the absolute.
 Let $O$ be the center of the absolute and $P$ be another h-point.
-Suppose that $P'$ denotes the inverse of $P$ across the absolute.
+Then there is a circle $\Gamma$ perpendicular to the absolute such that $O$ is the inverse of $P$ across~$\Gamma$.
 
-Then the circle $\Gamma$ with the center $P'$ and radius 
-$\tfrac{\sqrt{1-OP^2}}{OP}$
-is perpendicular to the absolute.
-Moreover, $O$ is the inverse of $P$ across~$\Gamma$. 
+Moreover, $\Gamma$ has radius $\tfrac{\sqrt{1-OP^2}}{OP}$,
+and its center is the inverse of $P$ across the absolute. 
 \end{thm}
 
 \begin{wrapfigure}[8]{o}{45mm}
-\vskip-4mm
+\vskip-6mm
 \centering
 \includegraphics{mppics/pic-192}
 \end{wrapfigure}
 
-\parit{Proof.} 
-Follows by Exercise~\ref{ex:centers-of-perp-circles}.
+\parit{Proof.}
+Let $P'$ be the inversion of $P$ across the absolute.
+Note that there is a point $T$ on the absolute such that $\angle OPT$ is right.
+Let $\Gamma$ be the circle thru $T$ with center $P'$.
+
+By \ref{lem:inversion-sim}, $\triangle OPT\sim \triangle OTP'$.
+It follows that $\angle OTP'$ is right and $\Gamma\perp\Omega$.
+
+By AA, $\triangle TPP'\sim \triangle OTP'$ (the angle at $P'$ is shared, and two other angles are right). 
+Therefore $OP'\cdot PP'=P'T^2$, and $O$ is the inversion of $P$ across~$\Gamma$.
+
+It remains to calculate $P'T$.
+Note that $OP'=\tfrac1{OP}$.
+By the Pythagorean theorem $P'T^2=P'P^2+PT^2$ and $PT^2=1-PO^2$.
+Since $P'P=OP'-OP$, the second statement follows.
 \qeds
 
 Assume $\Gamma$ is a circline that is perpendicular to the absolute.
