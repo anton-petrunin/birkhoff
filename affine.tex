@@ -195,6 +195,13 @@ Show that any affine transformation can be written in coordinates as
 for constants $a,b,c,d,r,s$ such that the matrix $(\begin{smallmatrix}a&b\\c&d\end{smallmatrix})$ is invertible. 
 \end{thm}
 
+\begin{thm}{Exercise}\label{ex:preserved-circle}
+Let $\alpha$ be an affine transformation.
+Suppose that $\alpha$ maps a circle $\Gamma$ to itself.
+Show that $\alpha$ is a motion of the plane.
+\end{thm}
+
+
 \begin{thm}{Advaneced exercise}\label{ex:inversions-inversive}
 Let $\alpha$ be a bijection of inversive plane.
 Show that $\alpha$ sends circlines to circlines if and only if it is a composition of inversions and reflections.
@@ -314,26 +321,26 @@ that is, $f(x)=y$.
 By \ref{a>0=>b>0} and \ref{a<0=>b<0} the values $x$ and $y$ cannot have opposite signs --- a contradiction.
 \qeds
 
-\section{Affine theorems}
+\section{Menelaus and Ceva}
 
-We discussed several theorems in Euclidean geometry that have affine nature;
-that is, their assumptions and conculsions survive under affine transformations.
-The examples in include 
+We discussed several statements in Euclidean geometry that have an affine nature;
+that is, their assumptions and conclusions survive under affine transformations.
+The examples include 
 \ref{thm:parallel-point-reflection},
 \ref{lem:parallelogram}\ref{lem:parallelogram:midpoint},
 \ref{ex:4parallels},
 \ref{thm:centroid},
-\ref{ex:midle}.
-In this section, we present more examples of that type.
+and \ref{ex:midle}.
+In this section, we present two more examples of that type.
 
 Suppose that $A$, $B$, and $X$ are distinct points on one line.
 Note that 
-\[\overrightarrow{AX}=\lambda\cdot \overrightarrow{BX},\]
-where $\lambda=\pm\frac{AX}{BX}$.
+\[\overrightarrow{AX}=t\cdot \overrightarrow{BX},\]
+where $t=\pm\frac{AX}{BX}$.
 
 Choose an affine transformation $P\mapsto P'$.
-By the fundamental theorem of affine geometry (\ref{thm:fundamental-theorem-of-affine-geometry}), we have 
-\[\overrightarrow{A'X'}=\lambda\cdot \overrightarrow{B'X'}.\]
+By \ref{prop:affine-linear}, we have 
+\[\overrightarrow{A'X'}=t\cdot \overrightarrow{B'X'}.\]
 It follows that $\frac{A'X'}{B'X'}=\frac{AX}{BX}$;
 that is, \textit{if $A$, $B$, and $X$ are distinct points on one line, then the ratio $\frac{AX}{BX}$ is preserved under affine transformations}.
 
@@ -345,7 +352,7 @@ Then
 \end{thm}
 
 As we saw, the ratios $\frac{AC'}{BC'}$, $\frac{BA'}{CA'}$, $\frac{CB'}{AB'}$ are preserved under affine transformations.
-Therefore this theorem belongs to affine geometry.
+Therefore Menelaus's theorem belongs to affine geometry.
 However, in the proof we can (and will) use Euclidean-type arguments.
 
 \begin{wrapfigure}{o}{56mm}
@@ -367,7 +374,15 @@ Therefore,
 \[\frac{AC'}{BC'}\cdot\frac{BA'}{CA'}\cdot \frac{CB'}{AB'}=\frac{AX}{BY}\cdot \frac{BY}{CZ}\cdot \frac{CZ}{AX}=1.\]
 \qedsf
 
-\begin{thm}{Exercise}\label{ex:ceva-affine}
+{
+
+\begin{wrapfigure}{r}{31mm}
+\centering
+\vskip-2mm
+\includegraphics{mppics/pic-229}
+\end{wrapfigure}
+
+\begin{thm}{Ceva's theorem}\label{thm:ceva-affine}
 Let $ABC$ be a nondegenerate triangle.
 Suppose three distinct points points $A'$, $B'$, and $C'$ lie on the lines $(BC)$, $(CA)$, and $(AB)$ respectively.
 Assume that lines $(AA')$, $(BB')$ and $(CC')$ meet at one point.
@@ -375,13 +390,22 @@ Show that
 \[\frac{AC'}{BC'}\cdot\frac{BA'}{CA'}\cdot \frac{CB'}{AB'}=1.\]
 \end{thm}
 
-The last exercise is a partial case of \emph{Ceva's theorem}.
-Note that the conclusions of Menelaus's and Ceva's theorem are identical.
-These statements can be made more precise by taking the ratios $\frac{AC'}{BC'}$, $\frac{BA'}{CA'}$, and $\frac{CB'}{AB'}$ with sign.
-Namely, we assume that signed ratio $(\frac{AX}{BX})=\pm \frac{AX}{BX}$ meets the equation
+}
+
+\begin{thm}{Exercise}\label{ex:ceva-affine}
+Use Menelaus's theorem to prove Ceva's theorem.
+\end{thm}
+
+
+
+Note that the conclusions of Menelaus's and Ceva's theorems are identical.
+Their statements can be made more exact by taking the ratios $\frac{AC'}{BC'}$, $\frac{BA'}{CA'}$, and $\frac{CB'}{AB'}$ with sign.
+Namely, for distinct points $A$, $B$, and $X$ on a line
+consider the \index{signed ratio}\emph{signed ratio} $(\frac{AX}{BX})=\pm\frac{AX}{BX}$, where the sign is chosen to meet the equation
 \[\overrightarrow{AX}=\left(\frac{AX}{BX}\right)\cdot \overrightarrow{BX}.\]
 
-With the signed ratios, the conclusions of the two theorems look different
+
+With the signed ratios, the conclusions of the two theorems can be written as
 \[\left(\frac{AC'}{BC'}\right)\cdot\left(\frac{BA'}{CA'}\right)\cdot \left(\frac{CB'}{AB'}\right)=\pm1,\]
 with $+1$ in Menelaus's theorem and $-1$ in Ceva's theorem.
 

@@ -5,7 +5,7 @@
 %\addcontentsline{toc}{chapter}{Hints}
 %\subsection*{Chapter~\ref{chap:metr}}
 
-\raggedcolumns\setlength{\multicolsep}{-10mm}
+\raggedcolumns\setlength{\multicolsep}{-0mm}
 \spell{\begin{multicols}{2}}{}
 
 \refstepcounter{chapter}
@@ -837,9 +837,8 @@ Applying \ref{thm:inscribed-angle} and \ref{ex:ABCO-line}, we get
 &\equiv
 2\cdot \measuredangle Y'X'X\equiv 
 \\
-&\equiv
-2\cdot\measuredangle Y'YX\equiv
-\\
+\equiv
+2\cdot\measuredangle Y'YX
 &\equiv
 2\cdot\measuredangle PYX.
 \end{align*}
@@ -1319,8 +1318,8 @@ Spell the meaning of the terms ``perpendicular'' and ``h-line'' and then apply \
 Choose the vertices $P$, $Q$, and $R$ on a Euclidean circle that intersects the absolute and is not orthogonal to it.
 Apply~\ref{lem:h-circle=circle}.
 
-\begin{wrapfigure}{r}{34mm}
-\vskip-4mm
+\begin{wrapfigure}[10]{r}{34mm}
+\vskip-5mm
 \centering
 \includegraphics{mppics/pic-350}
 \end{wrapfigure}
@@ -1597,31 +1596,33 @@ The if part follows since the inverse of an affine transformation is also affine
 \parbf{\ref{ex:affine-continuous} and \ref{ex:affine-coordinates}.}
 Choose a coordinate system and apply the fundamental theorem of affine geometry (\ref{thm:fundamental-theorem-of-affine-geometry}) for the points $O=(0,0)$, $X=(1,0)$, and $Y=(0,1)$.
 
+\parbf{\ref{ex:preserved-circle}.} 
+Let $O$ be the center of $\Gamma$.
+Use \ref{ex:center-circ-affine}, to show that $\alpha(O)=O$.
+Choose a coordinate system with origin at $O$.
+By \ref{ex:affine-coordinates}, 
+\[\alpha\:(x,y)\mapsto(a\cdot x+b\cdot y,\ c\cdot x+d\cdot y).\]
+Use that $\alpha(\Gamma)=\Gamma$ to show at $(\begin{smallmatrix}a&b\\c&d\end{smallmatrix})\cdot (\begin{smallmatrix}a&c\\b&d\end{smallmatrix})\z=(\begin{smallmatrix}1&0\\0&1\end{smallmatrix})$.
+Conclude that $\alpha$ is a motion.
+
 \parbf{\ref{ex:inversions-inversive}.}
 Observe that any reflection meets the condition.
 By Theorem~\ref{thm:inverse-cline}, any inversion meets the condition as well.
 Therefore, the same holds for any composition of inversions and reflections.
 
-To prove the converse, fix an inversive transformation~$\alpha$.
-If $\alpha(\infty)=\infty$, then $\alpha$ maps circles to circles.
-By \ref{ex:circle=affine}, $\alpha$ is an affine transformation.
-Use it to show that $\alpha$ is a composition of motions and rescalings (defined in Exercise~\ref{ex:afine-linear}\textit{\ref{ex:afine-linear:scaling}})
+To prove the converse, choose a bijection $\alpha$ that maps circlines to circlines.
+Show that we can compose $\alpha$ with several inverses and reflections to obtain a bijection $\alpha'$ such that $\alpha'(\infty)=\infty$ and $\alpha(\Gamma)=\Gamma$ for some circle $\Gamma$.
 
-If $\alpha(\infty)\ne \infty$, then let $P=\alpha(\infty)$.
-Consider an inversion $\beta$ such that $\beta(P)=\infty$.
-Let $\gamma=\beta\circ\alpha$; note that $\gamma(\infty)=\infty$.
-Since $\alpha$ and $\beta$ meet the condition, so is $\gamma$.
-From above we get that $\gamma$ is a composition of reflections and inversions.
-Since $\beta$ is self-inverse, we get
-$\alpha=\beta\circ\gamma$;
-therefore $\alpha$ is a composition of reflections and inversions as well.
+By \ref{ex:preserved-circle}, $\alpha'$ is a motion.
+By \ref{ex:3-reflections}, $\alpha'$ is a composition of reflections.
+Therefore so is $\alpha$.
 
 \parbf{\ref{ex:f(1)=1}.}
 Set $a=f(1)$ and $b=f(0)$.
 Show and use that $a=a^2$ and $b=b^2$.
 
-\parbf{\ref{ex:ceva-affine}.} Apply Menelaus's theorem twice for $\triange BCC'$ and line $(AA')$ 
-and for $\triange ACC'$ and line $(BB')$.
+\parbf{\ref{ex:ceva-affine}.} Apply Menelaus's theorem twice for $\triangle BCC'$ and line $(AA')$ 
+and for $\triangle ACC'$ and line $(BB')$.
 
 %\subsection*{Chapter~\ref{chap:proj}}
 \refstepcounter{chapter}

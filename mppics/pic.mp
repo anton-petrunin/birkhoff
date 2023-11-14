@@ -3852,6 +3852,7 @@ label.top (btex $C'$ etex, z.CC+(1,0));
 label.top (btex $X$ etex, z.X);
 label.top (btex $Y$ etex, z.Y);
 label.bot (btex $Z$ etex, z.Z);
+label.top (btex $\ell$ etex, .5[z.CC,z.X]);
 endfig;
 
 beginfig(228)
@@ -3869,7 +3870,34 @@ endfor
 path q;
 q= (2,2)*u...(2.2,0)*u...(2,-2)*u...(0,-2.2)*u...(-2,-2)*u...(-2.2,0)*u...(-2,2)*u...(0,2.2)*u...cycle;
 clip currentpicture to q;
+endfig;
 
+beginfig(229)
+save u;
+u:=1cm;
+
+z.A=(0,-1)*u;
+z.B=(2,-1)*u;
+z.C=(1,1)*u;
+
+z.AA=.4[z.B,z.C];
+z.BB=.35[z.C,z.A];
+z.M=whatever[z.A,z.AA]=whatever[z.B,z.BB];
+z.CC=whatever[z.A,z.B]=whatever[z.C,z.M];
+
+draw z.A--z.B--z.C--cycle;
+draw z.A--z.AA;
+draw z.B--z.BB;
+draw z.C--z.CC;
+
+dOt z.A,z.B,z.C,z.AA,z.BB,z.CC,z.M;
+
+label.lft (btex $A$ etex, z.A);
+label.rt (btex $B$ etex, z.B);
+label.top (btex $C$ etex, z.C);
+label.urt (btex $A'$ etex, z.AA);
+label.ulft (btex $B'$ etex, z.BB);
+label.bot (btex $C'$ etex, z.CC+(1,0));
 
 endfig;
 
