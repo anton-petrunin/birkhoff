@@ -115,7 +115,7 @@ any motion of the Manhattan plane
 can be written in one of the following eight ways:
 \begin{align*}
 (x,y)&\mapsto (\pm x+a,\pm y+b)
-\intertext{or} 
+\shortintertext{or} 
 (x,y)&\mapsto (\pm y+b,\pm x+a),
 \end{align*}
 for fixed real numbers $a$ and~$b$.
@@ -1231,6 +1231,7 @@ Use \ref{ex:side-angle} and \ref{prop:2sum}.
 Set $a=AB$, $b=BC$, $c=CD$, and $d=DA$; we need to show that $c\ge a$.
 
 Mimic the proof of \ref{thm:3sum-a} for the shown fence made from copies of quadrangle $ABCD$.
+You should get that $a\le c+\tfrac dn$ for any integer $n\ge 1$, and this implies the needed inequality.
 
 \begin{Figure}
 \vskip-0mm
@@ -1392,9 +1393,15 @@ Apply the definition of the angle of parallelism.
 
 \parbf{\ref{ex:ultra-parallel}}; \textit{``only-if'' part.}
 Suppose $\ell$ and $m$ are ultraparallel; that is, they do not intersect and have distinct ideal points.
+
+\begin{Figure}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-359}
+\end{Figure}
+
 Denote the ideal points by $A$, $B$, $C$, and $D$;
 we may assume that they appear on the absolute in the same order.
-
 In this case, the h-line with ideal points $A$ and $C$ intersects the h-line with ideal points $B$ and $D$.
 Let $O$ be their point of intersection.
 By \ref{thm:main-observ}, we can assume that $O$ is the center of absolute.
@@ -1402,12 +1409,6 @@ Note that $\ell$ is the reflection of $m$ across $O$ in the Euclidean sense.
 
 Drop an h-perpendicular $n$ from $O$ to $\ell$ and
 show that $n\perp m$.
-
-\begin{Figure}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-359}
-\end{Figure}
 
 \parit{``If'' part.} 
 Suppose $n$ is a common perpendicular.
@@ -1513,27 +1514,36 @@ Furthermore, any line connecting a pair of points on these three lines is also m
 Use it to show that the entire plane is mapped to $(A'B')$.
 The latter contradicts that the map is a bijection.
 
+\begin{wrapfigure}{r}{22mm}
+\vskip-2mm
+\centering
+\includegraphics{mppics/pic-353}
+\end{wrapfigure}
+
 By assumption, if $X\in (AB)$, then $X'\z\in (A'B')$.
 From above, if $X\notin (AB)$, then $X'\z\notin (A'B')$.
 Use it to prove the second statement.
 
-\begin{Figure}
-\vskip-0mm
-\begin{minipage}{.49\textwidth}
-\centering
-\includegraphics{mppics/pic-353}
-\end{minipage}
-\hfill
-\begin{minipage}{.49\textwidth}
+
+\parbf{\ref{ex:circle=affine}.}
+Observe that $\alpha$ maps noncollinear triples of points to noncollinear ones.
+Therefore, $\alpha^{-1}$ maps collinear triples to collinear ones.
+It remains to apply \ref{ex:collinear=affine}.
+
+{
+
+\begin{wrapfigure}{r}{28mm}
+\vskip-6mm
 \centering
 \includegraphics{mppics/pic-354}
-\end{minipage}
-\end{Figure}
+\end{wrapfigure}
 
 \parbf{\ref{ex:midpoint-affine}.}
 It is sufficient to construct the midpoint of $[AB]$
 with a ruler and a parallel tool.
 Guess the construction from the diagram.
+
+}
 
 \parbf{\ref{ex:R-hom}.}
 Let $O$, $E$, $A$, and $B$ be the points with coordinates $(0,0)$, $(1,0)$, $(a,0)$, and $(b,0)$ respectively.
@@ -1585,24 +1595,33 @@ Hence the only-if part follows in the general case.
 The if part follows since the inverse of an affine transformation is also affine.
  
 \parbf{\ref{ex:affine-continuous} and \ref{ex:affine-coordinates}.}
-Fix a coordinate system and apply the fundamental theorem of affine geometry (\ref{thm:fundamental-theorem-of-affine-geometry}) for the points $O=(0,0)$, $X=(1,0)$, and $Y=(0,1)$.
+Choose a coordinate system and apply the fundamental theorem of affine geometry (\ref{thm:fundamental-theorem-of-affine-geometry}) for the points $O=(0,0)$, $X=(1,0)$, and $Y=(0,1)$.
 
-\parbf{\ref{ex:f(1)=1}.} Set $a=f(1)$ and $b=f(0)$.
+\parbf{\ref{ex:inversions-inversive}.}
+Observe that any reflection meets the condition.
+By Theorem~\ref{thm:inverse-cline}, any inversion meets the condition as well.
+Therefore, the same holds for any composition of inversions and reflections.
+
+To prove the converse, fix an inversive transformation~$\alpha$.
+If $\alpha(\infty)=\infty$, then $\alpha$ maps circles to circles.
+By \ref{ex:circle=affine}, $\alpha$ is an affine transformation.
+Use it to show that $\alpha$ is a composition of motions and rescalings (defined in Exercise~\ref{ex:afine-linear}\textit{\ref{ex:afine-linear:scaling}})
+
+If $\alpha(\infty)\ne \infty$, then let $P=\alpha(\infty)$.
+Consider an inversion $\beta$ such that $\beta(P)=\infty$.
+Let $\gamma=\beta\circ\alpha$; note that $\gamma(\infty)=\infty$.
+Since $\alpha$ and $\beta$ meet the condition, so is $\gamma$.
+From above we get that $\gamma$ is a composition of reflections and inversions.
+Since $\beta$ is self-inverse, we get
+$\alpha=\beta\circ\gamma$;
+therefore $\alpha$ is a composition of reflections and inversions as well.
+
+\parbf{\ref{ex:f(1)=1}.}
+Set $a=f(1)$ and $b=f(0)$.
 Show and use that $a=a^2$ and $b=b^2$.
- 
-\parbf{\ref{ex:inversive-angle}.}
-Apply \ref{thm:angle-inversion} and \ref{thm:inversions-inversive}.
- 
-\parbf{\ref{ex:reflection/inversive}.}
-Fix a line $\ell$.
-Choose a circle $\Gamma$ with its center not on~$\ell$.
-Let $\Omega$ be the inverse of $\ell$ across $\Gamma$;
-note that $\Omega$ is a circle.
 
-Let $\iota_\Gamma$ and $\iota_\Omega$ be the inversions across $\Gamma$ and~$\Omega$.
-Apply \ref{cor:invese-comp} to show that the composition 
-$\iota_\Gamma\circ\iota_\Omega\circ\iota_\Gamma$
-is the reflection across~$\ell$.
+\parbf{\ref{ex:ceva-affine}.} Apply Menelaus's theorem twice for $\triange BCC'$ and line $(AA')$ 
+and for $\triange ACC'$ and line $(BB')$.
 
 %\subsection*{Chapter~\ref{chap:proj}}
 \refstepcounter{chapter}
@@ -1668,6 +1687,12 @@ To extend this bijection to the whole projective plane, assume that
 (1) the ideal line corresponds to the origin 
 and (2) the ideal point is given by the pencil of lines $b\cdot x-a\cdot y=c$ for different values of $c$ corresponds to the line defined by $a\cdot x+b\cdot y=0$.
 
+\begin{Figure}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-356}
+\vskip-0mm
+\end{Figure}
 
 \parbf{\ref{ex:dual-pappus}.}
 Assume one set of concurrent lines $a$, $b$, $c$, 
@@ -1686,13 +1711,6 @@ Q'&=c'\cap a,
 R'&=a'\cap b.
 \end{align*}
 Then the lines $(PP')$, $(QQ')$, and $(RR')$ are concurrent.
-
-\begin{Figure}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-356}
-\vskip-0mm
-\end{Figure}
 
 (Note that the obtained configuration of nine points and nine lines is the same as in the original theorem and the obtained result is its reformulation.)
 
@@ -1722,12 +1740,6 @@ Choose a point $P$ outside of the larger circle.
 Construct the lines dual to $P$ for both circles.
 Note that these two lines are parallel. 
 
-Assume that the lines intersect the bigger circle at two pairs of points $X$, $X'$ and $Y$, $Y'$.
-Set $Z\z=(XY)\cap (X'Y')$.
-Note that the line $(PZ)$ passes thru the common center.
-
-The center is the intersection of $(PZ)$ and another line constructed in the same way.
-
 \begin{Figure}
 \vskip-0mm
 \centering
@@ -1735,49 +1747,16 @@ The center is the intersection of $(PZ)$ and another line constructed in the sam
 \vskip-6mm
 \end{Figure} 
 
+Assume that the lines intersect the bigger circle at two pairs of points $X$, $X'$ and $Y$, $Y'$.
+Set $Z\z=(XY)\cap (X'Y')$.
+Note that the line $(PZ)$ passes thru the common center.
+
+The center is the intersection of $(PZ)$ and another line constructed in the same way.
+
 \parbf{\ref{ex:proj-perp}.} 
 Construct polar lines for two points on~$\ell$.
 Denote their intersection by $L$.
 Note that $\ell$ is polar to $L$ and therefore $(OL)\perp \ell$.
-
-\parbf{\ref{ex:finite-pp}.}
-Let $A$, $B$, $C$, and $D$ 
-be the points provided by Axiom~p-\ref{def:proj-axioms:3}.
-Given a line $\ell$, we can assume that $A\notin \ell$; 
-otherwise, permute the labels of the points.
-Then by axioms p-\ref{def:proj-axioms:1} and p-\ref{def:proj-axioms:2},
-the three lines $(AB)$, $(AC)$, and $(AD)$ intersect $\ell$ at distinct points.
-Consequently, $\ell$ contains at least three points. 
-
-\parbf{\ref{ex:3=3'}.}
-Let $A$, $B$, $C$, and $D$ 
-be the points provided by Axiom~p-\ref{def:proj-axioms:3}.
-Show that the lines $(AB)$, $(BC)$, $(CD)$, and $(DA)$
-satisfy Axiom~p-\ref{def:proj-axioms:3}$'$.
-The proof of the converse is similar.
-
-\parbf{\ref{ex:oder}.} 
-Let $\ell$ be a line with $n+1$ points on it.
-
-By Axiom~p-\ref{def:proj-axioms:3}, given any line $m$, there is a point $P$ that does not lie on $\ell$ nor on~$m$.
-
-By axioms p-\ref{def:proj-axioms:1} and p-\ref{def:proj-axioms:2}, there is a bijection between the lines passing thru $P$ and the points on~$\ell$.
-In particular, exactly $n+1$ lines passing thru~$P$.
-
-The same way, we get a bijection between the lines passing thru $P$ and the points on~$m$. 
-Hence \textit{(\ref{ex:oder:a})} follows.
-
-Fix a point~$X$.
-By Axiom~p-\ref{def:proj-axioms:1}, any point $Y$ lies on a unique line passing thru~$X$.
-From part \textit{(\ref{ex:oder:a})}, each such line contains $X$ and yet $n$ point.
-Hence \textit{(\ref{ex:oder:b})} follows.
-
-To solve \textit{(\ref{ex:oder:c})}, show that the equation
-\[n^2+n+1\z=10\] 
-does not have  an integer solution and then apply part~\textit{(\ref{ex:oder:b})}.
-
-
-For \textit{(\ref{ex:oder:d})}, count the number of lines crossing a given line using part \textit{(\ref{ex:oder:a})} and apply~\textit{(\ref{ex:oder:b})}.
 
 %\subsection*{Chapter~\ref{chap:sphere}}
 \refstepcounter{chapter}
@@ -1792,7 +1771,10 @@ $$
 $$
 Therefore, $AB_s=\tfrac\pi3$.
 
-
+Alternatively, 
+look at the tessellation of the hemisphere in the picture; 
+it is made from 12 copies of $\triangle_s A B C$ and 4 equilateral spherical triangles.
+Due to the symmetry of this tessellation, it follows that $[AB]_s$ occupies $\tfrac16$ of the equator, meaning $AB_s=\tfrac\pi3$.
 
 \begin{Figure}
 \vskip-0mm
@@ -1800,10 +1782,12 @@ Therefore, $AB_s=\tfrac\pi3$.
 \includegraphics{mppics/pic-358}
 \end{Figure}
 
-Alternatively, 
-look at the tessellation of the hemisphere in the picture; 
-it is made from 12 copies of $\triangle_s A B C$ and 4 equilateral spherical triangles.
-Due to the symmetry of this tessellation, it follows that $[AB]_s$ occupies $\tfrac16$ of the equator, meaning $AB_s=\tfrac\pi3$.
+\parbf{\ref{ex:taurinus}.}
+Use Euler's formula (\ref{sec:Euler's formula}) to show that $\sin(i\cdot x)=i\cdot\sinh x$ and apply it.
+You should get the following answers:
+\[\cosh c=\cosh a \cdot \cosh b-\sinh a\cdot \sinh b\cdot \cos\gamma,\]
+\[\cos \gamma=-\cos \alpha \cdot \cos \beta+\sin \alpha\cdot \sin \beta \cdot \cosh c,\]
+\[\frac{\sin \alpha}{\sinh a}=\frac{\sin \beta}{\sinh b}=\frac{\sin \gamma}{\sinh c}.\]
 
 \parbf{\ref{ex:cone}.}
 Consider the inversion of the base circle across a sphere with its center at the tip of the cone and apply \ref{thm:inversion-3d}.
@@ -1875,16 +1859,15 @@ Note that $\hat P\in [A_iB_i]$ if and only if $P\in\Gamma_i$.
 \parbf{\ref{ex:h-median}.} 
 The observation follows since the reflection across the perpendicular bisector of $[PQ]$ is a motion of the Euclidean plane and a motion of the h-plane as well.
 
+We can assume that the center of the circumcircle coincides with the center of the absolute.
+In this case, the h-medians of the triangle coincide with the Euclidean medians.
+It remains to apply \ref{thm:centroid}.
+
 \begin{Figure}
 \centering
 \vskip-0mm
 \includegraphics{mppics/pic-360}
 \end{Figure}
-
-We can assume that the center of the circumcircle coincides with the center of the absolute.
-In this case, the h-medians of the triangle coincide with the Euclidean medians.
-It remains to apply \ref{thm:centroid}.
-
 
 \parbf{\ref{ex:h-altitudes}.} 
 Use the projective model.
@@ -2208,14 +2191,14 @@ Apply \ref{thm:set-square-constructible-numbers} and arrive at a contradiction.
 Suppose that every initial point has coordinates $(a,b\cdot\sqrt{3})$ for rational values $a$ and $b$.
 Show and use that any point that can be constructed with the 30°-set-square has coordinates of the same type.
 
+\parbf{\ref{ex:equilateral triangle-verify},} \textit{(\ref{ex:verify:triangle})}.
+Observe that three perpendiculars on the diagram meet at one point if and only if the triangle is isosceles.
+
 \begin{wrapfigure}[8]{r}{21mm}
-\vskip-0mm
+\vskip-6mm
 \centering
 \includegraphics{mppics/pic-368}
 \end{wrapfigure}
-
-\parbf{\ref{ex:equilateral triangle-verify},} \textit{(\ref{ex:verify:triangle})}.
-Observe that three perpendiculars on the diagram meet at one point if and only if the triangle is isosceles.
 
 Use this observation a couple of times to verify that the given triangle is equilateral.
 

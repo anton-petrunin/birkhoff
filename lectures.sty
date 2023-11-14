@@ -1,4 +1,5 @@
 \usepackage{amssymb, amsfonts, amsmath, amsthm}
+\usepackage{mathtools}
 \usepackage{enumerate}
 \usepackage{bm}
 \usepackage{color}
@@ -199,7 +200,6 @@ semi-pe-ri-me-ter}
 \renewcommand{\@eqnnum}{\theeqtn}
 \renewcommand{\theeqtn}{\numform{eqtn}}
 \newcommand{\eqlbl}[1]{\refstepcounter{eqtn}\leqno\text{\numform{eqtn}\label{#1}}}
-\newcommand{\eqtag}[1]{\refstepcounter{eqtn}\tag*{\numform{eqtn}\label{#1}}}
 
 
 \makeatletter\renewcommand{\p@section}{\thechapter}\makeatother

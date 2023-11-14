@@ -1,3 +1,402 @@
+\section{Axioms}
+
+Note that the real projective plane described above satisfies the following set of axioms:
+
+\begin{framed}
+
+\begin{enumerate}[p-I.]
+\item\label{def:proj-axioms:1} Any two distinct points lie on a unique line.
+\item\label{def:proj-axioms:2} Any two distinct lines pass thru a unique point.
+\item\label{def:proj-axioms:3} There exist at least four points of which no three are collinear.
+\end{enumerate}
+
+\end{framed}
+
+Let us take these three axioms as a definition of the \index{projective!plane}\emph{projective plane};
+so the real projective plane discussed above becomes its particular example.
+
+{
+
+\begin{wrapfigure}{r}{26mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-246}
+\end{wrapfigure}
+
+There is an example of a projective plane that contains exactly 3 points on each line.
+This is the so-called \index{Fano plane}\emph{Fano plane} which you can see on the diagram;
+it contains $7$ points and $7$ lines.
+This is an example of a \index{finite projective plane}\emph{finite projective plane};
+that is, a projective plane with finitely many points.
+
+}
+
+\begin{thm}{Exercise}\label{ex:finite-pp}
+Show that any line in a projective plane contains at least three points.
+\end{thm}
+
+
+Consider the following dual analog of Axiom~p-\ref{def:proj-axioms:3}:
+
+\begin{framed}
+\noindent {\rm p-III$'\!$.} 
+There exist at least four lines of which no three are concurrent.
+\end{framed}
+
+\begin{thm}{Exercise}\label{ex:3=3'}
+Show that Axiom \textit{p-\ref{def:proj-axioms:3}$'$} is equivalent to Axiom \textit{p-\ref{def:proj-axioms:3}}.
+That is, 
+\begin{center}
+\textit{p-\ref{def:proj-axioms:1}, p-\ref{def:proj-axioms:2}, and p-\ref{def:proj-axioms:3} imply  p-\ref{def:proj-axioms:3}$'$},
+\end{center}
+and 
+\begin{center}
+\textit{p-\ref{def:proj-axioms:1}, p-\ref{def:proj-axioms:2}, and p-\ref{def:proj-axioms:3}$'$ imply p-\ref{def:proj-axioms:3}}.
+\end{center}
+
+\end{thm}
+
+The exercise above shows that in the given axiomatic system,
+lines and points have the same rights.
+One can switch everywhere words ``point'' with ``line'', ``pass thru'' with ``lies on'', ``collinear'' with ``concurrent'' and we get an equivalent set of axioms ---  Axioms p-\ref{def:proj-axioms:1} and p-\ref{def:proj-axioms:2} convert into each other,
+and the same happens with the pair p-\ref{def:proj-axioms:3} and p-\ref{def:proj-axioms:3}$'$.
+
+\begin{thm}{Exercise}\label{ex:oder}
+Assume that one of the lines in a finite projective plane contains exactly $n+1$ points.
+\begin{enumerate}[(a)]
+\item\label{ex:oder:a} Show that each line contains exactly $n+1$ points.
+\item\label{ex:oder:b} Show that the plane contains  exactly $n^2+n+1$ points.
+\item\label{ex:oder:c} Show that there is no projective plane with exactly 10 points.
+\item\label{ex:oder:d} Show that in any finite projective plane, the number of points coincides with the number of lines.
+\end{enumerate}
+\end{thm}
+
+The number $n$ in the above exercise is called \index{order of finite projective plane}\emph{order} of finite projective plane.
+For example, the Fano plane has order $2$.
+Let us finish by stating a famous open problem in finite geometry.
+
+\begin{thm}{Conjecture}
+The order of any finite projective plane is a power of a prime number.
+\end{thm}
+
+
+\parbf{\ref{ex:finite-pp}.}
+Let $A$, $B$, $C$, and $D$ 
+be the points provided by Axiom~p-\ref{def:proj-axioms:3}.
+Given a line $\ell$, we can assume that $A\notin \ell$; 
+otherwise, permute the labels of the points.
+Then by axioms p-\ref{def:proj-axioms:1} and p-\ref{def:proj-axioms:2},
+the three lines $(AB)$, $(AC)$, and $(AD)$ intersect $\ell$ at distinct points.
+Consequently, $\ell$ contains at least three points. 
+
+\parbf{\ref{ex:3=3'}.}
+Let $A$, $B$, $C$, and $D$ 
+be the points provided by Axiom~p-\ref{def:proj-axioms:3}.
+Show that the lines $(AB)$, $(BC)$, $(CD)$, and $(DA)$
+satisfy Axiom~p-\ref{def:proj-axioms:3}$'$.
+The proof of the converse is similar.
+
+\parbf{\ref{ex:oder}.} 
+Let $\ell$ be a line with $n+1$ points on it.
+
+By Axiom~p-\ref{def:proj-axioms:3}, given any line $m$, there is a point $P$ that does not lie on $\ell$ nor on~$m$.
+
+By axioms p-\ref{def:proj-axioms:1} and p-\ref{def:proj-axioms:2}, there is a bijection between the lines passing thru $P$ and the points on~$\ell$.
+In particular, exactly $n+1$ lines passing thru~$P$.
+
+The same way, we get a bijection between the lines passing thru $P$ and the points on~$m$. 
+Hence \textit{(\ref{ex:oder:a})} follows.
+
+Fix a point~$X$.
+By Axiom~p-\ref{def:proj-axioms:1}, any point $Y$ lies on a unique line passing thru~$X$.
+From part \textit{(\ref{ex:oder:a})}, each such line contains $X$ and yet $n$ point.
+Hence \textit{(\ref{ex:oder:b})} follows.
+
+To solve \textit{(\ref{ex:oder:c})}, show that the equation
+\[n^2+n+1\z=10\] 
+does not have  an integer solution and then apply part~\textit{(\ref{ex:oder:b})}.
+
+
+For \textit{(\ref{ex:oder:d})}, count the number of lines crossing a given line using part \textit{(\ref{ex:oder:a})} and apply~\textit{(\ref{ex:oder:b})}.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Suppose $(XY)\parallel (VW)$; so
+\[\overrightarrow{XY}=\lambda\cdot\overrightarrow{VW}\]
+for some real $\lambda$.
+The value $\lambda$ is called \emph{signed ration of $XY$ and $VW$};
+briefly $\lambda=(\tfrac{XY}{VW})$.
+Note that 
+\[\left(\frac{XY}{VW}\right)=\pm \frac{XY}{VW};\]
+the sign is ``$+$'' if the vectors $\overrightarrow{XY}$ and $\overrightarrow{VW}$ point in the same direction; otherwise, it is ``$-$''.
+If $(XY)\nparallel (VW)$, then the signed ratio $(\tfrac{XY}{VW})$ is undefined.
+
+By the fundamental theorem of affine geometry (\ref{thm:fundamental-theorem-of-affine-geometry}), affine transformations respect signed ratio;
+that is if $P\mapsto P'$ is an affine transformation and the signed ration $(\tfrac{XY}{VW})$ is defined, then 
+\[\left(\frac{X'Y'}{V'W'}\right)=\left(\frac{XY}{VW}\right).\]
+
+\begin{thm}{Definition}
+
+\end{thm}
+
+Consider a finite sequence of pairs $(A_1,m_1),\dots, (A_n,m_n)$, where 
+
+
+
+
+\begin{thm}{Lemma}
+Suppose $a+b\ne0$.
+Then $(\tfrac{AZ}{ZB}=\tfrac ab$ if and only if $Z\in (AB)$
+\end{thm}
+
+
+
+\section{Center of mass}
+
+A pair $(A,a)$ where $A$ is a point in the Euclidean plane and $a$ is a real number will be called \index{weighed point}\emph{weighed point};
+the value $a$ is called \index{mass}\emph{mass} of the weighed point.
+The mass might take positive or negative value.
+
+Suppose $(A_1,a_1),\dots,(A_n,a_n)$ is a finite collection of weighed points.
+A point $Z$ will be called the center of mass of $(A_1,a_1),\dots,(A_n,a_n)$
+if 
+\[a_1\cdot \overrightarrow{ZA_1}+\dots+a_n\cdot \overrightarrow{ZA_n}=\overrightarrow0.\]
+
+\begin{thm}{Exercise}
+Let $P\mapsto P'$ be an affine transformation.
+Suppose $Z$ is a center of mass of $(A_1,a_1),\dots,(A_n,a_n)$.
+Show that $Z'$ is a center of mass of $(A_1',a_1),\dots,(A_n',a_n)$.
+\end{thm}
+
+\begin{thm}{Proposition}
+Let $(A_1,a_1),\dots,(A_n,a_n)$ be a finite collection of weighed points.
+Suppose that its total mass does not vanish; that is, $a_1+\dots+a_n\ne 0$.
+Then $(A_1,a_1),\dots,(A_n,a_n)$ has unique center of mass.
+\end{thm}
+
+\parit{Proof.}
+Choose a point $O$.
+Let $Z$ be defined by
+\[\overrightarrow{OZ}=\frac{a_1\cdot \overrightarrow{ZA_1}+\dots+a_n\cdot \overrightarrow{ZA_n}}{m_1+\dots+m_n}.\]
+Observe that 
+\[\overrightarrow{ZA_i}=\overrightarrow{OA_i}-\overrightarrow{OZ}\]
+for each $i$.
+Therefore 
+\begin{align*}
+m_1\cdot \overrightarrow{ZA_1}+\dots+m_n\cdot \overrightarrow{ZA_n}
+&=
+m_1\cdot \overrightarrow{OA_1}+\dots+m_n\cdot \overrightarrow{OA_n}-
+\\
+&-(m_1+\dots+m_n)\cdot \overrightarrow{OZ}=
+\\
+&=\overrightarrow0;
+\end{align*}
+that is, $Z$ is a center of mass.
+
+On the other hand, if $Z'$ is another center of mass, then 
+\begin{align*}\overrightarrow0
+&=
+a_1\cdot \overrightarrow{ZA_1}+\dots+a_n\cdot \overrightarrow{ZA_n}
+-a_1\cdot \overrightarrow{Z'A_1}-\dots-a_n\cdot \overrightarrow{Z'A_n}=
+\\
+&=(a_1+\dots+a_n)\cdot \overrightarrow{Z'Z}.
+\end{align*}
+Since $a_1+\dots+a_n\ne0$, we get $\overrightarrow0=\overrightarrow{Z'Z}$;
+therefore $Z'=Z$.
+\qeds
+
+\begin{thm}{Exercise}
+Let $Z$ be the center of mass of two weighed points $(A,a)$ and $(B,b)$;
+Suppose $a+b\ne0$ and $A\ne B$.
+Show that $Z\in (AB)$ and $\tfrac{AZ}{ZB}=|\tfrac ba|$.
+Moreover, $\tfrac ba>0$ if and only if $Z$ lies between $A$ and $B$.
+\end{thm}
+
+
+
+
+
+
+
+\section{On inversive transformations}
+
+This section is included mainly as an illustration;
+it gives an application of the fundamental theorem of affine geometry to inversive geometry.
+
+Recall that the inversive plane is the Euclidean plane with an added point at infinity, denoted by~$\infty$.
+We assume that every line passes thru~$\infty$.
+Recall that the term {}\emph{circline} stands for \textit{circle or line}.
+
+An \index{inversive!transformation}\emph{inversive transformation} is a bijection from the inversive plane to itself that sends circlines to circlines.
+{}\emph{Inversive geometry} studies the {}\emph{circline incidence structure} of the inversive plane
+(it deals with which points lie on which circlines and nothing else).
+
+\begin{thm}{Theorem}\label{thm:inversions-inversive}
+A map from the inversive plane to itself is an inversive transformation
+if and only if it can be presented as a composition of inversions and reflections.  
+\end{thm}
+
+Exercise~\ref{ex:inversion-Mob} gives another description of inversive transformations by means of complex coordinates.
+
+\parit{Proof.}
+Evidently, reflection is an inversive transformation --- it maps lines to lines and circles to circles.
+According to Theorem~\ref{thm:inverse-cline}, any inversion is an inversive transformation as well.
+Therefore, the same holds for any composition of inversions and reflections.
+
+To prove the converse, 
+fix an inversive transformation~$\alpha$.
+
+Assume $\alpha(\infty)=\infty$.
+Recall that any circline passing thru $\infty$ is a line.
+If follows that $\alpha$ maps lines to lines;
+that is,
+$\alpha$ is an affine transformation that also maps circles to circles.
+
+Note that any motion or rescaling (defined in Exercise~\ref{ex:afine-linear}\textit{\ref{ex:afine-linear:scaling}}) are affine transformations that map circles to circles.
+Composing $\alpha$ with motions and scalings, we can obtain another affine transformation $\alpha'$ that maps a given unit circle $\Gamma$ to itself.
+By Exercise~\ref{ex:center-circ-affine},
+$\alpha'$ fixes the center, say $O$, of the circle $\Gamma$.
+
+Set $P'=\alpha'(P)$.
+It follows that if $OP=1$, then $OP'=1$.
+By Proposition~\ref{prop:affine-linear}, $OP=OP'$ for any point $P$.
+Finally, by Exercise~\ref{ex:parallelogram-rule}, we have that if 
+$\overrightarrow{XY}=\overrightarrow{OP}$, then $\overrightarrow{X'Y'}=\overrightarrow{O'P'}$.
+It follows that $XY=X'Y'$ for any points $X$ and $Y$;
+that is, $\alpha'$ is a motion.
+
+Summarizing the discussion above, $\alpha$ is a composition of motions and scalings.
+Observe that any scaling is a composition of two inversions across concentric circles.
+Recall that any motion is a composition of reflections (see Exercise~\ref{ex:3-reflections}).
+Hence $\alpha$ is a composition of inversions and reflections.
+
+
+In the remaining case $\alpha(\infty)\ne \infty$, set $P=\alpha(\infty)$.
+Consider an inversion $\beta$ across a circle with center $P$ and set $\gamma=\beta\circ\alpha$.
+Note that $\beta(P)=\infty$; 
+therefore, $\gamma(\infty)=\infty$.
+Since $\alpha$ and $\beta$ are inversive, so is $\gamma$.
+From above we get that $\gamma$ is a composition of reflections and inversions.
+Since $\beta$ is self-inverse, we get
+$\alpha=\beta\circ\gamma$;
+therefore $\alpha$ is a composition of reflections and inversions as well.
+\qeds
+
+\begin{thm}{Exercise}\label{ex:inversive-angle}
+Show that inversive transformations preserve the angle between arcs up to sign.
+
+More precisely, assume $A'B_1'C_1'$, $A'B_2'C_2'$ are the images of two arcs $AB_1C_1$, $AB_2C_2$ under an inversive transformation.
+Let $\alpha$ and $\alpha'$ denote the angle between the tangent half-lines to $AB_1C_1$ and $AB_2C_2$ at $A$
+and the angle between the tangent half-lines to $A'B_1'C_1'$ and $A'B_2'C_2'$ at $A'$ respectively.
+Then 
+\[\alpha'\equiv\pm \alpha.\]
+\end{thm}
+
+
+\begin{thm}{Exercise}\label{ex:reflection/inversive}
+Show that any reflection can be presented as a composition of three inversions. 
+\end{thm}
+
+The exercise above implies the following stronger version of Theorem~\ref{thm:inversions-inversive}:
+\textit{any inversive transformation is a composition of inversions} ---
+no reflections needed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Let us illustrate Taurinus substitution on the cosine rule.
+Consider a spherical triangle $ABC$; set
+$a=BC_s$, $b=CA_s$, $c=AB_s$, and $\gamma=\measuredangle_sBCA$.
+The spherical cosine rule can be written as 
+\[\cos c=\cos a \cdot \cos b+\sin a\cdot \sin b\cdot \cos\gamma.\]
+After Taurinus substitution we get 
+\[\cos (i\cdot c)=\cos (i\cdot a) \cdot \cos (i\cdot b)+\sin (i\cdot a)\cdot \sin (i\cdot b)\cdot \cos\gamma.\]
+Note that 
+\[\sin (i\cdot x)=\frac{e^{i\cdot x}}{}\]
+
+To get its hyperbolic version we substitute $i\cdot a$ for $a$, $i\cdot b$ for $b$, and $i\cdot c$ for $c$; we do not change $\gamma$ since it is angle.
+This way we get 
+
+
+\begin{thm}{Exercise}
+Show that $\sin (i\cdot x)=-i\cdot \sinh x$ for any $x\in\mathbb{R}$.
+\end{thm}
+
+
+\begin{thm}{Exercise}
+\begin{enumerate}[(a)]
+\item Show that $\sinh (i\cdot x)=i\cdot \sin x$ for any $x\in\mathbb{R}$.
+\item Show that the Taurinus substitution
+\end{enumerate}
+
+
+\end{thm}
+
+%???
+\begin{thm}{Exercise}
+Consider a spherical triangle $ABC$; set
+$a=BC_s$, $b=CA_s$, $c=AB_s$,
+$\alpha=\measuredangle_sCAB$, $\beta=\measuredangle_sABC$, $\gamma=\measuredangle_sBCA$.
+Use the Taurinus substitution to write the hyperbolic analogs to the following formulas in spherical geometry:
+
+\begin{enumerate}[(a)]
+\item Spherical cosine rule:
+\[\cos c=\cos a \cdot \cos b+\sin a\cdot \sin b\cdot \cos\gamma.\]
+\item
+Spherical sine rule:
+\[\frac{\sin a}{\sin \alpha}=\frac{\sin b}{\sin \beta}=\frac{\sin c}{\sin \gamma}.\]
+\end{enumerate}
+ 
+\end{thm}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \parit{Proof.}
 According to Theorem~\ref{thm:moving}, it is sufficient to prove theorem in two cases: for anny affine transformation and for the extended perspective projection

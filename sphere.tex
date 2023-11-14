@@ -143,8 +143,31 @@ Look at the formulas in hyperbolic and spherical Pythagorean theorems (see \ref{
 Note that if we change $a$, $b$, and $c$ to $i\cdot a$, $i\cdot b$, and $i\cdot c$,
 then the first formula transforms to the second one, and the other way around.
 
-The same holds for all analytic formulas in spherical and hyperbolic geometry.
-This remarkable discovery was made by Franz Taurinus \cite{taurinus}; we are not going to prove it.
+This is not a coincidence;
+the same holds for all analytic formulas ---
+changing every distance $d$ to $i\cdot d$ transforms a valid spherical formula into a valid hyperbolic formula;
+the angle measures need no changes.
+This magic substitution was found by Franz Taurinus \cite{taurinus}; we are not going to prove it.
+
+\begin{thm}{Advanced exercise}\label{ex:taurinus}
+Consider a spherical triangle $ABC$; set
+$a\z=BC_s$, $b=CA_s$, $c=AB_s$,
+$\alpha=\measuredangle_sCAB$, $\beta=\measuredangle_sABC$, $\gamma=\measuredangle_sBCA$.
+Use the Taurinus substitution to write the hyperbolic analogs to the following formulas in spherical geometry:
+
+\begin{enumerate}[(a)]
+\item The spherical cosine rule:
+\[\cos c=\cos a \cdot \cos b+\sin a\cdot \sin b\cdot \cos\gamma.\]
+\item The dual spherical cosine rule:
+\[\cos \gamma=-\cos \alpha \cdot \cos \beta+\sin \alpha\cdot \sin \beta \cdot \cos c.\]
+\item
+The spherical sine rule:
+\[\frac{\sin \alpha}{\sin a}=\frac{\sin \beta}{\sin b}=\frac{\sin \gamma}{\sin c}.\]
+\end{enumerate}
+ 
+\end{thm}
+
+
 
 \section[Inversion]{Inversion across a sphere}
 
@@ -321,7 +344,7 @@ The northern  hemisphere will be denoted by~$\Sigma^+$.
 
 \begin{wrapfigure}{o}{40mm}
 \centering
-\vskip-0mm
+\vskip-3mm
 \includegraphics{mppics/pic-254}
 \end{wrapfigure}
 

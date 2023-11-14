@@ -29,7 +29,8 @@ The following exercise provides more general examples of affine transformations.
 Show that the following maps of a coordinate plane to itself define affine transformations:
 \begin{enumerate}[(a)]
 \item\label{ex:afine-linear:shear} \index{shear map}\emph{Shear map} defined by $(x,y)\mapsto (x+k\cdot y,y)$ for a constant~$k$.
-\item\label{ex:afine-linear:scaling} Scaling defined by $(x,y)\mapsto (a\cdot x,a\cdot y)$ for a constant $a\ne 0$.
+\item\label{ex:afine-linear:scaling}
+Rescaling defined by $(x,y)\mapsto (a\cdot x,a\cdot y)$ for a constant $a\ne 0$.
 \item $x$-scaling and $y$-scaling defined respectively by 
 \[(x,y)\mapsto (a\cdot x,y),\quad\text{and}\quad(x,y)\mapsto (x,a\cdot y)\]
 for a constant $a\ne 0$.
@@ -50,6 +51,10 @@ Show that $P\mapsto P'$ maps noncollinear triples to noncollinear ones.
 Conclude that $P\mapsto P'$ is an affine transformation.
 \end{thm}
 
+\begin{thm}{Exercise}\label{ex:circle=affine}
+Let $\alpha$ be a bijection of the Euclidean plane that maps any circle to a circle.
+Show that $\alpha$ is an affine transformation.
+\end{thm}
 
 \section{Constructions}
 
@@ -121,7 +126,7 @@ Then, for any triple of points $O$, $X$, $P$, we have
 
 \parit{Proof.}
 Observe that the affine transformations described in Exercise~\ref{ex:afine-linear}, as well as all motions, satisfy the condition \ref{eq:OP=tOX}.
-Therefore a given affine transformation $P\mapsto P'$ satisfies \ref{eq:OP=tOX} if and only if its composition with motions and scalings satisfies \ref{eq:OP=tOX}.
+Therefore a given affine transformation $P\mapsto P'$ satisfies \ref{eq:OP=tOX} if and only if its composition with motions and rescalings satisfies \ref{eq:OP=tOX}.
 
 Applying this observation, we can reduce the problem to its partial case.
 Namely, we may assume that $O'=O$, $X'=X$, the point $O$ is the origin of a coordinate system, and $X$ has coordinates $(1,0)$.
@@ -189,6 +194,12 @@ Show that any affine transformation can be written in coordinates as
 \[(x,y)\mapsto(a\cdot x+b\cdot y+r,\ c\cdot x+d\cdot y+s)\]
 for constants $a,b,c,d,r,s$ such that the matrix $(\begin{smallmatrix}a&b\\c&d\end{smallmatrix})$ is invertible. 
 \end{thm}
+
+\begin{thm}{Advaneced exercise}\label{ex:inversions-inversive}
+Let $\alpha$ be a bijection of inversive plane.
+Show that $\alpha$ sends circlines to circlines if and only if it is a composition of inversions and reflections.
+\end{thm}
+
 
 
 \section{Algebraic lemma}
@@ -267,12 +278,20 @@ Assume~$a\ge 0$.
 Then the equation $x\cdot x=a$ has a real solution $x\z=\sqrt{a}$.
 Therefore, $[f(\sqrt{a})]^2=f(\sqrt{a})\cdot f(\sqrt{a})=f(a)$.
 Hence $f(a)\ge 0$.
+
+\raggedcolumns\setlength{\multicolsep}{.5mm}
+\setlength{\columnseprule}{1pt}
+\begin{multicols}{2}
 That is,
 \[a\ge 0\quad\Longrightarrow\quad f(a)\ge 0.\eqlbl{a>0=>b>0}\]
+
+\columnbreak
 
 Applying \ref{eq:f-x}, 
 we also get 
 \[a\le 0\quad \Longrightarrow\quad f(a)\le 0.\eqlbl{a<0=>b<0}\]
+\end{multicols}
+\setlength{\columnseprule}{0pt}
 
 Now assume $f(a)\ne a$.
 Then there is a rational number $\tfrac{m}{n}$ that lies between $a$ and $f(a)$;
@@ -295,93 +314,74 @@ that is, $f(x)=y$.
 By \ref{a>0=>b>0} and \ref{a<0=>b<0} the values $x$ and $y$ cannot have opposite signs --- a contradiction.
 \qeds
 
-%\begin{thm}{Exercise}\label{ex:Q(sqrt(2)}
-%Suppose that $S$ denotes the set of all numbers $p+q\cdot\sqrt2$, where $p$ and $q$ are rational numbers.
-%Observe that for the map $f\:p+q\cdot\sqrt2\mapsto p-q\cdot\sqrt2$, we have $f(1)=1$, $f(x+y)=f(x)+f(y)$, and $f(x\cdot y)=f(x)\cdot f(y)$ for any $x,y\in S$.
-%Since $f(\sqrt2)=-\sqrt2$ the map is not identity, so the proof of algebraic lemma can not be ap
-%\end{thm}
+\section{Affine theorems}
 
+We discussed several theorems in Euclidean geometry that have affine nature;
+that is, their assumptions and conculsions survive under affine transformations.
+The examples in include 
+\ref{thm:parallel-point-reflection},
+\ref{lem:parallelogram}\ref{lem:parallelogram:midpoint},
+\ref{ex:4parallels},
+\ref{thm:centroid},
+\ref{ex:midle}.
+In this section, we present more examples of that type.
 
+Suppose that $A$, $B$, and $X$ are distinct points on one line.
+Note that 
+\[\overrightarrow{AX}=\lambda\cdot \overrightarrow{BX},\]
+where $\lambda=\pm\frac{AX}{BX}$.
 
-\section{On inversive transformations}
+Choose an affine transformation $P\mapsto P'$.
+By the fundamental theorem of affine geometry (\ref{thm:fundamental-theorem-of-affine-geometry}), we have 
+\[\overrightarrow{A'X'}=\lambda\cdot \overrightarrow{B'X'}.\]
+It follows that $\frac{A'X'}{B'X'}=\frac{AX}{BX}$;
+that is, \textit{if $A$, $B$, and $X$ are distinct points on one line, then the ratio $\frac{AX}{BX}$ is preserved under affine transformations}.
 
-This section is included mainly as an illustration;
-it gives an application of the fundamental theorem of affine geometry to inversive geometry.
-
-Recall that the inversive plane is the Euclidean plane with an added point at infinity, denoted by~$\infty$.
-We assume that every line passes thru~$\infty$.
-Recall that the term {}\emph{circline} stands for \textit{circle or line}.
-
-An \index{inversive!transformation}\emph{inversive transformation} is a bijection from the inversive plane to itself that sends circlines to circlines.
-{}\emph{Inversive geometry} studies the {}\emph{circline incidence structure} of the inversive plane
-(it deals with which points lie on which circlines and nothing else).
-
-\begin{thm}{Theorem}\label{thm:inversions-inversive}
-A map from the inversive plane to itself is an inversive transformation
-if and only if it can be presented as a composition of inversions and reflections.  
+\begin{thm}{Menelaus's theorem}
+Let $ABC$ be a nondegenerate triangle.
+Suppose a line $\ell$ crosses the lines $(BC)$, $(CA)$, and $(AB)$ at three distinct points points $A'$, $B'$, and $C'$.
+Then 
+\[\frac{AC'}{BC'}\cdot\frac{BA'}{CA'}\cdot \frac{CB'}{AB'}=1.\]
 \end{thm}
 
-Exercise~\ref{ex:inversion-Mob} gives another description of inversive transformations by means of complex coordinates.
+As we saw, the ratios $\frac{AC'}{BC'}$, $\frac{BA'}{CA'}$, $\frac{CB'}{AB'}$ are preserved under affine transformations.
+Therefore this theorem belongs to affine geometry.
+However, in the proof we can (and will) use Euclidean-type arguments.
+
+\begin{wrapfigure}{o}{56mm}
+\centering
+\vskip-0mm
+\includegraphics{mppics/pic-227}
+\end{wrapfigure}
 
 \parit{Proof.}
-Evidently, reflection is an inversive transformation --- it maps lines to lines and circles to circles.
-According to Theorem~\ref{thm:inverse-cline}, any inversion is an inversive transformation as well.
-Therefore, the same holds for any composition of inversions and reflections.
+Let $X$, $Y$ and $Z$ be the footpoints of $A$, $B$ and $C$ on $\ell$.
+By the AA similarity condition, $\triangle AXC'\sim \triangle BYC'$.
+Therefore, 
+\[\frac{AC'}{BC'}=\frac{AX}{BY}.\]
+The same way we get
+\[\frac{BA'}{CA'}=\frac{BY}{CZ}
+\quad\text{and}\quad
+\frac{CB'}{AB'}=\frac{CZ}{AX}.\]
+Therefore,
+\[\frac{AC'}{BC'}\cdot\frac{BA'}{CA'}\cdot \frac{CB'}{AB'}=\frac{AX}{BY}\cdot \frac{BY}{CZ}\cdot \frac{CZ}{AX}=1.\]
+\qedsf
 
-To prove the converse, 
-fix an inversive transformation~$\alpha$.
-
-Assume $\alpha(\infty)=\infty$.
-Recall that any circline passing thru $\infty$ is a line.
-If follows that $\alpha$ maps lines to lines;
-that is,
-$\alpha$ is an affine transformation that also maps circles to circles.
-
-Note that any motion or scaling (defined in Exercise~\ref{ex:afine-linear}\textit{\ref{ex:afine-linear:scaling}}) are affine transformations that map circles to circles.
-Composing $\alpha$ with motions and scalings, we can obtain another affine transformation $\alpha'$ that maps a given unit circle $\Gamma$ to itself.
-By Exercise~\ref{ex:center-circ-affine},
-$\alpha'$ fixes the center, say $O$, of the circle $\Gamma$.
-
-Set $P'=\alpha'(P)$.
-It follows that if $OP=1$, then $OP'=1$.
-By Proposition~\ref{prop:affine-linear}, $OP=OP'$ for any point $P$.
-Finally, by Exercise~\ref{ex:parallelogram-rule}, we have that if 
-$\overrightarrow{XY}=\overrightarrow{OP}$, then $\overrightarrow{X'Y'}=\overrightarrow{O'P'}$.
-It follows that $XY=X'Y'$ for any points $X$ and $Y$;
-that is, $\alpha'$ is a motion.
-
-Summarizing the discussion above, $\alpha$ is a composition of motions and scalings.
-Observe that any scaling is a composition of two inversions across concentric circles.
-Recall that any motion is a composition of reflections (see Exercise~\ref{ex:3-reflections}).
-Hence $\alpha$ is a composition of inversions and reflections.
-
-
-In the remaining case $\alpha(\infty)\ne \infty$, set $P=\alpha(\infty)$.
-Consider an inversion $\beta$ across a circle with center $P$ and set $\gamma=\beta\circ\alpha$.
-Note that $\beta(P)=\infty$; 
-therefore, $\gamma(\infty)=\infty$.
-Since $\alpha$ and $\beta$ are inversive, so is $\gamma$.
-From above we get that $\gamma$ is a composition of reflections and inversions.
-Since $\beta$ is self-inverse, we get
-$\alpha=\beta\circ\gamma$;
-therefore $\alpha$ is a composition of reflections and inversions as well.
-\qeds
-
-\begin{thm}{Exercise}\label{ex:inversive-angle}
-Show that inversive transformations preserve the angle between arcs up to sign.
-
-More precisely, assume $A'B_1'C_1'$, $A'B_2'C_2'$ are the images of two arcs $AB_1C_1$, $AB_2C_2$ under an inversive transformation.
-Let $\alpha$ and $\alpha'$ denote the angle between the tangent half-lines to $AB_1C_1$ and $AB_2C_2$ at $A$
-and the angle between the tangent half-lines to $A'B_1'C_1'$ and $A'B_2'C_2'$ at $A'$ respectively.
-Then 
-\[\alpha'\equiv\pm \alpha.\]
+\begin{thm}{Exercise}\label{ex:ceva-affine}
+Let $ABC$ be a nondegenerate triangle.
+Suppose three distinct points points $A'$, $B'$, and $C'$ lie on the lines $(BC)$, $(CA)$, and $(AB)$ respectively.
+Assume that lines $(AA')$, $(BB')$ and $(CC')$ meet at one point.
+Show that
+\[\frac{AC'}{BC'}\cdot\frac{BA'}{CA'}\cdot \frac{CB'}{AB'}=1.\]
 \end{thm}
 
+The last exercise is a partial case of \emph{Ceva's theorem}.
+Note that the conclusions of Menelaus's and Ceva's theorem are identical.
+These statements can be made more precise by taking the ratios $\frac{AC'}{BC'}$, $\frac{BA'}{CA'}$, and $\frac{CB'}{AB'}$ with sign.
+Namely, we assume that signed ratio $(\frac{AX}{BX})=\pm \frac{AX}{BX}$ meets the equation
+\[\overrightarrow{AX}=\left(\frac{AX}{BX}\right)\cdot \overrightarrow{BX}.\]
 
-\begin{thm}{Exercise}\label{ex:reflection/inversive}
-Show that any reflection can be presented as a composition of three inversions. 
-\end{thm}
+With the signed ratios, the conclusions of the two theorems look different
+\[\left(\frac{AC'}{BC'}\right)\cdot\left(\frac{BA'}{CA'}\right)\cdot \left(\frac{CB'}{AB'}\right)=\pm1,\]
+with $+1$ in Menelaus's theorem and $-1$ in Ceva's theorem.
 
-The exercise above implies the following stronger version of Theorem~\ref{thm:inversions-inversive}:
-\textit{any inversive transformation is a composition of inversions} ---
-no reflections needed.

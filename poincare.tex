@@ -136,11 +136,11 @@ Continuing this analogy further, we may say that the following lemma will be use
 
 \begin{thm}{Lemma}\label{lem:P-->O} 
 Consider an h-plane with a unit circle $\Omega$ as the absolute.
-Let $O$ be the center of the absolute and $P$ be another h-point.
+Let $O$ be the center of $\Omega$ and $P$ be another h-point.
 Then there is a circle $\Gamma$ perpendicular to the absolute such that $O$ is the inverse of $P$ across~$\Gamma$.
 
 Moreover, $\Gamma$ has radius $\tfrac{\sqrt{1-OP^2}}{OP}$,
-and its center is the inverse of $P$ across the absolute. 
+and its center $P'$ is the inverse of $P$ across the absolute. 
 \end{thm}
 
 \begin{wrapfigure}[8]{o}{45mm}
@@ -157,13 +157,14 @@ Let $\Gamma$ be the circle thru $T$ with center $P'$.
 By \ref{lem:inversion-sim}, $\triangle OPT\sim \triangle OTP'$.
 It follows that $\angle OTP'$ is right and $\Gamma\perp\Omega$.
 
-By AA, $\triangle TPP'\sim \triangle OTP'$ (the angle at $P'$ is shared, and two other angles are right). 
-Therefore $OP'\cdot PP'=P'T^2$, and $O$ is the inversion of $P$ across~$\Gamma$.
+By AA, $\triangle TPP'\sim \triangle OTP'$
+(the angle at $P'$ is shared, and $\angle TPP'$ and $\angle OTP'$ are right). 
+Therefore $\tfrac{OP'}{P'T}=\tfrac{P'T}{PP'}$; so, $O$ is the inversion of $P$ across~$\Gamma$.
 
-It remains to calculate $P'T$.
-Note that $OP'=\tfrac1{OP}$.
-By the Pythagorean theorem $P'T^2=P'P^2+PT^2$ and $PT^2=1-PO^2$.
-Since $P'P=OP'-OP$, the second statement follows.
+Note that $OP'\cdot OP=OT^2$.
+By the Pythagorean theorem $P'T^2\z=P'P^2+PT^2$ and $PT^2=OT^2-PO^2$.
+Since $P'P=OP'-OP$ and $OT=1$, we get $P'T=\tfrac{\sqrt{1-OP^2}}{OP}$,
+and the second statement follows.
 \qeds
 
 Assume $\Gamma$ is a circline that is perpendicular to the absolute.

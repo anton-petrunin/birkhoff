@@ -3814,6 +3814,46 @@ clip currentpicture to q;
 
 endfig;
 
+beginfig(227)
+save u;
+u:=1cm;
+
+z.A=(0,-1)*u;
+z.B=(2,-2)*u;
+z.C=(1,1)*u;
+
+z.AA=(whatever,0)=whatever[z.B,z.C];
+z.BB=(whatever,0)=whatever[z.A,z.C];
+z.CC=(whatever,0)=whatever[z.A,z.B];
+
+z.X=altitude(z.AA,z.A,z.BB);
+z.Y=altitude(z.AA,z.B,z.BB);
+z.Z=altitude(z.AA,z.C,z.BB);
+
+draw ddline(z.CC,z.Y)(.2,.2);
+draw ddline(z.B,z.CC)(0,.2);
+draw z.A--z.C--z.B;
+draw z.A--z.X;
+draw z.B--z.Y;
+draw z.C--z.Z;
+
+mark_rt_angle_withsize(z.A,z.X,z.CC,6);
+mark_rt_angle_withsize(z.B,z.Y,z.CC,6);
+mark_rt_angle_withsize(z.C,z.Z,z.CC,6);
+
+dOt z.A,z.B,z.C,z.AA,z.BB,z.CC,z.X,z.Y,z.Z;
+
+label.llft (btex $A$ etex, z.A);
+label.bot (btex $B$ etex, z.B);
+label.top (btex $C$ etex, z.C);
+whitelabel.top (btex $A'$ etex, z.AA);
+whitelabel.top (btex $B'$ etex, z.BB);
+label.top (btex $C'$ etex, z.CC+(1,0));
+label.top (btex $X$ etex, z.X);
+label.top (btex $Y$ etex, z.Y);
+label.bot (btex $Z$ etex, z.Z);
+endfig;
+
 beginfig(228)
 save u, n;
 u:=.7cm;
