@@ -59,7 +59,7 @@ Show that $\alpha$ is an affine transformation.
 \section{Constructions}
 
 \begin{wrapfigure}{o}{34mm}
-\vskip-10mm
+\vskip-15mm
 \centering
 \includegraphics{mppics/pic-287}
 \end{wrapfigure}
@@ -191,14 +191,15 @@ The following exercise provides the converse to Exercise \ref{ex:afine-linear}\t
 
 \begin{thm}{Exercise}\label{ex:affine-coordinates}
 Show that any affine transformation can be written in coordinates as 
-\[(x,y)\mapsto(a\cdot x+b\cdot y+r,\ c\cdot x+d\cdot y+s)\]
+$(x,y)\mapsto(a\cdot x+b\cdot y+r,\ c\cdot x+d\cdot y+s)$
 for constants $a,b,c,d,r,s$ such that the matrix $(\begin{smallmatrix}a&b\\c&d\end{smallmatrix})$ is invertible. 
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:preserved-circle}
-Let $\alpha$ be an affine transformation.
-Suppose that $\alpha$ maps a circle $\Gamma$ to itself.
-Show that $\alpha$ is a motion of the plane.
+Let $\Gamma$ be a circle with center $O$.
+Suppose an affine transformation $\alpha$ maps $\Gamma$ to itself.
+Show that $\alpha$ is a motion that fixes $O$;
+that is, $\alpha(O)\z=O$.
 \end{thm}
 
 
@@ -244,15 +245,12 @@ Show that
 
 \parit{Proof.}
 By \textit{(\ref{lem:R-auto:b})} we have
-\[f(0)+f(1)=f(0+1).\]
-By \textit{(\ref{lem:R-auto:a})},
-\[f(0)+1=1;\]
-whence
+$f(0)+f(0)=f(0+0)=f(0)$.
+Therefore,
 \[f(0)=0.
 \eqlbl{eq:0=0}\]
 
-Applying \textit{(\ref{lem:R-auto:b})} again, we get that
-\[0=f(0)=f(x)+f(-x).\]
+Applying \textit{(\ref{lem:R-auto:b})} again, we get that $0=f(0)=f(x)+f(-x)$.
 Therefore, 
 \[f(-x)=-f(x)
 \quad
@@ -261,7 +259,7 @@ Therefore,
 x\in \mathbb{R}.
 \eqlbl{eq:f-x}\] 
 
-Applying \textit{(\ref{lem:R-auto:b})} recurrently, we get that
+Applying \textit{(\ref{lem:R-auto:a})} and \textit{(\ref{lem:R-auto:b})} recursively, we get that
 \begin{align*}
 f(2)&=f(1)+f(1)=1+1=2;\\
 f(3)&=f(2)+f(1)=2+1=3;\\
@@ -269,22 +267,19 @@ f(3)&=f(2)+f(1)=2+1=3;\\
 \end{align*}
 Together with \ref{eq:f-x},
 the latter implies that 
-$$f(n)=n
-\quad
-\text{for any integer}
-\quad
-n.$$ 
-
-By \textit{(\ref{lem:R-auto:c})}
-\[f(m)=f(\tfrac mn)\cdot f(n).\]
+$f(n)=n$
+for any integer
+$n$. 
+By~\textit{(\ref{lem:R-auto:c})},
+$f(m)=f(\tfrac mn)\cdot f(n)$.
 Therefore
 $$f(\tfrac mn)=\tfrac mn \eqlbl{eq:m/n}$$
 for any rational number~$\tfrac mn$.
 
 Assume~$a\ge 0$.
 Then the equation $x\cdot x=a$ has a real solution $x\z=\sqrt{a}$.
-Therefore, $[f(\sqrt{a})]^2=f(\sqrt{a})\cdot f(\sqrt{a})=f(a)$.
-Hence $f(a)\ge 0$.
+Therefore, $[f(\sqrt{a})]^2=f(\sqrt{a})\cdot f(\sqrt{a})=f(a)$,
+and hence $f(a)\ge 0$.
 
 \raggedcolumns\setlength{\multicolsep}{.5mm}
 \setlength{\columnseprule}{1pt}
@@ -294,13 +289,13 @@ That is,
 
 \columnbreak
 
-Applying \ref{eq:f-x}, 
+By \ref{eq:f-x}, 
 we also get 
 \[a\le 0\quad \Longrightarrow\quad f(a)\le 0.\eqlbl{a<0=>b<0}\]
 \end{multicols}
 \setlength{\columnseprule}{0pt}
 
-Now assume $f(a)\ne a$.
+Now assume $f(a)\ne a$ for some $a\in\mathbb{R}$.
 Then there is a rational number $\tfrac{m}{n}$ that lies between $a$ and $f(a)$;
 that is, 
 the numbers 
@@ -321,7 +316,7 @@ that is, $f(x)=y$.
 By \ref{a>0=>b>0} and \ref{a<0=>b<0} the values $x$ and $y$ cannot have opposite signs --- a contradiction.
 \qeds
 
-\section{Menelaus and Ceva}
+\section{Three affine theorems}
 
 We discussed several statements in Euclidean geometry that have an affine nature;
 that is, their assumptions and conclusions survive under affine transformations.
@@ -355,15 +350,13 @@ As we saw, the ratios $\frac{AC'}{BC'}$, $\frac{BA'}{CA'}$, $\frac{CB'}{AB'}$ ar
 Therefore Menelaus's theorem belongs to affine geometry.
 However, in the proof we can (and will) use Euclidean-type arguments.
 
-\begin{wrapfigure}{o}{56mm}
-\centering
-\vskip-0mm
-\includegraphics{mppics/pic-227}
-\end{wrapfigure}
-
 \parit{Proof.}
 Let $X$, $Y$ and $Z$ be the footpoints of $A$, $B$ and $C$ on $\ell$.
 By the AA similarity condition, $\triangle AXC'\sim \triangle BYC'$.
+\begin{figure}[!ht]
+\centering
+\includegraphics{mppics/pic-227}
+\end{figure}
 Therefore, 
 \[\frac{AC'}{BC'}=\frac{AX}{BY}.\]
 The same way we get
@@ -374,7 +367,13 @@ Therefore,
 \[\frac{AC'}{BC'}\cdot\frac{BA'}{CA'}\cdot \frac{CB'}{AB'}=\frac{AX}{BY}\cdot \frac{BY}{CZ}\cdot \frac{CZ}{AX}=1.\]
 \qedsf
 
+
 {
+
+\begin{thm}{Exercise}\label{thm:ceva-affine}\label{ex:ceva-affine}
+Let $ABC$ be a nondegenerate triangle.
+Suppose three distinct points points $A'$, $B'$, and $C'$ lie on the lines $(BC)$, $(CA)$, and $(AB)$ respectively.
+Assume that the lines $(AA')$, $(BB')$ and $(CC')$ meet at a point $X$.
 
 \begin{wrapfigure}{r}{31mm}
 \centering
@@ -382,27 +381,22 @@ Therefore,
 \includegraphics{mppics/pic-229}
 \end{wrapfigure}
 
-\begin{thm}{Ceva's theorem}\label{thm:ceva-affine}
-Let $ABC$ be a nondegenerate triangle.
-Suppose three distinct points points $A'$, $B'$, and $C'$ lie on the lines $(BC)$, $(CA)$, and $(AB)$ respectively.
-Assume that lines $(AA')$, $(BB')$ and $(CC')$ meet at one point.
-Show that
+Use Menelaus's theorem to prove the following.
+
+\begin{enumerate}[(a)]
+\item Ceva's theorem:
 \[\frac{AC'}{BC'}\cdot\frac{BA'}{CA'}\cdot \frac{CB'}{AB'}=1.\]
+\item Van Aubel's theorem:
+\[\frac{AC'}{BC'}+\frac{AB'}{CB'}=\frac{AX}{A'X}.\]
+\end{enumerate}
 \end{thm}
 
 }
 
-\begin{thm}{Exercise}\label{ex:ceva-affine}
-Use Menelaus's theorem to prove Ceva's theorem.
-\end{thm}
-
-
-
-Note that the conclusions of Menelaus's and Ceva's theorems are identical.
-Their statements can be made more exact by taking the ratios $\frac{AC'}{BC'}$, $\frac{BA'}{CA'}$, and $\frac{CB'}{AB'}$ with sign.
-Namely, for distinct points $A$, $B$, and $X$ on a line
-consider the \index{signed ratio}\emph{signed ratio} $(\frac{AX}{BX})=\pm\frac{AX}{BX}$, where the sign is chosen to meet the equation
+Theorems of Menelaus and Ceva can be formulated in a more exact way by taking the ratios $\frac{AC'}{BC'}$, $\frac{BA'}{CA'}$, and $\frac{CB'}{AB'}$ with sign.
+Namely, given distinct points $A$, $B$, and $X$ on one line, let us define the \index{signed ratio}\emph{signed ratio} $(\frac{AX}{BX})=\pm\frac{AX}{BX}$, where the sign is chosen to meet the equation
 \[\overrightarrow{AX}=\left(\frac{AX}{BX}\right)\cdot \overrightarrow{BX}.\]
+(Note that $(\frac{AX}{BX})<0$ if and only if $X$ lies between $A$ and $B$.)
 
 
 With the signed ratios, the conclusions of the two theorems can be written as

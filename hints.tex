@@ -1597,7 +1597,6 @@ The if part follows since the inverse of an affine transformation is also affine
 Choose a coordinate system and apply the fundamental theorem of affine geometry (\ref{thm:fundamental-theorem-of-affine-geometry}) for the points $O=(0,0)$, $X=(1,0)$, and $Y=(0,1)$.
 
 \parbf{\ref{ex:preserved-circle}.} 
-Let $O$ be the center of $\Gamma$.
 Use \ref{ex:center-circ-affine}, to show that $\alpha(O)=O$.
 Choose a coordinate system with origin at $O$.
 By \ref{ex:affine-coordinates}, 
@@ -1621,8 +1620,10 @@ Therefore so is $\alpha$.
 Set $a=f(1)$ and $b=f(0)$.
 Show and use that $a=a^2$ and $b=b^2$.
 
-\parbf{\ref{ex:ceva-affine}.} Apply Menelaus's theorem twice for $\triangle BCC'$ and line $(AA')$ 
-and for $\triangle ACC'$ and line $(BB')$.
+\parbf{\ref{ex:ceva-affine}.} Apply Menelaus's theorem
+for $\triangle AA'B$ with $(CC')$
+and
+for $\triangle AA'C$ with $(BB')$.
 
 %\subsection*{Chapter~\ref{chap:proj}}
 \refstepcounter{chapter}
@@ -1954,6 +1955,15 @@ In the Euclidean plane, the circle $\Gamma_2$ is tangent to $k$;
 that is, $T$ is the only point at intersection of $\Gamma_2$ and $k$.
 It defines a unique line $(PT)$ parallel to~$\ell$.
 
+\parbf{\ref{ex:common-perp}.} Choose two points $P$ and $Q$ on $\ell$.
+Drop perpendiculars $p$ and $q$ from $P$ and $Q$ to $m$.
+Drop perpendiculars from $P$ and $Q$ to $q$ and $m$;
+label their point of intersection by $H$.
+Drop perpendicular $n$ from $H$ to $m$.
+
+We need to show that $n\perp \ell$.
+To do this, move $H$ to the center of the absolute and apply \ref{obs:h-p-perp}, \ref{ex:klein-perp}, and \ref{thm:orthocenter}.
+
 %\subsection*{Chapter~\ref{chap:complex}}
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
@@ -2192,14 +2202,14 @@ Apply \ref{thm:set-square-constructible-numbers} and arrive at a contradiction.
 Suppose that every initial point has coordinates $(a,b\cdot\sqrt{3})$ for rational values $a$ and $b$.
 Show and use that any point that can be constructed with the 30°-set-square has coordinates of the same type.
 
-\parbf{\ref{ex:equilateral triangle-verify},} \textit{(\ref{ex:verify:triangle})}.
-Observe that three perpendiculars on the diagram meet at one point if and only if the triangle is isosceles.
-
 \begin{wrapfigure}[8]{r}{21mm}
-\vskip-6mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-368}
 \end{wrapfigure}
+
+\parbf{\ref{ex:equilateral triangle-verify},} \textit{(\ref{ex:verify:triangle})}.
+Observe that three perpendiculars on the diagram meet at one point if and only if the triangle is isosceles.
 
 Use this observation a couple of times to verify that the given triangle is equilateral.
 

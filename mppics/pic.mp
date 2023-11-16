@@ -3816,11 +3816,11 @@ endfig;
 
 beginfig(227)
 save u;
-u:=1cm;
+u:=1.4cm;
 
-z.A=(0,-1)*u;
-z.B=(2,-2)*u;
-z.C=(1,1)*u;
+z.A=(0,-.7)*u;
+z.B=(2,-1.4)*u;
+z.C=(1,.8)*u;
 
 z.AA=(whatever,0)=whatever[z.B,z.C];
 z.BB=(whatever,0)=whatever[z.A,z.C];
@@ -3846,8 +3846,8 @@ dOt z.A,z.B,z.C,z.AA,z.BB,z.CC,z.X,z.Y,z.Z;
 label.llft (btex $A$ etex, z.A);
 label.bot (btex $B$ etex, z.B);
 label.top (btex $C$ etex, z.C);
-whitelabel.top (btex $A'$ etex, z.AA);
-whitelabel.top (btex $B'$ etex, z.BB);
+whitelabel.top (btex $A'$ etex, z.AA+(1,0));
+whitelabel.top (btex $B'$ etex, z.BB+(-1,0));
 label.top (btex $C'$ etex, z.CC+(1,0));
 label.top (btex $X$ etex, z.X);
 label.top (btex $Y$ etex, z.Y);
@@ -3898,6 +3898,7 @@ label.top (btex $C$ etex, z.C);
 label.urt (btex $A'$ etex, z.AA);
 label.ulft (btex $B'$ etex, z.BB);
 label.bot (btex $C'$ etex, z.CC+(1,0));
+whitelabel.llft (btex $X$ etex, z.M);
 
 endfig;
 
@@ -4880,6 +4881,116 @@ label.lft (btex $m$ etex rotated 90, z.P+(0,.5*x.RR));
 label.lft (btex $k$ etex rotated 90, z.S+(0,.5*x.RR));
 label.bot (btex $\ell$ etex , z.Q+(.5*x.RR,0));
 label.top (btex $n$ etex , z.P+(.5*x.RR,0));
+endfig;
+
+beginfig(271)
+save u, p;
+u:=3cm;
+
+path p[];
+
+z.O=origin;
+x.RR=1*u;
+
+z.P=(-.3,-.4)*u;
+z.PP=z.P xscaled -1;
+z.PPP=inversion(z.O, x.RR)(z.P);
+z.PO=circumcenter(z.P,z.PP,z.PPP);
+
+z.S=(-.3,.15)*u;
+z.SS=z.S xscaled -1;
+z.SSS=inversion(z.O, x.RR)(z.S);
+z.SO=circumcenter(z.S,z.SS,z.SSS);
+
+z.PS=inversion(z.SO, abs(z.S-z.SO))(z.P);
+z.PSO=circumcenter(z.P,z.PS,z.PPP);
+
+z.Q=z.PO+(z.P-z.PO) rotated -35;
+z.l=z.PO+(z.Q-z.PO) rotated -10;
+z.QS=inversion(z.SO, abs(z.S-z.SO))(z.Q);
+z.QQQ=inversion(z.O, x.RR)(z.Q);
+z.QSO=circumcenter(z.Q,z.QS,z.QQQ);
+
+z.QP=inversion(z.PSO, abs(z.P-z.PSO))(z.Q);
+z.PQ=inversion(z.QSO, abs(z.Q-z.QSO))(z.P);
+
+p1=circumcircle(z.P,z.PP,z.PPP);
+p2=circumcircle(z.S,z.SS,z.SSS);
+p3=circumcircle(z.P,z.PPP,z.PS);
+p4=circumcircle(z.Q,z.QQQ,z.QS);
+p5=circumcircle(z.Q,z.QP,z.QQQ);
+p6=circumcircle(z.P,z.PQ,z.PPP);
+
+z.H=cross.top(p5, p6);
+z.HH=inversion(z.SO, abs(z.S-z.SO))(z.H);
+z.PH=cross.top(p4, p6);
+z.QH=cross.top(p3, p5);
+z.PSP=cross.bot(p3, p2);
+z.QSQ=cross.bot(p4, p2);
+
+z.m=z.SO+(z.QSQ-z.SO) rotated 5;
+
+p7=ddline(z.H,z.HH)(.5,.5);
+
+z.HPQ= p7 intersectionpoint p1;
+z.HS= p7 intersectionpoint p2;
+
+%draw p1;
+%draw p2;
+%draw p3;
+%draw p4;
+%draw p5;
+%draw p6;
+%draw p7;
+draw ddarc(z.P,z.HPQ,z.Q)(10,10);
+draw arc(z.P,z.H,z.PH);
+draw arc(z.Q,z.H,z.QH);
+draw arc(z.P,z.QH,z.PSP);
+draw arc(z.Q,z.PH,z.QSQ);
+draw ddarc(z.PSP,z.HS,z.QSQ)(5,5);
+draw ddline(z.HPQ,z.HS)(.6,.6);
+
+draw z.PSP
+--z.PSP-3*unitvector(z.PSO-z.PSP) zscaled (1,0)
+--z.PSP-3*unitvector(z.PSO-z.PSP) zscaled (1,-1)
+--z.PSP-3*unitvector(z.PSO-z.PSP) zscaled (0,-1)
+--cycle;
+
+draw z.QSQ
+--z.QSQ-3*unitvector(z.QSO-z.QSQ) zscaled (1,0)
+--z.QSQ-3*unitvector(z.QSO-z.QSQ) zscaled (1,1)
+--z.QSQ-3*unitvector(z.QSO-z.QSQ) zscaled (0,1)
+--cycle;
+
+draw z.PH
+--z.PH-3*unitvector(z.QSO-z.PH) zscaled (1,0)
+--z.PH-3*unitvector(z.QSO-z.PH) zscaled (1,-1)
+--z.PH-3*unitvector(z.QSO-z.PH) zscaled (0,-1)
+--cycle;
+
+draw z.QH
+--z.QH-3*unitvector(z.PSO-z.QH) zscaled (1,0)
+--z.QH-3*unitvector(z.PSO-z.QH) zscaled (1,-1)
+--z.QH-3*unitvector(z.PSO-z.QH) zscaled (0,-1)
+--cycle;
+
+draw z.HPQ
+--z.HPQ-3*unitvector(z.H-z.HPQ) zscaled (-1,0)
+--z.HPQ-3*unitvector(z.H-z.HPQ) zscaled (-1,1)
+--z.HPQ-3*unitvector(z.H-z.HPQ) zscaled (0,1)
+--cycle;
+
+draw z.HS
+--z.HS-3*unitvector(z.H-z.HS) zscaled (-1,0)
+--z.HS-3*unitvector(z.H-z.HS) zscaled (-1,1)
+--z.HS-3*unitvector(z.H-z.HS) zscaled (0,1)
+--cycle;
+
+%dOt z.P,z.Q,z.H,z.PH,z.QH,z.PSP,z.QSQ, z.HPQ, z.HS;
+
+label.top (btex $\ell$ etex, z.l);
+label.top (btex $m$ etex, z.m);
+label.lft (btex $n$ etex rotated 90, .5[z.H,z.HS]);
 endfig;
 
 beginfig(272)
