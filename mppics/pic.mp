@@ -4948,7 +4948,7 @@ draw arc(z.Q,z.H,z.QH);
 draw arc(z.P,z.QH,z.PSP);
 draw arc(z.Q,z.PH,z.QSQ);
 draw ddarc(z.PSP,z.HS,z.QSQ)(5,5);
-draw ddline(z.HPQ,z.HS)(.6,.6);
+draw ddline(z.HPQ,z.HS)(.4,.4);
 
 draw z.PSP
 --z.PSP-3*unitvector(z.PSO-z.PSP) zscaled (1,0)
