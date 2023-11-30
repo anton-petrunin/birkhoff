@@ -22,7 +22,7 @@ Sooner or later, you will need to learn about the Lebesgue measure if you haven'
 \includegraphics{mppics/pic-292}
 \end{wrapfigure}
 
-We say that point $X$ lies \index{inside!a triangle}\emph{inside} a nondegenerate triangle $ABC$ if the following three conditions hold:
+We say that a point $X$ lies \index{inside!a triangle}\emph{inside} a nondegenerate triangle $ABC$ if the following three conditions hold:
 
 \begin{itemize}
 \item $A$ and $X$ lie on the same side of the line~$(BC)$;
@@ -180,7 +180,7 @@ Note that
 \mathcal{Q}_n.\]
 Therefore, $\mathcal{P}\cup\mathcal{Q}$ is polygonal.
 
-Note that $\mathcal{P}\cap \mathcal{Q}$ is the union of $\mathcal{P}_i\cap \mathcal{Q}_j$ for all $i$ and $j$.
+Note that $\mathcal{P}\cap \mathcal{Q}$ is the union of $\mathcal{P}_i\cap \mathcal{Q}_j$ for all $i$ an~$j$.
 Therefore, to show that $\mathcal{P}\cap \mathcal{Q}$ is polygonal,
 it is sufficient to show that $\mathcal{P}_i\cap \mathcal{Q}_j$ is polygonal for any $i$ and $j$.
 
@@ -387,13 +387,9 @@ Note that if $a>a'$ and $b>b'$ then
 \[s(a,b)\ge s(a',b').\eqlbl{s(a,b)>s(a',b')}\]
 Indeed, since $s$ returns nonnegative numbers, we get that
 \begin{align*}
-s(a,b)&=s(a',b)+s(a-a',b)\ge 
+s(a,b)&=s(a',b)+s(a-a',b)\ge s(a',b)=
 \\
-&\ge s(a',b)=
-\\
-&= s(a',b')+s(a',b-b')\ge
-\\
-&\ge s(a',b').
+&= s(a',b')+s(a',b-b')\ge s(a',b').
 \end{align*}
 
 Applying the second and third identity in \ref{3s} a few times we get that
@@ -478,7 +474,7 @@ which contradicts \ref{s(a,b)<}.\qeds
 
 \parit{Proof of Theorem~\ref{thm:area-rect}.}
 Suppose that $\mathcal{R}_{a,b}$ denotes the solid rectangle with sides $a$ and~$b$.
-Set 
+Let 
 \[s(a,b)=\area \mathcal{R}_{a,b}.\]
 
 By the definition of area, 
@@ -519,7 +515,7 @@ where $a=AB$, and $h$ is the distance between the lines $(AB)$ and~$(CD)$.
 {
 
 \begin{wrapfigure}{r}{41 mm}
-\vskip-3mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-306}
 \end{wrapfigure}
@@ -574,7 +570,7 @@ It remains to apply \ref{eq:ABBA}.
 {
 
 \begin{wrapfigure}{r}{26 mm}
-\vskip-0mm
+\vskip-5mm
 \centering
 \includegraphics{mppics/pic-308}
 \end{wrapfigure}
@@ -698,7 +694,7 @@ These proofs are not truly elementary --- the price for the existence of the are
 \includegraphics{mppics/pic-312}
 \end{wrapfigure}
 
-We start with the proof of the Pythagorean theorem.
+We start with the proof of the \index{Pythagorean theorem}Pythagorean theorem.
 In the Elements of Euclid, the Pythagorean theorem was formulated as equality  \ref{eq:pyth+area} below,
 and the proof used a similar technique.
 
@@ -744,7 +740,7 @@ Hence the statement follows.\qeds
 {
 
 \begin{wrapfigure}{r}{19mm}
-\vskip-5mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-314}
 \end{wrapfigure}

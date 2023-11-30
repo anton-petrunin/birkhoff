@@ -689,7 +689,7 @@ draw absolute dashed evenly withcolor 1;
 endfig;
 
 beginfig(352)
-u:=1.2cm;
+u:=.8cm;
 
 z.O=origin;
 x.RR=1.5*u;
@@ -819,7 +819,7 @@ label.lft (btex $R'$ etex, z.RR);
 endfig;
 
 beginfig(358)
-u:=1.4cm;
+u:=.7cm;
 
 z.O=origin;
 x.R=1.4*u;
@@ -956,7 +956,7 @@ endfig;
 
 beginfig(362)
 save u,k;
-u:=1.2cm;
+u:=.8cm;
 k:=.7;
 
 z.O=origin;
@@ -973,7 +973,7 @@ z.P=z.O;
 z.Q=altitude(z.A,z.C,z.B);
 
 mark_rt_angle_withsize(z.C,z.Q,z.B,6);
-draw cutcircle(circle(z.O,10), z.B, z.C);
+draw cutcircle(circle(z.O,7), z.B, z.C);
 draw z.P--z.C--z.D--cycle;
 draw z.A--z.B;
 
@@ -981,7 +981,7 @@ dOt z.P,z.Q;
 
 label.llft (btex $P$ etex, z.P);
 label.lrt (btex $Q$ etex, z.Q);
-label.urt (btex $\phi$ etex, z.P+(10,1));
+label.urt (btex $\phi$ etex, z.P+(7,1));
 endfig;
 
 beginfig(364)

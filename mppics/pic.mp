@@ -3818,9 +3818,9 @@ beginfig(227)
 save u;
 u:=1.4cm;
 
-z.A=(0,-.7)*u;
-z.B=(2,-1.4)*u;
-z.C=(1,.8)*u;
+z.A=(0,-.5)*u;
+z.B=(2,-1)*u;
+z.C=(1,.4)*u;
 
 z.AA=(whatever,0)=whatever[z.B,z.C];
 z.BB=(whatever,0)=whatever[z.A,z.C];
@@ -3846,7 +3846,7 @@ dOt z.A,z.B,z.C,z.AA,z.BB,z.CC,z.X,z.Y,z.Z;
 label.llft (btex $A$ etex, z.A);
 label.bot (btex $B$ etex, z.B);
 label.top (btex $C$ etex, z.C);
-whitelabel.top (btex $A'$ etex, z.AA+(1,0));
+whitelabel.top (btex $A'$ etex, z.AA+(2,0));
 whitelabel.top (btex $B'$ etex, z.BB+(-1,0));
 label.top (btex $C'$ etex, z.CC+(1,0));
 label.top (btex $X$ etex, z.X);
@@ -3961,6 +3961,41 @@ unitvector(z.v-z.V)=(0,-1) transformed V;
 label.lrt (btex $\Pi$ etex transformed U, z.U);
 label.lrt (btex $\Pi'$ etex transformed V, z.V);
 label.rt (btex $O$ etex, z.O);
+endfig;
+
+beginfig(231)
+save u;
+u:=1cm;
+
+z.X=(0,0)*u;
+z.Y=(2,0)*u;
+z.V=(1.2,-.4)*u;
+z.W=(1.6,.25)*u;
+z.P=whatever[z.X,z.W]=whatever[z.Y,z.V];
+z.Q=whatever[z.X,z.V]=whatever[z.Y,z.W];
+z.A=whatever[z.X,z.Y]=whatever[z.P,z.Q];
+z.B=whatever[z.X,z.Y]=whatever[z.V,z.W];
+z.C=whatever[z.V,z.W]=whatever[z.P,z.Q];
+
+draw z.X--z.P;
+draw z.V--z.P;
+draw z.X--z.Q;
+draw z.W--z.Q;
+draw z.C--z.V;
+draw z.C--z.Q;
+draw z.X--z.A;
+
+dOt z.A,z.B,z.C,z.X,z.Y,z.P,z.Q,z.V,z.W;
+
+label.lft (btex $X$ etex, z.X);
+whitelabel.bot (btex $Y$ etex, z.Y);
+label.llft (btex $V$ etex, z.V);
+label.ulft (btex $W$ etex, z.W);
+label.rt (btex $P$ etex, z.P);
+label.rt (btex $Q$ etex, z.Q);
+label.rt (btex $A$ etex, z.A);
+whitelabel.lft (btex $B$ etex, z.B);
+label.top (btex $C$ etex, z.C);
 endfig;
 
 beginfig(232)
@@ -4456,6 +4491,35 @@ draw z.A--z.T--z.B;
 endfig;
 
 beginfig(252)
+save u;
+u:=1.6cm;
+
+z.O=origin;
+z.N=(0,1)*u;
+z.S=-z.N;
+z.E=z.N rotated -90;
+z.P=z.N rotated -40;
+z.PP=whatever[z.S,z.P]=whatever[z.O,z.E];
+
+draw circle(z.O,z.N);
+%draw subpath (.3,1.7) of circle(z.S,z.E-z.S) dashed linedot;
+drawarrow ddline(z.S,z.N)(.2,.3);
+draw ddline(-z.E,z.E)(.2,.2);
+draw ddline(z.S,z.P)(0,.3);
+
+dOt z.S,z.N,z.P,z.PP,z.O;
+
+label.ulft (btex $N$ etex, z.N);
+label.llft (btex $O$ etex, z.O);
+label.rt (btex $P$ etex, z.P+(0,1));
+label.lrt (btex $P'$ etex, z.PP);
+label.llft (btex $S$ etex, z.S);
+
+label.llft (btex $\Sigma$ etex, z.N rotated 135);
+%label.ulft (btex $\Upsilon$ etex, z.E rotatedaround(z.S,55));
+endfig;
+
+beginfig(253)
 save u;
 u:=1.6cm;
 
@@ -5359,8 +5423,8 @@ u:=1cm;
 
 z.O=origin;
 z.X=(-.3,1.4)*u;
-z.Y=z.X rotated 80;
-z.P=(4,.2)*u;
+z.Y=z.X rotated 60;
+z.P=(4,0)*u;
 
 .5[z.X,z.XX]=altitude(z.P,z.O,z.X);
 .5[z.Y,z.YY]=altitude(z.P,z.O,z.Y);
@@ -5369,23 +5433,29 @@ z.Z=whatever[z.X,z.Y]=whatever[z.XX,z.YY];
 z.ZZ=whatever[z.X,z.YY]=whatever[z.XX,z.Y];
 
 draw circle(z.O,z.X);
-draw ddline(z.P,z.X)(.5,.5);
-draw ddline(z.P,z.Y)(.5,.5);
-draw ddline(z.Y,z.Z)(.5,.5);
-draw ddline(z.YY,z.Z)(.2,.5);
-draw ddline(z.Y,z.XX)(.2,.2);
-draw ddline(z.YY,z.X)(.2,.2);
-draw ddline(z.ZZ,z.Z)(2,2) dashed evenly;
+draw ddline(z.P,z.X)(0,0);
+draw ddline(z.P,z.Y)(0,0);
+draw ddline(z.Y,z.Z)(0,.2);
+draw ddline(z.YY,z.Z)(0,.2);
+draw ddline(z.Y,z.XX)(0,0);
+draw ddline(z.YY,z.X)(0,0);
+draw ddline(z.ZZ,z.Z)(2.2,.4) dashed evenly;
 
 path p;
 p=z.P-20*unitvector(z.Y-z.P)--z.P-20*unitvector(z.X-z.P)--
 2.9[z.Z,z.ZZ]
 --z.Y-20*unitvector(z.Z-z.Y)--z.Y-20*unitvector(z.P-z.Y)--z.X-20*unitvector(z.P-z.X)--z.Z-20*unitvector(z.YY-z.Z)--z.Z-20*unitvector(z.Y-z.Z)--cycle;
 
-clip currentpicture to p;
+%clip currentpicture to p;
+
+z.PP=altitude(z.Z,z.O,z.ZZ);
+
+draw z.O--z.PP;
+
+mark_rt_angle_withsize(z.O,z.PP,2*z.PP-z.Z,4);
 
 Dot z.P;
-dOt z.X,z.Y,z.Z,z.XX,z.YY,z.ZZ;
+dOt z.X,z.Y,z.Z,z.XX,z.YY,z.ZZ,z.O,z.PP;
 dOtc z.Z,z.ZZ;
 
 whitelabel.ulft (btex $X$ etex, z.X);
@@ -5396,11 +5466,13 @@ whitelabel.urt (btex $X'$ etex, z.XX);
 whitelabel.lrt (btex $Y'$ etex, z.YY);
 whitelabel.bot (btex $Z'$ etex, z.ZZ);
 label.top (btex $P$ etex, z.P);
+label.rt (btex $P'$ etex, z.PP);
+label.lft (btex $O$ etex, z.O);
 label.urt (btex $\Gamma$ etex, z.X rotated 150);
 
 label.top (btex $x$ etex, .4[z.P,z.XX]);
 label.bot (btex $y$ etex, .5[z.P,z.YY]);
-label.ulft (btex $p$ etex, (-1.2)[z.ZZ,z.Z]);
+label.ulft (btex $p$ etex, (-1.7)[z.ZZ,z.Z]);
 endfig;
 
 

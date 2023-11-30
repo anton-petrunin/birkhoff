@@ -4,11 +4,11 @@
 Spherical geometry studies the surface of a unit sphere.
 This geometry has applications in cartography, navigation, and astronomy.
 
-The spherical geometry is a close relative of the Euclidean and hyperbolic geometries.
+Spherical geometry is a close relative of Euclidean and hyperbolic geometries.
 Most of the theorems in hyperbolic geometry have spherical analogs,
 but spherical geometry is easier to visualize. 
 
-\section{Euclidean space}
+\section{Sphere}
 
 Recall that Euclidean space is the set $\mathbb{R}^3$ of all triples $(x,y,z)$ of real numbers
 such that the distance between a pair of points
@@ -23,26 +23,254 @@ $$a\cdot x+b\cdot y+c\cdot z+d=0$$
 for constants $a$, $b$, $c$, and $d$, where at least one of the numbers $a$, $b$, or $c$ is not zero.
 Any such plane is isometric to the Euclidean plane.
 
-A sphere in space is the direct analog of a circle in the plane.
-Formally, a \index{sphere}\emph{sphere} with center $O$ and radius $r$ is the set of points in the space that lie at the distance $r$ from~$O$.
+A \index{sphere}\emph{sphere} with center $O$ and radius $r$ is the set of points in the space that lie at the distance $r$ from~$O$.
 
 Let $A$ and $B$ be two points on the unit sphere centered at~$O$.
 The \index{distance!spherical}\index{spherical distance}\emph{spherical distance} from $A$ to $B$
 (briefly $AB_s$)
  is defined as  $|\measuredangle AOB|$. 
 
-In spherical geometry, the role of lines play the \index{great circle}\emph{great circles};
-that is, the intersection of the sphere with a plane passing thru~$O$.
+A \index{great circle}\emph{great circle} is the intersection of the sphere with a plane passing thru~$O$.
+In spherical geometry, great circles play the role of lines despite not meeting Definition~\ref{def:line}.
 
-Note that the great circles do not form lines in the sense of Definition~\ref{def:line}.
-Also, any two distinct great circles intersect at two antipodal points.
-In particular, the sphere does not satisfy the axioms of the neutral plane.
+Let $A$ and $B$ be two distinct and not antipodal points on the unit sphere.
+Then there is a unique great circle thru $A$, and $B$;
+it will be denoted by $(AB)_s$.
+The shorter of the two arcs of $(AB)_s$ with endpoints $A$ and $B$ will be denoted by $[AB]_s$.
+We can talk about spherical triangles and their sides;
+their angle measures are defined as the angle between the tangent half-lines to the arcs.
+
+\section{Central projection}
+
+Any map from a sphere (or its part) to a plane distorts the surface in some way.
+In this section we describe the so-called central projection; it maps great circles to straight lines on the plane.
+This property makes it convenient in navigation;
+while the spherical shapes are distorted, the shortest path on the plane corresponds to a shortest path on the sphere.
+
+The central projection is analogous to the projective model of the hyperbolic plane discussed in Chapter~\ref{chap:klein}.
+
+Let $\Sigma$ be the unit sphere centered at the origin~$O$.
+Suppose that $\Pi^+$ denotes the plane defined by the equation $z=1$.
+This plane is parallel to the $(x,y)$-plane and passes thru 
+the north pole $N\z=(0,0,1)$ of~$\Sigma$.
+
+The northern hemisphere of $\Sigma$
+is the subset of points $(x,y,z)\z\in \Sigma$ such that $z>0$; it will be denoted by~$\Sigma^+$.
+
+\begin{wrapfigure}{o}{40mm}
+\centering
+\vskip-3mm
+\includegraphics{mppics/pic-254}
+\end{wrapfigure}
+
+Given a point $P\in \Sigma^+$, consider the half-line $[OP)$. 
+Suppose that $P'$ denotes the intersection of $[OP)$ and~$\Pi^+$.
+Note that 
+if $P=(x,y,z)$, then $P'=(\tfrac xz,\tfrac yz,1)$.
+It follows that $P\leftrightarrow P'$ is a bijection between $\Sigma^+$ and~$\Pi^+$.
+
+
+
+The described bijection $\Sigma^+\leftrightarrow \Pi^+$ is called the \index{central projection}\emph{central projection} of 
+the hemisphere~$\Sigma^+$.
+
+Note that the central projection sends the intersections of the great circles with $\Sigma^+$ to the lines in~$\Pi^+$.
+This follows since the great circles are intersections of $\Sigma$ with planes passing thru the origin,
+and the lines in $\Pi^+$ are the intersection of $\Pi^+$ with these planes.
+
+The following exercise 
+is analogous to Exercise~\ref{ex:h-median}.
+
+\begin{thm}{Exercise}\label{ex:s-medians}
+Let $\triangle_sABC$ be a nondegenerate spherical triangle.
+Assume that the plane $\Pi^+$ is parallel to the plane passing thru $A$, $B$, and~$C$.
+Let $A'$, $B'$, and $C'$ denote the central projections of $A$, $B$, and~$C$.
+\begin{enumerate}[(a)]
+\item\label{ex:s-medians:a} Show that the midpoints of $[A'B']$, $[B'C']$, and $[C'A']$
+are central projections of the midpoints of $[AB]_s$, $[BC]_s$, and $[CA]_s$ respectively.
+\item\label{ex:s-medians:b} Use part (\ref{ex:s-medians:a}) to show that the medians of a spherical triangle intersect at one point.
+\end{enumerate}
+
+\end{thm}
+
+
+\begin{thm}{Exercise}\label{ex:s-altitudes}
+Let $P\leftrightarrow P'$ be the central projection described above
+and $N$ be the north pole; so, $N'=N$.
+Show that $|\measuredangle_s NPQ|=\tfrac\pi2$ if and only if $|\angle N'P'Q'|=\tfrac\pi2$.
+\end{thm}
+
+\section{Stereographic projection}
+
+In this section, we define stereographic projection;
+it is closely related to the conformal model of the hyperbolic plane, which is discussed in Chapter~\ref{chap:poincare}.
+
+{
+
+\begin{wrapfigure}{r}{48mm}
+\vskip-6mm
+\centering
+\includegraphics{mppics/pic-252}
+\caption*{The plane thru $P$, $O$, and~$S$.}
+\end{wrapfigure}
+
+Consider the unit sphere $\Sigma$ 
+centered at the origin $(0,0,0)$.
+This sphere can be described by the equation $x^2+y^2\z+z^2\z=1$. 
+
+Suppose that $\Pi$ denotes the $(x,y)$-plane;
+it is defined by the equation $z \z= 0$.
+Clearly, $\Pi$
+runs thru the center of~$\Sigma$.
+
+Let $N = (0, 0, 1)$ and $S\z=(0, 0, -1)$ denote the ``north'' and ``south'' poles of $\Sigma$;
+these are the points on the sphere that have extremal distances to~$\Pi$.
+Suppose that $\Omega$ denotes the ``equator'' of $\Sigma$;
+it is the intersection $\Sigma\cap\Pi$.
+
+}
+
+For any point $P\ne S$ on $\Sigma$,
+consider the line $(SP)$ in the space. 
+This line intersects $\Pi$ at exactly one point, denoted by~$P'$. 
+Set $S'=\infty$.
+
+
+The map $\xi_s\: P\mapsto P'$ is called the \index{stereographic projection}\emph{stereographic projection from $\Sigma$ to $\Pi$ with respect to the south pole}.
+The inverse of this map $\xi^{-1}_s\: P'\z\mapsto P$ is called the {}\emph{stereographic projection from $\Pi$ to $\Sigma$ with respect to the south pole}.
+
+In the same way, one can define the
+{}\emph{stereographic projections $\xi_n$ and $\xi^{-1}_n$ with respect to the north pole}~$N$.
+
+Note that $P=P'$ if and only if $P\in\Omega$.
+
+Exercise~\ref{ex:stereographic-inversion} below states that the stereographic projection preserves 
+the angles between arcs;
+more precisely, \textit{the absolute value of the angle measure} between arcs on the sphere.
+This is a useful property in cartography;
+the curves on the sphere meet at the same angles as their stereographic projections.
+
+
+\section[Inversion]{Inversion across a sphere}
+
+The inversion across a sphere is defined the same way as the inversion across a circle.
+
+Formally, let $\Sigma$ be the sphere with center $O$ and radius~$r$.
+The \index{inversion!inversion across a sphere}\emph{inversion} across $\Sigma$ of a point $P$ is the point $P'\in[OP)$ such that
+$$OP\cdot OP'=r^2.$$
+In this case, the sphere $\Sigma$  will be called the 
+\index{inversion!sphere of inversion}\emph{sphere of inversion},
+and its center is called the \index{inversion!center of inversion}\emph{center of inversion}.
+
+We also add $\infty$ to the space and assume that the center of inversion is mapped to $\infty$ and the other way around. 
+The space $\mathbb{R}^3$ with the point $\infty$ will be called \index{inversive!space}\emph{inversive space}.
+
+The inversion of space shares many properties with the inversion of the plane.
+Most importantly, analogs of theorems \ref{lem:inverse-4-angle}, \ref{thm:inverse-cline}, \ref{thm:angle-inversion} can be summarized as follows:
+
+\begin{thm}{Theorem}\label{thm:inversion-3d}
+The inversion across the sphere has the following properties:
+\begin{enumerate}[(a)]
+\item\label{thm:inversion-3d:a} Inversion maps a sphere or a plane into a sphere or a plane.
+\item\label{thm:inversion-3d:b} Inversion maps a circline into a circline. 
+\item\label{thm:inversion-3d:cross-ratio} Inversion preserves the cross-ratio;
+that is, if $A'$, $B'$, $C'$, and $D'$ are the inverses of the points $A$, $B$, $C$, and $D$ respectively,
+then
+$$\frac{AB\cdot CD}{BC\cdot DA}= \frac{A'B'\cdot C'D'}{B'C'\cdot D'A'}.$$
+\item Inversion maps arcs into arcs.
+\item\label{thm:inversion-3d:angle}
+Inversion preserves the absolute value of the angle
+measure between tangent half-lines to the arcs.
+\end{enumerate}
+\end{thm}
+
+In the following exercises, we apply the theorem above to tie the stereographic projection with the inversion. 
+We assume that $\Sigma$, $\Pi$, $\Omega$, $O$, $S$, $N$ and $\xi_s$ are as in the previous section.
+
+{
+
+\begin{wrapfigure}{r}{48mm}
+\vskip-6mm
+\centering
+\includegraphics{mppics/pic-253}
+\end{wrapfigure}
+
+\begin{thm}{Exercise}\label{ex:stereographic-inversion}
+Show that the stereographic projections 
+$\xi_s: \Sigma\to\Pi$ and $\xi^{-1}_s: \Pi\to\Sigma$
+are the restrictions to $\Sigma$ and $\Pi$ respectively, of the inversion across the sphere $\Upsilon$ with the center $S$ and radius $\sqrt{2}$.
+
+Conclude that the stereographic projection preserves 
+the angles between arcs;
+more precisely, the absolute value of the angle measure between arcs on the sphere.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:great-circ}
+Show that  a stereographic projection $\Sigma\to\Pi$
+sends the great circles to plane circlines that intersect $\Omega$ at opposite points.
+\end{thm}
+
+}
+
+\begin{thm}{Exercise}\label{ex:conform-sphere}
+Fix a point $P\in \Pi$  and let $Q$ be another point in~$\Pi$.
+Let $P'$ and $Q'$ denote their stereographic projections to~$\Sigma$.
+Set $x=PQ$ and $y=P'Q'_s$.
+Show that
+$$\lim_{x\to 0}\, \frac{y}{x}=\frac{2}{1+OP^2}.$$
+\end{thm}
+
+The last exercise is analogous to Lemma~\ref{lem:conformal}.
+
+The proof of \ref{thm:inversion-3d} resembles the corresponding proofs in plane geometry.
+Let us give couple of a hints to the reader who wants to reconstruct its proof.
+To prove \ref{thm:inversion-3d}\textit{\ref{thm:inversion-3d:a}}, one needs the following lemma;
+its proof is left to the reader.
+
+\begin{thm}{Lemma}
+Let $\Sigma$ be a subset of the Euclidean space
+that contains at least two points.
+Fix a point $O$ in the space.
+
+Then $\Sigma$ is 
+a sphere 
+if and only if
+for any plane $\Pi$ passing thru $O$,
+the intersection $\Pi\cap \Sigma$ is either an empty set,
+a one-point set, or a circle.
+\end{thm}  
+
+The following observation reduces part~\textit{(\ref{thm:inversion-3d:b})} to part~\textit{(\ref{thm:inversion-3d:a})}.
+
+\begin{thm}{Observation}
+Any circle in the space is an intersection of two spheres.
+\end{thm}
+
+{
+
+\begin{wrapfigure}{o}{25mm}
+\centering
+\includegraphics{mppics/pic-250}
+\end{wrapfigure}
+
+Let us define a \index{circular cone}\emph{circular cone} as a set formed by line segments from a fixed point, called the \index{tip of cone}\emph{tip} of the cone, to all the points on a fixed circle, called the \index{base!of cone}\emph{base} of the cone;
+we always assume that the base does not lie in the same plane as the tip.
+We say that the cone is \index{right circular cone}\emph{right} 
+if the center of the base circle is the footpoint of the tip on the base plane;
+otherwise, we call it \index{oblique circular cone}\emph{oblique}.
+
+}
+
+\begin{thm}{Exercise}\label{ex:cone}
+Let $K$ be an oblique circular cone.
+Show that there is a plane $\Pi$ that is not parallel to the base plane of $K$ such that the intersection $\Pi\cap K$ is a circle.
+\end{thm}
 
 \section{Pythagorean theorem}
 
 Here is an analog of the Pythagorean theorems (\ref{thm:pyth} and \ref{thm:pyth-h-poincare}) in spherical geometry.
 
-\begin{thm}{Spherical Pythagorean theorem}\label{thm:s-pyth}
+\begin{thm}{Spherical Pythagorean theorem}\label{thm:s-pyth}\index{Pythagorean theorem}
 Let $\triangle_sABC$ be a spherical triangle with a right angle at~$C$.
 Set $a=BC_s$, $b=CA_s$, and $c=AB_s$.
 Then
@@ -84,6 +312,15 @@ we can choose the coordinates in $\mathbb{R}^3$ so that
 $v_C\z=(0,0,1)$, $v_A$ lies in the $(x,y)$-plane, so $v_A\z=(x_A,0,z_A)$,
 and $v_B$ lies in the $(y,z)$-plane, so $v_B=(0,y_B,z_B)$.
 
+{
+
+\begin{wrapfigure}{r}{40mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-248}
+\end{wrapfigure}
+
+
 Applying, \ref{eq:scalar-s-dist},
 we get that
 \begin{align*}
@@ -93,13 +330,6 @@ z_A&=\langle v_C,v_A\rangle
 z_B&=\langle v_C,v_B\rangle
 =\cos a.
 \end{align*}
-
-{
-
-\begin{wrapfigure}{r}{40mm}
-\centering
-\includegraphics{mppics/pic-248}
-\end{wrapfigure}
 
 Applying, \ref{eq:scal-def} and \ref{eq:scalar-s-dist}, we get that
 \begin{align*}
@@ -111,13 +341,15 @@ Applying, \ref{eq:scal-def} and \ref{eq:scalar-s-dist}, we get that
 \end{align*}
 \qedsf
 
+}
+
 \begin{thm}{Exercise}\label{ex:2(pi/4)=pi/3}
 Show that 
 if $\triangle_sABC$ is a spherical triangle with a right angle at $C$,
 and $AC_s=BC_s=\tfrac\pi4$, then $AB_s=\tfrac\pi3$.
 \end{thm}
 
-}
+
 
 \section{Imaginary distance}
 
@@ -127,26 +359,26 @@ Recall that
 \qquad\text{and}\qquad
 \cos x=\frac {e^{i\cdot x}+e^{-i\cdot x}}2.
 \]
-The first formula is the definition of the hyperbolic cosine;
+The first formula is the definition of the hyperbolic cosine (see \ref{sec:hyp-trig});
 the second one is called Euler's formula (see \ref{sec:Euler's formula}).
 It follows that 
 \[\cosh x=\cos (i\cdot x)
 \qquad\text{and}\qquad
 \cos x=\cosh (i\cdot x).\]
 
-Look at the formulas in hyperbolic and spherical Pythagorean theorems (see \ref{thm:s-pyth} and \ref{thm:pyth-h-poincare}):
+Let us compare the formulas in hyperbolic and spherical Pythagorean theorems (see \ref{thm:s-pyth} and \ref{thm:pyth-h-poincare}):
 \begin{align*}
 \cosh c&=\cosh a\cdot \cosh b,
 &
 \cos c&=\cos a\cdot \cos b.
 \end{align*}
 Note that if we change $a$, $b$, and $c$ to $i\cdot a$, $i\cdot b$, and $i\cdot c$,
-then the first formula transforms to the second one, and the other way around.
+then the first formula transforms into the second one, and the other way around.
 
 This is not a coincidence;
 the same holds for all analytic formulas ---
 changing every distance $d$ to $i\cdot d$ transforms a valid spherical formula into a valid hyperbolic formula;
-the angle measures need no changes.
+the angle measures need no change.
 This magic substitution was found by Franz Taurinus \cite{taurinus}; we are not going to prove it.
 
 \begin{thm}{Advanced exercise}\label{ex:taurinus}
@@ -165,216 +397,4 @@ The spherical sine rule:
 \[\frac{\sin \alpha}{\sin a}=\frac{\sin \beta}{\sin b}=\frac{\sin \gamma}{\sin c}.\]
 \end{enumerate}
  
-\end{thm}
-
-
-
-\section[Inversion]{Inversion across a sphere}
-
-The inversion across a sphere is defined the same way as the inversion across a circle.
-
-Formally, let $\Sigma$ be the sphere with center $O$ and radius~$r$.
-The \index{inversion!inversion across a sphere}\emph{inversion} across $\Sigma$ of a point $P$ is the point $P'\in[OP)$ such that
-$$OP\cdot OP'=r^2.$$
-In this case, the sphere $\Sigma$  will be called the 
-\index{inversion!sphere of inversion}\emph{sphere of inversion},
-and its center is called the \index{inversion!center of inversion}\emph{center of inversion}.
-
-We also add $\infty$ to the space and assume that the center of inversion is mapped to $\infty$ and the other way around. 
-The space $\mathbb{R}^3$ with the point $\infty$ will be called \index{inversive!space}\emph{inversive space}.
-
-The inversion of space shares many properties with the inversion of the plane.
-Most importantly, analogs of theorems \ref{lem:inverse-4-angle}, \ref{thm:inverse-cline}, \ref{thm:angle-inversion} can be summarized as follows:
-
-\begin{thm}{Theorem}\label{thm:inversion-3d}
-The inversion across the sphere has the following properties:
-\begin{enumerate}[(a)]
-\item\label{thm:inversion-3d:a} Inversion maps a sphere or a plane into a sphere or a plane.
-\item\label{thm:inversion-3d:b} Inversion maps a circle or a line into a circle or a line. 
-\item\label{thm:inversion-3d:cross-ratio} Inversion preserves the cross-ratio;
-that is, if $A'$, $B'$, $C'$, and $D'$ are the inverses of the points $A$, $B$, $C$, and $D$ respectively,
-then
-$$\frac{AB\cdot CD}{BC\cdot DA}= \frac{A'B'\cdot C'D'}{B'C'\cdot D'A'}.$$
-\item Inversion maps arcs into arcs.
-\item\label{thm:inversion-3d:angle} Inversion preserves the absolute value of the angle
-measure between tangent half-lines to the arcs.
-\end{enumerate}
-\end{thm}
-
-
-We do not present the proofs here, but they closely resemble the corresponding proofs in plane geometry.
-To prove \textit{(\ref{thm:inversion-3d:a})}, you additionally need the following lemma;
-its proof is left to the reader.
-
-\begin{thm}{Lemma}
-Let $\Sigma$ be a subset of the Euclidean space
-that contains at least two points.
-Fix a point $O$ in the space.
-
-Then $\Sigma$ is 
-a sphere 
-if and only if
-for any plane $\Pi$ passing thru $O$,
-the intersection $\Pi\cap \Sigma$ is either an empty set,
-a one-point set, or a circle.
-\end{thm}  
-
-The following observation reduces part~\textit{(\ref{thm:inversion-3d:b})} to part~\textit{(\ref{thm:inversion-3d:a})}.
-
-\begin{thm}{Observation}
-Any circle in the space is an intersection of two spheres.
-\end{thm}
-
-{
-
-\begin{wrapfigure}{o}{25mm}
-\centering
-\includegraphics{mppics/pic-250}
-\end{wrapfigure}
-
-Now, let us define a \index{circular cone}\emph{circular cone} as a set formed by line segments from a fixed point, called the \index{tip of cone}\emph{tip} of the cone, to all the points on a fixed circle, called the \index{base!of cone}\emph{base} of the cone;
-we always assume that the base does not lie in the same plane as the tip.
-We say that the cone is \index{right circular cone}\emph{right} 
-if the center of the base circle is the footpoint of the tip on the base plane;
-otherwise, we call it \index{oblique circular cone}\emph{oblique}.
-
-}
-
-\begin{thm}{Exercise}\label{ex:cone}
-Let $K$ be an oblique circular cone. Show that there is a plane $\Pi$ that is not parallel to the base plane of $K$ such that the intersection $\Pi\cap K$ is a circle.
-\end{thm}
-
-
-\section{Stereographic projection}
-
-{
-
-\begin{wrapfigure}{r}{48mm}
-\vskip-10mm
-\centering
-\includegraphics{mppics/pic-252}
-\caption*{The plane thru $P$, $O$, and~$S$.}
-\end{wrapfigure}
-
-Consider the unit sphere $\Sigma$ 
-centered at the origin $(0,0,0)$.
-This sphere can be described by the equation $x^2+y^2+z^2\z=1$. 
-
-Suppose that $\Pi$ denotes the $(x,y)$-plane;
-it is defined by the equation $z = 0$.
-Clearly, $\Pi$
-runs thru the center of~$\Sigma$.
-
-Let $N = (0, 0, 1)$ and $S\z=(0, 0, -1)$ denote the ``north'' and ``south'' poles of $\Sigma$;
-these are the points on the sphere that have extremal distances to~$\Pi$.
-Suppose that $\Omega$ denotes the ``equator'' of $\Sigma$;
-it is the intersection $\Sigma\cap\Pi$.
-
-}
-
-For any point $P\ne S$ on $\Sigma$,
-consider the line $(SP)$ in the space. 
-This line intersects $\Pi$ at exactly one point, denoted by~$P'$. 
-Set $S'=\infty$.
-
-
-The map $\xi_s\: P\mapsto P'$ is called the \index{stereographic projection}\emph{stereographic projection from $\Sigma$ to $\Pi$ with respect to the south pole}.
-The inverse of this map $\xi^{-1}_s\: P'\z\mapsto P$ is called the {}\emph{stereographic projection from $\Pi$ to $\Sigma$ with respect to the south pole}.
-
-In the same way, one can define the
-{}\emph{stereographic projections $\xi_n$ and $\xi^{-1}_n$ with respect to the north pole}~$N$.
-
-Note that $P=P'$ if and only if $P\in\Omega$.
-
-
-Note that if $\Sigma$ and $\Pi$ are as above,
-then the composition of the stereographic projections 
-$\xi_s: \Sigma\to\Pi$ and  $\xi^{-1}_s: \Pi\to\Sigma$
-are the restrictions to $\Sigma$ and $\Pi$ respectively of the inversion across the sphere $\Upsilon$ with the center $S$ and radius $\sqrt{2}$.
-
-
-From the above and Theorem~\ref{thm:inversion-3d},
-it follows that the stereographic projection preserves 
-the angles between arcs;
-more precisely, \textit{the absolute value of the angle measure} between arcs on the sphere.
-
-This makes it particularly useful in cartography.
-A map of a large region of the earth cannot be done on a constant scale,
-but by using a stereographic projection, one can keep the angles between roads the same as on the earth.
-
-In the following exercises,
-we assume that $\Sigma$, $\Pi$, $\Upsilon$, $\Omega$, $O$, $S$, and $N$ are as described above.
-  
-\begin{thm}{Exercise}\label{ex:two-stereographics}
-Show that $\xi_n \circ \xi^{-1}_s$, the composition of stereographic projections 
-from $\Pi$ to $\Sigma$ from  $S$, and
-from $\Sigma$ to $\Pi$ from  $N$ is 
-the inverse of the plane $\Pi$ across~$\Omega$.
-\end{thm}
-
-\begin{thm}{Exercise}\label{ex:great-circ}
-Show that  a stereographic projection $\Sigma\to\Pi$
-sends the great circles to plane circlines that intersect $\Omega$ at opposite points.
-\end{thm}
-
-The following exercise is analogous to Lemma~\ref{lem:conformal}.
-
-\begin{thm}{Exercise}\label{ex:conform-sphere}
-Fix a point $P\in \Pi$  and let $Q$ be another point in~$\Pi$.
-Let $P'$ and $Q'$ denote their stereographic projections to~$\Sigma$.
-Set $x=PQ$ and $y=P'Q'_s$.
-Show that
-$$\lim_{x\to 0}\, \frac{y}{x}=\frac{2}{1+OP^2}.$$
-\end{thm}
-
-
-
-\section{Central projection}
-
-Central projection is analogous to the projective model of the hyperbolic plane which is discussed in Chapter~\ref{chap:klein}.
-
-Let $\Sigma$ be the unit sphere centered at the origin~$O$.
-Suppose that $\Pi^+$ denotes the plane defined by the equation $z=1$.
-This plane is parallel to the $(x,y)$-plane and passes thru 
-the north pole $N\z=(0,0,1)$ of~$\Sigma$.
-
-Recall that the northern hemisphere of $\Sigma$
-is the subset of points $(x,y,z)\z\in \Sigma$ such that $z>0$.
-The northern  hemisphere will be denoted by~$\Sigma^+$.
-
-\begin{wrapfigure}{o}{40mm}
-\centering
-\vskip-3mm
-\includegraphics{mppics/pic-254}
-\end{wrapfigure}
-
-Given a point $P\in \Sigma^+$, consider the half-line $[OP)$. 
-Suppose that $P'$ denotes the intersection of $[OP)$ and~$\Pi^+$.
-Note that 
-if $P=(x,y,z)$, then $P'=(\tfrac xz,\tfrac yz,1)$.
-It follows that $P\leftrightarrow P'$ is a bijection between $\Sigma^+$ and~$\Pi^+$.
-
-
-
-The described bijection $\Sigma^+\leftrightarrow \Pi^+$ is called the \index{central projection}\emph{central projection} of 
-the hemisphere~$\Sigma^+$.
-
-Note that the central projection sends the intersections of the great circles with $\Sigma^+$ to the lines in~$\Pi^+$.
-This follows since the great circles are intersections of $\Sigma$ with planes passing thru the origin,
-and the lines in $\Pi^+$ are the intersection of $\Pi^+$ with these planes.
-
-The following exercise 
-is analogous to Exercise~\ref{ex:h-median}
-in hyperbolic geometry.
-
-\begin{thm}{Exercise}\label{ex:s-medians}
-Let $\triangle_sABC$ be a nondegenerate spherical triangle.
-Assume that the plane $\Pi^+$ is parallel to the plane passing thru $A$, $B$, and~$C$.
-Let $A'$, $B'$, and $C'$ denote the central projections of $A$, $B$, and~$C$.
-\begin{enumerate}[(a)]
-\item\label{ex:s-medians:a} Show that the midpoints of $[A'B']$, $[B'C']$, and $[C'A']$
-are central projections of the midpoints of $[AB]_s$, $[BC]_s$, and $[CA]_s$ respectively.
-\item\label{ex:s-medians:b} Use part (\ref{ex:s-medians:a}) to show that the medians of a spherical triangle intersect at one point.
-\end{enumerate}
-
 \end{thm}

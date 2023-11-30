@@ -629,26 +629,20 @@ Apply \ref{thm:isos} twice and \ref{ex:|3sum|} twice.
 \parbf{\ref{ex:right-isos}.}
 Apply \ref{thm:isos} twice and \ref{thm:3sum} once. 
 
-\parbf{\ref{ex:pi/4-isos}.} 
-Suppose that $O$ denotes the center of the circle.
+%\parbf{\ref{ex:pi/4-isos}.} 
+%Suppose that $O$ denotes the center of the circle.
 
-\begin{wrapfigure}{r}{28mm}
-\vskip-5mm
-\centering
-\includegraphics{mppics/pic-334}
-\end{wrapfigure} 
+%\begin{wrapfigure}{r}{28mm}
+%\vskip-5mm
+%\centering
+%\includegraphics{mppics/pic-334}
+%\end{wrapfigure} 
 
-Note that $\triangle AOX$ is isosceles
-and $\angle OXC$ is right.
-Applying \ref{thm:3sum} and \ref{thm:isos} and simplifying, you should get
-$
-4\cdot \measuredangle CAX
-\equiv
-\pi$.
+%Note that $\triangle AOX$ is isosceles and $\angle OXC$ is right.
+%Applying \ref{thm:3sum} and \ref{thm:isos} and simplifying, you should get $4\cdot \measuredangle CAX \equiv \pi$.
 
-Show that $\angle CAX$ is acute.
-Conclude that 
-$\measuredangle CAX\z=\pm\tfrac\pi4$.
+%Show that $\angle CAX$ is acute.
+%Conclude that $\measuredangle CAX\z=\pm\tfrac\pi4$.
 
 \parbf{\ref{ex:quadrangle}.}
 Apply \ref{thm:3sum} to $\triangle ABC$ and $\triangle BDA$.
@@ -1326,6 +1320,8 @@ Apply~\ref{lem:h-circle=circle}.
 
 \parbf{\ref{ex:3-h-lines}.} Look at the diagram and think.
 
+\parbf{\ref{ex:O-h-dist}.} Use \ref{lem:O-h-dist}.
+
 \parbf{\ref{ex:cosh}.}
 By \ref{cor:invese-comp} and \ref{lem:inverse-4-angle},
 the right-hand sides of the identities 
@@ -1355,15 +1351,16 @@ Therefore
 &=\tfrac12\cdot(\tfrac{1+a}{1-a}+\tfrac{1-a}{1+a})=
 \\
 &=\tfrac{1+a^2}{1-a^2};
-\\
+\end{align*} 
+\begin{align*}
 \sqrt{\frac{PQ'\cdot P'Q}{PP'\cdot QQ'}}
 &=\frac{\frac1a+a}{\frac1a-a}=
 \\
 &=\tfrac{1+a^2}{1-a^2}.
-\intertext{
+\end{align*} 
 Hence part \textit{(\ref{ex:cosh/2})} follows.
 Similarly,
-}
+\begin{align*}
 \sinh[\tfrac12\cdot PQ_h]
 &=\tfrac12\cdot\left(\tfrac{1+a}{1-a}-\tfrac{1-a}{1+a}\right)=
 \\
@@ -1451,6 +1448,12 @@ Show and use that $P'$ is an h-reflection of $P$ across $Q\in m$ if and only if 
 $PR_h=P'R'_h$, and $Q$ is the h-midpoint of $[RR']_h$. 
 You may need \ref{prop:vert}, SAS, and SAA (see \ref{ex:SAA}).
 
+\begin{wrapfigure}{r}{33mm}
+\vskip-5mm
+\centering
+\includegraphics{mppics/pic-352}
+\end{wrapfigure} 
+
 \parbf{\ref{ex:right-trig-horocycle}.}
 As usual, we assume that the absolute is a unit circle.
 
@@ -1461,12 +1464,6 @@ lie on a horocycle.
 
 We may assume that $Q$ is the center of the absolute.
 In this case, $\measuredangle_hPQR\z=\measuredangle PQR\z=\pm\tfrac\pi2$ and $PQ=QR$.
-
-\begin{Figure}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-352}
-\end{Figure}
 
 Note that the Euclidean circle passing thru $P$, $Q$, and $R$ is tangent to the absolute.
 Conclude that $PQ=\tfrac1{\sqrt2}$. 
@@ -1519,7 +1516,7 @@ The latter contradicts that the map is a bijection.
 \includegraphics{mppics/pic-353}
 \end{wrapfigure}
 
-By assumption, if $X\in (AB)$, then $X'\z\in (A'B')$.
+By the assumption, if $X\z\in (AB)$, then $X'\z\in (A'B')$.
 From above, if $X\notin (AB)$, then $X'\z\notin (A'B')$.
 Use it to prove the second statement.
 
@@ -1641,8 +1638,19 @@ if all $P_i$ lie on a horizontal line $y=b$, and
 =\left|\frac{(y_1-y_2)\cdot(y_3-y_4)}{(y_2-y_3)\cdot (y_4-y_1)}\right|\]
 otherwise. (See \ref{ex:cross-ratio-area} for another proof.)
 
-
 To prove \textit{(c)}, apply \textit{(a)}, \textit{(b)}, and \ref{thm:moving}.
+
+\parbf{\ref{ex:proj-cross-ratio=1}.}
+Observe that for the perspective projection from $(AB)$ to $(AC)$ with center at $W$ we have
+$A\mapsto A$, $B\mapsto C$, $X\mapsto P$, and $Y\mapsto Q$.
+Therefore \ref{ex:proj-cross-ratio} implies \textit{(\ref{ex:proj-cross-ratio=1:=})}.
+
+Applying the same argument with center $V$, we get  
+$\frac{AY\cdot BX}{AX\cdot BY}=\frac{AP\cdot CQ}{AQ\cdot CP}$.
+Therefore 
+$\frac{AX\cdot BY}{AY\cdot BX}=\frac{AY\cdot BX}{AX\cdot BY}$,
+hence \textit{(\ref{ex:proj-cross-ratio=1:1})}.
+
 
 \parbf{\ref{ex:pappus}.}
 Assume that $(AB)$ meets $(A'B')$ at~$O$.
@@ -1689,13 +1697,6 @@ To extend this bijection to the whole projective plane, assume that
 (1) the ideal line corresponds to the origin 
 and (2) the ideal point is given by the pencil of lines $b\cdot x-a\cdot y=c$ for different values of $c$ corresponds to the line defined by $a\cdot x+b\cdot y=0$.
 
-\begin{Figure}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-356}
-\vskip-0mm
-\end{Figure}
-
 \parbf{\ref{ex:dual-pappus}.}
 Assume one set of concurrent lines $a$, $b$, $c$, 
 and another set of concurrent lines $a'$, $b'$, $c'$ are given.
@@ -1713,6 +1714,13 @@ Q'&=c'\cap a,
 R'&=a'\cap b.
 \end{align*}
 Then the lines $(PP')$, $(QQ')$, and $(RR')$ are concurrent.
+
+\begin{Figure}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-356}
+\vskip-0mm
+\end{Figure}
 
 (Note that the obtained configuration of nine points and nine lines is the same as in the original theorem and the obtained result is its reformulation.)
 
@@ -1735,19 +1743,17 @@ Since $V\in p$, by \ref{clm:polar}, we get that $P\in v$;
 that is, $(PV)=v$.
 Hence the statement follows.
 
-
-
-\parbf{\ref{ex:concentric-circ}.}
-Choose a point $P$ outside of the larger circle.
-Construct the lines dual to $P$ for both circles.
-Note that these two lines are parallel. 
-
 \begin{Figure}
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-370}
 \vskip-6mm
 \end{Figure} 
+
+\parbf{\ref{ex:concentric-circ}.}
+Choose a point $P$ outside of the larger circle.
+Construct the lines dual to $P$ for both circles.
+Note that these two lines are parallel. 
 
 Assume that the lines intersect the bigger circle at two pairs of points $X$, $X'$ and $Y$, $Y'$.
 Set $Z\z=(XY)\cap (X'Y')$.
@@ -1764,56 +1770,21 @@ Note that $\ell$ is polar to $L$ and therefore $(OL)\perp \ell$.
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
 
+\parbf{\ref{ex:s-medians}.}
+\textit{(\ref{ex:s-medians:a})}.
+Observe and use that 
+$OA'\z=OB'\z=OC'$.
 
+\parit{(\ref{ex:s-medians:b}).} Notice that the medians of spherical triangle $ABC$ 
+map to the medians of Euclidean a triangle $A'B'C'$.
+It remains to apply \ref{thm:centroid} for $\triangle A'B'C'$.
 
-\parbf{\ref{ex:2(pi/4)=pi/3}.} 
-Applying the Pythagorean theorem, we get that
-$$
-\cos AB_s=\cos AC_s\cdot\cos BC_s=\tfrac12.
-$$
-Therefore, $AB_s=\tfrac\pi3$.
+\parbf{\ref{ex:s-altitudes}.}
+Apply the reflection in the plane thru $O$, $N$, and $P$.
 
-Alternatively, 
-look at the tessellation of the hemisphere in the picture; 
-it is made from 12 copies of $\triangle_s A B C$ and 4 equilateral spherical triangles.
-Due to the symmetry of this tessellation, it follows that $[AB]_s$ occupies $\tfrac16$ of the equator, meaning $AB_s=\tfrac\pi3$.
-
-\begin{Figure}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-358}
-\end{Figure}
-
-\parbf{\ref{ex:taurinus}.}
-Use Euler's formula (\ref{sec:Euler's formula}) to show that $\sin(i\cdot x)=i\cdot\sinh x$ and apply it.
-You should get the following answers:
-\[\cosh c=\cosh a \cdot \cosh b-\sinh a\cdot \sinh b\cdot \cos\gamma,\]
-\[\cos \gamma=-\cos \alpha \cdot \cos \beta+\sin \alpha\cdot \sin \beta \cdot \cosh c,\]
-\[\frac{\sin \alpha}{\sinh a}=\frac{\sin \beta}{\sinh b}=\frac{\sin \gamma}{\sinh c}.\]
-
-\parbf{\ref{ex:cone}.}
-Consider the inversion of the base circle across a sphere with its center at the tip of the cone and apply \ref{thm:inversion-3d}.
-
-\parbf{\ref{ex:two-stereographics}.}
-Note that points on $\Omega$ do not move.
-Moreover, points inside $\Omega$ 
-are mapped outside of $\Omega$ and the other way around.
-
-
-Furthermore, note that this map sends circles to circles;
-moreover, the perpendicular circles are mapped to perpendicular circles.
-This implies that circles perpendicular to $\Omega$ are mapped to themselves.
-
-Now, consider a point $P\notin\Omega$.
-Let $P'$ be the inverse of $P$ across~$\Omega$.
-Choose two distinct circles $\Gamma_1$ and $\Gamma_2$ that pass thru $P$ and~$P'$.
-According to \ref{cor:perp-inverse}, 
-$\Gamma_1\perp \Omega$ and $\Gamma_2\perp \Omega$.
-
-Therefore, the inversion across $\Omega$ sends $\Gamma_1$ to itself, and the same holds for~$\Gamma_2$. 
-
-The image of $P$ must lie on both $\Gamma_1$ and ~$\Gamma_2$.
-Since the image of $P$ is distinct from $P$, it must be~$P'$.
+\parbf{\ref{ex:stereographic-inversion}.}
+Apply \ref{thm:inverse}\textit{\ref{thm:inverse:line}}
+and \ref{thm:inversion-3d}\textit{\ref{thm:inversion-3d:angle}}.
 
 \parbf{\ref{ex:great-circ}.}
 Apply \ref{thm:inversion-3d}\textit{\ref{thm:inversion-3d:b}}.
@@ -1832,14 +1803,41 @@ In the plane $\Lambda$, the map $Q\mapsto Q'$ is an inversion across the circle 
 This reduces the problem to Euclidean plane geometry.
 The remaining calculations in $\Lambda$ are similar to those in the proof of \ref{lem:conformal}.
 
-\parbf{\ref{ex:s-medians}.}
-\textit{(\ref{ex:s-medians:a})}.
-Observe and use that 
-$OA'\z=OB'\z=OC'$.
+\parbf{\ref{ex:cone}.}
+Consider the inversion of the base circle across a sphere with its center at the tip of the cone and apply \ref{thm:inversion-3d}.
 
-\parit{(\ref{ex:s-medians:b}).} Notice that the medians of spherical triangle $ABC$ 
-map to the medians of Euclidean a triangle $A'B'C'$.
-It remains to apply \ref{thm:centroid} for $\triangle A'B'C'$.
+
+\parbf{\ref{ex:2(pi/4)=pi/3}.} 
+Applying the Pythagorean theorem, we get that
+$$
+\cos AB_s=\cos AC_s\cdot\cos BC_s=\tfrac12.
+$$
+Therefore, $AB_s=\tfrac\pi3$.
+
+{
+
+\begin{wrapfigure}{r}{28mm}
+\vskip-6mm
+\centering
+\includegraphics{mppics/pic-358}
+\end{wrapfigure}
+
+Alternatively, 
+look at the tessellation of the hemisphere in the picture; 
+it is made from 12 copies of $\triangle_s A B C$ and 4 equilateral spherical triangles.
+Due to the symmetry of this tessellation, it follows that $[AB]_s$ occupies $\tfrac16$ of the equator, meaning $AB_s=\tfrac\pi3$.
+
+}
+
+\parbf{\ref{ex:taurinus}.}
+Use Euler's formula (\ref{sec:Euler's formula}) to show that $\sin(i\cdot x)=i\cdot\sinh x$ and apply it.
+You should get the following answers:
+\[\cosh c=\cosh a \cdot \cosh b-\sinh a\cdot \sinh b\cdot \cos\gamma,\]
+\[\cos \gamma=-\cos \alpha \cdot \cos \beta+\sin \alpha\cdot \sin \beta \cdot \cosh c,\]
+\[\frac{\sin \alpha}{\sinh a}=\frac{\sin \beta}{\sinh b}=\frac{\sin \gamma}{\sinh c}.\]
+
+
+
 
 %\subsection*{Chapter~\ref{chap:klein}}
 \refstepcounter{chapter}
@@ -1858,18 +1856,18 @@ Note that $\hat P\in [A_iB_i]$ if and only if $P\in\Gamma_i$.
 
 \parbf{\ref{ex:P<->hatP}.} Apply \ref{lem:P-hat-chord} and the definition of h-distance in \ref{sec:conformal-model}.
 
+\begin{Figure}
+\centering
+\vskip-0mm
+\includegraphics{mppics/pic-360}
+\end{Figure}
+
 \parbf{\ref{ex:h-median}.} 
 The observation follows since the reflection across the perpendicular bisector of $[PQ]$ is a motion of the Euclidean plane and a motion of the h-plane as well.
 
 We can assume that the center of the circumcircle coincides with the center of the absolute.
 In this case, the h-medians of the triangle coincide with the Euclidean medians.
 It remains to apply \ref{thm:centroid}.
-
-\begin{Figure}
-\centering
-\vskip-0mm
-\includegraphics{mppics/pic-360}
-\end{Figure}
 
 \parbf{\ref{ex:h-altitudes}.} 
 Use the projective model.
@@ -1891,14 +1889,17 @@ Hence the result.
 
 \parbf{\ref{ex:klein-for-angle-parallelism}.}
 Let $Q$ be the footpoint of $P$ on the line and $\phi$ be the angle of parallelism. 
+
+\begin{wrapfigure}{r}{28mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-362}
+\end{wrapfigure}
+
 We can assume that $P$ is the center of the absolute.
 Therefore $PQ=\cos\phi$ and
 \[PQ_h=\tfrac12\cdot\ln\frac{1+\cos\phi}{1-\cos\phi}.\]
 
-\begin{Figure}
-\centering
-\includegraphics{mppics/pic-362}
-\end{Figure}
 
 \parbf{\ref{ex:klein-inradius}.} 
 Apply \ref{ex:klein-for-angle-parallelism} for $\phi=\tfrac\pi3$.
@@ -1955,20 +1956,23 @@ In the Euclidean plane, the circle $\Gamma_2$ is tangent to $k$;
 that is, $T$ is the only point at intersection of $\Gamma_2$ and $k$.
 It defines a unique line $(PT)$ parallel to~$\ell$.
 
-\parbf{\ref{ex:common-perp}.} Choose two points $P$ and $Q$ on $\ell$.
-Drop perpendiculars $p$ and $q$ from $P$ and $Q$ to $m$.
-Drop perpendiculars from $P$ and $Q$ to $q$ and $m$;
-label their point of intersection by $H$.
+\parbf{\ref{ex:common-perp}.}
+Choose two points $P$ and $Q$ on $\ell$.
+Drop perpendiculars $p$ and $q$ from $P$ and $Q$ to~$m$
+(follow \ref{ex:construction-perpendicular}).
+Drop perpendiculars from $P$ to $q$ and from $Q$ to~$p$;
+label their point of intersection by~$H$.
+(Assume $H$ exists, if not choose other $P$ and $Q$.) 
 Drop perpendicular $n$ from $H$ to $m$.
 
-We need to show that $n\perp \ell$.
+To justify the construction, we need to show that $n\perp \ell$.
 To do this, move $H$ to the center of the absolute and apply \ref{obs:h-p-perp}, \ref{ex:klein-perp}, and \ref{thm:orthocenter}.
 
 %\subsection*{Chapter~\ref{chap:complex}}
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
 
-\parbf{\ref{ex:|zw|}.} Use that $|z|^2=z\cdot \bar z$ for $z=v$, $w$, and $v\cdot w$.
+\parbf{\ref{ex:|zw|}.} Use that $|z|^2=z\cdot \bar z$ and $\bar z\cdot \bar u=\overline{z\cdot u}$.
 
 \parbf{\ref{ex:ptolemy}.}
 Choose a quadrangle $ABCD$.
@@ -2020,7 +2024,6 @@ The statement follows since the value $\tfrac{(v-u)\cdot(z-w)}{(v-w)\cdot(z-u)}$
 \parbf{\ref{ex:3-squares}.}
 We can choose the complex coordinates so that the points $O$, $E$, $A$, $B$, and $C$ have coordinates
 $0$, $1$, $1+i$, $2+i$, and $3+i$ respectively.
-
 Set $\measuredangle EOA=\alpha$, $\measuredangle EOB=\beta$, and $\measuredangle EOC\z=\gamma$.
 Note that
 \begin{align*}
@@ -2151,8 +2154,6 @@ such that $AD=a$ and $BD=b$;
 (4) let $C$ be an intersection of $\Gamma$ and~$\ell$.
 Then $DC= \sqrt{a\cdot b}$.
 
-The construction of $\tfrac{a^2}b$ is analogous.
-
 {
 
 \begin{wrapfigure}{r}{27mm}
@@ -2160,6 +2161,9 @@ The construction of $\tfrac{a^2}b$ is analogous.
 \centering
 \includegraphics{mppics/pic-366}
 \end{wrapfigure}
+
+The construction of $\tfrac{a^2}b$ is analogous.
+
 
 \parbf{\ref{ex:5-gon},} \textit{(\ref{ex:5-gon:a})}.
 Look at the diagram;
@@ -2203,7 +2207,7 @@ Suppose that every initial point has coordinates $(a,b\cdot\sqrt{3})$ for ration
 Show and use that any point that can be constructed with the 30°-set-square has coordinates of the same type.
 
 \begin{wrapfigure}[8]{r}{21mm}
-\vskip-0mm
+\vskip-6mm
 \centering
 \includegraphics{mppics/pic-368}
 \end{wrapfigure}
@@ -2291,7 +2295,9 @@ Show that among elementary sets
 only one-point sets can be subsets of a circle.
 It remains to note that any circle contains an infinite number of points.
 
-{
+
+\parbf{\ref{ex:two-parallelograms}.}
+Suppose that $E$ denotes the point of intersection of the lines $(BC)$ and~$(C'D')$.
 
 \begin{wrapfigure}{r}{28mm}
 \vskip-4mm
@@ -2300,20 +2306,8 @@ It remains to note that any circle contains an infinite number of points.
 
 \end{wrapfigure}
 
-\parbf{\ref{ex:two-parallelograms}.}
-Suppose that $E$ denotes the point of intersection of the lines $(BC)$ and~$(C'D')$.
-
-Use \ref{prop:area-parallelogram} to prove the following two identities:
-
-\begin{align*}
-\area(\solidsquare AB'ED)
-&=\area(\solidsquare ABCD),
-\\
-\area(\solidsquare AB'ED)
-&=\area(\solidsquare AB'C'D').
-\end{align*}
-
-}
+Use \ref{prop:area-parallelogram} to prove that the following solid parallelograms have the same area:
+$\solidsquare ABCD$, $\solidsquare AB'ED$, and $\solidsquare AB'C'D'$.
 
 \parbf{\ref{ex:three-trig}.}
 Without loss of generality, we may assume that the angles $ABC$ and $BCA$ are acute.

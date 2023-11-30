@@ -28,7 +28,7 @@ Let us add one \index{point!ideal point}\index{ideal!point}\emph{ideal point} fo
 assuming that all these ideal points lie on one \index{line!ideal line}\index{ideal!line}\emph{ideal line}.
 We also assume that the ideal line belongs to each parallel pencil.
 
-We obtain the so-called \index{projective!plane}\index{real!projective plane}\emph{real projective plane} (or  the \index{projective!completion}\emph{projective completion} of the original plane). 
+We obtain the so-called \index{projective!plane}\emph{projective plane} (or  the \index{projective!completion}\emph{projective completion} of the original plane). 
 It comes with an incidence structure --- we say that three points lie on one line if the corresponding pencils contain a common line.
 Projective geometry studies this incidence structure.
 
@@ -78,7 +78,7 @@ If a line $\ell$ is not ideal, we take the plane $\dot \ell$ that contains $\ell
 if the line $\ell$ is ideal, we take $\dot \ell$ to be the plane passing thru $O$ and parallel to $\Pi$ (that is, $\dot\ell\cap\Pi=\emptyset$).
 
 \begin{thm}{Observation}\label{obs:bijections}
-Let $P$ and $\ell$ be a point and a line in the real projective plane.
+Let $P$ and $\ell$ be a point and a line in the projective plane.
 Then 
 \[P\in \ell \quad\iff\quad \dot P\subset \dot \ell,\]
 where $\dot P$ and $\dot \ell$ are defined by the constructed bijections.
@@ -146,11 +146,11 @@ we have to observe that
 
 \section{Projective transformations}
 
-A bijection from the real projective plane to itself 
+A bijection from the projective plane to itself 
 that sends lines to lines 
 is called \index{projective!transformation}\emph{projective transformation}.
 
-Note that any affine transformation defines  a projective transformation on the corresponding real projective plane.
+Note that any affine transformation defines  a projective transformation on the corresponding projective plane.
 We will call such projective transformations \index{affine transformation}\emph{affine}; 
 these are projective transformations that send the ideal line to itself.
 
@@ -158,7 +158,7 @@ The extended perspective projection, as  discussed in the previous section,
 provides another source of examples of projective transformations.
 
 \begin{thm}{Theorem}\label{thm:moving}
-Given a line $\ell$ in the real projective plane, there is a perspective projection that sends $\ell$ to the ideal line.
+Given a line $\ell$ in the projective plane, there is a perspective projection that sends $\ell$ to the ideal line.
 
 Moreover, a perspective transformation is either affine or, in a suitable coordinate system, it can be written as a composition of the extension of perspective projection 
 \[\beta\:(x,y)\mapsto (\tfrac xy,\tfrac 1y)\]
@@ -185,13 +185,35 @@ Note that $\beta$ is self-inverse; therefore
 
 \begin{thm}{Exercise}\label{ex:proj-cross-ratio}
 Let $P\mapsto P'$ be (a) an affine transformation, (b) the perspective projection defined by $(x,y)\mapsto (\tfrac xy,\tfrac 1y)$, or (c) an arbitrary projective transformation.
-Suppose $P_1,P_2,P_3,P_4$ lie on one line.
+Suppose $P_1,P_2,P_3,P_4$ are distinct points on one line.
 Show that 
-\[\frac{P_1P_2\cdot P_3P_4}{P_2P_3\cdot P_4P_1}=\frac{P'_1P'_2\cdot P'_3P'_4}{P'_2P'_3\cdot P'_4P'_1};\]
-that is, each of these maps preserves the cross-ratio for quadruples of points on one line.
+\[\frac{P_1P_2\cdot P_3P_4}{P_2P_3\cdot P_4P_1}=\frac{P'_1P'_2\cdot P'_3P'_4}{P'_2P'_3\cdot P'_4P'_1}\]
+if none of these points lies on the ideal line.
+In other words, each of these maps preserves the cross-ratio for quadruples of points on one line.
 
 \end{thm}
 
+{
+
+\begin{wrapfigure}{o}{60mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-231}
+\end{wrapfigure}
+
+\begin{thm}{Advanced exercise}\label{ex:proj-cross-ratio=1}
+Let $A$, $B$, $C$, $P$, $Q$, $V$, $W$, $X$, $Y$ be as on the diagram.
+\begin{enumerate}[(a)]
+\item\label{ex:proj-cross-ratio=1:=} Show that 
+\[\frac{AX\cdot BY}{AY\cdot BX}=\frac{AP\cdot CQ}{AQ\cdot CP}.\]
+\item\label{ex:proj-cross-ratio=1:1} 
+Use part (\ref{ex:proj-cross-ratio=1:=}) to show that
+\[AX\cdot BY=AY\cdot BX.\]
+\end{enumerate}
+
+\end{thm}
+
+}
 
 
 \section{Moving points to infinity}
@@ -199,7 +221,7 @@ that is, each of these maps preserves the cross-ratio for quadruples of points o
 {
 
 \begin{wrapfigure}{r}{37mm}
-\vskip-0mm
+\vskip-8mm
 \centering
 \includegraphics{mppics/pic-234}
 \end{wrapfigure}
@@ -211,7 +233,7 @@ which will be illustrated by the following classical example:
 
 
 \begin{thm}{Desargues' theorem}\label{thm:desargues}\index{Desargues' theorem}
-Consider three concurrent lines $(AA')$, $(BB')$, and $(CC')$ in the real projective plane.
+Consider three concurrent lines $(AA')$, $(BB')$, and $(CC')$ in the projective plane.
 Define 
 \begin{align*}
 X&=(BC)\cap (B'C'),\\
@@ -379,17 +401,17 @@ Show that the Euclidean plane does not admit a duality.
 }
 
 \begin{thm}{Theorem}\label{thm:dual}
-The real projective plane admits a duality.
+The projective plane admits a duality.
 \end{thm}
 
 
 
 \parit{Proof.}
 Consider a plane $\Pi$ and a point $O\notin\Pi$ in the space;
-suppose that $\hat \Pi$ denotes the corresponding real projective plane.
+suppose that $\hat \Pi$ denotes the corresponding projective plane.
 
-Recall that $\Phi$ and $\Psi$ denote the set of all lines and planes passing thru $O$.
-According to Observation~\ref{obs:bijections}, there are bijections $P\leftrightarrow\dot P$  between points of $\hat\Pi$ and $\Phi$ and $\ell\leftrightarrow\dot\ell$ between lines in $\hat\Pi$ and $\Psi$ such that 
+Recall that $\Phi$ and $\Psi$ denote the set of all lines and planes passing thru~$O$.
+By \ref{obs:bijections}, there are bijections $P\leftrightarrow\dot P$  between points of $\hat\Pi$ and $\Phi$ and $\ell\leftrightarrow\dot\ell$ between lines in $\hat\Pi$ and $\Psi$ such that 
 $P\in\ell$ if and only if $\dot P\subset \dot \ell$.
 
 It remains to construct a bijection $\dot \ell \leftrightarrow \dot L$
@@ -415,7 +437,7 @@ Given a point $P\ne O$ with coordinates $(a,b)$ consider the line $p$
 given by the equation 
 $a\cdot x+b\cdot y=1$.
 
-Show that the correspondence $P$ to $p$ can be extended to a duality of the real projective plane.
+Show that the correspondence $P$ to $p$ can be extended to a duality of the projective plane.
 
 Which line corresponds to $O$?
 
@@ -429,7 +451,7 @@ would be the ``lines $x$, $y$, and $z$ intersect at one point $L$''.
 Let us formulate the dual statement for Desargues' theorem~\ref{thm:desargues}.
 
 
-\begin{thm}{Dual Desargues' theorem}\label{thm:dual-desargues}\index{Dual Desargues' theorem}
+\begin{thm}{Dual Desargues' theorem}\label{thm:dual-desargues}\index{Desargues' theorem}
 Assume that 
 \[X=(BC)\cap (B'C'),\quad Y=(CA)\cap (C'A'),\quad Z=(AB)\cap (A'B'),\]
 and the points $X$, $Y$, and~$Z$ are collinear.
@@ -474,7 +496,13 @@ Consider the line $p=(ZZ')$.
 \begin{thm}{Claim}\label{clm:polar}
 The constructed line $p=(ZZ')$ does not depend on the choice of lines $x$ and $y$.
 
-Moreover, $P\leftrightarrow p$ can be extended to a duality such that any point $P$ on the circle $\Gamma$ corresponds to a line $p$ that is tangent to $\Gamma$ at~$P$. 
+Moreover, 
+
+\begin{enumerate}[(a)]
+\item $P\leftrightarrow p$ can be extended to a duality such that any point $P$ on the circle $\Gamma$ corresponds to a line $p$ that is tangent to $\Gamma$ at~$P$.
+\item If $O$ is the center of $\Gamma$, then the inversion of $P$ across $\Gamma$ is the footpoint of $O$ on~$p$.
+\end{enumerate}
+ 
 \end{thm}
 
 We will not prove this claim, but the proof is not hard.
