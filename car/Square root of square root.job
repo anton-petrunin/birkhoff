@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CaR version="20150810">
+<Construction job="true" last="a" target1="$\sqrt{1+\sqrt{3}}$">
+<Window x="0.0" y="0.0" w="5.656854249492385"/>
+<Objects>
+<Point name="0" n="0" showname="true" x="0" actx="0.0" y="0" acty="0.0" shape="circle" fixed="true">Point at 0, 0 </Point>
+<Point name="1" n="1" showname="true" x="1" actx="1.0" y="0" acty="0.0" shape="circle" fixed="true">Point at &quot;1&quot;, &quot;0&quot;</Point>
+<Line name="a" n="2" from="0" to="1">Line through 0 and 1</Line>
+<Circle name="c1" n="18" through="0" midpoint="1" acute="true">Circle around 1 through 0</Circle>
+<Intersection name="I1" n="4" first="a" second="c1" awayfrom="0" shape="circle" which="first">Intersection between a and c1</Intersection>
+<Circle name="c2" n="22" through="1" midpoint="I1" acute="true">Circle around I1 through 1</Circle>
+<Circle name="c3" n="25" through="0" midpoint="I1" acute="true">Circle around I1 through 0</Circle>
+<Plumb name="p1" n="28" point="1" line="a" valid="true">Perpendicular line through 1 to a</Plumb>
+<Intersection name="I3" n="31" first="p1" second="c3" shape="circle" which="first">Intersection between p1 and c3</Intersection>
+<Circle name="c4" n="32" through="I3" midpoint="1" acute="true">Circle around 1 through I3</Circle>
+<Intersection name="I5" n="39" first="a" second="c4" shape="circle" which="first">Intersection between a and c4</Intersection>
+<Circle name="c5" n="40" hidden="super" through="I5" midpoint="0" acute="true">Circle around 0 through I5</Circle>
+<Circle name="c6" n="41" hidden="super" through="0" midpoint="I5" acute="true">Circle around I5 through 0</Circle>
+<Intersection name="I7" n="42" hidden="super" first="c5" second="c6" which="second">Intersection between c5 and c6</Intersection>
+<Intersection name="I8" n="43" hidden="super" first="c6" second="c5" which="second">Intersection between c6 and c5</Intersection>
+<Line name="l4" n="44" from="I7" to="I8">Line through I7 and I8</Line>
+<Intersection name="I9" n="45" first="l4" second="a" shape="circle">Intersection between l4 and a</Intersection>
+<Circle name="c7" n="48" through="I5" midpoint="I9" acute="true">Circle around I9 through I5</Circle>
+<Intersection name="I10" n="51" first="p1" second="c7" shape="circle" which="first">Intersection between p1 and c7</Intersection>
+<Circle name="c8" n="52" through="I10" midpoint="0" acute="true">Circle around 0 through I10</Circle>
+<Intersection name="$\sqrt{1+\sqrt{3}}$" n="3" showname="true" first="a" second="c8" shape="circle" which="first">Intersection between a and c8</Intersection>
+</Objects>
+</Construction>
+</CaR>

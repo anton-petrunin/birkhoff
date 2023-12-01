@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CaR version="20150810">
+<Macro Name="Elliptic Geometry/01: Point (13)">
+<Parameter name="k">=k</Parameter>
+<Parameter name="P2">P2</Parameter>
+<Objects>
+<Point name="P1" n="0" hidden="true" parameter="true" x="0.0" y="0.0">Point at 0.0, 0.0</Point>
+<Circle name="k" n="1" mainparameter="true" midpoint="P1">???</Circle>
+<PointOn name="P2" n="2" mainparameter="true" on="k" inside="true" x="-0.041746837310000014" y="0.5218423622780001" shape="circle">Point on k</PointOn>
+<Expression name="AD1" n="3" hidden="super" showvalue="true" x="4.975630000000002" y="5.78465" value="d(P1,P2)" prompt="Wert">Expression &quot;d(P1,P2)&quot; at 4.97563, 5.78465</Expression>
+</Objects>
+</Macro>
+<Macro Name="Elliptic Geometry/02: Line (27)">
+<Parameter name="k">=k</Parameter>
+<Parameter name="P41">A</Parameter>
+<Parameter name="P42">B</Parameter>
+<Comment>
+<P>Line through two points.</P>
+</Comment>
+<Objects>
+<Point name="P1" n="0" hidden="true" parameter="true" x="0.0" y="0.0">Point at 0.0, 0.0</Point>
+<Circle name="k" n="1" mainparameter="true" midpoint="P1">???</Circle>
+<Point name="P41" n="2" mainparameter="true" x="-0.410928191364029" y="0.3482398714282877">Point at -0.41093, 0.34824</Point>
+<Point name="P42" n="3" mainparameter="true" x="0.3182501309693813" y="0.42671646217269066">Point at 0.31825, 0.42672</Point>
+<Point name="P4" n="4" color="5" hidden="super" x="-x(P41)/d(P1,P41)^2" actx="1.416344264424826" y="-y(P41)/d(P1,P41)^2" acty="-1.2002767269490124" shape="circle" fixed="true">Point at &quot;-x(P41)/d(P1,P41)^2&quot;, &quot;-y(P41)/d(P1,P41)^2&quot;</Point>
+<Circle name="k2" n="5" color="5" hidden="super" through="P42" midpoint="P41" acute="true">Kreis um P41 durch P42</Circle>
+<Circle name="k3" n="6" color="5" hidden="super" through="P41" midpoint="P42" acute="true">Kreis um P42 durch P41</Circle>
+<Intersection name="S1" n="7" color="5" hidden="super" first="k2" second="k3" which="second">Schnitt zwischen k2 und k3</Intersection>
+<Intersection name="S2" n="8" color="5" hidden="super" first="k3" second="k2" which="second">Schnitt zwischen k3 und k2</Intersection>
+<Line name="g1" n="9" color="5" hidden="super" from="S1" to="S2">Gerade durch S1 und S2</Line>
+<Circle name="k4" n="10" color="5" hidden="super" through="P4" midpoint="P42" acute="true">Kreis um P42 durch P4</Circle>
+<Circle name="k5" n="11" color="5" hidden="super" through="P42" midpoint="P4" acute="true">Kreis um P4 durch P42</Circle>
+<Intersection name="S3" n="12" color="5" hidden="super" first="k4" second="k5" which="second">Schnitt zwischen k4 und k5</Intersection>
+<Intersection name="S4" n="13" color="5" hidden="super" first="k5" second="k4" which="second">Schnitt zwischen k5 und k4</Intersection>
+<Line name="g2" n="14" color="5" hidden="super" from="S3" to="S4">Gerade durch S3 und S4</Line>
+<Intersection name="S5" n="15" hidden="true" target="true" first="g2" second="g1" shape="circle">Schnitt zwischen g2 und g1</Intersection>
+<Circle name="k6" n="16" target="true" through="P42" midpoint="S5" acute="true">Kreis um S5 durch P42</Circle>
+</Objects>
+</Macro>
+<Macro Name="Elliptic Geometry/10: Perpendicular (33)">
+<Parameter name="k">=k</Parameter>
+<Parameter name="k6">g</Parameter>
+<Parameter name="P7">P</Parameter>
+<Comment>
+<P>Perpendicular through P to g.</P>
+</Comment>
+<Objects>
+<Point name="P1" n="0" hidden="true" parameter="true" x="0.0" y="0.0">Point at 0.0, 0.0</Point>
+<Circle name="k" n="1" mainparameter="true" midpoint="P1">???</Circle>
+<Point name="P2" n="2" hidden="true" parameter="true" x="2.067075221423117" y="-2.7382607674043653">Point at 2.06708, -2.73826</Point>
+<Circle name="k6" n="3" mainparameter="true" midpoint="P2">???</Circle>
+<Point name="P7" n="4" mainparameter="true" x="0.6184630220117051" y="-0.11728543472716257">Point at 0.61846, -0.11729</Point>
+<Line name="g1" n="5" hidden="super" from="P2" to="P7">Gerade durch P2 und P7</Line>
+<Intersection name="S1" n="6" hidden="super" first="g1" second="k6" shape="circle" which="first">Schnitt zwischen g1 und k6</Intersection>
+<Line name="g2" n="7" hidden="super" from="P1" to="P7">Gerade durch P1 und P7</Line>
+<Point name="P4" n="8" hidden="super" x="-x(S1)/d(P1,S1)^2" actx="-1.2713134349299957" y="-y(S1)/d(P1,S1)^2" acty="-1.4631007066824782" shape="circle" fixed="true">Point at &quot;-x(S1)/d(P1,S1)^2&quot;, &quot;-y(S1)/d(P1,S1)^2&quot;</Point>
+<Circle name="k3" n="9" hidden="super" through="S1" midpoint="P7" acute="true">Kreis um P7 durch S1</Circle>
+<Circle name="k4" n="10" hidden="super" through="P7" midpoint="S1" acute="true">Kreis um S1 durch P7</Circle>
+<Intersection name="S2" n="11" hidden="super" first="k3" second="k4" which="second">Schnitt zwischen k3 und k4</Intersection>
+<Intersection name="S3" n="12" hidden="super" first="k4" second="k3" which="second">Schnitt zwischen k4 und k3</Intersection>
+<Line name="g3" n="13" hidden="super" from="S2" to="S3">Gerade durch S2 und S3</Line>
+<Circle name="k5" n="14" hidden="super" through="P4" midpoint="P7" acute="true">Kreis um P7 durch P4</Circle>
+<Circle name="k7" n="15" hidden="super" through="P7" midpoint="P4" acute="true">Kreis um P4 durch P7</Circle>
+<Intersection name="S4" n="16" hidden="super" first="k5" second="k7" which="second">Schnitt zwischen k5 und k7</Intersection>
+<Intersection name="S5" n="17" hidden="super" first="k7" second="k5" which="second">Schnitt zwischen k7 und k5</Intersection>
+<Line name="g4" n="18" hidden="super" from="S4" to="S5">Gerade durch S4 und S5</Line>
+<Intersection name="S6" n="19" hidden="super" first="g4" second="g3" shape="circle">Schnitt zwischen g4 und g3</Intersection>
+<Line name="g5" n="20" hidden="super" from="S6" to="S1">Gerade durch S6 und S1</Line>
+<Plumb name="l1" n="21" hidden="super" point="S1" line="g5" valid="true">Lot durch S1 zu g5</Plumb>
+<Intersection name="S7" n="22" hidden="super" first="g2" second="l1" shape="circle">Schnitt zwischen g2 und l1</Intersection>
+<Circle name="k8" n="23" hidden="super" through="S1" midpoint="S7" acute="true">Kreis um S7 durch S1</Circle>
+<Intersection name="S8" n="24" hidden="super" first="k8" second="k6" awayfrom="S1" shape="circle" which="second">Schnitt zwischen k8 und k6</Intersection>
+<Point name="P5" n="25" color="5" hidden="super" x="-x(S1)/d(P1,S1)^2" actx="-1.2713134349299957" y="-y(S1)/d(P1,S1)^2" acty="-1.4631007066824782" shape="circle" fixed="true">Point at &quot;-x(S1)/d(P1,S1)^2&quot;, &quot;-y(S1)/d(P1,S1)^2&quot;</Point>
+<Circle name="k9" n="26" color="5" hidden="super" through="S8" midpoint="S1" acute="true">Kreis um S1 durch S8</Circle>
+<Circle name="k10" n="27" color="5" hidden="super" through="S1" midpoint="S8" acute="true">Kreis um S8 durch S1</Circle>
+<Point name="P6" n="28" hidden="super" x="-x(S8)/d(P1,S8)^2" actx="-0.8424160397294878" y="-y(S8)/d(P1,S8)^2" acty="-0.6632348392280452" shape="circle" fixed="true">Point at &quot;-x(S8)/d(P1,S8)^2&quot;, &quot;-y(S8)/d(P1,S8)^2&quot;</Point>
+<Point name="P8" n="29" hidden="super" x="-x(S1)/d(P1,S1)^2" actx="-1.2713134349299957" y="-y(S1)/d(P1,S1)^2" acty="-1.4631007066824782" shape="circle" fixed="true">Point at &quot;-x(S1)/d(P1,S1)^2&quot;, &quot;-y(S1)/d(P1,S1)^2&quot;</Point>
+<Intersection name="S9" n="30" color="5" hidden="super" first="k9" second="k10" which="second">Schnitt zwischen k9 und k10</Intersection>
+<Intersection name="S10" n="31" color="5" hidden="super" first="k10" second="k9" which="second">Schnitt zwischen k10 und k9</Intersection>
+<Circle name="k11" n="32" color="5" hidden="super" through="P5" midpoint="S8" acute="true">Kreis um S8 durch P5</Circle>
+<Circle name="k12" n="33" color="5" hidden="super" through="S8" midpoint="P5" acute="true">Kreis um P5 durch S8</Circle>
+<Circle name="k13" n="34" hidden="super" through="P6" midpoint="S8" acute="true">Kreis um S8 durch P6</Circle>
+<Circle name="k14" n="35" hidden="super" through="S8" midpoint="P6" acute="true">Kreis um P6 durch S8</Circle>
+<Circle name="k15" n="36" hidden="super" through="P8" midpoint="S1" acute="true">Kreis um S1 durch P8</Circle>
+<Circle name="k16" n="37" hidden="super" through="S1" midpoint="P8" acute="true">Kreis um P8 durch S1</Circle>
+<Line name="g6" n="38" color="5" hidden="super" from="S9" to="S10">Gerade durch S9 und S10</Line>
+<Intersection name="S11" n="39" color="5" hidden="super" first="k11" second="k12" which="second">Schnitt zwischen k11 und k12</Intersection>
+<Intersection name="S12" n="40" color="5" hidden="super" first="k12" second="k11" which="second">Schnitt zwischen k12 und k11</Intersection>
+<Intersection name="S13" n="41" hidden="super" first="k13" second="k14" which="second">Schnitt zwischen k13 und k14</Intersection>
+<Intersection name="S14" n="42" hidden="super" first="k14" second="k13" which="second">Schnitt zwischen k14 und k13</Intersection>
+<Intersection name="S15" n="43" hidden="super" first="k15" second="k16" which="second">Schnitt zwischen k15 und k16</Intersection>
+<Intersection name="S16" n="44" hidden="super" first="k16" second="k15" which="second">Schnitt zwischen k16 und k15</Intersection>
+<Line name="g7" n="45" color="5" hidden="super" from="S11" to="S12">Gerade durch S11 und S12</Line>
+<Line name="g8" n="46" hidden="super" from="S13" to="S14">Gerade durch S13 und S14</Line>
+<Line name="g9" n="47" hidden="super" from="S15" to="S16">Gerade durch S15 und S16</Line>
+<Intersection name="S17" n="48" hidden="super" first="g7" second="g6" shape="circle">Schnitt zwischen g7 und g6</Intersection>
+<Circle name="k17" n="49" hidden="super" through="S8" midpoint="S17" acute="true">Kreis um S17 durch S8</Circle>
+<Line name="g10" n="50" hidden="super" from="S17" to="S8">Gerade durch S17 und S8</Line>
+<Line name="g11" n="51" hidden="super" from="S17" to="S1">Gerade durch S17 und S1</Line>
+<Plumb name="l2" n="52" hidden="super" point="S8" line="g10" valid="true">Lot durch S8 zu g10</Plumb>
+<Plumb name="l3" n="53" hidden="super" point="S1" line="g11" valid="true">Lot durch S1 zu g11</Plumb>
+<Intersection name="S18" n="54" hidden="super" first="l2" second="l3" shape="circle">Schnitt zwischen l2 und l3</Intersection>
+<Angle name="w1" n="55" hidden="super" unit="°" first="S18" root="S8" fixedangle="true" fixed="45" acute="true" inverse="true">Angle S18 - S8 with size 45</Angle>
+<Angle name="w2" n="56" hidden="super" unit="°" first="S18" root="S1" fixedangle="true" fixed="45" acute="true">Angle S18 - S1 with size 45</Angle>
+<Intersection name="S19" n="57" hidden="super" first="w1" second="w2" shape="circle" valid="true">Schnitt zwischen w1 und w2</Intersection>
+<Line name="g12" n="58" hidden="super" from="S19" to="S8">Gerade durch S19 und S8</Line>
+<Line name="g13" n="59" hidden="super" from="S19" to="S1">Gerade durch S19 und S1</Line>
+<Plumb name="l4" n="60" hidden="super" point="S8" line="g12" valid="true">Lot durch S8 zu g12</Plumb>
+<Plumb name="l5" n="61" hidden="super" point="S1" line="g13" valid="true">Lot durch S1 zu g13</Plumb>
+<Intersection name="S20" n="62" hidden="super" first="g8" second="l4" shape="circle">Schnitt zwischen g8 und l4</Intersection>
+<Intersection name="S21" n="63" hidden="super" first="g9" second="l5" shape="circle">Schnitt zwischen g9 und l5</Intersection>
+<Circle name="k18" n="64" hidden="super" through="S8" midpoint="S20" acute="true">Kreis um S20 durch S8</Circle>
+<Circle name="k19" n="65" hidden="super" through="S1" midpoint="S21" acute="true">Kreis um S21 durch S1</Circle>
+<Intersection name="S22" n="66" hidden="super" first="k18" second="k19" shape="circle" which="second">Schnitt zwischen k18 und k19</Intersection>
+<Ray name="r1" n="67" hidden="super" from="S17" to="S22">Strahl von S17 in Richtung S22</Ray>
+<Circle name="k20" n="68" hidden="super" fixed="k17^2/d(S22,S17)" midpoint="S17" acute="true">Kreis um S17 mit Radius k17^2/d(S22,S17)</Circle>
+<Point name="P9" n="69" color="5" hidden="super" x="-x(S22)/d(P1,S22)^2" actx="0.4029518604786706" y="-y(S22)/d(P1,S22)^2" acty="0.6622932013275857" shape="circle" fixed="true">Point at &quot;-x(S22)/d(P1,S22)^2&quot;, &quot;-y(S22)/d(P1,S22)^2&quot;</Point>
+<Intersection name="S23" n="70" hidden="super" first="r1" second="k20" shape="circle" which="first">Schnitt zwischen r1 und k20</Intersection>
+<Circle name="k21" n="71" color="5" hidden="super" through="S23" midpoint="S22" acute="true">Kreis um S22 durch S23</Circle>
+<Circle name="k22" n="72" color="5" hidden="super" through="S22" midpoint="S23" acute="true">Kreis um S23 durch S22</Circle>
+<Circle name="k23" n="73" color="5" hidden="super" through="P9" midpoint="S23" acute="true">Kreis um S23 durch P9</Circle>
+<Circle name="k24" n="74" color="5" hidden="super" through="S23" midpoint="P9" acute="true">Kreis um P9 durch S23</Circle>
+<Intersection name="S24" n="75" color="5" hidden="super" first="k21" second="k22" which="second">Schnitt zwischen k21 und k22</Intersection>
+<Intersection name="S25" n="76" color="5" hidden="super" first="k22" second="k21" which="second">Schnitt zwischen k22 und k21</Intersection>
+<Intersection name="S26" n="77" color="5" hidden="super" first="k23" second="k24" which="second">Schnitt zwischen k23 und k24</Intersection>
+<Intersection name="S27" n="78" color="5" hidden="super" first="k24" second="k23" which="second">Schnitt zwischen k24 und k23</Intersection>
+<Line name="g14" n="79" color="5" hidden="super" from="S24" to="S25">Gerade durch S24 und S25</Line>
+<Line name="g15" n="80" color="5" hidden="super" from="S26" to="S27">Gerade durch S26 und S27</Line>
+<Intersection name="S28" n="81" hidden="super" first="g15" second="g14" shape="circle">Schnitt zwischen g15 und g14</Intersection>
+<Circle name="k25" n="82" target="true" through="S23" midpoint="S28" acute="true">Kreis um S28 durch S23</Circle>
+</Objects>
+</Macro>
+<Construction job="true" last="c60" target1="c16">
+<Window x="-0.026356363232959645" y="-0.013404125052929317" w="2.057474551033508"/>
+<Comment>
+<P>This construction simualtes the elliptical (spherical)
+geometry with macros.  </P>
+<P></P>
+<P>You are looking from the north pole. This projection is
+called stereographical projection and has the property that
+angles are preserved. The green circle represents the
+southern hemisphere of the ball. Its boundary is the
+projection of the equator. </P>
+<P></P>
+<P>Lines are great circles on the shpere and are projected to
+circles passing through opposite equator points. Circles
+are projected to circles, but the midpoint is not projected
+to the midpoint of the projected circle. </P>
+<P></P>
+<P>Take care to use the macro for intersection. The
+intersection point of two lines (circles in the projection)
+will then stay in the green circle. Otherwise, the
+intersection point of two lines will switch when the great
+circle passes the north pole.</P>
+</Comment>
+<Assignment>
+<P>This is stereographical projection of the sphere. The green
+circle represents the southern hemisphere of the ball. Its
+boundary is the projection of the equator.</P>
+<P></P>
+<P>Construct a great circle perpedicular to the given great
+circles. </P>
+</Assignment>
+<Objects>
+<Point name="P1" n="0" color="5" hidden="true" x="0" actx="0.0" y="0" acty="0.0" shape="circle" fixed="true">Point at &quot;0&quot;, &quot;0&quot;</Point>
+<Circle name="k" n="4" color="1" type="thin" background="true" fixed="1" midpoint="P1" filled="true" acute="true">Kreis um P1 mit Radius 1</Circle>
+<Point name="P7" n="1" hidden="true" x="-0.10595385465629592" y="0.5703108120515363" shape="circle">Point at -0.10595, 0.57031</Point>
+<Point name="P8" n="5" hidden="true" x="0.6996692403556524" y="0.27121720791536386" shape="circle">Point at 0.69967, 0.27122</Point>
+<Point name="P9" n="6" color="5" hidden="super" x="-x(P7)/d(P1,P7)^2" actx="0.3148884112136937" y="-y(P7)/d(P1,P7)^2" acty="-1.694929043284492" shape="circle" fixed="true">Point at &quot;-x(P7)/d(P1,P7)^2&quot;, &quot;-y(P7)/d(P1,P7)^2&quot;</Point>
+<Circle name="c12" n="7" color="5" hidden="super" through="P8" midpoint="P7" acute="true">Circle around P7 through P8</Circle>
+<Circle name="c13" n="8" color="5" hidden="super" through="P7" midpoint="P8" acute="true">Circle around P8 through P7</Circle>
+<Intersection name="I11" n="9" color="5" hidden="super" first="c12" second="c13" which="second">Intersection between c12 and c13</Intersection>
+<Intersection name="I12" n="10" color="5" hidden="super" first="c13" second="c12" which="second">Intersection between c13 and c12</Intersection>
+<Line name="l5" n="11" color="5" hidden="super" from="I11" to="I12">Line through I11 and I12</Line>
+<Circle name="c14" n="12" color="5" hidden="super" through="P9" midpoint="P8" acute="true">Circle around P8 through P9</Circle>
+<Circle name="c15" n="13" color="5" hidden="super" through="P8" midpoint="P9" acute="true">Circle around P9 through P8</Circle>
+<Intersection name="I13" n="14" color="5" hidden="super" first="c14" second="c15" which="second">Intersection between c14 and c15</Intersection>
+<Intersection name="I14" n="15" color="5" hidden="super" first="c15" second="c14" which="second">Intersection between c15 and c14</Intersection>
+<Line name="l6" n="16" color="5" hidden="super" from="I13" to="I14">Line through I13 and I14</Line>
+<Intersection name="I15" n="17" hidden="true" first="l6" second="l5" shape="circle">Intersection between l6 and l5</Intersection>
+<Circle name="c16" n="18" through="P8" midpoint="I15" acute="true">Circle around I15 through P8</Circle>
+<Point name="P10" n="19" hidden="true" x="0.17384338792270393" y="-0.04234866738868792" shape="circle">Point at 0.17384, -0.04235</Point>
+<Line name="l7" n="20" hidden="super" from="I15" to="P10">Line through I15 and P10</Line>
+<Intersection name="I16" n="21" hidden="super" first="l7" second="c16" shape="circle" which="first">Intersection between l7 and c16</Intersection>
+<Line name="l8" n="22" hidden="super" from="P1" to="P10">Line through P1 and P10</Line>
+<Point name="P11" n="23" hidden="super" x="-x(I16)/d(P1,I16)^2" actx="-1.0683230513771236" y="-y(I16)/d(P1,I16)^2" acty="-1.2193628200121656" shape="circle" fixed="true">Point at &quot;-x(I16)/d(P1,I16)^2&quot;, &quot;-y(I16)/d(P1,I16)^2&quot;</Point>
+<Circle name="c17" n="24" hidden="super" through="I16" midpoint="P10" acute="true">Circle around P10 through I16</Circle>
+<Circle name="c18" n="25" hidden="super" through="P10" midpoint="I16" acute="true">Circle around I16 through P10</Circle>
+<Intersection name="I17" n="26" hidden="super" first="c17" second="c18" which="second">Intersection between c17 and c18</Intersection>
+<Intersection name="I18" n="27" hidden="super" first="c18" second="c17" which="second">Intersection between c18 and c17</Intersection>
+<Line name="l9" n="28" hidden="super" from="I17" to="I18">Line through I17 and I18</Line>
+<Circle name="c19" n="29" hidden="super" through="P11" midpoint="P10" acute="true">Circle around P10 through P11</Circle>
+<Circle name="c20" n="30" hidden="super" through="P10" midpoint="P11" acute="true">Circle around P11 through P10</Circle>
+<Intersection name="I19" n="31" hidden="super" first="c19" second="c20" which="second">Intersection between c19 and c20</Intersection>
+<Intersection name="I20" n="32" hidden="super" first="c20" second="c19" which="second">Intersection between c20 and c19</Intersection>
+<Line name="l10" n="33" hidden="super" from="I19" to="I20">Line through I19 and I20</Line>
+<Intersection name="I21" n="34" hidden="super" first="l10" second="l9" shape="circle">Intersection between l10 and l9</Intersection>
+<Line name="l11" n="35" hidden="super" from="I21" to="I16">Line through I21 and I16</Line>
+<Plumb name="p1" n="36" hidden="super" point="I16" line="l11" valid="true">Perpendicular line through I16 to l11</Plumb>
+<Intersection name="I22" n="37" hidden="super" first="l8" second="p1" shape="circle">Intersection between l8 and p1</Intersection>
+<Circle name="c21" n="38" hidden="super" through="I16" midpoint="I22" acute="true">Circle around I22 through I16</Circle>
+<Intersection name="I23" n="39" hidden="super" first="c21" second="c16" awayfrom="I16" shape="circle" which="second">Intersection between c21 and c16</Intersection>
+<Point name="P12" n="40" color="5" hidden="super" x="-x(I16)/d(P1,I16)^2" actx="-1.0683230513771236" y="-y(I16)/d(P1,I16)^2" acty="-1.2193628200121656" shape="circle" fixed="true">Point at &quot;-x(I16)/d(P1,I16)^2&quot;, &quot;-y(I16)/d(P1,I16)^2&quot;</Point>
+<Circle name="c22" n="41" color="5" hidden="super" through="I23" midpoint="I16" acute="true">Circle around I16 through I23</Circle>
+<Circle name="c23" n="42" color="5" hidden="super" through="I16" midpoint="I23" acute="true">Circle around I23 through I16</Circle>
+<Point name="P13" n="43" hidden="super" x="-x(I23)/d(P1,I23)^2" actx="-1.2312493936013145" y="-y(I23)/d(P1,I23)^2" acty="-0.7951180285828823" shape="circle" fixed="true">Point at &quot;-x(I23)/d(P1,I23)^2&quot;, &quot;-y(I23)/d(P1,I23)^2&quot;</Point>
+<Point name="P14" n="44" hidden="super" x="-x(I16)/d(P1,I16)^2" actx="-1.0683230513771236" y="-y(I16)/d(P1,I16)^2" acty="-1.2193628200121656" shape="circle" fixed="true">Point at &quot;-x(I16)/d(P1,I16)^2&quot;, &quot;-y(I16)/d(P1,I16)^2&quot;</Point>
+<Intersection name="I24" n="45" color="5" hidden="super" first="c22" second="c23" which="second">Intersection between c22 and c23</Intersection>
+<Intersection name="I25" n="46" color="5" hidden="super" first="c23" second="c22" which="second">Intersection between c23 and c22</Intersection>
+<Circle name="c24" n="47" color="5" hidden="super" through="P12" midpoint="I23" acute="true">Circle around I23 through P12</Circle>
+<Circle name="c25" n="48" color="5" hidden="super" through="I23" midpoint="P12" acute="true">Circle around P12 through I23</Circle>
+<Circle name="c26" n="49" hidden="super" through="P13" midpoint="I23" acute="true">Circle around I23 through P13</Circle>
+<Circle name="c27" n="50" hidden="super" through="I23" midpoint="P13" acute="true">Circle around P13 through I23</Circle>
+<Circle name="c28" n="51" hidden="super" through="P14" midpoint="I16" acute="true">Circle around I16 through P14</Circle>
+<Circle name="c29" n="52" hidden="super" through="I16" midpoint="P14" acute="true">Circle around P14 through I16</Circle>
+<Line name="l12" n="53" color="5" hidden="super" from="I24" to="I25">Line through I24 and I25</Line>
+<Intersection name="I26" n="54" color="5" hidden="super" first="c24" second="c25" which="second">Intersection between c24 and c25</Intersection>
+<Intersection name="I27" n="55" color="5" hidden="super" first="c25" second="c24" which="second">Intersection between c25 and c24</Intersection>
+<Intersection name="I28" n="56" hidden="super" first="c26" second="c27" which="second">Intersection between c26 and c27</Intersection>
+<Intersection name="I29" n="57" hidden="super" first="c27" second="c26" which="second">Intersection between c27 and c26</Intersection>
+<Intersection name="I30" n="58" hidden="super" first="c28" second="c29" which="second">Intersection between c28 and c29</Intersection>
+<Intersection name="I31" n="59" hidden="super" first="c29" second="c28" which="second">Intersection between c29 and c28</Intersection>
+<Line name="l13" n="60" color="5" hidden="super" from="I26" to="I27">Line through I26 and I27</Line>
+<Line name="l14" n="61" hidden="super" from="I28" to="I29">Line through I28 and I29</Line>
+<Line name="l15" n="62" hidden="super" from="I30" to="I31">Line through I30 and I31</Line>
+<Intersection name="I32" n="63" hidden="super" first="l13" second="l12" shape="circle">Intersection between l13 and l12</Intersection>
+<Circle name="c30" n="64" hidden="super" through="I23" midpoint="I32" acute="true">Circle around I32 through I23</Circle>
+<Line name="l16" n="65" hidden="super" from="I32" to="I23">Line through I32 and I23</Line>
+<Line name="l17" n="66" hidden="super" from="I32" to="I16">Line through I32 and I16</Line>
+<Plumb name="p2" n="67" hidden="super" point="I23" line="l16" valid="true">Perpendicular line through I23 to l16</Plumb>
+<Plumb name="p3" n="68" hidden="super" point="I16" line="l17" valid="true">Perpendicular line through I16 to l17</Plumb>
+<Intersection name="I33" n="69" hidden="super" first="p2" second="p3" shape="circle">Intersection between p2 and p3</Intersection>
+<Angle name="a1" n="70" hidden="super" unit="°" first="I33" root="I23" fixedangle="true" fixed="45" acute="true" inverse="true">Angle I33 - I23 with size 45</Angle>
+<Angle name="a2" n="71" hidden="super" unit="°" first="I33" root="I16" fixedangle="true" fixed="45" acute="true">Angle I33 - I16 with size 45</Angle>
+<Intersection name="I34" n="72" hidden="super" first="a1" second="a2" shape="circle" valid="true">Intersection between a1 and a2</Intersection>
+<Line name="l18" n="73" hidden="super" from="I34" to="I23">Line through I34 and I23</Line>
+<Line name="l19" n="74" hidden="super" from="I34" to="I16">Line through I34 and I16</Line>
+<Plumb name="p4" n="75" hidden="super" point="I23" line="l18" valid="true">Perpendicular line through I23 to l18</Plumb>
+<Plumb name="p5" n="76" hidden="super" point="I16" line="l19" valid="true">Perpendicular line through I16 to l19</Plumb>
+<Intersection name="I35" n="77" hidden="super" first="l14" second="p4" shape="circle">Intersection between l14 and p4</Intersection>
+<Intersection name="I36" n="78" hidden="super" first="l15" second="p5" shape="circle">Intersection between l15 and p5</Intersection>
+<Circle name="c31" n="79" hidden="super" through="I23" midpoint="I35" acute="true">Circle around I35 through I23</Circle>
+<Circle name="c32" n="80" hidden="super" through="I16" midpoint="I36" acute="true">Circle around I36 through I16</Circle>
+<Intersection name="I37" n="81" hidden="super" first="c31" second="c32" shape="circle" which="second">Intersection between c31 and c32</Intersection>
+<Ray name="r1" n="82" hidden="super" from="I32" to="I37">Ray from I32 pointing to I37</Ray>
+<Circle name="c33" n="2" hidden="super" fixed="c30^2/d(I37,I32)" midpoint="I32" acute="true">Circle around I32 with radius c30^2/d(I37,I32)</Circle>
+<Point name="P15" n="83" color="5" hidden="super" x="-x(I37)/d(P1,I37)^2" actx="-0.9823793377154165" y="-y(I37)/d(P1,I37)^2" acty="-0.9286183968900497" shape="circle" fixed="true">Point at &quot;-x(I37)/d(P1,I37)^2&quot;, &quot;-y(I37)/d(P1,I37)^2&quot;</Point>
+<Intersection name="I38" n="84" hidden="super" first="r1" second="c33" shape="circle" which="first">Intersection between r1 and c33</Intersection>
+<Circle name="c34" n="85" color="5" hidden="super" through="I38" midpoint="I37" acute="true">Circle around I37 through I38</Circle>
+<Circle name="c35" n="86" color="5" hidden="super" through="I37" midpoint="I38" acute="true">Circle around I38 through I37</Circle>
+<Circle name="c36" n="87" color="5" hidden="super" through="P15" midpoint="I38" acute="true">Circle around I38 through P15</Circle>
+<Circle name="c37" n="88" color="5" hidden="super" through="I38" midpoint="P15" acute="true">Circle around P15 through I38</Circle>
+<Intersection name="I39" n="89" color="5" hidden="super" first="c34" second="c35" which="second">Intersection between c34 and c35</Intersection>
+<Intersection name="I40" n="90" color="5" hidden="super" first="c35" second="c34" which="second">Intersection between c35 and c34</Intersection>
+<Intersection name="I41" n="91" color="5" hidden="super" first="c36" second="c37" which="second">Intersection between c36 and c37</Intersection>
+<Intersection name="I42" n="92" color="5" hidden="super" first="c37" second="c36" which="second">Intersection between c37 and c36</Intersection>
+<Line name="l20" n="93" color="5" hidden="super" from="I39" to="I40">Line through I39 and I40</Line>
+<Line name="l21" n="94" color="5" hidden="super" from="I41" to="I42">Line through I41 and I42</Line>
+<Intersection name="I43" n="95" hidden="super" first="l21" second="l20" shape="circle">Intersection between l21 and l20</Intersection>
+<Circle name="c38" n="96" through="I38" midpoint="I43" acute="true">Circle around I43 through I38</Circle>
+<Point name="P16" n="97" hidden="true" x="-0.1493706681599336" y="-0.003755944274343115" shape="circle">Point at -0.14937, -0.00376</Point>
+<Line name="l22" n="98" hidden="super" from="I15" to="P16">Line through I15 and P16</Line>
+<Intersection name="I44" n="99" hidden="super" first="l22" second="c16" shape="circle" which="first">Intersection between l22 and c16</Intersection>
+<Line name="l23" n="100" hidden="super" from="P1" to="P16">Line through P1 and P16</Line>
+<Point name="P17" n="101" hidden="super" x="-x(I44)/d(P1,I44)^2" actx="0.591781653839953" y="-y(I44)/d(P1,I44)^2" acty="-1.550765347392452" shape="circle" fixed="true">Point at &quot;-x(I44)/d(P1,I44)^2&quot;, &quot;-y(I44)/d(P1,I44)^2&quot;</Point>
+<Circle name="c39" n="102" hidden="super" through="I44" midpoint="P16" acute="true">Circle around P16 through I44</Circle>
+<Circle name="c40" n="103" hidden="super" through="P16" midpoint="I44" acute="true">Circle around I44 through P16</Circle>
+<Intersection name="I45" n="104" hidden="super" first="c39" second="c40" which="second">Intersection between c39 and c40</Intersection>
+<Intersection name="I46" n="105" hidden="super" first="c40" second="c39" which="second">Intersection between c40 and c39</Intersection>
+<Line name="l24" n="106" hidden="super" from="I45" to="I46">Line through I45 and I46</Line>
+<Circle name="c41" n="107" hidden="super" through="P17" midpoint="P16" acute="true">Circle around P16 through P17</Circle>
+<Circle name="c42" n="108" hidden="super" through="P16" midpoint="P17" acute="true">Circle around P17 through P16</Circle>
+<Intersection name="I47" n="109" hidden="super" first="c41" second="c42" which="second">Intersection between c41 and c42</Intersection>
+<Intersection name="I48" n="110" hidden="super" first="c42" second="c41" which="second">Intersection between c42 and c41</Intersection>
+<Line name="l25" n="111" hidden="super" from="I47" to="I48">Line through I47 and I48</Line>
+<Intersection name="I49" n="112" hidden="super" first="l25" second="l24" shape="circle">Intersection between l25 and l24</Intersection>
+<Line name="l26" n="113" hidden="super" from="I49" to="I44">Line through I49 and I44</Line>
+<Plumb name="p6" n="114" hidden="super" point="I44" line="l26" valid="true">Perpendicular line through I44 to l26</Plumb>
+<Intersection name="I50" n="115" hidden="super" first="l23" second="p6" shape="circle">Intersection between l23 and p6</Intersection>
+<Circle name="c43" n="116" hidden="super" through="I44" midpoint="I50" acute="true">Circle around I50 through I44</Circle>
+<Intersection name="I51" n="117" hidden="super" first="c43" second="c16" awayfrom="I44" shape="circle" which="second">Intersection between c43 and c16</Intersection>
+<Point name="P18" n="118" color="5" hidden="super" x="-x(I44)/d(P1,I44)^2" actx="0.591781653839953" y="-y(I44)/d(P1,I44)^2" acty="-1.550765347392452" shape="circle" fixed="true">Point at &quot;-x(I44)/d(P1,I44)^2&quot;, &quot;-y(I44)/d(P1,I44)^2&quot;</Point>
+<Circle name="c44" n="119" color="5" hidden="super" through="I51" midpoint="I44" acute="true">Circle around I44 through I51</Circle>
+<Circle name="c45" n="120" color="5" hidden="super" through="I44" midpoint="I51" acute="true">Circle around I51 through I44</Circle>
+<Point name="P19" n="121" hidden="super" x="-x(I51)/d(P1,I51)^2" actx="0.9058505960948822" y="-y(I51)/d(P1,I51)^2" acty="-1.220424823014887" shape="circle" fixed="true">Point at &quot;-x(I51)/d(P1,I51)^2&quot;, &quot;-y(I51)/d(P1,I51)^2&quot;</Point>
+<Point name="P20" n="122" hidden="super" x="-x(I44)/d(P1,I44)^2" actx="0.591781653839953" y="-y(I44)/d(P1,I44)^2" acty="-1.550765347392452" shape="circle" fixed="true">Point at &quot;-x(I44)/d(P1,I44)^2&quot;, &quot;-y(I44)/d(P1,I44)^2&quot;</Point>
+<Intersection name="I52" n="123" color="5" hidden="super" first="c44" second="c45" which="second">Intersection between c44 and c45</Intersection>
+<Intersection name="I53" n="124" color="5" hidden="super" first="c45" second="c44" which="second">Intersection between c45 and c44</Intersection>
+<Circle name="c46" n="125" color="5" hidden="super" through="P18" midpoint="I51" acute="true">Circle around I51 through P18</Circle>
+<Circle name="c47" n="126" color="5" hidden="super" through="I51" midpoint="P18" acute="true">Circle around P18 through I51</Circle>
+<Circle name="c48" n="127" hidden="super" through="P19" midpoint="I51" acute="true">Circle around I51 through P19</Circle>
+<Circle name="c49" n="128" hidden="super" through="I51" midpoint="P19" acute="true">Circle around P19 through I51</Circle>
+<Circle name="c50" n="129" hidden="super" through="P20" midpoint="I44" acute="true">Circle around I44 through P20</Circle>
+<Circle name="c51" n="130" hidden="super" through="I44" midpoint="P20" acute="true">Circle around P20 through I44</Circle>
+<Line name="l27" n="131" color="5" hidden="super" from="I52" to="I53">Line through I52 and I53</Line>
+<Intersection name="I54" n="132" color="5" hidden="super" first="c46" second="c47" which="second">Intersection between c46 and c47</Intersection>
+<Intersection name="I55" n="133" color="5" hidden="super" first="c47" second="c46" which="second">Intersection between c47 and c46</Intersection>
+<Intersection name="I56" n="134" hidden="super" first="c48" second="c49" which="second">Intersection between c48 and c49</Intersection>
+<Intersection name="I57" n="135" hidden="super" first="c49" second="c48" which="second">Intersection between c49 and c48</Intersection>
+<Intersection name="I58" n="136" hidden="super" first="c50" second="c51" which="second">Intersection between c50 and c51</Intersection>
+<Intersection name="I59" n="137" hidden="super" first="c51" second="c50" which="second">Intersection between c51 and c50</Intersection>
+<Line name="l28" n="138" color="5" hidden="super" from="I54" to="I55">Line through I54 and I55</Line>
+<Line name="l29" n="139" hidden="super" from="I56" to="I57">Line through I56 and I57</Line>
+<Line name="l30" n="140" hidden="super" from="I58" to="I59">Line through I58 and I59</Line>
+<Intersection name="I60" n="141" hidden="super" first="l28" second="l27" shape="circle">Intersection between l28 and l27</Intersection>
+<Circle name="c52" n="142" hidden="super" through="I51" midpoint="I60" acute="true">Circle around I60 through I51</Circle>
+<Line name="l31" n="143" hidden="super" from="I60" to="I51">Line through I60 and I51</Line>
+<Line name="l32" n="144" hidden="super" from="I60" to="I44">Line through I60 and I44</Line>
+<Plumb name="p7" n="145" hidden="super" point="I51" line="l31" valid="true">Perpendicular line through I51 to l31</Plumb>
+<Plumb name="p8" n="146" hidden="super" point="I44" line="l32" valid="true">Perpendicular line through I44 to l32</Plumb>
+<Intersection name="I61" n="147" hidden="super" first="p7" second="p8" shape="circle">Intersection between p7 and p8</Intersection>
+<Angle name="a3" n="148" hidden="super" unit="°" first="I61" root="I51" fixedangle="true" fixed="45" acute="true" inverse="true">Angle I61 - I51 with size 45</Angle>
+<Angle name="a4" n="149" hidden="super" unit="°" first="I61" root="I44" fixedangle="true" fixed="45" acute="true">Angle I61 - I44 with size 45</Angle>
+<Intersection name="I62" n="150" hidden="super" first="a3" second="a4" shape="circle" valid="true">Intersection between a3 and a4</Intersection>
+<Line name="l33" n="151" hidden="super" from="I62" to="I51">Line through I62 and I51</Line>
+<Line name="l34" n="152" hidden="super" from="I62" to="I44">Line through I62 and I44</Line>
+<Plumb name="p9" n="153" hidden="super" point="I51" line="l33" valid="true">Perpendicular line through I51 to l33</Plumb>
+<Plumb name="p10" n="154" hidden="super" point="I44" line="l34" valid="true">Perpendicular line through I44 to l34</Plumb>
+<Intersection name="I63" n="155" hidden="super" first="l29" second="p9" shape="circle">Intersection between l29 and p9</Intersection>
+<Intersection name="I64" n="156" hidden="super" first="l30" second="p10" shape="circle">Intersection between l30 and p10</Intersection>
+<Circle name="c53" n="157" hidden="super" through="I51" midpoint="I63" acute="true">Circle around I63 through I51</Circle>
+<Circle name="c54" n="158" hidden="super" through="I44" midpoint="I64" acute="true">Circle around I64 through I44</Circle>
+<Intersection name="I65" n="159" hidden="super" first="c53" second="c54" shape="circle" which="second">Intersection between c53 and c54</Intersection>
+<Ray name="r2" n="160" hidden="super" from="I60" to="I65">Ray from I60 pointing to I65</Ray>
+<Circle name="c55" n="3" hidden="super" fixed="c52^2/d(I65,I60)" midpoint="I60" acute="true">Circle around I60 with radius c52^2/d(I65,I60)</Circle>
+<Point name="P21" n="161" color="5" hidden="super" x="-x(I65)/d(P1,I65)^2" actx="0.960076273336799" y="-y(I65)/d(P1,I65)^2" acty="-1.5620921123245572" shape="circle" fixed="true">Point at &quot;-x(I65)/d(P1,I65)^2&quot;, &quot;-y(I65)/d(P1,I65)^2&quot;</Point>
+<Intersection name="I66" n="162" hidden="super" first="r2" second="c55" shape="circle" which="first">Intersection between r2 and c55</Intersection>
+<Circle name="c56" n="163" color="5" hidden="super" through="I66" midpoint="I65" acute="true">Circle around I65 through I66</Circle>
+<Circle name="c57" n="164" color="5" hidden="super" through="I65" midpoint="I66" acute="true">Circle around I66 through I65</Circle>
+<Circle name="c58" n="165" color="5" hidden="super" through="P21" midpoint="I66" acute="true">Circle around I66 through P21</Circle>
+<Circle name="c59" n="166" color="5" hidden="super" through="I66" midpoint="P21" acute="true">Circle around P21 through I66</Circle>
+<Intersection name="I67" n="167" color="5" hidden="super" first="c56" second="c57" which="second">Intersection between c56 and c57</Intersection>
+<Intersection name="I68" n="168" color="5" hidden="super" first="c57" second="c56" which="second">Intersection between c57 and c56</Intersection>
+<Intersection name="I69" n="169" color="5" hidden="super" first="c58" second="c59" which="second">Intersection between c58 and c59</Intersection>
+<Intersection name="I70" n="170" color="5" hidden="super" first="c59" second="c58" which="second">Intersection between c59 and c58</Intersection>
+<Line name="l35" n="171" color="5" hidden="super" from="I67" to="I68">Line through I67 and I68</Line>
+<Line name="l36" n="172" color="5" hidden="super" from="I69" to="I70">Line through I69 and I70</Line>
+<Intersection name="I71" n="173" hidden="super" first="l36" second="l35" shape="circle">Intersection between l36 and l35</Intersection>
+<Circle name="c60" n="174" through="I66" midpoint="I71" acute="true">Circle around I71 through I66</Circle>
+</Objects>
+</Construction>
+</CaR>
