@@ -6,14 +6,14 @@ The results of this chapter lead to a deeper understanding of both concepts.
 \section{Complex numbers}
 
 Informally,
-a complex number is a number that can be expressed in the form 
+a complex number has form 
 $$z=x+i\cdot y,
 \eqlbl{eq:z=x+iy}$$ 
 where $x$ and $y$ 
 are real numbers and $i^2=-1$. 
 
 The set of complex numbers 
-will be further denoted by~$\mathbb{C}$.
+will be denoted by~$\mathbb{C}$.
 If $x$, $y$, and $z$ are as in \ref{eq:z=x+iy}, 
 then $x$ is called the \index{real!part}\emph{real part} and $y$ is the \index{imaginary!part}\emph{imaginary part} of the complex number~$z$.
 Briefly, it is written as 
@@ -74,6 +74,7 @@ $$\begin{aligned}
 x&=\Re z=\frac{z+\bar z}2,
 &
 y&=\Im z=\frac{z-\bar z}{i\cdot2},
+\quad\text{and}
 &
 x^2+y^2&=z\cdot\bar z.
 \end{aligned}\eqlbl{eq:conj-1}$$
@@ -127,12 +128,6 @@ to prove Ptolemy's inequality (\ref{ptolemy-inq}).
 
 \section{Euler's formula}\label{sec:Euler's formula}
 
-Let $\alpha$ be a real number.
-The following identity is called \index{Euler's formula}\emph{Euler's formula}:
-$$e^{i\cdot\alpha}=\cos\alpha+i\cdot\sin\alpha.
-\eqlbl{eq:euler}$$
-In particular, $e^{i\cdot\pi}=-1$ and $e^{i\cdot\frac\pi2}=i$.
-
 {
 
 \begin{wrapfigure}{r}{36mm}
@@ -140,6 +135,13 @@ In particular, $e^{i\cdot\pi}=-1$ and $e^{i\cdot\frac\pi2}=i$.
 \centering
 \includegraphics{mppics/pic-272}
 \end{wrapfigure}
+
+Let $\alpha$ be a real number.
+The following identity 
+$$e^{i\cdot\alpha}=\cos\alpha+i\cdot\sin\alpha
+\eqlbl{eq:euler}$$
+is called \index{Euler's formula}\emph{Euler's formula}.
+In particular, $e^{i\cdot\pi}\z=-1$ and $e^{i\cdot\frac\pi2}\z=i$.
 
 Geometrically, Euler’s formula can be understood as follows: Imagine
 $O$ and $E$ as points with complex coordinates $0$ and $1$ respectively.
@@ -191,10 +193,10 @@ If $z$ is the complex coordinate of $Z$, then $\rho=|z|$.
 The value $\theta$ is called the \index{argument}\emph{argument} of $z$
 (briefly, $\theta=\arg z$).
 In this case, 
-$$z=\rho\cdot e^{i\cdot\theta}=\rho\cdot(\cos\theta+i\cdot\sin\theta).$$
+$$\qquad\qquad\qquad\qquad z=\rho\cdot e^{i\cdot\theta}=\rho\cdot(\cos\theta+i\cdot\sin\theta).$$
 
 \begin{wrapfigure}[4]{o}{30mm}
-\vskip-12mm
+\vskip-14mm
 \centering
 \includegraphics{mppics/pic-274}
 \end{wrapfigure}
@@ -395,6 +397,7 @@ and any other point $Z$ maps to a point $Z'$ such that $OZ'=|w|\cdot OZ$ and $\m
 
 The third map can be described as a composition of the inversion across the unit circle centered at $O$ and the reflection across $\mathbb{R}$ 
 (the composition can be taken in any order).
+
 Indeed, $\arg z\equiv -\arg \tfrac1z$.
 Therefore, 
 $$\arg z=\arg (1/\bar z);$$
@@ -402,7 +405,6 @@ that is, if the points $Z$ and $Z'$ have complex coordinates $z$ and $1/\bar z$,
 then $Z'\in[OZ)$.
 Clearly, $OZ=|z|$ and $OZ'=|1/\bar z|=\tfrac{1}{|z|}$.
 Therefore, $Z'$ is the inverse of $Z$ across the unit circle centered at~$O$.
-
 Finally, $\tfrac1z\z=\overline{(1/\bar z)}$ is the complex coordinate of
 the reflection of $Z'$ across $\mathbb{R}$.
 

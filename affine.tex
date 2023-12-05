@@ -197,15 +197,16 @@ for constants $a,b,c,d,r,s$ such that the matrix $(\begin{smallmatrix}a&b\\c&d\e
 
 \begin{thm}{Exercise}\label{ex:preserved-circle}
 Let $\Gamma$ be a circle with center $O$.
-Suppose an affine transformation $\alpha$ maps $\Gamma$ to itself.
+Suppose $\alpha\:P\mapsto P'$ is an affine transformation that maps $\Gamma$ to itself.
 Show that $\alpha$ is a motion that fixes $O$;
-that is, $\alpha(O)\z=O$.
+that is, $O'=O$.
 \end{thm}
 
+A bijection from inversive plane to it self is called \index{inversive!transformation}\emph{inversive transformation} if it maps circlines to circline.
+By \ref{thm:inverse-cline},  inversions are  inversive transformations.
 
 \begin{thm}{Advaneced exercise}\label{ex:inversions-inversive}
-Let $\alpha$ be a bijection of inversive plane.
-Show that $\alpha$ sends circlines to circlines if and only if it is a composition of inversions and reflections.
+Show that any inversive transformation is a composition of inversions and reflections.
 \end{thm}
 
 
@@ -277,8 +278,9 @@ $$f(\tfrac mn)=\tfrac mn \eqlbl{eq:m/n}$$
 for any rational number~$\tfrac mn$.
 
 Assume~$a\ge 0$.
-Then the equation $x\cdot x=a$ has a real solution $x\z=\sqrt{a}$.
-Therefore, $[f(\sqrt{a})]^2=f(\sqrt{a})\cdot f(\sqrt{a})=f(a)$,
+Then the equation $x^2=a$ has a real solution $x\z=\sqrt{a}$.
+Suppose $y=f(x)$.
+By~\textit{(\ref{lem:R-auto:c})}, $f(a)=y^2$,
 and hence $f(a)\ge 0$.
 
 \raggedcolumns\setlength{\multicolsep}{.5mm}

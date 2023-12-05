@@ -39,7 +39,7 @@ For a point $P'\in \Sigma$ consider its footpoint $\hat P$
 on $\Pi$;
 this is the closest point to~$P'$.
 
-Note that the composition $P\z\leftrightarrow P'\z\leftrightarrow\hat P$ of these two maps
+Note that the composition of these two maps $P\z\leftrightarrow P'\z\leftrightarrow\hat P$
 gives a bijection from the h-plane to itself.
 Furthermore, note that $P=\hat P$
  if and only if  $P\in \Omega$ or $P=O$.
@@ -51,7 +51,8 @@ Furthermore, note that $P=\hat P$
 %\end{thm}
 
 \begin{thm}{Lemma}\label{lem:P-hat-chord}
-Let $(PQ)_h$ be an h-line with the ideal points $A$ and~$B$.
+Let $P\leftrightarrow\hat P$ be the bijection of the h-plane described above.
+Suppose $(PQ)_h$ is an h-line with the ideal points $A$ and~$B$.
 Then $\hat P,\hat Q\in[AB]$.
 
 Moreover, 
@@ -76,7 +77,7 @@ each circline in $\Pi$ that is perpendicular to $\Omega$
 is mapped to a circle in $\Sigma$ that is still perpendicular to~$\Omega$.
 It follows that the stereographic projection sends $(PQ)_h$ to the intersection of the northern hemisphere of $\Sigma$ with a plane perpendicular to~$\Pi$.
 
-Suppose that $\Lambda$ denotes the plane;
+Denote this plane by $\Lambda$;
 it contains the points $A$, $B$, $P'$, $\hat P$ and the circle $\Gamma=\Sigma\cap\Lambda$.
 (It also contains $Q'$ and $\hat Q$ but we will not use these points for a while.)
 
@@ -86,7 +87,7 @@ it contains the points $A$, $B$, $P'$, $\hat P$ and the circle $\Gamma=\Sigma\ca
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-258}
-\caption*{The plane~$\Lambda$.}
+\caption*{$\Lambda$}
 \end{wrapfigure}
 
 Note that 
@@ -138,7 +139,7 @@ PQ_h&\df\ln\frac{A Q\cdot B P}{QB\cdot PA}=
 
 \begin{thm}{Exercise}\label{ex:hex}
 Let $\Gamma_1$, $\Gamma_2$, and $\Gamma_3$ 
-be three circles perpendicular to the circle~$\Omega$.
+be three circles perpendicular to a circle~$\Omega$.
 Let $[A_1B_1]$, $[A_2B_2]$, and $[A_3B_3]$ denote
 the common chords of $\Omega$ and $\Gamma_1$, $\Gamma_2$, $\Gamma_3$ respectively.
 Show that the chords $[A_1B_1]$, $[A_2B_2]$, and $[A_3B_3]$ intersect at one point inside $\Omega$ if and only if $\Gamma_1$, $\Gamma_2$, and $\Gamma_3$ intersect at two points.
@@ -154,7 +155,7 @@ Show that $2\cdot OP_h=O\hat P_h$, where $O$ is the center of absolute, and $P\l
 \section{Projective model}
 \label{sec:proj-model}
 
-The following picture illustrates the map $P\mapsto \hat P$ described in the previous section --- 
+The following picture illustrates the bijection $P\mapsto \hat P$ of the h-plane described in the previous section --- 
 \begin{figure}[!ht]
 \centering
 \includegraphics{mppics/pic-262}
@@ -162,7 +163,7 @@ The following picture illustrates the map $P\mapsto \hat P$ described in the pre
 if you take the picture on the left and apply the map $P\z\mapsto \hat P$,
 you get the picture on the right.
 The pictures are {}\emph{conformal} and \index{projective!model}\emph{projective models} of the hyperbolic plane respectively.
-The map $P\mapsto \hat P$ is a \textit{translation} from one to another.
+The map $P\mapsto \hat P$ serves as a \textit{translation} between the models.
 
 In the projective model, things look different;
 some become simpler, and others become more complex.
@@ -292,9 +293,13 @@ Use the projective model to derive the formula for the angle of parallelism (Pro
 Use the projective model to find an inradius of an ideal triangle.
 \end{thm}
 
-Let us sketch a proof of the hyperbolic Pythagorean theorem\index{Pythagorean theorem} (\ref{thm:pyth-h-poincare}) in the projective model.
-Recall its statement:
-\[\cosh c=\cosh a\cdot\cosh b,\eqlbl{eq:hyp-pyth-proj}\]
+\begin{thm}{Advanced exercise}\label{ex:pyth-h-proj}
+Prove the hyperbolic Pythagorean theorem (\ref{thm:pyth-h-poincare}) using the following idea.
+\end{thm}
+
+Recall that the hyperbolic Pythagorean theorem\index{Pythagorean theorem} (\ref{thm:pyth-h-poincare}) states that
+\[\cosh c=\cosh a\cdot\cosh b,
+\eqlbl{eq:hyp-pyth-proj}\]
 where $a\z=BC_h$, $b=CA_h$, and $c=AB_h$ and
 $\triangle_hACB$ is an h-triangle with a right angle at~$C$.
 
@@ -304,6 +309,7 @@ $\triangle_hACB$ is an h-triangle with a right angle at~$C$.
 \includegraphics{mppics/pic-268}
 \end{wrapfigure}
 
+\parit{Idea.}
 Note that we can assume that $A$ is the center of the absolute.
 By \ref{obs:h-p-perp} the Euclidean triangle $ABC$ is right.
 Set 
@@ -311,10 +317,6 @@ $s=BC$, $t =CA$, $u\z= AB$.
 According to the Euclidean Pythagorean theorem (\ref{thm:pyth}), we have
 $$u^2=s^2+t^2.\eqlbl{eq:hyp-proj}$$
 It remains to express $a$, $b$, and $c$ using $s$, $u$, and $t$ and show that \ref{eq:hyp-proj} implies~\ref{eq:hyp-pyth-proj}.
-
-\begin{thm}{Advanced exercise}\label{ex:pyth-h-proj}
-Finish the proof of the hyperbolic Pythagorean theorem (\ref{thm:pyth-h-poincare}) indicated above.
-\end{thm}
 
 \section{Bolyai's construction}
 
@@ -343,8 +345,7 @@ Mark a point of intersection of $\Gamma$ with~$k$; denote it by $T$.
 Explain what happens if one performs the Bolyai construction in the Euclidean plane.
 \end{thm}
 
-To prove that Bolyai's construction gives the asymptotically parallel line in the h-plane,
-it is sufficient to show the following:
+The following proposition implies that Bolyai's construction works.
 
 \begin{thm}{Proposition}\label{prop:boyai}
 Assume $P$, $Q$, $R$, $S$, $T$ are points in the h-plane

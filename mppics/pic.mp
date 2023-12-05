@@ -4521,7 +4521,7 @@ endfig;
 
 beginfig(253)
 save u;
-u:=1.6cm;
+u:=1.1cm;
 
 z.O=origin;
 z.N=(0,1)*u;

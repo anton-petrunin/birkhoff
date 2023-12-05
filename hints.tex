@@ -5,7 +5,7 @@
 %\addcontentsline{toc}{chapter}{Hints}
 %\subsection*{Chapter~\ref{chap:metr}}
 
-\raggedcolumns\setlength{\multicolsep}{-0mm}
+\raggedcolumns\setlength{\multicolsep}{15mm}
 \spell{\begin{multicols}{2}}{}
 
 \refstepcounter{chapter}
@@ -583,7 +583,7 @@ Repeat the construction in \ref{ex:construction-perpendicular} twice.
 {
 
 \begin{wrapfigure}{r}{23mm}
-\vskip-5mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-333}
 \end{wrapfigure} 
@@ -1390,18 +1390,18 @@ Apply the definition of the angle of parallelism.
 \parbf{\ref{ex:ultra-parallel}}; \textit{``only-if'' part.}
 Suppose $\ell$ and $m$ are ultraparallel; that is, they do not intersect and have distinct ideal points.
 
-\begin{Figure}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-359}
-\end{Figure}
-
 Denote the ideal points by $A$, $B$, $C$, and $D$;
 we may assume that they appear on the absolute in the same order.
 In this case, the h-line with ideal points $A$ and $C$ intersects the h-line with ideal points $B$ and $D$.
 Let $O$ be their point of intersection.
 By \ref{thm:main-observ}, we can assume that $O$ is the center of absolute.
 Note that $\ell$ is the reflection of $m$ across $O$ in the Euclidean sense.
+
+\begin{Figure}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-359}
+\end{Figure}
 
 Drop an h-perpendicular $n$ from $O$ to $\ell$ and
 show that $n\perp m$.
@@ -1426,8 +1426,7 @@ By the triangle inequality, the h-distance from $B$ to $(AC)_h$ is at least 50.
 By \ref{prop:angle-parallelism}, $|\measuredangle_h ABC|<2\cdot\phi$, where $\phi$ is the angle of parallelism at the distance $50$.
 Show that $\cos\phi\z=\tfrac{e^{100}-1}{e^{100}+1}$ and
 use it to estimate~$\phi$.
-
-The inequalities $\cos\phi\z\le 1-\tfrac1{10}\cdot\phi^2$ for $|\phi|\z<\tfrac\pi2$ and $e^3>10$ should help to finish the proof.
+You may use that $\cos\phi\z\le 1-\tfrac1{10}\cdot\phi^2$ for $|\phi|\z<\tfrac\pi2$ and $e^3>10$.
 
 \parbf{\ref{ex:side-sup}.}
 Note that the angle of parallelism at $B$ with respect to $(CD)_h$ is greater than $\tfrac\pi4$,
@@ -1448,12 +1447,6 @@ Show and use that $P'$ is an h-reflection of $P$ across $Q\in m$ if and only if 
 $PR_h=P'R'_h$, and $Q$ is the h-midpoint of $[RR']_h$. 
 You may need \ref{prop:vert}, SAS, and SAA (see \ref{ex:SAA}).
 
-\begin{wrapfigure}{r}{33mm}
-\vskip-5mm
-\centering
-\includegraphics{mppics/pic-352}
-\end{wrapfigure} 
-
 \parbf{\ref{ex:right-trig-horocycle}.}
 As usual, we assume that the absolute is a unit circle.
 
@@ -1461,6 +1454,12 @@ Consider a hyperbolic triangle $PQR$
 with a right angle at $Q$, where  $PQ_h\z=QR_h$
 and the vertices $P$, $Q$, and $R$ 
 lie on a horocycle.
+
+\begin{wrapfigure}{r}{33mm}
+\vskip-3mm
+\centering
+\includegraphics{mppics/pic-352}
+\end{wrapfigure} 
 
 We may assume that $Q$ is the center of the absolute.
 In this case, $\measuredangle_hPQR\z=\measuredangle PQR\z=\pm\tfrac\pi2$ and $PQ=QR$.
@@ -1594,7 +1593,7 @@ The if part follows since the inverse of an affine transformation is also affine
 Choose a coordinate system and apply the fundamental theorem of affine geometry (\ref{thm:fundamental-theorem-of-affine-geometry}) for the points $O=(0,0)$, $X=(1,0)$, and $Y=(0,1)$.
 
 \parbf{\ref{ex:preserved-circle}.} 
-Use \ref{ex:center-circ-affine}, to show that $\alpha(O)=O$.
+Use \ref{ex:center-circ-affine}, to show that $O'=O$.
 Choose a coordinate system with origin at $O$.
 By \ref{ex:affine-coordinates}, 
 \[\alpha\:(x,y)\mapsto(a\cdot x+b\cdot y,\ c\cdot x+d\cdot y).\]
@@ -2154,6 +2153,9 @@ such that $AD=a$ and $BD=b$;
 (4) let $C$ be an intersection of $\Gamma$ and~$\ell$.
 Then $DC= \sqrt{a\cdot b}$.
 
+
+The construction of $\tfrac{a^2}b$ is analogous.
+
 {
 
 \begin{wrapfigure}{r}{27mm}
@@ -2161,9 +2163,6 @@ Then $DC= \sqrt{a\cdot b}$.
 \centering
 \includegraphics{mppics/pic-366}
 \end{wrapfigure}
-
-The construction of $\tfrac{a^2}b$ is analogous.
-
 
 \parbf{\ref{ex:5-gon},} \textit{(\ref{ex:5-gon:a})}.
 Look at the diagram;
@@ -2478,7 +2477,7 @@ $$\frac{\area\mathcal{P}_n}{\area\mathcal{Q}_n}\to 1
 \text{as}
 \quad
 n\to\infty.$$
-Next show that $\area\mathcal{Q}_n<100$, say for all $n\ge 100$.
+Next show that $\area\mathcal{Q}_n<100$ foe any large $n$.
 
 These two statements imply that
 \[(\area\mathcal{Q}_n\z-\area\mathcal{P}_n)\to 0.\]
