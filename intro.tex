@@ -57,26 +57,26 @@ Here is a dependency graph of the chapters.
 \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,scale=1.4,
   thick,main node/.style={circle,draw,font=\sffamily\bfseries,minimum size=8mm}]
 
-  \node[main node] (1) at (-1,15/6) {\ref{chap:metr}};
-  \node[main node] (2) at (0,15/6){\ref{chap:axioms}};
-  \node[main node] (3) at (1,15/6) {\ref{chap:half-planes}};
-  \node[main node] (4) at (2,15/6) {\ref{chap:cong}};
-  \node[main node] (5) at (3,15/6) {\ref{chap:perp}};
+  \node[main node] (1) at (-1.5,10/6) {\ref{chap:metr}};
+  \node[main node] (2) at (-.5,10/6){\ref{chap:axioms}};
+  \node[main node] (3) at (.5,10/6) {\ref{chap:half-planes}};
+  \node[main node] (4) at (1.5,10/6) {\ref{chap:cong}};
+  \node[main node] (5) at (2.5,10/6) {\ref{chap:perp}};
   \node[main node] (6) at (3.5,10/6) {\ref{chap:parallel}};
-  \node[main node] (61) at (4,5/6) {\ref{chap:angle-sum}};
-  \node[main node] (7) at (5,5/6) {\ref{chap:triangle}};
-  \node[main node] (8) at (3,5/6){\ref{chap:inscribed-angle}};
-  \node[main node] (9) at (2,5/6) {\ref{chap:inversion}};
-  \node[main node] (10) at (2.5,10/6) {\ref{chap:non-euclid}};
-  \node[main node] (11) at (1.5,10/6){\ref{chap:poincare}};
-  \node[main node] (12) at (.5,10/6) {\ref{chap:h-plane}};
-  \node[main node] (13) at (1.5,0) {\ref{chap:trans}};
-  \node[main node] (14) at (0.5,0) {\ref{chap:proj}};
-  \node[main node] (15) at (1,5/6) {\ref{chap:sphere}};
-  \node[main node] (16) at (0,5/6) {\ref{chap:klein}};
-  \node[main node] (17) at (2.5,0) {\ref{chap:complex}};
-  \node[main node] (18) at (3.5,0) {\ref{chap:car}};
-  \node[main node] (19) at (4.5,0) {\ref{chap:area}};
+  \node[main node] (7) at (4.5,10/6) {\ref{chap:angle-sum}};
+  \node[main node] (8) at (5.5,10/6) {\ref{chap:triangle}};
+  \node[main node] (9) at (5,5/6){\ref{chap:inscribed-angle}};
+  \node[main node] (10) at (4.5,0) {\ref{chap:inversion}};
+  \node[main node] (11) at (3,5/6) {\ref{chap:non-euclid}};
+  \node[main node] (12) at (3.6,0){\ref{chap:poincare}};
+  \node[main node] (13) at (3,-5/6) {\ref{chap:h-plane}};
+  \node[main node] (14) at (5,-5/6) {\ref{chap:trans}};
+  \node[main node] (15) at (4.5,-10/6) {\ref{chap:proj}};
+  \node[main node] (16) at (4,-5/6) {\ref{chap:sphere}};
+  \node[main node] (17) at (3.5,-10/6) {\ref{chap:klein}};
+  \node[main node] (18) at (5.5,0) {\ref{chap:complex}};
+  \node[main node] (19) at (4,15/6) {\ref{chap:car}};
+  \node[main node] (20) at (5,15/6) {\ref{chap:area}};
 
   \path[every node/.style={font=\sffamily\small}]
    (1) edge node{}(2)
@@ -84,23 +84,23 @@ Here is a dependency graph of the chapters.
    (3) edge node{}(4)
    (4) edge node{}(5)
    (5) edge node{}(6)
-   (6) edge node{}(61)
-   (61) edge node{}(8)
-   (61) edge node{}(7)
-   (61) edge node{}(19)
-   (9) edge node{}(13)
-   (13) edge node{}(14)
-   (61) edge node{}(18)
-   (8) edge node{}(9)
-   (9) edge node{}(11)
-   (9) edge node{}(15)
-   (9) edge node{}(17)
-   (5) edge node{}(10)
-   (10) edge node{}(11)
+   (6) edge node{}(7)
+   (7) edge node{}(9)
+   (7) edge node{}(8)
+   (7) edge node{}(20)
+   (10) edge node{}(14)
+   (14) edge node{}(15)
+   (7) edge node{}(19)
+   (9) edge node{}(10)
+   (10) edge node{}(12)
+   (10) edge node{}(16)
+   (10) edge node{}(18)
+   (5) edge node{}(11)
    (11) edge node{}(12)
-   (14) edge node{}(16)
-   (15) edge[dashed] node{}(16)
-   (12) edge node{}(16);
+   (12) edge node{}(13)
+   (15) edge node{}(17)
+   (16) edge[dashed] node{}(17)
+   (13) edge node{}(17);
 \end{tikzpicture}
 \end{figure}
 

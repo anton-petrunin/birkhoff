@@ -29,6 +29,8 @@ all-lectures.ind
 library.bib
 pics/H2checkers_334.eps
 pics/by-sa.eps
+pics/by-sa-eps-converted-to.pdf
+pics/H2checkers_334-eps-converted-to.pdf
 mppics/pic-128.mps
 mppics/pic-160.mps
 mppics/pic-194.mps
@@ -45,7 +47,12 @@ mppics/pic-130.mps
 mppics/pic-162.mps
 mppics/pic-196.mps
 mppics/pic-226.mps
+mppics/pic-227.mps
+mppics/pic-229.mps
+mppics/pic-231.mps
+mppics/pic-253.mps
 mppics/pic-26.mps
+mppics/pic-271.mps
 mppics/pic-287.mps
 mppics/pic-292.mps
 mppics/pic-324.mps
@@ -237,3 +244,4 @@ mppics/pic-333.mps
 mppics/pic-337.mps
 mppics/pic-349.mps
 mppics/pic-353.mps
+mppics/pic-69.mps

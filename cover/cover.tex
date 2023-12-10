@@ -1,4 +1,3 @@
-%%% eval: (setenv "LANG" "de_DE.UTF-8")
 %Lualatex+needs P22UndergroundCYBookSC.tt and P22-Underground-Reg.ttf
 \documentclass[
 coverheight=9in,
@@ -41,14 +40,14 @@ markcolor=black]{bookcover}
 \bookcovercomponent{center}{spine}
 {\rotatebox[origin=c]{-90}{
 \color{white}
-\fontsize{18}{25}\selectfont
+\fontsize{18}{25}\selectfont\fontdimen2\font=1ex
 EUCLIDEAN PLANE AND ITS RELATIVES
 \hskip30mm
 ANTON PETRUNIN
 }}
 
 
-\bookcovercomponent{center}{pfront}{
+\bookcovercomponent{normal}{pfront}{
 \begin{flushright}
 {\color{white}\fontsize{42}{48}\selectfont
 Euclidean plane
@@ -72,7 +71,7 @@ Anton Petrunin\hskip.4mm
 
 \setmainfont{P22UndergroundCYBookSC}
 
-\bookcovercomponent{center}{pfront}{
+\bookcovercomponent{normal}{pfront}{
 \begin{flushleft}
 \rotatebox[origin=c]{-90}
 {
@@ -88,7 +87,7 @@ eighth printing}
 
 \setmainfont{P22-Underground-Reg}
 
-\bookcovercomponent{center}{pback}{
+\bookcovercomponent{normal}{pback}{
 \begin{flushleft}
 \parbox{.35\textwidth}{
 \color{white}\fontsize{10}{14}\selectfont
@@ -133,7 +132,7 @@ Additional topics
 \includegraphics{../mppics/pic-277} 
 \\[3mm]
 \color{white}\fontsize{10}{14}\selectfont
-arXiv:1302.1630v22
+arXiv:1302.1630v23
 \\[1mm]
 anton-petrunin.github.io/birkhoff/
 \end{flushleft}

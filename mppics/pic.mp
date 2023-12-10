@@ -455,18 +455,18 @@ u:=1cm;
 
 z.O1=(0,0)*u;
 z.O2=(2,0)*u;
-z.R1=(-.5)[z.O1,z.O2];
-z.R2=1.3[z.O1,z.O2];
+z.R1=(-.5)[z.O1,z.O2] rotated 45;
+z.R2=.3[z.O1,z.O2] rotated -45;
 
-draw circle(z.O1,z.R1-z.O1);
-draw circle(z.O2,z.R2-z.O2);
-draw z.R1--z.R2;
+draw circle(z.O1,z.R1);
+draw circle(z.O2,z.R2);
+draw z.O1+z.R1--z.O1--z.O2--z.O2+z.R2;
 
-dOt z.O1,z.O2, z.R1, z.R2;
+dOt z.O1,z.O2, z.O1+z.R1, z.O2+z.R2;
 
-label.top (btex $r_1$ etex, .5[z.O1,z.R1]);
+label.ulft (btex $r_1$ etex, .5[z.O1,z.O1+z.R1]+(1,0));
 whitelabel.top (btex $d$ etex, .5[z.O1,z.O2]);
-label.top (btex $r_2$ etex, .5[z.O2,z.R2]);
+label.urt (btex $r_2$ etex, .5[z.O2,z.O2+z.R2]+(-1,-1));
 endfig;
 
 beginfig(36)

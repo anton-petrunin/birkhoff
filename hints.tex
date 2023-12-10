@@ -5,7 +5,7 @@
 %\addcontentsline{toc}{chapter}{Hints}
 %\subsection*{Chapter~\ref{chap:metr}}
 
-\raggedcolumns\setlength{\multicolsep}{15mm}
+\raggedcolumns\setlength{\multicolsep}{10mm}
 \spell{\begin{multicols}{2}}{}
 
 \refstepcounter{chapter}
@@ -507,8 +507,6 @@ Note that the centers lie on the perpendicular bisector of the segment~$[AB]$.
 \parbf{\ref{ex:construction-perpendicular}--\ref{ex:tangent-circle}.}
 The given data is marked in bold.
 
-\vfill
-
 \begin{Figure}
 \begin{minipage}{.49\textwidth}
 \centering
@@ -520,8 +518,6 @@ The given data is marked in bold.
 \includegraphics{mppics/pic-328}
 \end{minipage}
 \end{Figure}
-
-\vfill
 
 \begin{Figure}
 \begin{minipage}{.49\textwidth}
@@ -577,26 +573,29 @@ Apply \ref{prop:perp-perp} to show that $k\parallel m$.
 By \ref{cor:parallel-1}, $k\parallel n\z\Rightarrow m\parallel n$.
 The latter contradicts that $m\perp n$.
 
-\parbf{\ref{ex:construction-parallel}.}
-Repeat the construction in \ref{ex:construction-perpendicular} twice.
 
 {
 
-\begin{wrapfigure}{r}{23mm}
-\vskip-0mm
+\begin{wrapfigure}[7]{r}{23mm}
+\vskip-4mm
 \centering
 \includegraphics{mppics/pic-333}
-\end{wrapfigure} 
+\end{wrapfigure}
+
+\parbf{\ref{ex:construction-parallel}.}
+Repeat the construction in \ref{ex:construction-perpendicular} twice.
 
 \parbf{\ref{ex:smililar+parallel}.}
 Since  $\ell\parallel (AC)$, it cannot cross $[AC]$.
 By Pasch's theorem (\ref{thm:pasch}), $\ell$ has to cross another side of $\triangle ABC$.
 Therefore $\ell$ crosses $[BC]$; denote the point of intersection by $Q$.
 
+}
+
 Use the transversal property (\ref{thm:parallel-2}) to show that $\measuredangle BAC= \measuredangle BPQ$.
 The same argument shows that $\measuredangle ACB\z= \measuredangle PQB$; it remains to apply the AA similarity condition.
 
-}
+
 
 \parbf{\ref{ex:trisection}.}
 Assume we need to trisect segment $[AB]$.
@@ -1390,18 +1389,18 @@ Apply the definition of the angle of parallelism.
 \parbf{\ref{ex:ultra-parallel}}; \textit{``only-if'' part.}
 Suppose $\ell$ and $m$ are ultraparallel; that is, they do not intersect and have distinct ideal points.
 
+\begin{Figure}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-359}
+\end{Figure}
+
 Denote the ideal points by $A$, $B$, $C$, and $D$;
 we may assume that they appear on the absolute in the same order.
 In this case, the h-line with ideal points $A$ and $C$ intersects the h-line with ideal points $B$ and $D$.
 Let $O$ be their point of intersection.
 By \ref{thm:main-observ}, we can assume that $O$ is the center of absolute.
 Note that $\ell$ is the reflection of $m$ across $O$ in the Euclidean sense.
-
-\begin{Figure}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-359}
-\end{Figure}
 
 Drop an h-perpendicular $n$ from $O$ to $\ell$ and
 show that $n\perp m$.
@@ -1439,6 +1438,7 @@ $$BC_h<\tfrac12\cdot\ln\frac{1+\frac1{\sqrt{2}}}{1-\frac1{\sqrt{2}}}=\ln\left(1+
 The right-hand side is the limit of $BC_h$ as $CD_h\to\infty$.
 Therefore, $\ln\left(1+\sqrt{2}\right)$ is the optimal upper bound.
 
+
 \parbf{\ref{ex:equidistant-reflection}.}
 Let $P'$ be another h-point.
 Denote by $R$ and $R'$ the h-footpoint of $P$ and $P'$ on $m$.
@@ -1448,25 +1448,26 @@ $PR_h=P'R'_h$, and $Q$ is the h-midpoint of $[RR']_h$.
 You may need \ref{prop:vert}, SAS, and SAA (see \ref{ex:SAA}).
 
 \parbf{\ref{ex:right-trig-horocycle}.}
-As usual, we assume that the absolute is a unit circle.
+As usual, we assume that the absolute is a unit circle. 
 
 Consider a hyperbolic triangle $PQR$
 with a right angle at $Q$, where  $PQ_h\z=QR_h$
 and the vertices $P$, $Q$, and $R$ 
 lie on a horocycle.
 
-\begin{wrapfigure}{r}{33mm}
-\vskip-3mm
-\centering
-\includegraphics{mppics/pic-352}
-\end{wrapfigure} 
-
 We may assume that $Q$ is the center of the absolute.
 In this case, $\measuredangle_hPQR\z=\measuredangle PQR\z=\pm\tfrac\pi2$ and $PQ=QR$.
+
+\begin{Figure}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-352}
+\end{Figure}
 
 Note that the Euclidean circle passing thru $P$, $Q$, and $R$ is tangent to the absolute.
 Conclude that $PQ=\tfrac1{\sqrt2}$. 
 Apply \ref{lem:O-h-dist} to find $PQ_h$.
+
 
 \parbf{\ref{ex:angle-preserving-hyp}.}
 Apply the AAA-congruence condition (\ref{thm:AAA}).
@@ -1509,6 +1510,8 @@ Furthermore, any line connecting a pair of points on these three lines is also m
 Use it to show that the entire plane is mapped to $(A'B')$.
 The latter contradicts that the map is a bijection.
 
+{
+
 \begin{wrapfigure}{r}{22mm}
 \vskip-2mm
 \centering
@@ -1519,6 +1522,7 @@ By the assumption, if $X\z\in (AB)$, then $X'\z\in (A'B')$.
 From above, if $X\notin (AB)$, then $X'\z\notin (A'B')$.
 Use it to prove the second statement.
 
+}
 
 \parbf{\ref{ex:circle=affine}.}
 Observe that $\alpha$ maps noncollinear triples of points to noncollinear ones.
@@ -1674,7 +1678,10 @@ Assume that the parallelogram is formed by the two pairs of parallel lines $(AB)
 
 \parit{(\ref{ex:desargues-construction:pappus}).} Suppose that the parallelogram is formed by the two pairs of parallel lines $(AB')\z\parallel (A'B)$ and $(BC')\parallel(B'C)$ and $\ell=(AC')$ in the notation of Pappus' theorem (\ref{thm:pappus}).
 
-\parbf{\ref{ex:dual-configurations}.}
+\parbf{\ref{ex:dual-configurations};}
+\textit{(\ref{ex:dual-configurations:infty}).} Observe and use that $\square ABCD$ and $\square ABDX$ are parallelograms.
+
+\parit{(\ref{ex:dual-configurations:dual}).}
 Draw $a=(KN)$, $b=(KL)$, $c=(LM)$, $d=(MN)$, mark $P=b\cap d$, and continue. 
 
 \parbf{\ref{ex:dual-euclid}.}
@@ -1696,6 +1703,13 @@ To extend this bijection to the whole projective plane, assume that
 (1) the ideal line corresponds to the origin 
 and (2) the ideal point is given by the pencil of lines $b\cdot x-a\cdot y=c$ for different values of $c$ corresponds to the line defined by $a\cdot x+b\cdot y=0$.
 
+\begin{Figure}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-356}
+\vskip-0mm
+\end{Figure}
+
 \parbf{\ref{ex:dual-pappus}.}
 Assume one set of concurrent lines $a$, $b$, $c$, 
 and another set of concurrent lines $a'$, $b'$, $c'$ are given.
@@ -1713,13 +1727,6 @@ Q'&=c'\cap a,
 R'&=a'\cap b.
 \end{align*}
 Then the lines $(PP')$, $(QQ')$, and $(RR')$ are concurrent.
-
-\begin{Figure}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-356}
-\vskip-0mm
-\end{Figure}
 
 (Note that the obtained configuration of nine points and nine lines is the same as in the original theorem and the obtained result is its reformulation.)
 
@@ -1805,14 +1812,6 @@ The remaining calculations in $\Lambda$ are similar to those in the proof of \re
 \parbf{\ref{ex:cone}.}
 Consider the inversion of the base circle across a sphere with its center at the tip of the cone and apply \ref{thm:inversion-3d}.
 
-
-\parbf{\ref{ex:2(pi/4)=pi/3}.} 
-Applying the Pythagorean theorem, we get that
-$$
-\cos AB_s=\cos AC_s\cdot\cos BC_s=\tfrac12.
-$$
-Therefore, $AB_s=\tfrac\pi3$.
-
 {
 
 \begin{wrapfigure}{r}{28mm}
@@ -1820,6 +1819,14 @@ Therefore, $AB_s=\tfrac\pi3$.
 \centering
 \includegraphics{mppics/pic-358}
 \end{wrapfigure}
+
+\parbf{\ref{ex:2(pi/4)=pi/3}.} 
+Apply the spherical Pythagorean theorem to show that
+$
+\cos AB_s\z=\tfrac12
+$,
+and conclude that $AB_s\z=\tfrac\pi3$.
+
 
 Alternatively, 
 look at the tessellation of the hemisphere in the picture; 
@@ -2153,7 +2160,6 @@ such that $AD=a$ and $BD=b$;
 (4) let $C$ be an intersection of $\Gamma$ and~$\ell$.
 Then $DC= \sqrt{a\cdot b}$.
 
-
 The construction of $\tfrac{a^2}b$ is analogous.
 
 {
@@ -2294,16 +2300,14 @@ Show that among elementary sets
 only one-point sets can be subsets of a circle.
 It remains to note that any circle contains an infinite number of points.
 
-
-\parbf{\ref{ex:two-parallelograms}.}
-Suppose that $E$ denotes the point of intersection of the lines $(BC)$ and~$(C'D')$.
-
 \begin{wrapfigure}{r}{28mm}
 \vskip-4mm
 \centering
 \includegraphics{mppics/pic-372}
-
 \end{wrapfigure}
+
+\parbf{\ref{ex:two-parallelograms}.}
+Suppose that $E$ denotes the point of intersection of the lines $(BC)$ and~$(C'D')$.
 
 Use \ref{prop:area-parallelogram} to prove that the following solid parallelograms have the same area:
 $\solidsquare ABCD$, $\solidsquare AB'ED$, and $\solidsquare AB'C'D'$.
