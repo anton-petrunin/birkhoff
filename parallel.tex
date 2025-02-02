@@ -111,52 +111,32 @@ Make a ruler-and-compass construction of a line thru a given point that is paral
 
 \section{Reflection across a point}
 
-Fix a point $O$.
-If $O$ is the midpoint of a line segment $[XX']$, then we say that $X'$ is a reflection of $X$ across $O$.
+Recall that $X'$ is a \index{reflection of a point}\emph{reflection of a point} $X$ across a point $O$ if $O$ is the midpoint of the line segment $[XX']$.
+In addition, we assume that $O'=O$; that is, $O$ is a reflection of itself across itself.
 
-The map $X\mapsto X'$ is uniquely defined; it is called a \index{reflection!across a point}\emph{reflection} across $O$.
-In this case, $O$ is called the \index{center!of reflection}\emph{center of reflection}. 
-We assume that $O'=O$; that is, $O$ is a reflection of itself across itself.
-If the reflection across $O$ moves a set $S$ to itself, then we say that $S$ is \index{central symmetry}\emph{centrally symmetric} with respect to $O$. 
+The following statement is a refinement of Proposition~\ref{prop:point-reflection}.
 
-Recall that any motion is either direct or indirect;
-that is, it either preserves or reverses the signs of angles (Section~\ref{direct motion}). 
-
-\begin{thm}[\abs]{Proposition}\label{prop:point-reflection}
+\begin{thm}[\abs]{Proposition}\label{prop:point-reflection+}
 A reflection across a point is a direct motion.
 \end{thm}
 
 \parit{Proof.}
-Observe that if $X'$ is a reflection of $X$ across $O$, 
-then $X$ is a reflection of $X'$.
-In other words, the composition of the reflection with itself is the identity map.
-In particular, any reflection across a point is a bijection.
+Let $O$ be the center of reflection.
+By Proposition~\ref{prop:point-reflection}, the reflection is a motion.
 
-\begin{wrapfigure}{o}{33mm}
-\centering
-\includegraphics{mppics/pic-76}
-\end{wrapfigure}
+Any angle $\angle XOY$ is vertical to its reflection $\angle X'OY'$.
+By \ref{prop:vert}, $\measuredangle XOY\z=\measuredangle X'OY'$.
+Therefore, the reflection cannot be indirect.
 
-Fix two points $X$ and $Y$;
-let $X'$ and $Y'$ be their reflections across $O$.
-To check that the reflection is distance preserving, we need to show that $X'Y'=XY$.
-
-We may assume that $X$, $Y$, and $O$ are distinct; otherwise, the statement is trivial.
-By the definition of the reflection across $O$, we have that $OX=OX'$, $OY=OY'$, and the angles $XOY$ and $X'OY'$ are vertical;
-in particular, $\measuredangle XOY\z=\measuredangle X'OY'$.
-By SAS, $\triangle XOY\cong\triangle X'OY'$;
-therefore $X'Y'=XY$.
-
-By \ref{ex:3-reflections}, the reflection across $O$ is either direct or indirect.
-It cannot be indirect since $\measuredangle XOY\z=\measuredangle X'OY'$;
-therefore it is a direct motion.
+By \ref{ex:3-reflections}, any motion is either direct or indirect.
+Therefore, the reflection across $O$ must be direct.
 \qeds
 
 \begin{thm}{Exercise}
 Suppose $\angle AOB$ is right.
 Show that the composition of reflections across the lines $(OA)$ and $(OB)$ is a reflection across $O$.
 
-Use this statement and Corollary~\ref{cor:reflection+angle} to build another proof of~\ref{prop:point-reflection}.
+Use this statement and Corollary~\ref{cor:reflection+angle} to build another proof of~\ref{prop:point-reflection+}.
 \end{thm}
 
 {
@@ -251,7 +231,7 @@ $(CD)$ is a reflection of $(AB)$ across $O$.
 \end{wrapfigure}
 
 Let $A'$ be the reflection of $A$ across $O$.
-Then $A'\in (CD)$ and by Proposition~\ref{prop:point-reflection} we have that
+Then $A'\in (CD)$ and by Proposition~\ref{prop:point-reflection+} we have that
 \[\measuredangle ABO=\measuredangle A'CO.\eqlbl{A B O = A' C O}\]
 Note that 
 \[\measuredangle ABO\equiv\measuredangle ABC,
@@ -323,7 +303,7 @@ Now, assume that $\triangle A B C$ is nondegenerate.
 \end{wrapfigure} 
 
 Let $X$ be the reflection of $C$ across the midpoint $M$ of $[AB]$.
-By Proposition~\ref{prop:point-reflection}
+By Proposition~\ref{prop:point-reflection+}
 $\measuredangle BAX\z=\measuredangle ABC$.
 Note that $(AX)$ is a reflection of $(CB)$ across $M$;
 therefore by Theorem~\ref{thm:parallel-point-reflection}, $(AX)\z\parallel (CB)$.
@@ -413,7 +393,8 @@ if its opposite sides are parallel.
 
 
 \begin{thm}{Lemma}\label{lem:parallelogram}
-Any parallelogram is centrally symmetric with respect to a midpoint of one of its diagonals.
+Any parallelogram is \index{central symmetry}\emph{centrally symmetric} with respect to a midpoint of one of its diagonals;
+that is, the reflection across the midpoint maps the parallelogram to itself.
 
 In particular, if $\square A B C D$ is a parallelogram, then
 \begin{enumerate}[(a)]
@@ -437,7 +418,7 @@ Since $(AB)\parallel (CD)$, Theorem~\ref{thm:parallel-point-reflection} implies 
 In the same way, $(BC)$ is a reflection of $(DA)$ across $M$.
 Since $\square A B C D$ is nondegenerate, it follows that $D$ is a reflection of $B$ across $M$; in other words, $M$ is the midpoint of $[BD]$.
 
-The remaining statements follow since reflection across $M$ is a direct motion of the plane (see \ref{prop:point-reflection}).
+The remaining statements follow since reflection across $M$ is a direct motion of the plane (see \ref{prop:point-reflection+}).
 \qeds
 
 }

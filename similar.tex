@@ -16,7 +16,7 @@ C' A'
 k\cdot C A
 \eqlbl{dist}
 $$
-for some coefficient $k>0$, and (2) the corresponding angles are equal up to sign:
+for some coefficient $k>0$ (which is called the \index{similarity coefficient}\emph{similarity coefficient}), and (2) the corresponding angles are equal up to sign:
 $$
 \begin{aligned}
 \measuredangle A' B' C'&=\pm\measuredangle A B C,
@@ -110,7 +110,7 @@ Each of these conditions is proved by applying Axiom~\ref{def:birkhoff-axioms:4}
 
 
 \parit{Proof.}
-Set $k=\tfrac{AB}{A'B'}$.
+Let $k=\tfrac{AB}{A'B'}$.
 Choose points $B''\in [A'B')$ and $C''\in [A'C')$,
 so that $A'B''=k\cdot A'B'$ and $A'C''=k\cdot A'C'$.
 By Axiom~\ref{def:birkhoff-axioms:4},
@@ -130,7 +130,15 @@ for any $\triangle ABC$ and its image $\triangle A'B'C'$.
 (The term \index{transformation}\emph{transformation} is used for a bijection of space to itself that preserves a specified geometric structure.
 For example, {}\emph{motions} are \textit{distance-preserving transformations}.)
 
+\begin{thm}{Exercise}\label{ex:mid-triangle}
+Let $A'$, $B'$, and $C'$ be the midpoints of sides $[BC]$, $[CA]$, and $[AB]$ of $\triangle ABC$.
+Show that $\triangle A'B'C'\sim\triangle ABC$, and find the similarity coefficient.
+\end{thm}
 
+\begin{thm}{Exercise}\label{ex:k*triangle}
+Let $A'\in [OA)$, $B'\in[OB)$ and $C'\in [OC)$ be distict points such that $OA'=k\cdot OA$, $OB'=k\cdot OB$, and $OC'=k\cdot OC$ for some $k>0$.
+Show that $\triangle A'B'C'\sim\triangle ABC$.
+\end{thm}
 
 \begin{thm}{Exercise}\label{ex:angle-preserving-euclid}
 Show that any angle-preserving transformation of the plane multiplies all distances by a ﬁxed constant.
@@ -207,9 +215,9 @@ $$CD^2=AD\cdot BD.$$
 The following exercise is the converse to the Pythagorean theorem.
 
 \begin{thm}{Exercise}\label{ex:pyth-conv}
-Assume that $ABC$ is a triangle such that
+Let $ABC$ be a triangle such that
 $$AC^2+BC^2=AB^2.$$ 
-Prove that the angle at $C$ is right.
+Show that the angle at $C$ is right.
 \end{thm}
 
 \section{Method of similar triangles}
@@ -244,8 +252,8 @@ Show that $CD=\tfrac{b\cdot a}c$, where $a=BC$, $b=CA$, and $c=AB$.
 
 {
 
-\begin{wrapfigure}{r}{28mm}
-\vskip-8mm
+\begin{wrapfigure}{r}{25mm}
+\vskip-4mm
 \centering
 \includegraphics{mppics/pic-69}
 \end{wrapfigure}

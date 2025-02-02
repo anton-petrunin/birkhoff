@@ -503,6 +503,8 @@ drawarrow reverse cutcircle(circle(z.B,10),  z.C,z.A);
 
 draw z.A--z.B--z.C--cycle;
 
+rimmark(z.A--z.C,z.B--z.C);
+
 dOt z.A, z.B, z.C;
 
 label.llft (btex $A$ etex, z.A);
@@ -971,7 +973,7 @@ endfig;
 
 beginfig(69)
 save u;
-u:=1cm;
+u:=.7cm;
 
 z.A=(-1,0)*u;
 z.B=-z.A;
@@ -994,7 +996,7 @@ dOt z.A,z.B,z.C,z.M,z.P,z.Q;
 label.lft (btex $A$ etex, z.A);
 label.rt (btex $B$ etex, z.B);
 label.ulft (btex $C$ etex, z.C);
-label.lrt (btex $M$ etex, z.M);
+label.lrt (btex $M$ etex, z.M+(0,-1));
 label.urt (btex $P$ etex, z.P);
 label.rt (btex $Q$ etex, z.Q);
 endfig;
@@ -5899,6 +5901,25 @@ label.llft (btex $B$ etex, z1);
 label.lrt (btex $C$ etex, z2);
 label.urt (btex $D$ etex, z3);
 
+endfig;
+
+beginfig(915)
+save u;
+u:=1cm;
+
+z.O=origin;
+z.X=(-1,0)*u;
+z.Y=(1.2,-.8)*u;
+
+draw -z.X--z.X;
+
+rimmark(z.O--z.X,z.O--(-z.X));
+
+dOt z.X,-z.X, z.O;
+
+label.top (btex $O$ etex, z.O);
+label.top (btex $X$ etex, z.X);
+label.top (btex $X'$ etex, -z.X);
 endfig;
 
 end

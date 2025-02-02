@@ -342,9 +342,59 @@ Since $-\pi<\measuredangle AOB\le \pi$ and $-\pi<\measuredangle A'OB'\le \pi$, w
 
 }
 
-\begin{thm}{Exercise}\label{ex:O-mid-AB+CD}
-Assume $O$ 
-is the midpoint for both segments 
-$[A B]$ and $[C D]$.
-Prove that $A C= B D$. 
+\section{Reflection across a point}
+
+\begin{thm}[\abs]{Lemma}\label{lem:point-reflection}
+Given distinct points $X$ and $O$, there is a unique point $X'$ such that $O$ is the midpoint of a line segment $[XX']$.
+\end{thm}
+
+\begin{wrapfigure}{o}{33mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-915}
+\end{wrapfigure}
+
+\parit{Proof.}
+The point $O$ is the midpoint of a line segment $[XX']$ if and only if $X'\in [XO)$ and $XX'=2\cdot XO$.
+
+By Axiom~\ref{def:birkhoff-axioms:1}, the line $(XO)$ and therefore half-line $[XO)$ are uniquely defined.
+Further, by Proposition~\ref{prop:point-on-half-line} there is a unique point $X'\in [XO)$ such that $XX'=2\cdot XO$.
+\qeds
+
+The point $X'$ provided by the lemma is called \index{reflection across a point}\emph{reflection} of point $X$ across $O$.
+We also assume that $O'=O$; that is, $O$ is a reflection of itself across itself.
+
+The point $O$ is called the \index{center!of reflection}\emph{center of reflection}.
+
+\begin{thm}[\abs]{Proposition}\label{prop:point-reflection}
+A reflection across a point is a motion of the plane.
+\end{thm}
+
+\parit{Proof.}
+Let $O$ be the center of reflection.
+Observe that if $X'$ is a reflection of $X$ across $O$,
+then $X$ is a reflection of $X'$.
+In other words, the composition of the reflection with itself is the identity map.
+In particular, the reflection is a bijection.
+
+\begin{wrapfigure}{o}{33mm}
+\vskip-6mm
+\centering
+\includegraphics{mppics/pic-76}
+\end{wrapfigure}
+
+Now choose two points $X$ and $Y$;
+let $X'$ and $Y'$ be their reflections across $O$.
+To check that the reflection is distance preserving, we need to show that $X'Y'=XY$.
+
+We may assume that $X$, $Y$, and $O$ are distinct; otherwise, the statement is trivial.
+By the definition of the reflection, we have that $OX=OX'$, $OY=OY'$.
+Note also that the angles $XOY$ and $X'OY'$ are vertical.
+By \ref{prop:vert}, $\measuredangle XOY\z=\measuredangle X'OY'$.
+
+Now Axiom~\ref{def:birkhoff-axioms:3} implies that $\triangle XOY\cong\triangle X'OY'$ and $X'Y'=XY$.
+\qeds
+
+\begin{thm}{Exercise}\label{ex:refelection-of-line}
+Show that the reflection across a point maps any line to a line.
 \end{thm}

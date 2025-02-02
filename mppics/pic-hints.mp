@@ -1192,4 +1192,47 @@ label.rt (btex $E$ etex, z.E);
 label.lft (btex $F$ etex, z.F);
 label.bot (btex $M$ etex, z.M+(0,-1));
 endfig;
+
+beginfig(1114)
+save u,m,n,p;
+u:=.7cm;
+m:=2;
+n:=3;
+path p;
+
+z.A=(.2,.3)*u;
+z.B=(2.7,.8)*u;
+z.C=(1.2,1.8)*u;
+
+z.v=(3,0)*u;
+z.w=(0,2)*u;
+
+z.shift=(4,0)*u;
+
+p=z.A--z.B--z.C--cycle;
+fill p withcolor 0;
+
+for i=0 upto m:
+draw i*z.v/m--z.w+i*z.v/m withcolor .5;
+endfor
+
+for i=0 upto n:
+draw i*z.w/n--z.v+i*z.w/n withcolor .5;
+endfor
+
+fill p shifted z.shift withcolor 0;
+draw (origin--z.v--z.v+z.w--z.w--cycle) shifted z.shift  withcolor .5;
+
+z.a1=whatever[z.A,z.B]=whatever*z.w;
+z.a2=whatever[z.A,z.B]=z.v+whatever*z.w;
+draw (z.v--z.a1--z.a2) shifted z.shift withcolor .5;
+
+z.a3=whatever[z.B,z.C]=z.w+whatever*z.v;
+draw (z.v+z.w--z.B--z.a3) shifted z.shift withcolor .5;
+
+draw (z.A--z.w--z.C) shifted z.shift withcolor .5;
+
+label (btex $\triangle_0$ etex, (z.A+z.B+z.C)/3) withcolor 1;
+label (btex $\triangle_0$ etex, z.shift+(z.A+z.B+z.C)/3) withcolor 1;
+endfig;
 end

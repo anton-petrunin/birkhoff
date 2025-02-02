@@ -5,7 +5,7 @@
 %\addcontentsline{toc}{chapter}{Hints}
 %\subsection*{Chapter~\ref{chap:metr}}
 
-\raggedcolumns\setlength{\multicolsep}{10mm}
+\raggedcolumns\setlength{\multicolsep}{-5mm}
 \spell{\begin{multicols}{2}}{}
 
 \refstepcounter{chapter}
@@ -261,12 +261,13 @@ Fix two points $A$ and $B$ as provided by Axiom~\ref{def:birkhoff-axioms:0}.
 Choose a real number $0<\alpha<\pi$.
 By Axiom~\ref{def:birkhoff-axioms:2a} there is a point $C$ such that $\measuredangle ABC\z=\alpha$.
 
-Use \ref{lem:line-line} to show that $\triangle ABC$ is nondegenerate.
+Use \ref{cor:degenerate=pi} to show that $\triangle ABC$ is nondegenerate.
 
-\parbf{\ref{ex:O-mid-AB+CD}.} 
-Applying \ref{prop:vert}, we get that
-$\measuredangle AOC\z= \measuredangle BOD$.
-It remains to apply Axiom~\ref{def:birkhoff-axioms:3}.
+%\parbf{\ref{ex:O-mid-AB+CD}.}
+%Applying \ref{prop:vert}, we get that $\measuredangle AOC\z= \measuredangle BOD$.
+%It remains to apply Axiom~\ref{def:birkhoff-axioms:3}.
+
+\parbf{\ref{ex:refelection-of-line}.} Apply \ref{prop:point-reflection} and \ref{ex:line-motion}.
 
 %\subsection*{Chapter~\ref{chap:half-planes}}
 \refstepcounter{chapter}
@@ -333,10 +334,8 @@ Use this triangle to show that there is a point $X$ such that $O_1X=r_1$ and $O_
 Apply \ref{thm:isos} twice.
 
 \parbf{\ref{ex:SMS}.} 
-Consider the points $D$ and $D'$ such that 
-$M$ is the midpoint of~$[CD]$
-and 
-$M'$ is the midpoint of~$[C'D']$.
+Let $D$ and $D'$ be reflections of
+$C$ and $C'$ across $M$ and $M'$ respectively.
 Show that $\triangle BCD\z\cong \triangle B'C'D'$ and use it to prove that $\triangle A' B' C'\z\cong\triangle A B C$.
 
 \parbf{\ref{ex:isos-sides}.} \textit{(a)} Apply SAS.
@@ -535,6 +534,20 @@ The given data is marked in bold.
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
 
+\parbf{\ref{ex:mid-triangle}.} Apply the SAS similarity condition to show that
+$\triangle AC'B'\sim\triangle ABC$, $\triangle C'BA'\sim\triangle ABC$, and $\triangle B'A'C\sim\triangle ABC$.
+Show that in each case, the similarity coefficient is $\tfrac12$.
+Conclude that $A'B'=\tfrac12\cdot AB$, $B'C'=\tfrac12\cdot BC$, and $C'A'\z=\tfrac12\cdot CA$.
+Apply the SSS similarity condition.
+
+\parbf{\ref{ex:k*triangle}.} Apply the SAS similarity condition to show that
+$\triangle OA'B'\sim\triangle OAB$,
+$\triangle OB'C'\sim\triangle OBC$,
+and $\triangle OC'A'\sim\triangle OCA$.
+Show that in each case, the similarity coefficient is $k$.
+Conclude that $A'B'=k\cdot AB$, $B'C'=k\cdot BC$, and $C'A'\z=k\cdot CA$.
+Apply the SSS similarity condition.
+
 \parbf{\ref{ex:angle-preserving-euclid}.}
 By the AA similarity condition, the transformation multiplies the sides of any nondegenerate triangle by the same number; we need to show that this number does not depend on the triangle. 
 
@@ -574,13 +587,7 @@ By \ref{cor:parallel-1}, $k\parallel n\z\Rightarrow m\parallel n$.
 The latter contradicts that $m\perp n$.
 
 
-{
 
-\begin{wrapfigure}[7]{r}{23mm}
-\vskip-4mm
-\centering
-\includegraphics{mppics/pic-333}
-\end{wrapfigure}
 
 \parbf{\ref{ex:construction-parallel}.}
 Repeat the construction in \ref{ex:construction-perpendicular} twice.
@@ -590,7 +597,12 @@ Since  $\ell\parallel (AC)$, it cannot cross $[AC]$.
 By Pasch's theorem (\ref{thm:pasch}), $\ell$ has to cross another side of $\triangle ABC$.
 Therefore $\ell$ crosses $[BC]$; denote the point of intersection by $Q$.
 
-}
+
+\begin{wrapfigure}[7]{r}{23mm}
+\vskip-1mm
+\centering
+\includegraphics{mppics/pic-333}
+\end{wrapfigure}
 
 Use the transversal property (\ref{thm:parallel-2}) to show that $\measuredangle BAC= \measuredangle BPQ$.
 The same argument shows that $\measuredangle ACB\z= \measuredangle PQB$; it remains to apply the AA similarity condition.
@@ -808,6 +820,9 @@ the point of intersection of two external and one internal bisectors of $\triang
 \parbf{\ref{ex:bisector-incenter}.}
 Apply \ref{lem:bisect-ratio} twice.
 Use the obtained identity to show that the angle bisector at $C$ passes thru $I$.
+
+\parbf{\ref{ex:inscribed-rhombus}.}
+Show and use that $\triangle CZY\sim\triangle YXB$.
 
 %\subsection*{Chapter~\ref{chap:inscribed-angle}}
 \refstepcounter{chapter}
@@ -1257,6 +1272,22 @@ By ASA, $\triangle ABC\cong\triangle CDA$, and, in particular, $AB=CD$.
 
 (Alternatively, you can apply \ref{ex:neutral-quadrangle}.)
 
+\parbf{\ref{ex:neutral-rectangle+}.}
+Choose a triangle $\triangle_0$.
+Show that $\triangle_0$ can be covered by a large rectangle $\square$ that is a union of several copies of the given rectangle.
+Further, subdivide $\square$ into triangles $\triangle_0,\dots, \triangle_n$.
+Show that the sum of the defects of $\triangle_i$ is zero and use that defects are nonnegative.
+
+\begin{Figure}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-1114}
+\end{Figure}
+
+\parit{Remark.}
+This is a key step in the proofs of parts \textit{(\ref{thm:=IV:defect})} and \textit{(\ref{thm:=IV:rectangle})} in Theorem~\ref{thm:=IV}.
+
+
 %\subsection*{Chapter~\ref{chap:poincare}}
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
@@ -1311,7 +1342,7 @@ Spell the meaning of the terms ``perpendicular'' and ``h-line'' and then apply \
 Choose the vertices $P$, $Q$, and $R$ on a Euclidean circle that intersects the absolute and is not orthogonal to it.
 Apply~\ref{lem:h-circle=circle}.
 
-\begin{wrapfigure}[10]{r}{34mm}
+\begin{wrapfigure}[9]{r}{34mm}
 \vskip-5mm
 \centering
 \includegraphics{mppics/pic-350}
@@ -1389,18 +1420,18 @@ Apply the definition of the angle of parallelism.
 \parbf{\ref{ex:ultra-parallel}}; \textit{``only-if'' part.}
 Suppose $\ell$ and $m$ are ultraparallel; that is, they do not intersect and have distinct ideal points.
 
-\begin{Figure}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-359}
-\end{Figure}
-
 Denote the ideal points by $A$, $B$, $C$, and $D$;
 we may assume that they appear on the absolute in the same order.
 In this case, the h-line with ideal points $A$ and $C$ intersects the h-line with ideal points $B$ and $D$.
 Let $O$ be their point of intersection.
 By \ref{thm:main-observ}, we can assume that $O$ is the center of absolute.
 Note that $\ell$ is the reflection of $m$ across $O$ in the Euclidean sense.
+
+\begin{Figure}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-359}
+\end{Figure}
 
 Drop an h-perpendicular $n$ from $O$ to $\ell$ and
 show that $n\perp m$.
@@ -1703,13 +1734,6 @@ To extend this bijection to the whole projective plane, assume that
 (1) the ideal line corresponds to the origin 
 and (2) the ideal point is given by the pencil of lines $b\cdot x-a\cdot y=c$ for different values of $c$ corresponds to the line defined by $a\cdot x+b\cdot y=0$.
 
-\begin{Figure}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-356}
-\vskip-0mm
-\end{Figure}
-
 \parbf{\ref{ex:dual-pappus}.}
 Assume one set of concurrent lines $a$, $b$, $c$, 
 and another set of concurrent lines $a'$, $b'$, $c'$ are given.
@@ -1727,6 +1751,13 @@ Q'&=c'\cap a,
 R'&=a'\cap b.
 \end{align*}
 Then the lines $(PP')$, $(QQ')$, and $(RR')$ are concurrent.
+
+\begin{Figure}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-356}
+\vskip-0mm
+\end{Figure}
 
 (The obtained configuration of nine points and nine lines is the same as in the original theorem and the obtained result is its reformulation.)
 
@@ -1814,12 +1845,6 @@ Consider the inversion of the base circle across a sphere with its center at the
 
 {
 
-\begin{wrapfigure}{r}{28mm}
-\vskip-6mm
-\centering
-\includegraphics{mppics/pic-358}
-\end{wrapfigure}
-
 \parbf{\ref{ex:2(pi/4)=pi/3}.} 
 Apply the spherical Pythagorean theorem to show that
 $
@@ -1827,6 +1852,11 @@ $
 $,
 and conclude that $AB_s\z=\tfrac\pi3$.
 
+\begin{wrapfigure}{r}{28mm}
+\vskip-5mm
+\centering
+\includegraphics{mppics/pic-358}
+\end{wrapfigure}
 
 Alternatively, 
 look at the tessellation of the hemisphere in the picture; 
@@ -1862,14 +1892,14 @@ Note that $\hat P\z\in [A_iB_i]$ if and only if $P\in\Gamma_i$.
 
 \parbf{\ref{ex:P<->hatP}.} Apply \ref{lem:P-hat-chord} and the definition of h-distance in \ref{sec:conformal-model}.
 
+\parbf{\ref{ex:h-median}.} 
+The observation follows since the reflection across the perpendicular bisector of $[PQ]$ is a motion of the Euclidean plane and a motion of the h-plane as well.
+
 \begin{Figure}
 \centering
 \vskip-0mm
 \includegraphics{mppics/pic-360}
 \end{Figure}
-
-\parbf{\ref{ex:h-median}.} 
-The observation follows since the reflection across the perpendicular bisector of $[PQ]$ is a motion of the Euclidean plane and a motion of the h-plane as well.
 
 We can assume that the center of the circumcircle coincides with the center of the absolute.
 In this case, the h-medians of the triangle coincide with the Euclidean medians.
@@ -1896,8 +1926,10 @@ Hence the result.
 \parbf{\ref{ex:klein-for-angle-parallelism}.}
 Let $Q$ be the footpoint of $P$ on the line and $\phi$ be the angle of parallelism. 
 
+{
+
 \begin{wrapfigure}{r}{28mm}
-\vskip-4mm
+\vskip-6mm
 \centering
 \includegraphics{mppics/pic-362}
 \end{wrapfigure}
@@ -1906,6 +1938,7 @@ We can assume that $P$ is the center of the absolute.
 Therefore $PQ=\cos\phi$ and
 \[PQ_h=\tfrac12\cdot\ln\frac{1+\cos\phi}{1-\cos\phi}.\]
 
+}
 
 \parbf{\ref{ex:klein-inradius}.} 
 Apply \ref{ex:klein-for-angle-parallelism} for $\phi=\tfrac\pi3$.
