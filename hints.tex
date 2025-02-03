@@ -357,6 +357,9 @@ $\measuredangle ABC\equiv -\measuredangle ABC$.
 Conclude that $\measuredangle ABC=0$ or $\pi$.
 That is, $\triangle ABC$ is degenerate --- a contradiction. 
 
+\parbf{\ref{ex:motion}.} Construct three circles with centers at $A'$, $B'$, and $C'$ and radii $AX$, $BX$, and $CX$, respectively.
+The point $X'$ is their common point.
+
 %\parbf{\ref{ex:3-isos}.} Use SAS to show $\triangle ABA'\z\cong \triangle C'BC$, $\triangle BCB'\z\cong \triangle A'CA$, and $\triangle CAC'\z\cong \triangle B'CB$.
 
 %\subsection*{Chapter~\ref{chap:perp}}
@@ -384,7 +387,7 @@ Note that $A$ and $B$ lie on opposite sides of~$\ell$.
 Therefore, by \ref{cor:half-plane}, 
 $[AX]$ does not intersect $\ell$ 
 and $[BX]$ intersects $\ell$;
-suppose that $Y$ denotes the intersection point.
+let $Y$ be the intersection point.
 
 By the triangle inequality, $BX=AY\z+YX\z\ge AX$.
 Since $X\notin\ell$, by \ref{thm:perp-bisect} we have $AX\ne BX$.
@@ -394,8 +397,17 @@ This way we have proved the ``if'' part.
 To prove the ``only if'' part, you need to switch $A$ and $B$ and
 repeat the above argument.
 
+\begin{wrapfigure}{r}{27mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-326}
+\end{wrapfigure}
+
 \parbf{\ref{ex:side-angle}.}
 Apply \ref{ex:pbisec-side} and \ref{thm:isos}.
+
+\parbf{\ref{ex:construction-perpendicular}.}
+See the picture; the given data is marked in bold.
 
 \parbf{\ref{ex:2-reflections}.}
 Note that $\measuredangle XBA=\measuredangle ABP$, $\measuredangle PBC\z=\measuredangle CBY$.
@@ -432,7 +444,7 @@ Suppose that $C''$ denotes the reflection of~$C'$.
 
 Finally, if $C''\ne \hat C$, apply the reflection across $(\hat A\hat B)$.
 Note that $\hat A\hat C\z=\hat AC''$ and $\hat B\hat C\z=\hat BC''$;
-that is, $(AB)$ is the perpendicular bisector of $[C''\hat C]$.
+that is, $(\hat A\hat B)$ is the perpendicular bisector of $[C''\hat C]$.
 Therefore, this reflection sends $C''$ to~$\hat C$.
 
 Apply \ref{ex:ABC-motion} to show that the composition of the constructed reflections coincides with the given motion.
@@ -489,7 +501,16 @@ Therefore, $\angle OXP$ is obtuse.
 Applying \ref{ex:obtuce} again we get that $OP\z>OX$;
 that is, $P$ lies outside~$\Gamma$.
 
+\begin{wrapfigure}[6]{r}{27mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-328}
+\end{wrapfigure}
+
 \parbf{\ref{ex:chord-perp}.} Apply \ref{thm:perp-bisect}.
+
+\parbf{\ref{ex:center}.}
+See the picture; the given circle is marked in bold.
 
 \parbf{\ref{ex:two-circ}.} Use \ref{ex:chord-perp} and \ref{perp:ex+un}.
 
@@ -503,20 +524,8 @@ Show and use that $Q$ is the reflection of $P$ across~$(OO')$.
 Let $A$ and $B$ be the points of intersection.
 Note that the centers lie on the perpendicular bisector of the segment~$[AB]$.
 
-\parbf{\ref{ex:construction-perpendicular}--\ref{ex:tangent-circle}.}
+\parbf{\ref{ex:tangent}+\ref{ex:tangent-circle}.}
 The given data is marked in bold.
-
-\begin{Figure}
-\begin{minipage}{.49\textwidth}
-\centering
-\includegraphics{mppics/pic-326}
-\end{minipage}
-\hfill
-\begin{minipage}{.49\textwidth}
-\centering
-\includegraphics{mppics/pic-328}
-\end{minipage}
-\end{Figure}
 
 \begin{Figure}
 \begin{minipage}{.49\textwidth}
@@ -587,7 +596,11 @@ By \ref{cor:parallel-1}, $k\parallel n\z\Rightarrow m\parallel n$.
 The latter contradicts that $m\perp n$.
 
 
-
+\begin{wrapfigure}[7]{r}{23mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-333}
+\end{wrapfigure}
 
 \parbf{\ref{ex:construction-parallel}.}
 Repeat the construction in \ref{ex:construction-perpendicular} twice.
@@ -596,13 +609,6 @@ Repeat the construction in \ref{ex:construction-perpendicular} twice.
 Since  $\ell\parallel (AC)$, it cannot cross $[AC]$.
 By Pasch's theorem (\ref{thm:pasch}), $\ell$ has to cross another side of $\triangle ABC$.
 Therefore $\ell$ crosses $[BC]$; denote the point of intersection by $Q$.
-
-
-\begin{wrapfigure}[7]{r}{23mm}
-\vskip-1mm
-\centering
-\includegraphics{mppics/pic-333}
-\end{wrapfigure}
 
 Use the transversal property (\ref{thm:parallel-2}) to show that $\measuredangle BAC= \measuredangle BPQ$.
 The same argument shows that $\measuredangle ACB\z= \measuredangle PQB$; it remains to apply the AA similarity condition.
@@ -1338,15 +1344,15 @@ hold when $0<a<\tfrac12$.
 \parbf{\ref{ex:h-perp-unique}.} 
 Spell the meaning of the terms ``perpendicular'' and ``h-line'' and then apply \ref{ex:construction-perp-clines}.
 
-\parbf{\ref{ex:h-circle=circle}.}
-Choose the vertices $P$, $Q$, and $R$ on a Euclidean circle that intersects the absolute and is not orthogonal to it.
-Apply~\ref{lem:h-circle=circle}.
-
 \begin{wrapfigure}[9]{r}{34mm}
-\vskip-5mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-350}
 \end{wrapfigure}
+
+\parbf{\ref{ex:h-circle=circle}.}
+Choose the vertices $P$, $Q$, and $R$ on a Euclidean circle that intersects the absolute and is not orthogonal to it.
+Apply~\ref{lem:h-circle=circle}.
 
 \parbf{\ref{ex:3-h-lines}.} Look at the diagram and think.
 

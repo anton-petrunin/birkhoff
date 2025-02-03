@@ -1150,7 +1150,7 @@ endfig;
 
 beginfig(80)
 save u;
-u:=1cm;
+u:=1.2cm;
 
 z.O=origin;
 z.Z=(4,0)*u;
@@ -5902,6 +5902,158 @@ label.lrt (btex $C$ etex, z2);
 label.urt (btex $D$ etex, z3);
 
 endfig;
+
+beginfig(445)
+save u;
+u:=1cm;
+
+z.M=origin;
+z.P=(.5,1)*u;
+z.Q=z.P rotated 70;
+z.B=.6[z.P,z.Q];
+z.A=-z.B;
+z.W=(1,-.4)*u;
+
+z.shift=(3,0)*u;
+
+draw ddline(z.P,z.Q)(.3,.4) pensemibold;
+draw ddline(z.A-z.W,z.A+z.W)(.3,0) pensemibold;
+
+dOt z.M;
+
+whitelabel.lft (btex $M$ etex, z.M);
+label.lft (btex $\ell$ etex, 1.4[z.P,z.Q]);
+label.lft (btex $m$ etex, (-.3)[z.A-z.W,z.A+z.W]);
+endfig;
+
+
+beginfig(446)
+save u;
+u:=1cm;
+
+z.M=origin;
+z.P=(.5,1)*u;
+z.Q=z.P rotated 70;
+z.B=.6[z.P,z.Q];
+z.A=-z.B;
+z.W=(1,-.4)*u;
+
+z.shift=(3,0)*u;
+
+draw ddline(z.P,z.Q)(.3,.4) pensemibold;
+draw ddline(z.A-z.W,z.A+z.W)(.3,0) pensemibold;
+draw circle(z.M,z.P);
+
+dOt z.M,z.P,z.Q;
+
+whitelabel.lft (btex $M$ etex, z.M);
+whitelabel.urt (btex $P$ etex, z.P);
+whitelabel.ulft (btex $Q$ etex, z.Q);
+label.lft (btex $\ell$ etex, 1.4[z.P,z.Q]);
+label.lft (btex $m$ etex, (-.3)[z.A-z.W,z.A+z.W]);
+endfig;
+
+
+beginfig(447)
+save u;
+u:=1cm;
+
+z.M=origin;
+z.P=(.5,1)*u;
+z.Q=z.P rotated 70;
+z.B=.6[z.P,z.Q];
+z.A=-z.B;
+z.W=(1,-.4)*u;
+
+z.shift=(3,0)*u;
+
+draw ddline(z.P,z.Q)(.3,.4) pensemibold;
+draw ddline(z.P,-z.P)(.2,.2);
+draw ddline(z.Q,-z.Q)(.2,.2);
+draw ddline(z.A-z.W,z.A+z.W)(.3,0) pensemibold;
+draw circle(z.M,z.P);
+
+dOt z.M,z.P,z.Q,-z.P,-z.Q;
+
+whitelabel.lft (btex $M$ etex, z.M);
+whitelabel.urt (btex $P$ etex, z.P);
+whitelabel.ulft (btex $Q$ etex, z.Q);
+whitelabel.lft (btex $P'$ etex, -z.P);
+whitelabel.rt (btex $Q'$ etex, -z.Q);
+label.lft (btex $\ell$ etex, 1.4[z.P,z.Q]);
+label.lft (btex $m$ etex, (-.3)[z.A-z.W,z.A+z.W]);
+endfig;
+
+beginfig(448)
+save u;
+u:=1cm;
+
+z.M=origin;
+z.P=(.5,1)*u;
+z.Q=z.P rotated 70;
+z.B=.6[z.P,z.Q];
+z.A=-z.B;
+z.W=(1,-.4)*u;
+
+
+z.shift=(3,0)*u;
+
+draw ddline(z.P,z.Q)(.3,.4) pensemibold;
+draw ddline(-z.P,-z.Q)(.3,.4);
+draw ddline(z.P,-z.P)(.2,.2);
+draw ddline(z.Q,-z.Q)(.2,.2);
+draw ddline(z.A-z.W,z.A+z.W)(.3,0) pensemibold;
+draw circle(z.M,z.P);
+
+dOt z.M,z.A,z.P,z.Q,-z.P,-z.Q;
+
+whitelabel.lft (btex $M$ etex, z.M);
+whitelabel.bot (btex $A$ etex, z.A);
+whitelabel.urt (btex $P$ etex, z.P);
+whitelabel.ulft (btex $Q$ etex, z.Q);
+whitelabel.lft (btex $P'$ etex, -z.P);
+whitelabel.rt (btex $Q'$ etex, -z.Q);
+label.lft (btex $\ell$ etex, 1.4[z.P,z.Q]);
+label.lft (btex $m$ etex, (-.3)[z.A-z.W,z.A+z.W]);
+endfig;
+
+beginfig(449)
+save u;
+u:=1cm;
+
+z.M=origin;
+z.P=(.5,1)*u;
+z.Q=z.P rotated 70;
+z.B=.6[z.P,z.Q];
+z.A=-z.B;
+z.W=(1,-.4)*u;
+
+
+z.shift=(3,0)*u;
+
+draw ddline(z.P,z.Q)(.3,.4) pensemibold;
+draw ddline(-z.P,-z.Q)(.3,.4);
+draw ddline(z.A,z.B)(.3,.3);
+draw ddline(z.P,-z.P)(.2,.2);
+draw ddline(z.Q,-z.Q)(.2,.2);
+draw ddline(z.A-z.W,z.A+z.W)(.3,0) pensemibold;
+draw circle(z.M,z.P);
+
+rimmark1(z.A--z.M,z.M--z.B);
+
+dOt z.M,z.A,z.B,z.P,z.Q,-z.P,-z.Q;
+
+whitelabel.lft (btex $M$ etex, z.M);
+whitelabel.bot (btex $A$ etex, z.A);
+whitelabel.top (btex $B$ etex, z.B);
+whitelabel.urt (btex $P$ etex, z.P);
+whitelabel.ulft (btex $Q$ etex, z.Q);
+whitelabel.lft (btex $P'$ etex, -z.P);
+whitelabel.rt (btex $Q'$ etex, -z.Q);
+label.lft (btex $\ell$ etex, 1.4[z.P,z.Q]);
+label.lft (btex $m$ etex, (-.3)[z.A-z.W,z.A+z.W]);
+endfig;
+
 
 beginfig(915)
 save u;

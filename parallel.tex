@@ -8,8 +8,8 @@
 \includegraphics{mppics/pic-72}
 \end{wrapfigure}
 
-In consequence of Axiom~\ref{def:birkhoff-axioms:1}, 
-any two distinct lines $\ell$ and $m$ have either one point in common or none. 
+Recall that in consequence of Axiom~\ref{def:birkhoff-axioms:1},
+any two distinct lines $\ell$ and $m$ have either one point in common or none; see \ref{lem:line-line}.
 In the first case they are \index{intersecting lines}\emph{intersecting} (briefly $\ell\nparallel m$); 
 in the second case, $\ell$ and $m$ are said to be \index{parallel!lines}\emph{parallel} (briefly, \index{36@\hskip.4mm$\parallel$\hskip.4mm, \hskip.4mm$\nparallel$\hskip.4mm}$\ell\parallel m$);
 in addition, a line is always regarded as parallel to itself.
@@ -53,9 +53,9 @@ Then apply Proposition~\ref{prop:perp-perp}.
 If $P\in\ell$, then $m=\ell$ by the definition of parallel lines.
 Now, assume $P\notin\ell$.
 
-Let us construct the lines $n\ni P$ and $m\ni P$ as in the proof of existence, so $m\parallel \ell$.
+Let us construct the lines $n\ni P$ and $m\ni P$ as in the proof of existence; so $n\perp \ell$, $m\perp n$, and $m\parallel \ell$.
 
-Assume there is yet another line $s\ni P$ parallel to~$\ell$.
+Assume there is another line $s\ni P$ parallel to~$\ell$.
 Choose a point $Q\in s$ that lies with $\ell$ on the same side from~$m$.
 Let $R$ be the footpoint of $Q$ on~$n$.
 
@@ -70,7 +70,8 @@ Therefore, $Q$, $R$, and $\ell$ lie on the same side of~$m$.
 In particular, $R\in [P D)$.
 
 Choose $Z\in [P Q)$ such that 
-$$\frac{PZ}{PQ}=\frac{PD}{PR}.$$
+$$\frac{PZ}{PQ}=\frac{PD}{PR};$$
+it exists by Proposition~\ref{prop:point-on-half-line}.
 By SAS similarity condition (or equivalently by Axiom~\ref{def:birkhoff-axioms:4})
 we have that $\triangle RPQ\sim \triangle DPZ$;
 therefore $(Z D)\perp(P D)$.
@@ -111,7 +112,8 @@ Make a ruler-and-compass construction of a line thru a given point that is paral
 
 \section{Reflection across a point}
 
-Recall that $X'$ is a \index{reflection of a point}\emph{reflection of a point} $X$ across a point $O$ if $O$ is the midpoint of the line segment $[XX']$.
+Recall that if $O$ is the midpoint of the line segment $[XX']$,
+then we say that $X'$ is a \index{reflection across a point}\emph{reflection} of $X$ across a point $O$.
 In addition, we assume that $O'=O$; that is, $O$ is a reflection of itself across itself.
 
 The following statement is a refinement of Proposition~\ref{prop:point-reflection}.
@@ -121,10 +123,9 @@ A reflection across a point is a direct motion.
 \end{thm}
 
 \parit{Proof.}
-Let $O$ be the center of reflection.
-By Proposition~\ref{prop:point-reflection}, the reflection is a motion.
-
-Any angle $\angle XOY$ is vertical to its reflection $\angle X'OY'$.
+Choose a point $O$.
+By Proposition~\ref{prop:point-reflection}, the reflection across $O$ is a motion.
+Note that any angle $\angle XOY$ is vertical to its reflection $\angle X'OY'$.
 By \ref{prop:vert}, $\measuredangle XOY\z=\measuredangle X'OY'$.
 Therefore, the reflection cannot be indirect.
 
@@ -151,6 +152,7 @@ Use this statement and Corollary~\ref{cor:reflection+angle} to build another pro
 \begin{thm}{Theorem}\label{thm:parallel-point-reflection}
 Let $\ell$ be a line, $Q\in \ell$, and $P$ an arbitrary point.
 Suppose $O$ is the midpoint of $[PQ]$.
+
 Then a line $m$ passing thru $P$ is parallel to $\ell$ if and only if $m$ is a reflection of $\ell$ across $O$.
 \end{thm}
 
@@ -177,6 +179,8 @@ According to the ``if'' part of the theorem, $\ell'\parallel \ell$.
 Both lines $\ell'$ and $m$ pass thru $P$.
 By uniqueness of parallel lines (\ref{thm:parallel}), if $m\parallel \ell$, then $\ell'=m$; whence the statement follows.
 \qeds
+
+\pagebreak%???
 
 \section{Transversal property}
 

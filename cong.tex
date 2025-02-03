@@ -288,3 +288,94 @@ For a more direct proof, see Exercise~\ref{ex:SAA}.
 Another triple is called {}\emph{angle-angle-angle}, or briefly AAA.
 By Axiom~\ref{def:birkhoff-axioms:4}, it is not a congruence condition in the Euclidean plane.
 However, in the hyperbolic plane it is; see \ref{thm:AAA}.
+
+\section{Constructions}
+
+The construction problems provide a valuable source of exercises in geometry,
+which we will use further in the book.
+The whole Chapter~\ref{chap:car} will be devoted to the subject.
+
+{
+
+\begin{wrapfigure}{o}{33mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-445}
+\bigskip
+\includegraphics{mppics/pic-446}
+\bigskip
+\includegraphics{mppics/pic-447}
+\bigskip
+\includegraphics{mppics/pic-448}
+\bigskip
+\includegraphics{mppics/pic-449}
+\end{wrapfigure}
+
+A \index{ruler-and-compass construction}\emph{ruler-and-compass construction} is a construction with an idealized ruler and compass.
+The idealized ruler can be used only to draw a line thru the given two points.
+The idealized compass can be used only to draw a circle with a given center and radius.
+That is, given three points $A$, $B$, and $O$
+we can draw the circle of radius $AB$ centered at~$O$.
+We may also mark new points in the plane,
+as well as on the constructed lines, circles,
+and their intersections (assuming that such points exist).
+
+We may also look at the different sets of construction tools.
+For example,
+we may only use the ruler,
+or we may invent a new tool,
+say a tool that produces a midpoint for any given two points,
+or the reflection of one point across the other.
+
+As an example, let us consider the following problem:
+
+\begin{thm}{Problem}
+Given two lines $\ell$ and $m$ and a point $M$ not on these lines,
+construct a line segment with ends on $\ell$ and $m$ that is bisected by~$M$.
+\end{thm}
+
+The stages of the following construction are shown in the picture.
+
+\parit{Construction.}
+\begin{enumerate}[1.]
+\item Draw a circle centered at $M$ that crosses line $\ell$ at two points, say $P$ and $Q$.
+\item Draw the line $(PM)$ and mark by $P'$ its other point of intersection with the circle.
+Similarly, draw $(QM)$ and mark the other intersection point by $Q'$.
+\item Draw the line $\ell'=(P'Q')$ and mark by $A$ its point of intersection with $m$ (if it exists).
+\item Draw the line $(MA)$;
+mark by $B$ its point of intersection with $\ell$.
+Then $[AB]$ is the required segment.
+\end{enumerate}
+
+}
+
+It is often required to do \emph{problem analysis};
+proving that the result of the construction satisfies the required conditions and also determine when the construction is possible and how many solutions may exist.
+Let us do it for the example above.
+
+
+\parit{Problem analysis.}
+Notice that $P'$ and $Q'$ are reflections of $P$ and $Q$ across $M$.
+Therefore, the line $\ell'=(P'Q')$ is the reflection of $\ell=(PQ)$ across $M$.
+
+Since $A$ lies on $\ell'$,
+the point $B$ is the reflection of $A$ across $M$.
+Indeed, $B$ is the (necessarily unique) point of intersection of $(MA)$ and $\ell$, and $\ell'$ is the reflection of $\ell$.
+By the definition of reflection, $M$ is the midpoint of $[AB]$.
+
+The line $\ell'$ may have no points of intersection with $m$.
+In this case, the problem has no solution.
+Also, it might happen that $\ell'=m$;
+in this case, we have an infinite set of solutions --- any point on $m$ can be marked as~$A$.
+In all the remaining cases, we have exactly one solution.
+\qeds
+
+\begin{thm}{Exercise}\label{ex:motion}
+Suppose $\triangle ABC$ and $\triangle A'B'C'$ are congruent nondegenerate triangles;
+in particular, there is a motion $f$ such that
+\[f\colon A\mapsto A',\quad f\colon B\mapsto B',\quad\text{and}\quad f\colon C\mapsto C'.\]
+
+Given a point $X$, construct $X'=f(X)$.
+\end{thm}
+
+
