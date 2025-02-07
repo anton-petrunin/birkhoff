@@ -319,7 +319,7 @@ endfig;
 
 beginfig(337)
 save u;
-u:=1.5cm;
+u:=1cm;
 
 z.A=(0,1)*u;
 z.B=z.A rotated 120;
@@ -393,7 +393,7 @@ endfig;
 
 beginfig(340)
 save u;
-u:=1cm;
+u:=.8cm;
 
 z.A=(0,0)*u;
 z.B=(0,-1)*u;

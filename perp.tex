@@ -88,7 +88,8 @@ Then $\measuredangle A M P=\pm \tfrac\pi2$,
 $\measuredangle B M P=\pm \tfrac\pi2$ and
 $A M\z=B M$.
 By SAS, $\triangle A M P\cong \triangle B M P$;
-in particular, $A P\z= B P$.\qeds
+in particular, $A P\z= B P$.
+\qeds
 
 
 \begin{thm}{Exercise}\label{ex:pbisec-side}
@@ -103,6 +104,14 @@ Let $ABC$ be a nondegenerate triangle.
 Show that 
 \[AC>BC\iff|\measuredangle ABC|>|\measuredangle CAB|.\] 
 \end{thm}
+
+\begin{thm}{Exercise}\label{ex:pbisec-motion}
+A motion has a fixed point $F$ and maps a point $X$ to another point $Y$.
+Show that $F$ lies on the perpendicular bisector of $[XY]$.
+\end{thm}
+
+
+
 
 \section{Uniqueness of a perpendicular}
 
@@ -138,7 +147,7 @@ In particular, $(P P')\perp (A B)=\ell$.
 
 {
 
-\begin{wrapfigure}{r}{44mm}
+\begin{wrapfigure}{r}{37mm}
 \centering
 \includegraphics{mppics/pic-52}
 \end{wrapfigure}
@@ -172,8 +181,15 @@ To find the \index{reflection!across a line}\emph{reflection} $P'$ of $P$ across
 one drops a perpendicular from $P$ onto $(AB)$, 
 and continues it to the same distance on the other side.
 
-According to Theorem~\ref{perp:ex+un}, $P'$ is uniquely determined by~$P$.
+{
 
+\begin{wrapfigure}{o}{37mm}
+\vskip-2mm
+\centering
+\includegraphics{mppics/pic-54}
+\end{wrapfigure}
+
+According to Theorem~\ref{perp:ex+un}, $P'$ is uniquely determined by~$P$.
 Note that $P=P'$ if and only if $P\in(AB)$.
 
 \begin{thm}[\abs]{Proposition}\label{prop:reflection}
@@ -184,19 +200,14 @@ then
 $\measuredangle BAP'\equiv -\measuredangle BAP$.
 \end{thm}
 
+
 \parit{Proof.} 
 If $P\in (AB)$, 
 then $P\z=P'$. 
 By Corollary~\ref{cor:degenerate=pi}, $\measuredangle BAP\z=0$ or~$\pi$.
 Hence the statement follows.
 
-{
-
-\begin{wrapfigure}{o}{37mm}
-\vskip-2mm
-\centering
-\includegraphics{mppics/pic-54}
-\end{wrapfigure}
+}
 
 If $P\notin (AB)$, then~$P'\ne P$.
 By the construction of $P'$, 
@@ -211,7 +222,7 @@ we get that $\measuredangle BAP'\ne \measuredangle BAP$.
 That is, we are left with the case $\measuredangle BAP'\equiv-\measuredangle BAP$.
 \qeds
 
-}
+
 
 \begin{thm}{Exercise}\label{ex:2-reflections}
 Let $X$ and $Y$ be the reflections of $P$ across the lines $(AB)$ and $(BC)$ respectively.
@@ -275,8 +286,14 @@ we get that
 $$\measuredangle Q'P'R'\equiv-\measuredangle QPR.$$
 \qedsf
 
+
 \section{Direct and indirect motions}
 \label{direct motion}
+
+\begin{thm}{Exercise}\label{ex:3-reflections}
+Show that any motion of the plane can be presented as a
+composition of at most three reflections across lines.
+\end{thm}
 
 A motion $X\mapsto X'$ is called \index{direct motion}\emph{direct} if 
 $$\measuredangle Q'P'R'= \measuredangle QPR$$ 
@@ -290,13 +307,12 @@ Note that the composition of two reflections is a direct motion.
 More generally, the composition of two indirect motions is direct,
 the composition of two direct motions is direct,
 and the composition of direct and indirect motions is indirect.
+In particular, the exercise above implies the following.
 
-\begin{thm}{Exercise}\label{ex:3-reflections}
-Show that any motion of the plane can be presented as a 
-composition of at most three reflections across lines.
+\begin{thm}{Proposition}\label{prop:direct-indirect}
+Any motion of the plane is either direct or indirect.
+\end{thm}
 
-Conclude that any motion of the plane is either direct or indirect.
-\end{thm} 
 
 \section{Perpendicular is shortest}
 \label{sec:perp<oblique}
@@ -311,16 +327,16 @@ for any point $X$ on $\ell$ distinct from~$Q$.
 If $P$, $Q$, and $\ell$ are as above, 
 then $PQ$ is called the \label{distance!from a point to a line}\index{distance!from a point to a line}\emph{distance from $P$ to~$\ell$}. 
 
-\parit{Proof.}
-If $P\in \ell$, 
-then the result follows since $PQ=0$.
-So, we can assume that $P\notin \ell$.
-
 \begin{wrapfigure}{o}{24mm}
 \centering
 \includegraphics{mppics/pic-58}
 \vskip3mm
 \end{wrapfigure}
+
+\parit{Proof.}
+If $P\in \ell$, 
+then the result follows since $PQ=0$.
+So, we can assume that $P\notin \ell$.
 
 Let $P'$ be the reflection of $P$ across the line~$\ell$.
 Note that $Q$ is the midpoint of $[PP']$
@@ -350,6 +366,13 @@ Show that
 Suppose that $\triangle ABC$ has a right angle at $C$.
 Show that for any $X\in [AC]$ the distance from $X$ to $(AB)$ is smaller than $AB$.
 \end{thm}
+
+\begin{thm}{Exercise}\label{ex:PMQ}
+Assume that points $P$ and $Q$ lie on one side of line~$\ell$.
+Let $M\in \ell$ be the point that minimizes the sum $PM+MQ$.
+Show that $M\in (P'Q)$, where $P'$ is the reflection of $P$ across $\ell$.
+\end{thm}
+
 
 
 \section{Circles}
@@ -457,7 +480,7 @@ OO'=|r-r'|.$$
 {
 
 \begin{wrapfigure}{r}{20mm}
-\vskip-8mm
+\vskip-10mm
 \centering
 \includegraphics{mppics/pic-62}
 \end{wrapfigure}

@@ -5,7 +5,7 @@
 %\addcontentsline{toc}{chapter}{Hints}
 %\subsection*{Chapter~\ref{chap:metr}}
 
-\raggedcolumns\setlength{\multicolsep}{-5mm}
+\raggedcolumns\setlength{\multicolsep}{-7mm}
 \spell{\begin{multicols}{2}}{}
 
 \refstepcounter{chapter}
@@ -160,6 +160,10 @@ $\alpha=k\cdot\pi$.
 Equivalently, $\alpha=2\cdot n\cdot \pi$ or $\alpha=(2\cdot n+1)\cdot \pi$ for an integer~$n$.
 In these cases, we have $\alpha\equiv 0$ or $\alpha\equiv \pi$ respectively.
 
+\parbf{\ref{ex:a+b==c}.}
+Observe that $\gamma'=\alpha+\beta\in [0,2\cdot \pi]$.
+Show and use that if $\gamma'\equiv\gamma$, then $\gamma'=\gamma$.
+
 \parbf{\ref{ex:dist-cont}.} \textit{(a).}
 By the triangle inequality,
 $|f(A')\z-f(A)|\le d(A',A)$.
@@ -289,6 +293,21 @@ In the latter case, the angles have opposite signs which is impossible.
 
 Since $\alpha,\beta\in(-\pi,\pi]$, the equality $\alpha\equiv \beta$ implies $\alpha= \beta$.
 
+\parbf{\ref{ex:between}.}
+Apply \ref{thm:signs-of-triug} to $\triangle PAB$, $\triangle PBC$, and $\triangle PAC$.
+
+For the second part, argue as in \ref{ex:a+b==c} to show that if three numbers $\alpha,\beta,\gamma\in (-\pi,\pi)$ have the same sign and
+$\alpha+\beta\equiv\gamma$, then
+$|\alpha|+|\beta|=|\gamma|$.
+Apply it to $\alpha=\measuredangle APB$,
+$\beta=\measuredangle BPC$,
+and
+$\gamma=\measuredangle APC$.
+
+
+
+
+
 \parbf{\ref{ex:vert-intersect}.}
 Note that $O$ and $A'$
 lie on the same side of~$(AB)$.
@@ -368,11 +387,11 @@ The point $X'$ is their common point.
 
 
 \parbf{\ref{ex:acute-obtuce}.} 
-By Axiom~\ref{def:birkhoff-axioms:2b} and \ref{thm:straight-angle}, we have
-$\measuredangle XOA\z-\measuredangle XOB\z\equiv\pi$.
-Since $|\measuredangle XOA|$, $|\measuredangle XOB|\z\le \pi$, we get that
-$|\measuredangle XOA|\z+|\measuredangle XOB|\z=\pi$.
-Hence the statement follows. 
+By Axiom~\ref{def:birkhoff-axioms:2b} and Theorem \ref{thm:straight-angle}, we have
+$\measuredangle AOX\z+\measuredangle XOB\z\equiv\pi$; in particular, $|\measuredangle AOX\z+\measuredangle XOB|\ge\pi$.
+Conclude that both values $\measuredangle AOX$ and $\measuredangle XOB$ are nonnegative or nonpositive.
+
+In each case, argue as in \ref{ex:a+b==c} to show that $|\measuredangle AOX|\z+|\measuredangle XOB|=\pi$ and draw a conclusion.
 
 \parbf{\ref{ex:pbisec-side}.}
 Assume $X$ and $A$ lie on the same side of~$\ell$.
@@ -397,20 +416,27 @@ This way we have proved the ``if'' part.
 To prove the ``only if'' part, you need to switch $A$ and $B$ and
 repeat the above argument.
 
+\parbf{\ref{ex:side-angle}.}
+Apply \ref{ex:pbisec-side}, \ref{ex:vert-intersect}, and \ref{thm:isos}.
+
+\parbf{\ref{ex:pbisec-motion}.} Show that $FX=FY$ and apply \ref{thm:perp-bisect}.
+
 \begin{wrapfigure}{r}{27mm}
 \vskip-4mm
 \centering
 \includegraphics{mppics/pic-326}
 \end{wrapfigure}
 
-\parbf{\ref{ex:side-angle}.}
-Apply \ref{ex:pbisec-side} and \ref{thm:isos}.
-
 \parbf{\ref{ex:construction-perpendicular}.}
 See the picture; the given data is marked in bold.
 
 \parbf{\ref{ex:2-reflections}.}
-Note that $\measuredangle XBA=\measuredangle ABP$, $\measuredangle PBC\z=\measuredangle CBY$.
+Note that
+\begin{align*}
+\measuredangle XBA&=\measuredangle ABP,
+\\
+\measuredangle PBC&=\measuredangle CBY.
+\end{align*}
 Therefore,
 \begin{align*}
 \measuredangle XBY
@@ -425,7 +451,6 @@ Therefore,
  2\cdot \measuredangle ABC.
 \end{align*}
 
-\vskip-4mm
 
 \parbf{\ref{ex:3-reflections}.}
 Choose an arbitrary nondegenerate triangle $ABC$.
@@ -448,10 +473,6 @@ that is, $(\hat A\hat B)$ is the perpendicular bisector of $[C''\hat C]$.
 Therefore, this reflection sends $C''$ to~$\hat C$.
 
 Apply \ref{ex:ABC-motion} to show that the composition of the constructed reflections coincides with the given motion.
-
-By \ref{cor:reflection+angle}, any reflection is an indirect motion.
-Show that a composition of an even (odd) number of reflections is direct (respectively, indirect).
-The last statement follows since any motion is a composition of reflections.
 
 \parbf{\ref{ex:obtuce}.}
 If $\angle ABC$ is right, the statement follows from \ref{lem:perp<oblique}.
@@ -484,6 +505,8 @@ Note that $AX<AC$ and by \ref{lem:perp<oblique}, $AB\z\le AX$.
 Let $Y$ be the footpoint of $X$ on $(AB)$.
 Apply \ref{lem:perp<oblique} to show that 
 $XY<AX\le AC\z<AB$.
+
+\parbf{\ref{ex:PMQ}.} Observe that $PM+MQ=P'M+MQ\z\ge P'Q$ and argue as in \ref{lem:perp<oblique}.
 
 \parbf{\ref{ex:inside-outside}.}
 Let $O$ be the center of the circle.
@@ -596,8 +619,8 @@ By \ref{cor:parallel-1}, $k\parallel n\z\Rightarrow m\parallel n$.
 The latter contradicts that $m\perp n$.
 
 
-\begin{wrapfigure}[7]{r}{23mm}
-\vskip-0mm
+\begin{wrapfigure}[6]{r}{23mm}
+\vskip-9mm
 \centering
 \includegraphics{mppics/pic-333}
 \end{wrapfigure}
@@ -748,7 +771,7 @@ It remains to rewrite this equation as in \ref{ex:circle-coord}.
 
 \parbf{\ref{ex:apolonnius-construction}.}
 Assume $M\notin(AB)$.
-Show and use that the points $P$ and $Q$ constructed on the following diagram lie on the Apollonian circle.
+Show and use that the points $P$ and $Q$ constructed in the following picture lie on the Apollonian circle.
 
 \begin{Figure}
 \centering
@@ -895,19 +918,18 @@ on the diameters $[AB]$ and $[A'B']$ respectively.
 By \ref{cor:right-angle-diameter},
 any point $Z$ at the intersection $\Gamma\cap \Gamma'$ will do.
 
-
-\begin{wrapfigure}[8]{r}{20mm}
-\vskip-4mm
-\centering
-\includegraphics{mppics/pic-336}
-\end{wrapfigure}
-
 If $O$ is the center of the circle, then 
 $\measuredangle AOB\z\equiv 2\cdot \measuredangle AA'B\equiv\pi$.
 That is, $O$ is the midpoint of~$[AB]$.
 
+\begin{wrapfigure}[8]{r}{20mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-336}
+\end{wrapfigure}
+
 \parbf{\ref{ex:perpendicular-ruler}.}
-Guess the construction from the diagram.
+Guess the construction from the picture.
 To prove it,
 apply \ref{thm:orthocenter} and \ref{cor:right-angle-diameter}.
 
@@ -984,14 +1006,16 @@ Show that $P$ lies on the arc opposite from $ACB$;
 conclude that
 $\measuredangle APC\z=\measuredangle CPB\z=\pm\tfrac\pi3$.
 
-Choose a point $A'\in [PC]$ such that $PA'\z=PA$.
-Note that $\triangle APA'$ is equilateral.
-Prove and use that $\triangle AA'C\cong \triangle APB$.
-
-\begin{Figure}
+\begin{wrapfigure}[9]{r}{25mm}
+\vskip-3mm
 \centering
 \includegraphics{mppics/pic-337}
-\end{Figure}
+\end{wrapfigure}
+
+Choose a point $A'\z\in [PC]$ such that $PA'\z=PA$.
+Note that $\triangle APA'$ is equilateral.
+Prove and use that $\triangle AA'C\z\cong \triangle APB$.
+
 
 \parbf{\ref{ex:tangent-arc}.}
 If $C\in (AX)$, then the arc is the line segment $[AC]$ or the union of two half-lines in $(AX)$ with vertices at $A$ and~$C$.
@@ -1018,14 +1042,15 @@ Apply \ref{prop:arc(angle=tan)} twice.
 
 (Alternatively, apply \ref{cor:reflection+angle} for the reflection across the perpendicular bisector of $[AC]$.)
 
-\parbf{\ref{ex:3x120}.} Guess a construction from the diagram.
+\parbf{\ref{ex:3x120}.} Guess a construction from the picture.
 To show that it produces the needed point, apply \ref{thm:inscribed-angle}.
 
-\begin{Figure}
-\vskip-0mm
+
+\begin{wrapfigure}[8]{r}{25mm}
+\vskip-6mm
 \centering
 \includegraphics{mppics/pic-340}
-\end{Figure}
+\end{wrapfigure}
 
 %\subsection*{Chapter~\ref{chap:inversion}}
 \refstepcounter{chapter}
@@ -1079,7 +1104,7 @@ and
 $(C'I)\z\perp (B'A')$.
 
 \parbf{\ref{ex:consturuction-of-inversion}.}
-Guess the construction from the diagram.
+Guess the construction from the picture.
 
 \begin{Figure}
 \vskip-0mm
@@ -1110,7 +1135,7 @@ Apply an inversion across a circle with the center at the only point of intersec
 then use \ref{thm:inverse}.
 
 \parbf{\ref{ex:4-circles}.}
-Label the points of tangency as on the diagram.
+Label the points of tangency as in the picture.
 Apply an inversion with the center at $P$. 
 Observe that the two circles that tangent are at $P$ become parallel lines and 
 the remaining two circles are tangent to each other and these two parallel lines.
@@ -1135,7 +1160,7 @@ while the two parallel lines will become circles tangent at~$A$.
 \includegraphics{mppics/pic-346}
 \end{Figure}
 
-It remains to show that the dashed line $(AB')$ on the diagram is parallel to the other two lines.
+It remains to show that the dashed line $(AB')$ in the picture is parallel to the other two lines.
 
 \parbf{\ref{ex:inscribed+inv}.}
 Apply \ref{lem:inverse-4-angle}\textit{\ref{lem:inverse-4-angle:angle}}, 
@@ -1354,7 +1379,7 @@ Spell the meaning of the terms ``perpendicular'' and ``h-line'' and then apply \
 Choose the vertices $P$, $Q$, and $R$ on a Euclidean circle that intersects the absolute and is not orthogonal to it.
 Apply~\ref{lem:h-circle=circle}.
 
-\parbf{\ref{ex:3-h-lines}.} Look at the diagram and think.
+\parbf{\ref{ex:3-h-lines}.} Look at the picture and think.
 
 \parbf{\ref{ex:O-h-dist}.} Use \ref{lem:O-h-dist}.
 
@@ -1492,14 +1517,14 @@ with a right angle at $Q$, where  $PQ_h\z=QR_h$
 and the vertices $P$, $Q$, and $R$ 
 lie on a horocycle.
 
-We may assume that $Q$ is the center of the absolute.
-In this case, $\measuredangle_hPQR\z=\measuredangle PQR\z=\pm\tfrac\pi2$ and $PQ=QR$.
-
-\begin{Figure}
-\vskip-0mm
+\begin{wrapfigure}{r}{32mm}
+\vskip-3mm
 \centering
 \includegraphics{mppics/pic-352}
-\end{Figure}
+\end{wrapfigure}
+
+We may assume that $Q$ is the center of the absolute.
+In this case, $\measuredangle_hPQR\z=\measuredangle PQR\z=\pm\tfrac\pi2$ and $PQ=QR$.
 
 Note that the Euclidean circle passing thru $P$, $Q$, and $R$ is tangent to the absolute.
 Conclude that $PQ=\tfrac1{\sqrt2}$. 
@@ -1577,7 +1602,7 @@ It remains to apply \ref{ex:collinear=affine}.
 \parbf{\ref{ex:midpoint-affine}.}
 It is sufficient to construct the midpoint of $[AB]$
 with a ruler and a parallel tool.
-Guess the construction from the diagram.
+Guess the construction from the picture.
 
 }
 
@@ -1786,13 +1811,6 @@ Since $V\in p$, by \ref{clm:polar}, we get that $P\in v$;
 that is, $(PV)=v$.
 Hence the statement follows.
 
-\begin{Figure}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-370}
-\vskip-6mm
-\end{Figure} 
-
 \parbf{\ref{ex:concentric-circ}.}
 Choose a point $P$ outside of the larger circle.
 Construct the lines dual to $P$ for both circles.
@@ -1801,6 +1819,13 @@ Note that these two lines are parallel.
 Assume that the lines intersect the bigger circle at two pairs of points $X$, $X'$ and $Y$, $Y'$.
 Set $Z\z=(XY)\cap (X'Y')$.
 Note that the line $(PZ)$ passes thru the common center.
+
+\begin{Figure}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-370}
+\vskip-6mm
+\end{Figure}
 
 The center is the intersection of $(PZ)$ and another line constructed in the same way.
 
@@ -1851,18 +1876,18 @@ Consider the inversion of the base circle across a sphere with its center at the
 
 {
 
+\begin{wrapfigure}{r}{28mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-358}
+\end{wrapfigure}
+
 \parbf{\ref{ex:2(pi/4)=pi/3}.} 
 Apply the spherical Pythagorean theorem to show that
 $
 \cos AB_s\z=\tfrac12
 $,
 and conclude that $AB_s\z=\tfrac\pi3$.
-
-\begin{wrapfigure}{r}{28mm}
-\vskip-5mm
-\centering
-\includegraphics{mppics/pic-358}
-\end{wrapfigure}
 
 Alternatively, 
 look at the tessellation of the hemisphere in the picture; 
@@ -1887,7 +1912,7 @@ You should get the following answers:
 
 %\parbf{\ref{ex:P-->hat-P}.}
 %Let $N$, $O$, $S$, $P$, $P'$, and $\hat P$ 
-%be as on the diagram in \ref{sec:special-bijection}.
+%be as in the picture in \ref{sec:special-bijection}.
 
 %Note that $OQ=\tfrac1x$ and therefore we need to show that $O\hat P=2/(x+\tfrac1x)$.
 %To do this, show and use that $\triangle SOP\sim \triangle SP'N\sim \triangle P'\hat PP$ and $2\cdot SO\z=NS$.
@@ -2199,29 +2224,31 @@ such that $AD=a$ and $BD=b$;
 (4) let $C$ be an intersection of $\Gamma$ and~$\ell$.
 Then $DC= \sqrt{a\cdot b}$.
 
+
 The construction of $\tfrac{a^2}b$ is analogous.
 
-{
-
-\begin{wrapfigure}{r}{27mm}
-\vskip-4mm
-\centering
-\includegraphics{mppics/pic-366}
-\end{wrapfigure}
-
 \parbf{\ref{ex:5-gon},} \textit{(\ref{ex:5-gon:a})}.
-Look at the diagram;
+Look at the picture;
 show that the angles marked the same way have the same angle measure.
+
 Conclude that $XC=BC$ and $\triangle ABC\sim \triangle AXB$.
 Therefore 
 \[\frac{AB}{AC}=\frac{AX}{AB}=\frac{AC-AB}{AB}=\frac{AC}{AB}-1.\]
 It remains to solve for $\frac{AC}{AB}$.
 
-}
+{
+
+\begin{wrapfigure}[7]{r}{27mm}
+\vskip-8mm
+\centering
+\includegraphics{mppics/pic-366}
+\end{wrapfigure}
 
 \parit{(\ref{ex:5-gon:b}).}
 Choose two points $P$ and $Q$ and use the ruler-and-compass calculator to construct two points $V$ and $W$ such that $VW\z=\tfrac{1+\sqrt5}2\cdot PQ$.
 Then construct a pentagon with the sides $PQ$ and diagonals $VW$.
+
+}
 
 \parbf{\ref{ex:trisect-set-square}.} 
 Note that with a set-square we can construct a line parallel to a given line thru the given point.
@@ -2257,7 +2284,7 @@ Show and use that any point that can be constructed with the 30°-set-square has
 \end{wrapfigure}
 
 \parbf{\ref{ex:equilateral triangle-verify},} \textit{(\ref{ex:verify:triangle})}.
-Observe that three perpendiculars on the diagram meet at one point if and only if the triangle is isosceles.
+Observe that three perpendiculars in the picture meet at one point if and only if the triangle is isosceles.
 
 Use this observation a couple of times to verify that the given triangle is equilateral.
 
@@ -2339,14 +2366,14 @@ Show that among elementary sets
 only one-point sets can be subsets of a circle.
 It remains to note that any circle contains an infinite number of points.
 
-\begin{wrapfigure}{r}{28mm}
-\vskip-4mm
+\parbf{\ref{ex:two-parallelograms}.}
+Suppose that $E$ denotes the point of intersection of the lines $(BC)$ and~$(C'D')$.
+
+\begin{wrapfigure}[7]{r}{28mm}
+\vskip-2mm
 \centering
 \includegraphics{mppics/pic-372}
 \end{wrapfigure}
-
-\parbf{\ref{ex:two-parallelograms}.}
-Suppose that $E$ denotes the point of intersection of the lines $(BC)$ and~$(C'D')$.
 
 Use \ref{prop:area-parallelogram} to prove that the following solid parallelograms have the same area:
 $\solidsquare ABCD$, $\solidsquare AB'ED$, and $\solidsquare AB'C'D'$.

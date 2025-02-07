@@ -694,7 +694,7 @@ endfig;
 
 beginfig(52)
 save u;
-u:=1.4cm;
+u:=1.2cm;
 
 z.O=origin;
 z.P=(0,1)*u;
@@ -5404,7 +5404,7 @@ u:=1cm;
 k:=.5cm;
 
 z.c=origin;
-z.a=(1.6,.2)*u;
+z.a=(1.6,.5)*u;
 z.b=z.a zscaled (0,sqrt(3));
 
 z.z=incenter(z.a,z.b,z.c);
@@ -6054,6 +6054,33 @@ label.lft (btex $\ell$ etex, 1.4[z.P,z.Q]);
 label.lft (btex $m$ etex, (-.3)[z.A-z.W,z.A+z.W]);
 endfig;
 
+
+beginfig(838)
+save u;
+u:=.7cm;
+
+z.A=(0,0)*u;
+z.C=(1.7,1)*u;
+z.B=.4[z.A,z.C];
+z.P=(-.2,1.5)*u;
+
+draw ddline(z.A,z.C)(.2,.2);
+draw z.P--z.A;
+draw z.P--z.B;
+draw z.P--z.C;
+
+dOt z.P,z.A,z.B,z.C;
+
+drawarrow cutcircle(circle(z.P,8), z.A, z.C);
+drawarrow cutcircle(circle(z.P,11), z.A, z.B);
+drawarrow cutcircle(circle(z.P,13), z.B, z.C);
+
+label.ulft (btex $P$ etex, z.P);
+label.lrt (btex $A$ etex, z.A);
+label.lrt (btex $B$ etex, z.B);
+label.lrt (btex $C$ etex, z.C);
+
+endfig;
 
 beginfig(915)
 save u;
