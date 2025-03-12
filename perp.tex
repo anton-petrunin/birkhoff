@@ -3,11 +3,11 @@
 \section{Right, acute and obtuse angles}
 
 \begin{itemize}
-\item If $|\measuredangle A O B|=\tfrac\pi2$, we say that $\angle A O B$ is \index{angle!right angle}\emph{right};
+\item If $|\measuredangle A O B|=\tfrac\pi2$, we say that $\angle A O B$ is \index{right!angle}\emph{right};
 %\item If $\measuredangle A O B\ne\pm\tfrac\pi2$, we say that the angle $\angle A O B$ is \index{angle!oblique angle}\emph{oblique};
 \item If $|\measuredangle A O B|<\tfrac\pi2$, we say that $\angle A O B$ is 
-\index{acute angle}\emph{acute};
-\item If $|\measuredangle A O B|>\tfrac\pi2$, we say that $\angle A O B$ is \index{angle!acute and obtuse angles}\index{obtuse angle}\emph{obtuse}.
+\index{acute}\emph{acute};
+\item If $|\measuredangle A O B|>\tfrac\pi2$, we say that $\angle A O B$ is \index{angle!right, acute, and obtuse angles}\index{obtuse}\emph{obtuse}.
 \end{itemize}
 
 \begin{wrapfigure}[2]{r}{25mm}
@@ -23,16 +23,12 @@ This can be written as \index{38@$\perp$}$[O A)\z\perp [O B)$.
 
 Theorem~\ref{thm:straight-angle} allows us to call two lines $(O A)$ and $(O B)$ {}\emph{perpendicular} if $[O A)\z\perp [O B)$; so, we can write $(O A)\z\perp (O B)$.
 
-
-
 \begin{thm}{Exercise}\label{ex:acute-obtuce}
 Assume that point $O$ lies between $A$ and $B$ and $X\ne O$.
 Show that 
 $\angle XOA$ is acute if and only if 
 $\angle XOB$ is obtuse.
 \end{thm}
-
-
 
 \section{Perpendicular bisector}
 
@@ -48,19 +44,19 @@ all points that are equidistant from $A$ and $B$ and no
 others lie on the perpendicular bisector of~$[A B]$.
 \end{thm}
 
-\begin{wrapfigure}{o}{34mm}
+\parit{Proof.} Let $M$ be the midpoint of~$[A B]$.
+Assume $P A= P B$ and $P\ne M$.
+According to SSS (\ref{thm:SSS}),
+$\triangle A M P \z\cong\triangle B M P$.
+Hence
+$\measuredangle A M P=\pm \measuredangle B M P$.
+Since $A\not=B$, we have ``$-$'' in this formula.
+
+\begin{wrapfigure}[8]{o}{34mm}
 \centering
 \includegraphics{mppics/pic-48}
 \end{wrapfigure}
 
-\parit{Proof.} Let $M$ be the midpoint of~$[A B]$.
-
-Assume $P A= P B$ and $P\ne M$.
-According to SSS (\ref{thm:SSS}),
-$\triangle A M P \z\cong\triangle B M P$.
-Hence 
-$$\measuredangle A M P=\pm \measuredangle B M P.$$  
-Since $A\not=B$, we have ``$-$'' in the above formula.
 Furthermore,
 \begin{align*}
 \pi
@@ -145,12 +141,6 @@ In particular, $(P P')\perp (A B)=\ell$.
 
 }
 
-{
-
-\begin{wrapfigure}{r}{37mm}
-\centering
-\includegraphics{mppics/pic-52}
-\end{wrapfigure}
 
 \parit{Uniqueness for $P\not\in\ell$.} 
 From above we can choose a point $P'$ in such a way that $\ell$ forms the perpendicular bisector of~$[PP']$.
@@ -158,6 +148,13 @@ From above we can choose a point $P'$ in such a way that $\ell$ forms the perpen
 Assume $m\perp \ell$ and $m\ni P$.
 Then $m$ is a perpendicular bisector of some segment $[Q Q']$ of $\ell$;
 in particular, $P Q= P Q'$.
+
+{
+
+\begin{wrapfigure}{r}{37mm}
+\centering
+\includegraphics{mppics/pic-52}
+\end{wrapfigure}
 
 Since $\ell$ is the perpendicular bisector of $[P P']$,
 we get that $PQ= P'Q$ and $PQ' \z= P'Q'$.
@@ -314,7 +311,7 @@ Any motion of the plane is either direct or indirect.
 \end{thm}
 
 
-\section{Perpendicular is shortest}
+\section{The perpendicular is shortest}
 \label{sec:perp<oblique}
 
 \begin{thm}[\abs]{Lemma}\label{lem:perp<oblique}
@@ -355,16 +352,22 @@ $$PX+P'X>PP',$$
 and hence the result: $PX>PQ$.
 \qeds
 
-\begin{thm}{Exercise}\label{ex:obtuce}
-Assume $\angle ABC$ is right or obtuse.
-Show that 
-\[AC>AB.\]
-
+\begin{thm}{Classroom exercise}\label{ex:right-acute}
+Show that
+\begin{enumerate}[(a)]
+\item If $\triangle ABC$ has a right angle at $C$, then its other angles are acute.
+\item If $\triangle ABC$ has an obtuse angle at $C$, then its other angles are acute.
+\end{enumerate}
 \end{thm}
 
-\begin{thm}{Exercise}\label{ex:right-triangle-inq}
-Suppose that $\triangle ABC$ has a right angle at $C$.
-Show that for any $X\in [AC]$ the distance from $X$ to $(AB)$ is smaller than $AB$.
+This exercise is closely related to Proposition~\ref{prop:2sum}.
+
+If a triangle has an obtuse or right angle, then it is called \index{triangle!right, acute, and obtuse triangle}\index{obtuse}\emph{obtuse} or \index{triangle!right triangle}\index{right!triangle}\emph{right}, respectively.
+Otherwise, if all its angles are acute, it is called an \index{acute}\emph{acute triangle}.
+
+\begin{thm}{Exercise}\label{ex:obtuce}
+Suppose that point $X$ lies between $V$ and $W$.
+Show that for any point $P$, we have $PX < PV$ or $PX < PW$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:PMQ}
@@ -403,16 +406,18 @@ Describe a ruler-and-compass construction of a center
 of a given circle.
 \end{thm}
 
+{
+
+\begin{wrapfigure}[4]{r}{54mm}
+\vskip-8mm
+\centering
+\includegraphics{mppics/pic-60}
+\end{wrapfigure}
 
 \begin{thm}[\abs]{Lemma}\label{lem:line-circle}
 A line and a circle can have at most two points of intersection.
 \end{thm}
 
-\begin{wrapfigure}{o}{54mm}
-\vskip-4mm
-\centering
-\includegraphics{mppics/pic-60}
-\end{wrapfigure}
 
 \parit{Proof.} Assume $A$, $B$, and $C$ are distinct points that lie on a line $\ell$ and a circle $\Gamma$ with the center~$O$.
 Then $OA=OB=OC$; in particular, $O$ lies on the perpendicular bisectors 
@@ -421,6 +426,8 @@ Note that the midpoints of $[AB]$ and $[BC]$ are distinct.
 Therefore, $m$ and $n$ are distinct.
 The latter contradicts the uniqueness of the perpendicular (Theorem~\ref{perp:ex+un}).
 \qeds
+
+}
 
 \begin{thm}{Exercise}\label{ex:two-circ}
 Show that two distinct circles can have at most two points of intersection.
@@ -461,18 +468,13 @@ that is, $\ell$ is tangent to $\Gamma$ at~$P$.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:tangent-circles}
-Let $\Gamma$ and $\Gamma'$ be two distinct circles with centers at $O$ and $O'$ respectively. 
-Assume $\Gamma$ meets $\Gamma'$ at a point~$P$.
-Show that $\Gamma$ is tangent to $\Gamma'$ if and only if $O$, $O'$, and $P$ lie on one line.
-\end{thm}
-
-\begin{thm}{Exercise}\label{ex:tangent-circles-2}
-Let $\Gamma$ and $\Gamma'$ be two distinct circles with centers at $O$ and $O'$ and radiuses $r$ and~$r'$.
-Show that $\Gamma$ is tangent to $\Gamma'$ if and only if
-$$OO'=r+r'
-\quad
-\text{or}\quad
-OO'=|r-r'|.$$
+Let $\Gamma$ and $\Gamma'$ be two circles with centers at $O$ and $O'$, and radiuses $r$ and~$r'$, respectively.
+Show that $\Gamma$ is tangent to $\Gamma'$ if and only if one of the following conditions holds:
+\begin{enumerate}[(a)]
+\item\label{ex:tangent-circles:a} The circles meet at a point~$P$ that lies on one line with $O$ and~$O'$.
+\item\label{ex:tangent-circles:b} The circles meet at a point~$P$ and share a common tangent line at this point.
+\item\label{ex:tangent-circles-2} $OO' = r + r'$ or $OO' = |r - r'|$.
+\end{enumerate}
 
 \end{thm}
 

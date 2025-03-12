@@ -2993,13 +2993,6 @@ for i=0 upto n-1: draw (DDD shifted (i*(z.A-z.B)));
 endfor
 ;
 
-for i=0 upto n: 
-Dot z.A + (i*(z.A-z.B));
-Dot z.C + (i*(z.A-z.B));
-endfor
-;
-
-Dot z.B;
 );
 
 draw pic withcolor 1;
@@ -5687,9 +5680,9 @@ draw origin--z.c--z.c+z.d--z.d--cycle;
 dOt origin,z.a,z.b,z.a+z.b,z.c,z.d,z.c+z.d;
 
 label.llft (btex $A$ etex, origin);
-label.lrt (btex $B'$ etex, z.a);
+label.rt (btex $B'$ etex, z.a+(-1,-1));
 label.urt (btex $C'$ etex, z.a+z.b);
-label.ulft (btex $D'$ etex, z.b);
+label.lft (btex $D'$ etex, z.b+(1,1));
 label.bot (btex $B$ etex, z.c);
 label.rt (btex $C$ etex, z.c+z.d);
 label.top (btex $D$ etex, z.d);

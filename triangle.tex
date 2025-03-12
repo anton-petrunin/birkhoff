@@ -26,8 +26,7 @@ The circumcenter of the triangle is usually denoted by~$O$.
 Let $\triangle ABC$ be nondegenerate.
 Let $\ell$ and $m$ be perpendicular bisectors to sides $[AB]$ and $[AC]$ respectively.
 
-Assume $\ell$ and $m$ intersect,
-let $O=\ell\cap m$.
+Assume $\ell$ intersects $m$, say, at $O$.
 
 Let us apply Theorem~\ref{thm:perp-bisect}.
 Since $O\in\ell$, we have $OA\z=OB$ and since $O\in m$, we have $OA\z=OC$.
@@ -88,19 +87,13 @@ n&\ni C.
 \end{align*}
 Since $\triangle A B C$ is nondegenerate,
 no pair of the lines $\ell$, $m$, and $n$ is parallel.
-Set 
-\begin{align*}
-A'&=m\cap n,
-&
-B'&=n\cap \ell,
-&
-C'&=\ell\cap m.
-\end{align*}
+Let $A'$, $B'$, and $C'$ be the points of intersection of
+$m$ and $n$, $n$ and $\ell$, and $\ell$ and $m$, respectively.
 
 }
 
 Note that $\square A B C B'$, $\square B C A C'$, and $\square C A B A'$, are parallelograms.
-Applying Lemma~\ref{lem:parallelogram} we get that $\triangle ABC$ is the median triangle of $\triangle A' B' C'$;
+Applying Lemma~\ref{lem:parallelogram} we get that $\triangle ABC$ is the \index{medial triangle}\emph{medial triangle} of $\triangle A' B' C'$;
 that is, $A$, $B$, and $C$ are the midpoints of $[B' C']$, $[C' A']$, and $[A' B']$ respectively.
 
 By Exercise~\ref{ex:perp-perp},
@@ -114,12 +107,17 @@ Applying Theorem~\ref{thm:circumcenter}, we get that altitudes of $\triangle ABC
 \qeds
 
 \begin{thm}{Exercise}\label{ex:orthic-4}
-Assume $H$ is the orthocenter of an acute (or obtuse) triangle $A B C$.
+Assume that the orthocenter $H$ of $\triangle ABC$ is distinct from its vertices.
 Show that $A$ is the orthocenter of $\triangle H B C$.
 \end{thm}
 
-$H=C$ if and only if $\triangle A B C$ has a right angle at $C$.
-This justifies the acute (or obtuse) condition in the exercise.
+\begin{thm}{Exercise}\label{ex:orthic-sim}
+Let $A'$, $B'$, and $C'$ be the footpoints of the corresponding altitudes of an acute triangle $ABC$.
+Show that
+\[
+\triangle ABC \sim \triangle A'B'C \sim \triangle AB'C' \sim \triangle A'BC'.
+\]
+\end{thm}
 
 
 
@@ -174,6 +172,14 @@ $[AB]$, $[BC]$, $[CD]$, and~$[DA]$ respectively.
 Show that $\square XYVW$ is a parallelogram.
 \end{thm}
 
+\begin{thm}{Advaneced exercise}\label{ex:euler-line}
+Show that the orthocenter $H$, centroid $M$, and circumcenter $O$ of any nondegenerate triangle $ABC$ lie on a single line.
+Moreover, the centroid divides the segment $[HO]$ in the ratio $2:1$.
+\end{thm}
+
+The line in this exercise is called \emph{Euler's line}.
+
+
 \section{Angle bisectors}
 
 If $\measuredangle A B X\equiv-\measuredangle C B X$, 
@@ -193,7 +199,7 @@ then the bisector of $\angle ABC$ is the external bisector of $\angle A' B C$ an
 
 Note that the bisector and the external bisector are uniquely defined by the angle.
 
-\begin{thm}{Exercise}\label{ex:perp-bisectors}
+\begin{thm}{Classroom exercise}\label{ex:perp-bisectors}
 Show that for any angle, its bisector and external bisector are perpendicular.
 \end{thm}
 
@@ -223,9 +229,8 @@ $$\frac{AB}{AC}=\frac{DB}{DC}.
 
 \parit{Proof.}
 Let $\ell$ be a line passing thru $C$ that is parallel to~$(AB)$.
-Note that $\ell\nparallel (AD)$;
-set 
-\[E=\ell\cap (AD).\]
+Note that the lines $\ell$ and $(AD)$ are not parallel;
+let $E$ be their point of intersection.
 
 Note also that $B$ and $C$ lie on opposite sides of~$(AD)$.
 By the transversal property (\ref{thm:parallel-2}),
@@ -278,7 +283,7 @@ $AE=FC$.
 
 }
 
-\section{Equidistant property}
+\section{The equidistant property}
 
 Recall that the distance from a line $\ell$ to a point $P$ is defined as the distance from $P$ to its footpoint on $\ell$; see Section~\ref{sec:perp<oblique}. 
 
@@ -300,10 +305,17 @@ Note that
 Otherwise, both lines $(AB)$ and $(BC)$ are perpendicular bisectors of $[XY]$.
 Hence $(AB)=(BC)$, but this is impossible since $\triangle ABC$ is not degenerate.
 
-By Proposition~\ref{prop:reflection},
-\[XB=YB=ZB.\]
-
+By Proposition~\ref{prop:reflection}, $XB=YB=ZB$.
 Note that $X$ is equidistant from $(AB)$ and $(BC)$ if and only if $XY\z=XZ$.
+
+
+{
+
+\begin{wrapfigure}{r}{24mm}
+\centering
+\includegraphics{mppics/pic-112}
+\end{wrapfigure}
+
 Applying SSS and then SAS, we get that
 $$\begin{aligned}
 XY&=XZ
@@ -318,15 +330,12 @@ XY&=XZ
 \end{aligned}
 $$
 
-\begin{wrapfigure}{r}{24mm}
-\centering
-\includegraphics{mppics/pic-112}
-\end{wrapfigure}
-
 Since $Y\ne Z$, we get that $\measuredangle XBY\ne \measuredangle XBZ$.
 Therefore $X$ is equidistant from $(AB)$ and $(BC)$ if and only if
 \[\measuredangle XBY\equiv -\measuredangle XBZ.
 \eqlbl{eq:iff-chain}\]
+
+}
 
 By Proposition~\ref{prop:reflection}, $A$ lies on the bisector of $\angle XBY$,
 and $C$ lies on the bisector of $\angle XBZ$; that is,
@@ -348,12 +357,12 @@ The last identity means either
 --- hence the result.
 \qeds
 
-\section{Incenter}
+\section{The incenter}
+
 
 \begin{thm}[\abs]{Theorem}\label{thm:incenter}
 Angle bisectors of any nondegenerate triangle intersect at one point.
 \end{thm}
-
 
 The point of intersection of bisectors is called the \index{incenter}\emph{incenter} of the triangle, 
 usually denoted by~$I$.
@@ -366,22 +375,25 @@ the \index{inradius}\emph{inradius} of the triangle.
 \parit{Proof.} 
 Let $\triangle ABC$ be a nondegenerate triangle.
 
-\begin{wrapfigure}{o}{28mm}
-\vskip-2mm
-\centering
-\includegraphics{mppics/pic-114}
-\end{wrapfigure}
-
 Points $B$ and $C$ lie on opposite sides of the bisector of $\angle BAC$.
 Hence this bisector intersects $[BC]$ at a point, say~$A'$.
 
 Analogously, there is $B'\in[AC]$ 
 such that $(BB')$ bisects $\angle ABC$.
 
+
 Applying Pasch's theorem (\ref{thm:pasch}) twice
 for the triangles $AA'C$ and $BB'C$,
 we get that $[AA']$ and $[BB']$ intersect.
 Suppose that $I$ denotes the point of intersection.
+
+{
+
+\begin{wrapfigure}{o}{28mm}
+\vskip0mm
+\centering
+\includegraphics{mppics/pic-114}
+\end{wrapfigure}
 
 Let $X$, $Y$, and $Z$ be the footpoints of $I$ on  $(B C)$, $(C A)$, and $(A B)$ respectively.
 Applying Proposition~\ref{prop:angle-bisect-dist}, we get that
@@ -395,6 +407,8 @@ Note that $\angle I C A=\angle I C B'$.
 Therefore, $(C I)$ cannot be the exterior bisector of $\angle B C A$.
 Hence the result.
 \qeds
+
+}
 
 {
 
@@ -411,7 +425,7 @@ $$AY=AZ= \tfrac12\cdot(A B+ A C- B C).$$
 
 \end{thm}
 
-Assume that base points $A'$, $B'$, and $C'$ of the altitudes of a given triangle $ABC$ are all mutually distinct.
+Assume that footpoints $A'$, $B'$, and $C'$ of the altitudes of a given triangle $ABC$ are all mutually distinct.
 Then $\triangle A'B'C'$ is called an \index{triangle!orthic triangle}\index{orthic triangle}\emph{orthic triangle} of $\triangle ABC$.
 
 }

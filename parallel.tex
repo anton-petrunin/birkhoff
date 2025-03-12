@@ -101,7 +101,7 @@ That is, for any lines $\ell$, $m$, and $n$ the following conditions hold:
 $\ell\parallel n$.
 \end{enumerate}
 
-\begin{thm}{Exercise}\label{ex:perp-perp}
+\begin{thm}{Classroom exercise}\label{ex:perp-perp}
 Let $k$, $\ell$, $m$, and $n$ be lines such that $k\perp \ell$, $\ell\perp m$, and $m\perp n$.
 Show that $k\nparallel n$.
 \end{thm}
@@ -150,10 +150,9 @@ Use this statement and Corollary~\ref{cor:reflection+angle} to build another pro
 
 
 \begin{thm}{Theorem}\label{thm:parallel-point-reflection}
-Let $\ell$ be a line, $Q\in \ell$, and $P$ an arbitrary point.
-Suppose $O$ is the midpoint of $[PQ]$.
-
-Then a line $m$ passing thru $P$ is parallel to $\ell$ if and only if $m$ is a reflection of $\ell$ across $O$.
+Let $\ell$ and $m$ be lines passing thru points $P$ and $Q$, respectively.
+Suppose that $O$ is the midpoint of $[PQ]$.
+Then $m \parallel \ell$ if and only if $m$ is the reflection of $\ell$ across $O$.
 \end{thm}
 
 }
@@ -182,7 +181,7 @@ By uniqueness of parallel lines (\ref{thm:parallel}), if $m\parallel \ell$, then
 
 \pagebreak%???
 
-\section{Transversal property}
+\section{The transversal property}
 
 {
 
@@ -199,7 +198,8 @@ to $(AB)$ and~$(CD)$.
 }
 
 \begin{thm}{Transversal property}\label{thm:parallel-2} 
-$(AB)\parallel(C D)$ if and only if 
+Given points $A\ne B\ne C\ne D$,
+we have $(AB)\parallel(C D)$ if and only if
 $$2\cdot(\measuredangle A B C+\measuredangle B C D)\equiv 0.
 \eqlbl{A B C + B C D}$$ 
 Equivalently, 
@@ -275,14 +275,24 @@ Therefore
 and \ref{A B C + B C D} implies that $\measuredangle A B C+\measuredangle B C D\z\equiv\pi$.
 \qeds
 
+\begin{thm}{Exercise}\label{ex:parallel-angles}
+Suppose that $(AB) \parallel (A'B')$ and $(BC) \parallel (B'C')$.
+Show that
+$2\cdot \measuredangle ABC \equiv 2\cdot \measuredangle A'B'C'$.
+Conclude that either
+\[
+\measuredangle ABC \equiv \measuredangle A'B'C' \quad \text{or} \quad \measuredangle ABC \equiv \pi + \measuredangle A'B'C',
+\]
+and draw a pair of angles to illustrate each case.
+\end{thm}
+
+
 \begin{thm}{Exercise}\label{ex:smililar+parallel}
 Let $\triangle ABC$ be a nondegenerate triangle, and $P$ lies between $A$ and $B$.
 Suppose that a line $\ell$ passes thru $P$ and is parallel to $(AC)$.
 Show that $\ell$ crosses the side $[BC]$ at another point, say $Q$, and 
 \[\triangle ABC\sim\triangle PBQ.\]
-In particular, 
-\[\frac{PB}{AB}=\frac{QB}{CB}.\]
-
+In particular, $\tfrac{PB}{AB}=\tfrac{QB}{CB}$.
 \end{thm} 
 
 \begin{thm}{Exercise}\label{ex:trisection}
@@ -301,16 +311,18 @@ $$\measuredangle A B C+ \measuredangle B C A + \measuredangle C A B \equiv \pi.$
 If $\triangle A B C$ is degenerate, then the equality follows from Corollary~\ref{cor:degenerate=pi}.
 Now, assume that $\triangle A B C$ is nondegenerate.
 
-\begin{wrapfigure}{o}{23mm}
-\centering
-\includegraphics{mppics/pic-86}
-\end{wrapfigure} 
-
 Let $X$ be the reflection of $C$ across the midpoint $M$ of $[AB]$.
 By Proposition~\ref{prop:point-reflection+}
 $\measuredangle BAX\z=\measuredangle ABC$.
 Note that $(AX)$ is a reflection of $(CB)$ across $M$;
 therefore by Theorem~\ref{thm:parallel-point-reflection}, $(AX)\z\parallel (CB)$.
+
+
+\begin{wrapfigure}{o}{23mm}
+\centering
+\vskip-0mm
+\includegraphics{mppics/pic-86}
+\end{wrapfigure}
 
 Since $[BM]$ and $[MX]$ do not intersect $(CA)$,
 the points $B$, $M$, and $X$ lie on the same side of $(CA)$.
@@ -322,7 +334,7 @@ we have
 \[\measuredangle CAX\equiv\measuredangle CAB+\measuredangle ABC.\]
 The latter identity and \ref{eq:ABC+CAB} imply the theorem.\qeds
 
-\begin{thm}{Exercise}\label{ex:|3sum|}
+\begin{thm}{Classroom exercise}\label{ex:|3sum|}
 Show that 
 $$|\measuredangle A B C|+ |\measuredangle B C A| + |\measuredangle C A B| = \pi$$
 for any $\triangle ABC$.
@@ -344,10 +356,10 @@ for any $\triangle ABC$.
 Let $\triangle ABC$ be a nondegenerate triangle.
 Assume there is a point $D\in [BC]$ 
 such that 
-\[\measuredangle BAD\equiv \measuredangle DAC,
+\[\measuredangle BAD=\measuredangle DAC,
 \quad
 BA=AD=DC.\]
-Find the angles of $\triangle ABC$. 
+Show that $\measuredangle CBA= \measuredangle BAC$ and $AC=BC$.
 \end{thm}
 
 
@@ -467,7 +479,7 @@ That is, any point on $m$ lies at the same distance from $\ell$.
 This distance is called the \index{distance!between parallel lines}\emph{distance between} $\ell$ and~$m$.
 
 
-\section{Method of coordinates}
+\section{The method of coordinates}
 
 The following exercise is important;
 it shows that our axiomatic definition agrees with the model described in Section~\ref{page:model}.
@@ -529,7 +541,7 @@ for constants $a$, $b$, and $c$ such that $a\ne 0$ or $b\ne0$.
 
 \end{thm}
 
-\section{Apollonian circle}\label{sec:Apollonian circle}
+\section{Apollonian circles}\label{sec:Apollonian circle}
 The exercises in this section illustrate the method of coordinates; they will not be used further in the sequel.
 
 \begin{thm}{Exercise}\label{ex:circle-coord}

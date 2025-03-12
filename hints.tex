@@ -474,58 +474,36 @@ Therefore, this reflection sends $C''$ to~$\hat C$.
 
 Apply \ref{ex:ABC-motion} to show that the composition of the constructed reflections coincides with the given motion.
 
+\parbf{\ref{ex:right-acute}.}
+\textit{(a).} Apply \ref{lem:perp<oblique} and \ref{ex:side-angle}.
+
+\parit{(b).} If the angle at $C$ is straight, then apply \ref{cor:degenerate=pi}.
+Otherwise, show that there is a point $D\in [AB]$ such that $\angle ACD$ is right.
+Applying \textit{(a)}, show that the angle at $A$ is acute. Reapeed it for~$B$.
+
 \parbf{\ref{ex:obtuce}.}
-If $\angle ABC$ is right, the statement follows from \ref{lem:perp<oblique}.
-Therefore, we can assume that $\angle ABC$ is obtuse.
+We may assume that $P \ne X$; otherwise, the statement is trivial.
 
-Draw a line $(BD)$ perpendicular to~$(BA)$.
-Since $\angle ABC$ is obtuse, 
-the angles $DBA$ and $DBC$ have opposite signs.
+If $\angle PXV$ is right, then the statement follows from \ref{lem:perp<oblique}.
+Otherwise, draw the line $(XY)$ perpendicular to~$(PX)$.
+Show that $V$ and $W$ lie on opposite sides of $(XY)$.
 
-By \ref{cor:half-plane},
-$A$ and $C$ lie on opposite sides of~$(BD)$.
-In particular, $[AC]$ intersects $(BD)$ at a point; denote it by~$X$.
+Without loss of generality, assume that $P$ and $W$ lie on opposite sides of $(XY)$.
+Let $W'$ be the point of intersection of $[PW]$ and $(XY)$.
+Show and use that $PW>PW'>PX$.
 
-Note that $AX<AC$ and by \ref{lem:perp<oblique}, $AB\z\le AX$.
+\parbf{\ref{ex:PMQ}.}
+Observe that $PM+MQ=P'M+MQ\z\ge P'Q$ and argue as in \ref{lem:perp<oblique}.
 
-\begin{Figure}
-\vskip-0mm
-\begin{minipage}{.49\textwidth}
-\centering
-\includegraphics{mppics/pic-324}
-\end{minipage}
-\hfill
-\begin{minipage}{.49\textwidth}
-\centering
-\includegraphics{mppics/pic-325}
-\end{minipage}
-\end{Figure}
 
-\parbf{\ref{ex:right-triangle-inq}.}
-Let $Y$ be the footpoint of $X$ on $(AB)$.
-Apply \ref{lem:perp<oblique} to show that 
-$XY<AX\le AC\z<AB$.
-
-\parbf{\ref{ex:PMQ}.} Observe that $PM+MQ=P'M+MQ\z\ge P'Q$ and argue as in \ref{lem:perp<oblique}.
 
 \parbf{\ref{ex:inside-outside}.}
-Let $O$ be the center of the circle.
-Note that we can assume that $O\ne P$.
+Apply \ref{ex:obtuce} twice to $X$, $Y$, $P$, and the center.
 
-
-Assume $P$ lies between $X$ and~$Y$.
-By \ref{ex:acute-obtuce}, we can assume that $\angle OPX$ is right or obtuse.
-By \ref{ex:obtuce}, $OP<OX$; 
-that is, $P$ lies inside~$\Gamma$.
-
-If $P$ does not lie between $X$ and $Y$, we can assume that $X$ lies between $P$ and~$Y$.
-Since $OX=OY$, \ref{ex:obtuce} implies that $\angle OXY$ is acute.
-Therefore, $\angle OXP$ is obtuse.
-Applying \ref{ex:obtuce} again we get that $OP\z>OX$;
-that is, $P$ lies outside~$\Gamma$.
+{
 
 \begin{wrapfigure}[6]{r}{27mm}
-\vskip-4mm
+\vskip-6mm
 \centering
 \includegraphics{mppics/pic-328}
 \end{wrapfigure}
@@ -537,11 +515,15 @@ See the picture; the given circle is marked in bold.
 
 \parbf{\ref{ex:two-circ}.} Use \ref{ex:chord-perp} and \ref{perp:ex+un}.
 
-\parbf{\ref{ex:tangent-circles}.}
+}
+
+\parbf{\ref{ex:tangent-circles}}; \textit{(\ref{ex:tangent-circles:a}).}
 Assume that $Q$ is another point on both circles.
 Show and use that $Q$ is the reflection of $P$ across~$(OO')$.
 
-\parbf{\ref{ex:tangent-circles-2}.}  Apply \ref{ex:tangent-circles}.
+\parit{(\ref{ex:tangent-circles:b}).} Apply \textit{(\ref{ex:tangent-circles:a})} and \ref{lem:tangent}.
+
+\parit{(\ref{ex:tangent-circles-2}).} Apply \textit{(\ref{ex:tangent-circles:a})} and \ref{cor:degenerate-trig}.
 
 \parbf{\ref{ex:tangent-circles-3}.}
 Let $A$ and $B$ be the points of intersection.
@@ -618,20 +600,24 @@ Apply \ref{prop:perp-perp} to show that $k\parallel m$.
 By \ref{cor:parallel-1}, $k\parallel n\z\Rightarrow m\parallel n$.
 The latter contradicts that $m\perp n$.
 
+\parbf{\ref{ex:construction-parallel}.}
+Repeat the construction in \ref{ex:construction-perpendicular} twice.
 
-\begin{wrapfigure}[6]{r}{23mm}
-\vskip-9mm
+\parbf{\ref{ex:parallel-angles}.}
+Apply Axiom~\ref{def:birkhoff-axioms:2b}, \ref{thm:parallel-2}, and \ref{ex:2a=0}.
+
+\begin{wrapfigure}{r}{23mm}
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-333}
 \end{wrapfigure}
-
-\parbf{\ref{ex:construction-parallel}.}
-Repeat the construction in \ref{ex:construction-perpendicular} twice.
 
 \parbf{\ref{ex:smililar+parallel}.}
 Since  $\ell\parallel (AC)$, it cannot cross $[AC]$.
 By Pasch's theorem (\ref{thm:pasch}), $\ell$ has to cross another side of $\triangle ABC$.
 Therefore $\ell$ crosses $[BC]$; denote the point of intersection by $Q$.
+
+
 
 Use the transversal property (\ref{thm:parallel-2}) to show that $\measuredangle BAC= \measuredangle BPQ$.
 The same argument shows that $\measuredangle ACB\z= \measuredangle PQB$; it remains to apply the AA similarity condition.
@@ -656,7 +642,8 @@ Set $\alpha\z=\measuredangle CAB$, $\beta=\measuredangle ABC$, and $\gamma=\meas
 By \ref{thm:signs-of-triug},
 we may assume that $0<\alpha,\beta,\gamma<\pi$.
 Therefore, 
-$$0<\alpha+\beta+\gamma<3\cdot\pi.\eqlbl{eq:|3|<3pi}$$
+\[0<\alpha+\beta+\gamma<3\cdot\pi.
+\eqlbl{eq:|3|<3pi}\]
 
 By \ref{thm:3sum},
 $$\alpha+\beta+\gamma\equiv\pi.\eqlbl{eq:|3|==pi}$$
@@ -664,7 +651,7 @@ $$\alpha+\beta+\gamma\equiv\pi.\eqlbl{eq:|3|==pi}$$
 From \ref{eq:|3|<3pi} and \ref{eq:|3|==pi} the result follows.
 
 \parbf{\ref{ex:pent}.}
-Apply \ref{thm:isos} twice and \ref{ex:|3sum|} twice.
+Apply \ref{thm:3sum} or \ref{ex:|3sum|} twice and \ref{thm:isos} trice.
 
 \parbf{\ref{ex:right-isos}.}
 Apply \ref{thm:isos} twice and \ref{thm:3sum} once. 
@@ -791,10 +778,24 @@ Note that $(AC)\perp (BH)$ and $(BC)\z\perp (AH)$ and apply \ref{thm:orthocenter
 
 (Note that each of $A,B,C,H$ is the orthocenter of the remaining three; such a quadruple of points $A,B,C,H$ is called an \index{orthocentric system}\emph{orthocentric system}.)
 
+\parbf{\ref{ex:orthic-sim}.}
+Show that $\triangle AA'C \sim \triangle BB'C$.
+Use this to show that $\triangle ABC \sim \triangle A'B'C$.
+Repeat the argument for $\triangle AB'C'$ and $\triangle A'BC'$.
+
 \parbf{\ref{ex:midle}.}
 Use the idea from the proof of \ref{thm:centroid}
 to show that $(XY)\z\parallel (AC)\z\parallel (VW)$ and
 $(XW)\z\parallel (BD)\z\parallel (YV)$.
+
+\parbf{\ref{ex:euler-line}.}
+Read about homothety.
+
+Applying \ref{thm:centroid}, show that the homothety centered at $M$ with a coefficient of $-\tfrac{1}{2}$ maps $\triangle ABC$ onto its medial triangle $\triangle A'B'C'$.
+Show that the homothety also maps the orthocenter of $\triangle ABC$ to the orthocenter of $\triangle A'B'C'$.
+
+Arguing as in \ref{thm:orthocenter}, show that the orthocenter of $\triangle A'B'C'$ coincides with the circumcenter of $\triangle ABC$.
+Make a conclusion.
 
 \parbf{\ref{ex:perp-bisectors}.}
 Let $(BX)$ and $(BY)$ be the internal and external bisectors of $\angle ABC$.
@@ -833,18 +834,12 @@ In the same way, we get that $BX=BZ$ and $CX=CY$.
 Hence the result.
 
 \parbf{\ref{ex:orthic-triangle}.}
-Let $\triangle ABC$ be the given acute triangle and $\triangle A'B'C'$ 
-be its orthic triangle.
-Note that $\triangle AA'C\sim\triangle BB'C$.
-Use it to show that $\triangle A'B'C\sim \triangle ABC$.
-
-In the same way, we get that $\triangle AB'C'\z\sim \triangle ABC$.
-It follows that $\measuredangle A'B'C\z=\measuredangle AB'C'$.
+Argue as in \ref{ex:orthic-sim} to show that $\triangle A'B'C\sim \triangle ABC\z\sim\triangle AB'C'$.
 Conclude that $(BB')$ bisects $\angle A'B'C'$.
 
-If $\triangle ABC$ is obtuse, then its orthocenter coincides with one of the \index{excenter}\emph{excenters} of $\triangle ABC$;
+If $\triangle ABC$ is obtuse, then its orthocenter coincides with one of the \index{excenter}\emph{excenters} of $\triangle A'B'C'$;
 that is, 
-the point of intersection of two external and one internal bisectors of $\triangle ABC$.
+the point of intersection of two external and one internal bisectors of $\triangle A'B'C'$.
 
 \parbf{\ref{ex:bisector-incenter}.}
 Apply \ref{lem:bisect-ratio} twice.
@@ -912,6 +907,12 @@ Therefore, $A'C=B'C$.
 
 \parbf{\ref{ex:two-chords}.} Apply the transversal property (\ref{thm:parallel-2}) and the theorem on inscribed angles (\ref{thm:inscribed-angle}).
 
+\begin{wrapfigure}[9]{r}{20mm}
+\vskip-2mm
+\centering
+\includegraphics{mppics/pic-336}
+\end{wrapfigure}
+
 \parbf{\ref{ex:two-right}.}
 Construct the circles $\Gamma$ and $\Gamma'$
 on the diameters $[AB]$ and $[A'B']$ respectively.
@@ -921,12 +922,6 @@ any point $Z$ at the intersection $\Gamma\cap \Gamma'$ will do.
 If $O$ is the center of the circle, then 
 $\measuredangle AOB\z\equiv 2\cdot \measuredangle AA'B\equiv\pi$.
 That is, $O$ is the midpoint of~$[AB]$.
-
-\begin{wrapfigure}[8]{r}{20mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-336}
-\end{wrapfigure}
 
 \parbf{\ref{ex:perpendicular-ruler}.}
 Guess the construction from the picture.
@@ -938,7 +933,7 @@ Let $O$ be the center of $\Gamma$.
 Use \ref{cor:right-angle-diameter} to show that the points lie on the circle with diameter $[PO]$.
 
 \parbf{\ref{ex:VVAA}.} 
-Note that $\measuredangle AA'B=\pm\tfrac\pi2$ and $\measuredangle AB'B\z=\pm\tfrac\pi2$.
+Note that $\measuredangle AA'B\z=\pm\tfrac\pi2$ and $\measuredangle AB'B\z=\pm\tfrac\pi2$.
 Then apply \ref{cor:inscribed-quadrangle}
 to $\square AA'BB'$.
 
@@ -973,6 +968,11 @@ and two inscribed angles with a common vertex at~$O$.
 \parbf{\ref{ex:simson}.}
 Let $X$, $Y$, and $Z$ denote the footpoints of $P$ on $(BC)$, $(CA)$, and $(AB)$ respectively.
 
+\begin{Figure}
+\centering
+\includegraphics{mppics/pic-338}
+\end{Figure}
+
 Show that $\square AZPY$, $\square BXPZ$, $\square CYPX$, and $\square ABCP$ are inscribed.
 Use this to show that
 \begin{align*}
@@ -989,11 +989,6 @@ Conclude that
 $2\cdot \measuredangle CXY\equiv 2\cdot \measuredangle BXZ$
 and hence $X$, $Y$, and $Z$ lie on one line.
 
-\begin{Figure}
-\centering
-\includegraphics{mppics/pic-338}
-\end{Figure}
-
 
 %\parbf{\ref{ex:arc-tan-straight}.}
 %By \ref{thm:3sum},
@@ -1001,13 +996,16 @@ and hence $X$, $Y$, and $Z$ lie on one line.
 %It remains to apply
 %\ref{prop:arc(angle=tan)} twice.
 
+
 \parbf{\ref{ex:a+b=c}.}
 Show that $P$ lies on the arc opposite from $ACB$;
 conclude that
 $\measuredangle APC\z=\measuredangle CPB\z=\pm\tfrac\pi3$.
 
+{
+
 \begin{wrapfigure}[9]{r}{25mm}
-\vskip-3mm
+\vskip-2mm
 \centering
 \includegraphics{mppics/pic-337}
 \end{wrapfigure}
@@ -1016,15 +1014,16 @@ Choose a point $A'\z\in [PC]$ such that $PA'\z=PA$.
 Note that $\triangle APA'$ is equilateral.
 Prove and use that $\triangle AA'C\z\cong \triangle APB$.
 
-
 \parbf{\ref{ex:tangent-arc}.}
 If $C\in (AX)$, then the arc is the line segment $[AC]$ or the union of two half-lines in $(AX)$ with vertices at $A$ and~$C$.
+
+}
 
 Assume $C\notin (AX)$.
 Let $\ell$ be the perpendicular line dropped from $A$ to $(AX)$ and $m$ be the perpendicular bisector of~$[AC]$.
 
 Note that $\ell\nparallel m$;
-set $O=\ell\cap m$.
+suppose they meet at $O$.
 Note that the circle with center $O$ passing thru $A$ is also passing thru $C$ and tangent to~$(AX)$.
 
 
@@ -1121,7 +1120,7 @@ $$\frac{r^2}{(x+y)/2}
 
 Suppose $\ell$ denotes the line passing thru $Q$, $Q'$, and the center of the inversion $O$.
 Choose an isometry $\ell\to\mathbb{R}$ that sends $O$ to $0$;
-assume $x,y\in \mathbb{R}$ are the values of $\ell$ for the two points of intersection $\ell\cap\Gamma$;
+assume $x,y\in \mathbb{R}$ are the values of $\ell$ for the two points in $\ell\cap\Gamma$;
 note that $x\ne y$.
 Assume $r$ is the radius of the circle of inversion.
 Then the left-hand side above is the coordinate of $Q'$ 
@@ -1232,7 +1231,7 @@ Arguing by contradiction,
 assume 
 $2\cdot(\measuredangle ABC+\measuredangle BCD)\equiv0$, 
 but $(AB)\z\nparallel(C D)$.
-Let $Z=(AB)\cap(CD)$.
+Let $Z\in (AB)\cap(CD)$.
 
 Note that 
 $
@@ -1369,15 +1368,15 @@ hold when $0<a<\tfrac12$.
 \parbf{\ref{ex:h-perp-unique}.} 
 Spell the meaning of the terms ``perpendicular'' and ``h-line'' and then apply \ref{ex:construction-perp-clines}.
 
+\parbf{\ref{ex:h-circle=circle}.}
+Choose the vertices $P$, $Q$, and $R$ on a Euclidean circle that intersects the absolute and is not orthogonal to it.
+Apply~\ref{lem:h-circle=circle}.
+
 \begin{wrapfigure}[9]{r}{34mm}
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-350}
 \end{wrapfigure}
-
-\parbf{\ref{ex:h-circle=circle}.}
-Choose the vertices $P$, $Q$, and $R$ on a Euclidean circle that intersects the absolute and is not orthogonal to it.
-Apply~\ref{lem:h-circle=circle}.
 
 \parbf{\ref{ex:3-h-lines}.} Look at the picture and think.
 
@@ -1621,7 +1620,7 @@ Likewise, construct the point $(\tfrac ab,0)$.
 
 \parbf{\ref{ex:center-circ-affine}.}
 Draw two parallel chords $[XX']$ and~$[YY']$.
-Set $Z\z=(XY)\z\cap (X'Y')$ and $Z'\z= (XY')\cap (X'Y)$.
+Let $Z\z\in(XY)\z\cap (X'Y')$ and $Z'\z\in (XY')\cap (X'Y)$.
 Note that $(ZZ')$ passes thru the center.
 
 Repeat the same construction for another pair of parallel chords.
@@ -1744,7 +1743,7 @@ Assume that the parallelogram is formed by the two pairs of parallel lines $(AB)
 \textit{(\ref{ex:dual-configurations:infty}).} Observe and use that $\square ABCD$ and $\square ABDX$ are parallelograms.
 
 \parit{(\ref{ex:dual-configurations:dual}).}
-Draw $a=(KN)$, $b=(KL)$, $c=(LM)$, $d=(MN)$, mark $P=b\cap d$, and continue. 
+Draw $a=(KN)$, $b=(KL)$, $c=(LM)$, $d=(MN)$, mark $P\in b\cap d$, and continue.
 
 \parbf{\ref{ex:dual-euclid}.}
 Assume there is a duality.
@@ -1768,18 +1767,18 @@ and (2) the ideal point is given by the pencil of lines $b\cdot x-a\cdot y=c$ fo
 \parbf{\ref{ex:dual-pappus}.}
 Assume one set of concurrent lines $a$, $b$, $c$, 
 and another set of concurrent lines $a'$, $b'$, $c'$ are given.
-Set 
+Let
 \begin{align*}
-P&=b\cap c',
+P&\in b\cap c',
 &
-Q&=c\cap a',
+Q&\in c\cap a',
 &
-R&=a\cap b',\\
-P'&=b'\cap c,
+R&\in a\cap b',\\
+P'&\in b'\cap c,
 &
-Q'&=c'\cap a,
+Q'&\in c'\cap a,
 &
-R'&=a'\cap b.
+R'&\in a'\cap b.
 \end{align*}
 Then the lines $(PP')$, $(QQ')$, and $(RR')$ are concurrent.
 
@@ -1817,7 +1816,7 @@ Construct the lines dual to $P$ for both circles.
 Note that these two lines are parallel. 
 
 Assume that the lines intersect the bigger circle at two pairs of points $X$, $X'$ and $Y$, $Y'$.
-Set $Z\z=(XY)\cap (X'Y')$.
+Let $Z\z\in (XY)\cap (X'Y')$.
 Note that the line $(PZ)$ passes thru the common center.
 
 \begin{Figure}
@@ -1874,13 +1873,7 @@ The remaining calculations in $\Lambda$ are similar to those in the proof of \re
 \parbf{\ref{ex:cone}.}
 Consider the inversion of the base circle across a sphere with its center at the tip of the cone and apply \ref{thm:inversion-3d}.
 
-{
 
-\begin{wrapfigure}{r}{28mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-358}
-\end{wrapfigure}
 
 \parbf{\ref{ex:2(pi/4)=pi/3}.} 
 Apply the spherical Pythagorean theorem to show that
@@ -1888,6 +1881,14 @@ $
 \cos AB_s\z=\tfrac12
 $,
 and conclude that $AB_s\z=\tfrac\pi3$.
+
+{
+
+\begin{wrapfigure}{r}{28mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-358}
+\end{wrapfigure}
 
 Alternatively, 
 look at the tessellation of the hemisphere in the picture; 
@@ -1926,15 +1927,15 @@ Note that $\hat P\z\in [A_iB_i]$ if and only if $P\in\Gamma_i$.
 \parbf{\ref{ex:h-median}.} 
 The observation follows since the reflection across the perpendicular bisector of $[PQ]$ is a motion of the Euclidean plane and a motion of the h-plane as well.
 
+We can assume that the center of the circumcircle coincides with the center of the absolute.
+In this case, the h-medians of the triangle coincide with the Euclidean medians.
+It remains to apply \ref{thm:centroid}.
+
 \begin{Figure}
 \centering
 \vskip-0mm
 \includegraphics{mppics/pic-360}
 \end{Figure}
-
-We can assume that the center of the circumcircle coincides with the center of the absolute.
-In this case, the h-medians of the triangle coincide with the Euclidean medians.
-It remains to apply \ref{thm:centroid}.
 
 \parbf{\ref{ex:h-altitudes}.} 
 Use the projective model.
@@ -1960,7 +1961,7 @@ Let $Q$ be the footpoint of $P$ on the line and $\phi$ be the angle of paralleli
 {
 
 \begin{wrapfigure}{r}{28mm}
-\vskip-6mm
+\vskip-2mm
 \centering
 \includegraphics{mppics/pic-362}
 \end{wrapfigure}
@@ -1969,11 +1970,10 @@ We can assume that $P$ is the center of the absolute.
 Therefore $PQ=\cos\phi$ and
 \[PQ_h=\tfrac12\cdot\ln\frac{1+\cos\phi}{1-\cos\phi}.\]
 
-}
-
 \parbf{\ref{ex:klein-inradius}.} 
 Apply \ref{ex:klein-for-angle-parallelism} for $\phi=\tfrac\pi3$.
 
+}
 
 \parbf{\ref{ex:pyth-h-proj}.}
 Note that
@@ -2277,7 +2277,7 @@ Apply \ref{thm:set-square-constructible-numbers} and arrive at a contradiction.
 Suppose that every initial point has coordinates $(a,b\cdot\sqrt{3})$ for rational values $a$ and $b$.
 Show and use that any point that can be constructed with the 30°-set-square has coordinates of the same type.
 
-\begin{wrapfigure}[8]{r}{21mm}
+\begin{wrapfigure}[7]{r}{21mm}
 \vskip-6mm
 \centering
 \includegraphics{mppics/pic-368}

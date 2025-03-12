@@ -188,7 +188,7 @@ The picture suggests a proof of the latter statement for solid triangles $\mathc
 The other cases are simpler; a formal proof can be built on Exercise~\ref{ex:triangle-convex}.
 \qeds
 
-\section{Definition of area}
+\section{The definition of area}
 \label{sec:def(area)}
 
 \index{area}\emph{Area} is defined as a function $\mathcal{P}\mapsto \area\mathcal{P}$
@@ -220,18 +220,24 @@ for any two polygonal sets $\mathcal{P}$ and $\mathcal{Q}$.
 \end{enumerate}
 }
 
-The first condition is called {}\emph{normalization}; essentially it says that a solid unit square is used as a unit to measure area.
+The first condition is called {}\emph{normalization}; essentially, it states that a solid unit square is used as the unit of area.
 The three conditions in \textit{(\ref{area-3})} are called {}\emph{invariance}, {}\emph{monotonicity}, and {}\emph{additivity}.
 
-The Lebesgue measure is an example of an area function. 
+The Lebesgue measure is an example of an area function.
 Namely, if one takes the area of $\mathcal{P}$ to be its Lebesgue measure,
-then the function $\mathcal{P}\mapsto\area\mathcal{P}$ satisfies the above conditions.
+then the function $\mathcal{P} \mapsto \area\mathcal{P}$ satisfies the above conditions.
 
 The construction of the Lebesgue measure can be found in any textbook on real analysis.
 We do not discuss it here.
 
-If the reader is not familiar with the Lebesgue measure, then the existence of area function can be taken as granted; 
-it might be added to axioms altho it follows from the axioms \ref{def:birkhoff-axioms:0}--\ref{def:birkhoff-axioms:4}.
+If the reader is not familiar with the Lebesgue measure, the existence of an area function can be taken for granted;
+it might be added to the axioms, altho it follows from axioms \ref{def:birkhoff-axioms:0}--\ref{def:birkhoff-axioms:4}.
+In any case, we will use the following statement without proof.
+
+\begin{thm}{Claim}
+An area function exists.
+\end{thm}
+
 
 \section{Vanishing area and subdivisions}
 
@@ -666,8 +672,8 @@ Show that
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:area-inradius}
-Let $r$ be the inradius of $\triangle ABC$
-and $p$ be its {}\emph{semiperimeter}; 
+Let $r$ be the inradius of $\triangle ABC$,
+and let $p$ be its {}\emph{semiperimeter};
 that is, $p=\tfrac12\cdot(AB+BC+CA)$.
 Show that
 \[\area(\solidtriangle ABC)=p\cdot r.\]
@@ -681,7 +687,7 @@ Show that any polygonal set admits a subdivision into a finite collection of sol
 Conclude that for any polygonal set, its area is uniquely defined.
 \end{thm}
 
-\section{Area method}
+\section{The area method}
 
 In this section, we give examples of proofs using the properties of the area function.
 These proofs are not truly elementary --- the price for the existence of the area function is high.
@@ -946,7 +952,7 @@ such that the inequality
 holds for any polygonal sets $\mathcal{P}$ and $\mathcal{Q}$ such that $\mathcal{P}\subset\mathcal{S}\subset\mathcal{Q}$.
 
 \begin{thm}{Exercise}\label{ex:circle-is-quadrable}
-Let $\mathcal{D}$ be a \emph{unit disc};
+Let $\mathcal{D}$ be a \index{disc}\emph{closed unit disc};
 that is, $\mathcal{D}$ is a set that contains 
 the unit circle $\Gamma$ and all the points inside~$\Gamma$.
 

@@ -112,16 +112,11 @@ Therefore, in the Euclidean plane, the theorem follows immediately from Theorem~
 
 \parit{Proof.}
 Let $X$ be the reflection of $C$ across the midpoint $M$ of $[AB]$.
-By Proposition~\ref{prop:point-reflection+}
-$\measuredangle BAX\z=\measuredangle ABC$
-and therefore
-\[\measuredangle CAX \equiv\measuredangle CAB+\measuredangle ABC.\eqlbl{eq:CAX=CAB+ABC}\]
+Applying \ref{ex:between}, we get
+\[|\measuredangle CAX|=|\measuredangle CAB|+|\measuredangle ABC|.\eqlbl{eq:CAX=CAB+ABC}\]
 
-Since $[BM]$ and $[MX]$ do not intersect $(CA)$,
-the points $B$, $M$, and $X$ lie on the same side of $(CA)$.
-Therefore the angles $CAB$ and $CAX$ have the same sign.
-By \ref{thm:signs-of-triug}, $\angle CAB$ and $\angle ABC$ have the same sign;
-that is, all angles in \ref{eq:CAX=CAB+ABC} have the same sign.
+By Proposition~\ref{prop:point-reflection+}
+$\measuredangle BAX\z=\measuredangle ABC$.
 
 Note that $\measuredangle CAX\z{\not\equiv} \pi$; otherwise, $X$ would lie on $(AC)$.
 Therefore the identity \ref{eq:CAX=CAB+ABC} implies that
@@ -172,7 +167,7 @@ CD<CB.$$
 
 \end{thm}
 
-\section{Three angles of triangle}
+\section{Three angles of a triangle}
 
 \begin{thm}{Proposition}\label{prop:angle-side}
 Let $\triangle ABC$ and $\triangle A'B'C'$ be two triangles in the neutral plane
@@ -276,9 +271,7 @@ By construction
 In particular, $C_iC_{i+1}=d$ 
 for each~$i$.
 
-
-By repeated application
-of the triangle inequality, we get that
+Applying the triangle inequality several times, we get that
 \begin{align*}
 n\cdot c&=A_0A_n\le 
 \\
@@ -305,7 +298,7 @@ Suppose that $\angle DAB$ and $\angle ABC$ are right.
 Show that $AB\le CD$.
 \end{thm}
 
-\section{Defect}
+\section{The defect}
 
 The \index{defect of triangle}\emph{defect of triangle} $\triangle ABC$ is defined as 
 $$\defect(\triangle ABC)
@@ -326,7 +319,7 @@ the Euclidean plane has zero defect.
 \includegraphics{mppics/pic-189}
 \end{wrapfigure}
 
-\begin{thm}{Exercise}\label{ex:defect}
+\begin{thm}{Classroom exercise}\label{ex:defect}
 Let $\triangle ABC$ be a nondegenerate triangle in the neutral plane.
 Assume $D$ lies between $A$ and~$B$.
 Show that 

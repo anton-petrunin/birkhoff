@@ -1,6 +1,6 @@
 \chapter{Projective geometry}\label{chap:proj}
 
-\section{Projective completion}
+\section{The projective completion}
 
 In the Euclidean plane, two distinct lines might have one or zero points of intersection 
 (in the latter case the lines are parallel).
@@ -62,7 +62,7 @@ It is straightforward to show the following:
 
 These statements enable us to generalize many results from Euclidean plane geometry to Euclidean space.
 
-\section{Model of space}
+\section{Space model}
 
 Let us identify the Euclidean plane with a plane $\Pi$ in the Euclidean space $\mathbb{R}^3$ that does not pass thru the origin $O$.
 Denote by $\hat\Pi$ the projective completion of $\Pi$.
@@ -84,7 +84,7 @@ Then
 where $\dot P$ and $\dot \ell$ are defined by the constructed bijections.
 \end{thm}
 
-\section{Perspective projection}
+\section{The perspective projection}
 \label{sec:perspective-projection}
 
 Let $O$ be a point that does not lie on planes $\Pi$ and $\Pi'$ in $\mathbb{R}^3$.
@@ -95,8 +95,8 @@ Let $O$ be a point that does not lie on planes $\Pi$ and $\Pi'$ in $\mathbb{R}^3
 \includegraphics{mppics/pic-230}
 \end{wrapfigure}
 
-A \index{perspective projection}\emph{perspective projection from $\Pi$ to $\Pi'$ with center $O$} maps a point $P\in \Pi$
-to the intersection point $P'=\Pi'\cap (OP)$.
+A \index{perspective projection}\emph{perspective projection from $\Pi$ to $\Pi'$ with center $O$} maps a point $P\z\in \Pi$
+to the intersection point $P'$ of the plane $\Pi'$ and the line $(OP)$.
 
 In general, perspective projection is not a bijection between the planes.
 Indeed, if the line $(OP)$ is parallel to $\Pi'$ 
@@ -234,12 +234,8 @@ which will be illustrated by the following classical example:
 
 \begin{thm}{Desargues' theorem}\label{thm:desargues}\index{Desargues' theorem}
 Consider three concurrent lines $(AA')$, $(BB')$, and $(CC')$ in the projective plane.
-Define 
-\begin{align*}
-X&=(BC)\cap (B'C'),\\
-Y&=(CA)\cap (C'A'),\\
-Z&=(AB)\cap (A'B').
-\end{align*}
+Let $X$, $Y$, and $Z$ be the intersection points of $(BC)$ and $(B'C')$, $(CA)$ and $(C'A')$,
+and $(AB)$ and $(A'B')$, respectively.
 Then the points $X$, $Y$, and $Z$ are collinear.
 \end{thm}
 
@@ -296,14 +292,8 @@ Here is another classical theorem of projective geometry.
 \begin{thm}{Pappus' theorem}\label{thm:pappus}\index{Pappus' theorem}
 Assume that two triples of points $A$, $B$, $C$,
 and $A'$, $B'$, $C'$ are collinear.
-Suppose points $X$, $Y$, $Z$ are defined by
-\begin{align*}
-X&=(BC')\cap(B'C),
-&
-Y&=(CA')\cap(C'A),
-&
-Z&=(AB')\cap(A'B).
-\end{align*}
+Let $X$, $Y$, and $Z$ be the intersection points of $(BC')$ and $(B'C)$, $(CA')$ and $(C'A)$,
+and $(AB')$ and $(A'B)$, respectively.
 Then the points $X$, $Y$, $Z$ are collinear.
 \end{thm}
 
@@ -333,14 +323,8 @@ The following exercise gives a partial converse to Pappus' theorem.
 \begin{thm}{Exercise}\label{ex:pappus-converse}
 Given two triples of points $A$, $B$, $C$,
 and $A'$, $B'$, $C'$,
-suppose distinct points $X$, $Y$, $Z$ are uniquely defined by
-\begin{align*}
-X&=(BC')\cap(B'C),
-&
-Y&=(CA')\cap(C'A),
-&
-Z&=(AB')\cap(A'B).
-\end{align*}
+suppose that distinct points $X$, $Y$, and $Z$ are the unique intersection points of $(BC')$ and $(B'C)$, $(CA')$ and $(C'A)$,
+and $(AB')$ and $(A'B)$, respectively.
 Assume that the triples $A$, $B$, $C$,
 and $X$, $Y$, $Z$ are collinear.
 Show that the triple $A'$, $B'$, $C'$ is collinear.
@@ -461,10 +445,9 @@ Let us formulate the dual statement for Desargues' theorem~\ref{thm:desargues}.
 
 
 \begin{thm}{Dual Desargues' theorem}\label{thm:dual-desargues}\index{Desargues' theorem}
-Assume that 
-\[X=(BC)\cap (B'C'),\quad Y=(CA)\cap (C'A'),\quad Z=(AB)\cap (A'B'),\]
-and the points $X$, $Y$, and~$Z$ are collinear.
-Then the lines  $(AA')$, $(BB')$, and $(CC')$ are concurrent.
+Let $X$, $Y$, and $Z$ be the unique intersection points of $(BC)$ and $(B'C')$, $(CA)$ and $(C'A')$,
+and $(AB)$ and $(A'B')$, respectively.
+If the points $X$, $Y$, and~$Z$ are collinear, then the lines $(AA')$, $(BB')$, and $(CC')$ are concurrent.
 \end{thm}
 
 In this theorem, the points $X$, $Y$, and $Z$ 
@@ -489,7 +472,7 @@ Solve the following construction problem
 Given two parallel lines, construct a third parallel line thru a given point with a ruler only.
 \end{thm}
 
-\section{Polar and pole}
+\section{The polar and the pole}
 
 In this section, we describe a powerful trick that can be used in the constructions with a ruler.
 

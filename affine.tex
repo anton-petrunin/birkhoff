@@ -13,7 +13,7 @@ A bijection from the Euclidean plane to itself is called an \index{affine transf
 that is, the image of any line is a line.
 So, one can say that affine geometry studies the properties of the Euclidean plane that are preserved under affine transformations.
 
-\begin{thm}{Exercise}\label{ex:affine-par}
+\begin{thm}{Classroom exercise}\label{ex:affine-par}
 Show that an affine transformation of the Euclidean plane sends any pair of parallel lines to a pair of parallel lines.
 \end{thm}
 
@@ -158,7 +158,7 @@ $O'X'Y'$ is nondegenerate.
 
 Consider points $V$ and $W$ defined by
 \[\overrightarrow{OV}=x\cdot\overrightarrow{OX},
-\quad
+\qquad
 \overrightarrow{OW}=y\cdot\overrightarrow{OY}.
 \]
 
@@ -211,7 +211,7 @@ Show that any inversive transformation is a composition of inversions and reflec
 
 
 
-\section{Algebraic lemma}
+\section{An algebraic lemma}
 
 The following lemma was used in the proof of Proposition~\ref{prop:affine-linear}.
 
@@ -328,7 +328,7 @@ The examples include
 \ref{ex:4parallels},
 \ref{thm:centroid},
 and \ref{ex:midle}.
-In this section, we present two more examples of that type.
+In this section, we present three more examples of that type.
 
 Suppose that $A$, $B$, and $X$ are distinct points on one line.
 Note that 
@@ -396,15 +396,21 @@ Use Menelaus's theorem to prove the following.
 
 }
 
-These three theorems can be formulated in a more exact way by taking the ratios $\frac{AC'}{BC'}$, $\frac{BA'}{CA'}$, and $\frac{CB'}{AB'}$ with sign.
-Namely, given distinct points $A$, $B$, and $X$ on one line, let us define the \index{signed ratio}\emph{signed ratio} $(\frac{AX}{BX})\df\pm\frac{AX}{BX}$, where the sign is chosen to meet the equation
-\[\overrightarrow{AX}=\left(\frac{AX}{BX}\right)\cdot \overrightarrow{BX}.\]
-(Note that $(\frac{AX}{BX})<0$ if and only if $X$ lies between $A$ and $B$.)
+\parbf{Signed versions.}
+These three theorems can be formulated in a more precisely way by taking the ratios $\frac{AC'}{BC'}$, $\frac{BA'}{CA'}$, and $\frac{CB'}{AB'}$ with sign.
+Namely, given distinct points $A$, $B$, and $X$ on a line, let us define the \index{signed ratio}\emph{signed ratio} $(\frac{AX}{BX})\df\pm\frac{AX}{BX}$, where the sign is chosen to meet the equation
+$\overrightarrow{AX}=\left(\frac{AX}{BX}\right)\cdot \overrightarrow{BX}$.
+Equivalently, $(\frac{AX}{BX})<0$ if and only if $X$ lies between $A$ and $B$.
 
-The identities
-$\left(\tfrac{AC'}{BC'}\right)\cdot\left(\tfrac{BA'}{CA'}\right)\cdot \left(\tfrac{CB'}{AB'}\right)=\pm1$,
-with $+1$ and $-1$ give more exact versions of Menelaus's and Ceva's theorem respectively.
-In Van Aubel's theorem we have $(\tfrac{AC'}{BC'})+(\tfrac{AB'}{CB'})=(\tfrac{AX}{A'X})$ and this identity is valid without the assumption that $A'$ lies between $B$ and $C$.
+The more exact identities of Menelaus's and Ceva's theorems will be
+\[\left(\tfrac{AC'}{BC'}\right)\cdot\left(\tfrac{BA'}{CA'}\right)\cdot \left(\tfrac{CB'}{AB'}\right)=1
+\quad\text{and}\quad
+\left(\tfrac{AC'}{BC'}\right)\cdot\left(\tfrac{BA'}{CA'}\right)\cdot \left(\tfrac{CB'}{AB'}\right)=-1
+\]
+respectively.
+In Van Aubel's theorem we have
+\[\left(\tfrac{AC'}{BC'}\right)+\left(\tfrac{AB'}{CB'}\right)=\left(\tfrac{AX}{A'X}\right)\]
+and this identity holds without the assumption that $A'$ lies between $B$ and~$C$.
 
-We also have the converses of all three signed versions.
+Moreover, the converse of each of the three signed versions also holds.
 

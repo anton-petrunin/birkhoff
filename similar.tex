@@ -22,7 +22,7 @@ $$
 \measuredangle A' B' C'&=\pm\measuredangle A B C,
 \\
 \measuredangle B' C' A'&=\pm\measuredangle B C A,
-\\ 
+\\
 \measuredangle C' A' B'&=\pm\measuredangle CAB.
 \end{aligned}
 \eqlbl{angles}
@@ -78,13 +78,13 @@ are similar if one of the following conditions holds:
 
 (SAS)\index{SAS similarity condition}
 For some constant $k>0$ we have
-$$A B=k\cdot A' B',
+\[A B=k\cdot A' B',
 \quad 
-A C=k\cdot A' C',$$
-$$
+A C=k\cdot A' C',
+\quad
 \text{and}
 \quad 
-\measuredangle B A C=\pm\measuredangle B' A' C'.$$
+\measuredangle B A C=\pm\measuredangle B' A' C'.\]
 
 (AA)\index{AA similarity condition} The triangle $A' B' C'$ is nondegenerate
 and 
@@ -121,7 +121,16 @@ we get that $\triangle A'B''C''\cong \triangle ABC$.
 Hence the result.
 \qeds
 
+\begin{thm}{Exercise}\label{ex:mid-triangle}
+Let $A'$, $B'$, and $C'$ be the midpoints of sides $[BC]$, $[CA]$, and $[AB]$ of $\triangle ABC$.
+Show that $\triangle A'B'C'\sim\triangle ABC$ and find the similarity coefficient.
+\end{thm}
 
+\begin{thm}{Exercise}\label{ex:k*triangle}
+Let $O$, $A$, $B$, $C$, $A'$, $B'$, and $C'$ be distict points.
+Suppose that $A'\in [OA)$, $B'\in[OB)$, $C'\in [OC)$, $OA'=k\cdot OA$, $OB'=k\cdot OB$, and $OC'=k\cdot OC$ for some $k>0$.
+Show that $\triangle A'B'C'\sim\triangle ABC$.
+\end{thm}
 
 A bijection $X\leftrightarrow X'$ from a plane to itself is called an \index{angle-preserving transformation}\emph{angle-preserving transformation} if 
 \[\measuredangle ABC= \measuredangle A'B'C'\]
@@ -130,23 +139,14 @@ for any $\triangle ABC$ and its image $\triangle A'B'C'$.
 (The term \index{transformation}\emph{transformation} is used for a bijection of space to itself that preserves a specified geometric structure.
 For example, {}\emph{motions} are \textit{distance-preserving transformations}.)
 
-\begin{thm}{Exercise}\label{ex:mid-triangle}
-Let $A'$, $B'$, and $C'$ be the midpoints of sides $[BC]$, $[CA]$, and $[AB]$ of $\triangle ABC$.
-Show that $\triangle A'B'C'\sim\triangle ABC$ and find the similarity coefficient.
-\end{thm}
-
-\begin{thm}{Exercise}\label{ex:k*triangle}
-Let $A'\in [OA)$, $B'\in[OB)$ and $C'\in [OC)$ be distict points such that $OA'=k\cdot OA$, $OB'=k\cdot OB$, and $OC'=k\cdot OC$ for some $k>0$.
-Show that $\triangle A'B'C'\sim\triangle ABC$.
-\end{thm}
 
 \begin{thm}{Exercise}\label{ex:angle-preserving-euclid}
 Show that any angle-preserving transformation of the plane multiplies all distances by a ﬁxed constant.
 \end{thm}
 
-\section{Pythagorean theorem}\index{Pythagorean theorem}
+\section{The Pythagorean theorem}\index{Pythagorean theorem}
 
-A triangle is called \index{triangle!right triangle}\emph{right} if one of its angles is right.
+Recall that triangle is called \index{right!triangle}\index{triangle!right triangle}\emph{right} if one of its angles is right.
 The side opposite the right angle is called the \index{hypotenuse}\emph{hypotenuse}. 
 The sides adjacent to the right angle are called \index{leg}\emph{legs}. 
 
@@ -200,7 +200,7 @@ Summing up these two identities and applying \ref{AD+BD=AB}, we get that
 $$AC^2 +BC^2=AB\cdot (AD+ B D)=AB^2.$$
 \qedsf
 
-The idea in the proof above appears in the Elements \cite[X.33]{euclid},
+The idea in this proof appears in the Elements \cite[X.33]{euclid},
 but the proof given there \cite[I.47]{euclid} is different; 
 it uses the area method discussed in Chapter~\ref{chap:area}.
 
@@ -208,7 +208,7 @@ it uses the area method discussed in Chapter~\ref{chap:area}.
 \begin{thm}{Exercise}\label{ex:pyth}
 Assume $A$, $B$, $C$, and $D$ are as in the proof above.
 Show that 
-$$CD^2=AD\cdot BD.$$
+$CD^2=AD\cdot BD$.
 
 \end{thm}
 
@@ -216,11 +216,11 @@ The following exercise is the converse to the Pythagorean theorem.
 
 \begin{thm}{Exercise}\label{ex:pyth-conv}
 Let $ABC$ be a triangle such that
-$$AC^2+BC^2=AB^2.$$ 
+$AC^2+BC^2=AB^2$.
 Show that the angle at $C$ is right.
 \end{thm}
 
-\section{Method of similar triangles}
+\section{The method of similar triangles}
 
 The proof of the Pythagorean theorem given above uses the {}\emph{method of similar triangles}.
 To apply this method, one has to search for pairs of similar triangles and then use the proportionality of corresponding sides and/or equalities of corresponding angles.
@@ -235,7 +235,7 @@ Finding such pairs might be tricky at first.
 \end{wrapfigure}
 
 
-\begin{thm}{Exercise}\label{ex:two-pairs-sim}
+\begin{thm}{Classroom exercise}\label{ex:two-pairs-sim}
 Let $ABC$ be a nondegenerate triangle and the points $X$, $Y$, and $Z$ as shown in the picture.
 Assume $\measuredangle CAY\z\equiv\measuredangle XBC$.
 Find four pairs of similar triangles with these six points as the vertices
@@ -259,11 +259,14 @@ Show that $CD=\tfrac{b\cdot a}c$, where $a=BC$, $b=CA$, and $c=AB$.
 \end{wrapfigure}
 
 \begin{thm}{Exercise}\label{ex:right-perp-bi}
-Assume $\triangle ABC$ has a right angle at~$C$.
-Denote by $P$, $Q$ and $M$ intersections of the perpendicular bisector of $[AB]$ with the lines 
-$(BC)$, $(CA)$, and $(AB)$ respectively.
-Show that 
-\[4\cdot MP\cdot MQ=AB^2.\]
+Assume that $\triangle ABC$ has a right angle at~$C$.
+Let $M$ be the midpoint of $[AB]$.
+Denote by $P$ and $Q$ the intersections of the perpendicular bisector of $[AB]$ with the half-lines
+$[BC)$ and $[AC)$, respectively.
+Show that
+\[
+4\cdot MP\cdot MQ = AB^2.
+\]
 
 \end{thm}
 
@@ -300,7 +303,7 @@ This proof is given as an illustration --- it will not be used further in the se
 {
 
 \begin{wrapfigure}{o}{33mm}
-\vskip-2mm
+\vskip-3mm
 \centering
 \includegraphics{mppics/pic-70}
 \end{wrapfigure}
@@ -335,6 +338,6 @@ Adding these two equalities we get
 It remains to apply the triangle inequality, $BD\le BX+XD$.
 \qeds
 
-Using the proof above together with \ref{prop:inscribed-quadrangle}, one can show that the equality holds only if the vertices $A$, $B$, $C$, and $D$ appear on a line or a circle in the same cyclic order;
+Using this proof together with \ref{prop:inscribed-quadrangle}, one can show that the equality holds only if the vertices $A$, $B$, $C$, and $D$ appear on a line or a circle in the same cyclic order;
 see also \ref{ptolemy-id} for another proof of the equality case.
 Exercise~\ref{ex:ptolemy} suggests another proof of Ptolemy's inequality using complex coordinates.
