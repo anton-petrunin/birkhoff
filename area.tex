@@ -327,23 +327,36 @@ Then
 \end{wrapfigure}
 
 \parit{Proof.}
-Assume $n=2$; by the additivity of area,
-\[\area\mathcal{P}=\area\mathcal{Q}_1+\area\mathcal{Q}_2-\area(\mathcal{Q}_1\cap\mathcal{Q}_2).\]
-
-Since $\mathcal{Q}_1\cap\mathcal{Q}_2$ is degenerate,
-by Corollary~\ref{cor:degenerate},
-\[\area(\mathcal{Q}_1\cap\mathcal{Q}_2)=0.\]
-
-Applying this formula a few times we get the general case.
-Indeed, if $\mathcal{P}$ is subdivided into $\mathcal{Q}_1,\dots,\mathcal{Q}_n$, then
+Assume \(n = 2\).
+Since \(\mathcal{Q}_1 \cap \mathcal{Q}_2\) is degenerate, Corollary~\ref{cor:degenerate} implies that \(\area(\mathcal{Q}_1 \cap \mathcal{Q}_2) = 0\).
+By the additivity of area,
 \begin{align*}
-\area\mathcal{P}&=\area\mathcal{Q}_1+\area(\mathcal{Q}_2\cup\dots\cup\mathcal{Q}_n)=
-\\
-&=\area\mathcal{Q}_1+\area \mathcal{Q}_2+\area( \mathcal{Q}_3\cup\dots\cup\mathcal{Q}_n)=
-\\
-&\ \ \ \vdots
-\\
-&=\area\mathcal{Q}_1+\area \mathcal{Q}_2+\dots+\area\mathcal{Q}_n.
+\area \mathcal{P} &= \area \mathcal{Q}_1 + \area \mathcal{Q}_2 - \area (\mathcal{Q}_1 \cap \mathcal{Q}_2) \\
+&= \area \mathcal{Q}_1 + \area \mathcal{Q}_2.
+\end{align*}
+
+By repeatedly applying this formula, we obtain the general case.
+Indeed, suppose \(\mathcal{P}\) is subdivided into \(\mathcal{Q}_1, \dots, \mathcal{Q}_n\).
+Observe that
+\[
+\mathcal{Q}_i \cap (\mathcal{Q}_{i+1} \cup \dots \cup \mathcal{Q}_n)
+= (\mathcal{Q}_i \cap \mathcal{Q}_{i+1}) \cup \dots \cup (\mathcal{Q}_i \cap \mathcal{Q}_n)
+\]
+for each \(i\).
+Since every intersection \(\mathcal{Q}_i \cap \mathcal{Q}_j\) is degenerate,
+the intersection $\mathcal{Q}_i \cap (\mathcal{Q}_{i+1} \cup \dots \cup \mathcal{Q}_n)$
+is also degenerate.
+Consequently,
+\[
+\area(\mathcal{Q}_i \cap (\mathcal{Q}_{i+1} \cup \dots \cup \mathcal{Q}_n)) = 0
+\]
+for each \(i\).
+Therefore,
+\begin{align*}
+\area \mathcal{P} &= \area \mathcal{Q}_1 + \area (\mathcal{Q}_2 \cup \dots \cup \mathcal{Q}_n) \\
+&= \area \mathcal{Q}_1 + \area \mathcal{Q}_2 + \area (\mathcal{Q}_3 \cup \dots \cup \mathcal{Q}_n) \\
+&\ \ \ \vdots \\
+&= \area \mathcal{Q}_1 + \area \mathcal{Q}_2 + \dots + \area \mathcal{Q}_n.
 \end{align*}
 \qedsf
 
@@ -358,73 +371,43 @@ namely, \textit{if two nondegenerate polygonal sets have equal area, then they a
 The last statement was proved by William Wallace, Farkas Bolyai, and Paul Gerwien.
 The analogous statement in three dimensions, known as {}\emph{Hilbert's third problem}, is false; it was proved by Max Dehn.
 
-
-
 \section{Rectangles}
 
 \begin{thm}{Theorem}\label{thm:area-rect}
 The area of a rectangle is the product of its adjacent sides.
 \end{thm}
 
-\begin{thm}{Algebraic lemma}\label{lem:alg-area}
-Assume that a function $s$ 
-returns a nonnegative real number $s(a,b)$ 
-for any pair of positive real numbers $(a,b)$ 
-and it satisfies the following identities:
-\[\begin{aligned}
-s(1,1)&=1,
-\\
-s(a,b+c)&=s(a,b)+s(a,c),
-\\
-s(a+b,c)&=s(a,c)+s(b,c)
-\end{aligned}
-\eqlbl{3s}
-\]
-for any $a,b,c>0$.
-Then 
-\[s(a,b)=a\cdot b\] 
-for any $a,b>0$.
-\end{thm}
-
-The proof is similar to the proof of Lemma~\ref{lem:R-auto}.
-
 \parit{Proof.}
-If $a>a'$ and $b>b'$ then 
-\[s(a,b)\ge s(a',b').\eqlbl{s(a,b)>s(a',b')}\]
-Indeed, since $s$ returns nonnegative numbers, we get that
-\begin{align*}
-s(a,b)&=s(a',b)+s(a-a',b)\ge s(a',b)=
-\\
-&= s(a',b')+s(a',b-b')\ge s(a',b').
-\end{align*}
+Let $\mathcal{R}_{a,b}$ denote the solid rectangle with adjacent sides $a$ and~$b$,
+and let $s(a,b)\df\area \mathcal{R}_{a,b}$.
+We need to show that
+\[s(a,b)=a\cdot b\]
+for any $a>0$ and $b>0$.
 
-Applying the second and third identity in \ref{3s} a few times we get that
-\begin{align*}
-m\cdot s(a,b)&=s(a,m\cdot b)=
-\\&=s(m\cdot a,b)
-\end{align*}
-for any positive integer $m$. Therefore
-\begin{align*}
-s(\tfrac kl,\tfrac mn)
-&=k \cdot s(\tfrac 1l,\tfrac mn)=
-\\
-&=k\cdot m \cdot s(\tfrac 1l,\tfrac 1n)=
-\\
-&=k\cdot m\cdot \tfrac 1l\cdot s(1, \tfrac 1n)=
-\\
-&=k\cdot m\cdot \tfrac 1l\cdot \tfrac 1n\cdot s(1,1)=
-\\
-&=\tfrac kl\cdot\tfrac mn
-\end{align*}
-for any positive integers $k$, $l$, $m$, and $n$.
-That is, the needed identity holds for any pair of rational numbers $a=\tfrac kl$ and $b=\tfrac mn$.
+Note that $\mathcal{R}_{1,1}$ is a solid unit square.
+Therefore,
+\[s(1,1)=1.
+\]
 
-Arguing by contradiction, assume $s(a,b)\ne a\cdot b$ for a pair of positive real numbers $(a,b)$;
-so, $s(a,b)> a\cdot b$ or $s(a,b)\z< a\cdot b$.
+Given a positive integer $n$,
+we can subdivide a solid unit square into $n^2$ squares with side length $\tfrac1n$.
+By Proposition~\ref{prop:subdivision} and the invariance of area, we get $n^2\cdot s(\tfrac1n,\tfrac1n)=1$ and
+\[
+s(\tfrac1n,\tfrac1n)=\tfrac1n\cdot\tfrac1n.
+\]
 
-Recall that \index{63@$\lfloor x \rfloor$, $\lceil x \rceil$}$\lfloor x \rfloor$ and $\lceil x \rceil$  denote \index{floor and ceiling}\emph{floor} and \emph{ceiling} of $x$;
-that is, $\lfloor x \rfloor$ is the greatest integer such that $\lfloor x \rfloor\le x$,
-and $\lceil x \rceil$ is the least integer such that $\lceil x \rceil\ge x$.
+Further, for positive integers $k$, $m$, and $n$, the rectangle $\mathcal{R}_{\frac kn,\frac mn}$ can be subdivided into $k\cdot m$ squares with side length $\tfrac1n$.
+Therefore,
+\[s(\tfrac kn,\tfrac mn)=\tfrac kn\cdot \tfrac mn,\eqlbl{eq:a(a,b)=ab-}\]
+which is a special case of the theorem.
+
+Suppose $a\le a'$ and $b\le b'$.
+Then we can assume that $\mathcal{R}_{a,b}\subset \mathcal{R}_{a',b'}$; by the monotonicity of area, we have
+\[s(a,b)\le s(a',b').\eqlbl{s(a,b)>s(a',b')}\]
+
+Now let us argue by contradiction.
+Assume that $s(a,b)\ne a\cdot b$ for some $a>0$ and $b>0$.
+Then $s(a,b)> a\cdot b$ or $s(a,b) <a\cdot b$.
 
 \raggedcolumns\setlength{\multicolsep}{.5mm}
 \setlength{\columnseprule}{1pt}
@@ -432,14 +415,13 @@ and $\lceil x \rceil$ is the least integer such that $\lceil x \rceil\ge x$.
 If $s(a,b)> a\cdot b$,
 we can choose a positive integer $n$ such that
 \[s(a,b)> (a+\tfrac1n)\cdot (b+\tfrac1n).\eqlbl{s(a,b)>}\]
-Set $k=\lfloor a\cdot n \rfloor+1$ and $m=\lfloor b\cdot n \rfloor+1$;
-equivalently, $k$ and $m$ are positive integers such that
+Choose positive integers $k$ and $m$ such that
 \begin{align*}
 a< \tfrac kn&\le a+\tfrac1n,
 \\
 b<\tfrac mn&\le b+\tfrac1n.
 \end{align*}
-By \ref{s(a,b)>s(a',b')}, we get that
+By \ref{s(a,b)>s(a',b')} and \ref{eq:a(a,b)=ab-}, we get that
 \begin{align*}
 s(a,b)&\le s(\tfrac kn,\tfrac mn)=
 \\
@@ -451,15 +433,16 @@ which contradicts \ref{s(a,b)>}.
 
 \columnbreak
 
-If $s(a,b)< a\cdot b$, choose a positive integer $n$ such that $a>\tfrac1n$, $b>\tfrac1n$, and
+The case $s(a,b)< a\cdot b$ is analogous.
+Choose $n$ such that $a>\tfrac1n$, $b>\tfrac1n$, and
 \[s(a,b)< (a-\tfrac1n)\cdot (b-\tfrac1n).\eqlbl{s(a,b)<}\]
-Set $k=\lceil a\cdot n \rceil-1$ and $m=\lceil b\cdot n \rceil-1$; that is,
+Choose $k$ and $m$ such that
 \begin{align*}
 a> \tfrac kn&\ge a-\tfrac1n,
-\\ 
+\\
 b>\tfrac mn&\ge b-\tfrac1n.
 \end{align*}
-By \ref{s(a,b)>s(a',b')}, we get that
+By \ref{s(a,b)>s(a',b')} and \ref{eq:a(a,b)=ab-}, we get that
 \begin{align*}
 s(a,b)&\ge s(\tfrac kn,\tfrac mn)=
 \\
@@ -467,45 +450,10 @@ s(a,b)&\ge s(\tfrac kn,\tfrac mn)=
 \\
 &\ge (a-\tfrac1n)\cdot(b-\tfrac1n),
 \end{align*}
-which contradicts \ref{s(a,b)<}.\qeds
+which contradicts \ref{s(a,b)<}.
+\qeds
 \end{multicols}
 \setlength{\columnseprule}{0pt}
-
-
-
-
-
-
-
-
-\parit{Proof of Theorem~\ref{thm:area-rect}.}
-Suppose that $\mathcal{R}_{a,b}$ denotes the solid rectangle with sides $a$ and~$b$.
-Let 
-\[s(a,b)=\area \mathcal{R}_{a,b}.\]
-
-By the definition of area, 
-$s(1,1)=\area(\mathcal{K})=1$.
-That is, the first identity in the algebraic lemma holds.
-
-
-\begin{wrapfigure}{o}{30 mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-304}
-\end{wrapfigure}
-
-The rectangle $\mathcal{R}_{a+b,c}$
-can be subdivided into two rectangles $\mathcal{R}_{a,c}$
-and~$\mathcal{R}_{b,c}$.
-By Proposition~\ref{prop:subdivision}, 
-\[
-\area \mathcal{R}_{a+b,c}=\area \mathcal{R}_{a,c}+\area \mathcal{R}_{b,c}.
-\]
-That is, the second identity in the algebraic lemma holds.
-The proof of the third identity is similar.
-
-It remains to apply the algebraic lemma.
-\qeds
 
 
 \section{Parallelograms}
@@ -695,7 +643,7 @@ These proofs are not truly elementary --- the price for the existence of the are
 {
 
 \begin{wrapfigure}{r}{20 mm}
-\vskip-2mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-312}
 \end{wrapfigure}
@@ -746,7 +694,7 @@ Hence the statement follows.\qeds
 {
 
 \begin{wrapfigure}{r}{19mm}
-\vskip-0mm
+\vskip-4mm
 \centering
 \includegraphics{mppics/pic-314}
 \end{wrapfigure}
@@ -794,7 +742,7 @@ $$\frac{AB}{AC}=\frac{DB}{DC}.$$
 \end{thm*}
 
 \begin{wrapfigure}{r}{30 mm}
-\vskip-0mm
+\vskip-19mm
 \centering
 \includegraphics{mppics/pic-316}
 \end{wrapfigure}
@@ -847,7 +795,7 @@ Conclude that
 \end{thm}
 
 \begin{wrapfigure}[5]{r}{40 mm}
-\vskip-6mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-319}
 \end{wrapfigure}
