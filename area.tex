@@ -374,7 +374,7 @@ The analogous statement in three dimensions, known as {}\emph{Hilbert's third pr
 \section{Rectangles}
 
 \begin{thm}{Theorem}\label{thm:area-rect}
-The area of a rectangle is the product of its adjacent sides.
+The area of a solid rectangle is the product of its adjacent sides.
 \end{thm}
 
 \parit{Proof.}
@@ -384,17 +384,13 @@ We need to show that
 \[s(a,b)=a\cdot b\]
 for any $a>0$ and $b>0$.
 
-Note that $\mathcal{R}_{1,1}$ is a solid unit square.
-Therefore,
-\[s(1,1)=1.
-\]
+Since $\mathcal{R}_{1,1}$ is a solid unit square, we have
+\[s(1,1)=1.\]
 
 Given a positive integer $n$,
 we can subdivide a solid unit square into $n^2$ squares with side length $\tfrac1n$.
 By Proposition~\ref{prop:subdivision} and the invariance of area, we get $n^2\cdot s(\tfrac1n,\tfrac1n)=1$ and
-\[
-s(\tfrac1n,\tfrac1n)=\tfrac1n\cdot\tfrac1n.
-\]
+\[s(\tfrac1n,\tfrac1n)=\tfrac1n\cdot\tfrac1n.\]
 
 Further, for positive integers $k$, $m$, and $n$, the rectangle $\mathcal{R}_{\frac kn,\frac mn}$ can be subdivided into $k\cdot m$ squares with side length $\tfrac1n$.
 Therefore,
@@ -402,7 +398,7 @@ Therefore,
 which is a special case of the theorem.
 
 Suppose $a\le a'$ and $b\le b'$.
-Then we can assume that $\mathcal{R}_{a,b}\subset \mathcal{R}_{a',b'}$; by the monotonicity of area, we have
+Then we can assume that $\mathcal{R}_{a,b}\subset \mathcal{R}_{a',b'}$, and by the monotonicity of area, we have
 \[s(a,b)\le s(a',b').\eqlbl{s(a,b)>s(a',b')}\]
 
 Now let us argue by contradiction.
@@ -566,6 +562,7 @@ Therefore,
 \begin{wrapfigure}{o}{28 mm}
 \centering
 \includegraphics{mppics/pic-310}
+\vskip2mm
 \end{wrapfigure}
 
 Since $\square ABCD$ is a parallelogram,  Lemma~\ref{lem:parallelogram} implies that
