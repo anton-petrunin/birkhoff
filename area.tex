@@ -2,14 +2,13 @@
 \label{chap:area}
 
 We will define area as a function that satisfies certain conditions (Section~\ref{sec:def(area)}).
-The so-called {}\emph{Lebesgue measure} provides an example of such a function.
+The so-called \emph{Lebesgue measure} provides an example of such a function.
 In particular, the existence of the Lebesgue measure implies the existence of an area function.
-This construction is included in any textbook on real analysis.
+This construction can be found in any textbook on real analysis.
 
-Based solely on the existence, we develop the concept of area with no cheating.
-We choose this approach because any rigorous introduction to area is either tedious or comes with cheating.
-We do not want to cheat while also respecting your time. 
-Sooner or later, you will need to learn about the Lebesgue measure if you haven't already.
+Relying solely on this existence result, we develop the concept of area with no cheating.
+We adopt this approach because all rigorous introductions to area tend to be tedious.
+(If you haven’t encountered the Lebesgue measure yet, you will sooner or later.)
 
 
 \section{Solid triangles}
@@ -730,19 +729,25 @@ By Theorem~\ref{thm:area-of-triangle},
 \frac{B'C'}{BC}.\]
 \qedsf
 
+\begin{thm}{Exercise}\label{ex:area-medians}
+Prove that the medians divide the triangle into six triangles of equal area.
+\end{thm}
+
 Now let us show how to use this claim to prove Lemma~\ref{lem:bisect-ratio}.
 First, let us recall its statement:
 
 \begin{thm*}{Lemma}
 If $\triangle A B C$ is nondegenerate and its angle bisector at $A$ intersects $[BC]$ at point~$D$, then 
-$$\frac{AB}{AC}=\frac{DB}{DC}.$$
+$\frac{AB}{AC}=\frac{DB}{DC}$.
+
 \end{thm*}
 
 \begin{wrapfigure}{r}{30 mm}
-\vskip-19mm
+\vskip-4mm
 \centering
 \includegraphics{mppics/pic-316}
 \end{wrapfigure}
+
 
 \parit{Proof.}
 Applying  Claim~\ref{clm:area-ratio}, we get that
@@ -754,6 +759,8 @@ Applying  Claim~\ref{clm:area-ratio} again, we get that
 \[\frac{\area(\solidtriangle ABD)}{\area(\solidtriangle ACD)}=\frac{AB}{AC}.\]
 Hence the result follows.
 \qeds
+
+
 
 The second statement in the following exercise is a partial case of \index{Ceva's theorem}Ceva's theorem; see \ref{thm:ceva-affine}.
 

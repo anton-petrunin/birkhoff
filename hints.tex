@@ -717,6 +717,8 @@ $AB=CD\ \iff\ \triangle AMB
 =
 \pm\tfrac\pi2$.
 
+\parbf{\ref{ex:inscribed-rhombus}.}
+Show and use that $\triangle CZY\sim\triangle YXB$.
 
 \parbf{\ref{ex:coordinates}.} \textit{(a).} Use the uniqueness of the parallel line (\ref{thm:parallel}).
 
@@ -844,9 +846,6 @@ the point of intersection of two external and one internal bisectors of $\triang
 \parbf{\ref{ex:bisector-incenter}.}
 Apply \ref{lem:bisect-ratio} twice.
 Use the obtained identity to show that the angle bisector at $C$ passes thru $I$.
-
-\parbf{\ref{ex:inscribed-rhombus}.}
-Show and use that $\triangle CZY\sim\triangle YXB$.
 
 %\subsection*{Chapter~\ref{chap:inscribed-angle}}
 \refstepcounter{chapter}
@@ -2506,19 +2505,12 @@ Then by \ref{thm:area-of-triangle},
 Therefore, 
 \[h_1+h_2+h_3=\tfrac2a\cdot\area(\solidtriangle ABC).\]
 
-\parbf{\ref{ex:ceva}.} Apply \ref{clm:area-ratio} to show that 
-\[\frac{\area(\solidtriangle ABB')}{\area(\solidtriangle BCB')}=
-\frac{\area(\solidtriangle AXB')}{\area(\solidtriangle XCB')}=
-\frac{AB'}{B'C}.\]
-And observe that 
-\begin{align*}
-\area(\solidtriangle ABB')&=\area(\solidtriangle ABX)+
-\\
-&\qquad+\area(\solidtriangle AXB'),
-\\
-\area(\solidtriangle BCB')&=\area(\solidtriangle BCX)+\\
-&\qquad+\area(\solidtriangle XCB').
-\end{align*}
+\parbf{\ref{ex:area-medians}.}
+Apply \ref{thm:centroid} and \ref{clm:area-ratio} several times.
+
+\parbf{\ref{ex:ceva}.}
+Apply \ref{clm:area-ratio} to show that
+\[\frac{\area(\solidtriangle ABX)}{\area(\solidtriangle BCX)}=\frac{\area(\solidtriangle ABB')}{\area(\solidtriangle CBB')}=\frac{AB'}{B'C}.\]
 It implies the first identity; the rest is analogous.
 
 \begin{Figure}
@@ -2528,10 +2520,10 @@ It implies the first identity; the rest is analogous.
 \end{Figure}
 
 \parbf{\ref{ex:cross-ratio-area}.}
-To prove \textit{(\ref{ex:cross-ratio-area:a})}, apply \ref{clm:area-ratio} twice to the triangles $OL_iL_j$, $OL_jM_i$, and $OM_iM_j$.
+To prove \textit{(\ref{ex:cross-ratio-area:a})}, apply \ref{clm:area-ratio} twice to $\solidtriangle OL_iL_j$, $\solidtriangle OL_jM_i$, and $\solidtriangle OM_iM_j$.
 
-To prove part~\textit{(\ref{ex:cross-ratio-area:b})}, use \ref{clm:area-ratio} to rewrite the left-hand side using the areas of triangles $OL_1L_2$, $OL_2L_3$, $OL_3L_4$, and $OL_4L_1$.
-Furthermore, use part \textit{(\ref{ex:cross-ratio-area:a})} to rewrite it using areas of $OM_1M_2$, $OM_2M_3$, $OM_3M_4$, and $OM_4M_1$ and apply \ref{clm:area-ratio} again to get the right-hand side.
+To prove part~\textit{(\ref{ex:cross-ratio-area:b})}, use \ref{clm:area-ratio} to rewrite the left-hand side using the areas of $\solidtriangle OL_1L_2$, $\solidtriangle OL_2L_3$, $\solidtriangle OL_3L_4$, and $\solidtriangle OL_4L_1$.
+Furthermore, use part \textit{(\ref{ex:cross-ratio-area:a})} to rewrite it using areas of $\solidtriangle OM_1M_2$, $\solidtriangle OM_2M_3$, $\solidtriangle OM_3M_4$, and $\solidtriangle OM_4M_1$ and apply \ref{clm:area-ratio} again to get the right-hand side.
 
 
 \parbf{\ref{ex:circle-is-quadrable}.}
