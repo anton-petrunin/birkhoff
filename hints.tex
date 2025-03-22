@@ -2351,15 +2351,21 @@ To prove the ``only if'' part, consider the line passing thru the vertex that is
 To prove the ``if'' part, use Pasch's theorem (\ref{thm:pasch}).
 
 \parbf{\ref{ex:solid-square}.}
-Assume the contrary; that is, a solid square $\mathcal{Q}$ can be presented as a union of a finite collection of segments $[A_1B_1],\dots,[A_nB_n]$
-and one-point sets $\{C_1\},\dots,\{C_k\}$.
+Assume the contrary; that is, suppose a solid square \( \mathcal{K} \) can be represented as the union of a finite collection of segments \( [A_1B_1],\dots,[A_nB_n] \)
+and single-point sets \( \{C_1\},\dots,\{C_k\} \).
 
-Note that $\mathcal{Q}$ contains an infinite number of mutually nonparallel segments.
-Therefore, we can choose a segment $[PQ]$ in $\mathcal{Q}$ 
-that is not parallel to any of the segments $[A_1B_1],\dots,[A_nB_n]$.
+Note that \( \mathcal{K} \) contains an infinite number of mutually nonparallel segments.
+Therefore, we can choose a segment \( [XY] \) in \( \mathcal{K} \) that is not parallel to any of the segments \( [A_1B_1],\dots,[A_nB_n] \).
 
-It follows that $[PQ]$ has at most one common point with each of the sets $[A_iB_i]$ and~$\{C_i\}$.
-Since $[PQ]$ contains an infinite number of points, we arrive at a contradiction.
+It follows that \( [XY] \) has at most one common point with each of the sets \( [A_iB_i] \) and~\( \{C_i\} \).
+Since \( [XY] \) contains infinitely many points, we reach a contradiction.
+
+\smallskip
+
+Alternatively, choose a circle \( \Gamma \) inside \( \mathcal{K} \).
+Note that \( \Gamma \) contains infinitely many points, but by \ref{lem:line-circle}, it has only finitely many intersection points with any degenerate polygonal set.
+
+Let us also note that the statement will follow from \ref{cor:degenerate} and \ref{thm:area-rect}.
 
 \parbf{\ref{ex:poly-circ}.} 
 Show that among elementary sets
@@ -2466,9 +2472,9 @@ Cutting each polygon by diagonals from one vertex produces a subdivision into so
 
 \parbf{\ref{ex:pyth-2}.}
 Assuming $a>b$,
-we subdivided $\mathcal{Q}_c$ into $\mathcal{Q}_{a-b}$ and four triangles congruent to~$\mathcal{T}$.
+we have subdivided $\mathcal{K}_c$ into $\mathcal{K}_{a-b}$ and four triangles congruent to~$\mathcal{T}$.
 Therefore
-\[\area\mathcal{Q}_c=\area\mathcal{Q}_{a-b}+4\cdot\area\mathcal{T}.
+\[\area\mathcal{K}_c=\area\mathcal{K}_{a-b}+4\cdot\area\mathcal{T}.
 \eqlbl{eq:pyth-2}\]
 
 According to \ref{thm:area-of-triangle},
@@ -2510,14 +2516,12 @@ Apply \ref{thm:centroid} and \ref{clm:area-ratio} several times.
 
 \parbf{\ref{ex:ceva}.}
 Apply \ref{clm:area-ratio} to show that
+\[\frac{\area(\solidtriangle ABX)}{\area(\solidtriangle ABB')}=\frac{BX}{BB'}=\frac{\area(\solidtriangle BCX)}{\area(\solidtriangle CBB')}\]
+and, therefore,
 \[\frac{\area(\solidtriangle ABX)}{\area(\solidtriangle BCX)}=\frac{\area(\solidtriangle ABB')}{\area(\solidtriangle CBB')}=\frac{AB'}{B'C}.\]
-It implies the first identity; the rest is analogous.
 
-\begin{Figure}
-\vskip0mm
-\centering
-\includegraphics{mppics/pic-318}
-\end{Figure}
+It implies the first identity; the rest is analogous.
+Multipying the identities, we get the last statement.
 
 \parbf{\ref{ex:cross-ratio-area}.}
 To prove \textit{(\ref{ex:cross-ratio-area:a})}, apply \ref{clm:area-ratio} twice to $\solidtriangle OL_iL_j$, $\solidtriangle OL_jM_i$, and $\solidtriangle OM_iM_j$.

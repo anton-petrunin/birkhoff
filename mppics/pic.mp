@@ -2783,7 +2783,7 @@ z.BB=z.B reflectedabout(z.C,z.X);
 z.M=.5[z.B,z.BB];
 
 arcs(z.B,z.C,z.X,9);
-arcs(z.BB,z.C,z.X,9);
+arcs(z.BB,z.C,z.X,10);
 mark_rt_angle_withsize(z.B,z.M,z.X,6);
 
 draw z.A--z.B--z.C--cycle;
