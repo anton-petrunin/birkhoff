@@ -2162,7 +2162,7 @@ draw z.X--z.M;
 draw z.X--z.N;
 draw ddline(z.O,z.L)(.3,.3);
 draw ddline(z.O,z.M)(.3,.3);
-draw ddline(z.O,z.N)(1,1);
+draw ddline(z.O,z.N)(1.5,1.5);
 
 rimmark(z.N--z.L, z.L--z.M, z.M--z.N);
 
@@ -2172,7 +2172,7 @@ label.bot (btex $L$ etex, z.L);
 label.ulft (btex $M$ etex, z.M);
 label.lft (btex $N$ etex, z.N);
 label.rt (btex $X$ etex, z.X);
-whitelabel.bot (btex $O$ etex, z.O);
+whitelabel.bot (btex $O$ etex, z.O+(0,-1));
 endfig;
 
 beginfig(142)
@@ -4483,6 +4483,108 @@ draw (p cutafter z.A cutbefore z.B) reflectedabout (z.T,z.TT) shifted -z.T scale
 
 draw z.A--z.T--z.B;
 
+endfig;
+
+beginfig(251)
+save u, r;
+u:=2.4cm;
+r:=.35;
+
+z.a=(1,0)*u;
+
+save p; path p[];
+
+p0=circle(origin, z.a);
+draw p0;
+
+z.x1=(.3,.4)*u;
+z.y1=z.a rotated (90+angle z.x1);
+
+p1=(-z.y1)..(z.x1-z.y1)/sqrt(2)..z.x1..(z.x1+z.y1)/sqrt(2)..z.y1..(-z.x1+z.y1)/sqrt(2)..(-z.x1)..(-z.x1-z.y1)/sqrt(2)..cycle;
+
+
+z.x2=(-.3,.3)*u;
+z.y2=z.a rotated (90+angle z.x2);
+
+p2=(-z.y2)..(z.x2-z.y2)/sqrt(2)..z.x2..(z.x2+z.y2)/sqrt(2)..z.y2..(-z.x2+z.y2)/sqrt(2)..(-z.x2)..(-z.x2-z.y2)/sqrt(2)..cycle;
+
+
+z.x3=(.05,-.3)*u;
+z.y3=z.a rotated (90+angle z.x3);
+
+p3=(-z.y3)..(z.x3-z.y3)/sqrt(2)..z.x3..(z.x3+z.y3)/sqrt(2)..z.y3..(-z.x3+z.y3)/sqrt(2)..(-z.x3)..(-z.x3-z.y3)/sqrt(2)..cycle;
+
+
+%hatchfill
+%((subpath (0,4) of p1) cutbefore (subpath (0,4) of p3) cutafter (subpath (0,4) of p2))
+%--
+%((subpath (0,4) of p2) cutbefore (subpath (0,4) of p1) cutafter (subpath (0,4) of p3))
+%--
+%((subpath (0,4) of p3) cutbefore (subpath (0,4) of p2) cutafter (subpath (0,4) of p1))
+%--cycle
+% withcolor (57, 1.5mm, -.5bp);
+
+fill ((subpath (0,4) of p1) cutbefore (subpath (0,4) of p3) cutafter (subpath (0,4) of p2))
+--
+((subpath (0,4) of p2) cutbefore (subpath (0,4) of p1) cutafter (subpath (0,4) of p3))
+--
+((subpath (0,4) of p3) cutbefore (subpath (0,4) of p2) cutafter (subpath (0,4) of p1))
+--cycle withcolor .5;
+
+z.A=(subpath (0,4) of p1) intersectionpoint (subpath (0,4) of p2);
+z.B=(subpath (0,4) of p2) intersectionpoint (subpath (0,4) of p3);
+z.C=(subpath (0,4) of p3) intersectionpoint (subpath (0,4) of p1);
+
+x.r=sqrt(1-r*r);
+x.AA=sqrt(u*u-abs(z.A)*abs(z.A))/u;
+x.BB=sqrt(u*u-abs(z.B)*abs(z.B))/u;
+x.CC=sqrt(u*u-abs(z.C)*abs(z.C))/u;
+
+p10=(unitvector(z.A)*u zscaled (0,r)..
+unitvector(z.A)*u zscaled (-r*x.AA,0)..
+unitvector(z.A)*u zscaled (0,-r)..
+unitvector(z.A)*u zscaled (r*x.AA,0)..
+cycle) shifted (z.A*x.r);
+
+p11=(unitvector(z.B)*u zscaled (0,r)..
+unitvector(z.B)*u zscaled (-r*x.BB,0)..
+unitvector(z.B)*u zscaled (0,-r)..
+unitvector(z.B)*u zscaled (r*x.BB,0)..
+cycle) shifted (z.B*x.r);
+
+p12=(unitvector(z.C)*u zscaled (0,r)..
+unitvector(z.C)*u zscaled (-r*x.CC,0)..
+unitvector(z.C)*u zscaled (0,-r)..
+unitvector(z.C)*u zscaled (r*x.CC,0)..
+cycle) shifted (z.C*x.r);
+
+%hatchfill
+%((subpath (0,4) of p1) cutbefore (subpath (0,2) of p12) cutafter (subpath (0,2) of p10))
+%--
+%((subpath (0,4) of p2) cutbefore (subpath (0,2) of p10) cutafter (subpath (0,2) of p11))
+%--
+%((subpath (0,4) of p3) cutbefore (subpath (0,2) of p11) cutafter (subpath (0,2) of p12))
+%--cycle
+% withcolor (57, 1.5mm, -.5bp);
+
+draw p10 cutbefore (subpath (0,4) of p2) cutafter ((subpath (0,4) of p1) cutbefore (subpath (0,4) of p3) cutafter (subpath (0,4) of p2)) withcolor 1;
+draw p11 cutbefore (subpath (0,4) of p3) cutafter ((subpath (0,4) of p2) cutbefore (subpath (0,4) of p1) cutafter (subpath (0,4) of p3)) withcolor 1;
+draw p12 cutbefore (subpath (0,4) of p1) cutafter ((subpath (0,4) of p3) cutbefore (subpath (0,4) of p2) cutafter (subpath (0,4) of p1)) withcolor 1;
+
+
+draw subpath (0,4) of p1;
+draw subpath (4,8) of p1 dashed evenly;
+draw subpath (0,4) of p2;
+draw subpath (4,8) of p2 dashed evenly;
+draw subpath (0,4) of p3;
+draw subpath (4,8) of p3 dashed evenly;
+
+%dOt z.A, z.B, z.C;
+
+label(btex $\Delta$ etex, origin) withcolor 1;
+label.bot(btex $\alpha$ etex, z.A+(0,-4)) withcolor 1;
+label.urt(btex $\beta$ etex, z.B+(4,-1)) withcolor 1;
+label.ulft(btex $\gamma$ etex, z.C+(-4,-3)) withcolor 1;
 endfig;
 
 beginfig(252)

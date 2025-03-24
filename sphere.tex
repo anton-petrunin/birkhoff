@@ -1,46 +1,110 @@
-\chapter{Spherical geometry}
+\chapter{Spherical insights}
 \label{chap:sphere}
 
-Spherical geometry studies the surface of a unit sphere.
-This geometry has applications in cartography, navigation, and astronomy.
+Spherical geometry studies the surface of a unit sphere; it has applications in cartography, navigation, and astronomy.
 
-Spherical geometry is a close relative of Euclidean and hyperbolic geometries.
-Most of the theorems in hyperbolic geometry have spherical analogs,
-but spherical geometry is easier to visualize. 
+It is closely related to both Euclidean and hyperbolic geometry. Since a sphere is easier to visualize, studying spherical geometry can aid in understanding hyperbolic geometry.
+In this chapter, we discuss several such aspects, but we do not aim to provide a complete treatment of spherical geometry.
+
+
 
 \section{The sphere}
 
-Recall that Euclidean space is the set $\mathbb{R}^3$ of all triples $(x,y,z)$ of real numbers
-such that the distance between a pair of points
-$A\z=(x_A,y_A,z_A)$ and $B=(x_B,y_B,z_B)$
-is defined by the following formula:
-$$AB
-\df
-\sqrt{(x_A-x_B)^2+(y_A-y_B)^2+(z_A-z_B)^2}.$$
+Recall that Euclidean space is the set \( \mathbb{R}^3 \) of all triples \( (x,y,z) \) of real numbers,
+where the distance between two points
+\( A = (x_A, y_A, z_A) \) and \( B = (x_B, y_B, z_B) \)
+is given by the formula:
+\[
+AB \df \sqrt{(x_A - x_B)^2 + (y_A - y_B)^2 + (z_A - z_B)^2}.
+\]
 
-The planes in this space are defined as the set of solutions of 
-$$a\cdot x+b\cdot y+c\cdot z+d=0$$ 
-for constants $a$, $b$, $c$, and $d$, where at least one of the numbers $a$, $b$, or $c$ is not zero.
-Any such plane is isometric to the Euclidean plane.
+Planes in this space are defined as the set of solutions to the equation
+\[
+a \cdot x + b \cdot y + c \cdot z + d = 0
+\]
+for some constants \( a \), \( b \), \( c \), and \( d \),
+where at least one of \( a \), \( b \), or \( c \) is nonzero.
+Every such plane is isometric to the Euclidean plane.
 
-A \index{sphere}\emph{sphere} with center $O$ and radius $r$ is the set of points in the space that lie at the distance $r$ from~$O$.
+A \index{sphere}\emph{sphere} with center \( O \) and radius \( r \) is the set of all points in space that are at a distance \( r \) from \( O \).
 
-Let $A$ and $B$ be two points on the unit sphere centered at~$O$.
-The \index{distance!spherical}\index{spherical distance}\emph{spherical distance} from $A$ to $B$
-(briefly $AB_s$)
- is defined as  $|\measuredangle AOB|$. 
+Let \(\Sigma\) be a unit sphere with center \( O \).
+A \index{great circle}\emph{great circle} of \(\Sigma\) is the intersection of a sphere with a plane passing through \( O \).
+In spherical geometry, great circles serve as the analog of lines, even though they do not satisfy Definition~\ref{def:line}.
+Each great circle has a radius of \( \tfrac{\pi}{2} \) and two antipodal centers on the sphere.
+A great circle divides the sphere into two \index{half-sphere}\emph{half-spheres}, analogous to half-planes in Euclidean geometry.
 
-A \index{great circle}\emph{great circle} is the intersection of the sphere with a plane passing thru~$O$.
-In spherical geometry, great circles play the role of lines despite not meeting Definition~\ref{def:line}.
-Note that great circles are circles of radius $\tfrac\pi2$;
-it has two antipodal centers in the sphere.
+Let \( A \) and \( B \) be two distinct, non-antipodal points on the unit sphere.
+Then there is a unique great circle passing through \( A \) and \( B \), which we denote by \( (AB)_s \).
+The shorter of the two arcs of \( (AB)_s \) with endpoints \( A \) and \( B \) will be denoted by \( [AB]_s \).
+The \index{distance!spherical}\index{spherical distance}\emph{spherical distance} between \( A \) and \( B \) (denoted briefly as \( AB_s \)) is defined as the absolute value of the angle \( \measuredangle AOB \), measured in the plane containing \( O \), \( A \), and \( B \).
 
-Let $A$ and $B$ be two distinct and not antipodal points on the unit sphere.
-Then there is a unique great circle thru $A$, and $B$;
-it will be denoted by $(AB)_s$.
-The shorter of the two arcs of $(AB)_s$ with endpoints $A$ and $B$ will be denoted by $[AB]_s$.
-We can talk about spherical triangles and their sides;
-their angle measures are defined as the angle between the tangent half-lines to the arcs.
+\section{Area of spherical triangle}
+
+Fix a unit sphere \( \Sigma \).
+Similar to the Euclidean plane, we can define a spherical triangle, denoted \( \triangle_s ABC \), along with its sides \( [AB]_s \), \( [BC]_s \), and \( [CA]_s \).
+We will always assume that the triangle has no antipodal vertices.
+The angle measures
+\[
+\alpha = |\measuredangle_s CAB|,\quad
+\beta = |\measuredangle_s ABC|,\quad
+\text{and} \quad
+\gamma = |\measuredangle_s BCA|
+\]
+are defined as the angles between the tangent half-lines to the corresponding arcs.
+We will consider only the absolute values of the angles, altho their signs could also be defined.
+
+A solid spherical triangle \( \solidtriangle_s ABC \) is defined as the set that includes the sides of \( \triangle_s ABC \) along with the rigin inside;
+that is, the intersection of three half-spheres:
+the first bounded by \( (AB)_s \) and containing \( C \),
+the second bounded by \( (BC)_s \) and containing \( A \),
+and the third bounded by \( (CA)_s \) and containing \( B \).
+This definition closely follows Section~\ref{Solid triangles}.
+
+The concept of area on a sphere will be briefly discussed in Section \ref{Neutral planes and spheres},
+but an intuitive understanding of area measurement should be sufficient for the proof of the following lemma.
+
+
+\begin{thm}{Lemma}\label{lem:area-spher-triangle}
+For any solid spherical triangle $\Delta$, we have
+\[\area\Delta = \alpha + \beta + \gamma - \pi,\]
+where $\alpha$, $\beta$, and $\gamma$ are the absolute values of the angles of $\Delta$.
+\end{thm}
+
+Recall that $\pi - \alpha - \beta - \gamma$ is the defect of $\Delta$,
+so the lemma states that the sum of the area and the defect of a spherical triangle is zero.
+In particular, \textit{the defect of any spherical triangle is nonpositive}.
+Recall that \textit{the defect of any triangle in a neutral plane is nonnegative};
+see Section~\ref{The defect}.
+
+\parit{Informal proof.}
+We will use that
+\[\area\Sigma = 4\cdot\pi \eqlbl{eq:area(S2)}\]
+without proof.
+
+\begin{wrapfigure}{o}{52 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-251}
+\vskip0mm
+\end{wrapfigure}
+
+Note that the area of a spherical slice \( S_\alpha \) between two meridians meeting at an angle \( \alpha \) is proportional to \( \alpha \).
+Since \( S_\pi \) is a hemisphere, from \ref{eq:area(S2)}, we get \( \area S_\pi = 2\cdot\pi \).
+Therefore, the proportionality coefficient is 2; that is,
+\[\area S_\alpha = 2\cdot \alpha
+\eqlbl{eq:area(Sa)}\]
+for any \( \alpha \).
+
+Extending the sides of \( \Delta \), we obtain six slices: two \( S_\alpha \), two \( S_\beta \), and two \( S_\gamma \).
+They cover most of the sphere once,
+but the triangle \( \Delta \) and its centrally symmetric copy are each covered three times.
+It follows that
+\begin{align*}
+2\cdot \area S_\alpha + 2\cdot \area S_\beta + 2\cdot \area S_\gamma = \area\Sigma + 4\cdot\area\Delta.
+\end{align*}
+It remains to apply \ref{eq:area(S2)} and \ref{eq:area(Sa)}.
+\qeds
 
 \section{The central projection}
 
@@ -51,12 +115,14 @@ while the spherical shapes are distorted, the shortest path on the plane corresp
 
 The central projection is analogous to the projective model of the hyperbolic plane discussed in Chapter~\ref{chap:klein}.
 
+\medskip
+
 Let $\Sigma$ be the unit sphere centered at the origin~$O$.
 Suppose that $\Pi^+$ denotes the plane defined by the equation $z=1$.
 This plane is parallel to the $(x,y)$-plane and passes thru 
 the north pole $N\z=(0,0,1)$ of~$\Sigma$.
 
-The northern hemisphere of $\Sigma$
+The northern half-sphere of $\Sigma$
 is the subset of points $(x,y,z)\z\in \Sigma$ such that $z>0$; it will be denoted by~$\Sigma^+$.
 
 \begin{wrapfigure}{o}{40mm}
@@ -73,7 +139,7 @@ It follows that $P\leftrightarrow P'$ is a bijection between $\Sigma^+$ and~$\Pi
 
 
 The described bijection $\Sigma^+\leftrightarrow \Pi^+$ is called the \index{central projection}\emph{central projection} of 
-the hemisphere~$\Sigma^+$.
+the half-phere~$\Sigma^+$.
 
 The central projection sends the intersections of the great circles with $\Sigma^+$ to the lines in~$\Pi^+$.
 This follows since the great circles are intersections of $\Sigma$ with planes passing thru the origin,
