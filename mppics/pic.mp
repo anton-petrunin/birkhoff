@@ -4487,8 +4487,10 @@ endfig;
 
 beginfig(251)
 save u, r;
-u:=2.4cm;
-r:=.35;
+u:=2cm;
+r0:=.25;
+r1:=.35;
+r2:=.3;
 
 z.a=(1,0)*u;
 
@@ -4524,39 +4526,34 @@ p3=(-z.y3)..(z.x3-z.y3)/sqrt(2)..z.x3..(z.x3+z.y3)/sqrt(2)..z.y3..(-z.x3+z.y3)/s
 %--cycle
 % withcolor (57, 1.5mm, -.5bp);
 
-fill ((subpath (0,4) of p1) cutbefore (subpath (0,4) of p3) cutafter (subpath (0,4) of p2))
---
-((subpath (0,4) of p2) cutbefore (subpath (0,4) of p1) cutafter (subpath (0,4) of p3))
---
-((subpath (0,4) of p3) cutbefore (subpath (0,4) of p2) cutafter (subpath (0,4) of p1))
---cycle withcolor .5;
-
 z.A=(subpath (0,4) of p1) intersectionpoint (subpath (0,4) of p2);
 z.B=(subpath (0,4) of p2) intersectionpoint (subpath (0,4) of p3);
 z.C=(subpath (0,4) of p3) intersectionpoint (subpath (0,4) of p1);
 
-x.r=sqrt(1-r*r);
+x.r0=sqrt(1-r0*r0);
+x.r1=sqrt(1-r1*r1);
+x.r2=sqrt(1-r2*r2);
 x.AA=sqrt(u*u-abs(z.A)*abs(z.A))/u;
 x.BB=sqrt(u*u-abs(z.B)*abs(z.B))/u;
 x.CC=sqrt(u*u-abs(z.C)*abs(z.C))/u;
 
-p10=(unitvector(z.A)*u zscaled (0,r)..
-unitvector(z.A)*u zscaled (-r*x.AA,0)..
-unitvector(z.A)*u zscaled (0,-r)..
-unitvector(z.A)*u zscaled (r*x.AA,0)..
-cycle) shifted (z.A*x.r);
+p10=(unitvector(z.A)*u zscaled (0,r0)..
+unitvector(z.A)*u zscaled (-r0*x.AA,0)..
+unitvector(z.A)*u zscaled (0,-r0)..
+unitvector(z.A)*u zscaled (r0*x.AA,0)..
+cycle) shifted (z.A*x.r0);
 
-p11=(unitvector(z.B)*u zscaled (0,r)..
-unitvector(z.B)*u zscaled (-r*x.BB,0)..
-unitvector(z.B)*u zscaled (0,-r)..
-unitvector(z.B)*u zscaled (r*x.BB,0)..
-cycle) shifted (z.B*x.r);
+p11=(unitvector(z.B)*u zscaled (0,r1)..
+unitvector(z.B)*u zscaled (-r1*x.BB,0)..
+unitvector(z.B)*u zscaled (0,-r1)..
+unitvector(z.B)*u zscaled (r1*x.BB,0)..
+cycle) shifted (z.B*x.r1);
 
-p12=(unitvector(z.C)*u zscaled (0,r)..
-unitvector(z.C)*u zscaled (-r*x.CC,0)..
-unitvector(z.C)*u zscaled (0,-r)..
-unitvector(z.C)*u zscaled (r*x.CC,0)..
-cycle) shifted (z.C*x.r);
+p12=(unitvector(z.C)*u zscaled (0,r2)..
+unitvector(z.C)*u zscaled (-r2*x.CC,0)..
+unitvector(z.C)*u zscaled (0,-r2)..
+unitvector(z.C)*u zscaled (r2*x.CC,0)..
+cycle) shifted (z.C*x.r2);
 
 %hatchfill
 %((subpath (0,4) of p1) cutbefore (subpath (0,2) of p12) cutafter (subpath (0,2) of p10))
@@ -4567,24 +4564,32 @@ cycle) shifted (z.C*x.r);
 %--cycle
 % withcolor (57, 1.5mm, -.5bp);
 
+draw subpath (4,8) of p1 dashed evenly;
+draw subpath (4,8) of p2 dashed evenly;
+draw subpath (4,8) of p3 dashed evenly;
+
+fill ((subpath (0,4) of p1) cutbefore (subpath (0,4) of p3) cutafter (subpath (0,4) of p2))
+--
+((subpath (0,4) of p2) cutbefore (subpath (0,4) of p1) cutafter (subpath (0,4) of p3))
+--
+((subpath (0,4) of p3) cutbefore (subpath (0,4) of p2) cutafter (subpath (0,4) of p1))
+--cycle withcolor 0;
+
 draw p10 cutbefore (subpath (0,4) of p2) cutafter ((subpath (0,4) of p1) cutbefore (subpath (0,4) of p3) cutafter (subpath (0,4) of p2)) withcolor 1;
 draw p11 cutbefore (subpath (0,4) of p3) cutafter ((subpath (0,4) of p2) cutbefore (subpath (0,4) of p1) cutafter (subpath (0,4) of p3)) withcolor 1;
 draw p12 cutbefore (subpath (0,4) of p1) cutafter ((subpath (0,4) of p3) cutbefore (subpath (0,4) of p2) cutafter (subpath (0,4) of p1)) withcolor 1;
 
 
 draw subpath (0,4) of p1;
-draw subpath (4,8) of p1 dashed evenly;
 draw subpath (0,4) of p2;
-draw subpath (4,8) of p2 dashed evenly;
 draw subpath (0,4) of p3;
-draw subpath (4,8) of p3 dashed evenly;
 
 %dOt z.A, z.B, z.C;
 
 label(btex $\Delta$ etex, origin) withcolor 1;
-label.bot(btex $\alpha$ etex, z.A+(0,-4)) withcolor 1;
-label.urt(btex $\beta$ etex, z.B+(4,-1)) withcolor 1;
-label.ulft(btex $\gamma$ etex, z.C+(-4,-3)) withcolor 1;
+label.bot(btex {\footnotesize $\alpha$} etex, z.A+(0,-3)) withcolor 1;
+label.urt(btex {\footnotesize $\beta$} etex, z.B+(3,-1)) withcolor 1;
+label.ulft(btex {\footnotesize $\gamma$} etex, z.C+(-3,-3)) withcolor 1;
 endfig;
 
 beginfig(252)

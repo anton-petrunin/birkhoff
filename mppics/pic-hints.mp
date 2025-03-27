@@ -536,8 +536,8 @@ beginfig(348)
 save u;
 u:=1cm;
 
-z.A=(1,2)*u;
-z.B=(0,0)*u;
+z.A=(1,1.7)*u;
+z.B=(-.5,0)*u;
 z.C=(1.5,0)*u;
 z.CC=1.4[z.B,z.C];
 
@@ -1028,9 +1028,9 @@ z.D=z.B rotated -144;
 z.E=z.B rotated 144;
 z.X=whatever[z.A,z.C]=whatever[z.B,z.E];
 
-arcs(z.C,z.A,z.B,6);
-arcs(z.A,z.C,z.B,6);
-arcs(z.A,z.B,z.X,6);
+arcs(z.C,z.A,z.B,10);
+arcs(z.A,z.C,z.B,10);
+arcs(z.A,z.B,z.X,10);
 arcs2(z.C,z.X,z.B,6);
 arcs2(z.C,z.B,z.X,6);
 
@@ -1079,7 +1079,7 @@ endfig;
 
 beginfig(370)
 save u;
-u:=1cm;
+u:=.7cm;
 
 z.O=(-1,0)*u;
 z.P=-z.O;
