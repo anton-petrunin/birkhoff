@@ -403,22 +403,24 @@ hence the result.
 
 The proof of Proposition~\ref{prop:C-cont} relies on the following lemma.
 
-\begin{wrapfigure}{o}{27mm}
-\vskip2mm
-\centering
-\includegraphics{mppics/pic-32}
-\end{wrapfigure}
-
 Assume $r>0$ and $\pi>\beta>0$.
 Consider the triangle $ABC$ such that 
 $AB=BC=r$ and $\measuredangle ABC=\beta$.
 The existence of such a triangle follows from Axiom~\ref{def:birkhoff-axioms:2a} and Proposition~\ref{prop:point-on-half-line}.
-
-According to Axiom~\ref{def:birkhoff-axioms:3}, 
+By Axiom~\ref{def:birkhoff-axioms:3},
 the values
 $\beta$ and~$r$ define the triangle $ABC$ up to the congruence.
 In particular, the distance $AC$ depends only on $\beta$ and~$r$.
-Set 
+
+{
+
+\begin{wrapfigure}{o}{22mm}
+\vskip-5mm
+\centering
+\includegraphics{mppics/pic-32}
+\end{wrapfigure}
+
+Let
 $$s(\beta,r)\df AC.$$
 
 \begin{thm}[\abs]{Lemma}\label{lem:f(r,a)}
@@ -426,6 +428,16 @@ Given $r>0$ and $\epsilon>0$, there is $\delta>0$ such that
 \[0<\beta<\delta\quad\Longrightarrow\quad s(r,\beta)<\epsilon.\]
 
 \end{thm}
+
+}
+
+{
+
+\begin{wrapfigure}{l}{36mm}'
+\vskip-8mm
+\centering
+\includegraphics{mppics/pic-34}
+\end{wrapfigure}
 
 \parit{Proof.}
 Fix two points $A$ and $B$ such that $AB\z=r$.
@@ -438,16 +450,11 @@ Points $X$ and $Y$ lie on the same side of $(AB)$;
 therefore, $\angle ABY$ is positive. 
 Set $\delta\z=\measuredangle ABY$.
 
-{
-
-\begin{wrapfigure}{o}{36mm}
-\centering
-\includegraphics{mppics/pic-34}
-\end{wrapfigure}
-
 Suppose $0<\beta<\delta$;
 by Axiom~\ref{def:birkhoff-axioms:2a}, we can choose $C$ so that $\measuredangle ABC\z=\beta$ and $BC\z=r$.
 Furthermore, we can choose a half-line $[BZ)$ such that $\measuredangle ABZ\z=\tfrac12\cdot \beta$.
+
+}
 
 Points $A$ and $Y$ lie on opposite sides of~$(BZ)$ and  $\measuredangle ABZ\z\equiv -\measuredangle CBZ$.
 In particular, $(BZ)$ intersects $[AY]$;
@@ -472,7 +479,7 @@ s(r,\beta)&=AC\le
 \end{align*}
 \qedsf
 
-}
+
 
 \parit{Proof of Proposition~\ref{prop:C-cont}.}
 The existence and uniqueness of $C_\beta$ follow from Axiom~\ref{def:birkhoff-axioms:2a} and Proposition~\ref{prop:point-on-half-line}.

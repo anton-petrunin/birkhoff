@@ -389,7 +389,7 @@ endfig;
 
 beginfig(32)
 save u;
-u:=1cm;
+u:=.8cm;
 
 z.B=origin;
 z.A=(-1,-2.5)*u;
