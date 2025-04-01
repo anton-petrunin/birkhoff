@@ -2106,7 +2106,7 @@ u:=1cm;
 z.O=origin;
 z.A=(0,-1)*u rotated 20;
 z.B=(0,-1)*u rotated -80;
-z.AA=(0,-1)*u rotated 180;
+z.AA=(0,-1)*u rotated 170;
 z.BB=(0,-1)*u rotated 65;
 z.P=whatever[z.B,z.BB]=whatever[z.A,z.AA];
 z.Y=altitude(z.BB,z.P,z.AA);

@@ -949,17 +949,34 @@ Note that point $B$ at the intersection of $AX$ and the perpendicular bisector o
 
 
 \parbf{\ref{ex:inaccuracy}.}
-One needs to show that the lines $(A'B')$ and $(XP)$ are not parallel; otherwise, the first line in the proof does not make sense.
+One needs to show that $(A'B') \nparallel (XP)$; otherwise, the first line in the proof does not make sense.
+By the transversal property, this means that
+\[
+2 \cdot \measuredangle XPA' + 2 \cdot \measuredangle PA'B' \not\equiv 0.
+\eqlbl{eq:2<B'A'P+2<A'PX}
+\]
+This should be done later in the proof, right before we use point $Y$.
 
+Instead of $2 \cdot \measuredangle AXY \equiv 2 \cdot \measuredangle AA'Y$, we should write
+\[
+2 \cdot \measuredangle AXP \equiv 2 \cdot \measuredangle PA'B'.
+\eqlbl{eq:2<AXP=2<AA'B'}
+\]
+Since $\triangle XAP$ has a right angle at $A$, we have
+\[
+\measuredangle AXP + \measuredangle XPA \equiv \pm \tfrac{\pi}{2}.
+\]
+Since $2 \cdot \measuredangle XPA' \equiv 2 \cdot \measuredangle XPA$, \ref{eq:2<AXP=2<AA'B'} implies that
+\[
+2 \cdot \measuredangle XPA' + 2 \cdot \measuredangle PA'B' \equiv \pi,
+\]
+and \ref{eq:2<B'A'P+2<A'PX} follows.
 
-
-In addition, we implicitly used the following identities:
+Additionally, we implicitly use the following identities:
 \begin{align*}
-2\cdot \measuredangle AXP&\equiv2\cdot \measuredangle AXY,
-\\
-2\cdot \measuredangle ABP&\equiv2\cdot \measuredangle ABB',
-\\
-2\cdot \measuredangle AA'B'&\equiv2\cdot \measuredangle AA'Y.
+2 \cdot \measuredangle AXP &\equiv 2 \cdot \measuredangle AXY, \\
+2 \cdot \measuredangle ABP &\equiv 2 \cdot \measuredangle ABB', \\
+2 \cdot \measuredangle AA'B' &\equiv 2 \cdot \measuredangle AA'Y.
 \end{align*}
 
 \parbf{\ref{ex:equilateral-2}.}
@@ -1044,20 +1061,19 @@ $\measuredangle XAY\z=\measuredangle ACY$.
 By Axiom~\ref{def:birkhoff-axioms:2c}, $\measuredangle ACY\to 0$ as $AY\to 0$;
 hence the result.
 
+\begin{wrapfigure}[7]{r}{25mm}
+\vskip-6mm
+\centering
+\includegraphics{mppics/pic-340}
+\end{wrapfigure}
+
 \parbf{\ref{ex:two-arcs}.} 
 Apply \ref{prop:arc(angle=tan)} twice.
 
 (Alternatively, apply \ref{cor:reflection+angle} for the reflection across the perpendicular bisector of $[AC]$.)
 
 \parbf{\ref{ex:3x120}.} Guess a construction from the picture.
-To show that it produces the needed point, apply \ref{thm:inscribed-angle}.
-
-
-\begin{wrapfigure}[8]{r}{25mm}
-\vskip-6mm
-\centering
-\includegraphics{mppics/pic-340}
-\end{wrapfigure}
+To show that it produces the needed point, apply~\ref{thm:inscribed-angle}.
 
 %\subsection*{Chapter~\ref{chap:inversion}}
 \refstepcounter{chapter}
@@ -1525,7 +1541,7 @@ and the vertices $P$, $Q$, and $R$
 lie on a horocycle.
 
 \begin{wrapfigure}{r}{32mm}
-\vskip-3mm
+\vskip-2mm
 \centering
 \includegraphics{mppics/pic-352}
 \end{wrapfigure}
@@ -2288,8 +2304,8 @@ Apply \ref{thm:set-square-constructible-numbers} and arrive at a contradiction.
 Suppose that every initial point has coordinates $(a,b\cdot\sqrt{3})$ for rational values $a$ and $b$.
 Show and use that any point that can be constructed with the 30°-set-square has coordinates of the same type.
 
-\begin{wrapfigure}[7]{r}{21mm}
-\vskip-6mm
+\begin{wrapfigure}[8]{r}{21mm}
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-368}
 \end{wrapfigure}
@@ -2298,7 +2314,6 @@ Show and use that any point that can be constructed with the 30°-set-square has
 Observe that three perpendiculars in the picture meet at one point if and only if the triangle is isosceles.
 
 Use this observation a couple of times to verify that the given triangle is equilateral.
-
 
 \parit{(\ref{ex:verify:bisector}).}
 Suppose that a line $\ell$ passes thru the vertex of the given angle.
