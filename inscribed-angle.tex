@@ -176,7 +176,6 @@ Show that $XX'=YY'$.
 
 \begin{thm}{Exercise}
 Watch ``Why is pi here? And why is it squared? A geometric answer to the Basel problem'' by Grant Sanderson. (It is available on \href{https://youtu.be/d-o3eB9sfls}{YouTube}.) 
-
 Prepare one question.
 \end{thm}
 
@@ -192,10 +191,25 @@ Suppose $\Gamma$ is a circle with the diameter~$[AB]$.
 A triangle $ABC$ has a right angle at $C$ if and only if $C\in\Gamma$.
 \end{thm}
 
-\begin{thm}{Exercise}\label{ex:two-right}
-Given four points $A$, $B$, $A'$, and $B'$,
-construct a point $Z$ such that both angles $AZB$ and $A'ZB'$ are right
-(assuming that such a point exists.)
+The following two exercises can be used in construction problems.
+
+\begin{thm}{Exercise}\label{ex:tangent-construction-inscribed}
+Let $\Gamma$ be a circle with center $O$, and let $\Delta$ be a circle with a diameter $[OP]$.
+Assume that $\Delta$ and $\Gamma$ intersect at a point $X$.
+Prove that the line $(PX)$ is tangent to $\Gamma$.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:perp-construction-inscribed}
+Let $\Gamma$ be a circle with diameter $[PQ]$.
+Assume that a line $\ell$ passes thru $Q$ and intersects $\Gamma$ at another point $X$.
+Prove that $\ell \perp (PX)$.
+\end{thm}
+
+
+
+\begin{thm}{Exercise}\label{ex:altitude+circles}
+Assume two circles intersect at two distinct points $A$ and $B$, and have diameters $[AX]$ and $[AY]$.
+Prove that the points $X$, $Y$, and $B$ lie on one line.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:perpendicular-ruler}
@@ -236,7 +250,7 @@ Let $O$ and $\Gamma$ denote the circumcenter and circumcircle of $\triangle ABC$
 {
 
 \begin{wrapfigure}[10]{o}{25mm}
-\vskip-0mm
+\vskip-1mm
 \centering
 \includegraphics{mppics/pic-134}
 \end{wrapfigure}
@@ -269,7 +283,7 @@ What is the center of this circle?
 \end{thm}
 
 \begin{wrapfigure}{r}{33mm}
-\vskip-6mm
+\vskip-7mm
 \centering
 \includegraphics{mppics/pic-136}
 \end{wrapfigure}
@@ -358,6 +372,7 @@ Let $X$ be a point distinct from $O$.
 Let $L$, $M$, and $N$ denote the footpoints of perpendiculars from $X$ on $\ell$, $m$, and $n$ respectively.
 Show that $\triangle LMN$ is equilateral.
 \end{thm}
+
 }
 
 \begin{thm}{Exercise}\label{ex:median-angle}
@@ -386,27 +401,25 @@ Points $A$ and $C$ are called
 \index{endpoint of arc}\emph{endpoints} of the circular arc $ABC$. 
 There are precisely two circular arcs of $\Gamma$ with the given endpoints; they are \index{opposite arc}\emph{opposite} to each other.
 
+\begin{wrapfigure}[7]{r}{33mm}
+\vskip-6mm
+\centering
+\includegraphics{mppics/pic-142}
+\end{wrapfigure}
+
 Suppose $X$ is another point on $\Gamma$.
-By Corollary~\ref{cor:inscribed-quadrangle} we have
+By \ref{cor:inscribed-quadrangle} we have
 that $2\cdot\measuredangle AXC\equiv 2\cdot\measuredangle ABC$;
 that is,
 \[\measuredangle AXC\equiv\measuredangle ABC
 \quad\text{or}\quad
 \measuredangle AXC\equiv\measuredangle ABC+\pi.\]
 
-\begin{wrapfigure}{o}{33mm}
-\vskip-2mm
-\centering
-\includegraphics{mppics/pic-142}
-\end{wrapfigure}
-
 Recall that $X$ and $B$ lie on the same side of $(AC)$ if and only if $\angle AXC$ and $\angle ABC$ have the same sign (see Exercise~\ref{ex:signs-PXQ-PYQ}).
 It follows that 
 \begin{itemize}
-\item $X$ lies on the arc $ABC$ if and only if 
-\[\measuredangle AXC\equiv\measuredangle ABC;\]
-\item $X$ lies on the arc opposite to $ABC$ if 
-\[\measuredangle AXC\equiv\measuredangle ABC+\pi.\]
+\item $X$ lies on the arc $ABC$ if and only if $\measuredangle AXC\equiv\measuredangle ABC$;
+\item $X$ lies on the arc opposite to $ABC$ if $\measuredangle AXC\equiv\measuredangle ABC+\pi$.
 \end{itemize}
 
 A circular arc $ABC$ is defined if $\triangle ABC$ is not degenerate.
@@ -461,18 +474,16 @@ Then
 \begin{thm}{Exercise}\label{ex:3x120}
 Given an acute triangle $ABC$,
 perform a ruler-and-compass of a point $Z$ such that
-\[\measuredangle AZB
+$\measuredangle AZB
 = \measuredangle BZC
 = \measuredangle CZA
-=\pm\tfrac23\cdot\pi.\]
-
+=\pm\tfrac23\cdot\pi$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:a+b=c}
-Suppose that a point $P$ lies on the circumcircle of an equilateral triangle $ABC$
+A point $P$ lies on the circumcircle of an equilateral triangle $ABC$,
 and $PA\le PB\le PC$.
-Show that 
-\[PA+PB=PC.\]
+Show that $PA+PB=PC$.
 \end{thm}
 
 A quadrangle $ABCD$ is 
@@ -511,8 +522,7 @@ then the half-line $[AX)$ is considered to be tangent to the arc at $A$.
 
 \begin{thm}{Proposition}\label{prop:arc(angle=tan)}
 A half-line $[AX)$ is tangent to an arc $ABC$ if and only if 
-$$\measuredangle ABC+\measuredangle CAX\equiv \pi.$$
-
+$\measuredangle ABC+\measuredangle CAX\equiv \pi$.
 \end{thm}
 
 \parit{Proof.}
@@ -522,7 +532,7 @@ Assume it is nondegenerate.
 
 Note that the tangent half-line to the arc $ABC$ at $A$ is uniquely defined.
 Furthermore, there is a unique half-line $[AX)$ such that the equation in the proposition holds.
-Therefore it is sufficient to prove the ``only-if'' part.
+Therefore, it is sufficient to prove the ``only-if'' part.
 
 \begin{wrapfigure}{o}{24mm}
 \vskip-0mm
@@ -553,8 +563,8 @@ have the same sign.
 In particular,
 $\measuredangle ABC\z+\measuredangle CAX\not\equiv 0$;
 that is, we are left with the case 
-$$\measuredangle ABC+\measuredangle CAX\equiv \pi.$$
-\qedsf
+$\measuredangle ABC+\measuredangle CAX\equiv \pi$.
+\qeds
 
 \begin{thm}{Exercise}\label{ex:tangent-arc}
 Show that there is a unique arc 
