@@ -31,8 +31,13 @@ $$\measuredangle QXY
 \end{wrapfigure}
 
 \parit{Proof.}
+By Lemma~\ref{lem:tangent}, $(OX)\z\perp(XQ)$;
+therefore,
+$$\measuredangle QXY+\measuredangle YXO \equiv\pm\tfrac\pi2.$$
+
 Note that $\triangle XOY$ is isosceles.
-Therefore, $\measuredangle YXO=\measuredangle OYX$.
+Therefore,
+$$\measuredangle YXO=\measuredangle OYX.$$
 
 Applying Theorem~\ref{thm:3sum}
 to $\triangle XOY$,
@@ -43,11 +48,7 @@ we get
 &\equiv 2\cdot \measuredangle YXO+\measuredangle XOY.
 \end{align*}
 
-By Lemma~\ref{lem:tangent}, $(OX)\z\perp(XQ)$.
-Therefore, 
-$$\measuredangle QXY+\measuredangle YXO \equiv\pm\tfrac\pi2.$$
-
-Therefore, 
+It follows that
 $$2\cdot\measuredangle QXY
 \equiv \pi -2\cdot \measuredangle YXO
 \equiv\measuredangle X O Y.
@@ -213,10 +214,9 @@ Prove that the points $X$, $Y$, and $B$ lie on one line.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:perpendicular-ruler}
-Assume a line $\ell$, 
-a circle with its center on $\ell$, 
-and a point $P\notin\ell$ are given.
-Construct the perpendicular to $\ell$ from $P$ using ruler and compass.
+Given a line $\ell$, a circle $\Gamma$ with its center on $\ell$,
+and a point $P$ that lies on neither $\ell$ nor $\Gamma$,
+construct the perpendicular from $P$ to $\ell$ using only a ruler.
 \end{thm}
 
 \begin{wrapfigure}{r}{32mm}
@@ -283,7 +283,7 @@ What is the center of this circle?
 \end{thm}
 
 \begin{wrapfigure}{r}{33mm}
-\vskip-7mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-136}
 \end{wrapfigure}
@@ -361,7 +361,7 @@ is called the \textit{method of additional circle}
 {
 
 \begin{wrapfigure}{r}{28mm}
-\vskip-8mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-140}
 \end{wrapfigure}
@@ -369,7 +369,7 @@ is called the \textit{method of additional circle}
 \begin{thm}{Exercise}\label{ex:equilateral-2}
 Assume three lines $\ell$, $m$, and $n$ intersect at point $O$ and form six equal angles at~$O$. 
 Let $X$ be a point distinct from $O$.
-Let $L$, $M$, and $N$ denote the footpoints of perpendiculars from $X$ on $\ell$, $m$, and $n$ respectively.
+Let $L$, $M$, and $N$ denote the footpoints of perpendiculars from $X$ on $\ell$, $m$, and $n$, respectively.
 Show that $\triangle LMN$ is equilateral.
 \end{thm}
 
@@ -441,8 +441,8 @@ If $B'$ lies on the extension of $[AC]$,
 then the arc $AB'C$ is defined as a union of disjoint half-lines $[AX)$ and $[CY)$ in $(AC)$.
 In this case, the arcs $ABC$ and $AB'C$ are called opposite to each other.
 
-\begin{wrapfigure}{r}{43mm}
-\vskip-2mm
+\begin{wrapfigure}[2]{r}{43mm}
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-148}
 \end{wrapfigure}
@@ -464,10 +464,8 @@ The following statement summarizes the discussion above.
 Let $ABC$ be a circline arc and $X$ be a point distinct from $A$ and $C$.
 Then 
 \begin{enumerate}[(a)]
-\item $X$ lies on the arc $ABC$ if and only if 
- \[\measuredangle AXC=\measuredangle ABC;\]
-\item $X$ lies on the arc opposite to $ABC$ if and only if 
- \[\measuredangle AXC\equiv\measuredangle ABC+\pi;\]
+\item $\measuredangle AXC=\measuredangle ABC$ if and only if $X$ lies on the arc $ABC$;
+\item $\measuredangle AXC\equiv\measuredangle ABC+\pi$ if and only if $X$ lies on the arc opposite to $ABC$.
 \end{enumerate}
 \end{thm}
 
@@ -504,8 +502,10 @@ Moreover, the second identity holds if and only if the points $A,B,C,D$ appear o
 
 \section{Tangent half-lines}
 
+{
+
 \begin{wrapfigure}[6]{r}{30mm}
-\vskip-10mm
+\vskip-14mm
 \centering
 \includegraphics{mppics/pic-150}
 \end{wrapfigure}
@@ -515,6 +515,8 @@ A half-line $[AX)$ is called
 \index{tangent!half-line}\emph{tangent} 
 to the arc $ABC$ at $A$
 if the line $(AX)$ is tangent to $\Gamma$, and the points $X$ and $B$ lie on the same side of the line $(AC)$.
+
+}
 
 If the arc is formed by the line segment $[AC]$, then the half-line $[AC)$ is considered to be tangent at $A$.
 If the arc is formed by a union of two half-lines $[AX)$ and $[BY)$ in $(AC)$,

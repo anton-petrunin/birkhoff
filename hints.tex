@@ -1225,7 +1225,10 @@ If two of the circles intersect, try to apply \ref{cor:invese-comp}.
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
 
-\parbf{\ref{ex:abs-bisect=median}}.
+\parbf{\ref{ex:tangent-angle-neutral}.}
+One cannot apply \ref{thm:3sum} (its proof relies on \ref{thm:parallel-2}, which in turn uses \ref{thm:parallel}, and that depends on the SAS similarity condition, which is essentially Axiom~\ref{def:birkhoff-axioms:4}).
+
+\parbf{\ref{ex:abs-bisect=median}.}
 Suppose $D$ is the midpoint of~$[BC]$.
 Assume that $(AD)$ is the angle bisector at~$A$.
 
@@ -1314,15 +1317,13 @@ Apply \ref{ex:defect} to $\triangle ABC$ and $\triangle AXC$.
 
 
 \parbf{\ref{ex:neutral-rectangle}.}
-Show that $B$ and $D$ lie on opposite sides of $(AC)$.
-Conclude that 
-\[\defect(\triangle ABC)+\defect(\triangle CDA)=0.\]
-Apply \ref{thm:3sum-a} to show that 
+Observe that the total sum of absolute values of angle measures in $\triangle ABC$ and $\triangle CDA$ is at least $2\cdot\pi$.
+Apply \ref{thm:3sum-a} to show that
 \[\defect(\triangle ABC)=\defect(\triangle CDA)=0.\]
 Use it to show that $\measuredangle CAB=\measuredangle ACD$ and $\measuredangle ACB=\measuredangle CAD$.
 By ASA, $\triangle ABC\cong\triangle CDA$, and, in particular, $AB=CD$.
 
-(Alternatively, you can apply \ref{ex:neutral-quadrangle}.)
+(Note that it also follows from \ref{ex:neutral-quadrangle}.)
 
 \parbf{\ref{ex:neutral-rectangle+}.}
 Choose a triangle $\triangle_0$.
@@ -1400,7 +1401,8 @@ Apply~\ref{lem:h-circle=circle}.
 \includegraphics{mppics/pic-350}
 \end{wrapfigure}
 
-\parbf{\ref{ex:3-h-lines}.} Look at the picture and think.
+\parbf{\ref{ex:3-h-lines}.}
+Choose the required h-lines from the picture.
 
 \parbf{\ref{ex:O-h-dist}.} Use \ref{lem:O-h-dist}.
 
@@ -1564,7 +1566,8 @@ Apply the hyperbolic Pythagorean theorem and the definition of a hyperbolic cosi
 The following observations should help:
 \begin{itemize}
  \item The function $x\mapsto e^x$ is an increasing positive function.
- \item By the triangle inequality,  we have $-c\z\le a-b$ and $-c\z\le b-a$.
+ \item By the triangle inequality,  we have
+ \[-c\le a-b\quad \text{and}\quad  -c\le b-a.\]
 \end{itemize}
 
 %\subsection*{Chapter~\ref{chap:trans}}
@@ -1596,7 +1599,7 @@ The latter contradicts that the map is a bijection.
 {
 
 \begin{wrapfigure}{r}{22mm}
-\vskip-2mm
+\vskip-3mm
 \centering
 \includegraphics{mppics/pic-353}
 \end{wrapfigure}
@@ -1757,7 +1760,7 @@ The case $(AB)\parallel(A'B')$ is similar.
 \parbf{\ref{ex:pappus-converse}.} Observe that the statement is equivalent to Pappus' theorem.
 
 \parbf{\ref{ex:desargues-construction};} \textit{(\ref{ex:desargues-construction:desargues}).}
-Assume that the parallelogram is formed by the two pairs of parallel lines $(AB)\parallel (A'B')$ and $(BC)\parallel(B'C')$ and $\ell=(AC)$ in the notation of Desargues' theorem (\ref{thm:desargues}).
+Assume that the parallelogram is formed by the two pairs of parallel lines $(AB)\z\parallel (A'B')$ and $(BC)\parallel(B'C')$ and $\ell=(AC)$ in the notation of Desargues' theorem (\ref{thm:desargues}).
 
 \parit{(\ref{ex:desargues-construction:pappus}).} Suppose that the parallelogram is formed by the two pairs of parallel lines $(AB')\z\parallel (A'B)$ and $(BC')\parallel(B'C)$ and $\ell=(AC')$ in the notation of Pappus' theorem (\ref{thm:pappus}).
 

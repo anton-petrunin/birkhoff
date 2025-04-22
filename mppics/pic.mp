@@ -1824,6 +1824,8 @@ draw circle(z.O,z.X);
 draw z.X--z.Y--z.O--cycle;
 draw ddline(z.X,z.Q)(.8,.4);
 
+rimmark1(z.O--z.X, z.O--z.Y);
+
 dOt z.O,z.Q,z.X,z.Y;
 
 label.ulft (btex $O$ etex, z.O);

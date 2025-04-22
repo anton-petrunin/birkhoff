@@ -628,30 +628,29 @@ path absolute;
 absolute=circle(z.O,x.RR);
 fill absolute withcolor .5;
 
-z.A=(.9,.9)*u;
-z.AAA=(.8,1)*u;
+z.A=(1.5,1)*u;
+z.AAA=(1.5,-1)*u;
 z.AA=inversion(z.O,x.RR)(z.A);
 
-z.B=(-.9,.8)*u;
-z.BBB=(-.8,1)*u;
+z.B=(1,1.5)*u;
+z.BBB=(-1,1.5)*u;
 z.BB=inversion(z.O,x.RR)(z.B);
 
-z.C=(0,-.2)*u;
-z.CCC=(-.5,-.2)*u;
+z.C=(-1.5,1)*u;
+z.CCC=(-1.5,-1)*u;
 z.CC=inversion(z.O,x.RR)(z.C);
 
-%z.D=(1.3,-.2)*u;
-%z.DDD=(1.2,-.3)*u;
-%z.DD=inversion(z.O,x.RR)(z.D);
-
-z.D=(-1.1,.9)*u;
-z.DDD=(-.7,1.1)*u;
+z.D=(1,-1.5)*u;
+z.DDD=(-1,-1.5)*u;
 z.DD=inversion(z.O,x.RR)(z.D);
 
 draw circumcircle(z.A,z.AA,z.AAA);
 draw circumcircle(z.B,z.BB,z.BBB);
 draw circumcircle(z.C,z.CC,z.CCC);
 draw circumcircle(z.D,z.DD,z.DDD);
+draw (-2,0)*u--(2,0)*u;
+draw (0,-2)*u--(0,2)*u;
+
 
 clip currentpicture to absolute;
 
