@@ -245,3 +245,12 @@ mppics/pic-337.mps
 mppics/pic-349.mps
 mppics/pic-353.mps
 mppics/pic-69.mps
+mppics/pic-915.mps
+mppics/pic-838.mps
+mppics/pic-445.mps
+mppics/pic-446.mps
+mppics/pic-447.mps
+mppics/pic-448.mps
+mppics/pic-449.mps
+mppics/pic-251.mps
+mppics/pic-1114.mps

@@ -4,6 +4,7 @@
 \usepackage{bm}
 \usepackage{color}
 \usepackage{pifont}
+
 \usepackage[pdfauthor={Anton Petrunin},
 colorlinks=true,
 citecolor=black,
@@ -12,8 +13,10 @@ anchorcolor=black,
 filecolor=black,
 menucolor=black,
 urlcolor=black,
-unicode
+unicode,
+linktocpage
 ]{hyperref}
+
 \usepackage{caption}
 \usepackage{paracol}
 
@@ -21,6 +24,7 @@ unicode
 \usepackage[T1,T2A]{fontenc}
 \usepackage[russian,german,english]{babel}
 \DeclareUnicodeCharacter{2010}{-}% support older LaTeX versions
+
 
 
 \usepackage[
@@ -45,6 +49,7 @@ isbn=false]{biblatex}
 \DeclareFieldFormat{multipostnote}{#1}
 \DeclareFieldFormat{pages}{#1}
 %removes p. in the cites
+
 
 
 %\usepackage{multibib}
@@ -83,7 +88,7 @@ isbn=false]{biblatex}
   [; ][.]
 
 \usepackage{accsupp}
-\usepackage{soulutf8}
+\usepackage{soul}
 \sodef\an{}{.1em}{.5em plus.1em}{.5em plus.1em minus.1em}
 
 \newcommand\ann[1]{%

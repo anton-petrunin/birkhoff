@@ -678,12 +678,12 @@ z.C=(0,-.2)*u;
 z.CCC=(-.5,-.2)*u;
 z.CC=inversion(z.O,x.RR)(z.C);
 
-draw circumcircle(z.A,z.AA,z.AAA) pensemibold withcolor 1;
-draw circumcircle(z.B,z.BB,z.BBB) pensemibold withcolor 1;
-draw circumcircle(z.C,z.CC,z.CCC) pensemibold withcolor 1;
+draw circumcircle(z.A,z.AA,z.AAA) penbold withcolor 1;
+draw circumcircle(z.B,z.BB,z.BBB) penbold withcolor 1;
+draw circumcircle(z.C,z.CC,z.CCC) penbold withcolor 1;
 
 clip currentpicture to absolute;
-draw absolute dashed evenly withcolor 1;
+draw absolute penbold dashed evenly withcolor 1;
 
 endfig;
 
