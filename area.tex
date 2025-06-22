@@ -36,8 +36,8 @@ and on its sides $[AB]$, $[BC]$, $[CA]$
 will be called \index{triangle!solid triangle}\index{solid!triangle}\emph{solid triangle} $ABC$ and denoted by \index{25@$\solidtriangle$}$\solidtriangle ABC$.
 
 \begin{thm}{Exercise}\label{ex:triangle-convex}
-Show that any solid triangle is \index{convex set}\emph{convex};
-that is, for any pair of points $X,Y\z\in\solidtriangle ABC$,
+Show that every solid triangle is \index{convex set}\emph{convex};
+that is, for every pair of points $X,Y\z\in\solidtriangle ABC$,
 the line segment $[XY]$ lies in  $\solidtriangle ABC$.
 \end{thm}
 
@@ -55,7 +55,7 @@ Recall that $\triangle ABC$ is an ordered triple of distinct points
 (see Section~\ref{sec:cong-triangles}),
 while $\solidtriangle ABC$ is an infinite set of points.
 
-In particular, $\solidtriangle ABC=\solidtriangle BAC$ for any triangle $ABC$.
+In particular, $\solidtriangle ABC=\solidtriangle BAC$ for every triangle $ABC$.
 Indeed, any point that belongs to the set $\solidtriangle ABC$ 
 also belongs to the set $\solidtriangle BAC$
 and the other way around.
@@ -142,7 +142,7 @@ Show that a circle is not a polygonal set.
 \end{thm}
 
 \begin{thm}{Claim}\label{clm:poly-ring}
-For any two polygonal sets $\mathcal{P}$ and $\mathcal{Q}$,
+For any every polygonal sets $\mathcal{P}$ and $\mathcal{Q}$,
 the union $\mathcal{P}\cup\mathcal{Q}$, 
 as well as the intersection $\mathcal{P}\cap\mathcal{Q}$, 
 are also polygonal sets.
@@ -181,7 +181,7 @@ Therefore, $\mathcal{P}\cup\mathcal{Q}$ is polygonal.
 
 Note that $\mathcal{P}\cap \mathcal{Q}$ is the union of $\mathcal{P}_i\cap \mathcal{Q}_j$ for all $i$ an~$j$.
 Therefore, to show that $\mathcal{P}\cap \mathcal{Q}$ is polygonal,
-it is sufficient to show that $\mathcal{P}_i\cap \mathcal{Q}_j$ is polygonal for any $i$ and $j$.
+it is sufficient to show that $\mathcal{P}_i\cap \mathcal{Q}_j$ is polygonal for all $i$ and $j$.
 
 The picture suggests a proof of the latter statement for solid triangles $\mathcal{P}_i$ and $\mathcal{Q}_j$.
 The other cases are simpler; a formal proof can be built on Exercise~\ref{ex:triangle-convex}.
@@ -191,7 +191,7 @@ The other cases are simpler; a formal proof can be built on Exercise~\ref{ex:tri
 \label{sec:def(area)}
 
 \index{area}\emph{Area} is defined as a function $\mathcal{P}\mapsto \area\mathcal{P}$
-that returns a nonnegative real number $\area\mathcal{P}$ for any polygonal set $\mathcal{P}$ and satisfies the following conditions:\label{page:area-def}
+that returns a nonnegative real number $\area\mathcal{P}$ for every polygonal set $\mathcal{P}$ and satisfies the following conditions:\label{page:area-def}
 \textit{
 \begin{enumerate}[(a)]
 \item
@@ -249,7 +249,7 @@ For any two points $A$ and $B$, we have
 Fix a line segment~$[AB]$.
 Consider a sold square $\solidsquare ABCD$.
 
-For any positive integer $n$,
+For every positive integer $n$,
 there are $n$ disjoint segments $[A_1B_1],\z\dots,[A_nB_n]$ 
 in $\solidsquare ABCD$,
 such that each $[A_iB_i]$ is congruent to $[AB]$ in the sense of the Definition~\ref{def:cong-sets}.
@@ -271,12 +271,12 @@ n\cdot \area[AB]
 \end{align*}
 In other words,
 \[\area[AB]\le \tfrac1n\cdot\area(\solidsquare ABCD)\] 
-for any positive integer~$n$.
+for every positive integer~$n$.
 It follows that $\area[AB]\le 0$. 
 Since area cannot be negative, we get
 \[\area[AB]= 0.\]
 
-For any one-point set $\{A\}$ 
+For every one-point set $\{A\}$
 we have that $\{A\}\subset [AB]$.
 Therefore, 
 \[0\le \area\{A\}\le \area[AB]=0.\]
@@ -308,7 +308,7 @@ hence the result.
 We say that a polygonal set $\mathcal{P}$ is \index{subdivision of polygonal set}\emph{subdivided} 
 into two polygonal sets $\mathcal{Q}_1,\dots,\mathcal{Q}_n$ 
 if $\mathcal{P}=\mathcal{Q}_1\cup\dots\cup \mathcal{Q}_n$ 
-and the intersection $\mathcal{Q}_i\cap\mathcal{Q}_j$ is degenerate for any pair $i$ and $j$.
+and the intersection $\mathcal{Q}_i\cap\mathcal{Q}_j$ if $i\ne j$.
 (Recall that according to Claim~\ref{clm:poly-ring},
 the intersections $\mathcal{Q}_i\cap\mathcal{Q}_j$ are polygonal.)
 
@@ -628,8 +628,8 @@ Show that
 
 
 \begin{thm}{Exercise}\label{ex:subdivision}
-Show that any polygonal set admits a subdivision into a finite collection of solid triangles and a degenerate set.
-Conclude that for any polygonal set, its area is uniquely defined.
+Show that every polygonal set admits a subdivision into a finite collection of solid triangles and a degenerate set.
+Conclude that for every polygonal set, its area is uniquely defined.
 \end{thm}
 
 \section{The area method}
@@ -859,12 +859,12 @@ Recall that the \index{defect}\emph{defect of triangle} $\triangle ABC$ is defin
 $$\defect(\triangle ABC)
 \df 
 \pi-|\measuredangle ABC|-|\measuredangle BCA|-|\measuredangle CAB|.$$
-It turns out that for any neutral plane or sphere,
+It turns out that for every neutral plane or sphere,
 there is a real number $k$
 such that 
 $$k\cdot\area(\solidtriangle ABC)+\defect(\triangle ABC)=0
 \eqlbl{eq:curv-defect}$$
-for any $\triangle ABC$.
+for every $\triangle ABC$.
 
 This number $k$ is called \index{curvature}\emph{curvature};
 $k=0$ for the Euclidean plane,
@@ -872,7 +872,7 @@ $k=-1$ for the h-plane,
 $k=1$ for the unit sphere (this case is proved in Lemma \ref{lem:area-spher-triangle}),
 and $k=\tfrac1{r^2}$ for the sphere of radius~$r$.
 
-Since the angles of an ideal triangle vanish, any ideal triangle in the h-plane has area~$\pi$.
+Since the angles of an ideal triangle vanish, every ideal triangle in the h-plane has area~$\pi$.
 Similarly, in the unit sphere, the area of an equilateral triangle with right angles has an area of $\tfrac\pi2$;
 since the whole sphere can be subdivided into eight such triangles, we get that the area of the unit sphere is $4\cdot\pi$.
 
@@ -896,7 +896,7 @@ such that
 \epsilon.\]
 
 If $\mathcal{S}$ is quadrable,
-its area  can be defined 
+its area can be defined
 as the necessarily unique real number $s=\area\mathcal{S}$
 such that the inequality
 \[\area\mathcal{Q}\le s\le \area\mathcal{P}

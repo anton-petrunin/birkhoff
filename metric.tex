@@ -62,7 +62,7 @@ we can say \textit{``Euclidean plane is a metric space''}.
 Let $\mathcal X$ be a nonempty set and 
 let $d$ be a function
 that assigns a real number $d(A,B)$
-to any pair $A,B\in\mathcal X$.
+to each pair $A,B\in\mathcal X$.
 Then $d$ is called a \index{metric}\emph{metric} on 
 $\mathcal X$ if, for any
 $A,B,C\in \mathcal X$, the following conditions are satisfied:
@@ -169,7 +169,7 @@ is
 called \index{distance-preserving map}\emph{distance-preserving} if 
 $$d_{\mathcal Y}(f(A), f(B))
  = d_{\mathcal X}(A,B)$$
-for any $A,B\in {\mathcal X}$.
+for all $A,B\in {\mathcal X}$.
 
 A bijective distance-preserving map is called an \index{isometry}\emph{isometry}. 
 
@@ -178,9 +178,9 @@ Two metric spaces are called \index{isometric spaces}\emph{isometric} if there e
 An isometry from a metric space to itself is also referred a \index{motion}\emph{motion}.
 
 \begin{thm}{Exercise}\label{ex:dist-preserv=>injective}
-Show that any distance-preserving map is \index{injective map}\emph{injective};
+Show that each distance-preserving map is \index{injective map}\emph{injective};
 that is, if $f\:\mathcal X\to\mathcal Y$ is a distance-preserving map, 
-then $f(A)\ne f(B)$ for any pair of distinct points $A, B\in \mathcal X$.
+then $f(A)\ne f(B)$ for every pair of distinct points $A, B\in \mathcal X$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:motion-of-R}
@@ -204,7 +204,7 @@ If $\mathcal X$ is a metric space and $\mathcal Y$ is a subset of $\mathcal X$,
 then a metric on $\mathcal Y$ can be obtained by restricting the metric from~$\mathcal X$. 
 In other words, 
 the distance between two points in $\mathcal Y$ is defined to be the distance between these points in $\mathcal X$.
-This way any subset of a metric space can be also considered as a metric space. 
+In this way any subset of a metric space can be also considered as a metric space.
 
 \begin{thm}{Definition}\label{def:line}
 A subset $\ell$ of a metric space is called a \index{line}\emph{line} if it is isometric to the real line.
@@ -231,7 +231,7 @@ Why?
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:line-motion}
-Show that any motion maps a line to a line. 
+Show that each motion maps a line to a line.
 \end{thm}
 
 
@@ -257,7 +257,7 @@ Show that
 $QX=|PX-PQ|$;
 \item if $X\in [PQ]$, then 
 $PX+XQ=PQ$.
-%\item $[OP)\cup[OQ)$ is a line if and only if $XO+OY=XY$ for any $X\in [OP)$ and $Y\in[OQ)$.
+%\item $[OP)\cup[OQ)$ is a line if and only if $XO+OY=XY$ for all $X\in [OP)$ and $Y\in[OQ)$.
 \end{enumerate}
 
 \end{thm}
@@ -356,7 +356,7 @@ $$\alpha+\alpha'\equiv\beta+\beta',
 \text{and}
 \quad
 n\cdot\alpha\equiv n\cdot\beta$$
-for any integer~$n$.
+for every integer~$n$.
 However, ``$\equiv$'' does not respect multiplication with non-integer numbers; for example, 
 $$\pi
 \equiv 
@@ -386,7 +386,7 @@ Namely, the following property of angle measure will become a part of the axioms
 
 \textit{The function}
 $$\measuredangle\:(A,O,B)\mapsto\measuredangle A O B$$
-\textit{is continuous at any triple of points $(A,O,B)$
+\textit{is continuous at every triple of points $(A,O,B)$
 such that $O\ne A$ and $O\ne B$ and $\measuredangle A O B\ne\pi$.}
 
 To clarify this property, we need to extend the concept of {}\emph{continuity} to functions between metric spaces.
@@ -429,8 +429,8 @@ Let $\mathcal{X}$ be a metric space.
 Show that the function 
 $$f\:B\mapsto
 d_{\mathcal{X}}(A,B)$$ 
-is continuous at any point~$B$.
-\item Show that the function $g\:(A,B)\mapsto d_{\mathcal{X}}(A,B)$ is continuous at any pair $A,B\in \mathcal{X}$.
+is continuous at every point~$B$.
+\item Show that the function $g\:(A,B)\mapsto d_{\mathcal{X}}(A,B)$ is continuous at every pair $A,B\in \mathcal{X}$.
 \end{enumerate}
 
 \end{thm}
@@ -438,14 +438,14 @@ is continuous at any point~$B$.
 \begin{thm}{Exercise}\label{ex:comp+cont}
 Let $\mathcal{X}$, $\mathcal{Y}$, and $\mathcal{Z}$ be metric spaces.
 Assume that the functions $f\:\mathcal{X}\to\mathcal{Y}$
-and $g\:\mathcal{Y}\to\mathcal{Z}$ are continuous at any point,
+and $g\:\mathcal{Y}\to\mathcal{Z}$ are continuous at every point,
 and $h=g\circ f$ is their composition;
-that is, $h(A)=g(f(A))$ for any $A\in \mathcal{X}$.
-Show that $h\:\mathcal{X}\to\mathcal{Z}$ is continuous at any point.
+that is, $h(A)=g(f(A))$ for each $A\in \mathcal{X}$.
+Show that $h\:\mathcal{X}\to\mathcal{Z}$ is continuous at every point.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:isom-cont}
-Show that any distance-preserving map is continuous.
+Show that every distance-preserving map is continuous.
 \end{thm}
 
 \section{Congruent triangles}
@@ -480,7 +480,7 @@ as well as the composition $f\circ g:\mathcal X\to\mathcal X$,
 are also motions.
 
 It follows that ``$\cong$'' is an \index{equivalence relation}\emph{equivalence relation};
-that is, any triangle is congruent to itself, 
+that is, every triangle is congruent to itself,
 and the following two conditions hold:
 \begin{itemize} 
 \item If $\triangle A' B' C'\z\cong\triangle A B C$, then $\triangle A B C\z\cong\triangle A' B' C'$.
