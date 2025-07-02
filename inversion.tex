@@ -205,29 +205,26 @@ In the inversive plane, the inverse of a circline is a circline.
 Exercise~\ref{ex:inversions-inversive} gives a partial converse to the theorem.
 
 \parit{Proof.}
-Suppose $O$ denotes the center of the inversion and $r$ its radius.
+Let $O$ be the center of the inversion, and let $r$ be its radius.
 
-Let $\Gamma$ be a circline.
-Choose three distinct points $A$, $B$, and $C$ on~$\Gamma$.
-(If~$\triangle ABC$ is nondegenerate, 
-then $\Gamma$ is the circumcircle of $\triangle ABC$;
-if $\triangle ABC$ is degenerate, 
-then $\Gamma$ is the line passing thru $A$, $B$, and~$C$.)
+Choose a circline $\Gamma$ and three distinct points $A$, $B$, and $C$ on it.
+We may assume that $A \ne O$, $B \ne O$, and $C \ne O$.
+(If~$\triangle ABC$ is nondegenerate, then $\Gamma$ is the circumcircle of $\triangle ABC$; if $\triangle ABC$ is degenerate, then $\Gamma$ is the line passing thru $A$, $B$, and~$C$.)
 
-Let $A'$, $B'$, and $C'$ denote the inverses of $A$, $B$, and $C$ respectively.
-Let $\Gamma'$ be the circline that passes thru $A'$, $B'$, and~$C'$.
+Let $A'$, $B'$, and $C'$ be the inverses of $A$, $B$, and $C$, respectively,
+and let $\Gamma'$ be the circline passing thru $A'$, $B'$, and~$C'$.
 
-Assume $D$ is a point of the inversive plane that is distinct from $A$, $C$, $O$, and~$\infty$.
-Suppose that $D'$ denotes the inverse of~$D$.
+Assume $D$ is a point in the inversive plane, distinct from $A$, $B$, $C$, $O$, and~$\infty$.
+Let $D'$ be the inverse of~$D$.
 By Theorem~\ref{lem:inverse-4-angle}\textit{\ref{lem:inverse-4-angle:inscribed}},
-$D'\in\Gamma'$ if and only if $D\in\Gamma$.
+$D' \in \Gamma'$ if and only if $D \in \Gamma$.
 
 It remains to prove that
-$O \in \Gamma$ $\Leftrightarrow$ $\infty \in \Gamma'$, which is equivalent to
-$\infty \in \Gamma$ $\Leftrightarrow$ $O \in \Gamma'$.
+$\infty \in \Gamma$ $\Leftrightarrow$ $O \in \Gamma'$, which is equivalent to
+$O \in \Gamma$ $\Leftrightarrow$ $\infty \in \Gamma'$.
 
 The condition $\infty \in \Gamma$ means that $\Gamma$ is a line;
-equivalently, for any $\epsilon > 0$, the circline $\Gamma$ contains a point $P$ such that $OP > r/\epsilon$.
+equivalently, for any $\epsilon > 0$, the circline $\Gamma$ contains a point $P \ne \infty$ such that $OP > r/\epsilon$.
 For the inversion $P' \in \Gamma'$ of $P$, we have $OP' = r^2 / OP < r \cdot \epsilon$.
 That is, the circline $\Gamma'$ contains points arbitrarily close to~$O$.
 It follows that $O \in \Gamma'$.
@@ -235,8 +232,17 @@ In other words,
 $\infty \in \Gamma$
 $\Rightarrow$
 $O \in \Gamma'$.
-The converse is proved in the same way.
+
+The implication
+$\infty \in \Gamma$
+$\Leftarrow$
+$O \in \Gamma'$ is proved in the same way.
+We can choose $P' \ne O$ on $\Gamma'$ such that $OP' < r \cdot \epsilon$.
+Its inverse $P$ lies on $\Gamma$, and $OP = r^2 / OP' > r/\epsilon$.
+Since $\epsilon>0$ is arbitrary, we have $\infty \in \Gamma$.
 \qeds
+
+
 
 \begin{thm}{Exercise}\label{ex:inv-center not=center-inv}
 Assume that a circle $\Gamma'$ is an inverse of a circle $\Gamma$ centered at $Q$.
@@ -244,28 +250,29 @@ Suppose $Q'$ denotes the inverse of~$Q$.
 Show that $Q'$ is not the center of~$\Gamma'$.
 \end{thm}
 
-Assume that a \index{circumtool}\emph{circumtool} is a geometric construction tool 
-that produces a circline passing thru three given points.
-
-{
+{%%%!!! move pic up if possible
 
 \begin{wrapfigure}{r}{37mm}
-\vskip-0mm
+\vskip-8mm
 \centering
 \includegraphics{mppics/pic-162}
 \end{wrapfigure}
+
+Assume that a \index{circumtool}\emph{circumtool} is a geometric construction tool 
+that produces a circline passing thru three given points.
 
 \begin{thm}{Exercise}\label{ex:circumtool}
 Show that with only a circumtool,
 it is impossible to construct the center of a given circle.
 \end{thm}
 
+}
 
 \begin{thm}{Exercise}\label{ex:tangent-circ->parallels}
 Show that for every pair of tangent circles in the inversive plane, there is an inversion that sends them to a pair of parallel lines.
 \end{thm}
 
-}
+
 
 \begin{thm}{Theorem}\label{thm:inverse}
 Consider an inversion of the inversive plane across a circle $\Omega$ centered at~$O$. 
