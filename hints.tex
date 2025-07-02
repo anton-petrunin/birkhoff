@@ -138,17 +138,26 @@ Conclude that the graph is a line in $(\mathbb{R}^2,d_\infty)$.
 Spell the definitions of line and motion.
 
 \parbf{\ref{ex:trig==}.}
-Fix an isometry $f\:(P Q)\to \mathbb{R}$ such that $f(P)=0$ and $f(Q)\z=q>0$.
+According to the definition of a half-line,
+there is an isometry
+$$f\:[P Q)\to [0,\infty)$$
+such that $f(P)=0$.
+By the definition of an isometry, $P X=f(X)$ for every $X\z\in [P Q)$.
+Thus, $P X=r$ if and only if $f(X)=r$.
 
-Assume that $f(X)=x$.
-By the definition of a half-line $X\in[PQ)$ if and only if $x\ge 0$.
-Show that the latter holds if and only if 
-$|x-q|=\bigl||x|-|q|\bigr|$.
-Hence \textit{(a)} follows.
+Since an isometry must be bijective, the statement follows.
 
-To prove\textit{(b)}, observe that $X\in [PQ]$ if and only if $0\le x\le q$.
-Show that the latter holds if and only if 
-$|x-q|+|x|=|q|$.
+%Fix an isometry $f\:(P Q)\to \mathbb{R}$ such that $f(P)=0$ and $f(Q)\z=q>0$.
+
+%Assume that $f(X)=x$.
+%By the definition of a half-line $X\in[PQ)$ if and only if $x\ge 0$.
+%Show that the latter holds if and only if
+%$|x-q|=\bigl||x|-|q|\bigr|$.
+%Hence \textit{(a)} follows.
+
+%To prove\textit{(b)}, observe that $X\in [PQ]$ if and only if $0\le x\le q$.
+%Show that the latter holds if and only if
+%$|x-q|+|x|=|q|$.
 
 \parbf{\ref{ex:2a=0}.}
 The equation
@@ -225,7 +234,7 @@ Show that $m\:D\mapsto D$; arrive at a contradiction.
 
 \parbf{\ref{ex:infinite}.} By Axiom~\ref{def:birkhoff-axioms:0}, there are at least two points in the plane.
 Therefore, by Axiom~\ref{def:birkhoff-axioms:1}, 
-the plane contains a line. 
+the plane has a line.
 To prove \textit{(a)}, it remains to note that a line is an infinite set of points.
 To prove \textit{(b)} apply Axiom~\ref{def:birkhoff-axioms:2} in addition.
 
@@ -1376,14 +1385,16 @@ is a line if and only if it passes thru~$O$.
 \parbf{\ref{ex:h-dist-eq}.}
 Assume that the absolute is a unit circle.
 
-Set $a\z=OX\z=OY$.
+Set $a\z=OX\z=XY$.
 Note that $0<a<\tfrac12$,
 $
 OX_h=\ln \tfrac{1+a}{1-a}$,
 and
 $XY_h=\ln \tfrac{(1+2\cdot a)\cdot(1-a)}{(1-2\cdot a)\cdot(1+a)}$.
 Verify that the inequalities 
-\[1<
+\[
+1
+<
 \tfrac{1+a}{1-a}
 <
 \tfrac{(1+2\cdot a)\cdot(1-a)}{(1-2\cdot a)\cdot(1+a)}\]

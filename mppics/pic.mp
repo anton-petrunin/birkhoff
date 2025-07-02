@@ -104,10 +104,13 @@ drawarrow cutcircle(circle(z.O,10), z.A, z.B);
 dOt z.O,z.A,z.B;
 rimmark(z.B--z.O,z.O--z.A);
 
+z.alpha=z.O+(unitvector(z.A-z.O)*15 rotated (.5*(angle(z.B-z.O)-angle(z.A-z.O))));
+
 
 label.bot (btex $A$ etex, z.A);
 label.bot (btex $B$ etex, z.B);
 label.bot (btex $O$ etex, z.O);
+label (btex $\alpha$ etex, z.alpha);
 
 endfig;
 

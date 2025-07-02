@@ -51,7 +51,7 @@ $$\begin{aligned}
 \parit{Proof.}
 Let $r$ be the radius of the circle of the inversion.
 
-\begin{wrapfigure}[14]{o}{32mm}
+\begin{wrapfigure}[12]{r}{32mm}
 \centering
 \includegraphics{mppics/pic-160}
 \end{wrapfigure}
@@ -97,7 +97,7 @@ is the orthocenter of $\triangle A' B' C'$.
 Construct an inverse of a given point across a given circle using ruler and compass.
 \end{thm}
 
-\section{The cross-ratio}\index{cross-ratio}
+\section{The cross-ratio}
 
 The following theorem lists quantities that do not change after inversion.
 
@@ -114,6 +114,8 @@ If the quadrangle $ABCD$ is inscribed,
 then so is $\square A'B'C'D'$.
 \end{enumerate}
 \end{thm}
+
+The number $\frac{AB \cdot CD}{BC \cdot DA}$ from \textit{(\ref{lem:inverse-4-angle:cross-ratio})} is called the \index{cross-ratio}\emph{cross-ratio} of the four points $A$, $B$, $C$, and $D$.
 
 \parit{Proof; (\ref{lem:inverse-4-angle:cross-ratio}).}
 Let $O$ be the center of the inversion.
@@ -217,36 +219,24 @@ Let $\Gamma'$ be the circline that passes thru $A'$, $B'$, and~$C'$.
 
 Assume $D$ is a point of the inversive plane that is distinct from $A$, $C$, $O$, and~$\infty$.
 Suppose that $D'$ denotes the inverse of~$D$.
-
 By Theorem~\ref{lem:inverse-4-angle}\textit{\ref{lem:inverse-4-angle:inscribed}},
 $D'\in\Gamma'$ if and only if $D\in\Gamma$.
 
-It remains to prove that 
-$O\in \Gamma$ $\Leftrightarrow$ $\infty\in\Gamma'$ 
-and 
-$\infty\in \Gamma$ $\Leftrightarrow$ $O\in\Gamma'$.
-We will prove that
-$$\infty\in \Gamma
-\quad
-\Longrightarrow
-\quad
-O\in\Gamma';$$
-the remaining implications can be proved along the same lines.
+It remains to prove that
+$O \in \Gamma$ $\Leftrightarrow$ $\infty \in \Gamma'$, which is equivalent to
+$\infty \in \Gamma$ $\Leftrightarrow$ $O \in \Gamma'$.
 
-If $\infty\in\Gamma$, then $\Gamma$ is a line;
-or, equivalently, for any $\epsilon>0$, the circline $\Gamma$ contains a point $P$ such that $OP>r/\epsilon$.
-For the inversion $P'\in\Gamma'$ of $P$, we have that $OP'=r^2/OP<r\cdot \epsilon$.
+The condition $\infty \in \Gamma$ means that $\Gamma$ is a line;
+equivalently, for any $\epsilon > 0$, the circline $\Gamma$ contains a point $P$ such that $OP > r/\epsilon$.
+For the inversion $P' \in \Gamma'$ of $P$, we have $OP' = r^2 / OP < r \cdot \epsilon$.
 That is, the circline $\Gamma'$ contains points arbitrarily close to~$O$.
-It follows that $O\in \Gamma'$.
+It follows that $O \in \Gamma'$.
+In other words,
+$\infty \in \Gamma$
+$\Rightarrow$
+$O \in \Gamma'$.
+The converse is proved in the same way.
 \qeds
-
-{
-
-\begin{wrapfigure}{r}{37mm}
-\vskip-7mm
-\centering
-\includegraphics{mppics/pic-162}
-\end{wrapfigure}
 
 \begin{thm}{Exercise}\label{ex:inv-center not=center-inv}
 Assume that a circle $\Gamma'$ is an inverse of a circle $\Gamma$ centered at $Q$.
@@ -257,7 +247,13 @@ Show that $Q'$ is not the center of~$\Gamma'$.
 Assume that a \index{circumtool}\emph{circumtool} is a geometric construction tool 
 that produces a circline passing thru three given points.
 
-}
+{
+
+\begin{wrapfigure}{r}{37mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-162}
+\end{wrapfigure}
 
 \begin{thm}{Exercise}\label{ex:circumtool}
 Show that with only a circumtool,
@@ -268,6 +264,8 @@ it is impossible to construct the center of a given circle.
 \begin{thm}{Exercise}\label{ex:tangent-circ->parallels}
 Show that for every pair of tangent circles in the inversive plane, there is an inversion that sends them to a pair of parallel lines.
 \end{thm}
+
+}
 
 \begin{thm}{Theorem}\label{thm:inverse}
 Consider an inversion of the inversive plane across a circle $\Omega$ centered at~$O$. 

@@ -58,7 +58,7 @@ We used this approach to minimize the tedious parts which are unavoidable in pur
 There is one and only one line that contains any two given distinct points $P$ and $Q$ in the Euclidean plane.
 
 \item\label{def:birkhoff-axioms:2} 
-Any angle $AOB$ in the Euclidean plane 
+Any angle $\angle AOB$ in the Euclidean plane
 defines a real number in the interval $(-\pi,\pi]$.
 This number is called the \index{angle!measure}\emph{angle measure of $\angle AOB$}
 and is denoted by $\measuredangle A O B$.
@@ -89,7 +89,7 @@ A' B'&=A B, & A' C'&= A C, &&\text{and}
 &\measuredangle C' A' B'&=\pm\measuredangle C A B.
 \end{align*}
 \item\label{def:birkhoff-axioms:4}
-If for two triangles $ABC$, $AB'C'$ in the Euclidean plane
+If for two triangles $\triangle ABC$, $\triangle AB'C'$ in the Euclidean plane
 and for $k>0$ we have
 \begin{align*}
 B'&\in [AB),
@@ -135,21 +135,6 @@ Show that
 \[[O A)\z=[O A').\]
 
 \end{thm}
-
-\begin{thm}[\abs]{Proposition}\label{prop:point-on-half-line}
-Given $r\ge 0$ and a half-line $[O A)$ there is a unique $A'\in [O A)$  such that $O A'=r$.
-\end{thm}
-
-\parit{Proof.}
-According to the definition of a half-line, 
-there is an isometry 
-$$f\:[O A)\to [0,\infty)$$
-such that $f(O)=0$.
-By the definition of an isometry, $O A'=f(A')$ for every $A'\z\in [O A)$.
-Thus, $O A'=r$ if and only if $f(A')=r$.
-
-Since an isometry must be bijective, the statement follows.
-\qeds
 
 \section{A zero angle}
 
@@ -210,12 +195,12 @@ if and only if $O$
 
 \begin{wrapfigure}{r}{40mm}
 \centering
-\vskip-8mm
+\vskip-0mm
 \includegraphics{mppics/pic-8}
 \end{wrapfigure}
 
 \parit{Proof.}
-By Proposition~\ref{prop:point-on-half-line},  we may assume that
+By Exercise~\ref{ex:trig==},  we may assume that
 $O A = O B = 1$.
 
 \parit{``If'' part.}
@@ -225,7 +210,7 @@ Set  $\alpha=\measuredangle A O B$.
 
 Applying Axiom~\ref{def:birkhoff-axioms:2a},
 we get a half-line $[OA')$ such that $\alpha\z=\measuredangle B O A'$.
-By Proposition~\ref{prop:point-on-half-line}, we can assume that $OA'=1$.
+By Exercise~\ref{ex:trig==}, we can assume that $OA'=1$.
 According to Axiom~\ref{def:birkhoff-axioms:3},
 \[\triangle AOB\z\cong\triangle BOA'.\]
 Suppose that $f$ denotes the corresponding motion of the plane;
@@ -233,6 +218,7 @@ that is, $f$ is a motion such that $f(A)=B$, $f(O)=O$, and $f(B)=A'$.
 
 \begin{wrapfigure}{o}{40mm}
 \centering
+\vskip-2mm
 \includegraphics{mppics/pic-10}
 \end{wrapfigure}
 
@@ -242,8 +228,12 @@ Therefore, both lines $(AB)$ and $(A'B)$ contain $B$ and~$O$.
 By Axiom~\ref{def:birkhoff-axioms:1}, $(AB)=(A'B)$.
 
 By the definition of a line,
-$(AB)$ contains exactly two points $A$ and $B$ at distance $1$ from~$O$.
-Since $OA'=1$ and $A'\ne B$, we get that $A=A'$.
+$(AB)$ contains exactly two points, $A$ and $B$, that are at distance $1$ from~$O$.
+Since $OA' = 1$, it follows that $A' = A$ or $A' = B$.
+The isometry $f$ must be injective; see Exercise~\ref{ex:dist-preserv=>injective}.
+Therefore, $A' = f(B) \ne f(A) = B$.
+That is, $A' \ne B$, and hence $A = A'$.
+
 
 By Axiom~\ref{def:birkhoff-axioms:2b} and Proposition~\ref{lem:AOA=0}, we get that
 \begin{align*}
@@ -358,7 +348,7 @@ Given distinct points $X$ and $O$, there is a unique point $X'$ such that $O$ is
 The point $O$ is the midpoint of a line segment $[XX']$ if and only if $X'\in [XO)$ and $XX'=2\cdot XO$.
 
 By Axiom~\ref{def:birkhoff-axioms:1}, the line $(XO)$ and therefore half-line $[XO)$ are uniquely defined.
-Further, by Proposition~\ref{prop:point-on-half-line} there is a unique point $X'\in [XO)$ such that $XX'=2\cdot XO$.
+Further, by Exercise~\ref{ex:trig==} there is a unique point $X'\in [XO)$ such that $XX'=2\cdot XO$.
 \qeds
 
 The point $X'$ provided by the lemma is called \index{reflection across a point}\emph{reflection} of point $X$ across $O$.
