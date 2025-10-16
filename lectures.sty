@@ -122,7 +122,7 @@ isbn=false]{biblatex}
 %THEOREM
 \newcounter{thm}[chapter]
 \renewcommand{\thethm}{\thechapter.\arabic{thm}}
-\newcommand\claim[2][{}]{\par\medskip\noindent\refstepcounter{thm}\hbox{\bf \arabic{chapter}.\arabic{thm}. #2.#1}
+\newcommand\claim[2][.]{\par\medskip\noindent\refstepcounter{thm}\hbox{\bf \arabic{chapter}.\arabic{thm}. #2#1}
 \it\ %\ignorespaces
 }
 \newcommand\nonumclaim[2][{}]{\par\medskip\noindent\refstepcounter{thm}\hbox{\bf #2.#1}
@@ -136,7 +136,7 @@ isbn=false]{biblatex}
 \def\a{\textit{a}}
 %\def\abs{$\!\!{}^{{}^{\a}}$}
 \def\a{\checkmark}
-\def\abs{$\!{}^{\a}$}
+\def\abs{.$\!{}^{\a}$}
 
 \def\epsilon{\varepsilon}
 \def\phi{\varphi}
