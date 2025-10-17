@@ -21,17 +21,16 @@ To emphasize that two lines in a picture are parallel we will mark them with arr
 
 
 \begin{thm}[\abs]{Proposition}\label{prop:perp-perp} Let $\ell$, $m$, and $n$ be three lines.
-Assume that $n\perp m$ and $m\perp \ell$.
-Then $\ell\parallel n$. 
+Assume that $n\perp \ell$ and $n\perp m$.
+Then $\ell\parallel m$.
 \end{thm}
 
 \parit{Proof.}
 Assume the contrary; 
-that is, $\ell\nparallel n$.
-Then there is a point, say $Z$, of intersection of $\ell$ and~$n$.
+that is, $\ell$ and~$m$ meet at one point, say $Z$.
 Then by Theorem~\ref{perp:ex+un},
-$\ell=n$.
-Since every line is parallel to itself, we have that $\ell\parallel n$ --- a contradiction.
+$\ell=m$.
+Since every line is parallel to itself, we have that $\ell\parallel m$ --- a contradiction.
 \qeds
 
 \begin{thm}{Theorem}\label{thm:parallel}
@@ -101,9 +100,19 @@ That is, for any lines $\ell$, $m$, and $n$ the following conditions hold:
 $\ell\parallel n$.
 \end{enumerate}
 
+The following exercise provides a partial converse to Proposition \ref{prop:perp-perp}.
+
 \begin{thm}[!]{Exercise}\label{ex:perp-perp}
-Let $\ell$, $m$, and $n$ be lines such that $\ell\parallel m$.
-Show that $\ell\perp n$ if and only if $m\perp n$.
+Let $k$, $\ell$, $m$, and $n$ be lines.
+\begin{enumerate}[(a)]
+ \item\label{ex:perp-perp:a}
+ Assume $\ell\parallel m$ and $m\perp n$.
+ Show that $\ell\perp n$.
+ \item\label{ex:perp-perp:b}
+ Assume $k\perp \ell$, $\ell\parallel m$, and $m\perp n$.
+ Show that $k\parallel n$.
+\end{enumerate}
+
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:construction-parallel}
