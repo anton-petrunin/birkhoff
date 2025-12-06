@@ -11,7 +11,7 @@ A system of axioms appears already in Euclid's ``Elements'' --- the most success
 The systematic study of geometries as axiomatic systems
  was
 triggered by the discovery of non-Euclidean geometry.
-The branch of mathematics, emerging this way, is called ``Foundations of geometry''.
+The branch of mathematics that emerged this way is called foundations of geometry.
 
 The most popular system of axioms
 was proposed by David Hilbert in 1899.
@@ -21,7 +21,7 @@ these are not defined in terms of previously defined concepts.
 
 Later many different systems were proposed.
 It is worth mentioning
-the system developed by Alexandr Alexandrov \cite{alexandrov} which is intuitive and elementary, 
+the system developed by Alexandr Alexandrov \cite{alexandrov}, which is intuitive and elementary,
 the system by Friedrich Bachmann \cite{bachmann} based on the concept of symmetry,
 and the system by Alfred Tarski \cite{tarski} --- a minimalist system designed for analysis using mathematical logic.
 
@@ -37,11 +37,11 @@ the continuity of maps between metric spaces,
 and the congruence of triangles ($\cong$).
 All of these concepts are discussed in the preliminaries.
 
-Our system is built upon metric spaces.
+Our system is built on metric spaces.
 In particular, we use real numbers as a building block. 
 For this reason our approach is not purely axiomatic --- we build the theory upon something else;
 it resembles a model-based introduction to Euclidean geometry discussed in Section~\ref{page:model}.
-We used this approach to minimize the tedious parts which are unavoidable in purely axiomatic foundations.
+We use this approach to minimize the tedious parts, which are unavoidable in purely axiomatic foundations.
 
 \newpage
 
@@ -69,13 +69,13 @@ Given a half-line $[O A)$ and $\alpha\in(-\pi,\pi]$,
 there is a unique  half-line $[O B)$, 
 such that $\measuredangle A O B= \alpha$.
 \item\label{def:birkhoff-axioms:2b} 
-For any points $A$, $B$, and $C$, distinct from $O$ we have
+For any points $A$, $B$, and $C$, distinct from $O$, we have
 $$\measuredangle A O B+\measuredangle B O C
 \equiv\measuredangle A O C.$$
 \item\label{def:birkhoff-axioms:2c} 
 The function 
 $$\measuredangle\:(A,O,B)\mapsto\measuredangle A O B$$
-is continuous at any triple of points $(A,O,B)$,
+is continuous at any triple of points $(A,O,B)$
 such that $O\ne A$ and $O\ne B$ and $\measuredangle A O B\ne\pi$.
 
 \end{enumerate}
@@ -112,8 +112,7 @@ From now on,
 we can use no information about the Euclidean plane that does not follow from the five axioms above.
 
 \begin{thm}{Classroom exercise}\label{ex:infinite}
-Show that there are (a) an infinite set of points,
-(b) an infinite set of lines on the plane.
+Show that there is (a) an infinite set of points and (b) an infinite set of lines on the plane.
 \end{thm}
 
 \section{Lines and half-lines}
@@ -121,7 +120,7 @@ Show that there are (a) an infinite set of points,
 \begin{thm}[\abs]{Proposition}\label{lem:line-line}
 \let\thefootnote\relax\footnotetext{${}^\a$ The mark ``$\a$'' indicates that Axiom~\ref{def:birkhoff-axioms:4} is not used in the proof.
 Please ignore this mark for now; it will become important in Chapter~\ref{chap:non-euclid}.}
-Any two distinct lines intersect at most at one point.
+Any two distinct lines intersect in at most one point.
 \end{thm}
 
 \parit{Proof.}
@@ -149,7 +148,7 @@ $$\measuredangle A O A
 \measuredangle A O A 
 \equiv
 \measuredangle A O A.$$
-Subtract  $\measuredangle A O A$ from both sides, we get that
+Subtracting $\measuredangle A O A$ from both sides, we get that
 $\measuredangle A O A \equiv 0$.
 
 By Axiom~\ref{def:birkhoff-axioms:2}, $-\pi<\measuredangle A O A\le \pi$;
@@ -184,7 +183,7 @@ By Proposition~\ref{lem:AOB+BOA=0},
 if $\angle A O B$ is straight,
 then so is $\angle B O A$.
 
-We say that point $O$ \index{between}\emph{lies between} points $A$ and $B$, 
+We say that point $O$ \index{between}\emph{lies between} points $A$ and $B$
 if $O\not= A$, $O\not= B$, and $O\in[A B]$.
 
 \begin{thm}[\abs]{Theorem}\label{thm:straight-angle}
@@ -247,7 +246,7 @@ By Axiom~\ref{def:birkhoff-axioms:2b} and Proposition~\ref{lem:AOA=0}, we get th
 Therefore, by Exercise~\ref{ex:2a=0}, $\alpha$ is either $0$ or~$\pi$.
 
 Since $[OA)\ne [OB)$,  
-we have that $\alpha\ne 0$, see Exercise~\ref{ex:[OA)=[OB)}.
+we have that $\alpha\ne 0$; see Exercise~\ref{ex:[OA)=[OB)}.
 Therefore, $\alpha=\pi$.
 
 
@@ -345,11 +344,11 @@ Given distinct points $X$ and $O$, there is a unique point $X'$ such that $O$ is
 \parit{Proof.}
 The point $O$ is the midpoint of a line segment $[XX']$ if and only if $X'\in [XO)$ and $XX'=2\cdot XO$.
 
-By Axiom~\ref{def:birkhoff-axioms:1}, the line $(XO)$ and therefore half-line $[XO)$ are uniquely defined.
+By Axiom~\ref{def:birkhoff-axioms:1}, the line $(XO)$ and therefore the half-line $[XO)$ are uniquely defined.
 Further, by Exercise~\ref{ex:trig==} there is a unique point $X'\in [XO)$ such that $XX'=2\cdot XO$.
 \qeds
 
-The point $X'$ provided by the lemma is called \index{reflection across a point}\emph{reflection} of point $X$ across $O$.
+The point $X'$ provided by the lemma is called the \index{reflection across a point}\emph{reflection} of point $X$ across $O$.
 We also assume that $O'=O$; that is, $O$ is a reflection of itself across itself.
 
 The point $O$ is called the \index{center!of reflection}\emph{center of reflection}.

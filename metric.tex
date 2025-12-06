@@ -39,8 +39,7 @@ The Euclidean plane can be defined rigorously the following way:
 
 That is it!
 We gave a {}\emph{numerical model} of the Euclidean plane;
-it builds the Euclidean plane from real numbers
-while the latter is assumed to be known.
+it builds the Euclidean plane from real numbers, which are assumed to be known.
 
 Shortness is the main advantage of the model approach,
 but it is not intuitively clear why we define points and distances this way.
@@ -56,7 +55,7 @@ We will do it in Chapter~\ref{chap:non-euclid}.
 The concept of a metric space provides 
 a rigorous way to say: \textit{``we can measure distances between points''}.
 That is, instead of (\ref{preaxiomI}) in Section~\ref{preaxioms},
-we can say \textit{``Euclidean plane is a metric space''}.
+we can say \textit{``the Euclidean plane is a metric space''}.
 
 \begin{thm}{Definition}\label{def:metric-space}
 Let $\mathcal X$ be a nonempty set and 
@@ -175,7 +174,7 @@ A bijective distance-preserving map is called an \index{isometry}\emph{isometry}
 
 Two metric spaces are called \index{isometric spaces}\emph{isometric} if there exists an isometry between them.
 
-An isometry from a metric space to itself is also referred a \index{motion}\emph{motion}.
+An isometry from a metric space to itself is also referred to as a \index{motion}\emph{motion}.
 
 \begin{thm}{Exercise}\label{ex:dist-preserv=>injective}
 Show that each distance-preserving map is \index{injective map}\emph{injective};
@@ -204,7 +203,7 @@ If $\mathcal X$ is a metric space and $\mathcal Y$ is a subset of $\mathcal X$,
 then a metric on $\mathcal Y$ can be obtained by restricting the metric from~$\mathcal X$. 
 In other words, 
 the distance between two points in $\mathcal Y$ is defined to be the distance between these points in $\mathcal X$.
-In this way any subset of a metric space can be also considered as a metric space.
+In this way any subset of a metric space can also be considered as a metric space.
 
 \begin{thm}{Definition}\label{def:line}
 A subset $\ell$ of a metric space is called a \index{line}\emph{line} if it is isometric to the real line.
@@ -275,10 +274,13 @@ see (\ref{preaxiomIII}) in Section~\ref{preaxioms}.
 An ordered pair of half-lines that start at the same point is called an \index{angle}\emph{angle}.
 The angle $AOB$ (also denoted by \index{10@$\angle$, $\measuredangle$}$\angle AOB$) is the pair of half-lines $[OA)$ and $[OB)$; the point $O$ is called the \index{vertex!of angle}\emph{vertex} of the angle.
 
-Intuitively, the angle measure tells how much one has to rotate the first half-line counterclockwise, so it gets the position of the second half-line of the angle. 
+Intuitively, the angle measure tells how much one has to rotate the first half-line counterclockwise,
+so that it gets to the position of the second half-line.
 The full turn is assumed to be $2\cdot\pi$;
 it corresponds to the angle measure in radians.%
-\footnote{For now, you can think of $\pi$ as a the size of a half-turn in specific units. Its numerical value, $\pi\approx 3.14$, is not essential at this stage.}
+\footnote{For now, you can think of $\pi$ as
+the measure of a half-turn in specific units.
+Its numerical value, $\pi\approx 3.14$, is not essential at this stage.}
 
 The angle measure of $\angle AOB$ is denoted as  $\measuredangle AOB$;
 it is a real number in the interval $(-\pi,\pi]$. 
@@ -415,9 +417,9 @@ The map $f$ might be defined only for some triples in~$\mathcal X$.
 
 Assume $f(A,B,C)$ is defined.
 Then, we say that $f$ is continuous at the triple $(A,B,C)$ 
-if, for any $\epsilon>0$, there is $\delta>0$ such that 
-\[d_{\mathcal Y}(f(A,B,C),f(A',B',C'))<\epsilon.\]
-if $d_{\mathcal X}(A,A')<\delta$, $d_{\mathcal X}(B,B')<\delta$, and $d_{\mathcal X}(C,C')<\delta$.
+if, for any $\epsilon>0$, there exists $\delta>0$ such that
+\[d_{\mathcal Y}(f(A,B,C),f(A',B',C'))<\epsilon\]
+whenever $d_{\mathcal X}(A,A')<\delta$, $d_{\mathcal X}(B,B')<\delta$, and $d_{\mathcal X}(C,C')<\delta$.
 
 
 \begin{thm}[!]{Exercise}\label{ex:dist-cont}
@@ -501,13 +503,11 @@ $A=(0,1)$, $B=(1,0)$, and $C\z=(-1,0)$ on the Manhattan plane $(\mathbb{R}^2,d_1
 Then
 $$d_1(A,B)=d_1(A,C)=d_1(B,C)=2.$$
 
-On one hand,
-$$\triangle ABC\cong \triangle ACB.$$
+On the one hand, $\triangle ABC\cong \triangle ACB$.
 Indeed, the map $(x,y)\z\mapsto (-x,y)$ is a motion of $(\mathbb{R}^2,d_1)$
 that sends $A\z\mapsto A$, $B\mapsto C$, and $C\z\mapsto B$.
 
-On the other hand,
-$$\triangle ABC\ncong \triangle BCA.$$
+On the other hand, $\triangle ABC\ncong \triangle BCA$.
 Indeed, arguing by contradiction, assume that $\triangle ABC\cong \triangle BCA$; that is, there is a motion $f$ of $(\mathbb{R}^2,d_1)$ that sends $A\mapsto B$, $B\mapsto C$, and $C\mapsto A$.
 
 \begin{wrapfigure}[6]{o}{33mm}
@@ -520,7 +520,7 @@ We say that $M$ is a midpoint of $A$ and $B$ if
 \[d_1(A,M)=d_1(B,M)=\tfrac12\cdot d_1(A,B).\]
 Note that a point $M$ is a midpoint of $A$ and $B$ if and only if $f(M)$ is a midpoint of $B$ and~$C$.
 
-The set of midpoints for $A$ and $B$ is infinite, it contains all points $(t,t)$ for $t\in[0,1]$ (it is the gray segment in the picture above).
+The set of midpoints for $A$ and $B$ is infinite; it contains all points $(t,t)$ for $t\in[0,1]$ (it is the gray segment in the picture above).
 In contrast, the midpoint for $B$ and $C$ is unique.
 Thus, the map $f$ cannot be bijective, leading to a contradiction.
 

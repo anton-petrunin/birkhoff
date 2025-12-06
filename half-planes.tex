@@ -85,9 +85,7 @@ Then $\angle A_0O_0B_0$ and $\angle A_1O_1B_1$ have the same sign.
 Consider the function 
 $f(t)=\measuredangle A_tO_tB_t$.
 
-Since 
-the points $O_t$, $A_t$, and $B_t$ do not lie on one line,
-Theorem~\ref{thm:straight-angle} implies that $f(t)=\measuredangle A_tO_tB_t\ne 0$ nor $\pi$ for any $t\in[0,1]$.
+Since the points $O_t$, $A_t$, and $B_t$ do not lie on one line, Theorem~\ref{thm:straight-angle} implies that $f(t)=\measuredangle A_tO_tB_t$ is neither $0$ nor $\pi$ for any $t\in[0,1]$.
 
 Therefore, by Axiom~\ref{def:birkhoff-axioms:2c} and Exercise~\ref{ex:comp+cont},
 $f$ is a continuous function.
@@ -134,11 +132,13 @@ for $P_t=P$, $Q_t$, and $X_t=X$, we get that $\angle PQX$ has the same sign as $
 \qeds
 
 
+{\sloppy
 
 \begin{thm}[\abs]{Signs of angles of a triangle}\label{thm:signs-of-triug}
-In arbitrary nondegenerate triangle $ABC$,
-the angles $ABC$, $BCA$, and $CAB$ have the same sign. 
+In any nondegenerate triangle $ABC$, the angles $ABC$, $BCA$, and $CAB$ have the same sign.
 \end{thm}
+
+}
 
 {
 
@@ -182,9 +182,8 @@ Conclude that
 \end{thm}
 
 \begin{thm}[\abs]{Lemma}\label{lem:signsXY}
-Assume $[XY]$ does not intersect $(PQ)$,
-then angles $PQX$ and $PQY$ 
-have the same sign.
+Assume $[XY]$ does not intersect $(PQ)$.
+Then the angles $PQX$ and $PQY$ have the same sign.
 \end{thm}
 
 \begin{wrapfigure}{o}{26mm}
@@ -212,7 +211,7 @@ $\angle PQX$ has the same sign as $\angle PQY$.
 
 \begin{thm}{Proposition}\label{prop:half-plane}
 Assume $X,Y\notin(PQ)$.
-Then angles $PQX$ and $PQY$ have the same sign if and only if $[XY]$ does not intersect $(PQ)$.
+Then the angles $PQX$ and $PQY$ have the same sign if and only if $[XY]$ does not intersect $(PQ)$.
 \end{thm}
 
 \begin{wrapfigure}{o}{30mm}
@@ -294,7 +293,7 @@ By Corollary~\ref{cor:half-plane}, the vertices $A$ and $B$ lie on opposite side
 
 }
 
-The vertex $C$ may lie on the same side with $A$ and on the opposite side with $B$ or the other way around.
+The vertex $C$ may lie on the same side as $A$ and on the opposite side from $B$ or the other way around.
 By Corollary~\ref{cor:half-plane}, in the first case, $\ell$ intersects side $[BC]$ and does not intersect $[AC]$; in the second case, $\ell$ intersects side $[AC]$ and does not intersect $[BC]$.
 Hence the statement follows.
 \qeds
@@ -338,7 +337,7 @@ $$\tilde\measuredangle ABC=
 \end{cases}
 $$
 can serve as the angle measure; 
-that is, the axioms hold if one exchanges $\measuredangle$ to $\tilde\measuredangle$ everywhere.
+that is, the axioms hold if one replaces $\measuredangle$ by $\tilde\measuredangle$ everywhere.
 
 Show that $\measuredangle$ and $\tilde\measuredangle$ are the only possible angle measures on the plane. 
 
@@ -409,7 +408,7 @@ $AB=BC=r$ and $\measuredangle ABC=\beta$.
 The existence of such a triangle follows from Axiom~\ref{def:birkhoff-axioms:2a} and Exercise~\ref{ex:trig==}.
 By Axiom~\ref{def:birkhoff-axioms:3},
 the values
-$\beta$ and~$r$ define the triangle $ABC$ up to the congruence.
+$\beta$ and~$r$ define the triangle $ABC$ up to congruence.
 In particular, the distance $AC$ depends only on $\beta$ and~$r$.
 
 {
@@ -493,7 +492,7 @@ By \ref{lem:f(r,a)}, the map $\beta\mapsto C_\beta$ is continuous.
 
 
 Given a positive real number $r$ and a point $O$,
-the set $\Gamma$ of all points on distance $r$ from $O$ is called a \index{circle}\emph{circle} 
+the set $\Gamma$ of all points at distance $r$ from $O$ is called a \index{circle}\emph{circle}
 with \index{radius}\emph{radius} $r$ and \index{center}\emph{center}~$O$.
 
 \begin{wrapfigure}{r}{40mm}
