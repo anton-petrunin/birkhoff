@@ -81,7 +81,7 @@ we will have
 
 Indeed it is sufficient to show that 
 if $f$ is a motion that maps $\solidtriangle ABC$ to $\solidtriangle A'B'C'$,
-then $f$ maps each vertex of $\triangle ABC$ to a vertex $\triangle A'B'C'$.
+then $f$ maps each vertex of $\triangle ABC$ to a vertex of $\triangle A'B'C'$.
 The latter follows from the characterization of vertices of solid triangles given in the following exercise:
 
 \begin{thm}{Exercise}\label{ex:vertex}
@@ -142,7 +142,7 @@ Show that a circle is not a polygonal set.
 \end{thm}
 
 \begin{thm}{Claim}\label{clm:poly-ring}
-For any every polygonal sets $\mathcal{P}$ and $\mathcal{Q}$,
+For any two polygonal sets $\mathcal{P}$ and $\mathcal{Q}$,
 the union $\mathcal{P}\cup\mathcal{Q}$, 
 as well as the intersection $\mathcal{P}\cap\mathcal{Q}$, 
 are also polygonal sets.
@@ -179,7 +179,7 @@ Note that
 \mathcal{Q}_n.\]
 Therefore, $\mathcal{P}\cup\mathcal{Q}$ is polygonal.
 
-Note that $\mathcal{P}\cap \mathcal{Q}$ is the union of $\mathcal{P}_i\cap \mathcal{Q}_j$ for all $i$ an~$j$.
+Note that $\mathcal{P}\cap \mathcal{Q}$ is the union of $\mathcal{P}_i\cap \mathcal{Q}_j$ for all $i$ and~$j$.
 Therefore, to show that $\mathcal{P}\cap \mathcal{Q}$ is polygonal,
 it is sufficient to show that $\mathcal{P}_i\cap \mathcal{Q}_j$ is polygonal for all $i$ and $j$.
 
@@ -247,12 +247,12 @@ For any two points $A$ and $B$, we have
 
 \parit{Proof.}
 Fix a line segment~$[AB]$.
-Consider a sold square $\solidsquare ABCD$.
+Consider a solid square $\solidsquare ABCD$.
 
 For every positive integer $n$,
 there are $n$ disjoint segments $[A_1B_1],\z\dots,[A_nB_n]$ 
 in $\solidsquare ABCD$,
-such that each $[A_iB_i]$ is congruent to $[AB]$ in the sense of the Definition~\ref{def:cong-sets}.
+such that each $[A_iB_i]$ is congruent to $[AB]$ in the sense of Definition~\ref{def:cong-sets}.
 
 \begin{wrapfigure}[10]{o}{37 mm}
 \vskip-2mm
@@ -306,9 +306,9 @@ hence the result.
 \qeds
 
 We say that a polygonal set $\mathcal{P}$ is \index{subdivision of polygonal set}\emph{subdivided} 
-into two polygonal sets $\mathcal{Q}_1,\dots,\mathcal{Q}_n$ 
+into polygonal sets $\mathcal{Q}_1,\dots,\mathcal{Q}_n$
 if $\mathcal{P}=\mathcal{Q}_1\cup\dots\cup \mathcal{Q}_n$ 
-and the intersection $\mathcal{Q}_i\cap\mathcal{Q}_j$ if $i\ne j$.
+and each intersection $\mathcal{Q}_i\cap\mathcal{Q}_j$ is degenerate if $i\ne j$.
 (Recall that according to Claim~\ref{clm:poly-ring},
 the intersections $\mathcal{Q}_i\cap\mathcal{Q}_j$ are polygonal.)
 
@@ -363,7 +363,7 @@ Therefore,
 Two polygonal sets $\mathcal{P}$ and $\mathcal{P}'$ are called \index{equidecomposable sets}\emph{equidecomposable} if they admit subdivisions into polygonal sets $\mathcal{Q}_1,\dots,\mathcal{Q}_n$ and $\mathcal{Q}'_1,\dots,\mathcal{Q}'_n$ such that 
 $\mathcal{Q}_i\cong\mathcal{Q}'_i$ for each $i$.
 
-According to the proposition, if $\mathcal{P}$ and $\mathcal{P}$ are equidecomposable, then $\area \mathcal{P}=\area\mathcal{P}'$.
+According to the proposition, if $\mathcal{P}$ and $\mathcal{P}'$ are equidecomposable, then $\area \mathcal{P}=\area\mathcal{P}'$.
 A converse to this statement also holds;
 namely, \textit{if two nondegenerate polygonal sets have equal area, then they are equidecomposable.}
 
@@ -512,7 +512,7 @@ In particular,
 
 Subtracting \ref{eq:area-trinagles} from \ref{eq:area-sum},
 we get that
-\[\area (\solidsquare ABCD)=\area(\solidsquare ABB'D).\]
+\[\area (\solidsquare ABCD)=\area(\solidsquare ABB'A').\]
 It remains to apply \ref{eq:ABBA}.
 \qeds
 
@@ -808,7 +808,8 @@ Conclude that
 \begin{thm}{Exercise}\label{ex:cross-ratio-area}
 Suppose that points $L_1$, $L_2$, $L_3$, $L_4$ lie on a line $\ell$ 
 and points $M_1$, $M_2$, $M_3$, $M_4$ lie on a line $m$. 
-Assume that the lines $(L_1M_1)$, $(L_2M_2)$, $(L_3M_3)$, and $(L_4M_4)$ pass thru point $O$ that does not lie on $\ell$ nor~$m$.
+Assume that the lines $(L_1M_1)$, $(L_2M_2)$, $(L_3M_3)$, and $(L_4M_4)$ pass thru point $O$ that
+on neither $\ell$ nor~$m$.
 
 \begin{enumerate}[(a)]
  \item\label{ex:cross-ratio-area:a} Apply Claim~\ref{clm:area-ratio} to show that
@@ -852,8 +853,7 @@ then we may assume that
 a\to0.\]
 
 This convention works equally well for spheres and neutral planes, including the Euclidean plane.
-In spherical geometry  equivalently we may assume that if $r$ is the radius of the sphere, 
-then the area of the whole sphere is $4\cdot\pi\cdot r^2$.
+In spherical geometry, we can instead state that the area of the whole sphere is $4\cdot\pi\cdot r^2$, where $r$ is the radius of the sphere.
 
 Recall that the \index{defect}\emph{defect of triangle} $\triangle ABC$ is defined as 
 $$\defect(\triangle ABC)
@@ -873,7 +873,7 @@ $k=1$ for the unit sphere (this case is proved in Lemma \ref{lem:area-spher-tria
 and $k=\tfrac1{r^2}$ for the sphere of radius~$r$.
 
 Since the angles of an ideal triangle vanish, every ideal triangle in the h-plane has area~$\pi$.
-Similarly, in the unit sphere, the area of an equilateral triangle with right angles has an area of $\tfrac\pi2$;
+Similarly, in the unit sphere, an equilateral triangle with right angles has an area of $\tfrac\pi2$;
 since the whole sphere can be subdivided into eight such triangles, we get that the area of the unit sphere is $4\cdot\pi$.
 
 The identity \ref{eq:curv-defect} can be used as an alternative way to introduce the area function; it works on spheres and all neutral planes, except for the Euclidean plane.
@@ -899,7 +899,7 @@ If $\mathcal{S}$ is quadrable,
 its area can be defined
 as the necessarily unique real number $s=\area\mathcal{S}$
 such that the inequality
-\[\area\mathcal{Q}\le s\le \area\mathcal{P}
+\[\area\mathcal{P}\le s\le \area\mathcal{Q}
 \]
 holds for any polygonal sets $\mathcal{P}$ and $\mathcal{Q}$ such that $\mathcal{P}\subset\mathcal{S}\subset\mathcal{Q}$.
 
@@ -918,9 +918,9 @@ Since $\mathcal{D}$ is quadrable, the expression $\area\mathcal{D}$ makes sense 
 It turns out that the class of quadrable sets is the largest class for which 
 the area function satisfying the conditions in Section~\ref{sec:def(area)} is \textit{uniquely} defined.
 
-If you do not require uniqueness, then there are ways to extend the area function to all bounded sets.
-(A set in the plane is called \index{bounded set}\emph{bounded} if it lies inside a circle.)
+If we do not require uniqueness, then there are ways to extend the area function to all bounded sets.
+(A set in the plane is \index{bounded set}\emph{bounded} if it lies inside a circle.)
 On the sphere and hyperbolic plane, 
 there is no similar construction.
 If you wonder why,
-read about the \index{doubling the ball}\emph{doubling the ball} --- a paradox of Felix Hausdorff, Stefan Banach, and Alfred Tarski.                         
+read about the \index{doubling of the ball}\emph{doubling of the ball} --- a paradox of Felix Hausdorff, Stefan Banach, and Alfred Tarski.

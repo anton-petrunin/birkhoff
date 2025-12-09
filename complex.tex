@@ -6,7 +6,7 @@ The results of this chapter lead to a deeper understanding of both concepts.
 \section{Complex numbers}
 
 Informally,
-a complex number has form 
+a complex number has the form
 $$z=x+i\cdot y,
 \eqlbl{eq:z=x+iy}$$ 
 where $x$ and $y$ 
@@ -186,8 +186,8 @@ If you are familiar with the power series for sine, cosine, and the exponential 
 As before, we assume that $O$ and $E$ are the points with complex coordinates $0$ and $1$ respectively.
 
 Let $Z$ be a point distinct from $O$.
-Set $\rho=OZ$ and $\theta=\measuredangle EOZ$.
-The pair $(\rho,\theta)$ is called the \index{polar!coordinates}\emph{polar coordinates} of~$Z$.
+Set $\rho=OZ$ and $\theta=\measuredangle EOZ$;
+these are called the \index{polar!coordinates}\emph{polar coordinates} of the point~$Z$.
 
 If $z$ is the complex coordinate of $Z$, then $\rho=|z|$. 
 The value $\theta$ is called the \index{argument}\emph{argument} of $z$
@@ -235,16 +235,16 @@ Show that
 The following theorem is a translation of Corollary~\ref{cor:inscribed-quadrangle} into complex-number language.
 
 \begin{thm}{Theorem}\label{thm:inscribed-quadrangle-C}
-Let $\square UVWZ$ be a quadrangle and $u$, $v$, $w$, and $z$ be the complex coordinates of its vertices. 
-Then $\square UVWZ$ is inscribed 
+Let $a$, $b$, $c$, and $d$ be the complex coordinates of vertices of $\square ABCD$.
+Then $\square ABCD$ is inscribed
 if and only if the number
-$$\frac{(v-u)\cdot(z-w)}{(v-w)\cdot(z-u)}$$ 
+$$\frac{(a-b)\cdot(c-d)}{(a-d)\cdot(c-b)}$$
 is real.
 \end{thm}
 
-The value $\frac{(v-u)\cdot(w-z)}{(v-w)\cdot(z-u)}$ is called the 
-\index{cross-ratio!complex cross-ratio}\emph{complex cross-ratio} of $u$, $w$, $v$, and $z$; 
-it will be denoted by \index{64@$(u,v;w,z)$}$(u,w;v,z)$.
+The value $\frac{(a-b)\cdot(c-d)}{(a-d)\cdot(c-b)}$ is called the
+\index{cross-ratio!complex cross-ratio}\emph{complex cross-ratio} of $a$, $c$, $b$, and $d$;
+it will be denoted by \index{64@$(u,v;w,z)$}$(a,c;b,d)$.
 
 
 
@@ -263,7 +263,7 @@ The following problem illustrates the method of complex coordinates.
 \begin{thm}{Problem}\label{prob:2right-tringles}
 Let $\triangle OPV$ and $\triangle OQW$ be isosceles right triangles such that 
 \[\measuredangle VPO=\measuredangle OQW=\tfrac\pi2\] 
-and $M$ be the midpoint of $[VW]$.
+and let $M$ be the midpoint of $[VW]$.
 Assume $P$, $Q$, and $M$ are distinct points.
 Show that  $\triangle PMQ$ is an isosceles right triangle.
 \end{thm}
@@ -358,7 +358,7 @@ Watch the video ``Möbius transformations revealed'' by Douglas Arnold and Jonat
 
 The complex plane $\mathbb{C}$ extended by one ideal number $\infty$ 
 is called the \index{extended complex plane}\emph{extended complex plane}.
-It is denoted by $\hat{\mathbb{C}}$, so $\hat{\mathbb{C}}=\mathbb{C}\cup\{\infty\}$
+It is denoted by $\hat{\mathbb{C}}$, so $\hat{\mathbb{C}}=\mathbb{C}\cup\{\infty\}$.
 
 A \index{fractional linear transformation}\emph{fractional linear transformation} or \index{M\"obius transformation}\emph{M\"obius transformation} of  $\hat{\mathbb{C}}$ is a function of one complex variable $z$
 that can be written as
@@ -387,7 +387,7 @@ The following three types of fractional linear transformations are called \index
 \parbf{The geometric interpretations.}
 Suppose that $O$ denotes the point with the complex coordinate~$0$.
 
-The first map $z\mapsto z+w,$ corresponds to the so-called 
+The first map $z\mapsto z+w$ corresponds to the so-called
 \index{parallel!translation}\emph{parallel translation} 
 of the Euclidean plane; its geometric meaning should be evident.
 
@@ -600,7 +600,7 @@ Recall that hyperbolic tangent $\tanh$ is defined in Section~\ref{sec:hyp-trig}.
 \begin{thm}{Exercise}\label{ex:schwarz-tanh}
 Show that 
 \[\tanh [\tfrac12\cdot d_h(z,w)]=\left|\frac{z-w}{1-z\cdot\bar w}\right|.\]
-Conclude that the inequality in Schwarz--Pick theorem can be rewritten as
+Conclude that the inequality in the Schwarz--Pick theorem can be rewritten as
 \[\left|\frac{z'-w'}{1-z'\cdot\bar w'}\right|\le\left|\frac{z-w}{1-z\cdot\bar w}\right|,\]
 where
 $z'=f(z)$ and $w'=f(w)$.

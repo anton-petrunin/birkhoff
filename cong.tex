@@ -58,7 +58,7 @@ $\triangle A' B' C''\cong \triangle A B C$.
 Applying Axiom~\ref{def:birkhoff-axioms:3} again,
 we get that
 $$\measuredangle A' B' C'' = \measuredangle A B C=\measuredangle A' B' C'.$$
-By Axiom~\ref{def:birkhoff-axioms:2a}, $[B'C')=[B C'')$. 
+By Axiom~\ref{def:birkhoff-axioms:2a}, $[B' C')=[B' C'')$.
 Hence
 $C''$ lies on $(B' C')$ as well as on~$(A' C')$.
 
@@ -84,19 +84,23 @@ Moreover, the converse holds if $\triangle A B C$ is nondegenerate.
 
 The following proof is due to Pappus of Alexandria.
 
+
+
+\parit{Proof.}
+Note that
+$$
+\measuredangle A C B \equiv -\measuredangle B C A,
+\quad
+C A = C B,
+\quad \text{and therefore}\quad
+C B=C A.$$
+
 \begin{wrapfigure}[9]{r}{25mm}
 \vskip-4mm
 \centering
 \includegraphics{mppics/pic-38}
 \end{wrapfigure}
 
-\parit{Proof.}
-Note that
-$$C A = C B,
-\quad 
-C B=C A,
-\quad
-\measuredangle A C B \equiv -\measuredangle B C A.$$
 By Axiom~\ref{def:birkhoff-axioms:3},
 $$\triangle C A B\cong\triangle C B A.$$
 Applying the theorem on the signs of angles of triangles (\ref{thm:signs-of-triug}) and Axiom~\ref{def:birkhoff-axioms:3} again,
@@ -292,15 +296,9 @@ Another triple is called {}\emph{angle-angle-angle}, or briefly AAA.
 By Axiom~\ref{def:birkhoff-axioms:4}, it is not a congruence condition in the Euclidean plane.
 However, in the hyperbolic plane it is; see \ref{thm:AAA}.
 
-\section{Constructions}
-
-The construction problems provide a valuable source of exercises in geometry,
-which we will use further in the book.
-Chapter~\ref{chap:car} will be devoted to the subject.
-
 {
 
-\begin{wrapfigure}{o}{33mm}
+\begin{wrapfigure}{r}{33mm}
 \vskip-8mm
 \centering
 \includegraphics{mppics/pic-445}
@@ -314,8 +312,14 @@ Chapter~\ref{chap:car} will be devoted to the subject.
 \includegraphics{mppics/pic-449}
 \end{wrapfigure}
 
+\section{Constructions}
+
+The construction problems provide a valuable source of exercises in geometry,
+which we will use further in the book.
+Chapter~\ref{chap:car} will be devoted to the subject.
+
 A \index{ruler-and-compass construction}\emph{ruler-and-compass construction} is a construction with an idealized ruler and compass.
-The idealized ruler can be used only to draw a line thru the given two points.
+The idealized ruler can be used only to draw a line thru two given points.
 The idealized compass can be used only to draw a circle with a given center and radius.
 That is, given three points $A$, $B$, and $O$
 we can draw the circle of radius $AB$ centered at~$O$.
@@ -343,12 +347,16 @@ The stages of the following construction are shown in the picture.
 \item Draw the line $(PM)$ and mark by $P'$ its other point of intersection with the circle.
 Similarly, draw $(QM)$ and mark the other intersection point by $Q'$.
 \item Draw the line $\ell'=(P'Q')$ and mark by $A$ its point of intersection with $m$ (if it exists).
+\end{enumerate}
+
+}
+
+\begin{enumerate}[1.]\setcounter{enumi}{3}
 \item Draw the line $(MA)$;
 mark by $B$ its point of intersection with $\ell$.
 Then $[AB]$ is the required segment.
 \end{enumerate}
 
-}
 
 It is often required to do \emph{problem analysis}:
 to prove that the result of the construction satisfies the required conditions and also to determine when the construction is possible and how many solutions may exist.

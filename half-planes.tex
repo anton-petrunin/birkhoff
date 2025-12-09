@@ -70,7 +70,7 @@ it should be covered in any calculus course.
 We will use only the following corollary:
 
 \begin{thm}[\abs]{Corollary}\label{cor:intermidiate}
-Assume that for any $t\z\in [0,1]$ we have three points in the plane  $O_t$, $A_t$, and $B_t$, such that 
+Assume that for any $t\z\in [0,1]$ we have three points $O_t$, $A_t$, and $B_t$ in the plane such that
 \begin{enumerate}[(a)]
 \item Each function $t\mapsto O_t$, $t\mapsto A_t$, and $t\z\mapsto B_t$ is continuous.
 \end{enumerate}
@@ -227,7 +227,7 @@ Without loss of generality, we can assume $Z\ne P$.
 
 Note that $Z$ lies between $X$ and $Y$.
 According to Lemma~\ref{lem:straight-sign}, $\angle PZX$ and $\angle PZY$ have opposite signs.
-It proves the statement if $Z=Q$.
+This proves the statement if $Z=Q$.
 
 If $Z\ne Q$, then $\angle ZQX$ and $\angle QZX$ have opposite signs by \ref{thm:signs-of-triug}.
 In the same way, we get that $\angle ZQY$ and $\angle QZY$ have opposite signs.
@@ -384,7 +384,7 @@ is a continuous map from $[0,\pi]$ to the plane.
 \parit{Proof of Theorem~\ref{thm:abc} modulo Proposition~\ref{prop:C-cont}.}\label{page:proof:thm:abc}
 Fix the points $A$ and $B$ such that $AB=c$.
 Given $\beta\in [0,\pi]$,
-suppose that $C_\beta$ denotes the point in the plane such that $BC_\beta\z=a$ and $\measuredangle ABC=\beta$.
+suppose that $C_\beta$ denotes the point such that $BC_\beta\z=a$ and $\measuredangle ABC_\beta=\beta$.
 
 According to \ref{prop:C-cont},
 the map
@@ -402,25 +402,27 @@ hence the result.
 
 The proof of Proposition~\ref{prop:C-cont} relies on the following lemma.
 
-Assume $r>0$ and $\pi>\beta>0$.
+
+{
+
+\begin{wrapfigure}{o}{22mm}
+\vskip-2mm
+\centering
+\includegraphics{mppics/pic-32}
+\end{wrapfigure}
+
+Assume $r>0$ and $0<\beta<\pi$.
 Consider the triangle $ABC$ such that 
 $AB=BC=r$ and $\measuredangle ABC=\beta$.
 The existence of such a triangle follows from Axiom~\ref{def:birkhoff-axioms:2a} and Exercise~\ref{ex:trig==}.
 By Axiom~\ref{def:birkhoff-axioms:3},
 the values
-$\beta$ and~$r$ define the triangle $ABC$ up to congruence.
-In particular, the distance $AC$ depends only on $\beta$ and~$r$.
+$\beta$ and~$r$ determine $\triangle ABC$ up to congruence.
+In particular, the distance $AC$ depends only on $\beta$ and~$r$;
+thus, we can consider the function $s$ defined by
+$$s(r,\beta)\df AC.$$
 
-{
-
-\begin{wrapfigure}{o}{22mm}
-\vskip-5mm
-\centering
-\includegraphics{mppics/pic-32}
-\end{wrapfigure}
-
-Let
-$$s(\beta,r)\df AC.$$
+}
 
 \begin{thm}[\abs]{Lemma}\label{lem:f(r,a)}
 Given $r>0$ and $\epsilon>0$, there is $\delta>0$ such that
@@ -428,7 +430,7 @@ Given $r>0$ and $\epsilon>0$, there is $\delta>0$ such that
 
 \end{thm}
 
-}
+
 
 {
 

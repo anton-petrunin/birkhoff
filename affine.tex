@@ -17,7 +17,7 @@ So, one can say that affine geometry studies the properties of the Euclidean pla
 Show that an affine transformation of the Euclidean plane sends every pair of parallel lines to a pair of parallel lines.
 \end{thm}
 
-The observation below follows since the lines are defined using the metric only.
+The observation below follows because lines are defined using only the metric.
 
 \begin{thm}{Observation}
 Any motion of the Euclidean plane is an affine transformation.
@@ -66,10 +66,10 @@ Show that $\alpha$ is an affine transformation.
 
 Let us consider geometric constructions with a ruler and a \index{parallel!tool}\emph{parallel tool};
 the latter allows us to draw a line thru a given point parallel to a given line.
-(One may think of the tool on the figure.
+(One may think of the tool in the figure.
 It consists of two straight edges joined by two arms that can move while remaining parallel to each other.)
 
-By Exercisers~\ref{ex:affine-par}, any construction with these two tools is invariant with respect to affine transformations.
+By Exercise~\ref{ex:affine-par}, any construction with these two tools is invariant with respect to affine transformations.
 For example, 
 to solve the following exercise,
 it is sufficient to prove that the midpoint of a given segment can be constructed with a ruler and a parallel tool.
@@ -128,22 +128,19 @@ Then, for every triple of points $O$, $X$, $P$, we have
 Observe that the affine transformations described in Exercise~\ref{ex:afine-linear}, as well as all motions, satisfy the condition \ref{eq:OP=tOX}.
 Therefore a given affine transformation $P\mapsto P'$ satisfies \ref{eq:OP=tOX} if and only if its composition with motions and rescalings satisfies \ref{eq:OP=tOX}.
 
-Applying this observation, we can reduce the problem to its partial case.
+Applying this observation, we can reduce the problem to a special case.
 Namely, we may assume that $O'=O$, $X'=X$, the point $O$ is the origin of a coordinate system, and $X$ has coordinates $(1,0)$.
 
 In this case, $\overrightarrow{OP}=t\cdot \overrightarrow{OX}$ if and only if $P=(t,0)$.
 Since $O$ and $X$ are fixed, the transformation maps the $x$-axis to itself.
 That is, $P'=(f(t),0)$ for a function $t\mapsto f(t)$,
-or, equivalently, $\overrightarrow{O'P'}=f(t)\cdot \overrightarrow{O'X'}$.
-It remains to show that 
-\[f(t)=t
-\eqlbl{eq:f(x)=x}\]
-for any $t$.
+or, equivalently,
+\[\overrightarrow{O'P'}=f(t)\cdot \overrightarrow{O'X'}.\]
 
-Since $O'=O$ and $X'=X$, we get that $f(0)=0$ and $f(1)=1$.
-Furthermore, according to Exercise~\ref{ex:R-hom}, we have that 
+Since $O'=O$ and $X'=X$, we get $f(0)=0$ and $f(1)=1$.
+Furthermore, according to Exercise~\ref{ex:R-hom}, we have
 $f(x\cdot y)=f(x)\cdot f(y)$ and $f(x+y)=f(x)+f(y)$ for any $x,y\in\mathbb{R}$.
-By the algebraic lemma (proved below, see \ref{lem:R-auto}), these conditions imply \ref{eq:f(x)=x}.
+By the algebraic lemma (proved below, see \ref{lem:R-auto}), these conditions imply that $f(t)=t$ for any~$t$, which completes the proof.
 \qeds
 
 \begin{thm}{Fundamental theorem of affine geometry}\label{thm:fundamental-theorem-of-affine-geometry}\index{Fundamental theorem of affine geometry}
@@ -237,14 +234,14 @@ For the field of complex numbers, the conjugation $z\mapsto\bar z$ (see Section~
 \begin{thm}{Exercise}\label{ex:f(1)=1}
 Suppose that $f\:\mathbb{R}\to\mathbb{R}$ satisfies the condition (\ref{lem:R-auto:c}) in the lemma.
 Show that 
-\begin{enumerate}[(a)]
+\begin{enumerate}[(i)]
  \item if $f(1)\ne 1$, then $f(x)=0$ for any $x$;
   \item if $f(0)\ne 0$, then $f(x)=1$ for any $x$.
 \end{enumerate}
 \end{thm}
 
 
-\parit{Proof.}
+\parit{Proof of \ref{lem:R-auto}.}
 By \textit{(\ref{lem:R-auto:b})} we have
 $f(0)+f(0)=f(0+0)=f(0)$.
 Therefore,
@@ -286,7 +283,7 @@ and hence $f(a)\ge 0$.
 \raggedcolumns\setlength{\multicolsep}{.5mm}
 \setlength{\columnseprule}{1pt}
 \begin{multicols}{2}
-That is,
+In particular,
 \[a\ge 0\quad\Longrightarrow\quad f(a)\ge 0.\eqlbl{a>0=>b>0}\]
 
 \columnbreak
@@ -343,7 +340,7 @@ that is, \textit{if $A$, $B$, and $X$ are distinct points on one line, then the 
 
 \begin{thm}{Menelaus's theorem}\index{Menelaus's theorem}
 Let $ABC$ be a nondegenerate triangle.
-Suppose a line $\ell$ crosses the lines $(BC)$, $(CA)$, and $(AB)$ at three distinct points points $A'$, $B'$, and $C'$.
+Suppose a line $\ell$ crosses the lines $(BC)$, $(CA)$, and $(AB)$ at three distinct points $A'$, $B'$, and $C'$.
 Then 
 \[\frac{AC'}{BC'}\cdot\frac{BA'}{CA'}\cdot \frac{CB'}{AB'}=1.\]
 \end{thm}
@@ -375,7 +372,7 @@ Therefore,
 
 \begin{thm}{Exercise}\label{thm:ceva-affine}\label{ex:ceva-affine}
 Let $ABC$ be a nondegenerate triangle.
-Suppose three distinct points points $A'$, $B'$, and $C'$ lie on the lines $(BC)$, $(CA)$, and $(AB)$ respectively.
+Suppose three distinct points $A'$, $B'$, and $C'$ lie on the lines $(BC)$, $(CA)$, and $(AB)$ respectively.
 Assume that the lines $(AA')$, $(BB')$ and $(CC')$ meet at a point $X$.
 
 \begin{wrapfigure}{r}{31mm}
@@ -397,8 +394,8 @@ Use Menelaus's theorem to prove the following.
 }
 
 \parbf{Signed versions.}
-These three theorems can be formulated in a more precisely way by taking the ratios $\frac{AC'}{BC'}$, $\frac{BA'}{CA'}$, and $\frac{CB'}{AB'}$ with sign.
-Namely, given distinct points $A$, $B$, and $X$ on a line, let us define the \index{signed ratio}\emph{signed ratio} $(\frac{AX}{BX})\df\pm\frac{AX}{BX}$, where the sign is chosen to meet the equation
+These three theorems can be formulated in a more precise way by taking the ratios $\frac{AC'}{BC'}$, $\frac{BA'}{CA'}$, and $\frac{CB'}{AB'}$ with sign.
+Namely, given distinct points $A$, $B$, and $X$ on a line, let us define the \index{signed ratio}\emph{signed ratio} $(\frac{AX}{BX})\df\pm\frac{AX}{BX}$, where the sign is chosen so that
 $\overrightarrow{AX}=\left(\frac{AX}{BX}\right)\cdot \overrightarrow{BX}$.
 Equivalently, $(\frac{AX}{BX})<0$ if and only if $X$ lies between $A$ and $B$.
 

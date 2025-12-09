@@ -48,10 +48,10 @@ $$AB
 \sqrt{(x_A-x_B)^2+(y_A-y_B)^2+(z_A-z_B)^2}.$$
 The obtained metric space is called \index{Euclidean!space}\emph{Euclidean space}.
 
-A subset of points in $\mathbb{R}^3$ is called a \index{plane!plane in the space}\emph{plane} if it can be
+A subset of points in $\mathbb{R}^3$ is called a \index{plane!in space}\emph{plane} if it can be
 described by an equation of the form
 $$a\cdot x+b\cdot y+c\cdot z+d=0,$$ 
-where $a$, $b$, $c$, and $d$ are constants, and at least one of the values $a$, $b$ or $c$ is distinct from zero.
+where $a$, $b$, $c$, and $d$ are constants, and at least one of the values $a$, $b$ or $c$ is nonzero.
 
 It is straightforward to show the following:
 \begin{itemize}
@@ -111,7 +111,7 @@ The perspective projection is a restriction of the composition of two bijections
 By Observation~\ref{obs:bijections}, the perspective projection can be extended to a bijection $\hat \Pi\leftrightarrow\hat \Pi'$ that sends lines to lines.%
 \footnote{A similar story happened with inversion.
 Inversion is not defined at its center;
-moreover, the center is not an the inverse of any point.
+moreover, the center is not an inverse of any point.
 To deal with this problem, we introduced the inversive plane, 
 which is the Euclidean plane extended by one ideal point.
 The same strategy works for the perspective projection $\Pi\to\Pi'$, but this time we need to add an ideal line.}
@@ -148,7 +148,7 @@ we have to observe that
 
 A bijection from the projective plane to itself 
 that sends lines to lines 
-is called \index{projective!transformation}\emph{projective transformation}.
+is called a \index{projective!transformation}\emph{projective transformation}.
 
 Any affine transformation defines  a projective transformation on the corresponding projective plane.
 We will call such projective transformations \index{affine transformation}\emph{affine}; 
@@ -160,7 +160,7 @@ provides another source of examples of projective transformations.
 \begin{thm}{Theorem}\label{thm:moving}
 Given a line $\ell$ in the projective plane, there is a perspective projection that sends $\ell$ to the ideal line.
 
-Moreover, a perspective transformation is either affine or, in a suitable coordinate system, it can be written as a composition of the extension of perspective projection 
+Moreover, a projective transformation is either affine or, in a suitable coordinate system, it can be written as a composition of the extension of the perspective projection
 \[\beta\:(x,y)\mapsto (\tfrac xy,\tfrac 1y)\]
 and an affine transformation.
 \end{thm}
@@ -171,7 +171,7 @@ Then the extension of $\beta$ gives the needed transformation.
 
 Fix a projective transformation $\gamma$.
 If $\gamma$ sends the ideal line to itself,
-then it must to be affine. 
+then it must be affine.
 In this case, the theorem is proved.
 
 Suppose $\gamma$ sends the ideal line to a line $\ell$.
@@ -226,7 +226,7 @@ Use part (\ref{ex:proj-cross-ratio=1:=}) to show that
 \includegraphics{mppics/pic-234}
 \end{wrapfigure}
 
-Theorem~\ref{thm:moving} allows us declare that a given line is ideal.
+Theorem~\ref{thm:moving} allows us to declare that a given line is ideal.
 In other words, we can choose a preferred affine plane by removing one line from the projective plane.
 This construction provides a method for solving problems in projective geometry 
 which will be illustrated by the following classical example:
@@ -256,7 +256,7 @@ That is, we can assume that
 and we need to show that 
 \[(AB)\z\parallel(A'B').\]
 
-Assume that the lines $(AA')$, $(BB')$, and $(CC')$ intersect at point~$O$.
+Assume that the lines $(AA')$, $(BB')$, and $(CC')$ intersect at a point~$O$.
 Since $(BC)\z\parallel (B'C')$, 
 the transversal property (\ref{thm:parallel-2}) implies that $\measuredangle OBC\z= \measuredangle OB'C'$ and $\measuredangle OCB\z= \measuredangle OC'B'$.
 By the AA similarity condition, $\triangle OBC\z\sim\triangle OB'C'$.
@@ -290,9 +290,7 @@ Hence $\square B'BAA'$ is a parallelogram and $(AB)\parallel (A'B')$.
 Here is another classical theorem of projective geometry.
 
 \begin{thm}{Pappus' theorem}\label{thm:pappus}\index{Pappus' theorem}
-Assume that two triples of points $A$, $B$, $C$,
-and $A'$, $B'$, $C'$ are collinear.
-Let $X$, $Y$, and $Z$ be the intersection points of $(BC')$ and $(B'C)$, $(CA')$ and $(C'A)$,
+Let $A$, $B$, $C$ and $A'$, $B'$, $C'$ be two triples of collinear points, and let $X$, $Y$, and $Z$ be the intersection points of $(BC')$ and $(B'C)$, $(CA')$ and $(C'A)$,
 and $(AB')$ and $(A'B)$, respectively.
 Then the points $X$, $Y$, $Z$ are collinear.
 \end{thm}
@@ -345,7 +343,7 @@ Construct another line parallel to $\ell$ with a ruler only.
 
 \section{Duality}
 
-Assume $P\leftrightarrow p$ is a bijection between the set of lines and the set of points of a plane is given.
+Assume a bijection $P\leftrightarrow p$ between the set of lines and the set of points of a plane is given.
 \begin{figure}[!ht]
 \centering
 \includegraphics{mppics/pic-242}
@@ -365,7 +363,7 @@ if
 \quad
 \iff
 \quad 
-p\ni L.\]
+p\ni L\]
 for any point $P$ and line~$\ell$.
 
 {
@@ -407,7 +405,7 @@ Recall that $\Phi$ and $\Psi$ denote the set of all lines and planes passing thr
 By \ref{obs:bijections}, there are bijections $P\leftrightarrow\dot P$  between points of $\hat\Pi$ and $\Phi$ and $\ell\leftrightarrow\dot\ell$ between lines in $\hat\Pi$ and $\Psi$ such that 
 $P\in\ell$ if and only if $\dot P\subset \dot \ell$.
 
-It remains to construct a bijection $\dot \ell \leftrightarrow \dot L$
+It remains to construct a bijection $\dot L \leftrightarrow \dot \ell$
 between $\Phi$ and $\Psi$ 
 such that 
 \[\dot P\subset \dot \ell
@@ -430,7 +428,7 @@ Given a point $P\ne O$ with coordinates $(a,b)$ consider the line $p$
 given by the equation 
 $a\cdot x+b\cdot y=1$.
 
-Show that the correspondence $P$ to $p$ can be extended to a duality of the projective plane.
+Show that the correspondence $P\mapsto p$ can be extended to a duality of the projective plane.
 
 Which line corresponds to $O$?
 
@@ -527,6 +525,6 @@ Construct the common center of $\Gamma$ and $\Gamma'$ using only a ruler.
 \begin{thm}{Exercise}\label{ex:proj-perp}
 Assume a line $\ell$ and a circle $\Gamma$ with its center $O$ are given.
 Suppose $O\notin \ell$.
-Construct a perpendicular from $O$ on $\ell$ using only a ruler.
+Construct a perpendicular from $O$ to $\ell$ using only a ruler.
 \end{thm}
 

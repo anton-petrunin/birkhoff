@@ -2,7 +2,7 @@
 
 The \textit{projective model} is another model of the hyperbolic plane discovered by Eugenio Beltrami; it is often called the {}\emph{Klein model}.
 The projective and conformal models are saying exactly the same thing but in two different languages.
-Some problems  are easier in projective model, and others in the conformal model.
+Some problems  are easier in the projective model, and others in the conformal model.
 Therefore, it is worth knowing both. 
 
 \section{A special bijection on the h-plane}
@@ -31,11 +31,11 @@ Set $S\z=(0,0,-1)$ and $N\z=(0,0,1)$;
 these are the south and north poles of~$\Sigma$.
 
 Consider the stereographic projection $\Pi\to\Sigma$ from $S$;
-given a point $P\in\Pi$ denote by $P'$ its image in $\Sigma$.
+given a point $P\in\Pi$, denote by $P'$ its image in $\Sigma$.
 Note that the  h-plane is mapped to the {}\emph{northern half-sphere},
 that is, to the set of points $(x,y,z)$ in $\Sigma$ described by the inequality~$z>0$.
 
-For a point $P'\in \Sigma$ consider its footpoint $\hat P$
+For a point $P'\in \Sigma$, consider its footpoint $\hat P$
 on $\Pi$;
 this is the closest point to~$P'$.
 
@@ -96,7 +96,7 @@ Note that
 $A,B,P'\in\Gamma$,
 \item $[AB]$ is a diameter of $\Gamma$,
 \item $(AB)=\Pi\cap\Lambda$,
-\item $\hat P\in [AB]$
+\item $\hat P\in [AB]$,
 \item $(P'\hat P)\perp (AB)$.
 \end{itemize}
 
@@ -146,7 +146,7 @@ Show that the chords $[A_1B_1]$, $[A_2B_2]$, and $[A_3B_3]$ intersect at one poi
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:P<->hatP}
-Show that $2\cdot OP_h=O\hat P_h$, where $O$ is the center of absolute, and $P\leftrightarrow \hat P$ is the bijection of the h-plane described above.
+Show that $2\cdot OP_h=O\hat P_h$, where $O$ is the center of the absolute, and $P\leftrightarrow \hat P$ is the bijection of the h-plane described above.
 \end{thm}
 
 
@@ -175,16 +175,8 @@ This observation can be used to transfer statements about lines and points from 
 As an example let us state a version of Pappus' theorem for h-plane.
 
 \begin{thm}{Hyperbolic Pappus' theorem}\label{thm:pappus-h}\index{Pappus' theorem}
-Assume that two triples of h-points $A$, $B$, $C$,
-and $A'$, $B'$, $C'$ in the h-plane are h-collinear.
-Suppose that the h-points $X$, $Y$, and $Z$ are uniquelly defined by
-\begin{align*}
-X&\in(BC')_h\cap(B'C)_h,
-&
-Y&\in(CA')_h\cap(C'A)_h,
-&
-Z&\in(AB')_h\cap(A'B)_h.
-\end{align*}
+Let $A$, $B$, $C$ and $A'$, $B'$, $C'$ be two triples of h-collinear h-points, and let $X$, $Y$, and $Z$ be the intersection points of $(BC')_h$ and $(B'C)_h$, $(CA')_h$ and $(C'A)_h$,
+and $(AB')_h$ and $(A'B)_h$, respectively.
 Then the points $X$, $Y$, $Z$ are h-collinear.
 \end{thm}
 
@@ -246,15 +238,15 @@ The motions of the h-plane in the conformal and projective models are relevant t
 Namely: 
 \begin{itemize}
 \item Inversive transformations that preserve the h-plane describe motions of the h-plane in the conformal model.
-\item Projective transformations that preserve the h-plane describe motions of the h-plane in the projective model.\footnote{The idea described in the solution of Exercise~\ref{ex:cone}.
-The sketch of proof of \ref{thm:circle-center-proj} can be used to construct many projective transformations of this type.}
+\item Projective transformations that preserve the h-plane describe motions of the h-plane in the projective model.\footnote{Exercise~\ref{ex:cone}
+gives a rich source of such projective transformations, which will be used in the proof of \ref{thm:circle-center-proj}.}
 \end{itemize}
 
 The following exercise is a hyperbolic analog of Exercise~\ref{ex:s-medians}. 
 
 \begin{thm}{Exercise}\label{ex:h-median}
 Let $P$ and $Q$ be points in the h-plane that lie at the same distance from the center of the absolute.
-Observe that in the projective model, the h-midpoint of $[PQ]_h$ coincides with the Euclidean midpoint of $[PQ]_h$.
+Observe that in the projective model, the h-midpoint of $[PQ]_h$ coincides with the Euclidean midpoint of $[PQ]$.
 
 Conclude that if an h-triangle is inscribed in an h-circle, then its medians meet at one point.
 
@@ -297,14 +289,14 @@ Use the projective model to find an inradius of an ideal triangle.
 Prove the hyperbolic Pythagorean theorem (\ref{thm:pyth-h-poincare}) using the following idea.
 \end{thm}
 
-Recall that the hyperbolic Pythagorean theorem\index{Pythagorean theorem} (\ref{thm:pyth-h-poincare}) states that
+Recall that the hyperbolic Pythagorean theorem\index{Pythagorean theorem} (\ref{thm:pyth-h-poincare})
+states that if $\triangle_hACB$ is an h-triangle with a right angle at~$C$, then
 \[\cosh c=\cosh a\cdot\cosh b,
 \eqlbl{eq:hyp-pyth-proj}\]
-where $a\z=BC_h$, $b=CA_h$, and $c=AB_h$ and
-$\triangle_hACB$ is an h-triangle with a right angle at~$C$.
+where $a\z=BC_h$, $b=CA_h$, and $c=AB_h$.
 
 \begin{wrapfigure}{r}{34mm}
-\vskip-6mm
+\vskip-12mm
 \centering
 \includegraphics{mppics/pic-268}
 \end{wrapfigure}

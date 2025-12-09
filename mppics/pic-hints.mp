@@ -343,7 +343,7 @@ label.top (btex $A$ etex, z.A);
 label.llft (btex $B$ etex, z.B);
 label.lrt (btex $C$ etex, z.C);
 label.ulft (btex $P$ etex, z.P+(1,-1));
-label.urt (btex $A'$ etex, z.AA+(-1,0));
+label.bot (btex $A'$ etex, z.AA+(-2,0));
 endfig;
 
 beginfig(338)
@@ -1032,6 +1032,7 @@ arcs(z.A,z.C,z.B,10);
 arcs(z.A,z.B,z.X,10);
 arcs2(z.C,z.X,z.B,6);
 arcs2(z.C,z.B,z.X,6);
+arcs2(z.D,z.E,z.B,6);
 
 draw circle(z.O,z.B);
 draw z.A--z.B--z.C--z.D--z.E--cycle;
