@@ -1915,6 +1915,39 @@ label.llft (btex $Y$ etex, z.Y);
 
 endfig;
 
+beginfig(127)
+save u;
+u:=.7cm;
+
+z.X=(1,0)*u;
+z.Y=z.X xscaled -1;
+z.P=(2.1,2)*u;
+z.PP=(1.2,2)*u;
+
+z.O=circumcenter(z.X, z.Y, z.PP);
+z.OO=circumcenter(z.X, z.Y, z.P);
+
+arcs(z.X,z.O,z.Y,10);
+arcs(z.X,z.OO,z.Y,10);
+
+draw circumcircle(z.X, z.Y, z.PP);
+draw circumcircle(z.X, z.Y, z.P) dashed evenly;
+
+draw z.X--z.O--z.Y--cycle;
+draw z.X--z.OO--z.Y dashed evenly;
+
+dOt z.X,z.Y,z.P,z.O,z.OO;
+
+label.top (btex $O'$ etex, z.OO);
+whitelabel.lft (btex $O$ etex, z.O);
+label.ulft (btex $\Gamma'$ etex, (-1)[z.OO,z.X]);
+label.ulft (btex $\Gamma$ etex, (-1)[z.O,z.X]);
+label.rt (btex $P$ etex, z.P);
+label.lrt (btex $X$ etex, z.X);
+label.llft (btex $Y$ etex, z.Y);
+
+endfig;
+
 beginfig(128)
 save u;
 u:=1.4cm;
@@ -2243,7 +2276,7 @@ draw z.A--z.C dashed evenly;
 dOt z.A,z.B,z.C,z.X,z.Y;
 
 label.bot (btex $A$ etex, z.A);
-label.bot (btex $B'$ etex, z.B);
+label.bot (btex $B$ etex, z.B);
 label.bot (btex $C$ etex, z.C);
 label.bot (btex $X$ etex, z.X);
 label.bot (btex $Y$ etex, z.Y);
@@ -2596,7 +2629,7 @@ endfig;
 
 beginfig(174)
 save u;
-u:=.9cm;
+u:=.8cm;
 z.O=origin;
 x.R=2*u;
 
@@ -2660,7 +2693,7 @@ z.A=(0,0)*u;
 z.P1=(.6,.3)*u;
 z.P2=(-.5,.5)*u;
 z.C1=(.2,1)*u;
-z.C2=(.2,2)*u;
+z.C2=(.2,1.6)*u;
 
 drawarrow cutcircle(circle(z.A,12), z.P1, z.P2);
 

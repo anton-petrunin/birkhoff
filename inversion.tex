@@ -8,19 +8,20 @@ In this case, the circle $\Omega$ will be called the
 and its center $O$ is called the \index{inversion!center of inversion}\emph{center of inversion}.
 
 The inverse of $O$ is undefined.
-
 If $P$ is inside $\Omega$, then $P'$ is outside and the other way around. 
 Furthermore, $P=P'$ if and only if $P\in \Omega$.
+Note that the inversion maps $P'$ back to~$P$.
+
 
 {
 
 \begin{wrapfigure}{r}{37mm}
-\vskip-6mm
+\vskip-9mm
 \centering
 \includegraphics{mppics/pic-158}
 \end{wrapfigure}
 
-Note that the inversion maps $P'$ back to~$P$.
+
 
 \begin{thm}{Exercise}\label{ex:constr-inversion}
 Let $\Omega$ be a circle centered at~$O$.
@@ -50,18 +51,20 @@ $$\begin{aligned}
 
 \parit{Proof.}
 Let $r$ be the radius of the circle of inversion.
-
-\begin{wrapfigure}[12]{r}{32mm}
-\centering
-\includegraphics{mppics/pic-160}
-\end{wrapfigure}
-
-By the definition of an inversion, 
+By the definition of an inversion,
 \begin{align*}
 OA\cdot OA'=OB\cdot OB'=r^2.
 \end{align*}
-Therefore, 
+Therefore,
 $$\frac{OA}{OB'}=\frac{OB}{OA'}.$$
+
+{
+
+\begin{wrapfigure}{r}{32mm}
+\vskip-10mm
+\centering
+\includegraphics{mppics/pic-160}
+\end{wrapfigure}
 
 Clearly,
 $$\measuredangle AOB= \measuredangle A'OB'\equiv -\measuredangle B'OA'.\eqlbl{eq:-AOB}$$
@@ -71,6 +74,8 @@ $$\triangle O A B\z\sim\triangle O B' A'.$$
 Applying Theorem~\ref{thm:signs-of-triug} and \ref{eq:-AOB},
 we get \ref{eq:-angle}.
 \qeds
+
+}
 
 \begin{thm}{Exercise}%
 \label{ex:appolo-circ}
@@ -99,7 +104,7 @@ Construct an inverse of a given point across a given circle using ruler and comp
 
 \section{The cross-ratio}
 
-The following theorem lists quantities that do not change after inversion.
+The following theorem shows that two quantities are respected by inversion.
 
 \begin{thm}{Theorem}\label{lem:inverse-4-angle}
 Let $ABCD$ and $A'B'C'D'$  be two quadrangles
@@ -172,10 +177,10 @@ summing the four identities in \ref{eq:angle=-angle}, we get that
 Hence \textit{(\ref{lem:inverse-4-angle:angle})} follows.
 
 \parit{(\ref{lem:inverse-4-angle:inscribed}).}
-Follows from \textit{(\ref{lem:inverse-4-angle:angle})} and Corollary~\ref{cor:inscribed-quadrangle}.
+Follows from \textit{(\ref{lem:inverse-4-angle:angle})} and \ref{prop:inscribed-quadrangle}.
 \qeds
 
-\section{Inversive plane and circlines}
+\section{Inversive plane and circlines}\label{sec:inversive-plane-circline}
 
 Let $\Omega$ be a circle with the center $O$ and the radius~$r$.
 Consider the inversion across~$\Omega$.
@@ -194,9 +199,17 @@ means \textit{circle or line}.
 Therefore we may say 
 \textit{``if a circline contains $\infty$, then it is a line''} or \textit{``a circline that does not contain $\infty$  is a circle''}.
 
-According to Theorem~\ref{thm:circumcenter}, 
-for every $\triangle ABC$ there is a unique circline that passes thru $A$, $B$, and~$C$
-(if $\triangle ABC$ is degenerate, then this is a line, and if not it is a circle).
+\begin{wrapfigure}[2]{r}{43mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-148}
+\end{wrapfigure}
+
+It is also natural to assume that an arc contains $\infty$ if and only if it contains a half-line (in this case it must be an arc of a line).
+In the inversive plane, we may also consider arcs with an endpoint at $\infty$;
+in other words, a half-line, say $[AB)$, with $\infty$ will be regarded as an arc.
+
+According to Theorem~\ref{thm:circumcenter}, there is a unique circline that passes thru given distinct points $A$, $B$, and~$C$.
 
 \begin{thm}{Theorem}\label{thm:inverse-cline}
 In the inversive plane, the inverse of a circline is a circline.
@@ -208,7 +221,7 @@ Exercise~\ref{ex:inversions-inversive} gives a partial converse to the theorem.
 Let $O$ be the center of the inversion, and let $r$ be its radius.
 
 Choose a circline $\Gamma$ and three distinct points $A$, $B$, and $C$ on it.
-We may assume that $A \ne O$, $B \ne O$, and $C \ne O$.
+We may assume that $A$, $B$, and $C$ are distinct from $O$ and $\infty$.
 (If~$\triangle ABC$ is nondegenerate, then $\Gamma$ is the circumcircle of $\triangle ABC$; if $\triangle ABC$ is degenerate, then $\Gamma$ is the line passing thru $A$, $B$, and~$C$.)
 
 Let $A'$, $B'$, and $C'$ be the inverses of $A$, $B$, and $C$, respectively,
@@ -292,9 +305,10 @@ is inverted into a circle not passing thru~$O$.
 In the proof, we use Theorem~\ref{thm:inverse-cline} without mentioning it.
 
 \parit{(\ref{thm:inverse:line-line}).}
-If a line passes thru $O$, then it contains both $\infty$ and~$O$.
-Therefore, its inverse also contains $\infty$ and~$O$.
-In particular, the image is a line passing thru~$O$.
+If a line $\ell$ passes thru $O$, then its inverse $\ell'$ contains $\infty$.
+Thus $\ell'$ is a line.
+But both points of intersection in $\Omega\cap\ell$ are fixed by the inversion, so they must lie on $\ell'$.
+Hence $\ell'=\ell$.
 
 \parit{(\ref{thm:inverse:line}).}
 Since each line $\ell$ passes thru $\infty$, its image $\ell'$ has to contain~$O$.
@@ -319,14 +333,15 @@ we will not use it further in the book.
 
 \begin{thm}{Ptolemy's identity}\label{ptolemy-id}
 Let $ABCD$ be an inscribed quadrangle.
-Assume that points $A$, $B$, $C$, and $D$ appear on the circline in the same order.
+Assume that points $A$, $B$, $C$, and $D$ appear on the circline in the same cyclic order.
 Then 
 $$ AB\cdot CD+ BC\cdot DA=AC\cdot BD.$$
 
 \end{thm}
 
 \parit{Proof.}
-Assume the points $A$, $B$, $C$, and $D$ lie on one line in this order.
+If $A$, $B$, $C$, and $D$ lie on one line, then
+after a cyclic relabeling, we can assume that they occur in the order $A$, $B$, $C$, $D$.
 
 \begin{wrapfigure}{o}{39mm}
 \centering
@@ -498,10 +513,10 @@ By Theorem~\ref{thm:abc}, $\Gamma$ intersects $\Omega$.
 Suppose that $A$ denotes a point of intersection.
 
 Let $\Gamma'$ be the inverse of~$\Gamma$.
-Since $A$ is a self-inverse, the points $A$, $P$, and $P'$ lie on~$\Gamma'$.
+Since $A$ is self-inverse, the points $A$, $P$, and $P'$ lie on~$\Gamma'$.
 By Exercise~\ref{ex:unique-cline},
 $\Gamma'=\Gamma$
-and by Theorem~\ref{thm:perp-inverse}, $\Gamma\perp\Omega$.
+and by \ref{cor:perp-inverse-clines}, $\Gamma\perp\Omega$.
 \qeds
 
 \begin{thm}{Corollary}\label{cor:h-line} 
@@ -511,14 +526,14 @@ Then there is a unique circline $\Gamma$ perpendicular to $\Omega$ that passes t
 
 \parit{Proof.}
 Let $P'$ be the inverse of the point $P$ across the circle~$\Omega$.
-According to Corollary~\ref{cor:perp-inverse},
-if a circline that passes thru $P$ and $Q$ is perpendicular to $\Omega$, then it passes thru~$P'$, and the converse holds as well.
+According to \ref{cor:perp-inverse-clines},
+if a circline $\Gamma$ contains $P$ and $Q$ and is perpendicular to $\Omega$, then $\Gamma$ passes thru~$P'$, and by \ref{cor:perp-inverse} the converse holds as well.
 
 Note that $P'$ lies outside of~$\Omega$.
 Therefore, the points $P$, $P'$, and $Q$ are distinct.
-
 According to Exercise~\ref{ex:unique-cline},
-there is a unique circline passing thru $P$, $Q$, and~$P'$.
+there is a unique circline passing thru $P$, $Q$, and~$P'$.%
+\footnote{If the circline passes thru the center of inversion then it is the line $(PQ)$.}
 Hence the result.
 \qeds
 
@@ -560,67 +575,58 @@ Think what to do if two of the circles intersect.
 
 \section{Angles after inversion}
 
+
+The extended definition of an arc in Section~\ref{sec:inversive-plane-circline} makes it possible to formulate the following statement with no exceptional cases.
+
 \begin{thm}{Proposition}
 In the inversive plane, the inverse of an arc is an arc.
 
 \end{thm}
 
-\parit{Proof.} 
-Consider four distinct points $A$, $B$, $C$, and $D$; 
-let $A'$, $B'$, $C'$, and $D'$  be their inverses.
-We need to show that $D$ lies on the arc $ABC$ if and only if $D'$ lies on the arc $A'B'C'$.
-According to Proposition~\ref{prop:arcs},
-the latter is equivalent to the following:
-$$\measuredangle ADC= \measuredangle ABC
-\quad
-\iff
-\quad  
-\measuredangle A'D'C'= \measuredangle A'B'C'.$$
-The latter follows from Theorem~\ref{lem:inverse-4-angle}\textit{\ref{lem:inverse-4-angle:angle}}.
+\parit{Proof.}
+Suppose that $ABC$ is an arc of a circline $\Gamma$.
+Choose another circline $\Delta$ that passes thru $A$ and $C$.
+Recall that the arc is the set of points of $\Gamma$ that lies on one side of $\Delta$ together with the endpoints $A$ and $C$.
+
+Arguing by continuity as in the proof of \ref{lem:signsXY}, we see that inversion maps the two sides of a circline onto the two sides of its image.
+
+Therefore, the image of the arc is the set of points of $\Gamma'$ that lies on one side of $\Delta'$ together with the endpoints $A'$ and $C'$;
+here $\Gamma'$, $\Delta'$, $A'$, and $C'$ are inverses of $\Gamma$, $\Delta$, $A$, and $C$, respectively.
+
+By \ref{thm:inverse-cline}, $\Gamma'$ and $\Delta'$ are circlines.
+Hence we get a description of an arc, which proves the proposition.
 \qeds
 
-The following theorem states that the angle between arcs changes only its sign after the inversion.
-
-{
-
-\begin{wrapfigure}{r}{55mm}
-\vskip-6mm
-\centering
-\includegraphics{mppics/pic-174}
-\end{wrapfigure}
+The following theorem states that the measure of the angle between arcs changes only its sign after the inversion.
 
 \begin{thm}{Theorem}\label{thm:angle-inversion}
 Let $AB_1C_1$, $AB_2C_2$ be two arcs in the inversive plane,
 and let arcs $A'B_1'C_1'$, $A'B_2'C_2'$ be their inverses.
-Let $[AX_1)$ and $[AX_2)$ be the half-lines tangent to $AB_1C_1$ and  $AB_2C_2$ at $A$,
-and
-$[A'Y_1)$ and $[A'Y_2)$ be the half-lines tangent to $A'B_1'C_1'$ and  $A'B_2'C_2'$ at~$A'$.
+Assume that $A\ne\infty$ and $A'\ne\infty$.
+Let $\alpha$ be the measure of the angle from $AB_1C_1$ to $AB_2C_2$ at $A$,
+and let $\alpha'$ be the measure of the angle from $A'B_1'C_1'$ to $A'B_2'C_2'$ at $A'$.
 Then
-$$\measuredangle X_1AX_2\equiv-\measuredangle Y_1A'Y_2.$$
+$$\alpha\equiv-\alpha'.$$
 
 \end{thm}
 
-}
+We will present a proof based on Proposition~\ref{prop:arc(angle=tan)}; a more geometric proof can be built on \ref{ex:two-arcs}.
 
-{
-
-\begin{wrapfigure}[6]{o}{21mm}
-\vskip-6mm
+\begin{wrapfigure}{r}{51mm}
+\vskip-0mm
 \centering
-\includegraphics{mppics/pic-176}
+\includegraphics{mppics/pic-174}
 \end{wrapfigure}
 
-The \index{angle!between arcs}\emph{angle between arcs} can be defined as the angle between their tangent half-lines at the common endpoint.
-Therefore under inversion, the angles between arcs are preserved up to sign.
-
-
-From Exercise~\ref{ex:tangent-lim}, it follows that the angle between arcs with the common endpoint $A$ is the limit of $\measuredangle P_1AP_2$ where $P_1$ and $P_2$ are points approaching $A$ along the corresponding arcs. 
-This observation can be used to define the angle between a pair of curves emerging from one point.
-It turns out that under inversion, angles between curves are also preserved up to sign.
-
-}
-
 \parit{Proof.}
+Let $[AX_1)$ and $[AX_2)$ be the half-lines tangent to $AB_1C_1$ and  $AB_2C_2$ at $A$;
+so $\alpha=\measuredangle X_1AX_2$.
+
+Similarly, let
+$[A'Y_1)$ and $[A'Y_2)$ be the half-lines tangent to $A'B_1'C_1'$ and  $A'B_2'C_2'$ at~$A'$;
+so $\alpha'=\measuredangle Y_1A'Y_2$.
+
+After moving points $B_i$ and $C_i$ along the arcs closer to $A$, we may assume that all angles below are defined.
 By Proposition~\ref{prop:arc(angle=tan)},
 \begin{align*}
 \measuredangle X_1AX_2&\equiv\measuredangle X_1AC_1+\measuredangle C_1AC_2+\measuredangle C_2AX_2\equiv
@@ -648,7 +654,7 @@ By Theorem~\ref{lem:inverse-4-angle}\textit{\ref{lem:inverse-4-angle:angle}},
 and hence the result.\qeds
 
 \begin{thm}{Corollary}\label{cor:invese-comp}
-Let $P$ be the inverse of a point $Q$ across a circle $\Gamma$.
+Let $P$ be the inverse of a point $Q$ across a circle~$\Gamma$.
 Assume that $P'$, $Q'$, and $\Gamma'$ 
 are the inverses of  $P$, $Q$, and $\Gamma$ across another circle $\Omega$.
 Then $P'$ is the inverse  of $Q'$ across~$\Gamma'$.
@@ -667,7 +673,7 @@ If $P=Q$, then $P'=Q'\z\in\Gamma'$.
 Therefore, $P'$ is the inverse of $Q'$ across~$\Gamma'$.
 
 It remains to consider the case $P\z\ne Q$. 
-Let $\Delta_1$ and $\Delta_2$ be two distinct circles that intersect at $P$ and~$Q$.
+Let $\Delta_1$ and $\Delta_2$ be two distinct circlines that intersect at $P$ and~$Q$.
 According to Corollary~\ref{cor:perp-inverse}, 
 $\Delta_1\perp\Gamma$ and $\Delta_2\perp\Gamma$.
 

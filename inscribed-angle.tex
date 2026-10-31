@@ -74,18 +74,13 @@ $$\measuredangle XPY\equiv\tfrac12\cdot\measuredangle X O Y
 
 \end{thm}
 
-
-
 \begin{wrapfigure}{o}{33mm}
 \vskip-6mm
 \centering
 \includegraphics{mppics/pic-122}
 \vskip4mm
-\includegraphics{mppics/pic-124}
-\vskip4mm
-\includegraphics{mppics/pic-126}
+\includegraphics{mppics/pic-127}
 \end{wrapfigure}
-
 
 \parit{Proof; the ``only if'' part.}
 Let $(PQ)$ be the tangent line to $\Gamma$ at~$P$.
@@ -98,45 +93,35 @@ By Theorem~\ref{thm:tangent-angle},
 Subtracting one identity from the other, we get~\ref{eq:inscribed-angle}.
 
 \parit{``If'' part.}
-Assume that \ref{eq:inscribed-angle} holds for some $P\z\notin \Gamma$.
-Note that $\measuredangle X O Y\ne 0$. 
+Assume that \ref{eq:inscribed-angle} holds.
+Since $X\ne Y$, we have $\measuredangle X O Y\ne 0$.
 Therefore, $\measuredangle X P Y$ is neither $0$ nor $\pi$;
 that is, $\triangle PXY$ is nondegenerate.
+Let $\Gamma'$ be its circumcircle, centered at $O'$; both exist by \ref{ex:unique-cline}.
 
-The line $(PX)$ is tangent to $\Gamma$ at the point $X$, or it intersects $\Gamma$ at another point.
-In the latter case, suppose that $P'$ denotes this point of intersection. 
+We will show that $O'\z=O$ and therefore $\Gamma'\z=\Gamma$; once this is done, the ``if'' part follows.
 
-In the first case, by Theorem~\ref{thm:tangent-angle}, we have
-\begin{align*}
-2\cdot \measuredangle PXY&\equiv \measuredangle XOY\equiv 
- 2\cdot\measuredangle  XPY.
-\end{align*}
-Applying the transversal property (\ref{thm:parallel-2}), we get that
-$(XY)\parallel (PY)$, which is impossible since $\triangle PXY$ is nondegenerate.
-
-In the second case, 
-applying the ``if'' part and the fact that  $P$, $X$, and $P'$ lie on one line (see Exercise~\ref{ex:ABCO-line}) we get that
-\begin{align*}
-2\cdot \measuredangle P'PY&\equiv
-2\cdot \measuredangle XPY\equiv 
- \measuredangle  XOY\equiv
- \\
-&\equiv 2\cdot\measuredangle  XP'Y\equiv
- 2\cdot\measuredangle  PP'Y.
-\end{align*}
-Again, by the transversal property,
-$(PY)\z\parallel (P'Y)$, which is impossible since $\triangle PXY$ is nondegenerate.
+The ``only if'' part implies that
+\[
+\measuredangle XOY\equiv
+2\cdot\measuredangle XPY
+\equiv\measuredangle XO'Y.
+\]
+Since $OX=OY$ and $O'X=O'Y$, SAS implies that $\triangle XOY\sim \triangle XO'Y$.
+The side $[XY]$ is shared; therefore $\triangle XOY\z\cong \triangle XO'Y$;
+in particular, $XO=XO'$.
+Moreover, $\measuredangle OXY=\measuredangle O'XY$; see the first remark in Section \ref{chap:sim-def}.
+The last two equalities imply $O=O'$.
 \qeds
+
+%%%???
 
 {
 
 \begin{wrapfigure}{r}{34mm}
+\vskip-7mm
 \centering
 \includegraphics{mppics/pic-128}
-\vskip3mm
-\includegraphics{mppics/pic-130}
-\vskip3mm
-\includegraphics{mppics/pic-132}
 \end{wrapfigure}
 
 \begin{thm}{Exercise}\label{ex:inscribed-angle}
@@ -151,8 +136,24 @@ Show that
 
 \end{thm}
 
-(The value $OP^2-r^2$ is called the \index{power of a point}\emph{power} of the point $P$ with respect to the circle $\Gamma$. 
-Part \textit{(\ref{ex:inscribed-angle:power})} of the exercise makes it a useful tool for studying circles, but we are not going to consider it further in the book.)
+}
+
+\pagebreak%???
+
+The value $OP^2-r^2$ is called the \index{power of a point}\emph{power} of the point $P$ with respect to the circle $\Gamma$.
+Part \textit{(\ref{ex:inscribed-angle:power})} of the exercise makes it a useful tool for studying circles, but we are not going to consider it further in the book.
+
+
+
+{
+
+\begin{wrapfigure}{r}{34mm}
+\vskip-5mm
+\centering
+\includegraphics{mppics/pic-130}
+\vskip3mm
+\includegraphics{mppics/pic-132}
+\end{wrapfigure}
 
 \begin{thm}{Exercise}\label{ex:inscribed-hex}
 Three chords $[XX']$, $[YY']$, and $[ZZ']$
@@ -173,12 +174,12 @@ Let $[XY]$ and $[X'Y']$ be two parallel chords of a circle.
 Show that $XX'=YY'$.
 \end{thm}
 
-}
-
 \begin{thm}{Exercise}
 Watch ``Why is pi here? And why is it squared? A geometric answer to the Basel problem'' by Grant Sanderson. (It is available on \href{https://youtu.be/d-o3eB9sfls}{YouTube}.) 
 Prepare one question.
 \end{thm}
+
+}
 
 \section{Points on a circle}
 
@@ -196,13 +197,13 @@ The following two exercises can be used in construction problems.
 
 \begin{thm}{Exercise}\label{ex:tangent-construction-inscribed}
 Let $\Gamma$ be a circle with center $O$, and let $\Delta$ be a circle with diameter $[OP]$.
-Assume that $\Delta$ and $\Gamma$ intersect at a point $X$.
+Assume that $\Delta$ and $\Gamma$ intersect at a point $X\ne P$.
 Prove that the line $(PX)$ is tangent to $\Gamma$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:perp-construction-inscribed}
 Let $\Gamma$ be a circle with diameter $[PQ]$.
-Assume that a line $\ell$ passes thru $Q$ and intersects $\Gamma$ at another point $X$.
+Assume that a line $\ell$ passes thru $Q$ and intersects $\Gamma$ at another point $X\ne P$.
 Prove that $\ell \perp (PX)$.
 \end{thm}
 
@@ -283,7 +284,7 @@ What is the center of this circle?
 \end{thm}
 
 \begin{wrapfigure}{r}{33mm}
-\vskip-0mm
+\vskip-6mm
 \centering
 \includegraphics{mppics/pic-136}
 \end{wrapfigure}
@@ -361,7 +362,7 @@ is called the \textit{method of an additional circle}
 {
 
 \begin{wrapfigure}{r}{28mm}
-\vskip-0mm
+\vskip-6mm
 \centering
 \includegraphics{mppics/pic-140}
 \end{wrapfigure}
@@ -390,42 +391,24 @@ Show that three footpoints of $P$ on the lines $(AB)$, $(BC)$, and $(CA)$ lie on
 
 \section{Arcs of circlines}
 
-A subset of a circle bounded by two points is called a circular arc.
+It will be convenient to use the notion of
+\index{circline}\emph{circline},
+which means \textit{circle or line}.
+For example, \ref{cor:inscribed-quadrangle} and \ref{ex:lineAOB} imply the following.
 
-More precisely,
-suppose $A$, $B$, and $C$ are distinct points on a circle $\Gamma$.
-The \index{circular arc}\emph{circular arc}~$ABC$ is the subset that includes the points $A$, $C$,
-as well as all the points on $\Gamma$ that lie with $B$ on the same side of $(AC)$.
+\begin{thm}{Observation}
+Four distinct points $A$, $B$, $C$, and $X$ lie on one circline if and only if
+$2\cdot\measuredangle AXC\equiv 2\cdot\measuredangle ABC$.
+\end{thm}
 
-Points $A$ and $C$ are called 
-\index{endpoint of arc}\emph{endpoints} of the circular arc $ABC$. 
-There are precisely two circular arcs of $\Gamma$ with the given endpoints; they are \index{opposite arc}\emph{opposite} to each other.
+Recall that points in the complement of a circle $\Gamma$ lie either inside or outside of $\Gamma$.
+Therefore, we can talk about points on one side of general circlines.
 
-\begin{wrapfigure}[7]{r}{33mm}
-\vskip-6mm
-\centering
-\includegraphics{mppics/pic-142}
-\end{wrapfigure}
-
-Suppose $X$ is another point on $\Gamma$.
-By \ref{cor:inscribed-quadrangle} we have
-that $2\cdot\measuredangle AXC\equiv 2\cdot\measuredangle ABC$;
-that is,
-\[\measuredangle AXC\equiv\measuredangle ABC
-\quad\text{or}\quad
-\measuredangle AXC\equiv\measuredangle ABC+\pi.\]
-
-Recall that $X$ and $B$ lie on the same side of $(AC)$ if and only if $\angle AXC$ and $\angle ABC$ have the same sign (see Exercise~\ref{ex:signs-PXQ-PYQ}).
-It follows that 
-\begin{itemize}
-\item $X$ lies on the arc $ABC$ if and only if $\measuredangle AXC\equiv\measuredangle ABC$;
-\item $X$ lies on the arc opposite to $ABC$ if $\measuredangle AXC\equiv\measuredangle ABC+\pi$.
-\end{itemize}
-
-A circular arc $ABC$ is defined if $\triangle ABC$ is nondegenerate.
-If $\triangle ABC$ is degenerate, then arc $ABC$ is defined as a subset of the line bounded by $A$ and $C$ that contains $B$;
-in this case we say that arc $ABC$ is \index{degenerate arc}\emph{degenerate}.
-
+Suppose $A$, $B$, and $C$ are distinct points on a circline $\Gamma$,
+and $\Omega$ is another circline that meets $\Gamma$ at $A$ and $C$.
+The set of points on $\Gamma$ that lie with $B$ on the same side of $\Omega$ together with the intersection points $A$ and $C$ will be called an \emph{arc} $ABC$;
+the points $A$ and $C$ are called \emph{endpoints} of the arc.
+Switching the sides of $\Omega$, we get the \emph{opposite arc} of $ABC$.
 
 \begin{wrapfigure}{r}{43mm}
 \vskip-2mm
@@ -435,47 +418,46 @@ in this case we say that arc $ABC$ is \index{degenerate arc}\emph{degenerate}.
 \includegraphics{mppics/pic-146}
 \end{wrapfigure}
 
-More precisely, if $B$ lies between $A$ and $C$, then the {}\emph{arc} $ABC$ is defined as 
-the line segment $[AC]$.
-If $B'$ lies on the extension of $[AC]$,
-then the arc $AB'C$ is defined as the union of disjoint half-lines $[AX)$ and $[CY)$ in $(AC)$.
-In this case, the arcs $ABC$ and $AB'C$ are called opposite to each other.
+If $\Gamma$ is a line, then the arc $ABC$ is called \emph{degenerate}; it might be either the line segment $[AC]$, or its opposite arc which is the union of disjoint half-lines $[AX)$ and $[CY)$ in $(AC)$.
 
-\begin{wrapfigure}[2]{r}{43mm}
-\vskip-0mm
+The arc does not depend on the choice of $\Omega$;
+we omit the proof of this statement, but it follows by a continuity argument similar to that in the proof of \ref{lem:signsXY}.
+If $\Gamma$ is a circle, then we may assume that $\Omega=(AC)$;
+thus the arc $ABC$ is the intersection of $\Gamma$ with the closed half-plane containing $B$ and bounded by $(AC)$.
+
+Informally speaking, an arc is a subset of a circline bounded by the two endpoints.
+There are precisely two arcs of a circline with the given endpoints.
+
+
+{
+
+\begin{wrapfigure}{r}{36mm}
+\vskip-4mm
 \centering
-\includegraphics{mppics/pic-148}
+\includegraphics{mppics/pic-142}
 \end{wrapfigure}
 
-In addition, every half-line $[AB)$ will be regarded as an arc.
-If $A$ lies between $B$ and $X$, then $[AX)$ will be called opposite to $[AB)$.
-This arc has only one endpoint $A$.
+Recall that $2\cdot\measuredangle AXC\equiv 2\cdot\measuredangle ABC$ means
+\[\begin{aligned}
+\measuredangle AXC
+&\equiv\measuredangle ABC
+\quad\text{or}
+\\
+\measuredangle AXC
+&\equiv\measuredangle ABC+\pi.
+\end{aligned}
+\eqlbl{eq:AXC=ABC+}\]
+Applying the same-sign lemmas (including \ref{ex:signs-PXQ-PYQ}), we can make the observation above more precise by describing the locus for each of the two equations in \ref{eq:AXC=ABC+}.
 
-It will be convenient to use the notion of 
-\index{circline}\emph{circline},
-which means \textit{circle or line}.
-For example, every arc is a subset of a circline;
-we also may use the term \index{circline!arc}\emph{circline arc} if we want to emphasize that the arc might be degenerate.
-Note that for any three distinct points $A$, $B$, and $C$ there is a unique circline arc $ABC$.
-
-The following statement summarizes the discussion above.
+}
 
 \begin{thm}{Proposition}\label{prop:arcs}
 Let $ABC$ be a circline arc and $X$ be a point distinct from $A$ and $C$.
-Then 
+Then
 \begin{enumerate}[(a)]
 \item $\measuredangle AXC=\measuredangle ABC$ if and only if $X$ lies on the arc $ABC$;
 \item $\measuredangle AXC\equiv\measuredangle ABC+\pi$ if and only if $X$ lies on the arc opposite to $ABC$.
 \end{enumerate}
-\end{thm}
-
-\begin{thm}{Exercise}\label{ex:3x120}
-Given an acute triangle $ABC$,
-perform a ruler-and-compass construction of a point $Z$ such that
-$\measuredangle AZB
-= \measuredangle BZC
-= \measuredangle CZA
-\z=\pm\tfrac23\cdot\pi$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:a+b=c}
@@ -500,12 +482,13 @@ $\measuredangle ABC+\measuredangle CDA\equiv\pi$.
 Moreover, the second identity holds if and only if the points $A,B,C,D$ appear on the circline in the same cyclic order.
 \end{thm}
 
-\section{Tangent half-lines}
+\section{Angles between arcs}
 
-{
+Now we will define the tangent half-line at an endpoint of an arc,
+and use it to define the angle between arcs that share an endpoint.
 
-\begin{wrapfigure}[6]{r}{30mm}
-\vskip-16mm
+\begin{wrapfigure}{r}{30mm}
+\vskip-4mm
 \centering
 \includegraphics{mppics/pic-150}
 \end{wrapfigure}
@@ -516,11 +499,11 @@ A half-line $[AX)$ is called
 to the arc $ABC$ at $A$
 if the line $(AX)$ is tangent to $\Gamma$, and the points $X$ and $B$ lie on the same side of the line $(AC)$.
 
-}
-
 If the arc is formed by the line segment $[AC]$, then the half-line $[AC)$ is considered to be tangent at $A$.
-If the arc is formed by the union of two half-lines $[AX)$ and $[BY)$ in $(AC)$,
+If the arc is formed by the union of two half-lines $[AX)$ and $[CY)$ in $(AC)$,
 then the half-line $[AX)$ is considered to be tangent to the arc at $A$.
+
+The measure of the \index{angle!between arcs}\emph{angle between the arcs} is defined as the measure of the angle between their tangent half-lines at the common endpoint.
 
 \begin{thm}{Proposition}\label{prop:arc(angle=tan)}
 A half-line $[AX)$ is tangent to an arc $ABC$ if and only if 
@@ -531,13 +514,11 @@ $\measuredangle ABC+\measuredangle CAX\equiv \pi$.
 For a degenerate arc $ABC$, 
 the statement is evident.
 Assume it is nondegenerate.
-
-Note that the tangent half-line to the arc $ABC$ at $A$ is uniquely defined.
-Furthermore, there is a unique half-line $[AX)$ such that the equation in the proposition holds.
+Note that the tangent half-line to the arc $ABC$ at $A$ is uniquely defined, and there is a unique half-line $[AX)$ such that the equation in the proposition holds.
 Therefore, it is sufficient to prove the ``only-if'' part.
 
 \begin{wrapfigure}{o}{24mm}
-\vskip-0mm
+\vskip-8mm
 \centering
 \includegraphics{mppics/pic-152}
 \vskip4mm
@@ -558,14 +539,12 @@ $$\measuredangle ABC+\measuredangle CAX
 \equiv 
 0.$$
 
-By the definition of a tangent half-line,
-$X$ and $B$ lie on the same side of~$(AC)$.
-By \ref{cor:half-plane} and \ref{thm:signs-of-triug}, the angles $CAX$, $CAB$, and $ABC$ 
+Since $X$ and $B$ lie on the same side of~$(AC)$,
+by \ref{cor:half-plane} and \ref{thm:signs-of-triug}, the angles $CAX$, $CAB$, and $ABC$
 have the same sign.
-In particular,
-$\measuredangle ABC\z+\measuredangle CAX\not\equiv 0$;
-that is, we are left with the case 
-$\measuredangle ABC+\measuredangle CAX\equiv \pi$.
+Thus the equation
+$\measuredangle ABC\z+\measuredangle CAX\equiv 0$ cannot hold, and we are left with
+$\measuredangle ABC+\measuredangle CAX\z\equiv \pi$.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:tangent-arc}
@@ -583,16 +562,35 @@ Show that $\measuredangle XAY$ approaches $0$ as $AY$ approaches $0$.
 
 {
 
+\begin{wrapfigure}{o}{18mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-176}
+\end{wrapfigure}
+
+The exercise implies that the measure of the angle between arcs with a common endpoint $A$ is the limit of $\measuredangle P_1AP_2$ modulo $2\cdot\pi$; here $P_1$ and $P_2$ are points approaching $A$ along the corresponding arcs.
+This observation can be used to define the measure of the angle between a pair of curves emerging from one point whenever this limit exists.
+
+}
+
+
 \begin{wrapfigure}{r}{33mm}
-\vskip-10mm
+\vskip-4mm
 \centering
 \includegraphics{mppics/pic-154}
 \end{wrapfigure}
 
 
 \begin{thm}[!]{Exercise}\label{ex:two-arcs}
-Given two circular arcs $AB_1C$ and $AB_2C$, let $[AX_1)$ and $[AX_2)$ be half-lines tangent to the arcs $AB_1C$ and $AB_2C$ at $A$, and $[CY_1)$ and $[CY_2)$ be half-lines tangent to the arcs $AB_1C$ and $AB_2C$ at~$C$.
-Show that
-$$\measuredangle X_1AX_2\equiv -\measuredangle Y_1CY_2.$$
+Let $\alpha$ and $\beta$ be the measures of the angles between two circular arcs $AB_1C$ and $AB_2C$ at $A$ and at~$C$, respectively.
+
+More precisely, $\alpha=\measuredangle X_1AX_2$, where $[AX_1)$ and $[AX_2)$ are half-lines tangent to the arcs $AB_1C$ and $AB_2C$ at $A$,
+and $\beta=\measuredangle Y_1CY_2$, where $[CY_1)$ and $[CY_2)$ are half-lines tangent to the arcs $AB_1C$ and $AB_2C$ at~$C$.
+
+Show that $\alpha\equiv -\beta$.
 
 \end{thm}
+
+
+
+

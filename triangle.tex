@@ -203,7 +203,7 @@ are called \index{bisector!of a triangle}\emph{bisectors of the triangle} $A B C
 
 \begin{thm}{Exercise}\label{ex:bisect=altitude}
 Assume that, at one vertex of a nondegenerate triangle, its bisector coincides with its altitude.
-Show that  the triangle is isosceles.
+Show that the triangle is isosceles.
 \end{thm}
 
 \begin{thm}{Lemma}\label{lem:bisect-ratio}
@@ -438,6 +438,22 @@ where $a=BC$, $b=CA$, and $c=AB$.
 Use it to build another proof of \ref{thm:incenter}.
 \end{thm}
 
+\begin{thm}{Exercise}\label{ex:all-equilateral}
+Find the mistakes in the following proof.
+\end{thm}
 
 
+\parbf{Wrong statement.} \textit{All triangles are equilateral.}
+
+\parit{Proof.}
+Choose a triangle $ABC$; it suffices to prove that $AB = AC$.
+
+Suppose that the angle bisector at $A$ intersects the perpendicular bisector of side $[BC]$ at the point $P$.
+
+Observe that $\triangle APB\cong \triangle APC$.
+Indeed, since $(AP)$ bisects $\angle BAC$, we have $\measuredangle BAP\equiv -\measuredangle CAP$.
+Since $P$ lies on the perpendicular bisector, we have $BP=CP$ (see \ref{thm:perp-bisect}).
+Finally, the side $[AP]$ is shared.
+It follows that $AB = AC$.
+\qeds
 
