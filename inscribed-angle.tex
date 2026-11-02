@@ -401,41 +401,30 @@ Four distinct points $A$, $B$, $C$, and $X$ lie on one circline if and only if
 $2\cdot\measuredangle AXC\equiv 2\cdot\measuredangle ABC$.
 \end{thm}
 
-Recall that points in the complement of a circle $\Gamma$ lie either inside or outside of $\Gamma$.
-Therefore, we can talk about points on one side of general circlines.
-
-Suppose $A$, $B$, and $C$ are distinct points on a circline $\Gamma$,
-and $\Omega$ is another circline that meets $\Gamma$ at $A$ and $C$.
-The set of points on $\Gamma$ that lie with $B$ on the same side of $\Omega$ together with the intersection points $A$ and $C$ will be called an \emph{arc} $ABC$;
-the points $A$ and $C$ are called \emph{endpoints} of the arc.
-Switching the sides of $\Omega$, we get the \emph{opposite arc} of $ABC$.
-
-\begin{wrapfigure}{r}{43mm}
-\vskip-2mm
+\begin{wrapfigure}{r}{33mm}
+\vskip-8mm
 \centering
+\includegraphics{mppics/pic-145}
+\vskip4mm
 \includegraphics{mppics/pic-144}
 \vskip4mm
 \includegraphics{mppics/pic-146}
-\end{wrapfigure}
-
-If $\Gamma$ is a line, then the arc $ABC$ is called \emph{degenerate}; it might be either the line segment $[AC]$, or its opposite arc which is the union of disjoint half-lines $[AX)$ and $[CY)$ in $(AC)$.
-
-The arc does not depend on the choice of $\Omega$;
-we omit the proof of this statement, but it follows by a continuity argument similar to that in the proof of \ref{lem:signsXY}.
-If $\Gamma$ is a circle, then we may assume that $\Omega=(AC)$;
-thus the arc $ABC$ is the intersection of $\Gamma$ with the closed half-plane containing $B$ and bounded by $(AC)$.
-
-Informally speaking, an arc is a subset of a circline bounded by the two endpoints.
-There are precisely two arcs of a circline with the given endpoints.
-
-
-{
-
-\begin{wrapfigure}{r}{36mm}
-\vskip-4mm
-\centering
+\vskip4mm
 \includegraphics{mppics/pic-142}
+\vskip-4mm
 \end{wrapfigure}
+
+There is a unique circline, say $\Gamma$, that passes thru three given distinct points $A$, $B$, and $C$;
+this follows from \ref{ex:unique-cline}.
+If $\Gamma$ is a circle, then the arc $ABC$ consists of $A$, $C$,
+and all points of $\Gamma$ on the same side of $(AC)$ as $B$.
+If $\Gamma$ is a line, the arc $ABC$ is the segment $[AC]$
+when $B\in[AC]$, and the union of the two half-lines in $\Gamma$
+extending from $A$ and $C$ away from $[AC]$ otherwise.
+
+The points $A$ and $C$ are called \emph{endpoints} of the arc $ABC$.
+The other arc on the same circline with the same endpoints is called the \emph{opposite} arc of $ABC$.
+Arcs of a line are called \emph{degenerate}.
 
 Recall that $2\cdot\measuredangle AXC\equiv 2\cdot\measuredangle ABC$ means
 \[\begin{aligned}
@@ -449,7 +438,6 @@ Recall that $2\cdot\measuredangle AXC\equiv 2\cdot\measuredangle ABC$ means
 \eqlbl{eq:AXC=ABC+}\]
 Applying the same-sign lemmas (including \ref{ex:signs-PXQ-PYQ}), we can make the observation above more precise by describing the locus for each of the two equations in \ref{eq:AXC=ABC+}.
 
-}
 
 \begin{thm}{Proposition}\label{prop:arcs}
 Let $ABC$ be a circline arc and $X$ be a point distinct from $A$ and $C$.
@@ -573,6 +561,7 @@ This observation can be used to define the measure of the angle between a pair o
 
 }
 
+{
 
 \begin{wrapfigure}{r}{33mm}
 \vskip-4mm
@@ -589,7 +578,34 @@ and $\beta=\measuredangle Y_1CY_2$, where $[CY_1)$ and $[CY_2)$ are half-lines t
 
 Show that $\alpha\equiv -\beta$.
 
+
 \end{thm}
+
+}
+
+Recall that points in the complement of a circle $\Gamma$ lie either inside or outside of $\Gamma$.
+Therefore, we can talk about points on one side of general circlines.
+
+\begin{thm}[!]{Exercise}\label{ex:circline-sides}
+Let $\Gamma$ be a circline passing thru three distinct points $A$, $B$, and $C$, and let $X,Y\notin\Gamma$.
+Show that $X$ and $Y$ lie on the same side of $\Gamma$ if and only if the angles at $A$ from the arc $ABC$ to the arcs $AXC$ and $AYC$ have the same sign.
+\end{thm} %???PIC
+
+The exercise gives the following equivalent description of arcs, which is more conceptual and useful.
+
+\begin{wrapfigure}{o}{36mm}
+\vskip-2mm
+\centering
+\includegraphics{mppics/pic-156}
+\end{wrapfigure}
+
+Suppose $A$, $B$, and $C$ are distinct points on a circline $\Gamma$,
+and $\Omega$ is another circline that meets $\Gamma$ at $A$ and $C$.
+The set of points on $\Gamma$ that lie with $B$ on the same side of $\Omega$ together with the intersection points $A$ and $C$ is an \emph{arc} $ABC$.
+
+According to the exercise, this new definition of arc agrees with the old one;
+in partuicular, the arc $ABC$ does not depend on the choice of~$\Omega$.
+
 
 
 

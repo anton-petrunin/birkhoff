@@ -2215,7 +2215,7 @@ endfig;
 
 beginfig(142)
 save u;
-u:=1.4cm;
+u:=1.2cm;
 
 z.O=origin;
 z.X=(0,-1)*u;
@@ -2249,7 +2249,7 @@ z.X=(-1.2)[z.A,z.C];
 z.Y=1.8[z.A,z.C];
 
 draw ddline(z.A,z.C)(1.5,-1) dashed evenly;
-draw ddline(z.A,z.C)(-1,1.5) dashed evenly;
+draw ddline(z.A,z.C)(-1,.5) dashed evenly;
 draw z.A--z.C;
 
 dOt z.A,z.B,z.C;
@@ -2257,6 +2257,26 @@ dOt z.A,z.B,z.C;
 label.bot (btex $A$ etex, z.A);
 label.bot (btex $B$ etex, z.B);
 label.bot (btex $C$ etex, z.C);
+endfig;
+
+beginfig(145)
+save u;
+u:=1.2cm;
+
+z.O=origin;
+z.A=(0,-1)*u rotated 170;
+z.B=(0,-1)*u rotated 85;
+z.C=(0,-1)*u rotated 10;
+
+draw ddarc(z.A,z.B,z.C)(0,0);
+draw ddarc(z.A,-z.B,z.C)(0,0) dashed evenly;
+
+dOt z.A,z.B,z.C;
+
+label.top (btex $A$ etex, z.A);
+label.rt (btex $B$ etex, z.B);
+label.bot (btex $C$ etex, z.C);
+label.rt (btex $\Gamma$ etex, -z.B);
 endfig;
 
 beginfig(146)
@@ -2270,16 +2290,16 @@ z.X=(-1.2)[z.A,z.C];
 z.Y=1.8[z.A,z.C];
 
 draw ddline(z.A,z.C)(1.5,-1);
-draw ddline(z.A,z.C)(-1,1.5);
+draw ddline(z.A,z.C)(-1,.5);
 draw z.A--z.C dashed evenly;
 
-dOt z.A,z.B,z.C,z.X,z.Y;
+dOt z.A,z.C,z.X;%,z.Y;z.C
 
 label.bot (btex $A$ etex, z.A);
-label.bot (btex $B$ etex, z.B);
+label.bot (btex $B$ etex, z.X);
 label.bot (btex $C$ etex, z.C);
-label.bot (btex $X$ etex, z.X);
-label.bot (btex $Y$ etex, z.Y);
+%label.bot (btex $X$ etex, z.X);
+%label.bot (btex $Y$ etex, z.Y);
 endfig;
 
 beginfig(148)
@@ -2387,6 +2407,33 @@ whitelabel.top (btex $X_1$ etex, z.X1);
 whitelabel.rt (btex $Y_1$ etex, z.Y1);
 whitelabel.lft (btex $X_2$ etex, z.X2);
 whitelabel.bot (btex $Y_2$ etex, z.Y2);
+endfig;
+
+beginfig(156)
+save u;
+u:=1.4cm;
+
+z.O=origin;
+z.X=(0,-1)*u;
+
+z.A=z.X rotated 45;
+z.B=z.X rotated -40;
+z.C=z.X rotated -110;
+z.Y=z.X rotated 100;
+z.BB=.7*z.B;
+
+
+draw ddarc(z.A,z.X,z.C)(0,0);
+draw ddarc(z.A,z.Y,z.C)(0,0) dashed evenly;
+draw ddarc(z.A,z.BB,z.C)(20,20) dashed  linedot;
+
+dOt z.A,z.B,z.C;
+
+label.lrt (btex $A$ etex, z.A);
+label.llft (btex $B$ etex, z.B);
+label.lft (btex $C$ etex, z.C);
+label.llft (btex $\Gamma$ etex, -z.B);
+label.urt (btex $\Omega$ etex, z.BB);
 endfig;
 
 beginfig(158)

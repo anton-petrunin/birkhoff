@@ -532,6 +532,67 @@ label.ulft (btex $A$ etex, z.A);
 label.urt (btex $B'$ etex, z.B);
 endfig;
 
+beginfig(347)
+save u,p;
+path p[];
+u:=.6cm;
+
+z.u0=(-1,0)*u;
+z.u1=origin;
+z.p0=(-.7,1.4)*u;
+z.p1=(-.1,1.5)*u;
+z.q0=2*z.u0-z.p0;
+z.q1=-z.p1;
+
+p0=z.q0--z.u0--z.p0;
+p1=z.q1--z.u1--z.p1;
+p2=p0 rotated 180;
+p3=z.u0--z.u1;
+p4=p3 rotated 180;
+
+p10=z.p0{(1,-.4)}..{(1,.4)}z.p1;
+p11=p10 rotated 180;
+p20=z.q0{(1,.3)}..{(1,-.3)}z.q1;
+p21=p20 rotated 180;
+
+draw p0;
+rimmark5(subpath (0,1) of p0,subpath (1,2) of p0);
+for i=0 upto 3:
+draw p0 shifted (2*(i+1)*(z.u1-z.u0));
+draw p1 shifted (2*i*(z.u1-z.u0));
+draw p10 shifted (2*i*(z.u1-z.u0));
+draw p11 shifted (2*i*(z.u1-z.u0));
+draw p20 shifted (2*i*(z.u1-z.u0));
+draw p21 shifted (2*i*(z.u1-z.u0));
+draw p3 shifted (2*i*(z.u1-z.u0));
+draw p4 shifted (2*i*(z.u1-z.u0));
+rimmark(p3 shifted (2*i*(z.u1-z.u0)),p4 shifted (2*i*(z.u1-z.u0)));
+rimmark2(p10 shifted (2*i*(z.u1-z.u0)),p11 shifted (2*i*(z.u1-z.u0)));
+rimmark3(p20 shifted (2*i*(z.u1-z.u0)),p21 shifted (2*i*(z.u1-z.u0)));
+rimmark10(subpath (0,1) of p1 shifted (2*i*(z.u1-z.u0)),subpath (1,2) of p1 shifted (2*i*(z.u1-z.u0)));
+rimmark5(subpath (0,1) of p0 shifted (2*(i+1)*(z.u1-z.u0)),subpath (1,2) of p0 shifted (2*(i+1)*(z.u1-z.u0)));
+endfor
+
+dOt z.u0,z.p0, z.q0;
+for i=0 upto 3:
+dOt z.u0 shifted (2*(i+1)*(z.u1-z.u0)),
+z.u1 shifted (2*i*(z.u1-z.u0)),
+z.p0 shifted (2*(i+1)*(z.u1-z.u0)),
+z.p1 shifted (2*i*(z.u1-z.u0)),
+z.q0 shifted (2*(i+1)*(z.u1-z.u0)),
+z.q1 shifted (2*i*(z.u1-z.u0));
+endfor
+
+label.lft (btex $X$ etex,  z.u0);
+label.urt (btex $Y$ etex,  z.u1);
+label.lrt (btex $\cdots$ etex,  (5,-2)+z.u1 shifted (2*(z.u1-z.u0)));
+label.top (btex $A$ etex,  z.p0);
+label.top (btex $B$ etex,  z.p1);
+label.bot (btex $D$ etex,  z.q0);
+label.bot (btex $C$ etex,  z.q1);
+
+endfig;
+
 beginfig(348)
 save u;
 u:=1cm;

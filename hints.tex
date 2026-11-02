@@ -741,9 +741,9 @@ $AB=CD\ \iff\ \triangle AMB
 \parbf{\ref{ex:inscribed-rhombus}.}
 Show and use that $\triangle CZY\sim\triangle YXB$.
 
-\parbf{\ref{ex:coordinates}.} \textit{(a).} Use the uniqueness of the parallel line (\ref{thm:parallel}).
+\parbf{\ref{ex:coordinates}}; \textit{(a).} Use the uniqueness of the parallel line (\ref{thm:parallel}).
 
-\parit{(b)} Use \ref{lem:parallelogram} and the Pythagorean theorem (\ref{thm:pyth}).
+\parit{(b).} Use \ref{lem:parallelogram} and the Pythagorean theorem (\ref{thm:pyth}).
 
 \parbf{\ref{ex:abc}.}
 Set $A=(0,0)$, $B=(c,0)$, and $C=(x,y)$.
@@ -1108,6 +1108,11 @@ Apply \ref{prop:arc(angle=tan)} twice.
 
 (Alternatively, apply \ref{cor:reflection+angle} for the reflection across the perpendicular bisector of $[AC]$.)
 
+\parbf{\ref{ex:circline-sides}.}
+Use \ref{prop:arc(angle=tan)} and argue by continuity as in the proof of \ref{lem:signsXY}.
+The angle to $AXB$ can be zero or straight only when $X\in\Gamma$.
+For a circle, compare a point of $(AC)$ inside $\Gamma$ with one outside;
+The line case follows from \ref{ex:signs-PXQ-PYQ}.
 
 
 %\subsection*{Chapter~\ref{chap:inversion}}
@@ -1327,11 +1332,8 @@ Use \ref{ex:side-angle} and \ref{prop:2sum}.
 
 (Alternatively, follow the solution of \ref{ex:inside-outside}.)
 
-\parbf{\ref{ex:neutral-quadrangle}.}
+\parbf{\ref{ex:neutral-quadrangle}}; \textit{(a).}
 Set $a=AB$, $b=BC$, $c=CD$, and $d=DA$; we need to show that $c\ge a$.
-
-Mimic the proof of \ref{thm:3sum-a} for the shown fence made from copies of quadrangle $ABCD$.
-You should get that $a\le c+\tfrac dn$ for any integer $n\ge 1$, and this implies the needed inequality.
 
 \begin{Figure}
 \vskip-0mm
@@ -1339,10 +1341,21 @@ You should get that $a\le c+\tfrac dn$ for any integer $n\ge 1$, and this implie
 \includegraphics{mppics/pic-349}
 \end{Figure}
 
+Mimic the proof of \ref{thm:3sum-a} for the shown fence made from copies of quadrangle $ABCD$.
+You should get that $a\le c+\tfrac dn$ for any integer $n\ge 1$, and this implies the needed inequality.
+
 \parit{Alternative way.}
 By \ref{lem:perp<oblique}, we can assume that $\angle BCD$ is right.
 Use \ref{thm:3sum-a} to show that $|\measuredangle CBD|\ge|\measuredangle ADB|$.
 Use \ref{prop:angle-side} and the construction in the neutral proof of \ref{thm:hypotenuse-leg} to show that $2\cdot c\ge 2\cdot a$.
+
+\parit{(b).}
+Mimic the proof of \ref{thm:3sum-a} for another fence made from copies of quadrangle $ABCD$.
+\begin{Figure}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-347}
+\end{Figure}
 
 \parbf{\ref{ex:defect}.}
 Note that 
@@ -1513,18 +1526,18 @@ Apply the definition of the angle of parallelism.
 \parbf{\ref{ex:ultra-parallel}}; \textit{``only-if'' part.}
 Suppose $\ell$ and $m$ are ultraparallel; that is, they do not intersect and have distinct ideal points.
 
+\begin{Figure}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-359}
+\end{Figure}
+
 Denote the ideal points by $A$, $B$, $C$, and $D$;
 we may assume that they appear on the absolute in the same order.
 In this case, the h-line with ideal points $A$ and $C$ intersects the h-line with ideal points $B$ and $D$.
 Let $O$ be their point of intersection.
 By \ref{thm:main-observ}, we can assume that $O$ is the center of the absolute.
 Note that $\ell$ is the reflection of $m$ across $O$ in the Euclidean sense.
-
-\begin{Figure}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-359}
-\end{Figure}
 
 Drop an h-perpendicular $n$ from $O$ to $\ell$ and
 show that $n\perp m$.
@@ -1571,12 +1584,6 @@ Show and use that $P'$ is an h-reflection of $P$ across $Q\in m$ if and only if 
 $PR_h=P'R'_h$, and $Q$ is the h-midpoint of $[RR']_h$. 
 You may need \ref{prop:vert}, SAS, and SAA (see \ref{ex:SAA}).
 
-\begin{wrapfigure}[8]{r}{32mm}
-\vskip-5mm
-\centering
-\includegraphics{mppics/pic-352}
-\end{wrapfigure}
-
 \parbf{\ref{ex:right-trig-horocycle}.}
 As usual, we assume that the absolute is a unit circle. 
 
@@ -1584,6 +1591,12 @@ Consider a hyperbolic triangle $PQR$
 with a right angle at $Q$, where  $PQ_h\z=QR_h$
 and the vertices $P$, $Q$, and $R$ 
 lie on a horocycle.
+
+\begin{wrapfigure}[8]{r}{32mm}
+\vskip-5mm
+\centering
+\includegraphics{mppics/pic-352}
+\end{wrapfigure}
 
 We may assume that $Q$ is the center of the absolute.
 In this case, $\measuredangle_hPQR\z=\measuredangle PQR\z=\pm\tfrac\pi2$ and $PQ=QR$.
@@ -1657,7 +1670,7 @@ It remains to apply \ref{ex:collinear=affine}.
 {
 
 \begin{wrapfigure}{r}{28mm}
-\vskip-4mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-354}
 \end{wrapfigure}
@@ -2346,7 +2359,7 @@ Suppose that every initial point has coordinates $(a,b\cdot\sqrt{3})$ for ration
 Show and use that any point that can be constructed with the 30°-set-square has coordinates of the same type.
 
 \begin{wrapfigure}[8]{r}{21mm}
-\vskip-0mm
+\vskip-4mm
 \centering
 \includegraphics{mppics/pic-368}
 \end{wrapfigure}
