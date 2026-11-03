@@ -86,7 +86,7 @@ The value $d(A, B)$ is called the \index{distance}\emph{distance} from $A$ to~$B
 \subsection*{Examples}
 
 \begin{itemize}
-\item {}\emph{Discrete metric.} Let $\mathcal X$ be an arbitrary set. 
+\item {}\emph{Discrete metric.} Let $\mathcal X$ be a nonempty set.
 For any $A,B\z\in\mathcal X$ set $d(A,B)\z=0$ if $A=B$ and $d(A,B)=1$ otherwise.
 The metric $d$ is called the \index{discrete metric}\emph{discrete metric} on~$\mathcal X$.
 \item\index{real!line}\emph{Real line.}
@@ -180,6 +180,8 @@ An isometry from a metric space to itself is also referred to as a \index{motion
 Show that each distance-preserving map is \index{injective map}\emph{injective};
 that is, if $f\:\mathcal X\to\mathcal Y$ is a distance-preserving map, 
 then $f(A)\ne f(B)$ for every pair of distinct points $A, B\in \mathcal X$.
+
+Give an example of a distance-preserving map from a metric space to itself that is not a motion.
 \end{thm}
 
 \begin{thm}[!]{Exercise}\label{ex:motion-of-R}
@@ -199,11 +201,11 @@ Prove that $(\mathbb{R}^2,d_1)$ is isometric to $(\mathbb{R}^2,d_\infty)$.
 Describe all the motions of the Manhattan plane (defined in \ref{sec:Metric spaces}).
 \end{thm}
 
-If $\mathcal X$ is a metric space and $\mathcal Y$ is a subset of $\mathcal X$,
+If $\mathcal X$ is a metric space and $\mathcal Y$ is a nonempty subset of $\mathcal X$,
 then a metric on $\mathcal Y$ can be obtained by restricting the metric from~$\mathcal X$. 
 In other words, 
 the distance between two points in $\mathcal Y$ is defined to be the distance between these points in $\mathcal X$.
-In this way any subset of a metric space can also be considered as a metric space.
+In this way any nonempty subset of a metric space can also be considered as a metric space.
 
 \begin{thm}{Definition}\label{def:line}
 A subset $\ell$ of a metric space is called a \index{line}\emph{line} if it is isometric to the real line.
@@ -213,7 +215,8 @@ A triple of points that lie on one line is called \index{collinear points}\emph{
 Note that if $A$, $B$, and  $C$ are  collinear, $AC\ge AB$, and $AC\ge BC$, then $AC\z= AB+BC$.
 
 Some metric spaces have no lines; for example, discrete metrics.
-The picture shows examples of lines on the Manhattan plane $(\mathbb{R}^2,d_1)$. 
+The picture shows examples of lines on the Manhattan plane $(\mathbb{R}^2,d_1)$;
+the restriction of the map $(x,y)\mapsto x+y$ to each line is an isometry onto~$\mathbb{R}$.
 \begin{figure}[!ht]
 \centering
 \includegraphics{mppics/pic-2}
@@ -292,8 +295,8 @@ it is a real number in the interval $(-\pi,\pi]$.
 \end{wrapfigure}
 
 The notations $\angle AOB$ and $\measuredangle AOB$ look similar;
-they also have close but different meanings which better not be confused.
-For example, the equality 
+they also have close but different meanings, which should not be confused.
+For example, the equality
 $\angle AOB\z=\angle A'O'B'$
 means that
 $[OA)=[O'A')$ and $[OB)\z=[O'B')$;
@@ -372,7 +375,7 @@ $$\pi
 Show that $2\cdot\alpha\equiv0$ if and only if $\alpha\equiv0$ or $\alpha\equiv\pi$.
 \end{thm}
 
-\begin{thm}{Exercise}\label{ex:a+b==c}
+\begin{thm}[!]{Exercise}\label{ex:a+b==c}
 Suppose that $0\le \alpha\le \pi$, $0\le \beta\le \pi$, and $0<\gamma<2\cdot \pi$.
 Show that
 \[\alpha+\beta\equiv \gamma\quad\text{implies that}\quad\alpha+\beta=\gamma.\]
@@ -388,6 +391,8 @@ Namely, the following property of angle measure will become a part of the axioms
 $$\measuredangle\:(A,O,B)\mapsto\measuredangle A O B$$
 \textit{is continuous at every triple of points $(A,O,B)$
 such that $O\ne A$ and $O\ne B$ and $\measuredangle A O B\ne\pi$.}
+
+The exception at $\pi$ comes from our choice of the interval $(-\pi,\pi]$: a small turn can change the measure from nearly $\pi$ to nearly $-\pi$.
 
 To clarify this property, we need to extend the concept of {}\emph{continuity} to functions between metric spaces.
 The definition is a straightforward generalization of the standard definition for real-to-real functions.
@@ -419,7 +424,7 @@ Assume $f(A,B,C)$ is defined.
 Then, we say that $f$ is continuous at the triple $(A,B,C)$ 
 if, for any $\epsilon>0$, there exists $\delta>0$ such that
 \[d_{\mathcal Y}(f(A,B,C),f(A',B',C'))<\epsilon\]
-whenever $d_{\mathcal X}(A,A')<\delta$, $d_{\mathcal X}(B,B')<\delta$, and $d_{\mathcal X}(C,C')<\delta$.
+whenever $f(A',B',C')$ is defined, $d_{\mathcal X}(A,A')<\delta$, $d_{\mathcal X}(B,B')<\delta$, and $d_{\mathcal X}(C,C')<\delta$.
 
 
 \begin{thm}[!]{Exercise}\label{ex:dist-cont}
@@ -444,7 +449,7 @@ that is, $h(A)=g(f(A))$ for each $A\in \mathcal{X}$.
 Show that $h\:\mathcal{X}\to\mathcal{Z}$ is continuous at every point.
 \end{thm}
 
-\begin{thm}{Exercise}\label{ex:isom-cont}
+\begin{thm}[!]{Exercise}\label{ex:isom-cont}
 Show that every distance-preserving map is continuous.
 \end{thm}
 

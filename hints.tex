@@ -56,8 +56,8 @@ You should get the following inequality:
 $$0
 \le 
 (x_1\cdot y_2-x_2\cdot y_1)^2,$$
-which is equivalent to \ref{eq:trig-inq-d2}
-and evidently true.
+which implies \ref{eq:trig-inq-d2}
+and is evidently true.
 
 \parit{(c).}
 The inequality
@@ -90,6 +90,8 @@ Since $f$ is distance-preserving,
 $$d_\mathcal{Y}(f(A),f(B))=d_\mathcal{X}(A,B).$$
 Therefore, $d_\mathcal{Y}(f(A),f(B))>0$; hence $f(A)\z\ne f(B)$.
 
+For the second part, check an infinite discrete space.
+
 \parbf{\ref{ex:motion-of-R}.}
 Set $f(0)=a$ and $f(1)=b$.
 Show that $b=a+1$ or $b=a-1$.
@@ -98,7 +100,6 @@ Moreover, $f(x)=a\pm x$, and at the same time, $f(x)=b\pm(x-1)$ for any~$x$.
 Suppose $b=a+1$. 
 Show that 
 $f(x)=a+x$ for any~$x$.
-
 In the same way, if $b=a-1$, 
 show that 
 $f(x)=a-x$ for any~$x$.
@@ -110,9 +111,10 @@ You need to check if this map is bijective and distance-preserving.
 \parbf{\ref{ad-ex:motions of Manhattan plane}.} 
 First prove that \textit{two points $A=(x_A,y_A)$ and $B\z=(x_B,y_B)$ on the Manhattan plane have a unique midpoint if and only if $x_A=x_B$ or $y_A=y_B$}; compare with the example in \ref{sec:cong-triangles}. 
 
-Use the above statement to prove that
+Deduce that every motion maps each horizontal or vertical line onto a horizontal or vertical line.
+Conclude that
 any motion of the Manhattan plane 
-can be written in one of the following eight ways:
+can be written as
 \begin{align*}
 (x,y)&\mapsto (\pm x+a,\pm y+b)
 \shortintertext{or} 
@@ -135,7 +137,7 @@ For $d_\infty$ show that $(x,|x|)\mapsto x$ is an isometry from the graph to~$\m
 Conclude that the graph is a line in $(\mathbb{R}^2,d_\infty)$.
 
 \parbf{\ref{ex:line-motion}.}
-Spell the definitions of line and motion.
+Spell out the definitions of line and motion.
 
 \parbf{\ref{ex:trig==}.}
 According to the definition of a half-line,
@@ -175,7 +177,7 @@ Show and use that $\gamma'\equiv\gamma$ $\Rightarrow$ $\gamma'=\gamma$.
 
 \parbf{\ref{ex:dist-cont}.} \textit{(a).}
 By the triangle inequality,
-$|f(A')\z-f(A)|\le d(A',A)$.
+$|f(B')\z-f(B)|\le d(B',B)$.
 Therefore, we can take $\delta=\epsilon$.
 
 \parit{(b).}
@@ -1441,7 +1443,7 @@ Verify that the inequalities
 hold when $0<a<\tfrac12$.
 
 \parbf{\ref{ex:h-perp-unique}.} 
-Spell the meaning of the terms ``perpendicular'' and ``h-line'' and then apply \ref{ex:construction-perp-clines}.
+Spell out the meaning of the terms ``perpendicular'' and ``h-line'' and then apply \ref{ex:construction-perp-clines}.
 
 \parbf{\ref{ex:h-circle=circle}.}
 Choose the vertices $P$, $Q$, and $R$ on a Euclidean circle that intersects the absolute and is not orthogonal to it.
