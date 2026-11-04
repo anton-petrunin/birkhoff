@@ -116,8 +116,8 @@ Conclude that
 any motion of the Manhattan plane 
 can be written as
 \begin{align*}
-(x,y)&\mapsto (\pm x+a,\pm y+b)
-\shortintertext{or} 
+(x,y)&\mapsto (\pm x+a,\pm y+b)\quad\text{or}
+\\
 (x,y)&\mapsto (\pm y+b,\pm x+a),
 \end{align*}
 for fixed real numbers $a$ and~$b$.
@@ -142,7 +142,7 @@ Spell out the definitions of line and motion.
 \parbf{\ref{ex:trig==}.}
 According to the definition of a half-line,
 there is an isometry
-$$f\:[P Q)\to [0,\infty)$$
+$f\:[P Q)\to [0,\infty)$
 such that $f(P)=0$.
 By the definition of an isometry, $P X=f(X)$ for every $X\z\in [P Q)$.
 Thus, $P X=r$ if and only if $f(X)=r$.
@@ -184,7 +184,7 @@ Therefore, we can take $\delta=\epsilon$.
 By the triangle inequality,
 \begin{align*}
 &|g(A',B')-g(A,B)|
-\le 
+\le
 \\
 &\le|g(A',B')-g(A,B')|+
 \\
@@ -241,7 +241,7 @@ Show that $m\:D\mapsto D$; arrive at a contradiction.
 Therefore, by Axiom~\ref{def:birkhoff-axioms:1}, 
 the plane has a line.
 To prove \textit{(a)}, it remains to note that a line is an infinite set of points.
-To prove \textit{(b)}, apply Axiom~\ref{def:birkhoff-axioms:2} in addition.
+To prove \textit{(b)}, find a way to apply Axiom~\ref{def:birkhoff-axioms:2a}.
 
 \parbf{\ref{ex:[OA)=[OA')}.}
 By Axiom~\ref{def:birkhoff-axioms:1},
@@ -276,17 +276,19 @@ It remains to apply \ref{ex:[OA)=[OB)} and \ref{thm:straight-angle} respectively
 
 \parbf{\ref{ex:infinite-number-of-lines}.}
 Fix two points $A$ and $B$ as provided by Axiom~\ref{def:birkhoff-axioms:0}.
-
 Choose a real number $0<\alpha<\pi$.
 By Axiom~\ref{def:birkhoff-axioms:2a} there is a point $C$ such that $\measuredangle ABC\z=\alpha$.
-
 Use \ref{cor:degenerate=pi} to show that $\triangle ABC$ is nondegenerate.
 
 %\parbf{\ref{ex:O-mid-AB+CD}.}
 %Applying \ref{prop:vert}, we get that $\measuredangle AOC\z= \measuredangle BOD$.
 %It remains to apply Axiom~\ref{def:birkhoff-axioms:3}.
 
-\parbf{\ref{ex:refelection-of-line}.} Apply \ref{prop:point-reflection} and \ref{ex:line-motion}.
+\parbf{\ref{ex:refelection-of-line}.}
+Apply \ref{prop:point-reflection} and \ref{ex:line-motion}.
+
+\parbf{\ref{ex:composition-refelection}.}
+Show the following and use it twice: if a reflection across $O$ maps $X$ to $Y$, then $O$ is the midpoint of $X$ and~$Y$.
 
 %\subsection*{Chapter~\ref{chap:half-planes}}
 \refstepcounter{chapter}
@@ -305,7 +307,6 @@ Set $\alpha=\measuredangle ABC$, $\beta=\measuredangle A'B'C'$.
 Since $2\cdot\alpha\equiv 2\cdot \beta$, \ref{ex:2a=0} implies that
  $\alpha\equiv \beta$ or $\alpha\equiv \beta+\pi$.
 In the latter case, the angles have opposite signs which is impossible.
-
 Since $\alpha,\beta\in(-\pi,\pi]$, the equality $\alpha\equiv \beta$ implies $\alpha= \beta$.
 
 \parbf{\ref{ex:between}.}

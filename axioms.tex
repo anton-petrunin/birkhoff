@@ -15,8 +15,8 @@ The branch of mathematics that emerged this way is called the foundations of geo
 
 The most popular system of axioms
 was proposed by David Hilbert in 1899.
-This is also the first rigorous system by modern standards.
-It consists of twenty axioms in five groups, six ``primitive notions'', and three ``primitive terms'';
+This is one of the first rigorous system by modern standards.
+It consists of twenty axioms in five groups, six ``primitive notions'': three ``primitive terms'' and three ``primitive relations'';
 these are not defined in terms of previously defined concepts.
 
 Later, many different systems were proposed.
@@ -192,20 +192,29 @@ if and only if $O$
 lies between $A$ and~$B$.
 \end{thm}
 
-\begin{wrapfigure}{r}{40mm}
-\centering
-\vskip-0mm
-\includegraphics{mppics/pic-8}
-\end{wrapfigure}
+This theorem looks obvious, but its proof is involved.
 
 \parit{Proof.}
-By Exercise~\ref{ex:trig==},  we may assume that
-$O A = O B = 1$.
+Replacing $A$ and $B$ by points on the same half-lines,
+we may assume that $OA=OB=1$; see Exercise~\ref{ex:trig==}.
+
+
+{
+
+\begin{wrapfigure}{r}{40mm}
+\centering
+\vskip-6mm
+\includegraphics{mppics/pic-8}
+\end{wrapfigure}
 
 \parit{``If'' part.}
 Assume $O$  
 lies between $A$ and~$B$.
-Set  $\alpha=\measuredangle A O B$.
+Set $\alpha=\measuredangle A O B$.
+Since $[OA)\ne [OB)$,
+we have that $\alpha\ne 0$; see Exercise~\ref{ex:[OA)=[OB)}.
+
+}
 
 Applying Axiom~\ref{def:birkhoff-axioms:2a},
 we get a half-line $[OA')$ such that $\alpha\z=\measuredangle B O A'$.
@@ -244,10 +253,7 @@ By Axiom~\ref{def:birkhoff-axioms:2b} and Proposition~\ref{lem:AOA=0}, we get th
 &= 0.
 \end{align*}
 Therefore, by Exercise~\ref{ex:2a=0}, $\alpha$ is either $0$ or~$\pi$.
-
-Since $[OA)\ne [OB)$,  
-we have that $\alpha\ne 0$; see Exercise~\ref{ex:[OA)=[OB)}.
-Therefore, $\alpha=\pi$.
+Since $\alpha\ne 0$, we have $\alpha=\pi$.
 
 
 \parit{``Only if'' part.}
@@ -266,11 +272,12 @@ if $A$, $B$, and $C$ lie on one line.
 The following corollary is just a reformulation of Theorem~\ref{thm:straight-angle}.
 
 \begin{thm}[\abs]{Corollary}\label{cor:degenerate=pi}
-A triangle is degenerate if and only if one of its angles is equal to $\pi$ or~$0$.
+A triangle is degenerate if and only if one of its angles
+has measure $\pi$ or~$0$.
 Moreover, in a degenerate triangle, the angle measures are $0$, $0$, and $\pi$.
 \end{thm}
 
-\begin{thm}{Exercise}\label{ex:lineAOB}
+\begin{thm}[!]{Exercise}\label{ex:lineAOB}
 Show that three distinct points $A$, $O$, and $B$ lie on one line if and only if 
 $$2\cdot \measuredangle AOB\equiv 0.$$ 
 
@@ -365,7 +372,7 @@ In other words, the composition of the reflection with itself is the identity ma
 In particular, the reflection is a bijection.
 
 \begin{wrapfigure}{o}{33mm}
-\vskip-6mm
+\vskip-2mm
 \centering
 \includegraphics{mppics/pic-76}
 \end{wrapfigure}
@@ -384,4 +391,8 @@ Now Axiom~\ref{def:birkhoff-axioms:3} implies that $\triangle XOY\cong\triangle 
 
 \begin{thm}{Exercise}\label{ex:refelection-of-line}
 Show that the reflection across a point maps any line to a line.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:composition-refelection}
+Show that the composition of reflections across two distinct points does not map any point to itself.
 \end{thm}

@@ -1147,8 +1147,8 @@ label.top (btex $P$ etex, z.P);
 label.bot (btex $Q$ etex, z.Q);
 label.urt (btex $O$ etex, z.O);
 
-label.top (btex $\ell$ etex, z.u+(-3,0));
-label.top (btex $m$ etex, z.u+z.v+(-3,0));
+label.top (btex $m$ etex, z.u+(-3,0));
+label.top (btex $\ell$ etex, z.u+z.v+(-3,0));
 endfig;
 
 beginfig(80)
@@ -1181,8 +1181,8 @@ label.lrt (btex $O$ etex, z.O);
 label.top (btex $P$ etex, z.P);
 label.bot (btex $Q$ etex, z.Q);
 
-label.top (btex $m$ etex rotated -10, point .25 of p1);
-label.bot (btex $\ell$ etex rotated 10, point .75 of p2);
+label.top (btex $\ell$ etex rotated -10, point .25 of p1);
+label.bot (btex $m$ etex rotated 10, point .75 of p2);
 endfig;
 
 
