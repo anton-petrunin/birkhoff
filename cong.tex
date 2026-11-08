@@ -4,7 +4,7 @@
 
 Our next goal is to give conditions that guarantee the congruence of two triangles.
 
-One such condition is given in Axiom~\ref{def:birkhoff-axioms:3}; it states that if two pairs of sides of two triangles are equal, and the included angles are equal up to sign, then the triangles are congruent.
+One such condition is given in Axiom~\ref{def:birkhoff-axioms:3}; it states that if two pairs of sides of two triangles are equal, and the measures of the included angles are equal up to sign, then the triangles are congruent.
 This axiom is also called the {}\emph{side-angle-side congruence condition}, or briefly, \index{SAS congruence condition}\emph{SAS}.
 
 \section{Angle-side-angle}
@@ -74,35 +74,38 @@ $\triangle A' B' C'=\triangle A' B' C''\cong\triangle A B C$.
 A triangle with two equal sides is called \index{isosceles triangle}\emph{isosceles};
 the remaining side is called the \index{base}\emph{base}.
 
+{
+
+\begin{wrapfigure}{r}{25mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-38}
+\end{wrapfigure}
 
 \begin{thm}[\abs]{Theorem}\label{thm:isos}
 Assume $\triangle A B C$ is an isosceles triangle with the base $[A B]$. 
 Then 
-$$\measuredangle A B C\equiv -\measuredangle B A C.$$
-Moreover, the converse holds if $\triangle A B C$ is nondegenerate.
+$$\measuredangle A B C\equiv -\measuredangle B A C,$$
+and the converse holds if $\triangle A B C$ is nondegenerate.
 \end{thm}
 
 The following proof is due to Pappus of Alexandria.
 
-
+}
 
 \parit{Proof.}
-Note that
+If $\triangle ABC$ is degenerate, then both base angles have measure zero.
+Thus, we may assume that $\triangle ABC$ is nondegenerate.
+
+By Axiom~\ref{def:birkhoff-axioms:3},
+$\triangle C A B\cong\triangle C B A$.
+Indeed,
 $$
 \measuredangle A C B \equiv -\measuredangle B C A,
 \quad
 C A = C B,
 \quad \text{and therefore}\quad
 C B=C A.$$
-
-\begin{wrapfigure}[9]{r}{25mm}
-\vskip-4mm
-\centering
-\includegraphics{mppics/pic-38}
-\end{wrapfigure}
-
-By Axiom~\ref{def:birkhoff-axioms:3},
-$$\triangle C A B\cong\triangle C B A.$$
 Applying the theorem on the signs of angles of triangles (\ref{thm:signs-of-triug}) and Axiom~\ref{def:birkhoff-axioms:3} again,
 we get that 
 $$\measuredangle B A C
@@ -244,6 +247,10 @@ The statement in the exercise is called the \emph{three-nail lemma}, since three
 
 }
 
+\begin{thm}{Exercise}\label{ex:dist-preserv-motion}
+Show that every distance-preserving map from the plane to itself is a motion.
+\end{thm}
+
 %{
 
 %\begin{wrapfigure}{r}{28mm}\vskip-11mm\centering\includegraphics{mppics/pic-43}\end{wrapfigure}
@@ -265,21 +272,20 @@ The statement in the exercise is called the \emph{three-nail lemma}, since three
 In each of the conditions SAS, ASA, and SSS we specify three corresponding parts of the triangles.
 Now, let us discuss other triples of corresponding parts.
 
+\begin{wrapfigure}{r}{35mm}
+\vskip-7mm
+\centering
+\includegraphics{mppics/pic-44}
+\end{wrapfigure}
+
 The first triple is called {}\emph{side-side-angle}, or briefly SSA;
 it specifies two sides and a non-included angle.
 This condition is not sufficient for congruence.
 In other words, there exist two nondegenerate triangles $ABC$ and $A'B'C'$ such that
 \[AB=A'B',\quad BC=B'C',\quad \measuredangle BAC\equiv\pm \measuredangle B'A'C',\]
 but $\triangle ABC\not\cong\triangle A'B'C'$ and $AC\ne A'C'$.
-
-\begin{wrapfigure}{r}{35mm}
-\vskip-6mm
-\centering
-\includegraphics{mppics/pic-44}
-\end{wrapfigure}
-
-We will not use this negative statement, so there is no need to prove it formally.
-You can guess an example from the picture.
+For a counterexample, compare $\triangle ABC$ and $\triangle ABC'$
+in the picture.
 
 The second triple is {}\emph{side-angle-angle}, or briefly SAA;
 it specifies one side and two angles, one of which is opposite to the side.
@@ -288,18 +294,18 @@ that is, if one of the triangles $ABC$ or $A'B'C'$ is nondegenerate and
 $AB=A'B'$, $\measuredangle ABC\equiv\pm \measuredangle A'B'C'$, $\measuredangle BCA\z\equiv\pm \measuredangle B'C'A'$,
 then $\triangle ABC\cong\triangle A'B'C'$.
 
-The SAA condition will not be used directly in the sequel.
+The SAA condition will not be used directly for a while.
 One proof of this condition can be obtained from ASA and the theorem on the sum of angles of a triangle, which is proved below (see~\ref{thm:3sum}). 
 For a more direct proof, see Exercise~\ref{ex:SAA}.
 
 Another triple is called {}\emph{angle-angle-angle}, or briefly AAA.
 By Axiom~\ref{def:birkhoff-axioms:4}, it is not a congruence condition in the Euclidean plane.
-However, in the hyperbolic plane it is; see \ref{thm:AAA}.
+However, in the hyperbolic plane it is a congruence condition for nondegenerate triangles; see \ref{thm:AAA}.
 
 {
 
 \begin{wrapfigure}{r}{33mm}
-\vskip-8mm
+\vskip-10mm
 \centering
 \includegraphics{mppics/pic-445}
 \bigskip
@@ -339,6 +345,7 @@ Given two lines $\ell$ and $m$ and a point $M$ not on these lines,
 construct a line segment with ends on $\ell$ and $m$ that is bisected by~$M$.
 \end{thm}
 
+The idea is to reflect $\ell$ across $M$ and intersect its image with $m$.
 The stages of the following construction are shown in the picture.
 
 \parit{Construction.}
@@ -346,17 +353,21 @@ The stages of the following construction are shown in the picture.
 \item Draw a circle centered at $M$ that crosses line $\ell$ at two points, say $P$ and $Q$.
 \item Draw the line $(PM)$ and mark by $P'$ its other point of intersection with the circle.
 Similarly, draw $(QM)$ and mark the other intersection point by $Q'$.
-\item Draw the line $\ell'=(P'Q')$ and mark by $A$ its point of intersection with $m$ (if it exists).
+
 \end{enumerate}
 
 }
 
-\begin{enumerate}[1.]\setcounter{enumi}{3}
+\pagebreak%???
+
+\begin{enumerate}[1.]\setcounter{enumi}{2}
+\item Draw the line $\ell'=(P'Q')$ and mark by $A$ its point of intersection with $m$ (if it exists).
 \item Draw the line $(MA)$;
 mark by $B$ its point of intersection with $\ell$.
 Then $[AB]$ is the required segment.
 \end{enumerate}
 
+\medskip
 
 It is often required to do \emph{problem analysis}:
 to prove that the result of the construction satisfies the required conditions and also to determine when the construction is possible and how many solutions may exist.

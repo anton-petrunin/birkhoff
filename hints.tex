@@ -1,4 +1,4 @@
-\backmatter
+\backmatter%???\columnbreak
 %\addtocontents{toc}{\protect\contentsline{part}{\protect\numberline{}References}{}{}}
 %\addcontentsline{toc}{chapter}{Hints}
 %\subsection*{Chapter~\ref{chap:metr}}
@@ -6,7 +6,7 @@
 %\raggedcolumns\setlength{\multicolsep}{-15mm}
 \spell{\begin{multicols}{2}}{}
 
-\chapter[Hints]{\vspace*{-20mm}Hints\vspace*{-10mm}}
+\chapter[Hints]{\vspace*{-22mm}Hints\vspace*{-10mm}}
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
 
@@ -74,7 +74,6 @@ $$
 Without loss of generality, we may assume that 
 $$\max\{|x_1+x_2|,|y_1+y_2|\}=|x_1+x_2|.$$
 Furthermore,
-\columnbreak
 \begin{align*}
 |x_1+x_2|&\le |x_1|+|x_2|\le 
 \\
@@ -183,13 +182,13 @@ Therefore, we can take $\delta=\epsilon$.
 \parit{(b).}
 By the triangle inequality,
 \begin{align*}
-&|g(A',B')-g(A,B)|
-\le
+|g(A',B')-g(A,B)|
+&\le
 \\
-&\le|g(A',B')-g(A,B')|+
+\le|g(A',B')&-g(A,B')|+
 \\
-&\quad+
-|g(A,B')-g(A,B)|\le
++
+|g(A,B')&-g(A,B)|\le
 \\
 &\le d(A',A)+d(B',B).
 \end{align*}
@@ -365,11 +364,12 @@ Observe that \ref{thm:abc} implies the existence of a triangle with sides $r_1$,
 Use this triangle to show that there is a point $X$ such that $O_1X=r_1$ and $O_2X=r_2$, where $O_1$ and $O_2$ are the centers of the corresponding circles.
 
 \parbf{\ref{ex:angle-measures}.}
-Show that new a angle measure, say $\measuredangle'$, is a function, say $\Phi$, of the old angle measure $\measuredangle$.
+Show that a new angle measure, say $\measuredangle'$, is a function, say $\Phi$, of the old angle measure $\measuredangle$.
 Compare signs of $\measuredangle'$ and $\measuredangle$ using \ref{cor:half-plane} and \ref{thm:signs-of-triug}.
-Use Proposition~\ref{prop:C-cont} and the continuity of angle measures to show if $\Phi$ is not identity, then $\Phi(\alpha)\equiv -\alpha$ for any $\alpha$.
+Use Axiom~\ref{def:birkhoff-axioms:2b} to determine $\Phi$ on multiples of $\pi/2^n$.
+Use Proposition~\ref{prop:C-cont} and the continuity of angle measures to show that if $\Phi$ is not the identity, then $\Phi(\alpha)\equiv -\alpha$ for any $\alpha$.
 
-For the second part, read about Hamel basis of $\mathbb R$ over $\mathbb Q$ and think.
+For the second part, read about a Hamel basis of $\mathbb R$ over $\mathbb Q$ and think.
 
 %\subsection*{Chapter~\ref{chap:cong}}
 \refstepcounter{chapter}
@@ -401,7 +401,13 @@ $\measuredangle ABC\equiv -\measuredangle ABC$.
 Conclude that $\measuredangle ABC=0$ or $\pi$.
 That is, $\triangle ABC$ is degenerate --- a contradiction. 
 
+\parbf{\ref{ex:dist-preserv-motion}.}
+Let $f$ be a distance-preseving map.
+Use SSS to construct a motion, say $g$, that agrees with the given map $f$ on the vertices of a nondegenerate triangle $\triangle ABC$.
+Apply the three-nail lemma (\ref{ex:ABC-motion}) to $g^{-1}\circ f$.
+
 \parbf{\ref{ex:motion}.}
+We can assume that $X$ is not a vertex of the triangle.
 Construct three circles with centers at $A'$, $B'$, and $C'$ and radiuses $AX$, $BX$, and $CX$, respectively.
 The point $X'$ is their common point.
 
@@ -418,7 +424,6 @@ $\measuredangle AOX\z+\measuredangle XOB\z\equiv\pi$; in particular, $|\measured
 Conclude that the values $\measuredangle AOX$ and $\measuredangle XOB$ are either both nonnegative or both nonpositive.
 
 In each case, argue as in \ref{ex:a+b==c} to show that
-\columnbreak
 $|\measuredangle AOX|\z+|\measuredangle XOB|=\pi$ and draw a conclusion.
 
 \parbf{\ref{ex:pbisec-side}.}
@@ -2325,6 +2330,8 @@ The construction of $\tfrac{a^2}b$ is analogous.
 \parbf{\ref{ex:5-gon},} \textit{(\ref{ex:5-gon:a})}.
 Look at the picture;
 show that the angles marked the same way have the same angle measure.
+
+\columnbreak%???
 
 Conclude that $XC=BC$ and $\triangle ABC\z\sim \triangle AXB$.
 Therefore 
