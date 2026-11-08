@@ -322,7 +322,14 @@ $\gamma=\measuredangle APC$.
 
 
 
+\parbf{\ref{ex:Z}.}
+Assume that $Z$ is the point of intersection.
+Note that $Z\ne P$ and $Z\ne Q$.
+Therefore, $Z\notin (PQ)$.
 
+Show that $Z$ and $X$ lie on one side of~$(PQ)$.
+Repeat the argument to show that $Z$ and $Y$ lie on one side of~$(PQ)$.
+It follows that $X$ and $Y$ lie on the same side of $(PQ)$ --- a contradiction.
 
 \parbf{\ref{ex:vert-intersect}.}
 Apply \ref{cor:half-plane}\textit{\ref{cor:half-plane:intersect}} to show that $O$ and $A'$
@@ -345,20 +352,24 @@ $(BB')$ intersects $[AA']$; denote the point of intersection by $M$.
 Тhe same way, we get that $(AA')$ intersects $[BB']$;
 that is, $M$ lies on $[AA']$ and $[BB']$.
 
-\parbf{\ref{ex:Z}.}
-Assume that $Z$ is the point of intersection.
+\parbf{\ref{ex:crossbar}.}
+First show that the line $(AX)$ intersects $[BC]$ at some point, say $D$.
+Then show and use that $D$ and $X$ lie on the same side of~$(AB)$.
 
-Note that $Z\ne P$ and $Z\ne Q$.
-Therefore, $Z\notin (PQ)$.
+\parbf{\ref{ex:intersecting-circles-3}}; \textit{``only-if''.}
+Apply the triangle inequality.
 
-Show that $Z$ and $X$ lie on one side of~$(PQ)$.
-Repeat the argument to show that $Z$ and $Y$ lie on one side of~$(PQ)$.
-It follows that $X$ and $Y$ lie on the same side of $(PQ)$ --- a contradiction.
-
-\parbf{\ref{ex:intersecting-circles-3}.} The ``only-if'' part follows from the triangle inequality.
-To prove the ``if'' part,  
-observe that \ref{thm:abc} implies the existence of a triangle with sides $r_1$, $r_2$, and $d$.
+\parit{``If''.}
+If $d=0$, the statement is immediate; assume $d>0$.
+Observe that \ref{thm:abc} implies the existence of a triangle with sides $r_1$, $r_2$, and $d$.
 Use this triangle to show that there is a point $X$ such that $O_1X=r_1$ and $O_2X=r_2$, where $O_1$ and $O_2$ are the centers of the corresponding circles.
+
+\parbf{\ref{ex:angle-measures}.}
+Show that new a angle measure, say $\measuredangle'$, is a function, say $\Phi$, of the old angle measure $\measuredangle$.
+Compare signs of $\measuredangle'$ and $\measuredangle$ using \ref{cor:half-plane} and \ref{thm:signs-of-triug}.
+Use Proposition~\ref{prop:C-cont} and the continuity of angle measures to show if $\Phi$ is not identity, then $\Phi(\alpha)\equiv -\alpha$ for any $\alpha$.
+
+For the second part, read about Hamel basis of $\mathbb R$ over $\mathbb Q$ and think.
 
 %\subsection*{Chapter~\ref{chap:cong}}
 \refstepcounter{chapter}

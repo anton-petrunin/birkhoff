@@ -348,7 +348,7 @@ u:=.7cm;
 z.Q=(0,0)*u;
 z.Y=(1.2,.5)*u;
 z.P=(2.1,0)*u;
-z.X=(1,1.7)*u;
+z.X=(1.1,1.6)*u;
 
 draw ddline(z.Q,z.P)(.2,.2);
 draw z.Q--z.X--z.P;
@@ -371,7 +371,7 @@ u:=.9cm;
 
 z.A=(0,0)*u;
 z.B=(2,0)*u;
-z.C=(.8,1.4)*u;
+z.C=(.8,1.2)*u;
 
 z.BB=.6[z.A,z.C];
 z.AA=.4[z.B,z.C];
@@ -386,8 +386,30 @@ dOt z.A,z.B,z.AA,z.BB,z.C,z.M;
 label.lft (btex $A$ etex, z.A);
 label.rt (btex $B$ etex, z.B);
 label.urt (btex $A'$ etex, z.AA);
-label.ulft (btex $B'$ etex, z.BB);
+label.lft (btex $B'$ etex, z.BB);
 label.top (btex $C$ etex, z.C);
+endfig;
+
+beginfig(31)
+save u;
+u:=.9cm;
+
+z.A=(0,0)*u;
+z.B=(2,0)*u;
+z.C=(.4,1)*u;
+z.X=(1.4,.8)*u;
+
+
+draw z.A--z.B--z.C--cycle;
+draw ddline(z.A,z.X)(0,.2);
+
+
+dOt z.A,z.B,z.X,z.C;
+
+label.lft (btex $A$ etex, z.A);
+label.rt (btex $B$ etex, z.B);
+label.top (btex $X$ etex, z.X);
+label.lft (btex $C$ etex, z.C);
 endfig;
 
 beginfig(32)
@@ -410,7 +432,7 @@ label.lrt (btex $C$ etex, z.C);
 
 label.rt (btex $r$ etex, .5[z.B,z.C]);
 label.lft (btex $r$ etex, .5[z.B,z.A]);
-label.bot (btex $s(\beta,r)$ etex, .5[z.A,z.C]);
+label.bot (btex $s(r,\beta)$ etex, .5[z.A,z.C]);
 
 endfig;
 

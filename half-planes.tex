@@ -1,7 +1,7 @@
 \chapter{Half-planes}\label{chap:half-planes}
 
 This chapter contains lengthy proofs of intuitively evident statements.
-It is okay to skip it, but make sure you understand the definitions of positive/negative angles and that your intuition agrees with statements \ref{thm:signs-of-triug}, \ref{prop:half-plane}, \ref{cor:half-plane}, \ref{thm:pasch}, and \ref{thm:abc}.
+It is okay to skip the proofs, but make sure you understand the definitions of positive/negative angles and that your intuition agrees with statements \ref{thm:signs-of-triug}, \ref{prop:half-plane}, \ref{cor:half-plane}, \ref{thm:pasch}, and \ref{thm:abc}.
 
 \section{Sign of an angle}
 
@@ -13,8 +13,7 @@ if $0<\measuredangle A O B<\pi$;
 if $\measuredangle A O B<0$.
 \end{itemize}
 
-According to the above definitions the straight angle, as well as the zero angle,
-are neither positive nor negative.
+According to the above definitions, the straight and zero angles are neither positive nor negative.
 
 \begin{thm}{Classroom exercise}\label{ex:AOB+<=>BOA-}
 Show that $\angle A O B$ is positive if and only if $\angle B O A$ is negative.
@@ -43,7 +42,7 @@ the latter contradicts \ref{eq:alpha-beta}.
 Hence the statement follows.
 \qeds
 
-\begin{thm}{Exercise}\label{ex:PP(PN)}
+\begin{thm}[!]{Exercise}\label{ex:PP(PN)}
 Assume that angles $ABC$ and $A'B'C'$ have the same sign
 and 
 \[2\cdot \measuredangle ABC\equiv 2\cdot \measuredangle A'B'C'.\]
@@ -67,7 +66,7 @@ Then $f(t_0)=0$ for some $t_0\in[a,b]$.
 
 The intermediate value theorem is assumed to be known;
 it should be covered in any calculus course.
-We will use only the following corollary:
+For now, we need only the following corollary:
 
 \begin{thm}[\abs]{Corollary}\label{cor:intermidiate}
 Assume that for any $t\z\in [0,1]$ we have three points $O_t$, $A_t$, and $B_t$ in the plane such that
@@ -192,7 +191,8 @@ Then the angles $PQX$ and $PQY$ have the same sign.
 \includegraphics{mppics/pic-20}
 \end{wrapfigure}
 
-The proof is nearly identical to the one above.
+
+The proof is nearly identical to that of Lemma~\ref{lem:signs}.
 
 \parit{Proof.}
 According to Exercise~\ref{ex:trig==},
@@ -221,22 +221,14 @@ Then the angles $PQX$ and $PQY$ have the same sign if and only if $[XY]$ does no
 
 \parit{Proof.} The if-part follows from Lemma~\ref{lem:signsXY}. 
 
-Assume $[XY]$ intersects $(PQ)$;
-suppose that $Z$ denotes the point of intersection.
-Without loss of generality, we can assume $Z\ne P$.
+Assume $[XY]$ intersects $(PQ)$ at $Z$.
+If $Z=Q$, the statement follows from Lemma~\ref{lem:straight-sign}.
 
-Note that $Z$ lies between $X$ and $Y$.
-According to Lemma~\ref{lem:straight-sign}, $\angle PZX$ and $\angle PZY$ have opposite signs.
-This proves the statement if $Z=Q$.
+Otherwise, $\angle QZX$ and $\angle QZY$ have opposite signs by the same lemma.
+By \ref{thm:signs-of-triug}, $\angle ZQX$ and $\angle ZQY$ also have opposite signs.
 
-If $Z\ne Q$, then $\angle ZQX$ and $\angle QZX$ have opposite signs by \ref{thm:signs-of-triug}.
-In the same way, we get that $\angle ZQY$ and $\angle QZY$ have opposite signs.
-
-If $Q$ lies between $Z$ and $P$, then by Lemma~\ref{lem:straight-sign} two pairs of angles $\angle PQX$, $\angle ZQX$ and $\angle PQY$, $\angle ZQY$ have opposite signs. 
-It follows that $\angle PQX$ and $\angle PQY$ have opposite signs as required.
-
-In the remaining case $[QZ)=[QP)$ and therefore $\angle PQX=\angle ZQX$ and $\angle PQY=\angle ZQY$. 
-Therefore again $\angle PQX$ and $\angle PQY$ have opposite signs as required.
+The half-lines $[QP)$ and $[QZ)$ either coincide or form a straight angle.
+In either case, $\angle PQX$ and $\angle PQY$ have opposite signs.
 \qeds
 
 \begin{thm}[\abs]{Corollary}\label{cor:half-plane}
@@ -251,15 +243,23 @@ such that
 
 \end{thm}
 
+We say that $X$ and $Y$ lie on {}\emph{one side of} $(PQ)$ if they lie in one of the half-planes of $(PQ)$ and we say that  $P$ and $Q$ lie on {}\emph{opposite sides of} $\ell$ if they lie in different half-planes of~$\ell$.
+
+
+\begin{thm}{Exercise}\label{ex:Z}
+Assume that points $X$ and $Y$ lie on opposite sides of the line~$(PQ)$.
+Show that $[PX)$ does not intersect~$[QY)$.
+\end{thm}
+
 {
 
-\begin{wrapfigure}{r}{26mm}
-\vskip-4mm
+\begin{wrapfigure}{r}{27mm}
+\vskip-8mm
 \centering
 \includegraphics{mppics/pic-24}
+\bigskip
+\includegraphics{mppics/pic-26}
 \end{wrapfigure}
-
-We say that $X$ and $Y$ lie on {}\emph{one side of} $(PQ)$ if they lie in one of the half-planes of $(PQ)$ and we say that  $P$ and $Q$ lie on {}\emph{opposite sides of} $\ell$ if they lie in different half-planes of~$\ell$.
 
 
 \begin{thm}{Exercise}\label{ex:vert-intersect}
@@ -267,19 +267,10 @@ Suppose that angles $AOB$ and $A'OB'$ are vertical and $B\notin (OA)$.
 Show that the line $(AB)$ does not intersect the segment~$[A'B']$.
 \end{thm}
 
-}
 
 Consider triangle $ABC$.
 Recall that its vertices are points $A$, $B$ and $C$;
 segments $[AB]$, $[BC]$, and $[CA]$ will be called the \index{side!of triangle}\emph{sides of the triangle}.
-
-{
-
-\begin{wrapfigure}{r}{27mm}
-\vskip-4mm
-\centering
-\includegraphics{mppics/pic-26}
-\end{wrapfigure}
 
 \begin{thm}[\abs]{Pasch's theorem}\label{thm:pasch}\index{Pasch's theorem}
 Assume that a line $\ell$ does not pass thru any vertex of a triangle.
@@ -300,12 +291,14 @@ Hence the statement follows.
 
 {
 
-\begin{wrapfigure}[5]{r}{29mm}
-\vskip-4mm
+\begin{wrapfigure}{r}{29mm}
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-28}
 \bigskip
 \includegraphics{mppics/pic-30}
+\bigskip
+\includegraphics{mppics/pic-31}
 \end{wrapfigure}
 
 \begin{thm}[!]{Exercise}\label{ex:signs-PXQ-PYQ}
@@ -320,29 +313,15 @@ $B'\in [AC]$.
 Show that $[AA']$ intersects $[BB']$.
 \end{thm}
 
-\begin{thm}{Exercise}\label{ex:Z}
-Assume that points $X$ and $Y$ lie on opposite sides of the line~$(PQ)$.
-Show that $[PX)$ does not intersect~$[QY)$. 
+\begin{thm}{Exercise}\label{ex:crossbar}
+Suppose that
+\[0<\measuredangle BAX<\measuredangle BAC<\pi\]
+for distinct points $A$, $B$, $C$, and $X$.
+Show that the half-line $[AX)$ intersects the segment $[BC]$.
 \end{thm}
 
 }
 
-\begin{thm}{Advanced exercise}\label{ex:angle-measures}
-The following quantity 
-$$\tilde\measuredangle ABC=
-\begin{cases}
-\pi&\text{if}\ \measuredangle ABC=\pi
-\\
--\measuredangle ABC&\text{if}\ \measuredangle ABC<\pi
-\end{cases}
-$$
-can serve as the angle measure; 
-that is, the axioms hold if one replaces $\measuredangle$ by $\tilde\measuredangle$ everywhere.
-
-Show that $\measuredangle$ and $\tilde\measuredangle$ are the only possible angle measures on the plane. 
-
-Show that without Axiom~\ref{def:birkhoff-axioms:2c}, this is no longer true.
-\end{thm}
 
 \section{Triangle with given sides}
 
@@ -368,7 +347,7 @@ that is, there is $\triangle ABC$
 such that $a=BC$, $b=CA$, and $c=AB$.
 \end{thm}
 
-A proof of the following proposition is given at the end of the section.
+The proof uses continuity of the map $\beta\mapsto C_\beta$ provided by the following proposition together with the intermediate value theorem.
 
 \begin{thm}[\abs]{Proposition}\label{prop:C-cont}
 Fix a real number $r>0$ 
@@ -389,14 +368,14 @@ suppose that $C_\beta$ denotes the point such that $BC_\beta\z=a$ and $\measured
 According to \ref{prop:C-cont},
 the map
 $\beta\mapsto C_\beta$ is continuous.
-Therefore, the function $b\:\beta\mapsto AC_\beta$ is continuous
+Therefore, the function $f\:\beta\mapsto AC_\beta$ is continuous
 (formally, it follows from Exercise~\ref{ex:dist-cont} and Exercise~\ref{ex:comp+cont}).
 
-Note that $b(0)=c-a$ and $b(\pi)=c+a$.
+Note that $f(0)=c-a$ and $f(\pi)=c+a$.
 Since $c-a\le b\le c+a$,
 by the intermediate value theorem (\ref{thm:intermidiate})
 there is $\beta_0\in[0,\pi]$ such that
-$b(\beta_0)=b$,
+$f(\beta_0)=b$,
 hence the result. 
 \qeds
 
@@ -411,7 +390,7 @@ The proof of Proposition~\ref{prop:C-cont} relies on the following lemma.
 \includegraphics{mppics/pic-32}
 \end{wrapfigure}
 
-Assume $r>0$ and $0<\beta<\pi$.
+Assume $r>0$ and $0<\beta\le\pi$.
 Consider the triangle $ABC$ such that 
 $AB=BC=r$ and $\measuredangle ABC=\beta$.
 The existence of such a triangle follows from Axiom~\ref{def:birkhoff-axioms:2a} and Exercise~\ref{ex:trig==}.
@@ -443,7 +422,7 @@ Given $r>0$ and $\epsilon>0$, there is $\delta>0$ such that
 \parit{Proof.}
 Fix two points $A$ and $B$ such that $AB\z=r$.
 
-Choose a point $X$ such that $\measuredangle ABX$ is positive.
+Choose a point $X$ such that $\angle ABX$ is positive.
 Let $Y\in [AX)$ be the point such that $AY=\tfrac\epsilon2$;
 it exists by Exercise~\ref{ex:trig==}.
 
@@ -506,4 +485,21 @@ with \index{radius}\emph{radius} $r$ and \index{center}\emph{center}~$O$.
 Show that two circles intersect if and only if 
 \[|r_1-r_2|\le d\le r_1+r_2,\]
 where $r_1$ and $r_2$ denote their radiuses, and $d$ is the distance between their centers.
+\end{thm}
+
+\begin{thm}{Very advanced exercise}\label{ex:angle-measures}
+The following quantity
+$$\tilde\measuredangle ABC=
+\begin{cases}
+\pi&\text{if}\ \measuredangle ABC=\pi
+\\
+-\measuredangle ABC&\text{if}\ \measuredangle ABC<\pi
+\end{cases}
+$$
+can serve as the angle measure;
+that is, the axioms hold if one replaces $\measuredangle$ by $\tilde\measuredangle$ everywhere.
+
+Show that $\measuredangle$ and $\tilde\measuredangle$ are the only possible angle measures on the plane.
+
+Show that without Axiom~\ref{def:birkhoff-axioms:2c}, this is no longer true.
 \end{thm}
