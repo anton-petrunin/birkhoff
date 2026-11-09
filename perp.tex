@@ -4,18 +4,18 @@
 
 \begin{itemize}
 \item If $|\measuredangle A O B|=\tfrac\pi2$, we say that $\angle A O B$ is \index{right!angle}\emph{right};
-%\item If $\measuredangle A O B\ne\pm\tfrac\pi2$, we say that the angle $\angle A O B$ is \index{angle!oblique angle}\emph{oblique};
 \item If $|\measuredangle A O B|<\tfrac\pi2$, we say that $\angle A O B$ is 
 \index{acute}\emph{acute};
 \item If $|\measuredangle A O B|>\tfrac\pi2$, we say that $\angle A O B$ is \index{angle!right, acute, and obtuse angles}\index{obtuse}\emph{obtuse}.
 \end{itemize}
 
-\begin{wrapfigure}[2]{r}{25mm}
-\vskip-25mm
+\begin{wrapfigure}{r}{25mm}
+\vskip-20mm
 \centering
 \includegraphics{mppics/pic-46}
 \end{wrapfigure}
 
+In particular, zero angles are acute and straight angles are obtuse.
 Right angles will be marked with a small square, as shown.
 
 If $\angle A O B$ is right, we may also say that $[O A)$ is \index{perpendicular}\emph{perpendicular} to $[O B)$.
@@ -34,8 +34,9 @@ $\angle XOB$ is obtuse.
 
 Assume $M$ is the midpoint of the segment $[AB]$;
 equivalently, $M\in(A B)$ and $A M \z= M B$.
-
-The line $\ell$ thru $M$ and perpendicular to $(AB)$ is called the \index{bisector!perpendicular bisector}\index{perpendicular!bisector}\emph{perpendicular bisector} of the segment~$[AB]$.
+By Axiom~\ref{def:birkhoff-axioms:2a}, there is a unique line $\ell$
+thru $M$ perpendicular to $(AB)$.
+This line is called the \index{bisector!perpendicular bisector}\index{perpendicular!bisector}\emph{perpendicular bisector} of the segment~$[AB]$.
 
 \begin{thm}[\abs]{Theorem}\label{thm:perp-bisect}
 Given distinct points $A$ and $B$,
@@ -86,6 +87,10 @@ By SAS, $\triangle A M P\cong \triangle B M P$;
 in particular, $A P\z= B P$.
 \qeds
 
+\begin{thm}{Exercise}\label{ex:pbisec-motion}
+A motion has a fixed point $F$ and maps a point $X$ to another point $Y$.
+Show that $F$ lies on the perpendicular bisector of $[XY]$.
+\end{thm}
 
 \begin{thm}[!]{Exercise}\label{ex:pbisec-side}
 Let $\ell$ be a perpendicular bisector of $[A B]$, and $X$ be an arbitrary point in the plane.
@@ -99,10 +104,6 @@ Show that
 \[AC>BC\iff|\measuredangle ABC|>|\measuredangle CAB|.\] 
 \end{thm}
 
-\begin{thm}{Exercise}\label{ex:pbisec-motion}
-A motion has a fixed point $F$ and maps a point $X$ to another point $Y$.
-Show that $F$ lies on the perpendicular bisector of $[XY]$.
-\end{thm}
 
 
 
@@ -113,9 +114,10 @@ Show that $F$ lies on the perpendicular bisector of $[XY]$.
 There is one and only one line that passes thru a given point $P$ and is perpendicular to a given line~$\ell$.
 \end{thm}
 
-According to the theorem above, 
-there is a unique point $Q\in\ell$ such that $(QP)\perp\ell$.
-This point $Q$ is called the \index{footpoint}\emph{footpoint} of $P$ on~$\ell$. 
+The point where this perpendicular meets $\ell$
+is called the \index{footpoint}\emph{footpoint} of $P$ on~$\ell$;
+according to the theorem above, it is uniquely defined.
+
 
 \parit{Proof.} 
 If $P\in\ell$, then both existence and uniqueness follow from Axiom~\ref{def:birkhoff-axioms:2}.
@@ -220,7 +222,7 @@ That is, we are left with the case $\measuredangle BAP'\equiv-\measuredangle BAP
 
 
 \begin{thm}{Exercise}\label{ex:2-reflections}
-Let $X$ and $Y$ be the reflections of $P$ across the lines $(AB)$ and $(BC)$ respectively.
+Let $X$ and $Y$ be the reflections of $P\ne B$ across the lines $(AB)$ and $(BC)$ respectively.
 Show that $\measuredangle XBY\equiv 2\cdot \measuredangle ABC$.
 
 \end{thm}
@@ -239,15 +241,16 @@ The composition of two reflections across the same line
 is the identity map.
 In particular, any reflection is a bijection.
 
-Fix a line $(AB)$ and two points $P$ and $Q$;
-denote their reflections across $(AB)$ by $P'$ and $Q'$.
-Let us show that
-$$P'Q'=PQ;\eqlbl{eq:P'Q'=PQ}$$
-that is, the reflection is distance-preserving,
+Fix a line $(AB)$ and three points $P$, $Q$, and $R$;
+denote their reflections across $(AB)$ by $P'$, $Q'$ and $R'$.
+We need to show that
+$$P'Q'=PQ \quad\text{and}\quad\measuredangle Q'P'R'\equiv-\measuredangle QPR.
+\eqlbl{eq:P'Q'=PQ}$$
 
-\begin{wrapfigure}{r}{33mm}
+
+\begin{wrapfigure}[9]{r}{33mm}
 \centering
-\vskip-15mm
+\vskip-5mm
 \includegraphics{mppics/pic-56}
 \end{wrapfigure}
 
@@ -265,9 +268,9 @@ AQ'&=AQ.
 It follows that
 \[\measuredangle P'AQ'\equiv -\measuredangle PAQ.\eqlbl{eq:P'AQ'=PAQ}\]
 By SAS, 
-$\triangle P'AQ'\cong\triangle PAQ$
-and \ref{eq:P'Q'=PQ} follows.
-Moreover, we also get that 
+$\triangle P'AQ'\cong\triangle PAQ$;
+hence the first equality in \ref{eq:P'Q'=PQ} follows.
+Furthermore, we also get that
 \[\measuredangle AP'Q'\equiv\pm\measuredangle APQ.\]
 From \ref{eq:P'AQ'=PAQ} and the theorem on the signs of angles of triangles (\ref{thm:signs-of-triug}) we get
 \[\measuredangle AP'Q'\equiv-\measuredangle APQ.\eqlbl{eq:AP'Q'=APQ}\]
@@ -276,9 +279,8 @@ Repeating the same argument for a pair of points $P$ and $R$,
 we get that
 $$\measuredangle AP'R'\equiv-\measuredangle APR.\eqlbl{eq:AP'R'=APR}$$
 Subtracting \ref{eq:AP'R'=APR} from \ref{eq:AP'Q'=APQ},
-we get that
-$\measuredangle Q'P'R'\equiv-\measuredangle QPR$.
-\qedsf
+we get the second equality in \ref{eq:P'Q'=PQ}.
+\qeds
 
 
 \section{Direct and indirect motions}
@@ -294,7 +296,7 @@ $$\measuredangle Q'P'R'= \measuredangle QPR$$
 for any triangle $PQR$;
 if instead we always have 
 $$\measuredangle Q'P'R'\equiv -\measuredangle QPR,$$ 
-then the motion $f$ is called \index{indirect motion}\emph{indirect}.
+then the motion is called \index{indirect motion}\emph{indirect}.
 
 By Corollary~\ref{cor:reflection+angle}, any reflection across a line is an indirect motion.
 Note that the composition of two reflections is a direct motion.
@@ -398,6 +400,21 @@ Assume two distinct circles $\Gamma$ and $\Gamma'$ have a common chord~$[A B]$.
 Show that the line between the centers of $\Gamma$ and $\Gamma'$ is a perpendicular bisector of~$[A B]$.
 \end{thm}
 
+{
+
+\begin{wrapfigure}{r}{20mm}
+\vskip-10mm
+\centering
+\includegraphics{mppics/pic-62}
+\end{wrapfigure}
+
+\begin{thm}{Exercise}\label{ex:tangent-circles-3}
+Assume three circles have two points in common.
+Prove that their centers lie on the same line.
+\end{thm}
+
+}
+
 \begin{thm}{Exercise}\label{ex:center}
 Describe a ruler-and-compass construction of the center
 of a given circle.
@@ -448,12 +465,12 @@ Then $\ell$ is tangent to $\Gamma$ at $P$ if and only if $(PO)\perp \ell$.
 \end{thm}
 
 \parit{Proof.}
-Let $Q$ be the footpoint of $O$ on~$\ell$.
+Let $m\perp \ell$ be the line thru $O$, and let $Q\in \ell\cap m$ be the footpoint of $O$ on~$\ell$.
 
 Assume~$P\ne Q$.
-Let $P'$ be the reflection of $P$ across~$(OQ)$.
-Note that $P'\in\ell$ and $(OQ)$ is the perpendicular bisector of~$[PP']$.
-Therefore, $OP=OP'$.
+Let $P'$ be the reflection of $P$ across~$m$.
+Note that $P'\in\ell$ and $m$ is the perpendicular bisector of~$[PP']$.
+Therefore, $OP\z=OP'$.
 Hence $P,P'\in \Gamma\cap \ell$;
 that is, $\ell$ is secant to~$\Gamma$.
 
@@ -464,9 +481,14 @@ Hence $P$ is the only point at the intersection $\Gamma\cap\ell$;
 that is, $\ell$ is tangent to $\Gamma$ at~$P$. 
 \qeds
 
+\begin{thm}{Exercise}\label{ex:equal-tangents}
+Two distinct lines thru a point $P$ are tangent to a circle at $A$ and $B$.
+Show that $PA=PB$.
+\end{thm}
+
 \begin{thm}{Exercise}\label{ex:tangent-circles}
 Let $\Gamma$ and $\Gamma'$ be two circles with centers at $O$ and $O'$, and radiuses $r$ and~$r'$, respectively.
-Show that $\Gamma$ is tangent to $\Gamma'$ if and only if one of the following conditions holds:
+Show that $\Gamma$ is tangent to $\Gamma'$ if and only if one of the following equivalent conditions holds:
 \begin{enumerate}[(a)]
 \item\label{ex:tangent-circles:a} The circles meet at a point~$P$ that lies on the same line with $O$ and~$O'$.
 \item\label{ex:tangent-circles:b} The circles meet at a point~$P$ and share a common tangent line at this point.
@@ -474,22 +496,6 @@ Show that $\Gamma$ is tangent to $\Gamma'$ if and only if one of the following c
 \end{enumerate}
 
 \end{thm}
-
-
-{
-
-\begin{wrapfigure}{r}{20mm}
-\vskip-10mm
-\centering
-\includegraphics{mppics/pic-62}
-\end{wrapfigure}
-
-\begin{thm}{Exercise}\label{ex:tangent-circles-3}
-Assume three circles have two points in common.
-Prove that their centers lie on the same line.
-\end{thm}
-
-}
 
 \begin{thm}{Exercise}\label{ex:tangent}
 Describe a ruler-and-compass construction of lines tangent to a given circle that pass thru a given point.

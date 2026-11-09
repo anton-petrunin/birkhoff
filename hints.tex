@@ -402,7 +402,7 @@ Conclude that $\measuredangle ABC=0$ or $\pi$.
 That is, $\triangle ABC$ is degenerate --- a contradiction. 
 
 \parbf{\ref{ex:dist-preserv-motion}.}
-Let $f$ be a distance-preseving map.
+Let $f$ be a distance-preserving map.
 Use SSS to construct a motion, say $g$, that agrees with the given map $f$ on the vertices of a nondegenerate triangle $\triangle ABC$.
 Apply the three-nail lemma (\ref{ex:ABC-motion}) to $g^{-1}\circ f$.
 
@@ -425,6 +425,8 @@ Conclude that the values $\measuredangle AOX$ and $\measuredangle XOB$ are eithe
 
 In each case, argue as in \ref{ex:a+b==c} to show that
 $|\measuredangle AOX|\z+|\measuredangle XOB|=\pi$ and draw a conclusion.
+
+\parbf{\ref{ex:pbisec-motion}.} Show that $FX=FY$ and apply \ref{thm:perp-bisect}.
 
 \parbf{\ref{ex:pbisec-side}.}
 Assume $X$ and $A$ lie on the same side of~$\ell$.
@@ -451,8 +453,6 @@ repeat the above argument.
 
 \parbf{\ref{ex:side-angle}.}
 Apply \ref{ex:pbisec-side}, \ref{ex:between}, and \ref{thm:isos}.
-
-\parbf{\ref{ex:pbisec-motion}.} Show that $FX=FY$ and apply \ref{thm:perp-bisect}.
 
 \begin{wrapfigure}{r}{27mm}
 \vskip-4mm
@@ -524,7 +524,7 @@ Show that $V$ and $W$ lie on opposite sides of $(XY)$.
 
 Without loss of generality, assume that $P$ and $W$ lie on opposite sides of $(XY)$.
 Let $W'$ be the point of intersection of $[PW]$ and $(XY)$.
-Show and use that $PW>PW'>PX$.
+Show and use that $PW>PW'\ge PX$.
 
 \parbf{\ref{ex:PMQ}.}
 Observe that $PM+MQ=P'M+MQ\z\ge P'Q$ and argue as in \ref{lem:perp<oblique}.
@@ -534,6 +534,8 @@ Observe that $PM+MQ=P'M+MQ\z\ge P'Q$ and argue as in \ref{lem:perp<oblique}.
 \parbf{\ref{ex:inside-outside}.}
 Apply \ref{ex:obtuce} twice to $X$, $Y$, $P$, and the center.
 
+\parbf{\ref{ex:chord-perp}.} Apply \ref{thm:perp-bisect}.
+
 {
 
 \begin{wrapfigure}[6]{r}{27mm}
@@ -542,26 +544,32 @@ Apply \ref{ex:obtuce} twice to $X$, $Y$, $P$, and the center.
 \includegraphics{mppics/pic-328}
 \end{wrapfigure}
 
-\parbf{\ref{ex:chord-perp}.} Apply \ref{thm:perp-bisect}.
+\parbf{\ref{ex:tangent-circles-3}.}
+Apply \ref{ex:chord-perp}.
 
 \parbf{\ref{ex:center}.}
 See the picture; the given circle is marked in bold.
 
-\parbf{\ref{ex:two-circ}.} Use \ref{ex:chord-perp} and \ref{perp:ex+un}.
-
 }
 
-\parbf{\ref{ex:tangent-circles}}; \textit{(\ref{ex:tangent-circles:a}).}
+\parbf{\ref{ex:two-circ}.} Use \ref{ex:chord-perp} and \ref{perp:ex+un}.
+
+\parbf{\ref{ex:equal-tangents}.}
+Apply the reflection across the perpendicular bisector of $[AB]$.
+
+
+
+\parbf{\ref{ex:tangent-circles}.}
+We can assume that the circles are distinct, and therefore $O\ne O'$;
+otherwise all three statements are trivial.
+
+\parit{(\ref{ex:tangent-circles:a}).}
 Assume that $Q$ is another point on both circles.
 Show and use that $Q$ is the reflection of $P$ across~$(OO')$.
 
 \parit{(\ref{ex:tangent-circles:b}).} Apply \textit{(\ref{ex:tangent-circles:a})} and \ref{lem:tangent}.
 
 \parit{(\ref{ex:tangent-circles-2}).} Apply \textit{(\ref{ex:tangent-circles:a})} and \ref{cor:degenerate-trig}.
-
-\parbf{\ref{ex:tangent-circles-3}.}
-Let $A$ and $B$ be the points of intersection.
-Note that the centers lie on the perpendicular bisector of the segment~$[AB]$.
 
 \parbf{\ref{ex:tangent}+\ref{ex:tangent-circle}.}
 The given data is marked in bold.
@@ -577,6 +585,9 @@ The given data is marked in bold.
 \includegraphics{mppics/pic-332}
 \end{minipage}
 \end{Figure}
+
+Do not use a construction unless you understand why it works.
+
 
 %\subsection*{Chapter~\ref{chap:parallel}}
 \refstepcounter{chapter}
@@ -1080,7 +1091,8 @@ and hence $X$, $Y$, and $Z$ lie on one line.
 \includegraphics{mppics/pic-340}
 \end{wrapfigure}
 
-\parbf{\ref{ex:3x120}.} Guess a construction from the picture.
+\parbf{\ref{ex:3x120}.}
+Guess a construction from the picture.
 To show that it produces the needed point, apply~\ref{thm:inscribed-angle}.
 
 \parbf{\ref{ex:a+b=c}.}
@@ -1344,12 +1356,6 @@ Therefore, it is sufficient to show that $C''\z=C'$.
 If $C'\z\ne C''$ apply \ref{prop:2sum} to $\triangle A'C'C''$ and try to reach a contradiction.
 
 %(This proof was given in Euclid's Elements \cite[Book I, Proposition 26]{euclid}.)
-
-
-\parbf{\ref{ex:chev<side}.} 
-Use \ref{ex:side-angle} and \ref{prop:2sum}.
-
-(Alternatively, follow the solution of \ref{ex:inside-outside}.)
 
 \parbf{\ref{ex:neutral-quadrangle}}; \textit{(a).}
 Set $a=AB$, $b=BC$, $c=CD$, and $d=DA$; we need to show that $c\ge a$.
