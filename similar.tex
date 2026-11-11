@@ -18,7 +18,7 @@ C' A'
 k\cdot C A
 \eqlbl{dist}
 $$
-for some coefficient $k>0$ (which is called the \index{similarity coefficient}\emph{similarity coefficient}), and (2) the corresponding angles are equal up to sign:
+for some coefficient $k>0$ (which is called the \index{similarity coefficient}\emph{similarity coefficient}), and (2) the corresponding angle measures are equal up to sign:
 $$
 \begin{aligned}
 \measuredangle A' B' C'&=\pm\measuredangle A B C,
@@ -108,8 +108,7 @@ CB=k\cdot C'B'.$$
 
 \end{thm}
 
-Each of these conditions is proved by applying Axiom~\ref{def:birkhoff-axioms:4} with the SAS, ASA, and SSS congruence conditions respectively
-(see Axiom~\ref{def:birkhoff-axioms:3} and the conditions \ref{thm:ASA} and \ref{thm:SSS}).
+
 
 
 \parit{Proof.}
@@ -130,13 +129,13 @@ Show that $\triangle A'B'C'\sim\triangle ABC$ and find the similarity coefficien
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:k*triangle}
-Let $O$, $A$, $B$, $C$, $A'$, $B'$, and $C'$ be distinct points.
+Let $O$, $A$, $B$, and $C$ be distinct points.
 Suppose that $A'\in [OA)$, $B'\in[OB)$, $C'\in [OC)$, $OA'=k\cdot OA$, $OB'=k\cdot OB$, and $OC'=k\cdot OC$ for some $k>0$.
 Show that $\triangle A'B'C'\sim\triangle ABC$.
 \end{thm}
 
 A bijection $X\leftrightarrow X'$ from a plane to itself is called an \index{angle-preserving transformation}\emph{angle-preserving transformation} if 
-\[\measuredangle ABC= \measuredangle A'B'C'\]
+$\measuredangle ABC= \measuredangle A'B'C'$
 for every $\triangle ABC$ and its image $\triangle A'B'C'$.
 
 (The term \index{transformation}\emph{transformation} is used for a bijection of the plane to itself that preserves a specified geometric structure.
@@ -164,21 +163,21 @@ $$AC^2+BC^2=AB^2.$$
 \parit{Proof.}
 Let $D$ be the footpoint of $C$ on~$(AB)$.
 
-\begin{wrapfigure}[4]{r}{40mm}
-\vskip-2mm
-\centering
-\includegraphics{mppics/pic-66}
-\end{wrapfigure}
-
 According to Lemma~\ref{lem:perp<oblique},
-\begin{align*}
-AD&<AC<AB,
-\shortintertext{and}
-BD&<BC<AB.
-\end{align*}
+\[
+AD<AC<AB,
+\quad\text{and}\quad
+BD<BC<AB.
+\]
 Therefore, $D$ lies between $A$ and $B$;
 in particular, 
 $$AD+BD=AB.\eqlbl{AD+BD=AB}$$
+
+\begin{wrapfigure}[4]{r}{40mm}
+\vskip-6mm
+\centering
+\includegraphics{mppics/pic-66}
+\end{wrapfigure}
 
 By the AA similarity condition, we have
 $$\triangle ADC\sim\triangle ACB\sim \triangle CDB.$$
@@ -226,7 +225,7 @@ Show that the angle at $C$ is right.
 \section{The method of similar triangles}
 
 The proof of the Pythagorean theorem given above uses the {}\emph{method of similar triangles}.
-To apply this method, one has to search for pairs of similar triangles and then use the proportionality of corresponding sides and/or equalities of corresponding angles.
+To apply this method, one has to search for pairs of similar triangles and then use the proportionality of corresponding sides and/or equalities of corresponding angle measures up to sign.
 Finding such pairs might be tricky at first. 
 
 {
@@ -303,6 +302,14 @@ for every $\square ABCD$.
 We will present a classical proof of this inequality using the method of similar triangles with additional construction.
 This proof is given as an illustration --- it will not be used further in the sequel.
 
+
+\parit{Proof.}
+There is a point $X$ such that
+\[\triangle BAX\sim \triangle CAD
+\quad\text{and}\quad
+\triangle XAD\sim\triangle BAC.\eqlbl{eq:2cong2}
+\]
+
 {
 
 \begin{wrapfigure}{o}{33mm}
@@ -311,9 +318,11 @@ This proof is given as an illustration --- it will not be used further in the se
 \includegraphics{mppics/pic-70}
 \end{wrapfigure}
 
-\parit{Proof.}
-Consider the half-line $[AX)$ such that $\measuredangle BAX=\measuredangle CAD$.
-In this case, $\measuredangle XAD\z=\measuredangle BAC$ since adding $\measuredangle BAX$ or $\measuredangle CAD$ to the corresponding sides produces $\measuredangle BAD$.
+Indeed, consider the half-line $[AX)$ such that $\measuredangle BAX=\measuredangle CAD$.
+Since
+\[\measuredangle BAX+\measuredangle XAD\equiv\measuredangle BAD\equiv\measuredangle BAC+\measuredangle CAD,\]
+we also have $\measuredangle XAD\z=\measuredangle BAC$.
+
 We can assume that
 \[AX=\frac{AB}{AC}\cdot AD.\]
 
@@ -322,12 +331,8 @@ We can assume that
 In this case, we have
 \begin{align*}\frac{AX}{AD}&=\frac{AB}{AC},
 &
-\frac{AX}{AB}&=\frac{AD}{AC}.\\
-\shortintertext{Hence}
-\triangle BAX&\sim \triangle CAD,
-&
-\triangle XAD&\sim\triangle BAC.\\
-\shortintertext{Therefore}
+\frac{AX}{AB}&=\frac{AD}{AC}.
+\intertext{By SAS, \ref{eq:2cong2} follows, and therefore}
 \frac{BX}{CD}&=\frac{AB}{AC},
 &
 \frac{XD}{BC}&=\frac{AD}{AC},
