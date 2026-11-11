@@ -16,11 +16,13 @@ It is the center of the \index{circumcircle}\emph{circumcircle} of the triangle;
 that is, a circle that passes thru all three vertices of the triangle.
 The circumcenter of the triangle is usually denoted by~$O$.
 
+{
+
 \begin{wrapfigure}{o}{29mm}
+\vskip-5mm
 \centering
 \includegraphics{mppics/pic-102}
 \end{wrapfigure}
-
 
 \parit{Proof.}
 Let $\triangle ABC$ be nondegenerate.
@@ -33,6 +35,8 @@ Since $O\in\ell$, we have $OA\z=OB$ and since $O\in m$, we have $OA\z=OC$.
 It follows that $OB\z=OC$;
 that is, $O$ lies on the perpendicular bisector of~$[B C]$.
 
+}
+
 It remains to show that $\ell\nparallel m$.
 Suppose, to the contrary, that $\ell\parallel m$.
 Since $\ell\perp(AB)$ and $m\z\perp(AC)$, Exercise~\ref{ex:perp-perp}\textit{\ref{ex:perp-perp:b}} implies that
@@ -44,8 +48,6 @@ Hence, $\triangle ABC$ is degenerate --- a contradiction.
 Show that there is a unique circle that passes thru the vertices of a given nondegenerate triangle in the Euclidean plane.
 \end{thm}
 
-
-
 \section{Altitudes and orthocenter}
 
 An \index{altitude}\emph{altitude} of a triangle is a line thru a vertex and perpendicular to the line containing the opposite side.
@@ -55,8 +57,8 @@ The term \index{altitude}\emph{altitude} may also be used for the distance from 
 Three altitudes of every nondegenerate triangle intersect at a single point.
 \end{thm}
 
-The point of intersection of altitudes is called the \index{orthocenter}\emph{orthocenter}; 
-it is usually denoted by~$H$.
+The point of intersection of altitudes is called the \index{orthocenter}\emph{orthocenter}; it is usually denoted by~$H$.
+The following proof reduces this theorem to the previous one by resizing the triangle.
 
 {
 
@@ -161,15 +163,15 @@ hence the result.
 
 
 \begin{thm}{Exercise}\label{ex:midle}
-Let $\square ABCD$ be a nondegenerate quadrangle
+Let $\square ABCD$ and $\square XYVW$ be a nondegenerate quadrangles such that
 and $X$, $Y$, $V$, and~$W$ be midpoints of 
-$[AB]$, $[BC]$, $[CD]$, and~$[DA]$ respectively.
+$[AB]$, $[BC]$, $[CD]$, and~$[DA]$, respectively.
 Show that $\square XYVW$ is a parallelogram.
 \end{thm}
 
 \begin{thm}{Advanced exercise}\label{ex:euler-line}
 Show that the orthocenter $H$, centroid $M$, and circumcenter $O$ of every nondegenerate triangle $ABC$ lie on a single line.
-Moreover, the centroid divides the segment $[HO]$ in the ratio $2:1$.
+Moreover, $MO=\tfrac12\cdot MH=\tfrac13\cdot HO$.
 \end{thm}
 
 The line in this exercise is called \emph{Euler's line}.
@@ -188,7 +190,7 @@ If $\measuredangle A B X\equiv\pi-\measuredangle C B X$, then the line $(BX)$ is
 \includegraphics{mppics/pic-108}
 \end{wrapfigure}
 
-If $\measuredangle ABA'=\pi$;
+If $\measuredangle ABA'=\pi$,
 that is, if $B$ lies between $A$ and $A'$,
 then the bisector of $\angle ABC$ is the external bisector of $\angle A' B C$ and the other way around.
 
@@ -198,8 +200,8 @@ Note that the bisector and the external bisector are uniquely defined by the ang
 Show that for every angle, its bisector and external bisector are perpendicular.
 \end{thm}
 
-The bisectors of  $\angle ABC$, $\angle BCA$, and $\angle CAB$ of a nondegenerate triangle $A B C$
-are called \index{bisector!of a triangle}\emph{bisectors of the triangle} $A B C$ at vertices $A$, $B$, and $C$ respectively.
+The bisectors of $\angle ABC$, $\angle BCA$, and $\angle CAB$ of a nondegenerate triangle $A B C$
+are called \index{bisector!of a triangle}\emph{bisectors of the triangle} $A B C$ at vertices $B$, $C$, and $A$ respectively.
 
 \begin{thm}{Exercise}\label{ex:bisect=altitude}
 Assume that, at one vertex of a nondegenerate triangle, its bisector coincides with its altitude.
@@ -301,7 +303,7 @@ Otherwise, both lines $(AB)$ and $(BC)$ are perpendicular bisectors of $[XY]$.
 Hence $(AB)=(BC)$, but this is impossible since $\triangle ABC$ is nondegenerate.
 
 By Proposition~\ref{prop:reflection}, $XB=YB=ZB$.
-Note that $X$ is equidistant from $(AB)$ and $(BC)$ if and only if $XY\z=XZ$.
+Since $XY$ and $XZ$ are twice the distances to the corresponding lines, $X$ is equidistant from these lines if and only if $XY\z=XZ$.
 
 
 {
@@ -391,7 +393,7 @@ Suppose that $I$ denotes the point of intersection.
 Let $X$, $Y$, and $Z$ be the footpoints of $I$ on  $(B C)$, $(C A)$, and $(A B)$ respectively.
 Applying Proposition~\ref{prop:angle-bisect-dist}, we get that
 $$I Y=I Z=I X.$$
-From the same lemma, we get that $I$ lies on the bisector or on the exterior bisector of $\angle B C A$.
+By the same proposition, we get that $I$ lies on the bisector or on the exterior bisector of $\angle B C A$.
 
 The line $(C I)$ intersects $[B B']$;
 points $B$ and $B'$ lie on opposite sides of~$(C I)$.
