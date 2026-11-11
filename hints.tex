@@ -706,11 +706,11 @@ $$\alpha+\beta+\gamma\equiv\pi.\eqlbl{eq:|3|==pi}$$
 
 From \ref{eq:|3|<3pi} and \ref{eq:|3|==pi} the result follows.
 
+\parbf{\ref{ex:right-isos}.}
+Apply \ref{thm:isos} twice and \ref{thm:3sum} once.
+
 \parbf{\ref{ex:pent}.}
 Apply \ref{thm:3sum} or \ref{ex:|3sum|} twice and \ref{thm:isos} thrice.
-
-\parbf{\ref{ex:right-isos}.}
-Apply \ref{thm:isos} twice and \ref{thm:3sum} once. 
 
 %\parbf{\ref{ex:pi/4-isos}.} 
 %Suppose that $O$ denotes the center of the circle.
@@ -776,6 +776,11 @@ $AB=AD\ \iff\ \triangle AMB
 \parbf{\ref{ex:inscribed-rhombus}.}
 Show and use that $\triangle CZY\sim\triangle YXB$.
 
+\parbf{\ref{ex:footpoints-distance}.}
+We can assume that $X'\ne Y'$, otherwise the statement is trivial.
+If $Y=Y'$, then apply \ref{lem:perp<oblique}.
+Otherwise construct a rectangle $X'Y'YZ$, observe that $X'Y'=XZ$ and apply \ref{lem:perp<oblique} again.
+
 \parbf{\ref{ex:coordinates}}; \textit{(a).} Use the uniqueness of the parallel line (\ref{thm:parallel}).
 
 \parit{(b).} Use \ref{lem:parallelogram} and the Pythagorean theorem (\ref{thm:pyth}).
@@ -817,13 +822,22 @@ It remains to rewrite this equation as in \ref{ex:circle-coord}.
 
 \parbf{\ref{ex:apolonnius-construction}.}
 Assume $M\notin(AB)$.
-Show and use that the points $P$ and $Q$ constructed in the following picture lie on the Apollonian circle.
+Show and use that $[PQ]$ constructed in the following picture is the diameter of the Apollonian circle.
 
 \begin{Figure}
 \centering
 \includegraphics{mppics/pic-335}
 \end{Figure}
 
+If case $M\in(AB)$ then apply the follwing construction and show that $[MM']$ is the diameter of the Apollonian circle.
+
+\begin{Figure}
+\centering
+\includegraphics{mppics/pic-339}
+\end{Figure}
+
+The construction is possible if $A$, $B$ and $M$ are distinct and $AM\ne BM$;
+explain why.
 
 %\subsection*{Chapter~\ref{chap:triangle}}
 \refstepcounter{chapter}
@@ -1651,6 +1665,9 @@ The following observations should help:
  \item By the triangle inequality,  we have
  \[-c\le a-b\quad \text{and}\quad  -c\le b-a.\]
 \end{itemize}
+
+\parbf{\ref{ex:pyth-cor-h}.}
+Apply the hyperbolic Pythagorean theorem the same way as in \ref{ex:pyth-cor}.
 
 %\subsection*{Chapter~\ref{chap:trans}}
 \refstepcounter{chapter}

@@ -55,7 +55,7 @@ Now, assume $P\notin\ell$.
 Let us construct the lines $n\ni P$ and $m\ni P$ as in the proof of existence; so $n\perp \ell$, $m\perp n$, and $m\parallel \ell$.
 
 Assume there is another line $s\ni P$ parallel to~$\ell$.
-Choose a point $Q\in s$ that lies with $\ell$ on the same side as~$m$.
+Choose a point $Q\in s$ on the same side of $m$ as~$\ell$.
 Let $R$ be the footpoint of $Q$ on~$n$.
 
 \begin{figure}[!ht]
@@ -211,6 +211,7 @@ Let $A$, $B$, $C$, and $D$ be points such that $A\ne B$, $B\ne C$, and $C\ne D$.
 Then $(AB)\parallel(C D)$ if and only if
 $$2\cdot(\measuredangle A B C+\measuredangle B C D)\equiv 0.
 \eqlbl{A B C + B C D}$$ 
+
 Equivalently, 
 $$\measuredangle A B C+\measuredangle B C D
 \equiv 
@@ -220,15 +221,14 @@ $$\measuredangle A B C+\measuredangle B C D
 \quad
 \measuredangle A B C+\measuredangle B C D
 \equiv
-\pi.$$
-
+\pi.\eqlbl{cases:A B C + B C D}$$
 Moreover, if $(AB)\ne(C D)$, then in the first case, 
 $A$ and $D$ lie on opposite sides of $(BC)$;
 in the second case,
 $A$ and $D$ lie on the same side of~$(BC)$.
 \end{thm}
 
-
+Often it is convenient to write both cases in \ref{cases:A B C + B C D} as a single identity \ref{A B C + B C D}; the factor $2$ makes the condition independent of the choices of half-lines on $(AB)$ and $(CD)$.
 
 \parit{Proof; ``only-if'' part.}
 Denote by $O$ the midpoint of $[BC]$.
@@ -257,19 +257,16 @@ Finally, \ref{A B O = A' C O}, \ref{eq:A B O= A B C}, and \ref{eq:2BCD= 2BCA'} i
 \qeds
 
 \parit{``If''-part.}
-By Theorem~\ref{thm:parallel} there is a unique line $(CD)$ thru $C$ that is parallel to $(AB)$.
-From the ``only-if'' part we know that  \ref{A B C + B C D} holds.
-
-On the other hand, there is a \textit{unique} line $(CD)$ such that \ref{A B C + B C D} holds.
-Indeed, suppose there are two such lines $(CD)$ and $(CD')$, then
-$$2\cdot(\measuredangle A B C+\measuredangle B C D)\equiv 2\cdot(\measuredangle A B C+\measuredangle B C D')\equiv0.
-$$ 
-Therefore 
-$2\cdot\measuredangle B C D\equiv 2\cdot\measuredangle B C D'$
-and by Exercise~\ref{ex:ABCO-line},  $D'\in (CD)$, or equivalently the line $(CD)$ coincides with $(CD')$.
-
-Therefore if \ref{A B C + B C D} holds, then $(CD)\parallel (AB)$.
-
+Assume \ref{A B C + B C D} holds.
+By Theorem~\ref{thm:parallel}, we can choose $(CD')\z\parallel(AB)$.
+By the ``only-if'' part,
+\[
+2\cdot\measuredangle BCD'
+\equiv-2\cdot\measuredangle ABC
+\equiv2\cdot\measuredangle BCD.
+\]
+By Exercise~\ref{ex:ABCO-line}, $(CD)=(CD')$,
+and hence $(CD)\parallel(AB)$.
 
 \parit{Last statement.}
 If $(AB)\ne(C D)$ and $A$ and $D$ lie on the opposite sides of $(BC)$, then $\angle ABC$ and $\angle BCD$ have opposite signs.
@@ -352,14 +349,20 @@ for every $\triangle ABC$.
 {
 
 \begin{wrapfigure}{r}{30mm}
-\vskip-0mm
+\vskip-6mm
 \centering
-\includegraphics{mppics/pic-88}
-\vskip4mm
 \includegraphics{mppics/pic-90}
+\vskip4mm
+\includegraphics{mppics/pic-88}
 %\vskip4mm
 %\includegraphics{mppics/pic-92}
 \end{wrapfigure}
+
+\begin{thm}{Exercise}\label{ex:right-isos}
+Let $\triangle ABC$ be an isosceles nondegenerate triangle with the base~$[AC]$.
+Suppose $D$ is a reflection of $A$ across $B$.
+Show that $\angle ACD$ is right.
+\end{thm}
 
 \begin{thm}{Exercise}\label{ex:pent}
 Let $\triangle ABC$ be a nondegenerate triangle.
@@ -371,12 +374,6 @@ BA=AD=DC.\]
 Show that $\measuredangle CBA= \measuredangle BAC$ and $AC=BC$.
 \end{thm}
 
-
-\begin{thm}{Exercise}\label{ex:right-isos}
-Let $\triangle ABC$ be an isosceles nondegenerate triangle with the base~$[AC]$.
-Suppose $D$ is a reflection of $A$ across $B$.
-Show that $\angle ACD$ is right.
-\end{thm}
 
 
 
@@ -480,16 +477,21 @@ Show that a parallelogram $ABCD$ is a rhombus
 if and only if $(AC)\perp (BD)$.
 \end{thm}
 
-Assume $\ell\parallel m$, and $X,Y\in m$.
-Let $X'$ and $Y'$ denote the footpoints of $X$ and $Y$ on~$\ell$.
-Note that $\square XYY'X'$ is a rectangle.
-By Lemma~\ref{lem:parallelogram}, $XX'=YY'$.
-That is, every point on $m$ lies at the same distance from $\ell$.
-This distance is called the \index{distance!between parallel lines}\emph{distance between} $\ell$ and~$m$.
-
 \begin{thm}{Exercise}\label{ex:inscribed-rhombus}
 A rhombus $AXYZ$ with side length $s$ is inscribed in a nondegenerate triangle $ABC$ so that $X\in [AB]$, $Y\in [BC]$, and $Z\in[CA]$.
 Show that $s=\sqrt{XB\cdot ZC}$.
+\end{thm}
+
+If $\ell\parallel m$, all points of $m$ lie at the same distance from $\ell$.
+This distance is called the \index{distance!between parallel lines}\emph{distance between} $\ell$ and~$m$.
+Тhe statement is clear if $\ell=m$;
+оtherwise, any two distinct points $X,Y\in m$ and their footpoints $X',Y'$ on $\ell$ form a rectangle $XYY'X'$, and by Lemma~\ref{lem:parallelogram}, $XX'=YY'$.
+
+\begin{thm}{Exercise}\label{ex:footpoints-distance}
+Let $X$ and $Y$ be distinct points, and let $X'$ and $Y'$
+be their footpoints on a line~$\ell$.
+Show that $X'Y'\le XY$, with equality if and only if
+$(XY)\parallel\ell$.
 \end{thm}
 
 \section{The method of coordinates}
@@ -555,7 +557,9 @@ for constants $a$, $b$, and $c$ such that $a\ne 0$ or $b\ne0$.
 \end{thm}
 
 \section{Apollonian circles}\label{sec:Apollonian circle}
-The exercises in this section illustrate the method of coordinates; they will not be used further in the sequel.
+
+The exercises in this section illustrate the method of coordinates.
+We will return to Apollonian circles in Chapter~\ref{chap:inversion}.
 
 \begin{thm}{Exercise}\label{ex:circle-coord}
 Show that for fixed real values $a$, $b$, and $c$ the equation 
@@ -585,4 +589,5 @@ for $k=1$, it becomes the perpendicular bisector of $[AB]$.
 
 \begin{thm}{Exercise}\label{ex:apolonnius-construction}
 Construct an Apollonian circle with given focuses $A$ and $B$ thru a given point $M$ using ruler and compass.
+When is this construction possible?
 \end{thm}
