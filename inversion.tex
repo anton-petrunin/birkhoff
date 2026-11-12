@@ -61,7 +61,7 @@ $$\frac{OA}{OB'}=\frac{OB}{OA'}.$$
 {
 
 \begin{wrapfigure}{r}{32mm}
-\vskip-10mm
+\vskip-12mm
 \centering
 \includegraphics{mppics/pic-160}
 \end{wrapfigure}
@@ -180,6 +180,12 @@ Hence \textit{(\ref{lem:inverse-4-angle:angle})} follows.
 Follows from \textit{(\ref{lem:inverse-4-angle:angle})} and \ref{prop:inscribed-quadrangle}.
 \qeds
 
+\begin{thm}{Exercise}\label{ex:inscribed+inv}
+Let $P$, $Q$, $P'$, and $Q'$ be distinct points in the Euclidean plane.
+Assume $P'$ and $Q'$ are inverses of $P$ and $Q$ respectively.
+Show that the quadrangle $PQP'Q'$ is inscribed.
+\end{thm}
+
 \section{Inversive plane and circlines}\label{sec:inversive-plane-circline}
 
 Let $\Omega$ be a circle with the center $O$ and the radius~$r$.
@@ -188,11 +194,9 @@ Consider the inversion across~$\Omega$.
 Recall that the inverse of $O$ is undefined.
 To deal with this problem it is useful to add an extra point to the plane, which will be called the \index{point!at infinity}\emph{point at infinity}, denoted as~\index{50@$\infty$}$\infty$.
 We can assume that $\infty$ is the inverse of $O$ and the other way around.
-
 The Euclidean plane with the added point at infinity is called the \index{plane!inversive plane}\index{inversive!plane}\emph{inversive plane}.
 
-We will always assume that every line and half-line contains~$\infty$.
-
+We will always assume that every line and half-line contains~$\infty$. Also, $\infty$ is regarded as lying outside every circle.
 Recall that
 \index{circline}\emph{circline}
 means \textit{circle or line}.
@@ -231,7 +235,6 @@ Assume $D$ is a point in the inversive plane, distinct from $A$, $B$, $C$, $O$, 
 Let $D'$ be the inverse of~$D$.
 By Theorem~\ref{lem:inverse-4-angle}\textit{\ref{lem:inverse-4-angle:inscribed}},
 $D' \in \Gamma'$ if and only if $D \in \Gamma$.
-
 It remains to prove that
 $\infty \in \Gamma$ $\Leftrightarrow$ $O \in \Gamma'$, which is equivalent to
 $O \in \Gamma$ $\Leftrightarrow$ $\infty \in \Gamma'$.
@@ -254,38 +257,6 @@ We can choose $P' \ne O$ on $\Gamma'$ such that $OP' < r \cdot \epsilon$.
 Its inverse $P$ lies on $\Gamma$, and $OP = r^2 / OP' > r/\epsilon$.
 Since $\epsilon>0$ is arbitrary, we have $\infty \in \Gamma$.
 \qeds
-
-
-
-\begin{thm}[!]{Exercise}\label{ex:inv-center not=center-inv}
-Assume that a circle $\Gamma'$ is the inverse of a circle $\Gamma$ centered at $Q$.
-Let $Q'$ be the inverse of~$Q$.
-Show that $Q'$ is not the center of~$\Gamma'$.
-\end{thm}
-
-{%%%!!! move pic up if possible
-
-\begin{wrapfigure}{r}{37mm}
-\vskip-8mm
-\centering
-\includegraphics{mppics/pic-162}
-\end{wrapfigure}
-
-Assume that a \index{circumtool}\emph{circumtool} is a geometric construction tool 
-that produces a circline passing thru three given points.
-
-\begin{thm}{Exercise}\label{ex:circumtool}
-Show that with only a circumtool,
-it is impossible to construct the center of a given circle.
-\end{thm}
-
-}
-
-\begin{thm}{Exercise}\label{ex:tangent-circ->parallels}
-Show that for every pair of tangent circles in the inversive plane, there is an inversion that sends them to a pair of parallel lines.
-\end{thm}
-
-
 
 \begin{thm}{Theorem}\label{thm:inverse}
 Consider an inversion of the inversive plane across a circle $\Omega$ centered at~$O$. 
@@ -324,6 +295,36 @@ Therefore, $\Gamma'$ is a circle.
 Since  $\Gamma\not\ni\infty$, we get that $\Gamma' \not\ni O$.
 Hence the result.
 \qeds
+
+\begin{thm}{Exercise}\label{ex:tangent-circ->parallels}
+Show that for every pair of tangent circles in the inversive plane, there is an inversion that sends them to a pair of parallel lines.
+\end{thm}
+
+{
+
+\begin{wrapfigure}{r}{37mm}
+\vskip-8mm
+\centering
+\includegraphics{mppics/pic-162}
+\end{wrapfigure}
+
+\begin{thm}[!]{Exercise}\label{ex:inv-center not=center-inv}
+Assume that a circle $\Gamma'$ is the inverse of a circle $\Gamma$ centered at $Q$.
+Let $Q'$ be the inverse of~$Q$.
+Show that $Q'$ is not the center of~$\Gamma'$.
+\end{thm}
+
+Assume that a \index{circumtool}\emph{circumtool} is a geometric construction tool
+that produces a circline passing thru three given points.
+
+}
+
+\begin{thm}{Exercise}\label{ex:circumtool}
+Show that with only a circumtool,
+it is impossible to construct the center of a given circle.
+\end{thm}
+
+
 
 \section{The method of inversion}
 
@@ -376,10 +377,10 @@ This reduces the problem to the case when $A$, $B$, $C$, and $D$ lie on one line
 {
 
 \begin{wrapfigure}{r}{27mm}
-\vskip-4mm
+\vskip-6mm
 \centering
 \includegraphics{mppics/pic-168}
-\vskip4mm
+\medskip
 \includegraphics{mppics/pic-170}
 \end{wrapfigure}
 
@@ -388,8 +389,7 @@ In the proof above, we rewrite Ptolemy's identity in a form that is invariant wi
 and then apply an inversion which makes the statement evident.
 The solution of the following exercise is based on the same idea;
 one has to make a right choice of inversion.
-
-
+\emph{Steiner's porism} is also a beautiful application of the same type.
 
 \begin{thm}{Exercise}\label{ex:4-circles}
 Assume that four circles are mutually tangent to each other.
@@ -402,6 +402,7 @@ Assume that three circles are tangent to each other and to two parallel lines as
 
 Show that $(AB)$ is tangent to two circles at~$A$.
 \end{thm}
+
 
 }
 
@@ -537,12 +538,6 @@ there is a unique circline passing thru $P$, $Q$, and~$P'$.%
 Hence the result.
 \qeds
 
-\begin{thm}{Exercise}\label{ex:inscribed+inv}
-Let $P$, $Q$, $P'$, and $Q'$ be points in the Euclidean plane.
-Assume $P'$ and $Q'$ are inverses of $P$ and $Q$ respectively.
-Show that the quadrangle $PQP'Q'$ is inscribed.
-\end{thm}
-
 \begin{thm}{Exercise}\label{ex:centers-of-perp-circles}
 Let $\Omega_1$ and $\Omega_2$ be two perpendicular circles with centers at $O_1$ and $O_2$ respectively.
 Show that the inverse of $O_1$ across $\Omega_2$ 
@@ -556,7 +551,7 @@ Assume that a circle $\Gamma$ is perpendicular to $\Omega_1$ and $\Omega_2$.
 Show that $\Gamma\perp\Omega_3$.
 \end{thm}
 
-Let us consider two new construction tools:
+Let us consider two construction tools:
 the \index{circumtool}\emph{circumtool} that constructs a circline thru three given points, 
 and the \index{inversor}\emph{inversor} --- a tool that constructs the inverse of a given point across the given circline.
 
@@ -564,13 +559,6 @@ and the \index{inversor}\emph{inversor} --- a tool that constructs the inverse o
 Given  two circles $\Omega_1$, $\Omega_2$ and a point $P$ that does not lie on the circles,
 use only circumtool and inversor to construct a circline $\Gamma$ thru $P$, 
 and perpendicular to both $\Omega_1$ and $\Omega_2$.
-\end{thm}
-
-\begin{thm}{Advanced exercise}\label{ex:3-construction-perp-clines}
-Given  three disjoint circles $\Omega_1$, $\Omega_2$, and $\Omega_3$,
-use only circumtool and inversor to construct a circline $\Gamma$ that is perpendicular to each circle $\Omega_1$, $\Omega_2$, and $\Omega_3$.
-
-Think what to do if two of the circles intersect.
 \end{thm}
 
 \section{Angles after inversion}
@@ -610,7 +598,8 @@ $$\alpha\equiv-\alpha'.$$
 
 \end{thm}
 
-We will present a proof based on Proposition~\ref{prop:arc(angle=tan)}; a more geometric proof can be built on \ref{ex:two-arcs}.
+We will present a proof based on Proposition~\ref{prop:arc(angle=tan)} and Theorem~\ref{lem:inverse-4-angle}\textit{\ref{lem:inverse-4-angle:angle}}.
+A more geometric proof can be built on \ref{ex:two-arcs}.
 
 \begin{wrapfigure}{r}{51mm}
 \vskip-0mm
@@ -629,7 +618,7 @@ so $\alpha'=\measuredangle Y_1A'Y_2$.
 After moving points $B_i$ and $C_i$ along the arcs closer to $A$, we may assume that all angles below are defined.
 By Proposition~\ref{prop:arc(angle=tan)},
 \begin{align*}
-\measuredangle X_1AX_2&\equiv\measuredangle X_1AC_1+\measuredangle C_1AC_2+\measuredangle C_2AX_2\equiv
+\alpha&\equiv\measuredangle X_1AC_1+\measuredangle C_1AC_2+\measuredangle C_2AX_2\equiv
 \\
 &\equiv(\pi-\measuredangle C_1B_1A)+\measuredangle C_1AC_2+(\pi-\measuredangle AB_2 C_2)\equiv
 \\
@@ -640,7 +629,7 @@ By Proposition~\ref{prop:arc(angle=tan)},
 -(\measuredangle C_1B_1A+\measuredangle AB_2 C_1)
 -(\measuredangle C_1B_2C_2 +\measuredangle C_2 A C_1).
 \intertext{The same way, we get}
-\measuredangle Y_1A'Y_2
+\alpha'
 &\equiv-(\measuredangle C_1'B_1'A'+\measuredangle A'B_2' C_1')
 -(\measuredangle C_1'B_2'C_2' +\measuredangle C_2' A' C_1').
 \end{align*}
@@ -685,3 +674,17 @@ By Corollary~\ref{cor:perp-inverse-clines}, $P'$ is the inverse of $Q'$ across~$
 \qeds
 
 }
+
+\begin{thm}{Exercise}\label{ex:commuting-inversions}
+Let $f$ and $g$ be inversions across distinct circles
+$\Gamma$ and $\Delta$.
+Show that $f\circ g=g\circ f$ if and only if
+$\Gamma\perp\Delta$.
+\end{thm}
+
+\begin{thm}{Advanced exercise}\label{ex:3-construction-perp-clines}
+Given  three disjoint circles $\Omega_1$, $\Omega_2$, and $\Omega_3$,
+use only circumtool and inversor to construct a circline $\Gamma$ that is perpendicular to each circle $\Omega_1$, $\Omega_2$, and $\Omega_3$.
+
+Think what to do if two of the circles intersect.
+\end{thm}

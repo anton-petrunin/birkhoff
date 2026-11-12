@@ -1143,11 +1143,12 @@ Apply \ref{prop:arc(angle=tan)} twice.
 (Alternatively, apply \ref{cor:reflection+angle} for the reflection across the perpendicular bisector of $[AC]$.)
 
 \parbf{\ref{ex:circline-sides}.}
-Show that the angle to $AXC$ can be zero or straight only when $X\in\Gamma$.
+Show that the angle to $AXC$ can be zero or straight only when $X\in\Omega$.
 
 The line case follows from \ref{prop:arc(angle=tan)} and \ref{ex:signs-PXQ-PYQ}.
 
-In case of circle, use \ref{prop:arc(angle=tan)} and argue by continuity as in the proof of \ref{lem:signsXY} to show that if $X$ and $Y$ on one side of $\Omega$, then the angles have the same sign.
+For a circle, use \ref{prop:arc(angle=tan)} and argue by continuity as in the proof of \ref{lem:signsXY} to show that the sign is constant on each side of $\Omega$.
+Compare points of $(AC)$ inside and outside $\Omega$ to see that the signs are opposite.
 This finishes the proof since $\Omega$ has two sides and angle may have only two signs.
 
 
@@ -1160,7 +1161,7 @@ This finishes the proof since $\Omega$ has two sides and angle may have only two
 \setcounter{eqtn}{0}
 
 \parbf{\ref{ex:constr-inversion}.}
-By \ref{lem:tangent}, $\angle OTP'$ is right. 
+By \ref{lem:tangent}, $\angle OTP$ is right.
 Therefore, $\triangle OPT\z\sim \triangle OTP'$
 and in particular
 $OP\cdot OP'\z=OT^2$,
@@ -1185,26 +1186,8 @@ $\frac{PX}{P'X}=\frac{OP}{OX}=\frac{OP}{OY}=\frac{PY}{P'Y}$
 and hence the result.
 
 \parbf{\ref{ex:incenter+inversion=orthocenter}.}
-By \ref{lem:inversion-sim},
-\begin{align*}
-\measuredangle IA'B'&\equiv -\measuredangle IBA,
-&
-\measuredangle IB'A'&\equiv -\measuredangle IAB,
-\\
-\measuredangle IB'C'&\equiv -\measuredangle ICB,
-&
-\measuredangle IC'B'&\equiv -\measuredangle IBC,
-\\
-\measuredangle IC'A'&\equiv -\measuredangle IAC,
-&
-\measuredangle IA'C'&\equiv -\measuredangle ICA.
-\end{align*}
-
-It remains to apply the theorem on the sum of angles of triangle (\ref{thm:3sum})
-to show that $(A'I)\z\perp (B'C')$, 
-$(B'I)\z\perp (C'A')$
-and
-$(C'I)\z\perp (B'A')$.
+Use \ref{ex:constr-inversion} to show that $A'$, $B'$, and $C'$
+are the midpoints of the sides of the triangle formed by the points of tangency.
 
 \parbf{\ref{ex:consturuction-of-inversion}.}
 Guess the construction from the picture.
@@ -1215,8 +1198,17 @@ Guess the construction from the picture.
 \includegraphics{mppics/pic-342}
 \end{Figure}
 
+\parbf{\ref{ex:inscribed+inv}.}
+Apply \ref{lem:inverse-4-angle}\textit{\ref{lem:inverse-4-angle:angle}},
+\ref{ex:quadrangle},
+and \ref{thm:inscribed-angle}.
+
+\parbf{\ref{ex:tangent-circ->parallels}.}
+Apply an inversion across a circle with the center at the only point of intersection of the circles;
+then use \ref{thm:inverse}.
+
 \parbf{\ref{ex:inv-center not=center-inv}.}
-Assume $r\z>0$, $x\ne 0$, and $y\ne 0$.
+Assume $r\z>0$, $x\ne 0$, $y\ne 0$, and $x+y\ne 0$.
 Show that
 $$\frac{r^2}{(x+y)/2}
 =
@@ -1231,12 +1223,11 @@ Assume $r$ is the radius of the circle of inversion.
 Then the left-hand side above is the coordinate of $Q'$ 
 and the right-hand side is the coordinate of the center of $\Gamma'$.
 
+We may assume that $x+y\ne 0$; otherwise $\Gamma$ has center at the center of inversion and its image is $\infty$, which cannot be the center of circle $\Gamma'$.
+Further, since $\Gamma'$ is a circle, \ref{thm:inverse} implies that $x\ne 0$ and $y\ne 0$.
+
 \parbf{\ref{ex:circumtool}.}
 A solution is given in \ref{sec:verification}.
-
-\parbf{\ref{ex:tangent-circ->parallels}.}
-Apply an inversion across a circle with the center at the only point of intersection of the circles;
-then use \ref{thm:inverse}.
 
 \parbf{\ref{ex:4-circles}.}
 Label the points of tangency as in the picture.
@@ -1266,11 +1257,6 @@ while the two parallel lines will become circles tangent at~$A$.
 
 It remains to show that the dashed line $(AB')$ in the picture is parallel to the other two lines.
 
-\parbf{\ref{ex:inscribed+inv}.}
-Apply \ref{lem:inverse-4-angle}\textit{\ref{lem:inverse-4-angle:angle}}, 
-\ref{ex:quadrangle},
-and \ref{thm:inscribed-angle}.
-
 \parbf{\ref{ex:centers-of-perp-circles}.}
 Suppose that $T\in \Omega_1\cap\Omega_2$.
 Let $P$ be the footpoint of $T$ on~$(O_1O_2)$.
@@ -1298,8 +1284,16 @@ across $\Omega_1$ and~$\Omega_2$.
 Apply \ref{cor:perp-inverse} and \ref{thm:perp-inverse}
 to show that a circline $\Gamma$ passing thru $P$, $P_1$, and $P_2$ is a solution.
 
+\parbf{\ref{ex:commuting-inversions}.}
+Since $f\circ f$ is the identity transformation, $f\circ g=g\circ f$ is equivalent to $g=f\circ g\circ f$.
+
+If $\Gamma\perp \Delta$, then by \ref{thm:perp-inverse} $f(\Delta)=\Delta$, and by \ref{cor:invese-comp} we have $g=f\circ g\circ f$.
+
+To prove converse, note that $\Delta$ and $f(\Delta)$ are the fixed-point sets of $g$ and $f\circ g\circ f$, respectively.
+Thus, $g=f\circ g\circ f$ $\Rightarrow$ $\Delta=f(\Delta)$, and  apply \ref{thm:perp-inverse}.
+
 \parbf{\ref{ex:3-construction-perp-clines}.}
-All circles perpendicular to $\Omega_1$ and $\Omega_2$ pass thru a fixed point~$P$.
+All circlines perpendicular to $\Omega_1$ and $\Omega_2$ pass thru a fixed point~$P$.
 Try to construct~$P$.
 
 If two of the circles intersect, try to apply \ref{cor:invese-comp}.

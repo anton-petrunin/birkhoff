@@ -2789,12 +2789,14 @@ draw circle(z.O,x.R) dashed linedot;
 dOt z.A, z.B1, z.C1, z.B2, z.C2,  z.AA, z.BB1, z.CC1, z.BB2, z.CC2, z.X1, z.X2, z.XX1, z.XX2;
 
 label.bot (btex $A$ etex, z.A);
+label.urt (btex $\alpha$ etex, z.A+12*unitvector(z.X1-z.A) rotated 10);
 label.bot (btex $B_1$ etex, z.B1);
 label.llft (btex $C_1$ etex, z.C1);
 label.urt (btex $B_2$ etex, z.B2);
 label.ulft (btex $C_2$ etex, z.C2);
 
 label.bot (btex $A'$ etex, z.AA);
+label.llft (btex $\alpha'$ etex, z.AA+12*unitvector(z.XX2-z.AA) rotated 1);
 label.rt (btex $B'_1$ etex, z.BB1);
 label.lft (btex $C'_1$ etex, z.CC1);
 whitelabel.urt (btex $B'_2$ etex, z.BB2);
