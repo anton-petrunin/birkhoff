@@ -2127,6 +2127,30 @@ label.lrt (btex $C$ etex, z.C);
 label.bot (btex $D$ etex, z.D);
 endfig;
 
+beginfig(135)
+save u;
+u:=.7cm;
+
+z.P=(-1,1.4)*u;
+z.Q=-z.P;
+z.X=(x.P,y.Q);
+
+markdashed_rt_angle(z.P,z.X,z.Q);
+draw circle(origin,z.P);
+draw z.P--z.Q;
+draw ddline(z.X,z.Q)(.3,.2) penbold;
+draw ddline(z.X,z.P)(.2,.2) dashed evenly;
+
+Dot z.P;
+dOt z.Q,z.X;
+
+label.ulft (btex $P$ etex, z.P);
+label.lrt (btex $Q$ etex, z.Q);
+label.llft (btex $X$ etex, z.X);
+label.top (btex $\ell$ etex, .5[z.Q,z.X]);
+
+endfig;
+
 beginfig(136)
 save u;
 u:=.7cm;
@@ -2156,6 +2180,30 @@ label.bot (btex $X$ etex, z.X);
 label.lft (btex $Y$ etex, z.Y);
 label.rt (btex $X'$ etex, z.XX);
 label.top (btex $Y'$ etex, z.YY);
+endfig;
+
+beginfig(137)
+save u;
+u:=.7cm;
+
+z.X=(-1.4,1)*u;
+z.O=(-abs(z.X),0);
+
+draw circle(z.O,z.X-z.O) penbold;
+draw circle(origin,z.X);
+draw (-z.O)--z.O;
+draw ddline(z.X,-z.O)(.2,.2) dashed evenly;
+draw ddline(z.X yscaled -1,-z.O)(.2,.2) dashed evenly;
+
+Dot -z.O;
+dOt z.O,z.X, z.X yscaled -1;
+
+whitelabel.rt (btex $P$ etex, -z.O);
+label.lft (btex $O$ etex, z.O);
+label.top (btex $X$ etex, z.X+(0,1));
+label.bot (btex $Y$ etex, z.X yscaled -1+(0,-1));
+label.ulft (btex $\Gamma$ etex, z.O +(z.X-z.O) rotated 60);
+
 endfig;
 
 
@@ -2432,8 +2480,9 @@ whitelabel.bot (btex $Y_2$ etex, z.Y2);
 endfig;
 
 beginfig(156)
-save u;
+save u,p;
 u:=1.4cm;
+path p[];
 
 z.O=origin;
 z.X=(0,-1)*u;
@@ -2444,15 +2493,18 @@ z.C=z.X rotated -110;
 z.Y=z.X rotated 100;
 z.BB=.7*z.B;
 
-
+p2= ddarc(z.A,z.BB,z.C)(20,20);
 draw ddarc(z.A,z.X,z.C)(0,0);
 draw ddarc(z.A,z.Y,z.C)(0,0) dashed evenly;
-draw ddarc(z.A,z.BB,z.C)(20,20) dashed  linedot;
+draw p2 dashed  linedot;
 
-dOt z.A,z.B,z.C;
+z.BBB= point 1.5 of p2;
+
+dOt z.A,z.B,z.C,z.BBB;
 
 label.lrt (btex $A$ etex, z.A);
-label.llft (btex $B$ etex, z.B);
+label.llft (btex $X$ etex, z.B);
+label.top (btex $B$ etex, z.BBB);
 label.lft (btex $C$ etex, z.C);
 label.llft (btex $\Gamma$ etex, -z.B);
 label.urt (btex $\Omega$ etex, z.BB);

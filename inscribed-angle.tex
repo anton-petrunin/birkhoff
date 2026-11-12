@@ -193,21 +193,29 @@ Suppose $\Gamma$ is a circle with diameter~$[AB]$.
 A triangle $ABC$ has a right angle at $C$ if and only if $C\in\Gamma$.
 \end{thm}
 
-The following two exercises can be used in construction problems.
+The pictures show how to use the corollary in constructions.
+The first one describes a construction of a line $(PX)$ that is perpendicular to a given line $\ell$ and passes thru a point $P\notin \ell$; the additional circle has diameter $[PQ]$.
 
-\begin{thm}{Exercise}\label{ex:tangent-construction-inscribed}
-Let $\Gamma$ be a circle with center $O$, and let $\Delta$ be a circle with diameter $[OP]$.
-Assume that $\Delta$ and $\Gamma$ intersect at a point $X\ne P$.
-Prove that the line $(PX)$ is tangent to $\Gamma$.
+\begin{Figure}
+\begin{minipage}{.49\textwidth}
+\centering
+\includegraphics{mppics/pic-135}
+\end{minipage}
+\hfill
+\begin{minipage}{.49\textwidth}
+\centering
+\includegraphics{mppics/pic-137}
+\end{minipage}
+\end{Figure}
+
+The second one describes a construction of tangent lines $(PX)$ and $(PY)$ to a given circle $\Gamma$ thru a point $P$ outside $\Gamma$; here $O$ is the center of $\Gamma$ and the additional circle has diameter $[OP]$.
+
+\begin{thm}{Exercise}\label{ex:VVAA}
+Let $\triangle A B C$ be a nondegenerate triangle,
+and let $A'$ and $B'$ be footpoints of altitudes from $A$ and~$B$ respectively.
+Show that $A$, $B$, $A'$, and $B'$ lie on one circle.
+What is the center of this circle?
 \end{thm}
-
-\begin{thm}{Exercise}\label{ex:perp-construction-inscribed}
-Let $\Gamma$ be a circle with diameter $[PQ]$.
-Assume that a line $\ell$ passes thru $Q$ and intersects $\Gamma$ at another point $X\ne P$.
-Prove that $\ell \perp (PX)$.
-\end{thm}
-
-
 
 \begin{thm}{Exercise}\label{ex:altitude+circles}
 Assume two circles intersect at two distinct points $A$ and $B$, and have diameters $[AX]$ and $[AY]$.
@@ -275,13 +283,6 @@ hence the result.
 
 
 {
-
-\begin{thm}{Exercise}\label{ex:VVAA}
-Let $\triangle A B C$ be a nondegenerate triangle,
-and let $A'$ and $B'$ be footpoints of altitudes from $A$ and~$B$ respectively.
-Show that the four points $A$, $B$, $A'$, and $B'$ lie on one circle.
-What is the center of this circle?
-\end{thm}
 
 \begin{wrapfigure}{r}{33mm}
 \vskip-6mm
@@ -500,6 +501,8 @@ If the arc is formed by the line segment $[AC]$, then the half-line $[AC)$ is co
 If the arc is formed by the union of two half-lines $[AX)$ and $[CY)$ in $(AC)$,
 then the half-line $[AX)$ is considered to be tangent to the arc at $A$.
 
+Note that two opposite arcs have opposite tangent half-lines at each endpoint.
+
 The measure of the \index{angle!between arcs}\emph{angle between the arcs} is defined as the measure of the angle between their tangent half-lines at the common endpoint.
 
 \begin{thm}{Proposition}\label{prop:arc(angle=tan)}
@@ -524,7 +527,7 @@ Therefore, it is sufficient to prove the ``only-if'' part.
 If $[AX)$ is tangent to the arc $ABC$, then by \ref{thm:tangent-angle}
 and \ref{thm:inscribed-angle},
 we get that
-$$2\cdot \measuredangle ABC+2\cdot\measuredangle CAX\equiv 0.$$
+$2\cdot \measuredangle ABC+2\cdot\measuredangle CAX\equiv 0$.
 Therefore, either 
 $$\measuredangle ABC+\measuredangle CAX
 \equiv 
@@ -592,28 +595,32 @@ Show that $\alpha\equiv -\beta$.
 
 }
 
-Recall that points in the complement of a circle $\Gamma$ lie either inside or outside of $\Gamma$.
+Recall that points in the complement of a circle $\Omega$ lie either inside or outside of $\Omega$.
 Therefore, we can talk about points on one side of general circlines.
 
 \begin{thm}[!]{Exercise}\label{ex:circline-sides}
-Let $\Gamma$ be a circline passing thru three distinct points $A$, $B$, and $C$, and let $X,Y\notin\Gamma$.
-Show that $X$ and $Y$ lie on the same side of $\Gamma$ if and only if the angles at $A$ from the arc $ABC$ to the arcs $AXC$ and $AYC$ have the same sign.
-\end{thm} %???PIC
+Let $\Omega$ be a circline passing thru three distinct points $A$, $B$, and $C$, and let $X,Y\notin\Omega$.
+Show that $X$ and $Y$ lie on the same side of $\Omega$ if and only if the angles at $A$ from the arc $ABC$ to the arcs $AXC$ and $AYC$ have the same sign.
+\end{thm}
 
-The exercise gives the following equivalent description of arcs, which is more conceptual and useful.
+{
 
 \begin{wrapfigure}{o}{36mm}
-\vskip-2mm
+\vskip-4mm
 \centering
 \includegraphics{mppics/pic-156}
 \end{wrapfigure}
 
-Suppose $A$, $B$, and $C$ are distinct points on a circline $\Gamma$,
+The exercise gives the following equivalent description of arcs, which is more conceptual and useful.
+
+Suppose $A$, $X$, and $C$ are distinct points on a circline $\Gamma$,
 and $\Omega$ is another circline that meets $\Gamma$ at $A$ and $C$.
-The set of points on $\Gamma$ that lie with $B$ on the same side of $\Omega$ together with the intersection points $A$ and $C$ is an \emph{arc} $ABC$.
+The set of points on $\Gamma$ that lie with $X$ on the same side of $\Omega$ together with the intersection points $A$ and $C$ is an \emph{arc} $AXC$.
+
+}
 
 According to the exercise, this new definition of arc agrees with the old one;
-in partuicular, the arc $ABC$ does not depend on the choice of~$\Omega$.
+in particular, the arc $AXC$ does not depend on the choice of~$\Omega$.
 
 
 

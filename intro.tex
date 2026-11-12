@@ -49,8 +49,8 @@ At the same time, the students have a chance to learn the geometry of metric spa
 Here is a dependency graph of the chapters.
 
 \begin{figure}[!ht]
+\vskip-13mm
 \centering
-
 \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,scale=1.4,
   thick,main node/.style={circle,draw,font=\sffamily\bfseries,minimum size=8mm}]
 
@@ -86,6 +86,7 @@ Here is a dependency graph of the chapters.
    (7) edge node{}(8)
    (8) edge[dashed] node{}(9)
    (8) edge[dashed] node{}(19)
+  (8) edge[dashed,out=60,in=60,looseness=1.5] node{}(20)
    (7) edge node{}(20)
    (10) edge node{}(14)
    (14) edge node{}(15)
@@ -99,8 +100,7 @@ Here is a dependency graph of the chapters.
    (12) edge node{}(13)
    (15) edge node{}(17)
    (16) edge[dashed] node{}(17)
-   (13) edge node{}(17)
-   (19) edge[dashed] node{}(20);
+   (13) edge node{}(17);
 \end{tikzpicture}
 \end{figure}
 
