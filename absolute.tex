@@ -158,7 +158,7 @@ $$AB=A'B',
 In the Euclidean plane, the above exercise follows from ASA and the theorem on the sum of angles of a triangle (\ref{thm:3sum}).
 However, Theorem~\ref{thm:3sum} cannot be used here, since its proof uses Axiom~\ref{def:birkhoff-axioms:4}.
 Later (Theorem~\ref{thm:3sum-h}) 
-we will show that Theorem~\ref{thm:3sum} does not hold in a neutral plane.
+we will show that Theorem~\ref{thm:3sum} does not hold in every neutral plane.
 
 \section{Three angles of a triangle}
 
@@ -208,9 +208,9 @@ $$|\measuredangle ABC|+|\measuredangle BCA|+|\measuredangle CAB|\le \pi.$$
 
 \end{thm}
 
-The following proof is due to Adrien-Marie Legendre \cite{legendre}, 
+The following proof is due to Adrien-Marie Legendre \cite[3rd edition]{legendre},
 earlier proofs were given by Giovanni Saccheri \cite{saccheri}
-and Johann Lambert \cite{lambert}.
+and Johann Lambert~\cite{lambert}.
 
 \parit{Proof.} 
 Set 
@@ -252,9 +252,11 @@ By SAS, we have constructed $n$ congruent triangles
 
 Set $d=C_1C_2$ and $\delta=\measuredangle C_2A_1C_1$.
 Note that 
-$$\alpha+\beta+\delta=\pi.
-\eqlbl{eq:gamma'}$$
+$$\alpha+\beta+\delta=\pi.$$
 By Proposition~\ref{prop:2sum}, we get that $\delta\ge 0$.
+Note that by Proposition~\ref{prop:angle-side}, it remains to show that
+\[c\le d.
+\eqlbl{eq:c=<d}\]
 
 By construction
 \begin{align*}
@@ -276,12 +278,7 @@ n\cdot c&=A_0A_n\le
 In particular, 
 \[c\le  d+\tfrac1n\cdot (a+b-d).\]
 Since  $n$ is an arbitrary positive integer,
-the latter implies
-$c\le d$.
-By Proposition~\ref{prop:angle-side}, 
-it is equivalent to $\gamma\le \delta$.
-From \ref{eq:gamma'}, 
-the theorem follows.
+the latter implies \ref{eq:c=<d}.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:neutral-quadrangle}
@@ -335,7 +332,10 @@ $$\defect(\triangle ABC)=\defect(\triangle AXC).$$
 
 }
 
-\vskip-2mm
+\begin{thm}{Advanced exercise}\label{ex:defect=+}
+Build a proof of Theorem~\ref{thm:3sum-a}, applying recurcevely Exercise~\ref{ex:defect=}.
+\end{thm}
+
 
 \begin{thm}{Exercise}\label{ex:neutral-rectangle}
 Let $ABCD$ be a \index{rectangle}\emph{rectangle} in the neutral plane;
@@ -370,7 +370,7 @@ and a point $P\notin\ell$
 such that there is only one line passing thru $P$ 
 and parallel to~$\ell$.
 \item 
-Every nondegenerate triangle can be circumscribed.
+Every nondegenerate triangle has a circumcircle.
 \item
 There exists a pair of distinct lines that lie at a bounded distance from each other.
 \item
@@ -428,7 +428,7 @@ and Franz Taurinus.%
 \footnote{The oldest surviving letters were the Gauss letter to Christian Gerling in 1816 
 and the yet more convincing letter dated 1818 
 of Schweikart sent to Gauss via Gerling.}
-They all seem to be afraid to state it in public.
+They all hesitated to state it in public.
 For instance, in 1818 Gauss writes to Gerling:
 
 \smallskip
@@ -441,8 +441,8 @@ But the wasps whose nest you disturb will fly around your head.}
 \smallskip
 
 Nikolai Lobachevsky came to the same conclusion independently.
-Unlike the others, he dared to state it in public and in print \cite{lobachevsky}.
-That cost him serious trouble.
+He had also state it in public and in print \cite{lobachevsky},
+meeting with foolish attacks and mockery.
 A couple of years later, also independently, János Bolyai published his work \cite{bolyai}.
 
 It seems that Lobachevsky was the first who had a proof of Theorem~\ref{thm:consistent} altho its formulation required rigorous axiomatics which was not developed in his time.
@@ -452,11 +452,6 @@ The same idea was used earlier by Lobachevsky \cite[\S34]{lobachevsky-1840};
 he modeled the Euclidean plane in the hyperbolic space.
 
 The proof of Beltrami is the subject of the next chapter. 
-
-%\medskip
-
-%Arguably, the discovery of hyperbolic geometry was the second main scientific discovery of the $19^\text{th}$ century, trailing only Mendel's laws. %Law of multiple proportions
-%The discovery of hyperbolic geometry was one of the main scientific discoveries of the $19^\text{th}$ century, on the same level are Mendel's laws and the law of multiple proportions.
 
 \section{Curvature}
 
@@ -478,12 +473,12 @@ nor indeed can it ever reach it.}
 
 In modern terminology, the constant that Gauss mentions 
 can be expressed as $1/\sqrt{-k}$, 
-where $k\le 0$, is the so-called \index{curvature}\emph{curvature} of the neutral plane, which we are about to introduce.
+where $k< 0$ is the so-called \index{curvature}\emph{curvature} of the neutral plane.
+Now we are going to explain the idea curvature, omiting proofs.
 
 The identity in Exercise~\ref{ex:defect} suggests that the defect of a triangle should be proportional to its area.%
 \footnote{The area in the neutral plane is discussed briefly at the end of Chapter~\ref{chap:area},
 but the reader could also refer to an intuitive understanding of area measurement.}
-
 In fact, for every neutral plane, there is a nonpositive real number $k$
 such that 
 $$k\cdot\area(\triangle ABC)+\defect(\triangle ABC)=0$$
@@ -504,7 +499,7 @@ can be obtained by rescaling the metric on the hyperbolic plane.
 Indeed,
 if we rescale the metric by a positive factor $c$,
 the area changes by factor $c^2$, while the defect stays the same.
-Therefore, taking $c=\sqrt{-k}$,
+Therefore, taking $c=1/\sqrt{-k}$,
 we can get the neutral plane of the given curvature $k<0$.
 In other words, all the non-Euclidean neutral planes become identical
 if we use $r=1/\sqrt{-k}$ as the unit of length.

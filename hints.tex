@@ -1219,12 +1219,15 @@ Choose an isometry $\ell\to\mathbb{R}$ that sends $O$ to $0$;
 assume $x,y\in \mathbb{R}$
 are the images (coordinates) of the two points in $\ell\cap\Gamma$;
 note that $x\ne y$.
-Assume $r$ is the radius of the circle of inversion.
-Then the left-hand side above is the coordinate of $Q'$ 
+
+We may assume that $x+y\ne 0$; otherwise $Q$ has center at the center of inversion and $Q'=\infty$, which is not a center of any circle.
+Further, since $\Gamma'$ is a circle, \ref{thm:inverse} implies that $x\ne 0$ and $y\ne 0$.
+
+If $r$ is the radius of the circle of inversion,
+then the left-hand side above is the coordinate of $Q'$
 and the right-hand side is the coordinate of the center of $\Gamma'$.
 
-We may assume that $x+y\ne 0$; otherwise $\Gamma$ has center at the center of inversion and its image is $\infty$, which cannot be the center of circle $\Gamma'$.
-Further, since $\Gamma'$ is a circle, \ref{thm:inverse} implies that $x\ne 0$ and $y\ne 0$.
+
 
 \parbf{\ref{ex:circumtool}.}
 A solution is given in \ref{sec:verification}.
@@ -1289,8 +1292,9 @@ Since $f\circ f$ is the identity transformation, $f\circ g=g\circ f$ is equivale
 
 If $\Gamma\perp \Delta$, then by \ref{thm:perp-inverse} $f(\Delta)=\Delta$, and by \ref{cor:invese-comp} we have $g=f\circ g\circ f$.
 
-To prove converse, note that $\Delta$ and $f(\Delta)$ are the fixed-point sets of $g$ and $f\circ g\circ f$, respectively.
-Thus, $g=f\circ g\circ f$ $\Rightarrow$ $\Delta=f(\Delta)$, and  apply \ref{thm:perp-inverse}.
+To prove the converse, note that $\Delta$ and $f(\Delta)$ are the fixed-point sets of $g$ and $f\circ g\circ f$, respectively.
+Conclude that $g=f\circ g\circ f$ implies $\Delta=f(\Delta)$ and
+apply \ref{thm:perp-inverse}.
 
 \parbf{\ref{ex:3-construction-perp-clines}.}
 All circlines perpendicular to $\Omega_1$ and $\Omega_2$ pass thru a fixed point~$P$.
@@ -1384,6 +1388,8 @@ Mimic the proof of \ref{thm:3sum-a} for another fence made from copies of quadra
 \centering
 \includegraphics{mppics/pic-347}
 \end{Figure}
+You should get
+\[2\cdot n\cdot XY\le n\cdot(AB+CD)+AD.\]
 
 \parbf{\ref{ex:defect}.}
 Note that 
@@ -1394,6 +1400,11 @@ Then apply the definition of the defect.
 Show that $\triangle AMX\cong \triangle BMC$. 
 Apply \ref{ex:defect} to $\triangle ABC$ and $\triangle AXC$.
 
+\parbf{\ref{ex:defect=+}.} Apply the construction recucevely chosing the smallest angle of triangle as $C$ on each step.
+Show use that that this way we get a triangle with the same defec and two angles smaller than any given $\varepsilon>0$.
+
+\parit{Comment.}
+This proof is also due to Adrien-Marie Legendre \cite[12th edition]{legendre}.
 
 \parbf{\ref{ex:neutral-rectangle}.}
 Observe that the total sum of absolute values of angle measures in $\triangle ABC$ and $\triangle CDA$ is at least $2\cdot\pi$.
