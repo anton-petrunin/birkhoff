@@ -624,7 +624,6 @@ endfor
 
 label.lft (btex $X$ etex,  z.u0);
 label.urt (btex $Y$ etex,  z.u1);
-label.lrt (btex $\cdots$ etex,  (5,-2)+z.u1 shifted (2*(z.u1-z.u0)));
 label.top (btex $A$ etex,  z.p0);
 label.top (btex $B$ etex,  z.p1);
 label.bot (btex $D$ etex,  z.q0);

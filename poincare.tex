@@ -36,7 +36,10 @@ We will often assume that the absolute is a unit circle.
 \parbf{Hyperbolic lines.}
 The intersections of the h-plane with circlines that are perpendicular to the absolute are called {}\emph{hyperbolic lines} or \index{h-line}\emph{h-lines}.
 
-\begin{wrapfigure}{o}{48mm}
+{
+
+\begin{wrapfigure}{r}{48mm}
+\vskip-2mm
 \centering
 \includegraphics{mppics/pic-190}
 \end{wrapfigure}
@@ -47,6 +50,13 @@ This h-line will be denoted by~\index{62@$(PQ)_h$, $[PQ)_h$, $[PQ]_h$}$(PQ)_h$.
 The arcs of hyperbolic lines will be called {}\emph{hyperbolic segments} or \index{h-segment}\emph{h-segments}.
 An h-segment with endpoints $P$ and $Q$ will be denoted as~$[PQ]_h$.
 
+}
+
+\begin{thm}[!]{Classroom exercise}\label{ex:line/h-line}
+Show that an h-segment $[PQ]_h$ coincides with the Euclidean segment $[PQ]$
+if and only if the line $(PQ)$ passes thru the center of the absolute.
+\end{thm}
+
 The portion of an h-line on one side of a point will be called a {}\emph{hyperbolic half-line} (or \index{h-half-line}\emph{h-half-line}).
 More precisely, an h-half-line is the intersection of the h-plane with an arc that is perpendicular to the absolute and has exactly one of its endpoints in the h-plane.
 An h-half-line starting at $P$ and passing thru $Q$ will be denoted as~$[PQ)_h$.
@@ -55,7 +65,7 @@ If $\Gamma$ is the circline containing the h-line $(PQ)_h$, then the points ($A$
 \index{point!ideal point}\index{ideal!point}\emph{ideal points} of~$(PQ)_h$.
 (The ideal points of an h-line do not belong to the h-line.)
 
-An ordered triple of h-points, say $(P,Q,R)$, will be called an {}\emph{h-triangle $PQR$} and denoted by \index{21@$\triangle_h$}$\triangle_h P Q R$.
+An ordered triple of distinct h-points, say $(P,Q,R)$, will be called an {}\emph{h-triangle $PQR$} and denoted by \index{21@$\triangle_h$}$\triangle_h P Q R$.
 
 It is important to clarify at this point that, \textit{so far, an h-line $(PQ)_h$ is just a subset of the h-plane},
 but soon we will introduce h-distance 
@@ -67,11 +77,6 @@ Show that an h-line is uniquely determined by its ideal points.
 
 \begin{thm}{Exercise}\label{ex:1ideal-line-unique}
 Show that an h-line is uniquely determined by one of its ideal points and one h-point on it.
-\end{thm}
-
-\begin{thm}[!]{Classroom exercise}\label{ex:line/h-line}
-Show that an h-segment $[PQ]_h$ coincides with the Euclidean segment $[PQ]$
-if and only if the line $(PQ)$ passes thru the center of the absolute.
 \end{thm}
 
 \parbf{Hyperbolic distance.}\label{h-dist}
@@ -86,6 +91,8 @@ by Theorem~\ref{lem:inverse-4-angle} it is invariant under inversion.
 We set $\delta(P,P)=1$ for any h-point~$P$.
 Let us define h-distance as the logarithm of $\delta$; that is,
 $$PQ_h\df\ln[\delta(P,Q)].$$
+The logarithm makes distances additive along an h-line;
+see Lemma~\ref{lem:h-tiangle=}.
 
 The proof that $PQ_h$ is a metric on the h-plane will be given later.
 For now, it is just a function that returns a real value $PQ_h$ for any pair of h-points $P$ and~$Q$.
@@ -124,7 +131,7 @@ Once our proofs are complete, we will have a model that serves as an example of 
 After that we can use the axiomatic approach in the h-plane;
 for example, Exercise~\ref{ex:h-perp-unique} can be proved the same way as Theorem~\ref{perp:ex+un}.
 
-Most importantly, we will prove the ``if''-part of Theorem~\ref{thm:consistent}.
+Most importantly, we will prove the ``if'' part of Theorem~\ref{thm:consistent}.
 
 Indeed, any statement in hyperbolic geometry can be restated in the Euclidean plane using the introduced h-notions.
 Consequently, if the system of axioms \ref{def:birkhoff-axioms:0}--\ref{def:birkhoff-axioms:3} and h-\ref{def:birkhoff-axioms:4} leads to a contradiction, then so does the system of axioms \ref{def:birkhoff-axioms:0}--\ref{def:birkhoff-axioms:4}.
@@ -189,7 +196,7 @@ $\measuredangle_h P'Q'R'\equiv-\measuredangle_h PQR$.
 It is instructive to compare this observation with Proposition~\ref{prop:reflection}.
 
 \parit{Proof.}
-According to Theorem~\ref{thm:perp-inverse}, the map sends the absolute to itself.
+According to Corollary~\ref{cor:perp-inverse-clines}, the map sends the absolute to itself.
 Since the points on $\Gamma$ do not move,
 \ref{ex:circline-sides}, \ref{lem:inverse-4-angle}\textit{\ref{lem:inverse-4-angle:angle}}, and \ref{thm:angle-inversion} imply that points inside the absolute remain inside after the mapping.
 Whence $X\mapsto X'$ is a bijection from the h-plane to itself.
@@ -335,38 +342,13 @@ that is, the conditions \textit{(\ref{def:metric-space:a})}--\textit{(\ref{def:m
 in Definition~\ref{def:metric-space} hold for the h-distance.
 
 
-The following claim says that the h-distance satisfies conditions \textit{(\ref{def:metric-space:a})} 
-and \textit{(\ref{def:metric-space:b})}.
+The following claim says that the h-distance satisfies conditions \textit{(\ref{def:metric-space:a})}--\textit{\ref{def:metric-space:c}}.
 
 \begin{thm}{Claim}
 For any pair of h-points $P$ and $Q$, we have
-$PQ_h\ge 0$
+$PQ_h\z=QP_h\ge 0$
 and $PQ_h=0$ if and only if $P=Q$.
 \end{thm}
-
-
-\parit{Proof.}
-According to Lemma~\ref{lem:P-->O}
-and the main observation (\ref{thm:main-observ}), 
-we can assume that $Q$ is the center of the absolute.
-In this case
-$$
-\delta(Q,P)=\frac{1+QP}{1-QP}\ge 1$$
-and therefore
-$$QP_h=\ln[\delta(Q,P)]\ge 0.$$
-Moreover, the equalities hold if and only if $P=Q$.
-\qeds
-
-The following claim says that the h-distance meets condition~\ref{def:metric-space}\textit{\ref{def:metric-space:c}}.
-
-\begin{thm}{Claim}
-For any h-points $P$ and $Q$, we have
-$PQ_h=QP_h$.
-\end{thm}
-
-\parit{Proof.}
-Let $A$ and $B$ be ideal points of $(PQ)_h$ and
-$A,P,Q,B$ appear on the circline containing $(PQ)_h$ in the same order.
 
 {
 
@@ -376,19 +358,26 @@ $A,P,Q,B$ appear on the circline containing $(PQ)_h$ in the same order.
 \includegraphics{mppics/pic-198}
 \end{wrapfigure}
 
-Then
-\begin{align*}
-PQ_h
-&=\ln\frac{AQ\cdot BP}{QB\cdot PA}
-=
-\\
-&=\ln\frac{BP\cdot AQ}{PA\cdot QB}=
-\\
-&=QP_h.
-\end{align*}
-\qedsf
+\parit{Proof.}
+Equality $PQ_h=QP_h$ is equivalent to the evident identity
+\[\delta(P,Q)=\frac{AQ\cdot BP}{QB\cdot PA}=\frac{BP\cdot AQ}{PA\cdot QB}=\delta(Q,P),\]
+where $A$ and $B$ are ideal points of $(PQ)_h$ and
+$A,P,Q,B$ appear on the circline containing $(PQ)_h$ in the same order.
 
 }
+
+Let us show that $QP_h\ge 0$.
+According to Lemma~\ref{lem:P-->O}
+and the main observation (\ref{thm:main-observ}), 
+we can assume that $Q$ is the center of the absolute.
+In this case
+$$
+\delta(Q,P)=\frac{1+QP}{1-QP}\ge 1$$
+and therefore
+$$QP_h=\ln[\delta(Q,P)]\ge 0.$$
+
+Finally, note that the equalities hold if and only if $P=Q$.
+\qeds
 
 The following claim shows, in particular, that
 the triangle inequality 
@@ -467,18 +456,18 @@ In this case, $\ell$ is the intersection of a diameter of the absolute and the h
 Let $A$ and $B$ be the endpoints of the diameter.
 
 \begin{wrapfigure}{o}{29mm}
-\vskip-3mm
+\vskip0mm
 \centering
 \includegraphics{mppics/pic-201}
 \vskip-2mm
 \end{wrapfigure}
 
 Consider the map $\iota\:\ell\to \mathbb{R}$ defined as
-$$\iota(X)=\ln \frac{AX}{XB}.$$
+$$\iota(X)=\ln \frac{AX}{BX}.$$
 Note that $\iota\:\ell\to \mathbb{R}$ is a bijection.
 
 Furthermore, if $X,Y\in \ell$ and the points $A$, $X$, $Y$, and $B$ appear on $[AB]$ in the same order, then
-\[\iota(Y)-\iota(X)=\ln \frac{AY}{YB}-\ln \frac{AX}{XB}=\ln \frac{AY\cdot BX}{YB\cdot XB}=XY_h.\]
+\[\iota(Y)-\iota(X)=\ln \frac{AY}{BY}-\ln \frac{AX}{BX}=\ln \frac{AY\cdot BX}{BY\cdot AX}=XY_h.\]
 
 We have shown that every h-line is a line for h-distance.
 The converse follows from Claim~\ref{clm:h-dist+trig-inq}.
@@ -526,7 +515,9 @@ such that $Q\ne P$, $Q\ne R$, and $\measuredangle_h P Q R\ne\pi$.
 \end{thm}
 
 \parit{Proof.}
-Suppose that $O$ denotes the center of the absolute.
+By Lemma~\ref{lem:O-h-dist} and the main observation, Euclidean convergence and h-convergence are equivalent; we will use this observation without mention.
+
+Let $O$ be the center of the absolute.
 We can assume that $Q$ is distinct from~$O$;
 the latter follows from the main observation.
 
@@ -576,7 +567,7 @@ we can assume that $Q$ and $Q'$ coincide with the center of the absolute; in par
 In this case, 
 $$\measuredangle P' Q R'=\measuredangle_h P' Q R'=\pm\measuredangle_h P Q R=\pm\measuredangle P Q R.$$
 Since 
-$$Q P_h=Q P'_h\quad \text{and}\quad Q R_h=Q R'_h,$$
+$Q P_h=Q P'_h$ and $Q R_h=Q R'_h$,
 Lemma~\ref{lem:O-h-dist} implies that the same holds for the Euclidean distances;
 that is,
 $$Q P=Q P'
@@ -594,6 +585,22 @@ Note that the center of the absolute is fixed by the corresponding motion.
 It follows that this motion also gives a motion of the h-plane;
 in particular, the h-triangles 
 $\triangle_h P Q R$ and $\triangle_h P' Q R'$ are h-congruent.
+
+We have proved the ``if'' part; the ``only-if'' part is done similarly.
+
+Assume that $\triangle_h P Q R$ and $\triangle_h P' Q R'$ are h-congruent.
+As above, we may assume that $Q=Q'=O$, and therefore
+$Q P_h=Q P'_h$, $Q R_h=Q R'_h$, and $P R_h=P' R'_h$.
+
+Lemma~\ref{lem:O-h-dist} implies that $Q P=Q P'$, $Q R=Q R'$.
+Applying a Euclidean motion fixing $Q$, we can also arrange that $P=P'$.
+
+Then $R$ and $R'$ lie on the same two h-circles centered at $O$ and $P$.
+By Lemma~\ref{lem:h-circle=circle}, these are Euclidean circles
+with centers on $(OP)$.
+Note that these circles are distinct.
+Therefore, $R'=R$ or $R'$ is the Euclidean reflection of $R$ across $(OP)$.
+Hence the h-angle measures agree up to sign.
 \qeds
 
 \subsection*{Axiom h-$\!$\ref{def:birkhoff-axioms:4}}
@@ -604,7 +611,7 @@ that is, we need to prove the following claim.
 {
 
 \begin{wrapfigure}{r}{31mm}
-\vskip-4mm
+\vskip-6mm
 \centering
 \includegraphics{mppics/pic-202}
 \end{wrapfigure}
@@ -622,6 +629,9 @@ The remaining part of the proof can be guessed from the picture.
 
 }
 
+This completes the construction and proves the ``if'' part
+of Theorem~\ref{thm:consistent}.
+
 \begin{thm}{Exercise}\label{ex:3-h-lines}
 \begin{enumerate}[(a)]
 
@@ -631,91 +641,8 @@ such that every pair of these three lines lies on one side of the remaining h-li
 \item Draw h-lines $\ell$, $m$, and $n$ such that $\ell\parallel m$, $m\parallel n$, but $\ell\nparallel n$.
 Conclude that parallelism is not an equivalence relation for h-lines.
 
-\item Draw $h$-lines $k$, $\ell$, $m$, and $n$, such that $k\perp \ell$, $\ell\perp m$, $m\perp n$, and $k\parallel n$.
+\item Draw $h$-lines $k$, $\ell$, $m$, and $n$, such that $k\perp \ell$, $\ell\perp m$, $m\perp n$, and~$k\parallel n$.
 \end{enumerate}
 \end{thm}
  
-\section{Hyperbolic trigonometry}
-\label{sec:hyp-trig}
 
-
-This section provides formulas for h-distance using \index{hyperbolic!functions}\emph{hyperbolic functions}.
-One of these formulas will be used in the proof of the hyperbolic Pythagorean theorem (\ref{thm:pyth-h-poincare}).
-
-Recall that $\cosh$, $\sinh$, and $\tanh$ denote \index{ch@$\cosh$}\index{hyperbolic!cosine}\emph{hyperbolic cosine}, \index{sh@$\sinh$}\index{hyperbolic!sine}\emph{hyperbolic sine}, and \index{th@$\tanh$}\index{hyperbolic!tangent}\emph{hyperbolic tangent}\label{hyperbolic tangent};
-that is, the functions defined by
-\[\cosh x\df \tfrac{e^x+e^{-x}}2,
- \quad
- \sinh x\df \tfrac{e^x-e^{-x}}2,
-\]
-\[\tanh x\df \tfrac{\sinh x}{\cosh x}.
-\]
-
-These hyperbolic functions are analogous to sine, cosine, and tangent. 
-
-\begin{thm}{Exercise}\label{ex:hyp-fun}
-Prove the following identities:
-\[\cosh' x=\sinh x;\quad \sinh'x=\cosh x;\quad (\cosh x)^2-(\sinh x)^2=1.\]
-\end{thm}
-
-\begin{thm}{Exercise}\label{ex:O-h-dist}
-Assume that the absolute is a unit circle centered at~$O$.
-Show that 
-\[OP=\tanh(\tfrac12 \cdot OP_h)\]
-for every h-point $P$.
-\end{thm}
-
-\begin{thm}{Double-argument identities}\label{double-argument}
-The identities
-\begin{align*}
-\cosh (2\cdot x)&=(\cosh x)^2+(\sinh x)^2 
-&&\text{and}&
-\sinh (2\cdot x)&=2\cdot\sinh x\cdot \cosh x
-\end{align*}
-hold for any real value $x$.
-\end{thm}
-
-\parit{Proof.}
-\begin{align*}
-(\sinh x)^2+(\cosh x)^2
-&=(\tfrac{e^x-e^{-x}}2)^2+(\tfrac{e^x+e^{-x}}2)^2=
-\\
-&=\tfrac{e^{2\cdot x}+e^{-2\cdot x}}2=
-\\
-&=\cosh (2\cdot x);
-\\
-2\cdot\sinh x\cdot \cosh x
-&=2\cdot(\tfrac{e^x-e^{-x}}2)\cdot(\tfrac{e^x+e^{-x}}2)=
-\\
-&=\tfrac{e^{2\cdot x}-e^{-2\cdot x}}2=
-\\
-&=\sinh (2\cdot x).
-\end{align*}
-\qedsf
-
-\begin{thm}[!]{Advanced exercise}\label{ex:cosh}
-Let $P$ and $Q$ be two h-points distinct from the center of the absolute.
-Denote by $P'$ and $Q'$ the inverses of $P$ and $Q$ across the absolute.
-
-\begin{wrapfigure}[20]{r}{40mm}
-\centering
-\includegraphics{mppics/pic-204}
-\end{wrapfigure}
-
-Show that 
-\medskip
-\begin{enumerate}[(a)]
-\item\label{ex:cosh/2} 
-$\displaystyle{\cosh[\tfrac12\cdot PQ_h]=\sqrt{\frac{PQ'\cdot P'Q}{PP'\cdot QQ'}};}$
-\medskip
-\item\label{ex:coshsinh} 
-$\displaystyle{\sinh[\tfrac12\cdot PQ_h]=\sqrt{\frac{PQ\cdot P'Q'}{PP'\cdot QQ'}};}$
-\medskip
-\item\label{ex:coshtanh} 
-$\displaystyle{\tanh[\tfrac12\cdot PQ_h]=\sqrt{\frac{PQ\cdot P'Q'}{PQ'\cdot P'Q}};}$
-\medskip
-\item\label{ex:coshcosh} 
-$\displaystyle{\cosh PQ_h=\frac{PQ\cdot P'Q'+PQ'\cdot P'Q}{PP'\cdot QQ'}.}$
-\end{enumerate}
-
-\end{thm}

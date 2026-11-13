@@ -529,11 +529,92 @@ $$\circum_h(r+1)>2\cdot \circum_h(r)$$
 for all $r>0$.
 \end{thm}
 
-\section{The Pythagorean theorem}\index{Pythagorean theorem}
+\section{Hyperbolic trigonometry}
+\label{sec:hyp-trig}
 
-Recall that $\cosh$ denotes \index{ch@$\cosh$}\index{hyperbolic!cosine}\emph{hyperbolic cosine};
-that is, the function defined by
-$\cosh x\df \tfrac{e^x+e^{-x}}2$.
+
+This section provides formulas for h-distance using \index{hyperbolic!functions}\emph{hyperbolic functions}.
+One of these formulas will be used in the proof of the hyperbolic Pythagorean theorem (\ref{thm:pyth-h-poincare}).
+
+Recall that $\cosh$, $\sinh$, and $\tanh$ denote \index{ch@$\cosh$}\index{hyperbolic!cosine}\emph{hyperbolic cosine}, \index{sh@$\sinh$}\index{hyperbolic!sine}\emph{hyperbolic sine}, and \index{th@$\tanh$}\index{hyperbolic!tangent}\emph{hyperbolic tangent}\label{hyperbolic tangent};
+that is, the functions defined by
+\[
+\cosh x\df \tfrac{e^x+e^{-x}}2,
+\quad
+\sinh x\df \tfrac{e^x-e^{-x}}2,
+\quad
+\tanh x\df \tfrac{\sinh x}{\cosh x}.
+\]
+These hyperbolic functions are analogous to sine, cosine, and tangent.
+
+\begin{thm}{Exercise}\label{ex:hyp-fun}
+Prove the following identities:
+\[\cosh' x=\sinh x;\quad \sinh'x=\cosh x;\quad (\cosh x)^2-(\sinh x)^2=1.\]
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:O-h-dist}
+Assume that the absolute is a unit circle centered at~$O$.
+Show that
+\[OP=\tanh(\tfrac12 \cdot OP_h)\]
+for every h-point $P$.
+\end{thm}
+
+\begin{thm}{Double-argument identities}\label{double-argument}
+The identities
+\begin{align*}
+\cosh (2\cdot x)&=(\cosh x)^2+(\sinh x)^2
+&&\text{and}&
+\sinh (2\cdot x)&=2\cdot\sinh x\cdot \cosh x
+\end{align*}
+hold for any real value $x$.
+\end{thm}
+
+\parit{Proof.}
+\begin{align*}
+(\sinh x)^2+(\cosh x)^2
+&=(\tfrac{e^x-e^{-x}}2)^2+(\tfrac{e^x+e^{-x}}2)^2=
+\\
+&=\tfrac{e^{2\cdot x}+e^{-2\cdot x}}2=
+\\
+&=\cosh (2\cdot x);
+\\
+2\cdot\sinh x\cdot \cosh x
+&=2\cdot(\tfrac{e^x-e^{-x}}2)\cdot(\tfrac{e^x+e^{-x}}2)=
+\\
+&=\tfrac{e^{2\cdot x}-e^{-2\cdot x}}2=
+\\
+&=\sinh (2\cdot x).
+\end{align*}
+\qedsf
+
+\begin{thm}[!]{Advanced exercise}\label{ex:cosh}
+Let $P$ and $Q$ be two h-points distinct from the center of the absolute.
+Denote by $P'$ and $Q'$ the inverses of $P$ and $Q$ across the absolute.
+
+\begin{wrapfigure}[20]{r}{40mm}
+\centering
+\includegraphics{mppics/pic-204}
+\end{wrapfigure}
+
+Show that
+\medskip
+\begin{enumerate}[(a)]
+\item\label{ex:cosh/2}
+$\displaystyle{\cosh[\tfrac12\cdot PQ_h]=\sqrt{\frac{PQ'\cdot P'Q}{PP'\cdot QQ'}};}$
+\medskip
+\item\label{ex:coshsinh}
+$\displaystyle{\sinh[\tfrac12\cdot PQ_h]=\sqrt{\frac{PQ\cdot P'Q'}{PP'\cdot QQ'}};}$
+\medskip
+\item\label{ex:coshtanh}
+$\displaystyle{\tanh[\tfrac12\cdot PQ_h]=\sqrt{\frac{PQ\cdot P'Q'}{PQ'\cdot P'Q}};}$
+\medskip
+\item\label{ex:coshcosh}
+$\displaystyle{\cosh PQ_h=\frac{PQ\cdot P'Q'+PQ'\cdot P'Q}{PP'\cdot QQ'}.}$
+\end{enumerate}
+
+\end{thm}
+
+\section{The Pythagorean theorem}\index{Pythagorean theorem}
 
 \begin{thm}{Hyperbolic Pythagorean theorem}\label{thm:pyth-h-poincare}
 Assume that the h-triangle $ACB$ has a right angle at~$C$.

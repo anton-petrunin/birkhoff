@@ -1220,7 +1220,7 @@ assume $x,y\in \mathbb{R}$
 are the images (coordinates) of the two points in $\ell\cap\Gamma$;
 note that $x\ne y$.
 
-We may assume that $x+y\ne 0$; otherwise $Q$ has center at the center of inversion and $Q'=\infty$, which is not a center of any circle.
+We may assume that $x+y\ne 0$; otherwise $Q=O$ and $Q'=\infty$, which is not a center of any circle.
 Further, since $\Gamma'$ is a circle, \ref{thm:inverse} implies that $x\ne 0$ and $y\ne 0$.
 
 If $r$ is the radius of the circle of inversion,
@@ -1400,11 +1400,12 @@ Then apply the definition of the defect.
 Show that $\triangle AMX\cong \triangle BMC$. 
 Apply \ref{ex:defect} to $\triangle ABC$ and $\triangle AXC$.
 
-\parbf{\ref{ex:defect=+}.} Apply the construction recucevely chosing the smallest angle of triangle as $C$ on each step.
-Show use that that this way we get a triangle with the same defec and two angles smaller than any given $\varepsilon>0$.
+\parbf{\ref{ex:defect=+}.}
+Apply the construction recursively, labeling the vertex of a smallest angle by $C$ at each step.
+Show and use that this gives a triangle with the same defect and two angles smaller than any given $\varepsilon>0$.
 
 \parit{Comment.}
-This proof is also due to Adrien-Marie Legendre \cite[12th edition]{legendre}.
+This argument is also due to Adrien-Marie Legendre \cite[12th edition]{legendre}.
 
 \parbf{\ref{ex:neutral-rectangle}.}
 Observe that the total sum of absolute values of angle measures in $\triangle ABC$ and $\triangle CDA$ is at least $2\cdot\pi$.
@@ -1435,6 +1436,9 @@ This is a key step in the proofs of parts \textit{(\ref{thm:=IV:defect})} and \t
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
 
+\parbf{\ref{ex:line/h-line}.}
+Show and use that a line is perpendicular to a circle if and only if it passes thru its center.
+
 \parbf{\ref{ex:ideal-line-unique}.} 
 Let $A$ and $B$ be the ideal points of the h-line~$\ell$.
 Note that the center of the Euclidean circle containing $\ell$ lies at the intersection of the lines tangent to the absolute at the ideal points of~$\ell$.
@@ -1446,20 +1450,6 @@ Let $P'$ be the inverse of $P$ across the absolute.
 By \ref{cor:perp-inverse-clines},
 $\ell$ lies in the intersection of the h-plane and the (necessarily unique) circline 
 passing thru $P$, $A$, and~$P'$.
-
-\parbf{\ref{ex:line/h-line}.} 
-Let $\Omega$ and $O$ denote the absolute and its center. 
-
-Let $\Gamma$ be the circline containing~$[PQ]_h$.
-Note that $[PQ]_h=[PQ]$ if and only if $\Gamma$ is a line.
-
-Let $P'$ be the inverse of $P$ across~$\Omega$.
-Note that $O$, $P$, and $P'$ lie on one line.
-
-By the definition of an h-line, $\Omega\perp \Gamma$.
-By \ref{cor:perp-inverse-clines}, $\Gamma$ passes thru $P$ and~$P'$. 
-Therefore, $\Gamma$
-is a line if and only if it passes thru~$O$.
 
 \parbf{\ref{ex:h-dist-eq}.}
 Assume that the absolute is a unit circle.
@@ -1482,94 +1472,29 @@ hold when $0<a<\tfrac12$.
 \parbf{\ref{ex:h-perp-unique}.} 
 Spell out the meaning of the terms ``perpendicular'' and ``h-line'' and then apply \ref{ex:construction-perp-clines}.
 
-\parbf{\ref{ex:h-circle=circle}.}
-Choose the vertices $P$, $Q$, and $R$ on a Euclidean circle that intersects the absolute and is not orthogonal to it.
-Apply~\ref{lem:h-circle=circle}.
-
 \begin{wrapfigure}[9]{r}{34mm}
 \vskip-5mm
 \centering
 \includegraphics{mppics/pic-350}
 \end{wrapfigure}
 
+\parbf{\ref{ex:h-circle=circle}.}
+Choose three distinct h-points on a Euclidean line that does not pass thru the center of the absolute.
+Apply~\ref{lem:h-circle=circle}.
+
 \parbf{\ref{ex:3-h-lines}.}
 Choose the required h-lines from the picture.
-
-\parbf{\ref{ex:O-h-dist}.} Use \ref{lem:O-h-dist}.
-
-\parbf{\ref{ex:cosh}.}
-By \ref{cor:invese-comp} and \ref{lem:inverse-4-angle},
-the right-hand sides of the identities 
-remain unchanged under an inversion across a circle perpendicular to the absolute.
-
-As usual, we assume that the absolute is a unit circle.
-Let $O$ be the h-midpoint of $[PQ]_h$.
-By the main observation (\ref{thm:main-observ})
-we can assume that $O$ is the center of the absolute.
-In this case, $O$ is also the Euclidean midpoint of $[PQ]$.%
-
-Set $a=OP=OQ$; in this case, we have
-\begin{align*}
-PQ&=2\cdot a,
-&
-PP'=QQ'&=\tfrac1a-a,
-\\
-P'Q'&=2\cdot \tfrac1a,
-&
-PQ'=QP'&=\tfrac1a+a.
-\end{align*}
-and 
-\[PQ_h=\ln \tfrac{(1+a)^2}{(1-a)^2}=2\cdot \ln \tfrac{1+a}{1-a}.\]
-Therefore
-\begin{align*}
-\cosh[\tfrac12\cdot PQ_h]
-&=\tfrac12\cdot(\tfrac{1+a}{1-a}+\tfrac{1-a}{1+a})=
-\\
-&=\tfrac{1+a^2}{1-a^2};
-\end{align*} 
-\begin{align*}
-\sqrt{\frac{PQ'\cdot P'Q}{PP'\cdot QQ'}}
-&=\frac{\frac1a+a}{\frac1a-a}=
-\\
-&=\tfrac{1+a^2}{1-a^2}.
-\end{align*} 
-Hence part \textit{(\ref{ex:cosh/2})} follows.
-Similarly,
-\begin{align*}
-\sinh[\tfrac12\cdot PQ_h]
-&=\tfrac12\cdot\left(\tfrac{1+a}{1-a}-\tfrac{1-a}{1+a}\right)=
-\\
-&=\tfrac{2\cdot a}{1-a^2};
-\\
-\sqrt{\frac{PQ\cdot P'Q'}{PP'\cdot QQ'}}
-&=\frac{2}{\frac1a-a}=
-\\
-&=\tfrac{2\cdot a}{1-a^2}.
-\end{align*} 
-Hence part \textit{(\ref{ex:coshsinh})} follows.
-
-Parts \textit{(\ref{ex:coshtanh})} and \textit{(\ref{ex:coshcosh})} follow from \textit{(\ref{ex:cosh/2})}, \textit{(\ref{ex:coshsinh})}, the definition of a hyperbolic tangent, and the double-argument identity for hyperbolic cosine, see \ref{double-argument}.
-
-(We could also move $Q$ to the center of the absolute.
-In this case, the derivations are simpler.
-But since $Q'Q=Q'P=Q'P'=\infty$, one has to justify that $\tfrac\infty\infty=1$ every time.)
 
 %\subsection*{Chapter~\ref{chap:h-plane}}
 \refstepcounter{chapter}
 \setcounter{eqtn}{0}
 
 \parbf{\ref{ex:lambert-parallelism}.}
-Use \ref{prop:perp-perp} to show that $(AB)_h\parallel (CD)_h$.
+Use \ref{prop:perp-perp} to show that $(AB)_h\z\parallel (CD)_h$.
 Apply the definition of the angle of parallelism.
 
 \parbf{\ref{ex:ultra-parallel}}; \textit{``only-if'' part.}
 Suppose $\ell$ and $m$ are ultraparallel; that is, they do not intersect and have distinct ideal points.
-
-\begin{Figure}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-359}
-\end{Figure}
 
 Denote the ideal points by $A$, $B$, $C$, and $D$;
 we may assume that they appear on the absolute in the same order.
@@ -1577,6 +1502,12 @@ In this case, the h-line with ideal points $A$ and $C$ intersects the h-line wit
 Let $O$ be their point of intersection.
 By \ref{thm:main-observ}, we can assume that $O$ is the center of the absolute.
 Note that $\ell$ is the reflection of $m$ across $O$ in the Euclidean sense.
+
+\begin{Figure}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-359}
+\end{Figure}
 
 Drop an h-perpendicular $n$ from $O$ to $\ell$ and
 show that $n\perp m$.
@@ -1651,6 +1582,65 @@ Apply the AAA-congruence condition (\ref{thm:AAA}).
 \parbf{\ref{ex:circum}.}
 Apply \ref{prop:circum}.
 Use that the function $r\mapsto e^{-r}$ is decreasing and $e\z>2$.
+
+\parbf{\ref{ex:O-h-dist}.} Use \ref{lem:O-h-dist}.
+
+\parbf{\ref{ex:cosh}.}
+By \ref{cor:invese-comp} and \ref{lem:inverse-4-angle},
+the right-hand sides of the identities
+remain unchanged under an inversion across a circle perpendicular to the absolute.
+
+As usual, we assume that the absolute is a unit circle.
+Let $O$ be the h-midpoint of $[PQ]_h$.
+By the main observation (\ref{thm:main-observ})
+we can assume that $O$ is the center of the absolute.
+In this case, $O$ is also the Euclidean midpoint of $[PQ]$.%
+
+Set $a=OP=OQ$; in this case, we have
+\begin{align*}
+PQ&=2\cdot a,
+&
+PP'=QQ'&=\tfrac1a-a,
+\\
+P'Q'&=2\cdot \tfrac1a,
+&
+PQ'=QP'&=\tfrac1a+a.
+\end{align*}
+and
+\[PQ_h=\ln \tfrac{(1+a)^2}{(1-a)^2}=2\cdot \ln \tfrac{1+a}{1-a}.\]
+Therefore
+\begin{align*}
+\cosh[\tfrac12\cdot PQ_h]
+&=\tfrac12\cdot(\tfrac{1+a}{1-a}+\tfrac{1-a}{1+a})=
+\\
+&=\tfrac{1+a^2}{1-a^2};
+\end{align*}
+\begin{align*}
+\sqrt{\frac{PQ'\cdot P'Q}{PP'\cdot QQ'}}
+&=\frac{\frac1a+a}{\frac1a-a}=
+\\
+&=\tfrac{1+a^2}{1-a^2}.
+\end{align*}
+Hence part \textit{(\ref{ex:cosh/2})} follows.
+Similarly,
+\begin{align*}
+\sinh[\tfrac12\cdot PQ_h]
+&=\tfrac12\cdot\left(\tfrac{1+a}{1-a}-\tfrac{1-a}{1+a}\right)=
+\\
+&=\tfrac{2\cdot a}{1-a^2};
+\\
+\sqrt{\frac{PQ\cdot P'Q'}{PP'\cdot QQ'}}
+&=\frac{2}{\frac1a-a}=
+\\
+&=\tfrac{2\cdot a}{1-a^2}.
+\end{align*}
+Hence part \textit{(\ref{ex:coshsinh})} follows.
+
+Parts \textit{(\ref{ex:coshtanh})} and \textit{(\ref{ex:coshcosh})} follow from \textit{(\ref{ex:cosh/2})}, \textit{(\ref{ex:coshsinh})}, the definition of a hyperbolic tangent, and the double-argument identity for hyperbolic cosine, see \ref{double-argument}.
+
+(We could also move $Q$ to the center of the absolute.
+In this case, the derivations are simpler.
+But since $Q'Q=Q'P=Q'P'=\infty$, one has to justify that $\tfrac\infty\infty=1$ every time.)
 
 \parbf{\ref{ex:c+1>a+b}.}
 Apply the hyperbolic Pythagorean theorem and the definition of a hyperbolic cosine.
