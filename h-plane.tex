@@ -18,11 +18,6 @@ Furthermore, $\phi(s)\to \pi/2$ as $s\to 0$,
 and $\phi(s)\to0$ as $s\to\infty$.
 (In Euclidean geometry, the angle of parallelism is identically equal to~$\pi/2$.)
 
-\begin{thm}{Exercise}\label{ex:lambert-parallelism}
-Suppose that $\square_hABCD$ has right h-angles at $A$, $B$, and~$C$.
-Show that $|\measuredangle_h CDA|>\phi$, where $\phi$ is the angle of parallelism at $D$ with respect to~$(AB)_h$.
-\end{thm}
-
 \begin{wrapfigure}{o}{34mm}
 \vskip-3mm
 \centering
@@ -46,16 +41,21 @@ Show that two distinct h-lines $\ell$ and $m$ are ultraparallel if and only if t
 that is, there is an $h$-line $n$ such that $n\perp \ell$ and $n\perp m$.
 \end{thm}
 
+\begin{thm}{Exercise}\label{ex:lambert-parallelism}
+Suppose that $\square_hABCD$ has right h-angles at $A$, $B$, and~$C$.
+Show that $|\measuredangle_h CDA|>\phi$, where $\phi$ is the angle of parallelism at $D$ with respect to~$(AB)_h$.
+\end{thm}
+
 
 \begin{thm}{Proposition}\label{prop:angle-parallelism}
-Let $Q$ be the footpoint of $P$ on an h-line~$\ell$.
+Let $P\notin\ell$, and let $Q$ be its footpoint on the h-line $\ell$.
 Then
 \[h=\tfrac12\cdot\ln \frac{1+\cos\phi}{1-\cos\phi}
 \qquad\text{and}\qquad
 \cos\phi=\frac{e^{2\cdot h}-1}{e^{2\cdot h}+1},\]
 where $h=PQ_h$, and $\phi$ is the angle of parallelism at $P$ with respect to~$\ell$.
 
-In particular, if $P\notin\ell$ and $\beta\z=|\measuredangle_h XPY|$ for some points $X,Y\in\ell$, then 
+In particular, if $P\notin\ell$ and $\beta\z=|\measuredangle_h XPY|$ for some distinct points $X,Y\in\ell$, then
 \[
 h<\tfrac12\cdot\ln \frac{1+\cos\tfrac\beta2}{1-\cos\tfrac\beta2}
 \qquad\text{and}\qquad
@@ -71,7 +71,7 @@ h<\tfrac12\cdot\ln \frac{1+\cos\tfrac\beta2}{1-\cos\tfrac\beta2}
 
 
 \parit{Proof.} Applying a motion of the h-plane if necessary,
-we may assume $P$ is the center of the absolute.
+we may assume that the absolute is a unit circle centered at $P$.
 Then the h-lines thru $P$ are the intersections of Euclidean lines with the h-plane.
 
 Let $A$ and $B$ denote the ideal points of~$\ell$.
@@ -135,7 +135,7 @@ Sketch $\triangle_h ABC$ in the conformal model.
 \section{Inradius of an h-triangle}
 
 \begin{thm}{Theorem}\label{thm:h-inradius}
-The inradius of every h-triangle
+The inradius of every nondegenerate h-triangle
 is less than $\tfrac12\cdot\ln3$.
 \end{thm}
 
@@ -188,12 +188,12 @@ Find the optimal upper bound for~$AB_h$.
 
 According to Lemma~\ref{lem:h-circle=circle},
 every h-circle is a Euclidean circle that lies entirely within the h-plane.
-Furthermore, every h-line is an intersection of the h-plane with a circle
+Furthermore, every h-line is an intersection of the h-plane with a circline
 perpendicular to the absolute.
 
 In this section, we will describe the 
 h-geometric meaning of the intersections 
-of other circles with the h-plane.
+of other circlines with the h-plane.
 
 You will see that all these intersections have a {}\emph{perfectly round shape} in the h-plane.
 
@@ -208,8 +208,8 @@ If you turn the wheel a bit further, then you start to travel along a path that 
 
 \parbf{Equidistants of h-lines.}
 Consider the h-plane with the absolute~$\Omega$.
-Assume a circle $\Gamma$ intersects $\Omega$ at two distinct points, $A$ and~$B$. 
-Suppose that $g$ denotes the intersection of $\Gamma$ with the h-plane.
+Assume a circline $\Gamma$ intersects $\Omega$ at two distinct points, $A$ and~$B$ and $\Gamma\not\perp\Omega$.
+Let $g$ be the intersection of $\Gamma$ with the h-plane.
 
 \begin{wrapfigure}{o}{46mm}
 \vskip-0mm
@@ -221,7 +221,7 @@ Let us draw an h-line $m$ with the ideal points $A$ and~$B$.
 According to Exercise~\ref{ex:ideal-line-unique}, $m$ is uniquely defined.
 
 Consider an h-line $\ell$ perpendicular to~$m$;
-let $\Delta$ be the circle containing~$\ell$.
+let $\Delta$ be the circline containing~$\ell$.
 
 Note that $\Delta\perp \Gamma$.
 Indeed,
@@ -242,8 +242,8 @@ In Euclidean geometry, the equidistant from a line is a line;
 apparently, in hyperbolic geometry, the picture is different.
 
 \begin{thm}{Exercise}\label{ex:equidistant-reflection}
-Let $g$ be the set of all h-reflections of a given h-point $P$ across the points on a given h-line $m$.
-Show that $g$ is equidistant to $m$.
+Let $g$ be the set of all h-reflections of a given h-point $P\notin m$ across the points on a given h-line $m$.
+Show that $g$ is equidistant to~$m$.
 \end{thm}
 
 
@@ -491,7 +491,7 @@ $$\lim_{n\to\infty} n\cdot x_n=2\cdot\pi\cdot r.\eqlbl{eq:2pir}$$
 In the following proof, we will replicate the same construction in the h-plane.
 
 \parit{Proof.}
-Without loss of generality, we can assume that the center $O$ of the circle is also the center of the absolute.
+Without loss of generality, we can assume the absolute is a unit circle and the center $O$ of the circle is also the center of the absolute.
 
 By Lemma~\ref{lem:O-h-dist}, 
 the h-circle with the h-radius $r$ is the Euclidean circle with center $O$ and radius 
