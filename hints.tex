@@ -1499,14 +1499,15 @@ Let $O$ be their point of intersection.
 By \ref{thm:main-observ}, we can assume that $O$ is the center of the absolute.
 Note that $\ell$ is the reflection of $m$ across $O$ in the Euclidean sense.
 
+Drop an h-perpendicular $n$ from $O$ to $\ell$ and
+show that $n\perp m$.
+
 \begin{Figure}
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-359}
 \end{Figure}
 
-Drop an h-perpendicular $n$ from $O$ to $\ell$ and
-show that $n\perp m$.
 
 \parit{``If'' part.} 
 Suppose $n$ is a common perpendicular.
@@ -1550,8 +1551,11 @@ Let $P'$ be another h-point.
 Denote by $R$ and $R'$ the h-footpoints of $P$ and $P'$ on $m$.
 
 Show and use that $P'$ is an h-reflection of $P$ across $Q\in m$ if and only if $P$ and $P'$ lie on the opposite sides of $m$, 
-$PR_h=P'R'_h$, and $Q$ is the h-midpoint of $[RR']_h$. 
+$PR_h=P'R'_h$, and $Q$ is the h-midpoint of $[RR']_h$.
 You may need \ref{prop:vert}, SAS, and SAA (see \ref{ex:SAA}).
+
+\parbf{\ref{ex:angle-preserving-hyp}.}
+Apply the AAA-congruence condition (\ref{thm:AAA}).
 
 \parbf{\ref{ex:right-trig-horocycle}.}
 As usual, we assume that the absolute is a unit circle. 
@@ -1574,72 +1578,11 @@ Note that the Euclidean circle passing thru $P$, $Q$, and $R$ is tangent to the 
 Conclude that $PQ=\tfrac1{\sqrt2}$. 
 Apply \ref{lem:O-h-dist} to find $PQ_h$.
 
-
-\parbf{\ref{ex:angle-preserving-hyp}.}
-Apply the AAA-congruence condition (\ref{thm:AAA}).
-
 \parbf{\ref{ex:circum}.}
 Apply \ref{prop:circum}.
 Use that the function $r\mapsto e^{-r}$ is decreasing and $e\z>2$.
 
-\parbf{\ref{ex:O-h-dist}.} Use \ref{lem:O-h-dist}.
-
-\parbf{\ref{ex:cosh}.}
-By \ref{cor:invese-comp} and \ref{lem:inverse-4-angle},
-the right-hand sides of the identities
-remain unchanged under an inversion across a circle perpendicular to the absolute.
-
-As usual, we assume that the absolute is a unit circle.
-Let $O$ be the h-midpoint of $[PQ]_h$.
-By the main observation (\ref{thm:main-observ})
-we can assume that $O$ is the center of the absolute.
-In this case, $O$ is also the Euclidean midpoint of $[PQ]$.%
-
-Set $a=OP=OQ$; in this case, we have
-\begin{align*}
-PQ&=2\cdot a,
-&
-PP'=QQ'&=\tfrac1a-a,
-\\
-P'Q'&=2\cdot \tfrac1a,
-&
-PQ'=QP'&=\tfrac1a+a.
-\end{align*}
-and
-\[PQ_h=\ln \tfrac{(1+a)^2}{(1-a)^2}=2\cdot \ln \tfrac{1+a}{1-a}.\]
-Therefore
-\begin{align*}
-\cosh[\tfrac12\cdot PQ_h]
-&=\tfrac12\cdot(\tfrac{1+a}{1-a}+\tfrac{1-a}{1+a})=
-\\
-&=\tfrac{1+a^2}{1-a^2};
-\end{align*}
-\begin{align*}
-\sqrt{\frac{PQ'\cdot P'Q}{PP'\cdot QQ'}}
-&=\frac{\frac1a+a}{\frac1a-a}=
-\\
-&=\tfrac{1+a^2}{1-a^2}.
-\end{align*}
-Hence part \textit{(\ref{ex:cosh/2})} follows.
-Similarly,
-\begin{align*}
-\sinh[\tfrac12\cdot PQ_h]
-&=\tfrac12\cdot\left(\tfrac{1+a}{1-a}-\tfrac{1-a}{1+a}\right)=
-\\
-&=\tfrac{2\cdot a}{1-a^2};
-\\
-\sqrt{\frac{PQ\cdot P'Q'}{PP'\cdot QQ'}}
-&=\frac{2}{\frac1a-a}=
-\\
-&=\tfrac{2\cdot a}{1-a^2}.
-\end{align*}
-Hence part \textit{(\ref{ex:coshsinh})} follows.
-
-Parts \textit{(\ref{ex:coshtanh})} and \textit{(\ref{ex:coshcosh})} follow from \textit{(\ref{ex:cosh/2})}, \textit{(\ref{ex:coshsinh})}, the definition of a hyperbolic tangent, and the double-argument identity for hyperbolic cosine, see \ref{double-argument}.
-
-(We could also move $Q$ to the center of the absolute.
-In this case, the derivations are simpler.
-But since $Q'Q=Q'P=Q'P'=\infty$, one has to justify that $\tfrac\infty\infty=1$ every time.)
+\parbf{\ref{ex:hyp-fun}.} Use the definitions.
 
 \parbf{\ref{ex:c+1>a+b}.}
 Apply the hyperbolic Pythagorean theorem and the definition of a hyperbolic cosine.

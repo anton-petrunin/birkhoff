@@ -8,14 +8,14 @@ Additionally, we have the option to apply the axioms of neutral geometry since t
 \section{The angle of parallelism}
 
 Let $P$ be a point off an h-line~$\ell$. 
-Drop a perpendicular $(PQ)_h$ from $P$ to $\ell$;
+Drop a perpendicular $(PQ)_h$ from $P$ to~$\ell$;
 let $Q$ be its footpoint.
 Let $\phi$ be the smallest value such that the h-line $(PZ)_h$ with $|\measuredangle_h Q P Z|=\phi$ does not intersect~$\ell$.
 
 The value $\phi$ is called the \index{angle!angle of parallelism}\emph{angle of parallelism} at $P$ to~$\ell$.
 Clearly, $\phi$ depends only on the h-distance $s=PQ_h$.
 Furthermore, $\phi(s)\to \pi/2$ as $s\to 0$, 
-and $\phi(s)\to0$ as $s\to\infty$.
+and $\phi(s)\to0$ as $s\to\infty$; this will follow from \ref{prop:angle-parallelism}.
 (In Euclidean geometry, the angle of parallelism is identically equal to~$\pi/2$.)
 
 \begin{wrapfigure}{o}{34mm}
@@ -183,96 +183,6 @@ such that the h-angles at $A$, $B$, and $C$ are right and $AB_h=BC_h$.
 Find the optimal upper bound for~$AB_h$.
 \end{thm}
 
-
-\section{Circles, horocycles, and equidistants}
-
-According to Lemma~\ref{lem:h-circle=circle},
-every h-circle is a Euclidean circle that lies entirely within the h-plane.
-Furthermore, every h-line is an intersection of the h-plane with a circline
-perpendicular to the absolute.
-
-In this section, we will describe the 
-h-geometric meaning of the intersections 
-of other circlines with the h-plane.
-
-You will see that all these intersections have a {}\emph{perfectly round shape} in the h-plane.
-
-One may think of these curves as the trajectories of a car with a fixed position of the steering wheel.
-In the Euclidean plane, 
-this way you either travel along a circle or a line.
-
-In the hyperbolic plane, the picture is different.
-If you turn the steering wheel to the far right, you will travel along a circle.
-If you turn it less, at a certain position of the wheel, you will never return to the same point, but the path will be different from a line.
-If you turn the wheel a bit further, then you start to travel along a path that stays at a fixed distance from an h-line.
-
-\parbf{Equidistants of h-lines.}
-Consider the h-plane with the absolute~$\Omega$.
-Assume a circline $\Gamma$ intersects $\Omega$ at two distinct points, $A$ and~$B$ and $\Gamma\not\perp\Omega$.
-Let $g$ be the intersection of $\Gamma$ with the h-plane.
-
-\begin{wrapfigure}{o}{46mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-212}
-\end{wrapfigure}
-
-Let us draw an h-line $m$ with the ideal points $A$ and~$B$.
-According to Exercise~\ref{ex:ideal-line-unique}, $m$ is uniquely defined.
-
-Consider an h-line $\ell$ perpendicular to~$m$;
-let $\Delta$ be the circline containing~$\ell$.
-
-Note that $\Delta\perp \Gamma$.
-Indeed,
-according to Corollary~\ref{cor:perp-inverse-clines}, $m$ and $\Omega$ invert to themselves in~$\Delta$.
-It follows that $A$ is the inverse of $B$ across~$\Delta$.
-Finally, by Corollary~\ref{cor:perp-inverse}, we get that $\Delta\perp \Gamma$.
-
-Therefore, inversion across $\Delta$ sends both $m$ and $g$ to themselves.
-For any two points $P',P\in g$ there is a choice of $\ell$ and $\Delta$ as above such that
-$P'$ is the inverse of $P$ across $\Delta$.
-By the main observation (\ref{thm:main-observ}) the inversion across $\Delta$ is a motion of the h-plane. Therefore, all points of $g$ lie at the same distance from~$m$.
-
-In other words, $g$ is the set of points that lie at a fixed h-distance and on the same side of~$m$.
-
-Such a curve $g$ is called an \index{equidistant}\emph{equidistant} to the h-line~$m$.%
-\footnote{It can also be called a \index{hypercycle}\emph{hypercycle} with central line $m$.}
-In Euclidean geometry, the equidistant from a line is a line;
-apparently, in hyperbolic geometry, the picture is different.
-
-\begin{thm}{Exercise}\label{ex:equidistant-reflection}
-Let $g$ be the set of all h-reflections of a given h-point $P\notin m$ across the points on a given h-line $m$.
-Show that $g$ is equidistant to~$m$.
-\end{thm}
-
-
-\parbf{Horocycles.}
-If the circle $\Gamma$ touches the absolute from inside at one point $A$, then the complement $h=\Gamma\backslash\{A\}$ lies in the h-plane.
-This set is called a \index{horocycle}\emph{horocycle}.
-It also has a perfectly round shape in the sense described above.
-
-\begin{wrapfigure}{o}{33mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-214}
-\end{wrapfigure}
-
-The shape of a horocycle is between the shapes of circles and equidistants to h-lines.
-A horocycle might be considered as a limit of circles 
-thru a fixed point, say $P$,
-with the centers $O_n$ running to infinity along an h-line $\ell$.
-The same horocycle is a limit of equidistants thru $P$ to the sequence of h-lines $m_n$ passing thru $O_n$ and perpendicular to $\ell$.
-
-Since any three points lie on a circline, we have that any nondegenerate h-triangle is inscribed in an h-circle, a horocycle, or an equidistant.
-
-\begin{thm}{Exercise}\label{ex:right-trig-horocycle}
-Find the leg of an isosceles right h-triangle inscribed in a horocycle.
-\end{thm}
-
-
-
-
 \section{Hyperbolic triangles}
 
 \begin{thm}{Theorem}\label{thm:3sum-h}
@@ -292,11 +202,11 @@ $$\defect(\triangle_hABC)\ge 0.\eqlbl{eq:defect<0}$$
 It remains to show that in the case of equality, $\triangle_hABC$ degenerates.
 
 Without loss of generality, we may assume that $A$ is the center of the absolute;
-in this case, 
+in this case,
 $\measuredangle_h CAB\z=\measuredangle CAB$.
-Yet we may assume that 
+Yet we may assume that
 $$\measuredangle_h CAB,
-\quad 
+\quad
 \measuredangle_h ABC,
 \quad
 \measuredangle_h BCA,
@@ -307,7 +217,7 @@ $$\measuredangle_h CAB,
 
 Let $D$ be an arbitrary point in $[CB]_h$ distinct from $B$ and~$C$.
 From Proposition~\ref{prop:arc(angle=tan)}, we have
-$$\measuredangle ABC-\measuredangle_h ABC \equiv 
+$$\measuredangle ABC-\measuredangle_h ABC \equiv
 \pi-\measuredangle CDB
 \equiv \measuredangle BCA-\measuredangle_h BCA.$$
 
@@ -323,14 +233,14 @@ that is, if $\triangle_hABC$ degenerates.
 The following theorem states, in particular, that nondegenerate hyperbolic triangles are congruent if their corresponding angles are equal.
 In particular, in hyperbolic geometry, similar triangles have to be congruent.
 
-{\sloppy 
+{\sloppy
 \begin{thm}{AAA congruence condition}\label{thm:AAA}\index{AAA congruence condition}
 Two nondegenerate h-triangles
  $ABC$ and $A'B'C'$
  are congruent if
 $\measuredangle_hABC\z=\pm\measuredangle_hA'B'C'$,
 $\measuredangle_hBCA\z=\pm\measuredangle_hB'C'A'$
-and 
+and
 $\measuredangle_hCAB=\pm\measuredangle_hC'A'B'$.
 \end{thm}
 
@@ -338,16 +248,16 @@ $\measuredangle_hCAB=\pm\measuredangle_hC'A'B'$.
 
 \parit{Proof.}
 If $AB_h=A'B'_h$, then the theorem follows from ASA.
-Assume $AB_h\ne A'B'_h$. 
+Assume $AB_h\ne A'B'_h$.
 Without loss of generality, we may assume that $AB_h\z<A'B'_h$.
 
 \begin{wrapfigure}{r}{32mm}
 \centering
-\vskip-5mm
+\vskip-0mm
 \includegraphics{mppics/pic-218}
 \end{wrapfigure}
 
-Let us choose $B''\in [A'B')_h$ and $C''\in [A'C')_h$ such that 
+Let us choose $B''\in [A'B')_h$ and $C''\in [A'C')_h$ such that
 $A'B''_h=AB_h$ and $A'C''_h=AC_h$.
 By SAS, $\triangle_hA'B''C''\cong\triangle_hABC$;
 it follows that $\measuredangle_h A'B''C''=\pm\measuredangle_h A'B'C'$.
@@ -391,12 +301,102 @@ $$\begin{aligned}
 --- a contradiction.
 \qeds
 
-Recall that \index{angle-preserving transformation}\emph{angle-preserving transformation} is a bijection from an h-plane to itself such that 
+Recall that \index{angle-preserving transformation}\emph{angle-preserving transformation} is a bijection from an h-plane to itself such that
 \[\measuredangle_h ABC= \measuredangle_h A'B'C'\]
 for every $\triangle_h ABC$ and its image $\triangle_h A'B'C'$.
 
 \begin{thm}{Exercise}\label{ex:angle-preserving-hyp}
-Show that every angle-preserving transformation of the h-plane is a motion.
+Show that every angle-preserving transformation of the h-plane is a motion. Compare with Exercise~\ref{ex:angle-preserving-euclid}.
+\end{thm}
+
+
+
+\section{Circles, horocycles, and equidistants}
+
+According to Lemma~\ref{lem:h-circle=circle},
+every h-circle is a Euclidean circle that lies entirely within the h-plane.
+Furthermore, every h-line is an intersection of the h-plane with a circline
+perpendicular to the absolute.
+
+In this section, we will describe the 
+h-geometric meaning of the intersections 
+of other circlines with the h-plane.
+
+You will see that all these intersections have a {}\emph{perfectly round shape} in the h-plane.
+
+One may think of these curves as the trajectories of a car with a fixed position of the steering wheel.
+In the Euclidean plane, 
+this way you either travel along a circle or a line.
+
+In the hyperbolic plane, the picture is different.
+If you turn the steering wheel to the far right, you will travel along a circle.
+If you turn it less, at a certain position of the wheel, you will never return to the same point, but the path will be different from a line.
+If you straighten the wheel a bit more, you will travel along a path that stays at a fixed distance from an h-line.
+With the wheel straight, you follow an h-line.
+
+\parbf{Equidistants of h-lines.}
+Consider the h-plane with the absolute~$\Omega$.
+Assume a circline $\Gamma$ intersects $\Omega$ at two distinct points, $A$ and~$B$ and $\Gamma\not\perp\Omega$.
+Let $g$ be the intersection of $\Gamma$ with the h-plane.
+
+\begin{wrapfigure}[10]{o}{46mm}
+\vskip-2mm
+\centering
+\includegraphics{mppics/pic-212}
+\end{wrapfigure}
+
+Let us draw an h-line $m$ with the ideal points $A$ and~$B$.
+According to Exercise~\ref{ex:ideal-line-unique}, $m$ is uniquely defined.
+Let us show that all points of $g$ lie at the same h-distance from~$m$.
+
+Consider an h-line $\ell$ perpendicular to~$m$;
+let $\Delta$ be the circline containing~$\ell$.
+
+Note that $\Delta\perp \Gamma$.
+Indeed,
+according to Corollary~\ref{cor:perp-inverse-clines}, $m$ and $\Omega$ invert to themselves in~$\Delta$.
+It follows that $A$ is the inverse of $B$ across~$\Delta$.
+Finally, by Corollary~\ref{cor:perp-inverse}, we get that $\Delta\perp \Gamma$.
+
+Therefore, inversion across $\Delta$ sends both $m$ and $g$ to themselves.
+For any two points $P',P\in g$ there is a choice of $\ell$ and $\Delta$ as above such that
+$P'$ is the inverse of $P$ across $\Delta$.
+By the main observation (\ref{thm:main-observ}) the inversion across $\Delta$ is a motion of the h-plane. Therefore, all points of $g$ lie at the same distance from~$m$.
+
+In other words, $g$ is the set of points that lie at a fixed h-distance and on the same side of~$m$.
+
+Such a curve $g$ is called an \index{equidistant}\emph{equidistant} to the h-line~$m$.%
+\footnote{It can also be called a \index{hypercycle}\emph{hypercycle} with central line $m$.}
+In Euclidean geometry, the equidistant from a line is a line;
+apparently, in hyperbolic geometry, the picture is different.
+
+\begin{thm}{Exercise}\label{ex:equidistant-reflection}
+Let $g$ be the set of all h-reflections of a given h-point $P\notin m$ across the points on a given h-line $m$.
+Show that $g$ is equidistant to~$m$.
+\end{thm}
+
+
+\parbf{Horocycles.}
+If the circle $\Gamma$ touches the absolute from inside at one point $A$, then the complement $h=\Gamma\backslash\{A\}$ lies in the h-plane.
+This set is called a \index{horocycle}\emph{horocycle}.
+It also has a perfectly round shape in the sense described above.
+
+\begin{wrapfigure}[9]{o}{33mm}
+\vskip-2mm
+\centering
+\includegraphics{mppics/pic-214}
+\end{wrapfigure}
+
+The shape of a horocycle is between the shapes of circles and equidistants to h-lines.
+A horocycle might be considered as a limit of circles 
+thru a fixed point, say $P$,
+with the centers $O_n$ running to infinity along an h-line $\ell$.
+The same horocycle is a limit of equidistants thru $P$ to the sequence of h-lines $m_n$ passing thru $O_n$ and perpendicular to $\ell$.
+
+Since any three points lie on a circline, we have that any nondegenerate h-triangle is inscribed in an h-circle, a horocycle, or an equidistant.
+
+\begin{thm}{Exercise}\label{ex:right-trig-horocycle}
+Find the leg of an isosceles right h-triangle inscribed in a horocycle.
 \end{thm}
 
 \section{The conformal interpretation}
@@ -464,12 +464,6 @@ $\sinh r\df \tfrac{e^r-e^{-r}}{2}$.
 
 \end{thm}
 
-\begin{wrapfigure}{o}{47mm}
-\centering
-\vskip-4mm
-\includegraphics{mppics/pic-222}
-\end{wrapfigure}
-
 Before we proceed with the proof, let us discuss the same problem in the Euclidean plane.
 
 The circumference of a circle in the Euclidean plane
@@ -482,6 +476,12 @@ $\measuredangle AOB=\tfrac{2\cdot\pi}{n}$ and $OA=OB=r$.
 Set $x_n=AB$.
 Note that $x_n$ is the side of a regular $n$-gon inscribed in the circle with radius $r$. 
 Therefore, the perimeter of the $n$-gon is $n\cdot x_n$.
+
+\begin{wrapfigure}[9]{o}{42mm}
+\centering
+\vskip-0mm
+\includegraphics{mppics/pic-222}
+\end{wrapfigure}
 
 The circumference of the circle with radius $r$ 
 can then be defined as the limit
@@ -529,92 +529,25 @@ $$\circum_h(r+1)>2\cdot \circum_h(r)$$
 for all $r>0$.
 \end{thm}
 
-\section{Hyperbolic trigonometry}
-\label{sec:hyp-trig}
+\section{The Pythagorean theorem}\index{Pythagorean theorem}
 
-
-This section provides formulas for h-distance using \index{hyperbolic!functions}\emph{hyperbolic functions}.
-One of these formulas will be used in the proof of the hyperbolic Pythagorean theorem (\ref{thm:pyth-h-poincare}).
-
-Recall that $\cosh$, $\sinh$, and $\tanh$ denote \index{ch@$\cosh$}\index{hyperbolic!cosine}\emph{hyperbolic cosine}, \index{sh@$\sinh$}\index{hyperbolic!sine}\emph{hyperbolic sine}, and \index{th@$\tanh$}\index{hyperbolic!tangent}\emph{hyperbolic tangent}\label{hyperbolic tangent};
-that is, the functions defined by
+\index{ch@$\cosh$}\index{hyperbolic!cosine}\emph{Hyperbolic cosine} is defined by
 \[
-\cosh x\df \tfrac{e^x+e^{-x}}2,
-\quad
-\sinh x\df \tfrac{e^x-e^{-x}}2,
-\quad
-\tanh x\df \tfrac{\sinh x}{\cosh x}.
+\cosh x\df \frac{e^x+e^{-x}}2,
 \]
-These hyperbolic functions are analogous to sine, cosine, and tangent.
 
 \begin{thm}{Exercise}\label{ex:hyp-fun}
-Prove the following identities:
-\[\cosh' x=\sinh x;\quad \sinh'x=\cosh x;\quad (\cosh x)^2-(\sinh x)^2=1.\]
-\end{thm}
-
-\begin{thm}{Exercise}\label{ex:O-h-dist}
-Assume that the absolute is a unit circle centered at~$O$.
-Show that
-\[OP=\tanh(\tfrac12 \cdot OP_h)\]
-for every h-point $P$.
-\end{thm}
-
-\begin{thm}{Double-argument identities}\label{double-argument}
-The identities
-\begin{align*}
-\cosh (2\cdot x)&=(\cosh x)^2+(\sinh x)^2
-&&\text{and}&
-\sinh (2\cdot x)&=2\cdot\sinh x\cdot \cosh x
-\end{align*}
-hold for any real value $x$.
-\end{thm}
-
-\parit{Proof.}
-\begin{align*}
-(\sinh x)^2+(\cosh x)^2
-&=(\tfrac{e^x-e^{-x}}2)^2+(\tfrac{e^x+e^{-x}}2)^2=
-\\
-&=\tfrac{e^{2\cdot x}+e^{-2\cdot x}}2=
-\\
-&=\cosh (2\cdot x);
-\\
-2\cdot\sinh x\cdot \cosh x
-&=2\cdot(\tfrac{e^x-e^{-x}}2)\cdot(\tfrac{e^x+e^{-x}}2)=
-\\
-&=\tfrac{e^{2\cdot x}-e^{-2\cdot x}}2=
-\\
-&=\sinh (2\cdot x).
-\end{align*}
-\qedsf
-
-\begin{thm}[!]{Advanced exercise}\label{ex:cosh}
-Let $P$ and $Q$ be two h-points distinct from the center of the absolute.
-Denote by $P'$ and $Q'$ the inverses of $P$ and $Q$ across the absolute.
-
-\begin{wrapfigure}[20]{r}{40mm}
-\centering
-\includegraphics{mppics/pic-204}
-\end{wrapfigure}
-
-Show that
-\medskip
-\begin{enumerate}[(a)]
-\item\label{ex:cosh/2}
-$\displaystyle{\cosh[\tfrac12\cdot PQ_h]=\sqrt{\frac{PQ'\cdot P'Q}{PP'\cdot QQ'}};}$
-\medskip
-\item\label{ex:coshsinh}
-$\displaystyle{\sinh[\tfrac12\cdot PQ_h]=\sqrt{\frac{PQ\cdot P'Q'}{PP'\cdot QQ'}};}$
-\medskip
-\item\label{ex:coshtanh}
-$\displaystyle{\tanh[\tfrac12\cdot PQ_h]=\sqrt{\frac{PQ\cdot P'Q'}{PQ'\cdot P'Q}};}$
-\medskip
-\item\label{ex:coshcosh}
-$\displaystyle{\cosh PQ_h=\frac{PQ\cdot P'Q'+PQ'\cdot P'Q}{PP'\cdot QQ'}.}$
-\end{enumerate}
+Prove the following identities:\\
+(a)~$\cosh' x=\sinh x$;
+\qquad
+(b)~$\sinh'x=\cosh x$;
+\qquad
+(c)~$(\cosh x)^2-(\sinh x)^2=1$;\\
+(d)~$\cosh (2\cdot x)=(\cosh x)^2+(\sinh x)^2$;
+\qquad
+(e)~$\sinh (2\cdot x)=2\cdot\sinh x\cdot \cosh x$.
 
 \end{thm}
-
-\section{The Pythagorean theorem}\index{Pythagorean theorem}
 
 \begin{thm}{Hyperbolic Pythagorean theorem}\label{thm:pyth-h-poincare}
 Assume that the h-triangle $ACB$ has a right angle at~$C$.
@@ -624,8 +557,8 @@ Then
 where $a=BC_h$, $b=CA_h$, and $c=AB_h$.
 \end{thm}
 
-The formula \ref{eq:thm:pyth-h-poincare} will be proved by means of direct calculations.
-Before giving the proof, let us discuss the limit cases of this formula.
+The formula \ref{eq:thm:pyth-h-poincare} will be proved in the next section.
+Let us discuss the limit cases of this formula.
 
 Note that $\cosh x$ can be written using the Taylor expansion
 \[\cosh x=1+\tfrac1{2}\cdot x^2+\tfrac1{24}\cdot x^4+\dots\]
@@ -666,15 +599,67 @@ Consider points $M$ and $N$ such that $AM_h\z=DB_h$, $BN_h=AD_h$, $(AM)_h\perp(A
 Show that $CM_h=CN_h$.
 \end{thm}
 
+The following lemma gives a conncetion between hyperbolic cosine, hyperbolic distance, and cross ratio that will be the key to the proof of the hyperbolic Pythagorean theorem.
 
-In the proof of the hyperbolic Pythagorean theorem, we use the following formula from Exercise~\ref{ex:cosh}\textit{\ref{ex:coshcosh}}:
-\[\cosh AB_h=\frac{AB\cdot A'B'+AB'\cdot A'B}{AA'\cdot BB'},\]
-here $A$, $B$ are h-points distinct from the center of the absolute, and $A'$, $B'$ are their inversions across the absolute.
-This formula is derived in the hints.
+\begin{thm}{Lemma}\label{lem:cosh}
+Let $P$ and $Q$ be two h-points distinct from the center of the absolute.
+Denote by $P'$ and $Q'$ the inverses of $P$ and $Q$ across the absolute.
+Then
+\[\cosh PQ_h=\frac{PQ\cdot P'Q'+PQ'\cdot P'Q}{PP'\cdot QQ'}.\eqlbl{eq:coshPQh}\]
+
+\end{thm}
+
+\begin{wrapfigure}[10]{r}{40mm}
+\vskip-6mm
+\centering
+\includegraphics{mppics/pic-204}
+\end{wrapfigure}
+
+\parit{Proof.}
+By \ref{cor:invese-comp} and \ref{lem:inverse-4-angle},
+the right-hand sides of the identities
+remain unchanged under an inversion across a circle perpendicular to the absolute.
+
+As usual, we assume that the absolute is a unit circle.
+Let $O$ be the h-midpoint of $[PQ]_h$.
+By the main observation (\ref{thm:main-observ})
+we can assume that $O$ is the center of the absolute.
+In this case, $O$ is also the Euclidean midpoint of $[PQ]$.%
+\footnote{We could also move $Q$ to the center of the absolute.
+In this case, the derivations are simpler.
+But then $Q'Q=Q'P=Q'P'=\infty$, and one has to justify that $\tfrac\infty\infty=1$ every time.}
+
+Set $x=OP=OQ$; in this case, we have
+\begin{align*}
+PQ&=2\cdot x,
+&
+PP'=QQ'&=\tfrac1x-x,
+\\
+P'Q'&=2\cdot \tfrac1x,
+&
+PQ'=QP'&=\tfrac1x+x.
+\end{align*}
+
+By the defintion of h-distance $PQ_h=\ln \tfrac{(1+x)^2}{(1-x)^2}$.
+Therefore, \ref{eq:coshPQh} can be rewrittenas the following algebraic identity
+\[\frac{\frac{(1+x)^2}{(1-x)^2}+\frac{(1-x)^2}{(1+x)^2}}2
+=
+\frac{2\cdot x\cdot2\cdot \tfrac1x+(\tfrac1x+x)^2}{(\tfrac1x-x)^2},\]
+which is straightforward to check.
+\qeds
+
+
+
+
+\begin{thm}{Exercise}\label{ex:cosh}
+Assume $P$, $Q$, $P'$, and $Q'$ are as in \ref{lem:cosh}.
+\[\sinh[\tfrac12\cdot PQ_h]=\sqrt{\frac{PQ\cdot P'Q'}{PP'\cdot QQ'}}.\]
+
+\end{thm}
 
 \begin{wrapfigure}{o}{43mm}
 \centering
-\vskip-6mm
+\vskip-0mm
 \includegraphics{mppics/pic-224}
 \end{wrapfigure}
 
@@ -744,3 +729,5 @@ According to Exercise~\ref{ex:cosh}\textit{\ref{ex:coshcosh}},
 \]
 Finally, \ref{cosha+coshb} and \ref{coshc} imply \ref{eq:thm:pyth-h-poincare}.
 \qeds
+
+

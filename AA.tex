@@ -1,3 +1,120 @@
+This section provides formulas for h-distance using \index{hyperbolic!functions}\emph{hyperbolic functions}.
+One of these formulas will be used in the proof of the hyperbolic Pythagorean theorem (\ref{thm:pyth-h-poincare}).
+
+\index{ch@$\cosh$}\index{hyperbolic!cosine}\emph{Hyperbolic cosine}, \index{sh@$\sinh$}\index{hyperbolic!sine}\emph{hyperbolic sine}, and \index{th@$\tanh$}\index{hyperbolic!tangent}\emph{hyperbolic tangent}\label{hyperbolic tangent};
+will be denoted by $\cosh$, $\sinh$, and $\tanh$; these functions are defined by
+\[
+\cosh x\df \tfrac{e^x+e^{-x}}2,
+\quad
+\sinh x\df \tfrac{e^x-e^{-x}}2,
+\quad
+\tanh x\df \tfrac{\sinh x}{\cosh x}.
+\]
+These hyperbolic functions are analogous to sine, cosine, and tangent.
+
+\begin{thm}{Exercise}\label{ex:hyp-fun}
+Prove the following identities:
+\[\cosh' x=\sinh x;\quad \sinh'x=\cosh x;\quad (\cosh x)^2-(\sinh x)^2=1.\]
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:O-h-dist}
+Assume that the absolute is a unit circle centered at~$O$.
+Show that
+\[OP=\tanh(\tfrac12 \cdot OP_h)\]
+for every h-point $P$.
+\end{thm}
+
+\begin{thm}{Double-argument identities}\label{double-argument}
+The identities
+\begin{align*}
+\cosh (2\cdot x)&=(\cosh x)^2+(\sinh x)^2
+&&\text{and}&
+\sinh (2\cdot x)&=2\cdot\sinh x\cdot \cosh x
+\end{align*}
+hold for any real value $x$.
+\end{thm}
+
+\parit{Proof.}
+\begin{align*}
+(\sinh x)^2+(\cosh x)^2
+&=(\tfrac{e^x-e^{-x}}2)^2+(\tfrac{e^x+e^{-x}}2)^2=
+\\
+&=\tfrac{e^{2\cdot x}+e^{-2\cdot x}}2=
+\\
+&=\cosh (2\cdot x);
+\\
+2\cdot\sinh x\cdot \cosh x
+&=2\cdot(\tfrac{e^x-e^{-x}}2)\cdot(\tfrac{e^x+e^{-x}}2)=
+\\
+&=\tfrac{e^{2\cdot x}-e^{-2\cdot x}}2=
+\\
+&=\sinh (2\cdot x).
+\end{align*}
+\qedsf
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Therefore the right-hand side in \ref{eq:coshPQh} is
+\[\frac{2\cdot a\cdot2\cdot \tfrac1a+(\tfrac1a+a)^2}{(\tfrac1a-a)^2}=\]
+
+On the other hand, by the defintion of h-distance $PQ_h=\ln \tfrac{(1+a)^2}{(1-a)^2}$.
+Hence the left-hand side in \ref{eq:coshPQh} is
+\[PQ_h=\ln \tfrac{(1+a)^2}{(1-a)^2}=2\cdot \ln \tfrac{1+a}{1-a}.\]
+Therefore
+\begin{align*}
+\cosh[\tfrac12\cdot PQ_h]
+&=\tfrac12\cdot(\tfrac{1+a}{1-a}+\tfrac{1-a}{1+a})=
+\\
+&=\tfrac{1+a^2}{1-a^2};
+\end{align*}
+\begin{align*}
+\sqrt{\frac{PQ'\cdot P'Q}{PP'\cdot QQ'}}
+&=\frac{\frac1a+a}{\frac1a-a}=
+\\
+&=\tfrac{1+a^2}{1-a^2}.
+\end{align*}
+Hence part \textit{(\ref{ex:cosh/2})} follows.
+Similarly,
+\begin{align*}
+\sinh[\tfrac12\cdot PQ_h]
+&=\tfrac12\cdot\left(\tfrac{1+a}{1-a}-\tfrac{1-a}{1+a}\right)=
+\\
+&=\tfrac{2\cdot a}{1-a^2};
+\\
+\sqrt{\frac{PQ\cdot P'Q'}{PP'\cdot QQ'}}
+&=\frac{2}{\frac1a-a}=
+\\
+&=\tfrac{2\cdot a}{1-a^2}.
+\end{align*}
+Hence part \textit{(\ref{ex:coshsinh})} follows.
+
+Parts \textit{(\ref{ex:coshtanh})} and \textit{(\ref{ex:coshcosh})} follow from \textit{(\ref{ex:cosh/2})}, \textit{(\ref{ex:coshsinh})}, the definition of a hyperbolic tangent, and the double-argument identity for hyperbolic cosine, see \ref{double-argument}.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 The following claim says that the h-distance meets condition~\ref{def:metric-space}\textit{\ref{def:metric-space:c}}.
 
 \begin{thm}{Claim}
