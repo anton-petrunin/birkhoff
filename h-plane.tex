@@ -43,7 +43,7 @@ that is, there is an $h$-line $n$ such that $n\perp \ell$ and $n\perp m$.
 
 \begin{thm}{Exercise}\label{ex:lambert-parallelism}
 Suppose that $\square_hABCD$ has right h-angles at $A$, $B$, and~$C$.
-Show that $|\measuredangle_h CDA|>\phi$, where $\phi$ is the angle of parallelism at $D$ with respect to~$(AB)_h$.
+Show that (a) $|\measuredangle_h CDA|\ge\phi$ and (b) $|\measuredangle_h CDA|>\phi$ where $\phi$ is the angle of parallelism at $D$ with respect to~$(AB)_h$.
 \end{thm}
 
 
@@ -131,6 +131,11 @@ Show that
 Sketch $\triangle_h ABC$ in the conformal model.
 \end{thm}
 
+\begin{thm}{Exercise}\label{ex:side-sup}
+Let $\square_h ABCD$ be a quadrangle in the h-plane
+such that the h-angles at $A$, $B$, and $C$ are right and $AB_h=BC_h$.
+Find the optimal upper bound for~$AB_h$.
+\end{thm}
 
 \section{Inradius of an h-triangle}
 
@@ -161,9 +166,9 @@ if not, relabel $X$, $Y$, and~$Z$.
 
 \begin{wrapfigure}{o}{44mm}
 \centering
-\vskip-4mm
+\vskip-0mm
 \includegraphics{mppics/pic-210}
-\end{wrapfigure} 
+\end{wrapfigure}
 
 Since $r$ is the h-distance from $I$ to $(XY)_h$,
 Proposition~\ref{prop:angle-parallelism} implies that
@@ -176,12 +181,6 @@ Proposition~\ref{prop:angle-parallelism} implies that
 \qedsf
 
 }
-
-\begin{thm}{Exercise}\label{ex:side-sup}
-Let $\square_h ABCD$ be a quadrangle in the h-plane 
-such that the h-angles at $A$, $B$, and $C$ are right and $AB_h=BC_h$.
-Find the optimal upper bound for~$AB_h$.
-\end{thm}
 
 \section{Hyperbolic triangles}
 
@@ -253,8 +252,9 @@ Without loss of generality, we may assume that $AB_h\z<A'B'_h$.
 
 \begin{wrapfigure}{r}{32mm}
 \centering
-\vskip-0mm
+\vskip-6mm
 \includegraphics{mppics/pic-218}
+\vskip2mm
 \end{wrapfigure}
 
 Let us choose $B''\in [A'B')_h$ and $C''\in [A'C')_h$ such that
@@ -371,8 +371,7 @@ In Euclidean geometry, the equidistant from a line is a line;
 apparently, in hyperbolic geometry, the picture is different.
 
 \begin{thm}{Exercise}\label{ex:equidistant-reflection}
-Let $g$ be the set of all h-reflections of a given h-point $P\notin m$ across the points on a given h-line $m$.
-Show that $g$ is equidistant to~$m$.
+Show that the set of all h-reflections of a given h-point $P$ across the points on a given h-line $m\not\ni P$ is an equidistant to~$m$.
 \end{thm}
 
 
@@ -394,6 +393,15 @@ with the centers $O_n$ running to infinity along an h-line $\ell$.
 The same horocycle is a limit of equidistants thru $P$ to the sequence of h-lines $m_n$ passing thru $O_n$ and perpendicular to $\ell$.
 
 Since any three points lie on a circline, we have that any nondegenerate h-triangle is inscribed in an h-circle, a horocycle, or an equidistant.
+
+\begin{thm}{Exercise}\label{ex:h-perp-bisectors}
+Show that the h-perpendicular bisectors to the sides of a
+nondegenerate h-triangle either meet at one h-point,
+have a common ideal point, or have a common h-perpendicular.
+
+Which case occurs when the triangle is inscribed in an h-circle,
+a horocycle, or an equidistant?
+\end{thm}
 
 \begin{thm}{Exercise}\label{ex:right-trig-horocycle}
 Find the leg of an isosceles right h-triangle inscribed in a horocycle.
@@ -477,9 +485,9 @@ Set $x_n=AB$.
 Note that $x_n$ is the side of a regular $n$-gon inscribed in the circle with radius $r$. 
 Therefore, the perimeter of the $n$-gon is $n\cdot x_n$.
 
-\begin{wrapfigure}[9]{o}{42mm}
+\begin{wrapfigure}[9]{r}{42mm}
 \centering
-\vskip-0mm
+\vskip-6mm
 \includegraphics{mppics/pic-222}
 \end{wrapfigure}
 
@@ -530,34 +538,21 @@ for all $r>0$.
 \end{thm}
 
 \section{The Pythagorean theorem}\index{Pythagorean theorem}
-
-\index{ch@$\cosh$}\index{hyperbolic!cosine}\emph{Hyperbolic cosine} is defined by
-\[
-\cosh x\df \frac{e^x+e^{-x}}2,
-\]
-
-\begin{thm}{Exercise}\label{ex:hyp-fun}
-Prove the following identities:\\
-(a)~$\cosh' x=\sinh x$;
-\qquad
-(b)~$\sinh'x=\cosh x$;
-\qquad
-(c)~$(\cosh x)^2-(\sinh x)^2=1$;\\
-(d)~$\cosh (2\cdot x)=(\cosh x)^2+(\sinh x)^2$;
-\qquad
-(e)~$\sinh (2\cdot x)=2\cdot\sinh x\cdot \cosh x$.
-
-\end{thm}
+\label{sec:hyp-trig}
 
 \begin{thm}{Hyperbolic Pythagorean theorem}\label{thm:pyth-h-poincare}
 Assume that the h-triangle $ACB$ has a right angle at~$C$.
 Then
 \[\cosh c=\cosh a\cdot\cosh b,
 \eqlbl{eq:thm:pyth-h-poincare}\]
-where $a=BC_h$, $b=CA_h$, and $c=AB_h$.
+where $a=BC_h$, $b=CA_h$, $c=AB_h$, and $\ch$ is \index{ch@$\cosh$}\index{hyperbolic!cosine}\emph{hyperbolic cosine} is defined by
+\[
+\cosh x\df \frac{e^x+e^{-x}}2.
+\]
+
 \end{thm}
 
-The formula \ref{eq:thm:pyth-h-poincare} will be proved in the next section.
+The derivation of \ref{eq:thm:pyth-h-poincare} will be given at the end of this section.
 Let us discuss the limit cases of this formula.
 
 Note that $\cosh x$ can be written using the Taylor expansion
@@ -599,7 +594,22 @@ Consider points $M$ and $N$ such that $AM_h\z=DB_h$, $BN_h=AD_h$, $(AM)_h\perp(A
 Show that $CM_h=CN_h$.
 \end{thm}
 
-The following lemma gives a conncetion between hyperbolic cosine, hyperbolic distance, and cross ratio that will be the key to the proof of the hyperbolic Pythagorean theorem.
+The following exercise should help to adapt hyperbolic sine and cosine.
+
+\begin{thm}{Exercise}\label{ex:hyp-fun}
+Prove the following identities:\\
+(a)~$\cosh' x=\sinh x$;
+\qquad
+(b)~$\sinh'x=\cosh x$;
+\qquad
+(c)~$(\cosh x)^2-(\sinh x)^2=1$;\\
+(d)~$\cosh (2\cdot x)=(\cosh x)^2+(\sinh x)^2$;
+\qquad
+(e)~$\sinh (2\cdot x)=2\cdot\sinh x\cdot \cosh x$.
+
+\end{thm}
+
+We now turn to the proof of the hyperbolic Pythagorean theorem; first we need to connect hyperbolic cosine, hyperbolic distance, and cross-ratio.
 
 \begin{thm}{Lemma}\label{lem:cosh}
 Let $P$ and $Q$ be two h-points distinct from the center of the absolute.
@@ -616,9 +626,8 @@ Then
 \end{wrapfigure}
 
 \parit{Proof.}
-By \ref{cor:invese-comp} and \ref{lem:inverse-4-angle},
-the right-hand sides of the identities
-remain unchanged under an inversion across a circle perpendicular to the absolute.
+By \ref{cor:invese-comp} and \ref{lem:inverse-4-angle}, the right-hand side of \ref{eq:coshPQh} remain unchanged under an inversion across a circle perpendicular to the absolute.
+
 
 As usual, we assume that the absolute is a unit circle.
 Let $O$ be the h-midpoint of $[PQ]_h$.
@@ -640,8 +649,8 @@ P'Q'&=2\cdot \tfrac1x,
 PQ'=QP'&=\tfrac1x+x.
 \end{align*}
 
-By the defintion of h-distance $PQ_h=\ln \tfrac{(1+x)^2}{(1-x)^2}$.
-Therefore, \ref{eq:coshPQh} can be rewrittenas the following algebraic identity
+By the definition of h-distance $PQ_h=\ln \tfrac{(1+x)^2}{(1-x)^2}$.
+Therefore, \ref{eq:coshPQh} can be rewritten as the following algebraic identity
 \[\frac{\frac{(1+x)^2}{(1-x)^2}+\frac{(1-x)^2}{(1+x)^2}}2
 =
 \frac{2\cdot x\cdot2\cdot \tfrac1x+(\tfrac1x+x)^2}{(\tfrac1x-x)^2},\]
@@ -653,13 +662,14 @@ which is straightforward to check.
 
 \begin{thm}{Exercise}\label{ex:cosh}
 Assume $P$, $Q$, $P'$, and $Q'$ are as in \ref{lem:cosh}.
+Show that
 \[\sinh[\tfrac12\cdot PQ_h]=\sqrt{\frac{PQ\cdot P'Q'}{PP'\cdot QQ'}}.\]
 
 \end{thm}
 
 \begin{wrapfigure}{o}{43mm}
 \centering
-\vskip-0mm
+\vskip-6mm
 \includegraphics{mppics/pic-224}
 \end{wrapfigure}
 
@@ -707,7 +717,7 @@ A'B&=\sqrt{x^2+\tfrac1{y^2}},
 A'B'&=\sqrt{\tfrac1{x^2}+\tfrac1{y^2}}.
 \end{align*}
 
-According to Exercise~\ref{ex:cosh}\textit{\ref{ex:coshcosh}},
+By Lemma~\ref{lem:cosh},
 \[
 \begin{aligned}
 \cosh c&= \frac{AB\cdot A'B'+AB'\cdot A'B}{AA'\cdot BB'}=

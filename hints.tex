@@ -1520,8 +1520,10 @@ It follows that the ideal points of the h-lines $\ell$ and $m$ are symmetric to 
 Therefore, if one pair of them coincides, then the other pair does too. 
 By \ref{ex:ideal-line-unique}, $\ell=m$, which contradicts the assumption $\ell\ne m$.
 
-\parbf{\ref{ex:lambert-parallelism}.}
-Use \ref{ex:ultra-parallel} and the definition of the angle of parallelism.
+\parbf{\ref{ex:lambert-parallelism}}; \textit{(a)}
+Apply \ref{prop:point-reflection+} and the definition of the angle of parallelism.
+
+\parit{(b)} Use in addition \ref{ex:ultra-parallel}.
 
 \parbf{\ref{ex:right-angle-parallelism}.} Show that the angle of parallelism at $C$ with respect to $(AB)_h$ is greater than $\tfrac\pi4$, and apply \ref{prop:angle-parallelism}.
 You can use approximations such as $\sqrt2\approx 1.414$ and $e\approx2.718$.
@@ -1535,7 +1537,8 @@ use it to estimate~$\phi$.
 You may use that $\cos\phi\z\le 1-\tfrac1{10}\cdot\phi^2$ for $|\phi|\z<\tfrac\pi2$ and $e^3>10$.
 
 \parbf{\ref{ex:side-sup}.}
-Note that the angle of parallelism at $B$ with respect to $(CD)_h$ is greater than $\tfrac\pi4$,
+Show that $[BD)_h$ bisects $\angle_h ABC$.
+Conclude that the angle of parallelism at $B$ with respect to $(CD)_h$ is greater than $\tfrac\pi4$,
 and it approaches $\tfrac\pi4$ as $CD_h\to\infty$.
 
 Applying \ref{prop:angle-parallelism},
@@ -1545,17 +1548,27 @@ $$BC_h<\tfrac12\cdot\ln\frac{1+\frac1{\sqrt{2}}}{1-\frac1{\sqrt{2}}}=\ln\left(1+
 The right-hand side is the limit of $BC_h$ as $CD_h\to\infty$.
 Therefore, $\ln\left(1+\sqrt{2}\right)$ is the optimal upper bound.
 
+\parbf{\ref{ex:angle-preserving-hyp}.}
+Apply the AAA-congruence condition (\ref{thm:AAA}).
 
 \parbf{\ref{ex:equidistant-reflection}.}
 Let $P'$ be another h-point.
 Denote by $R$ and $R'$ the h-footpoints of $P$ and $P'$ on $m$.
 
-Show and use that $P'$ is an h-reflection of $P$ across $Q\in m$ if and only if $P$ and $P'$ lie on the opposite sides of $m$, 
-$PR_h=P'R'_h$, and $Q$ is the h-midpoint of $[RR']_h$.
+Show and use that $P'$ is an h-reflection of $P$ across $Q\in m$ if and only if $P$ and $P'$ lie on the opposite sides of $m$, and $R'$ is an h-reflection of $R$ across $Q$.
 You may need \ref{prop:vert}, SAS, and SAA (see \ref{ex:SAA}).
 
-\parbf{\ref{ex:angle-preserving-hyp}.}
-Apply the AAA-congruence condition (\ref{thm:AAA}).
+\parbf{\ref{ex:h-perp-bisectors}.}
+If two h-perpendicular bisectors intersect, then argue as in \ref{thm:circumcenter}.
+Conculde that the triangle admits a h-circumcircle.
+
+If two h-perpendicular bisectors are ulraparallel, then by \ref{ex:ultra-parallel} they have a common h-perpendicular, say $\ell$.
+Conclude that the vertices of triangle are equidistant to $\ell$ and the remaining bisector is also perpendicular to $\ell$.
+By \ref{ex:ultra-parallel}, all three h-perpendicular bisectors are ultraparallel to each other.
+
+It remains one case when all perependiclar bisectors are assymptotically parallel to each other.
+In this case they share an ideal point.
+Use excusion to show that the verices lie on one horocycle.
 
 \parbf{\ref{ex:right-trig-horocycle}.}
 As usual, we assume that the absolute is a unit circle. 
@@ -2240,7 +2253,7 @@ The condition $|w|<|v|$ follows since $f(0)\in\mathbb{D}$.
 
 \parbf{\ref{ex:schwarz-tanh}.} 
 Note that the inverses of the points $z$ and $w$ have complex coordinates $1/\bar z$ and $1/\bar w$.
-Apply \ref{ex:cosh} and simplify.
+Argue as in the proof of Lemma~\ref{lem:cosh}.
 
 The second part follows since the function $x\mapsto \tanh(\tfrac12\cdot x)$ is increasing.
 
