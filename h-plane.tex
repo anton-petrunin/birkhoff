@@ -245,35 +245,33 @@ $\measuredangle_hCAB=\pm\measuredangle_hC'A'B'$.
 
 }
 
-\parit{Proof.}
-If $AB_h=A'B'_h$, then the theorem follows from ASA.
-Assume $AB_h\ne A'B'_h$.
-Without loss of generality, we may assume that $AB_h\z<A'B'_h$.
-
 \begin{wrapfigure}{r}{32mm}
 \centering
-\vskip-6mm
+\vskip-0mm
 \includegraphics{mppics/pic-218}
 \vskip2mm
 \end{wrapfigure}
 
-Let us choose $B''\in [A'B')_h$ and $C''\in [A'C')_h$ such that
+\parit{Proof.}
+We can assume that $AB_h\ne A'B'_h$, $BC_h\z\ne B'C'_h$, and $AC_h\z\ne A'C'_h$;
+otherwise the theorem follows from ASA.
+Furthermore, after switching the triangles and relabeling verices, we can assume that $AB_h\z< A'B'_h$ and $AC_h< A'C'_h$.
+
+Let us choose $B''\in [A'B']_h$ and $C''\in [A'C']_h$ such that
 $A'B''_h=AB_h$ and $A'C''_h=AC_h$.
 By SAS, $\triangle_hA'B''C''\cong\triangle_hABC$;
-it follows that $\measuredangle_h A'B''C''=\pm\measuredangle_h A'B'C'$.
-Since angles of a triangle have the same signs (\ref{thm:signs-of-triug}), we have
-\[\measuredangle_h A'B''C''=\measuredangle_h A'B'C'.\eqlbl{A'B''C''congA'B'C'}\]
-
-Let us show that points $B''$ and $C''$ lie on the sides $[A'B']_h$ and $[A'C']_h$ respectively.
-Indeed, according to Exercise~\ref{ex:parallel-abs}, \ref{A'B''C''congA'B'C'} implies that $(B''C'')_h\z\parallel(B'C')_h$.
-In particular, $B''$ and $C''$ lie on one side of $(B'C')_h$.
-Since $AB_h<A'B'_h$ and $B''\in [A'B')_h$, we have $B''$ and $A'$ lie on one side of $(B'C')_h$.
-It follows that $C''$ and $A'$ lie on one side of $(B'C')_h$;
-therefore, $C''\in [A'C']_h$.
-
-Since $\triangle_h ABC\cong\triangle_h A'B''C''$, we have
-$$\defect(\triangle_h ABC)=\defect(\triangle_h A'B''C'').
-\eqlbl{eq:defect=defect}$$
+therefore,
+$$
+\begin{aligned}
+\defect(\triangle_h A'B'C')
+&=
+\defect(\triangle_h ABC)=
+\\
+&=
+\defect(\triangle_h A'B''C'').
+\end{aligned}
+\eqlbl{eq:defect=defect0}
+$$
 
 Applying Exercise~\ref{ex:defect} twice, we get that
 $$\begin{aligned}
@@ -288,17 +286,8 @@ $$\begin{aligned}
 By Theorem~\ref{thm:3sum-h}, all the defects have to be positive.
 Therefore
 $$\defect(\triangle_h A'B'C')
->\defect(\triangle_h ABC).$$
-On the other hand, by assumption we have
-$$\begin{aligned}
-\defect(\triangle_h A'B'C')
-&= \pi -|\measuredangle_hA'B'C'|-|\measuredangle_hB'C'A'|-|\measuredangle_hC'A'B'|=
-\\
-&=\pi -|\measuredangle_hABC|-|\measuredangle_hBCA|-|\measuredangle_hCAB|=
-\\
-&=\defect(\triangle_h ABC)
- \end{aligned}$$
---- a contradiction.
+>\defect(\triangle_h A'B''C''),$$
+which contradicts \ref{eq:defect=defect0}.
 \qeds
 
 Recall that \index{angle-preserving transformation}\emph{angle-preserving transformation} is a bijection from an h-plane to itself such that
@@ -374,17 +363,16 @@ apparently, in hyperbolic geometry, the picture is different.
 Show that the set of all h-reflections of a given h-point $P$ across the points on a given h-line $m\not\ni P$ is an equidistant to~$m$.
 \end{thm}
 
+\begin{wrapfigure}[8]{o}{33mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-214}
+\end{wrapfigure}
 
 \parbf{Horocycles.}
 If the circle $\Gamma$ touches the absolute from inside at one point $A$, then the complement $h=\Gamma\backslash\{A\}$ lies in the h-plane.
 This set is called a \index{horocycle}\emph{horocycle}.
 It also has a perfectly round shape in the sense described above.
-
-\begin{wrapfigure}[9]{o}{33mm}
-\vskip-2mm
-\centering
-\includegraphics{mppics/pic-214}
-\end{wrapfigure}
 
 The shape of a horocycle is between the shapes of circles and equidistants to h-lines.
 A horocycle might be considered as a limit of circles 
@@ -594,8 +582,6 @@ Consider points $M$ and $N$ such that $AM_h\z=DB_h$, $BN_h=AD_h$, $(AM)_h\perp(A
 Show that $CM_h=CN_h$.
 \end{thm}
 
-The following exercise should help you get used to hyperbolic sine and cosine.
-
 \begin{thm}{Exercise}\label{ex:hyp-fun}
 Prove the following identities:\\
 (a)~$\cosh' x=\sinh x$;
@@ -620,7 +606,7 @@ Then
 \end{thm}
 
 \begin{wrapfigure}[10]{r}{40mm}
-\vskip-6mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-204}
 \end{wrapfigure}
@@ -667,7 +653,7 @@ Show that
 
 \end{thm}
 
-\begin{wrapfigure}{o}{43mm}
+\begin{wrapfigure}{r}{43mm}
 \centering
 \vskip-6mm
 \includegraphics{mppics/pic-224}
