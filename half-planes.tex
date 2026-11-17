@@ -313,7 +313,7 @@ $B'\in [AC]$.
 Show that $[AA']$ intersects $[BB']$.
 \end{thm}
 
-\begin{thm}{Exercise}\label{ex:crossbar}
+\begin{thm}[!]{Exercise}\label{ex:crossbar}
 Suppose that
 \[0<\measuredangle BAX<\measuredangle BAC<\pi\]
 for distinct points $A$, $B$, $C$, and $X$.
@@ -410,15 +410,6 @@ Given $r>0$ and $\epsilon>0$, there is $\delta>0$ such that
 \end{thm}
 
 
-
-{
-
-\begin{wrapfigure}{l}{36mm}
-\vskip-8mm
-\centering
-\includegraphics{mppics/pic-34}
-\end{wrapfigure}
-
 \parit{Proof.}
 Fix two points $A$ and $B$ such that $AB\z=r$.
 
@@ -432,26 +423,27 @@ Set $\delta\z=\measuredangle ABY$.
 
 Suppose $0<\beta<\delta$;
 by Axiom~\ref{def:birkhoff-axioms:2a}, we can choose $C$ so that $\measuredangle ABC\z=\beta$ and $BC\z=r$.
-Furthermore, we can choose a half-line $[BZ)$ such that $\measuredangle ABZ\z=\tfrac12\cdot \beta$.
 
-}
+By Exercise~\ref{ex:crossbar}, the half-line $[BC)$
+contains a point, say $D$, that lies between $A$ and $Y$.
+Since $BC=BA$, the triangle inequality gives
+\[CD=|BD-BA|\le AD.\]
 
-Points $A$ and $Y$ lie on opposite sides of~$(BZ)$ and  $\measuredangle ABZ\z\equiv -\measuredangle CBZ$.
-In particular, $(BZ)$ intersects $[AY]$;
-denote by $D$ the point of intersection.
+{
 
-Since $D$ lies between $A$ and $Y$, we have $AD<AY$.
+\begin{wrapfigure}[3]{o}{36mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-33}
+\end{wrapfigure}
 
-Since $D$ lies on $(BZ)$ we have that $\measuredangle ABD\z\equiv -\measuredangle CBD$.
-By Axiom~\ref{def:birkhoff-axioms:3},
-$\triangle ABD\cong \triangle CBD$.
-It follows that
-\begin{align*}
-s(r,\beta)&=AC\le
+Therefore,
+\begin{align*}s(r,\beta)
+&=AC
 \\
-&\le AD+DC=
+&\le AD+DC\le
 \\
-&=2\cdot AD< 
+&\le 2\cdot AD<
 \\
 &< 2\cdot AY=
 \\

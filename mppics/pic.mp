@@ -436,6 +436,37 @@ label.bot (btex $s(r,\beta)$ etex, .5[z.A,z.C]);
 
 endfig;
 
+beginfig(33)
+save u;
+u:=1cm;
+
+z.B=origin;
+z.A=(2,0)*u;
+z.D=(2.2,.4)*u;
+z.C=z.A rotated (2*angle(z.D));
+z.DD=whatever[z.B,z.C]=whatever[z.A,z.D];
+z.Z=1.3*z.D;
+z.X=4[z.A,z.D];
+z.Y=3.2[z.A,z.D];
+
+draw ddline(z.B,z.A)(.2,.4);
+draw ddline(z.B,z.C)(0,.6);
+draw ddline(z.A,z.X)(0,.1);
+
+
+dOt z.A,z.B,z.C,z.X,z.Y,z.DD;
+
+label.bot (btex $A$ etex, z.A);
+label.bot (btex $B$ etex, z.B);
+label.top (btex $C$ etex, z.C);
+label.lrt (btex $D$ etex, z.DD);
+label.rt (btex $X$ etex, z.X+(-1,0));
+label.lft (btex $Y$ etex, z.Y+(1,0));
+whitelabel (btex $r$ etex, .55[z.B,z.C]);
+whitelabel (btex $r$ etex, .55[z.B,z.A]);
+
+endfig;
+
 beginfig(34)
 save u;
 u:=1cm;
