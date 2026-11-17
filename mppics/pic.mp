@@ -764,7 +764,8 @@ rimmark(z.O--z.Q,z.O--z.QQ);
 rimmark2(z.P--z.Q,z.P--z.QQ,z.PP--z.Q,z.PP--z.QQ);
 
 draw ddline(z.Q,z.QQ)(.1,.1);
-draw ddline(z.P,z.PP)(.1,.1);
+draw ddline(z.P,z.PP)(.1,-.4);
+draw ddline(z.P,z.PP)(-.6,.1) dashed evenly;
 draw z.P--z.Q--z.PP--z.QQ--cycle;
 
 dOt z.P,z.Q,z.PP,z.QQ;

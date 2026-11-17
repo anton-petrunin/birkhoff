@@ -1,3 +1,52 @@
+\parit{Proof; ``only-if'' part.}
+Denote by $O$ the midpoint of $[BC]$.
+
+Assume $(AB)\parallel(C D)$.
+According to Theorem~\ref{thm:parallel-point-reflection},
+$(CD)$ is a reflection of $(AB)$ across $O$.
+
+
+Let $A'$ be the reflection of $A$ across $O$.
+Then $A'\in (CD)$ and by Proposition~\ref{prop:point-reflection+} we have that
+\[\measuredangle ABO=\measuredangle A'CO.\eqlbl{A B O = A' C O}\]
+Note that
+\[\measuredangle ABO\equiv\measuredangle ABC,
+\qquad
+\measuredangle A'CO\equiv-\measuredangle BCA'.\eqlbl{eq:A B O= A B C}
+\]
+Since $A'$, $C$, and $D$ lie on one line, Exercise~\ref{ex:ABCO-line} implies that
+\[2\cdot \measuredangle BCD\equiv 2\cdot \measuredangle BCA'.\eqlbl{eq:2BCD= 2BCA'}\]
+Finally, \ref{A B O = A' C O}, \ref{eq:A B O= A B C}, and \ref{eq:2BCD= 2BCA'} imply \ref{A B C + B C D}.
+\qeds
+
+\parit{``If'' part.}
+Assume \ref{A B C + B C D} holds.
+By Theorem~\ref{thm:parallel}, we can choose $(CD')\z\parallel(AB)$.
+By the ``only-if'' part,
+\[
+2\cdot\measuredangle BCD'
+\equiv-2\cdot\measuredangle ABC
+\equiv2\cdot\measuredangle BCD.
+\]
+By Exercise~\ref{ex:ABCO-line}, $(CD)=(CD')$,
+and hence $(CD)\parallel(AB)$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 This section provides formulas for h-distance using \index{hyperbolic!functions}\emph{hyperbolic functions}.
 One of these formulas will be used in the proof of the hyperbolic Pythagorean theorem (\ref{thm:pyth-h-poincare}).
 

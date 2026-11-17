@@ -420,6 +420,10 @@ Describe a ruler-and-compass construction of the center
 of a given circle.
 \end{thm}
 
+\begin{thm}[\abs]{Lemma}\label{lem:line-circle}
+A line and a circle can have at most two points of intersection.
+\end{thm}
+
 {
 
 \begin{wrapfigure}[4]{r}{54mm}
@@ -428,10 +432,7 @@ of a given circle.
 \includegraphics{mppics/pic-60}
 \end{wrapfigure}
 
-\begin{thm}[\abs]{Lemma}\label{lem:line-circle}
-A line and a circle can have at most two points of intersection.
-\end{thm}
-
+The lemma follows easily form Exercise~\ref{ex:inside-outside}, but we will give a more direct proof.
 
 \parit{Proof.} Assume $A$, $B$, and $C$ are distinct points that lie on a line $\ell$ and a circle $\Gamma$ with the center~$O$.
 Then $OA=OB=OC$; in particular, $O$ lies on the perpendicular bisectors 
@@ -442,6 +443,7 @@ The latter contradicts the uniqueness of the perpendicular (Theorem~\ref{perp:ex
 \qeds
 
 }
+
 
 \begin{thm}[!]{Exercise}\label{ex:two-circ}
 Show that two distinct circles can have at most two points of intersection.
