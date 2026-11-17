@@ -1982,18 +1982,18 @@ z.O=circumcenter(z.X, z.Y, z.PP);
 z.OO=circumcenter(z.X, z.Y, z.P);
 
 arcs(z.X,z.O,z.Y,10);
-arcs(z.X,z.OO,z.Y,10);
+%arcs(z.X,z.OO,z.Y,10);
 
 draw circumcircle(z.X, z.Y, z.PP);
 draw circumcircle(z.X, z.Y, z.P) dashed evenly;
 
 draw z.X--z.O--z.Y--cycle;
-draw z.X--z.OO--z.Y dashed evenly;
+%draw z.X--z.OO--z.Y dashed evenly;
 
-dOt z.X,z.Y,z.P,z.O,z.OO;
+dOt z.X,z.Y,z.P,z.O;%,z.OO
 
-label.top (btex $O'$ etex, z.OO);
-whitelabel.lft (btex $O$ etex, z.O);
+%label.top (btex $O'$ etex, z.OO);
+label.top (btex $O$ etex, z.O);
 label.ulft (btex $\Gamma'$ etex, (-1)[z.OO,z.X]);
 label.ulft (btex $\Gamma$ etex, (-1)[z.O,z.X]);
 label.rt (btex $P$ etex, z.P);

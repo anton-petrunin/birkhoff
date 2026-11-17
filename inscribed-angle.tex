@@ -74,11 +74,13 @@ $$\measuredangle XPY\equiv\tfrac12\cdot\measuredangle X O Y
 
 \end{thm}
 
+{
+
 \begin{wrapfigure}{o}{33mm}
-\vskip-6mm
+\vskip-8mm
 \centering
 \includegraphics{mppics/pic-122}
-\vskip4mm
+\bigskip
 \includegraphics{mppics/pic-127}
 \end{wrapfigure}
 
@@ -97,29 +99,25 @@ Assume that \ref{eq:inscribed-angle} holds.
 Since $X\ne Y$, we have $\measuredangle X O Y\ne 0$.
 Therefore, $\measuredangle X P Y$ is neither $0$ nor $\pi$;
 that is, $\triangle PXY$ is nondegenerate.
-Let $\Gamma'$ be its circumcircle, centered at $O'$; both exist by \ref{ex:unique-cline}.
 
-We will show that $O'\z=O$ and therefore $\Gamma'\z=\Gamma$; once this is done, the ``if'' part follows.
+Let $\Gamma'$ be the circumcircle of $\triangle PXY$;
+it exists by \ref{ex:unique-cline}.
+We need to show that $\Gamma'=\Gamma$; assume the contrary.
 
-The ``only if'' part implies that
-\[
-\measuredangle XOY\equiv
-2\cdot\measuredangle XPY
-\equiv\measuredangle XO'Y.
-\]
-Since $OX=OY$ and $O'X=O'Y$, SAS implies that $\triangle XOY\sim \triangle XO'Y$.
-The side $[XY]$ is shared; therefore $\triangle XOY\z\cong \triangle XO'Y$;
-in particular, $XO=XO'$.
-Moreover, $\measuredangle OXY=\measuredangle O'XY$; see the first remark in Section \ref{chap:sim-def}.
-The last two equalities imply $O=O'$.
+By Theorem~\ref{thm:tangent-angle},
+ $\Gamma$ and $\Gamma'$ share a tangent line at $X$.
+By Exercise~\ref{ex:tangent-circles}\textit{\ref{ex:tangent-circles:b}} the circles are tangent at $X$; that is, $X$ is the only common point of $\Gamma$ and $\Gamma'$.
+But both circles also share $Y\ne X$ --- a contradiction.
 \qeds
+
+}
 
 %%%???
 
 {
 
 \begin{wrapfigure}{r}{34mm}
-\vskip-7mm
+\vskip-8mm
 \centering
 \includegraphics{mppics/pic-128}
 \end{wrapfigure}
