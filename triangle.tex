@@ -295,62 +295,29 @@ We can assume that $X$ does not lie on the union of $(AB)$ and $(BC)$.
 Otherwise, the distance to one of the lines vanishes;
 in this case, $X=B$ is the only point equidistant from the two lines.
 
-Let $Y$ and $Z$ be the reflections of $X$ across $(AB)$ and $(BC)$ respectively.
-Note that 
-\[Y\ne Z.\]
-Otherwise, both lines $(AB)$ and $(BC)$ are perpendicular bisectors of $[XY]$.
-Hence $(AB)=(BC)$, but this is impossible since $\triangle ABC$ is nondegenerate.
-
-By Proposition~\ref{prop:reflection}, $XB=YB=ZB$.
-Since $XY$ and $XZ$ are twice the distances to the corresponding lines, $X$ is equidistant from these lines if and only if $XY\z=XZ$.
-
-
-{
-
 \begin{wrapfigure}{r}{24mm}
+\vskip-6mm
 \centering
 \includegraphics{mppics/pic-112}
 \end{wrapfigure}
 
-Applying SSS and then SAS, we get that
-$$\begin{aligned}
-XY&=XZ
-\\
-&\hskip0.4mm\Updownarrow
-\\
-\triangle XBY&\cong\triangle XBZ
-\\
-&\hskip0.4mm\Updownarrow
-\\
-\measuredangle XBY&\equiv \pm \measuredangle XBZ.
-\end{aligned}
-$$
+Note that the reflection across $(BX)$ interchanges $(AB)$ and $(BC)$ if and only if $(BX)$ is the bisector or external bisector
+of $\angle ABC$.
+In this case, $X$ is equidistant from the lines $(AB)$ and $(BC)$.
 
-Since $Y\ne Z$, we get that $\measuredangle XBY\ne \measuredangle XBZ$.
-Therefore $X$ is equidistant from $(AB)$ and $(BC)$ if and only if
-\[\measuredangle XBY\equiv -\measuredangle XBZ.
-\eqlbl{eq:iff-chain}\]
+Let $Y$ and $Z$ be the reflections of $X$ across $(AB)$ and $(BC)$ respectively.
+Note that $Y\ne Z$.
+Otherwise, both lines $(AB)$ and $(BC)$ are perpendicular bisectors of $[XY]$.
+Hence $(AB)=(BC)$, but this is impossible since $\triangle ABC$ is nondegenerate.
 
-}
+If $X$ is equidistant from $(AB)$ and $(BC)$, then $XY=XZ$.
+By Proposition~\ref{prop:reflection}, we also have $XB=YB=ZB$.
+Hence $(BX)$ is the perpendicular bisector of $[YZ]$.
 
-By Proposition~\ref{prop:reflection}, $A$ lies on the bisector of $\angle XBY$,
-and $C$ lies on the bisector of $\angle XBZ$; that is,
-\begin{align*}
-2\cdot \measuredangle XBA&\equiv \measuredangle XBY,
-&
-2\cdot \measuredangle XBC&\equiv \measuredangle XBZ.
-\end{align*}
-By \ref{eq:iff-chain},
-\[2\cdot \measuredangle XBA\equiv -2\cdot \measuredangle XBC.\]
-The last identity means either
-\[
-\measuredangle XBA+\measuredangle XBC\equiv 0
-\quad
-\text{or}
-\quad
-\measuredangle XBA+\measuredangle XBC\equiv \pi
-\]
---- hence the result.
+Reflection across $(BX)$ fixes $X$ and interchanges $Y$ and $Z$.
+Therefore it interchanges the perpendicular bisectors
+of $[XY]$ and $[XZ]$, which are $(AB)$ and $(BC)$.
+Thus $(BX)$ is one of the two bisectors.
 \qeds
 
 \section{The incenter}
@@ -374,20 +341,18 @@ Let $\triangle ABC$ be a nondegenerate triangle.
 Points $B$ and $C$ lie on opposite sides of the bisector of $\angle BAC$.
 Hence this bisector intersects $[BC]$ at a point, say~$A'$.
 
+\begin{wrapfigure}{o}{28mm}
+\vskip-6mm
+\centering
+\includegraphics{mppics/pic-114}
+\end{wrapfigure}
+
 Analogously, there is $B'\in[AC]$ 
 such that $(BB')$ bisects $\angle ABC$.
 
 Applying Exercise~\ref{ex:chevinas},
 we get that $[AA']$ and $[BB']$ intersect.
 Suppose that $I$ denotes the point of intersection.
-
-{
-
-\begin{wrapfigure}{o}{28mm}
-\vskip0mm
-\centering
-\includegraphics{mppics/pic-114}
-\end{wrapfigure}
 
 Let $X$, $Y$, and $Z$ be the footpoints of $I$ on  $(B C)$, $(C A)$, and $(A B)$ respectively.
 Applying Proposition~\ref{prop:angle-bisect-dist}, we get that
@@ -402,14 +367,13 @@ Therefore, $(C I)$ cannot be the exterior bisector of $\angle B C A$.
 Hence the result.
 \qeds
 
-}
-
 {
 
 \begin{wrapfigure}{r}{30mm}
 \centering
-\vskip-2mm
+\vskip-7mm
 \includegraphics{mppics/pic-116}
+\vskip-4mm
 \end{wrapfigure}
 
 \begin{thm}{Exercise}\label{ex:2x=b+c-a}
