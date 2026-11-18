@@ -85,7 +85,7 @@ The following exercise will be used in the proof of Proposition~\ref{prop:affine
 
 \begin{thm}[!]{Exercise}\label{ex:R-hom}
 Assume that points with coordinates $(0,0)$, $(1,0)$, $(a,0)$, and $(b,0)$ are given.
-Using a ruler and a parallel tool, construct points with coordinates $(a+b,0)$, $(a-b,0)$, $(a\cdot b,0)$, and $(\tfrac a b,0)$.
+Using a ruler and a parallel tool, construct points with coordinates $(a+b,0)$, $(a-b,0)$, $(a\cdot b,0)$, and $(\tfrac a b,0)$; assume $b\ne0$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:center-circ-affine}
@@ -125,21 +125,17 @@ Then, for every triple of points $O$, $X$, $P$, we have
 \end{thm}
 
 \parit{Proof.}
-Observe that the affine transformations described in Exercise~\ref{ex:afine-linear}, as well as all motions, satisfy the condition \ref{eq:OP=tOX}.
-Therefore a given affine transformation $P\mapsto P'$ satisfies \ref{eq:OP=tOX} if and only if its composition with motions and rescalings satisfies \ref{eq:OP=tOX}.
+We can assume that $O\ne X$, and therefore $O'\ne X'$.
 
-Applying this observation, we can reduce the problem to a special case.
-Namely, we may assume that $O'=O$, $X'=X$, the point $O$ is the origin of a coordinate system, and $X$ has coordinates $(1,0)$.
-
-In this case, $\overrightarrow{OP}=t\cdot \overrightarrow{OX}$ if and only if $P=(t,0)$.
-Since $O$ and $X$ are fixed, the transformation maps the $x$-axis to itself.
-That is, $P'=(f(t),0)$ for a function $t\mapsto f(t)$,
-or, equivalently,
-\[\overrightarrow{O'P'}=f(t)\cdot \overrightarrow{O'X'}.\]
-
-Since $O'=O$ and $X'=X$, we get $f(0)=0$ and $f(1)=1$.
-Furthermore, according to Exercise~\ref{ex:R-hom}, we have
-$f(x\cdot y)=f(x)\cdot f(y)$ and $f(x+y)=f(x)+f(y)$ for any $x,y\in\mathbb{R}$.
+Since the transformation $P\mapsto P'$ is affine, it defines a bijection $(OX)\leftrightarrow(O'X')$;
+in other words, there is a bijection $f\:\mathbb{R}\leftrightarrow\mathbb{R}$ such that
+\[\overrightarrow{OP}=t\cdot \overrightarrow{OX}
+\quad\Leftrightarrow\quad
+\overrightarrow{O'P'}=f(t)\cdot \overrightarrow{O'X'}.
+\]
+Since $O\mapsto O'$ and $X\mapsto X'$, we have $f(0)=0$ and $f(1)=1$.
+Applying the constructions in Exercise~\ref{ex:R-hom} for appropriately chosen coordinanates on $(OX)$ and $(O'X')$, we also get
+$f(x\cdot y)\z=f(x)\cdot f(y)$ and $f(x+y)\z=f(x)+f(y)$ for any $x,y\in\mathbb{R}$.
 By the algebraic lemma (proved below, see \ref{lem:R-auto}), these conditions imply that $f(t)=t$ for any~$t$, which completes the proof.
 \qeds
 
@@ -148,6 +144,8 @@ Suppose that an affine transformation $P\mapsto P'$ maps a nondegenerate triangl
 Then $\triangle O'X'Y'$ is nondegenerate, and
 \[\overrightarrow{OP}=x\cdot\overrightarrow{OX}+y\cdot\overrightarrow{OY}\quad\text{if and only if}\quad\overrightarrow{O'P'}=x\cdot\overrightarrow{O'X'}+y\cdot\overrightarrow{O'Y'}.\]
 \end{thm}
+
+According to the theorem, an affine transformation is determined by the images of three noncollinear points.
 
 \parit{Proof.}
 Since an affine transformation maps lines to lines, the triangle
@@ -180,16 +178,18 @@ Applying Exercise~\ref{ex:parallelogram-rule} and the proposition, we get
 
 }
 
-\begin{thm}{Exercise}\label{ex:affine-continuous}
-Show that every affine transformation is continuous.
-\end{thm}
+
 
 The following exercise provides the converse to Exercise \ref{ex:afine-linear}\textit{\ref{affine-general-formula}}.
 
 \begin{thm}{Exercise}\label{ex:affine-coordinates}
 Show that every affine transformation can be written in coordinates as
 $(x,y)\mapsto(a\cdot x+b\cdot y+r,\ c\cdot x+d\cdot y+s)$
-for constants $a,b,c,d,r,s$ such that the matrix $(\begin{smallmatrix}a&b\\c&d\end{smallmatrix})$ is invertible. 
+for constants $a,b,c,d,r,s$ such that the matrix $(\begin{smallmatrix}a&b\\c&d\end{smallmatrix})$ is invertible.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:affine-continuous}
+Show that every affine transformation is continuous.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:preserved-circle}
@@ -226,8 +226,7 @@ $f(x)=x$ for any $x\in \mathbb{R}$.
 
 Note that we did not assume that $f$ is continuous.
 
-A function $f$ satisfying these three conditions
-is called a \index{field automorphism}\emph{field automorphism}.
+A bijection of a field to itself satisfying these three conditions is called a \index{field automorphism}\emph{field automorphism}.
 Therefore, the lemma states that the identity function is the only automorphism of the field of real numbers.
 For the field of complex numbers, the conjugation $z\mapsto\bar z$ (see Section~\ref{sec:complex-conjugation}) gives an example of a nontrivial automorphism.
 
@@ -271,48 +270,27 @@ $n$.
 By~\textit{(\ref{lem:R-auto:c})},
 $f(m)=f(\tfrac mn)\cdot f(n)$.
 Therefore
-$$f(\tfrac mn)=\tfrac mn \eqlbl{eq:m/n}$$
-for every rational number~$\tfrac mn$.
+$f(q)=q$
+for every rational number~$q=\tfrac mn$.
 
 Assume~$a\ge 0$.
 Then the equation $x^2=a$ has a real solution $x\z=\sqrt{a}$.
 Suppose $y=f(x)$.
 By~\textit{(\ref{lem:R-auto:c})}, $f(a)=y^2$,
 and hence $f(a)\ge 0$.
+Thus
+\[y-x\ge 0\quad\Rightarrow\quad f(y)-f(x)=f(y-x)\ge0.\]
+In other words, $f$ is a nondecreasing function.
 
-\raggedcolumns\setlength{\multicolsep}{.5mm}
-\setlength{\columnseprule}{1pt}
-\begin{multicols}{2}
-In particular,
-\[a\ge 0\quad\Longrightarrow\quad f(a)\ge 0.\eqlbl{a>0=>b>0}\]
-
-\columnbreak
-
-By \ref{eq:f-x}, 
-we also get 
-\[a\le 0\quad \Longrightarrow\quad f(a)\le 0.\eqlbl{a<0=>b<0}\]
-\end{multicols}
-\setlength{\columnseprule}{0pt}
-
-Now assume $f(a)\ne a$ for some $a\in\mathbb{R}$.
-Then there is a rational number $\tfrac{m}{n}$ that lies between $a$ and $f(a)$;
-that is, 
-the numbers 
-\[x\z=a-\tfrac{m}{n}\quad\text{and}\quad y=f(a)-\tfrac{m}{n}\]
-have opposite signs.
-
-By \ref{eq:m/n},
-\begin{align*}
-y+\tfrac{m}{n}&=f(a)=
-\\
-&=f(x+\tfrac{m}{n})=
-\\
-&=f(x)+f(\tfrac{m}{n})=
-\\
-&=f(x)+\tfrac{m}{n};
-\end{align*}
-that is, $f(x)=y$.
-By \ref{a>0=>b>0} and \ref{a<0=>b<0} the values $x$ and $y$ cannot have opposite signs --- a contradiction.
+Suppose $p$ and $q$ are rational numbers.
+Then
+\[
+p\le x\le q
+\quad\Rightarrow\quad
+p=f(p)\le f(x)\le f(q)=q.
+\]
+Since the rationals are dense in $\mathbb{R}$, it follows that $f(x)=x$
+for every $x\in\mathbb{R}$.
 \qeds
 
 \section{Three theorems}
@@ -351,14 +329,16 @@ However, in the proof we can (and will) use Euclidean-type arguments.
 
 \parit{Proof.}
 Let $X$, $Y$ and $Z$ be the footpoints of $A$, $B$ and $C$ on $\ell$.
-By the AA similarity condition, $\triangle AXC'\sim \triangle BYC'$.
-\begin{figure}[!ht]
+If $(AB)\perp\ell$, the following equality is immediate.
+Otherwise, it follows since by AA wee have $\triangle AXC'\z\sim \triangle BYC'$.
+\[\frac{AC'}{BC'}=\frac{AX}{BY}.\]
+
+\begin{figure}[!b]
 \centering
 \includegraphics{mppics/pic-227}
-\vskip-10mm
+\vskip-0mm
 \end{figure}
-Therefore, 
-\[\frac{AC'}{BC'}=\frac{AX}{BY}.\]
+
 The same way we get
 \[\frac{BA'}{CA'}=\frac{BY}{CZ}
 \quad\text{and}\quad
@@ -372,7 +352,7 @@ Therefore,
 
 \begin{thm}{Exercise}\label{thm:ceva-affine}\label{ex:ceva-affine}
 Let $ABC$ be a nondegenerate triangle.
-Suppose three distinct points $A'$, $B'$, and $C'$ lie on the lines $(BC)$, $(CA)$, and $(AB)$ respectively.
+Suppose three points $A'$, $B'$, and $C'$ distinct the veritices of the triangle lie on the lines $(BC)$, $(CA)$, and $(AB)$ respectively.
 Assume that the lines $(AA')$, $(BB')$ and $(CC')$ meet at a point $X$.
 
 \begin{wrapfigure}{r}{31mm}
@@ -395,19 +375,25 @@ Use Menelaus's theorem to prove the following.
 
 \parbf{Signed versions.}
 These three theorems can be formulated in a more precise way by taking the ratios $\frac{AC'}{BC'}$, $\frac{BA'}{CA'}$, and $\frac{CB'}{AB'}$ with sign.
-Namely, given distinct points $A$, $B$, and $X$ on a line, let us define the \index{signed ratio}\emph{signed ratio} $(\frac{AX}{BX})\df\pm\frac{AX}{BX}$, where the sign is chosen so that
-$\overrightarrow{AX}=\left(\frac{AX}{BX}\right)\cdot \overrightarrow{BX}$.
-Equivalently, $(\frac{AX}{BX})<0$ if and only if $X$ lies between $A$ and $B$.
+Namely, given distinct points $A$, $B$, and $X$ on a line, let us define the \index{signed ratio}\emph{signed ratio} $\bigl\langle\tfrac{AX}{BX}\bigr\rangle\df\pm\frac{AX}{BX}$, where the sign is chosen so that
+$\overrightarrow{AX}=\bigl\langle\frac{AX}{BX}\bigr\rangle\cdot \overrightarrow{BX}$.
+Equivalently, $\bigl\langle\tfrac{AX}{BX}\bigr\rangle<0$ if and only if $X$ lies between $A$ and $B$.
 
 The more exact identities of Menelaus's and Ceva's theorems will be
-\[\left(\tfrac{AC'}{BC'}\right)\cdot\left(\tfrac{BA'}{CA'}\right)\cdot \left(\tfrac{CB'}{AB'}\right)=1
+\[\bigl\langle\tfrac{AC'}{BC'}\bigr\rangle\cdot\bigl\langle\tfrac{BA'}{CA'}\bigr\rangle\cdot \bigl\langle\tfrac{CB'}{AB'}\bigr\rangle=1
 \quad\text{and}\quad
-\left(\tfrac{AC'}{BC'}\right)\cdot\left(\tfrac{BA'}{CA'}\right)\cdot \left(\tfrac{CB'}{AB'}\right)=-1
+\bigl\langle\tfrac{AC'}{BC'}\bigr\rangle\cdot\bigl\langle\tfrac{BA'}{CA'}\bigr\rangle\cdot \bigl\langle\tfrac{CB'}{AB'}\bigr\rangle=-1
 \]
 respectively.
 In Van Aubel's theorem we have
-\[\left(\tfrac{AC'}{BC'}\right)+\left(\tfrac{AB'}{CB'}\right)=\left(\tfrac{AX}{A'X}\right)\]
+\[\bigl\langle\tfrac{AC'}{BC'}\bigr\rangle+\bigl\langle\tfrac{AB'}{CB'}\bigr\rangle=\bigl\langle\tfrac{AX}{A'X}\bigr\rangle\]
 and this identity holds without the assumption that $A'$ lies between $B$ and~$C$.
 
-Moreover, the converse of each of the three signed versions also holds.
+These signed versions also admit natural converses.
+The signed Menelaus identity implies that
+$A'$, $B'$, and $C'$ are collinear.
+The signed Ceva identity implies that
+$(AA')$, $(BB')$, and $(CC')$ are concurrent or parallel.
+For Van Aubel's converse, assume $X\in(AA')\cap(BB')$;
+then the signed identity implies $X\in(CC')$.
 
