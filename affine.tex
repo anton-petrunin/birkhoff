@@ -130,11 +130,11 @@ We can assume that $O\ne X$, and therefore $O'\ne X'$.
 Since the transformation $P\mapsto P'$ is affine, it defines a bijection $(OX)\leftrightarrow(O'X')$;
 in other words, there is a bijection $f\:\mathbb{R}\leftrightarrow\mathbb{R}$ such that
 \[\overrightarrow{OP}=t\cdot \overrightarrow{OX}
-\quad\Leftrightarrow\quad
+\quad\text{if and only if}\quad
 \overrightarrow{O'P'}=f(t)\cdot \overrightarrow{O'X'}.
 \]
 Since $O\mapsto O'$ and $X\mapsto X'$, we have $f(0)=0$ and $f(1)=1$.
-Applying the constructions in Exercise~\ref{ex:R-hom} for appropriately chosen coordinanates on $(OX)$ and $(O'X')$, we also get
+Since affine transformations preserve the constructions in Exercise~\ref{ex:R-hom}, we get
 $f(x\cdot y)\z=f(x)\cdot f(y)$ and $f(x+y)\z=f(x)+f(y)$ for any $x,y\in\mathbb{R}$.
 By the algebraic lemma (proved below, see \ref{lem:R-auto}), these conditions imply that $f(t)=t$ for any~$t$, which completes the proof.
 \qeds
@@ -329,8 +329,8 @@ However, in the proof we can (and will) use Euclidean-type arguments.
 
 \parit{Proof.}
 Let $X$, $Y$ and $Z$ be the footpoints of $A$, $B$ and $C$ on $\ell$.
-If $(AB)\perp\ell$, the following equality is immediate.
-Otherwise, it follows since by AA wee have $\triangle AXC'\z\sim \triangle BYC'$.
+If $(AB)\perp\ell$, then $X=Y=C'$.
+Otherwise, $\triangle AXC'\sim\triangle BYC'$ by AA. In either case,
 \[\frac{AC'}{BC'}=\frac{AX}{BY}.\]
 
 \begin{figure}[!b]
@@ -352,7 +352,7 @@ Therefore,
 
 \begin{thm}{Exercise}\label{thm:ceva-affine}\label{ex:ceva-affine}
 Let $ABC$ be a nondegenerate triangle.
-Suppose three points $A'$, $B'$, and $C'$ distinct the veritices of the triangle lie on the lines $(BC)$, $(CA)$, and $(AB)$ respectively.
+Suppose $A'$, $B'$, and $C'$ lie on the lines $(BC)$, $(CA)$, and $(AB)$, respectively, and none of them is a vertex of $\triangle ABC$.
 Assume that the lines $(AA')$, $(BB')$ and $(CC')$ meet at a point $X$.
 
 \begin{wrapfigure}{r}{31mm}
@@ -388,12 +388,5 @@ respectively.
 In Van Aubel's theorem we have
 \[\bigl\langle\tfrac{AC'}{BC'}\bigr\rangle+\bigl\langle\tfrac{AB'}{CB'}\bigr\rangle=\bigl\langle\tfrac{AX}{A'X}\bigr\rangle\]
 and this identity holds without the assumption that $A'$ lies between $B$ and~$C$.
-
 These signed versions also admit natural converses.
-The signed Menelaus identity implies that
-$A'$, $B'$, and $C'$ are collinear.
-The signed Ceva identity implies that
-$(AA')$, $(BB')$, and $(CC')$ are concurrent or parallel.
-For Van Aubel's converse, assume $X\in(AA')\cap(BB')$;
-then the signed identity implies $X\in(CC')$.
 
